@@ -1,81 +1,94 @@
+/* ------------------- */
+/* TYPOGRAPHY          */
+/* ------------------- */
+
 /*----------------------------
   Font weight /フォントの太さ 
 ----------------------------*/
-.font-weight-400{
-    font-weight: 400;
+.font-weight-400 {
+  font-weight: 400;
 }
-.font-weight-500{
-    font-weight: 500;
+.font-weight-500 {
+  font-weight: 500;
 }
-.font-weight-700{
-    font-weight: 700;
+.font-weight-700 {
+  font-weight: 700;
 }
 /*----------------------------
   Font Style /フォントのスタイル 
 ----------------------------*/
-.font-roboto{
-
+.font-roboto {
 }
-.font-zenkaku{
-
+.font-zenkaku {
 }
-.font-zenold{
-
+.font-zenold {
 }
-.font-bellefair{
-
+.font-bellefair {
 }
-.noto-sans{
-
+.noto-sans {
 }
-.font-kozgo{
-
+.font-kozgo {
 }
-.font-josefin{
-
+.font-josefin {
 }
 /*----------------------------
   Font Sizes / フォントサイズ
 ----------------------------*/
-.fs-14{
-font-size:14px ;    
+.fs-14 {
+  font-size: 14px;
 }
-.fs-16{
-font-size: 16px;
+.fs-16 {
+  font-size: 16px;
 }
-.fs-20{
-font-size: 20px;    
+.fs-20 {
+  font-size: 20px;
 }
-.fs-24{
-font-size:24px ;
+.fs-24 {
+  font-size: 24px;
 }
-.fs-25{
-font-size: 25px;
+.fs-25 {
+  font-size: 25px;
 }
-.fs-29{
-font-size: 29px;    
+.fs-29 {
+  font-size: 29px;
 }
-.fs-30{
-font-size:30px ;
+.fs-30 {
+  font-size: 30px;
 }
-.fs-39{
-font-size:39px ;
+.fs-39 {
+  font-size: 39px;
 }
-.fs-55{
-font-size: 55px;
+.fs-55 {
+  font-size: 55px;
 }
-.fs-65{
-font-size: 65px;
+.fs-65 {
+  font-size: 65px;
 }
-.fs-85{
-font-size: 85px;
+.fs-85 {
+  font-size: 85px;
 }
-.fs-105{
-font-size:105px ;
+.fs-105 {
+  font-size: 105px;
 }
-.fs-136{
-font-size:136px ;
+.fs-136 {
+  font-size: 136px;
 }
 /*----------------------------
   Font Colors / フォントの色"
 ----------------------------*/
+
+.white {
+  color: #ffffff;
+}
+
+.gray {
+  color: #3e3a39;
+}
+
+.brown {
+  color: #c38c80;
+}
+
+.black{
+    color: black;
+}
