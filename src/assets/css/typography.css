@@ -6,12 +6,15 @@
   Font weight /フォントの太さ 
 ----------------------------*/
 .font-weight-400 {
+  /* レギュラー */
     font-weight: 400;
   }
   .font-weight-500 {
+    /* ミディアム */
     font-weight: 500;
   }
   .font-weight-700 {
+    /* ボールド */
     font-weight: 700;
   }
   /*----------------------------
