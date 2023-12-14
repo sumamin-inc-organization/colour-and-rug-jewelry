@@ -18,18 +18,25 @@
     Font Style /フォントのスタイル 
   ----------------------------*/
   .font-roboto {
+    font-family: 'Roboto', sans-serif;
   }
   .font-zenkaku {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
   }
   .font-zenold {
+    font-family: 'Zen Old Mincho', serif;
   }
   .font-bellefair {
+    font-family: 'Bellefair', serif;
   }
   .noto-sans {
+    font-family: 'Noto Sans JP', sans-serif;
   }
   .font-kozgo {
+    font-family: kozuka-gothic-pr6n, sans-serif;
   }
   .font-josefin {
+    font-family: 'Josefin Sans', sans-serif;
   }
   /*----------------------------
     Font Sizes / フォントサイズ
