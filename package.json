@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "build": "webpack",
-    "dev": "webpack serve"
+    "dev": "webpack serve",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "SUMAMIN",
@@ -16,9 +17,9 @@
   },
   "devDependencies": {
     "css-loader": "^6.8.1",
+    "gh-pages": "^6.1.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.4",
-    "install": "^0.13.0",
     "mini-css-extract-plugin": "^2.7.6",
     "npm": "^10.2.5",
     "style-loader": "^3.3.3",
