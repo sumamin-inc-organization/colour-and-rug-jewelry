@@ -1,1 +1,1 @@
-console.log("hello world")
+ import "./assets/css/common/typography.css";

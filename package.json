@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "webpack --mode production"
+    "build": "webpack",
+    "dev": "webpack serve"
   },
   "keywords": [],
   "author": "SUMAMIN",
@@ -14,8 +15,16 @@
     "url": "https://github.com/monatheoctocat/my_package.git"
   },
   "devDependencies": {
+    "css-loader": "^6.8.1",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.4",
+    "install": "^0.13.0",
+    "mini-css-extract-plugin": "^2.7.6",
+    "npm": "^10.2.5",
+    "style-loader": "^3.3.3",
     "webpack": "^5.89.0",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
     "gsap": "^3.12.4"
