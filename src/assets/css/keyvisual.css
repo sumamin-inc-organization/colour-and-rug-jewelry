@@ -1,0 +1,50 @@
+.kv_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.kv_top .kv_01{
+    width: 51.2vw;
+}
+
+.kv_top .kv_title{
+    width: 39.1vw;
+    margin-top: 127px;
+    margin-right: 4.39vw;
+}
+
+.kv_bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: -23%;
+}
+
+.kv_bottom .kv_text{
+    /* margin-top: 70px; */
+    margin-left: 9.73vw;
+}
+
+.kv_bottom .kv_text span .kagayaku{
+    letter-spacing: 2.9px;
+}
+
+.kv_bottom .kv_text h2{
+    letter-spacing: 0.15em;
+    margin-top: 23px;
+}
+
+.kv_bottom .kv_text .kararagu{
+    letter-spacing: 0.145em;
+    margin-left: 14px;
+}
+
+.kv_bottom .kv_text p{
+    line-height: 34px;
+    margin-top: 50px;
+}
+
+.kv_bottom .kv_02{
+    width: 41vw;
+}
