@@ -106,4 +106,7 @@
 
 
 
-/* its something wrong with the config??? */
+p{
+  position: absolute;
+  top: 0;
+}
