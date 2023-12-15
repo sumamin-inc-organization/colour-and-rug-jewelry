@@ -2,7 +2,7 @@
   "name": "colour-and-rug-jewelry",
   "description": "Color and Rug Jewelry LP",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "build": "webpack --mode production"
   },
