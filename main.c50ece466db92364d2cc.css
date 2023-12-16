@@ -1,0 +1,334 @@
+/*!***********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/reset.css ***!
+  \***********************************************************************************/
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing rules 
+   ボックスサイジングのルール */
+   *,
+   *::before,
+   *::after {
+     box-sizing: border-box;
+   }
+   
+   /* Remove default margin 
+      デフォルトのマージンを削除する */
+   body,
+   h1,
+   h2,
+   h3,
+   h4,
+   p,
+   figure,
+   blockquote,
+   dl,
+   dd {
+     margin-block-end: 0;
+   }
+   
+   /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed.
+      ul、ol要素のリストスタイルを削除する。リストの役割が指定されているため、デフォルトのスタイリングが削除されます */
+   ul[role="list"],
+   ol[role="list"] {
+     list-style: none;
+   }
+   
+   /* Set core root defaults 
+      コアルートのデフォルトを設定する */
+   html:focus-within {
+     scroll-behavior: smooth;
+   }
+   
+   /* Set core body defaults 
+      コアボディのデフォルトを設定する */
+   body {
+     min-height: 100dvh;
+     text-rendering: optimizeSpeed;
+     line-height: 1.5;
+   }
+   
+   /* A elements that don't have a class get default styles 
+      class属性を持たない"a"要素にはデフォルトのスタイルが適用されます */
+   a:not([class]) {
+     text-decoration-skip-ink: auto;
+   }
+   
+   /* Make images easier to work with
+      画像の操作を容易にする */
+   img,
+   picture {
+     max-width: 100%;
+     display: block;
+   }
+   
+   /* Inherit fonts for inputs and buttons
+      入力フィールドとボタンにフォントを継承させる  */
+   input,
+   button,
+   textarea,
+   select {
+     font: inherit;
+   }
+   
+   /* Remove all animations, transitions and smooth scroll for people that prefer not to see them.
+   アニメーション、トランジション、スムーズスクロールを全て削除し、それらを見たくない人のために設定します  */
+   @media (prefers-reduced-motion: reduce) {
+     html:focus-within {
+       scroll-behavior: auto;
+     }
+   
+     *,
+     *::before,
+     *::after {
+       animation-duration: 0.01ms !important;
+       animation-iteration-count: 1 !important;
+       transition-duration: 0.01ms !important;
+       scroll-behavior: auto !important;
+     }
+   }
+   
+   /* hide overflow x 
+   横方向のオーバーフローを非表示にする*/
+   html,
+   body {
+     overflow-x: hidden;
+   }
+   
+   body {
+     padding: 0;
+     margin: 0;
+     position: relative;
+   }
+   
+/*!**************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/utillity.css ***!
+  \**************************************************************************************/
+
+/*!****************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/typography.css ***!
+  \****************************************************************************************/
+/* ------------------- */
+/* TYPOGRAPHY          */
+/* ------------------- */
+
+/*----------------------------
+  Font weight /フォントの太さ 
+----------------------------*/
+.font-weight-400 {
+  /* レギュラー */
+    font-weight: 400;
+  }
+  .font-weight-500 {
+    /* ミディアム */
+    font-weight: 500;
+  }
+  .font-weight-700 {
+    /* ボールド */
+    font-weight: 700;
+  }
+  /*----------------------------
+    Font Style /フォントのスタイル 
+  ----------------------------*/
+  .font-roboto {
+    font-family: 'Roboto', sans-serif;
+  }
+  .font-zenkaku {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+  }
+  .font-zenold {
+    font-family: 'Zen Old Mincho', serif;
+  }
+  .font-bellefair {
+    font-family: 'Bellefair', serif;
+  }
+  .noto-sans {
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+  .font-kozgo {
+    font-family: kozuka-gothic-pr6n, sans-serif;
+  }
+  .font-josefin {
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  /*----------------------------
+    Font Sizes / フォントサイズ
+  ----------------------------*/
+  .fs-14 {
+    font-size: 14px;
+  }
+  .fs-16 {
+    font-size: 16px;
+  }
+  .fs-20 {
+    font-size: 20px;
+  }
+  .fs-24 {
+    font-size: 24px;
+  }
+  .fs-25 {
+    font-size: 25px;
+  }
+  .fs-29 {
+    font-size: 29px;
+  }
+  .fs-30 {
+    font-size: 30px;
+  }
+  .fs-39 {
+    font-size: 39px;
+  }
+  .fs-55 {
+    font-size: 55px;
+  }
+  .fs-65 {
+    font-size: 65px;
+  }
+  .fs-85 {
+    font-size: 85px;
+  }
+  .fs-105 {
+    font-size: 105px;
+  }
+  .fs-136 {
+    font-size: 136px;
+  }
+  /*----------------------------
+    Font Colors / フォントの色"
+  ----------------------------*/
+  
+  .white {
+    color: #ffffff;
+  }
+  
+  .gray {
+    color: #3e3a39;
+  }
+  
+  .brown {
+    color: #c38c80;
+  }
+  
+  .black{
+      color: black;
+  }
+
+
+/*!*****************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/header.css ***!
+  \*****************************************************************************/
+
+/*!**************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/nav.css ***!
+  \**************************************************************************/
+
+/*!********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/keyvisual.css ***!
+  \********************************************************************************/
+.kv_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.kv_top .kv_01{
+    width: 51.2vw;
+}
+
+.kv_top .kv_title{
+    width: 39.1vw;
+    margin-top: 127px;
+    margin-right: 4.39vw;
+}
+
+.kv_bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: -23%;
+}
+
+.kv_bottom .kv_text{
+    /* margin-top: 70px; */
+    /* margin-left: 9.73vw; */
+}
+
+.kv_bottom .kv_text span .kagayaku{
+    letter-spacing: 2.9px;
+}
+
+.kv_bottom .kv_text h2{
+    letter-spacing: 0.15em;
+    margin-top: 23px;
+}
+
+.kv_bottom .kv_text .kararagu{
+    letter-spacing: 0.145em;
+    margin-left: 14px;
+}
+
+.kv_bottom .kv_text p{
+    line-height: 34px;
+    margin-top: 50px;
+}
+
+.kv_bottom .kv_02{
+    width: 41vw;
+}
+/*!******************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/newplan.css ***!
+  \******************************************************************************/
+
+/*!******************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/service.css ***!
+  \******************************************************************************/
+
+/*!**********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/recommended.css ***!
+  \**********************************************************************************/
+
+/*!**********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/inspiration.css ***!
+  \**********************************************************************************/
+
+/*!********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/advantage.css ***!
+  \********************************************************************************/
+
+/*!**********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/consultancy.css ***!
+  \**********************************************************************************/
+
+/*!***************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/item.css ***!
+  \***************************************************************************/
+
+/*!***************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/flow.css ***!
+  \***************************************************************************/
+
+/*!******************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/gallery.css ***!
+  \******************************************************************************/
+
+/*!**************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/faq.css ***!
+  \**************************************************************************/
+
+/*!******************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/contact.css ***!
+  \******************************************************************************/
+
+/*!***************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/form.css ***!
+  \***************************************************************************/
+
+/*!*****************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/footer.css ***!
+  \*****************************************************************************/
+
+
+/*# sourceMappingURL=main.c50ece466db92364d2cc.css.map*/
