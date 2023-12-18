@@ -5,15 +5,15 @@
 /*----------------------------
   Font weight /フォントの太さ 
 ----------------------------*/
-  .font-weight-300 {
+  .light {
   /* ライト */
     font-weight: 300;
   }
-  .font-weight-400 {
+  .regular {
   /* レギュラー */
     font-weight: 400;
   }
-  .font-weight-500 {
+  .medium {
     /* ミディアム */
     font-weight: 500;
   }
@@ -32,6 +32,7 @@
   }
   .font-bellefair {
     font-family: 'Bellefair', serif;
+    font-weight: 400;
   }
   
   /*----------------------------
@@ -96,3 +97,23 @@
       color: black;
   }
 
+/*----------------------------------
+  Section Title / セクションタイトル
+----------------------------------*/
+.sec_title{
+  color: #3E3A39;
+  font-family: 'Zen Old Mincho', serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 52px;
+  letter-spacing: 4.2px;
+}
+
+.sec_title_en{
+  color: #3E3A39;
+  font-family: 'Bellefair', serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 2.5px;
+}

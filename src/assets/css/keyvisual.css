@@ -10,7 +10,7 @@
 
 .kv_top .kv_title{
     width: 39.1vw;
-    margin-top: 127px;
+    margin-top: 9.3vw;
     margin-right: 4.39vw;
 }
 
@@ -26,23 +26,31 @@
     margin-left: 9.73vw;
 }
 
-.kv_bottom .kv_text span .kagayaku{
+.kv_bottom .kv_text .kagayaku{
+    font-size: 1.46vw;
     letter-spacing: 2.9px;
 }
 
 .kv_bottom .kv_text h2{
+    font-size: 2.86vw;
     letter-spacing: 0.15em;
-    margin-top: 23px;
+    margin-top: 1.68vw;
+}
+
+.kv_bottom .kv_text .and{
+    font-size: 1.76vw;
 }
 
 .kv_bottom .kv_text .kararagu{
+    font-size: 1.17vw;
     letter-spacing: 0.145em;
     margin-left: 14px;
 }
 
 .kv_bottom .kv_text p{
-    line-height: 34px;
-    margin-top: 50px;
+    font-size: 1.17vw;
+    line-height: 2.49vw;
+    margin-top: 3.66vw;
 }
 
 .kv_bottom .kv_02{
