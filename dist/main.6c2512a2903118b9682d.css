@@ -27,6 +27,7 @@
    blockquote,
    dl,
    dd {
+     margin-block-start: 0;
      margin-block-end: 0;
    }
    
@@ -118,18 +119,19 @@
 /*----------------------------
   Font weight /フォントの太さ 
 ----------------------------*/
-.font-weight-400 {
+  .light {
+  /* ライト */
+    font-weight: 300;
+  }
+  .regular {
   /* レギュラー */
     font-weight: 400;
   }
-  .font-weight-500 {
+  .medium {
     /* ミディアム */
     font-weight: 500;
   }
-  .font-weight-700 {
-    /* ボールド */
-    font-weight: 700;
-  }
+
   /*----------------------------
     Font Style /フォントのスタイル 
   ----------------------------*/
@@ -144,16 +146,9 @@
   }
   .font-bellefair {
     font-family: 'Bellefair', serif;
+    font-weight: 400;
   }
-  .noto-sans {
-    font-family: 'Noto Sans JP', sans-serif;
-  }
-  .font-kozgo {
-    font-family: kozuka-gothic-pr6n, sans-serif;
-  }
-  .font-josefin {
-    font-family: 'Josefin Sans', sans-serif;
-  }
+  
   /*----------------------------
     Font Sizes / フォントサイズ
   ----------------------------*/
@@ -216,7 +211,26 @@
       color: black;
   }
 
+/*----------------------------
+  Section Title / セクションタイトル
+----------------------------*/
+.sec_title{
+  color: #3E3A39;
+  font-family: 'Zen Old Mincho', serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 52px;
+  letter-spacing: 4.2px;
+}
 
+.sec_title_en{
+  color: #3E3A39;
+  font-family: 'Bellefair', serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 2.5px;
+}
 /*!*****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/header.css ***!
   \*****************************************************************************/
@@ -240,7 +254,7 @@
 
 .kv_top .kv_title{
     width: 39.1vw;
-    margin-top: 127px;
+    margin-top: 9.3vw;
     margin-right: 4.39vw;
 }
 
@@ -256,23 +270,31 @@
     margin-left: 9.73vw;
 }
 
-.kv_bottom .kv_text span .kagayaku{
+.kv_bottom .kv_text .kagayaku{
+    font-size: 1.46vw;
     letter-spacing: 2.9px;
 }
 
 .kv_bottom .kv_text h2{
+    font-size: 2.86vw;
     letter-spacing: 0.15em;
-    margin-top: 23px;
+    margin-top: 1.68vw;
+}
+
+.kv_bottom .kv_text .and{
+    font-size: 1.76vw;
 }
 
 .kv_bottom .kv_text .kararagu{
+    font-size: 1.17vw;
     letter-spacing: 0.145em;
     margin-left: 14px;
 }
 
 .kv_bottom .kv_text p{
-    line-height: 34px;
-    margin-top: 50px;
+    font-size: 1.17vw;
+    line-height: 2.49vw;
+    margin-top: 3.66vw;
 }
 
 .kv_bottom .kv_02{
@@ -285,7 +307,9 @@
 /*!******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/service.css ***!
   \******************************************************************************/
-
+#service{
+    background-color: #EFE3E0;
+}
 /*!**********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/recommended.css ***!
   \**********************************************************************************/
@@ -331,4 +355,4 @@
   \*****************************************************************************/
 
 
-/*# sourceMappingURL=main.67f2e329d0847fe6d7f6.css.map*/
+/*# sourceMappingURL=main.6c2512a2903118b9682d.css.map*/
