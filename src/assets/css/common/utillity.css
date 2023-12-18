@@ -6,8 +6,13 @@
     Main Grid
     メイングリッド
 ----------------------------*/
-/* コンテンツに左右のマージンを9.736vw（デザインでは133px） */
+/* コンテンツ幅1100px */
 .main-grid{
     display: grid;
-    grid-template-columns: 9.736vw 1fr 9.736vw;
+    grid-template-columns: 1fr 1100px 1fr;
+}
+
+/* 中央に配置 */
+.main-grid-column-2{
+    grid-column: 2;
 }
