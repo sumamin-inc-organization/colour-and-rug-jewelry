@@ -118,7 +118,11 @@
 /*----------------------------
   Font weight /フォントの太さ 
 ----------------------------*/
-.font-weight-400 {
+  .font-weight-300 {
+  /* ライト */
+    font-weight: 300;
+  }
+  .font-weight-400 {
   /* レギュラー */
     font-weight: 400;
   }
@@ -126,10 +130,7 @@
     /* ミディアム */
     font-weight: 500;
   }
-  .font-weight-700 {
-    /* ボールド */
-    font-weight: 700;
-  }
+
   /*----------------------------
     Font Style /フォントのスタイル 
   ----------------------------*/
@@ -145,15 +146,7 @@
   .font-bellefair {
     font-family: 'Bellefair', serif;
   }
-  .noto-sans {
-    font-family: 'Noto Sans JP', sans-serif;
-  }
-  .font-kozgo {
-    font-family: kozuka-gothic-pr6n, sans-serif;
-  }
-  .font-josefin {
-    font-family: 'Josefin Sans', sans-serif;
-  }
+  
   /*----------------------------
     Font Sizes / フォントサイズ
   ----------------------------*/
@@ -253,7 +246,7 @@
 
 .kv_bottom .kv_text{
     /* margin-top: 70px; */
-    /* margin-left: 9.73vw; */
+    margin-left: 9.73vw;
 }
 
 .kv_bottom .kv_text span .kagayaku{
@@ -331,4 +324,4 @@
   \*****************************************************************************/
 
 
-/*# sourceMappingURL=main.c50ece466db92364d2cc.css.map*/
+/*# sourceMappingURL=main.c9a85996307d139d7149.css.map*/
