@@ -16,3 +16,33 @@
 .main-grid-column-2{
     grid-column: 2;
 }
+
+
+
+.black-btn{
+    border: none;
+    background-color: black;
+    position: relative;
+    /* display: grid; */
+    /* place-content: center; */
+}
+
+.black-btn a{
+    text-decoration: none;
+    color:white;
+}
+
+.black-btn:hover{
+    cursor: pointer;
+}
+
+.black-btn::after{
+    content: url(../../images/inspiration/btn-chevron.svg);
+    position: absolute;
+    width: 6px;
+    height: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    z-index: 3;
+}
