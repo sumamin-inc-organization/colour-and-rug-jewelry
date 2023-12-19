@@ -456,19 +456,30 @@
 ----------------------------*/
 
 .slider-controls{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 36px;
-    padding: 0;
-    margin: 0;
     
 }
 
 .indicators{
     display: flex;
     gap: 31px;
+    padding: 0;
+    margin: 0;
+}
+
+.slider-buttons{
+    display: flex;
+    gap: 26px;
+}
+
+
+.slide_img{
+    width:50%;
+    /* height: 2.4vh; */
 }
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/advantage.css ***!
