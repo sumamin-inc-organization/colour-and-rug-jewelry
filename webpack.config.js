@@ -12,12 +12,12 @@ module.exports = {
       template:'src/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename:"[name].[contenthash].css"
+      filename:"[name].css"  //add content hash for production
     })
   ],
   output:{
     path:path.resolve(__dirname,'dist'),
-    filename:"[name][contenthash].js",
+    filename:"[name].[contenthash].js",
     clean:true,
     assetModuleFilename:'./images/[name][ext]',
 },
