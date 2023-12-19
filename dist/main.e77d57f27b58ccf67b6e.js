@@ -315,8 +315,40 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+$(document).ready(function() {
+    var $slider = $('.insp-slider');
+    var $indicators = $('.indicators .indicator');
+  
+    $slider.slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: false,
+      autoplaySpeed: 2000,
+      nextArrow: document.getElementById('slider-next'),
+      prevArrow: document.getElementById('slider-prev'),
+    });
+  
+    // Click event for indicators
+    // インジケータのクリックイベント
+  
+    $('.indicators .indicator').on('click', function() {
+      var slideIndex = $(this).data('slide-index');
+      $slider.slick('slickGoTo', parseInt(slideIndex));
+    });
+  
+    // Click events for navigation buttons
+    // ナビゲーションボタンのクリックイベント
+    
+    $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+      $indicators.removeClass('active');
+      $indicators.eq(nextSlide).addClass('active');
+    });
+  });
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.0bacd804bb0df459f893.js.map
+//# sourceMappingURL=main.e77d57f27b58ccf67b6e.js.map
