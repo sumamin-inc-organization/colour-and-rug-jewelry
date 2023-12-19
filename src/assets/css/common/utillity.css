@@ -17,14 +17,15 @@
     grid-column: 2;
 }
 
-
+/*----------------------------
+    Section Buttons
+    セクションボタン
+----------------------------*/
 
 .black-btn{
     border: none;
     background-color: black;
     position: relative;
-    /* display: grid; */
-    /* place-content: center; */
 }
 
 .black-btn a{
