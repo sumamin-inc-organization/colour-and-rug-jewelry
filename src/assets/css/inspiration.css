@@ -4,7 +4,7 @@
 #recommended{
     /* temp css  一時的なCSS*/
     min-height: 50vh;
-    /* border: 1px solid black; */
+
 }
 
 /*----------------------------
@@ -13,11 +13,17 @@
 ----------------------------*/
 
 #inspiration{
-    padding-top: 81.2px;
+    /* padding-top: 81.2px;
+    padding-bottom: 67px;
+    border: 1px solid red; */
 }
 
 .inspiration-container{
     /* border: 1px solid red; */
+    padding-top: 81.2px;
+    padding-bottom: 67px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 .inspiration-eng{
