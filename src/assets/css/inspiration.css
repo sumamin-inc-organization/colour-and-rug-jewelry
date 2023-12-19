@@ -110,6 +110,14 @@
     color: black;
 }
 
+
+.inspiration-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30.2px;
+}
+
 .inspiration-button.black-btn{
     padding:  7.1px 46.2px 8.9px 35.6px;
 }
