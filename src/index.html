@@ -197,26 +197,32 @@
 <script>
   $(document).ready(function() {
   var $slider = $('.your-slider');
+  var $indicators = $('.indicators .indicator');
 
   $slider.slick({
-    // Slick options here
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 2000,
     nextArrow: document.getElementById('slider-next'),
     prevArrow: document.getElementById('slider-prev'),
-    // Add other options as needed
   });
 
   // Click event for indicators
+  // インジケータのクリックイベント
+
   $('.indicators .indicator').on('click', function() {
     var slideIndex = $(this).data('slide-index');
     $slider.slick('slickGoTo', parseInt(slideIndex));
   });
 
   // Click events for navigation buttons
-
+  // ナビゲーションボタンのクリックイベント
+  
+  $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+    $indicators.removeClass('active');
+    $indicators.eq(nextSlide).addClass('active');
+  });
 });
 
 </script>
