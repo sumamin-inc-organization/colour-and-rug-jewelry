@@ -127,3 +127,7 @@
   top: 14px;
   right: 20px;
 }
+
+.card{
+    -webkit-backface-visibility: hidden; 
+}
