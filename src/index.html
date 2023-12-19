@@ -108,8 +108,8 @@
             <li class="indicator regular fs-14 font-zenkaku" data-slide-index="4">05</li>
           </ul>
           <div class="slider-buttons">
-            <button class="prev slider-btn" id="prev"><img src="./assets/images/inspiration/chevron_left.svg" alt="previous" class="prev_img"></button>
-            <button class="next slider-btn" id="next"><img src="./assets/images/inspiration/chevron_right.svg" alt="next" class="next_img"></button>
+            <button class="prev slider-btn" id="slider-prev"><img src="./assets/images/inspiration/chevron_left.svg" alt="previous" class="prev_img"></button>
+            <button class="next slider-btn" id="slider-next"><img src="./assets/images/inspiration/chevron_right.svg" alt="next" class="next_img"></button>
           </div>
         </div>
         <div class="slider-container"></div>
@@ -204,6 +204,8 @@
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 2000,
+    nextArrow: document.getElementById('slider-next'),
+    prevArrow: document.getElementById('slider-prev'),
     // Add other options as needed
   });
 
@@ -214,13 +216,7 @@
   });
 
   // Click events for navigation buttons
-  $('.prev-slide').on('click', function() {
-    $slider.slick('slickPrev');
-  });
 
-  $('.next-slide').on('click', function() {
-    $slider.slick('slickNext');
-  });
 });
 
 </script>
