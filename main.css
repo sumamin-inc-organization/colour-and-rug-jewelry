@@ -587,6 +587,9 @@
   right: 20px;
 }
 
+.card{
+    -webkit-backface-visibility: hidden; 
+}
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/advantage.css ***!
   \********************************************************************************/
