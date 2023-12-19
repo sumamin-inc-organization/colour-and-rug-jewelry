@@ -4,7 +4,7 @@
 #recommended{
     /* temp css  一時的なCSS*/
     min-height: 50vh;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 /*----------------------------
@@ -17,7 +17,7 @@
 }
 
 .inspiration-container{
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .inspiration-eng{
@@ -47,10 +47,29 @@
     padding: 0;
     margin: 0;
 }
+.indicators:hover{
+    cursor: pointer;
+}
 
 .slider-buttons{
     display: flex;
-    gap: 26px;
+    gap: 20px;
+}
+.slider-btn{
+    background: transparent;
+    border: none;
+    display: grid;
+    place-items: center;
+    /* border: 1px solid red; */
+}
+.slider-btn img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.slider-btn:hover{
+    cursor: pointer;
 }
 
 /*----------------------------
@@ -70,7 +89,7 @@
     display: flex;
     flex-direction: row;
     gap: 2px;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
 }
 
 .slide_item p {
