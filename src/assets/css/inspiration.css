@@ -53,10 +53,13 @@
     gap: 26px;
 }
 
+/*----------------------------
+    Slider
+    スライダー
+----------------------------*/
 
 .slide_img{
     width:100%;
-    /* height: 2.4vh; */
 }
 .slide_item{
     width: 50%;
@@ -66,5 +69,20 @@
 .card-inner{
     display: flex;
     flex-direction: row;
+    gap: 2px;
     border: 1px solid gray;
+}
+
+.slide_item p {
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    top:0;
+    left: 0;
+    z-index: 3;
+    background-color: #FFFFFF;
+    clip-path: polygon(0 0, 100% 0, 74% 100%, 0 100%);
+    display: grid;
+    place-content: center;
+    letter-spacing: 2.88px;
 }
