@@ -101,11 +101,11 @@
         <h2 class="sec_title inspiration-jp">インスピレーション</h2>
         <div class="slider-controls">
           <ul class="indicators" role="list">
-            <li class="indicator regular fs-14 font-zenkaku">01</li>
-            <li class="indicator regular fs-14 font-zenkaku">02</li>
-            <li class="indicator regular fs-14 font-zenkaku">03</li>
-            <li class="indicator regular fs-14 font-zenkaku">04</li>
-            <li class="indicator regular fs-14 font-zenkaku">05</li>
+            <li class="indicator regular fs-14 font-zenkaku" data-slide-index="0">01</li>
+            <li class="indicator regular fs-14 font-zenkaku" data-slide-index="1">02</li>
+            <li class="indicator regular fs-14 font-zenkaku" data-slide-index="2">03</li>
+            <li class="indicator regular fs-14 font-zenkaku" data-slide-index="3">04</li>
+            <li class="indicator regular fs-14 font-zenkaku" data-slide-index="4">05</li>
           </ul>
           <div class="slider-buttons">
             <button class="prev" id="prev"><img src="./assets/images/inspiration/chevron_left.svg" alt="previous" class="prev_img"></button>
@@ -183,5 +183,35 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+  $(document).ready(function() {
+  var $slider = $('.your-slider');
+
+  $slider.slick({
+    // Slick options here
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    // Add other options as needed
+  });
+
+  // Click event for indicators
+  $('.indicators .indicator').on('click', function() {
+    var slideIndex = $(this).data('slide-index');
+    $slider.slick('slickGoTo', parseInt(slideIndex));
+  });
+
+  // Click events for navigation buttons
+  $('.prev-slide').on('click', function() {
+    $slider.slick('slickPrev');
+  });
+
+  $('.next-slide').on('click', function() {
+    $slider.slick('slickNext');
+  });
+});
+
+</script>
 </body>
 </html>
