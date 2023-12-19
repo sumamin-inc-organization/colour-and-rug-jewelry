@@ -1,0 +1,28 @@
+/* ------------------- */
+/* INSPIRATION            */
+/* ------------------- */
+#recommended{
+    /* temp css  一時的なCSS*/
+    min-height: 50vh;
+    border: 1px solid black;
+}
+
+/*----------------------------
+    Margins And Padding
+    マージンとパディング
+----------------------------*/
+
+#inspiration{
+    padding-top: 81.2px;
+}
+
+.inspiration-container{
+    border: 1px solid red;
+}
+
+.inspiration-eng{
+    margin-bottom:42px ;
+}
+.inspiration-jp{
+    padding-left: 1px;
+}
