@@ -2,6 +2,7 @@
 
 .advantage_top{
     display: flex;
+    padding-top: 140px;
 }
 .advantage_text{
     width: 480px;
