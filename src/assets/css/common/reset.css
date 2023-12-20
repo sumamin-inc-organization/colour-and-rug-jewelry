@@ -11,22 +11,29 @@
    *::after {
      box-sizing: border-box;
    }
-   
-   /* Remove default margin 
+/* Remove default margin 
       デフォルトのマージンを削除する */
-   body,
-   h1,
-   h2,
-   h3,
-   h4,
-   p,
-   figure,
-   blockquote,
-   dl,
-   dd {
-     margin-block-start: 0;
-     margin-block-end: 0;
-   }
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      p,
+      figure,
+      blockquote,
+      dl,
+      dd,
+      ul,
+      li {
+        margin-block-start: 0;
+        margin-block-end: 0;
+      }
+   
+      /* Remove default padding 
+         デフォルトのマージンを削除する */
+       ul{
+         padding-inline-start: 0;
+       }
    
    /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed.
       ul、ol要素のリストスタイルを削除する。リストの役割が指定されているため、デフォルトのスタイリングが削除されます */
