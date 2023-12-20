@@ -1,3 +1,34 @@
+#item{
+    padding: 140px 0;
+}
+
+.it_wrap{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.it_left h2{
+    margin-top: 32px;
+}
+
+.it_right span{
+    display: block;
+    margin-top: 75px;
+    line-height: 46px;
+    letter-spacing: 0.8px;
+}
+
+.it_right h3{
+    line-height: 46px;
+    letter-spacing: 1.6px;
+}
+
+.it_right p{
+    margin-top: 33px;
+    line-height: 30px;
+    text-align: justify;
+}
+
 .graybox{
     width: 100%;
     aspect-ratio: 1.5;
