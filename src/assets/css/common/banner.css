@@ -2,6 +2,16 @@
 /* BANNER              */
 /* ------------------- */
 
+/* .banner{
+    width: 100%;
+    height: 380px;
+    background: url(../../images/common/banner.jpg);
+    background-size: cover;
+    overflow: hidden;
+    margin-top: 140px;
+    margin-top: 40px;
+} */
+
 .banner{
     width: 100%;
     height: 380px;
@@ -9,19 +19,8 @@
     background-size: cover;
     overflow: hidden;
     margin-top: 140px;
-    margin-top: 40px;
+   
 }
-
-/* .test{
-    width: 100%;
-    height: 380px;
-    background: url(../../images/common/banner.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    overflow: hidden;
-    margin-top: 140px;
-    margin-top: 40px;
-} */
 
 /*----------------------------
     Banner Wrapper
@@ -43,7 +42,7 @@
 .banner-wrapper{
      /* これはパララックスを調整します */
 
-    transform: translateY(-650px);
+    /* transform: translateY(-650px); */
 }
 
 /*----------------------------
@@ -76,4 +75,8 @@
 .banner-btn_wrapper{
     display: flex;
     gap: 10px;
+}
+
+#advantage{
+    min-height: 100vh;
 }
