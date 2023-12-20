@@ -15,12 +15,18 @@
 /* 中央に配置 */
 .main-grid-column-2{
     grid-column: 2;
+    /* grid-column: 2/3; */
 }
 
 /* メイングリッドの3つのカラムすべてを占有する */
 .main-grid-column-1_4{
     grid-column: 1 / 4;
 }
+
+.main-grid-column-2_3{
+    grid-column: 2 / 3;
+}
+
 
 /*----------------------------
     Section Buttons - black
