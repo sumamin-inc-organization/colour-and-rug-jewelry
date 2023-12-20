@@ -23,8 +23,8 @@
 }
 
 /*----------------------------
-    Section Buttons
-    セクションボタン
+    Section Buttons - black
+    セクションボタン - 黒
 ----------------------------*/
 
 .black-btn{
@@ -53,6 +53,10 @@
     z-index: 3;
 }
 
+/*----------------------------
+    Section Buttons - White
+    セクションボタン - 白
+----------------------------*/
 
 .white-btn{
     border: none;
@@ -78,13 +82,27 @@
     right: 0;
     z-index: 3;
 }
+/*----------------------------
+    Responsive 
+    レスポンシブ
+----------------------------*/
 
+/* スクリーン幅が768px未満のデバイスでのみ表示 */
 .mobile-only{
     display: none;
+}
+/* スクリーン幅が768pxより大きいデバイスでのみ表示 */
+.pc-only{
+    display: block;
 }
 
 @media(max-width:768px){
     .mobile-only{
         display: block;
     }
+
+    .pc-only{
+        display: none;
+    }
 }
+

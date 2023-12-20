@@ -1,9 +1,6 @@
 /* ------------------- */
 /* BANNER            */
 /* ------------------- */
-.aa{
-    margin-top: 100px;
-}
 .inspiration-banner{
     width: 100%;
     height: 380px;
@@ -69,4 +66,9 @@
 .banner_subtitle{
     line-height: 40px;
     margin-bottom: 40.9px;
+}
+
+.banner-btn_wrapper{
+    display: flex;
+    gap: 10px;
 }
