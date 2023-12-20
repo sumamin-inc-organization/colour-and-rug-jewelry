@@ -1,7 +1,3 @@
-#item{
-    padding-bottom: 140px;
-}
-
 .it_wrap{
     display: grid;
     grid-template-columns: 40% 60%;
