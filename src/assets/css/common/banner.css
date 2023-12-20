@@ -1,0 +1,45 @@
+/* ------------------- */
+/* BANNER            */
+/* ------------------- */
+.aa{
+    margin-top: 100px;
+}
+.inspiration-banner{
+    width: 100%;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../../images/common/banner.jpg);
+    /* background-attachment: fixed; */
+    background-size: cover;
+    overflow: hidden;
+    margin-top: 140px;
+    margin-top: 40px;
+}
+.test{
+    width: 100%;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../../images/common/banner.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+    margin-top: 140px;
+    margin-top: 40px;
+}
+.banner-wrapper{
+    margin:0;
+    padding: 0;
+    margin-left:255.8px ;
+    margin-top: 74.3px ;
+}
+/* .banner-cont{
+    margin:0;
+    padding: 0;
+    margin-left:255.8px ;
+    margin-top: 74.3px 
+} */
+
+.banner-wrapper{
+    transform: translateY(-300px);
+}
+
