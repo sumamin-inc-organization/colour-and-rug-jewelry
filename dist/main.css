@@ -14,8 +14,7 @@
    *::after {
      box-sizing: border-box;
    }
-   
-   /* Remove default margin 
+/* Remove default margin 
       デフォルトのマージンを削除する */
    body,
    h1,
@@ -26,10 +25,18 @@
    figure,
    blockquote,
    dl,
-   dd {
+   dd,
+   ul,
+   li {
      margin-block-start: 0;
      margin-block-end: 0;
    }
+
+   /* Remove default padding 
+      デフォルトのマージンを削除する */
+    ul{
+      padding-inline-start: 0;
+    }
    
    /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed.
       ul、ol要素のリストスタイルを削除する。リストの役割が指定されているため、デフォルトのスタイリングが削除されます */
@@ -125,6 +132,7 @@
 /* 中央に配置 */
 .main-grid-column-2{
     grid-column: 2;
+    /* grid-column: 2/3; */
 }
 
 /* メイングリッドの3つのカラムすべてを占有する */
@@ -132,9 +140,14 @@
     grid-column: 1 / 4;
 }
 
+.main-grid-column-2_4{
+    grid-column: 2 / 4;
+}
+
+
 /*----------------------------
-    Section Buttons
-    セクションボタン
+    Section Buttons - black
+    セクションボタン - 黒
 ----------------------------*/
 
 .black-btn{
@@ -163,6 +176,10 @@
     z-index: 3;
 }
 
+/*----------------------------
+    Section Buttons - White
+    セクションボタン - 白
+----------------------------*/
 
 .white-btn{
     border: none;
@@ -174,6 +191,45 @@
     text-decoration: none;
     color:black;
 }
+.white-btn:hover{
+    cursor: pointer;
+}
+
+.white-btn::after{
+    content: url(./images/btn-chevron_white.svh.svg);
+    position: absolute;
+    width: 6px;
+    height: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    z-index: 3;
+}
+/*----------------------------
+    Responsive 
+    レスポンシブ
+----------------------------*/
+
+/* スクリーン幅が768px未満のデバイスでのみ表示 */
+.mobile-only{
+    display: none;
+}
+/* スクリーン幅が768pxより大きいデバイスでのみ表示 */
+.pc-only{
+    display: block;
+}
+
+@media(max-width:768px){
+    .mobile-only{
+        display: block;
+    }
+
+    .pc-only{
+        display: none;
+    }
+}
+
+
 /*!****************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/typography.css ***!
   \****************************************************************************************/
@@ -452,7 +508,7 @@
     background: currentColor;
     border-radius: 0;
     position: relative;
-    margin-top: 95px;
+    margin-top: 135px;
 }
 
 .plus::before{
@@ -469,7 +525,44 @@
 /*!**********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/recommended.css ***!
   \**********************************************************************************/
+#recommended{
+    background-color: #fff;
+    padding: 140px 0;
+}
 
+.rc_top{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.rc_top h2{
+    margin-top: 32px;
+}
+
+.rc_top p{
+    text-align: justify;
+    line-height: 40px;
+    margin-top: 53px;
+    padding-right: 70px;
+}
+
+.rc_list li{
+    position: relative;
+    /* list-style: none; */
+}
+
+.rc_list li::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: -29px;
+    width: 12px;
+    height: 8px;
+    border-left: 1px solid #C38C80;
+    border-bottom: 1px solid #C38C80;
+    transform: rotate(-45deg);
+  }
 /*!**********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/inspiration.css ***!
   \**********************************************************************************/
@@ -563,7 +656,7 @@
   position: absolute;
   width: 180px;
   height: 40px;
-  top: -1px;
+  top: 0px;
   left: 0;
   z-index: 3;
   background-color: #ffffff;
@@ -611,15 +704,80 @@
   \********************************************************************************/
 @charset "utf-8";
 
+.advantage_top{
+    display: flex;
+    padding-top: 140px;
+}
+.advantage_text{
+    width: 480px;
+}
 .advantage_flex{
     display: flex;
+    justify-content: space-between;
 }
-.interior_flex{
+.warm,.relaxed{
+    width: 525px;
+}
+.interior_color{
     display: flex;
+    align-items: end;
+    gap: 40px;
+}
+.interior_color img{
+    width: 285px;
+}
+.color_title{
+    text-align: center;
+    padding: 5px 0;
+    width: 200px;
+    border: solid 1px#000;
+}
+.color_scheme{
+    text-align: center;
+    font-size: 20px;
+}
+.color_box{
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+}
+.warm_color1{
+    background-color: #AD9A88;
+}
+.warm_color2{
+    background-color: #C7A494;
+}
+.relaxed_color1{
+    background-color: #4D5357;
+}
+.relaxed_color2{
+    background-color: #43403B;
+}
+.sofa_color{
+    background-color: #D8D7D6;
+}
+.color_flex{
+    display: flex;
+    gap: 10px
 }
 /*!**********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/consultancy.css ***!
   \**********************************************************************************/
+/* ------------------- */
+/* CONSULTANCY         */
+/* ------------------- */
+
+
+#consultancy{
+    margin-top: 75.2px ;
+}
+
+.consultancy-top_jp{
+    border: 1px solid red;
+}
+.consultancy-top{
+    /* border: 1px solid red; */
+}
 
 /*!***************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/item.css ***!
@@ -653,37 +811,37 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/banner.css ***!
   \************************************************************************************/
 /* ------------------- */
-/* BANNER            */
+/* BANNER              */
 /* ------------------- */
-.aa{
-    margin-top: 100px;
-}
-.inspiration-banner{
+
+/* .banner{
     width: 100%;
     height: 380px;
-    /* border: 1px solid red; */
-    background: url(./images/banner.jpg);
-    /* background-attachment: fixed; */
+    background: url(../../images/common/banner.jpg);
     background-size: cover;
     overflow: hidden;
     margin-top: 140px;
     margin-top: 40px;
-}
-.test{
+} */
+
+.banner{
     width: 100%;
     height: 380px;
-    /* border: 1px solid red; */
     background: url(./images/banner.jpg);
-    background-attachment: fixed;
     background-size: cover;
     overflow: hidden;
     margin-top: 140px;
-    margin-top: 40px;
+   
 }
+
+/*----------------------------
+    Banner Wrapper
+    バナーのラッパー
+----------------------------*/
 .banner-wrapper{
     margin:0;
     padding: 0;
-    margin-left:255.8px ;
+    margin-left:18.726vw ;
     margin-top: 74.3px ;
 }
 /* .banner-cont{
@@ -694,9 +852,49 @@
 } */
 
 .banner-wrapper{
-    transform: translateY(-300px);
+     /* これはパララックスを調整します */
+
+    /* transform: translateY(-650px); */
 }
 
+/*----------------------------
+    Banner Buttons
+    バナーボタン
+----------------------------*/
+.banner_book{
+    padding: 12.1px 65.6px 13.9px 66.4px;
+}
 
+.banner_book.white-btn::after {
+    top: 19px;
+    right: 20px;
+}
+
+.banner_contact{
+    padding: 12.4px 49.4px 13.8px 48.6px;
+}
+.banner_contact a,
+.banner_book a{
+    letter-spacing: 1.12px;
+}
+
+.banner_contact.white-btn::after {
+    top: 19px;
+    right: 20px;
+}
+
+.banner_subtitle{
+    line-height: 40px;
+    margin-bottom: 40.9px;
+}
+
+.banner-btn_wrapper{
+    display: flex;
+    gap: 10px;
+}
+
+.banner_title{
+    letter-spacing: 5px;
+}
 
 /*# sourceMappingURL=main.css.map*/
