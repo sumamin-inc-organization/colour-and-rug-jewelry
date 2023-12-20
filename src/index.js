@@ -18,8 +18,30 @@ import "./assets/css/consultancy.css";
 import "./assets/css/contact.css";
 import "./assets/css/form.css";
 import "./assets/css/footer.css";
+import "./assets/css/common/banner.css";
 
 
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// gsap.registerPlugin(ScrollTrigger);
+
+// let images = gsap.utils.toArray(".parallax");
+
+// images.forEach((image) => {
+//   gsap.to(image, {
+//     yPercent: -100 * image.dataset.speed,
+//     ease: "none",
+//     scrollTrigger: {
+//       scrub: image.dataset.speed,
+//     },
+//   });
+// });
+
+/*----------------------------
+    Slider
+    スライダー
+----------------------------*/
 
 $(document).ready(function() {
     var $slider = $('.insp-slider');

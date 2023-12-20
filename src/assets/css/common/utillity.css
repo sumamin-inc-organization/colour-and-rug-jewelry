@@ -17,9 +17,14 @@
     grid-column: 2;
 }
 
+/* メイングリッドの3つのカラムすべてを占有する */
+.main-grid-column-1_4{
+    grid-column: 1 / 4;
+}
+
 /*----------------------------
-    Section Buttons
-    セクションボタン
+    Section Buttons - black
+    セクションボタン - 黒
 ----------------------------*/
 
 .black-btn{
@@ -47,3 +52,57 @@
     right: 0;
     z-index: 3;
 }
+
+/*----------------------------
+    Section Buttons - White
+    セクションボタン - 白
+----------------------------*/
+
+.white-btn{
+    border: none;
+    background-color: white;
+    position: relative;
+}
+
+.white-btn a{
+    text-decoration: none;
+    color:black;
+}
+.white-btn:hover{
+    cursor: pointer;
+}
+
+.white-btn::after{
+    content: url(../../images/common/btn-chevron_white.svh.svg);
+    position: absolute;
+    width: 6px;
+    height: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    z-index: 3;
+}
+/*----------------------------
+    Responsive 
+    レスポンシブ
+----------------------------*/
+
+/* スクリーン幅が768px未満のデバイスでのみ表示 */
+.mobile-only{
+    display: none;
+}
+/* スクリーン幅が768pxより大きいデバイスでのみ表示 */
+.pc-only{
+    display: block;
+}
+
+@media(max-width:768px){
+    .mobile-only{
+        display: block;
+    }
+
+    .pc-only{
+        display: none;
+    }
+}
+

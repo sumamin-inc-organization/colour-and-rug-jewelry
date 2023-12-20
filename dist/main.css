@@ -126,6 +126,54 @@
 .main-grid-column-2{
     grid-column: 2;
 }
+
+/* メイングリッドの3つのカラムすべてを占有する */
+.main-grid-column-1_4{
+    grid-column: 1 / 4;
+}
+
+/*----------------------------
+    Section Buttons
+    セクションボタン
+----------------------------*/
+
+.black-btn{
+    border: none;
+    background-color: black;
+    position: relative;
+}
+
+.black-btn a{
+    text-decoration: none;
+    color:white;
+}
+
+.black-btn:hover{
+    cursor: pointer;
+}
+
+.black-btn::after{
+    content: url(./images/btn-chevron.svg);
+    position: absolute;
+    width: 6px;
+    height: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    z-index: 3;
+}
+
+
+.white-btn{
+    border: none;
+    background-color: white;
+    position: relative;
+}
+
+.white-btn a{
+    text-decoration: none;
+    color:black;
+}
 /*!****************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/typography.css ***!
   \****************************************************************************************/
@@ -218,6 +266,10 @@
   
   .gray {
     color: #3e3a39;
+  }
+  
+  .light-gray{
+    color: #B8B7B6;
   }
   
   .brown {
@@ -422,32 +474,26 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/inspiration.css ***!
   \**********************************************************************************/
 /* ------------------- */
-/* INSPIRATION            */
+/* INSPIRATION         */
 /* ------------------- */
-#recommended{
-    /* temp css  一時的なCSS*/
-    min-height: 50vh;
-    border: 1px solid black;
-}
+
 
 /*----------------------------
     Margins And Padding
     マージンとパディング
 ----------------------------*/
-
-#inspiration{
-    padding-top: 81.2px;
+.inspiration-container {
+  padding-top: 81.2px;
+  padding-bottom: 67px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
-.inspiration-container{
-    border: 1px solid red;
+.inspiration-eng {
+  margin-bottom: 42px;
 }
-
-.inspiration-eng{
-    margin-bottom:42px ;
-}
-.inspiration-jp{
-    padding-left: 1px;
+.inspiration-jp {
+  padding-left: 1px;
 }
 
 /*----------------------------
@@ -455,31 +501,110 @@
     スライダーコントロール
 ----------------------------*/
 
-.slider-controls{
-    /* border: 1px solid black; */
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 36px;
-    
+.slider-controls {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 36px;
+  margin-bottom: 38.3px;
 }
 
-.indicators{
-    display: flex;
-    gap: 31px;
-    padding: 0;
-    margin: 0;
+.indicators {
+  display: flex;
+  gap: 31px;
+  padding: 0;
+  margin: 0;
+}
+.indicators:hover {
+  cursor: pointer;
 }
 
-.slider-buttons{
-    display: flex;
-    gap: 26px;
+.slider-buttons {
+  display: flex;
+  gap: 20px;
+}
+.slider-btn {
+  background: transparent;
+  border: none;
+  display: grid;
+  place-items: center;
+}
+.slider-btn img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
+.slider-btn:hover {
+  cursor: pointer;
+}
 
-.slide_img{
-    width:50%;
-    /* height: 2.4vh; */
+/*----------------------------
+    Slider
+    スライダー
+----------------------------*/
+
+.slide_img {
+  width: 100%;
+}
+.slide_item {
+  width: 50%;
+  position: relative;
+}
+
+.card-inner {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+}
+
+.slide_item p {
+  position: absolute;
+  width: 180px;
+  height: 40px;
+  top: -1px;
+  left: 0;
+  z-index: 3;
+  background-color: #ffffff;
+  clip-path: polygon(0 0, 100% 0, 74% 100%, 0 100%);
+  display: grid;
+  place-content: center;
+  letter-spacing: 2.88px;
+}
+
+.active {
+  color: black;
+}
+
+/*----------------------------
+   Inspiration Bottom
+   インスピレーションボトム
+----------------------------*/
+
+.inspiration-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30.2px;
+}
+
+/*----------------------------
+   Inspiration Button
+   インスピレーションボタン
+----------------------------*/
+
+.inspiration-button.black-btn {
+  padding: 7.1px 46.2px 8.9px 35.6px;
+}
+
+.inspiration-button.black-btn::after {
+  top: 14px;
+  right: 20px;
+}
+
+.card{
+    -webkit-backface-visibility: hidden; 
 }
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/advantage.css ***!
@@ -516,6 +641,55 @@
 /*!*****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/footer.css ***!
   \*****************************************************************************/
+
+/*!************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/banner.css ***!
+  \************************************************************************************/
+/* ------------------- */
+/* BANNER            */
+/* ------------------- */
+.aa{
+    margin-top: 100px;
+}
+.inspiration-banner{
+    width: 100%;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(./images/banner.jpg);
+    /* background-attachment: fixed; */
+    background-size: cover;
+    overflow: hidden;
+    margin-top: 140px;
+    margin-top: 40px;
+}
+.test{
+    width: 100%;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(./images/banner.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+    margin-top: 140px;
+    margin-top: 40px;
+}
+.banner-wrapper{
+    margin:0;
+    padding: 0;
+    margin-left:255.8px ;
+    margin-top: 74.3px ;
+}
+/* .banner-cont{
+    margin:0;
+    padding: 0;
+    margin-left:255.8px ;
+    margin-top: 74.3px 
+} */
+
+.banner-wrapper{
+    transform: translateY(-300px);
+}
+
 
 
 /*# sourceMappingURL=main.css.map*/
