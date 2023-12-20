@@ -19,9 +19,14 @@
     padding-right: 70px;
 }
 
+.rc_list ul{
+    letter-spacing: 1.2px;
+}
+
 .rc_list li{
     position: relative;
     /* list-style: none; */
+    padding-left: 45px;
 }
 
 .rc_list li::after {
@@ -29,7 +34,7 @@
     display: block;
     position: absolute;
     top: 7px;
-    left: -29px;
+    left: 0;
     width: 12px;
     height: 8px;
     border-left: 1px solid #C38C80;
