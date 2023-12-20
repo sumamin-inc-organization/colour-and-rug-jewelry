@@ -99,7 +99,25 @@
 .company_name{
     font-size: 136px;
     color: #EFE3E0;
-    overflow: hidden;
-    width: 2000px;
     letter-spacing: 13px;
+    display: flex;
+    overflow:hidden;
+    align-items: center;
+    width: 100%;
+    white-space:nowrap;
+    z-index: 1;
+}
+.company_name ul {
+    animation: flowing 100s linear infinite;
+    transform:translateX(100%);
+    margin: 0;
+    padding: 0;
+}
+.company_name ul li{
+    display: inline-block;
+    padding-right: 30px;
+}
+@keyframes flowing {
+    0% { transform:translateX(0); }
+    100% { transform:translateX(-100%); }
 }
