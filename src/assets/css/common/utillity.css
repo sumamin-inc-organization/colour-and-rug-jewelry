@@ -17,6 +17,11 @@
     grid-column: 2;
 }
 
+/* メイングリッドの3つのカラムすべてを占有する */
+.main-grid-column-1_4{
+    grid-column: 1 / 4;
+}
+
 /*----------------------------
     Section Buttons
     セクションボタン
