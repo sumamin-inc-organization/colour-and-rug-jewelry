@@ -52,3 +52,15 @@
     right: 0;
     z-index: 3;
 }
+
+
+.white-btn{
+    border: none;
+    background-color: white;
+    position: relative;
+}
+
+.white-btn a{
+    text-decoration: none;
+    color:black;
+}
