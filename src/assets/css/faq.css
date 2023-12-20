@@ -22,9 +22,12 @@
     flex-direction: column;
     gap: 37.4px;
     /* margin-bottom: ; */
+    border-bottom: 1px solid #E1C5BF;
 }
 
-
+.answer{
+    padding-bottom: 70px;
+}
 .question{
     /* border: 1px solid blue; */
     display: flex;
