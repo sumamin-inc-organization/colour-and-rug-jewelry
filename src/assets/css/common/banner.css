@@ -1,28 +1,32 @@
 /* ------------------- */
-/* BANNER            */
+/* BANNER              */
 /* ------------------- */
-.inspiration-banner{
+
+.banner{
     width: 100%;
     height: 380px;
-    /* border: 1px solid red; */
     background: url(../../images/common/banner.jpg);
-    /* background-attachment: fixed; */
     background-size: cover;
     overflow: hidden;
     margin-top: 140px;
     margin-top: 40px;
 }
-.test{
+
+/* .test{
     width: 100%;
     height: 380px;
-    /* border: 1px solid red; */
     background: url(../../images/common/banner.jpg);
     background-attachment: fixed;
     background-size: cover;
     overflow: hidden;
     margin-top: 140px;
     margin-top: 40px;
-}
+} */
+
+/*----------------------------
+    Banner Wrapper
+    バナーのラッパー
+----------------------------*/
 .banner-wrapper{
     margin:0;
     padding: 0;
@@ -37,10 +41,15 @@
 } */
 
 .banner-wrapper{
+     /* これはパララックスを調整します */
+
     transform: translateY(-650px);
 }
 
-
+/*----------------------------
+    Banner Buttons
+    バナーボタン
+----------------------------*/
 .banner_book{
     padding: 12.1px 65.6px 13.9px 66.4px;
 }
@@ -57,10 +66,6 @@
 .banner_contact.white-btn::after {
     top: 19px;
     right: 20px;
-}
-  
-#advantage{
-    min-height: 100vh;
 }
 
 .banner_subtitle{
