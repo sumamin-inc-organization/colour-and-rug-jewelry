@@ -18,7 +18,7 @@ import "./assets/css/consultancy.css";
 import "./assets/css/contact.css";
 import "./assets/css/form.css";
 import "./assets/css/footer.css";
-
+import "./assets/css/common/banner.css";
 
 
 $(document).ready(function() {
