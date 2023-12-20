@@ -1,4 +1,7 @@
 
+/* ------------------- */
+/*        FAQ          */
+/* ------------------- */
 
 #faq{
     border: 1px solid black;
@@ -13,6 +16,25 @@
 }
 
 
-.faq-container{
-    border: 1px solid red;
+.faq{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 37.4px;
+    /* margin-bottom: ; */
+}
+
+
+.question{
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left{
+    /* border: 1px solid blue; */
+    display: flex;
+    gap: 23.6px;
+
 }
