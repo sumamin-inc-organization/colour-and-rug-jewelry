@@ -21,6 +21,12 @@ import "./assets/css/footer.css";
 import "./assets/css/common/banner.css";
 
 
+
+/*----------------------------
+    Slider
+    スライダー
+----------------------------*/
+
 $(document).ready(function() {
     var $slider = $('.insp-slider');
     var $indicators = $('.indicators .indicator');
