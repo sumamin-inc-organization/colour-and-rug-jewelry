@@ -61,6 +61,10 @@
 .banner_contact{
     padding: 12.4px 49.4px 13.8px 48.6px;
 }
+.banner_contact a,
+.banner_book a{
+    letter-spacing: 1.12px;
+}
 
 .banner_contact.white-btn::after {
     top: 19px;
@@ -77,3 +81,6 @@
     gap: 10px;
 }
 
+.banner_title{
+    letter-spacing: 5px;
+}
