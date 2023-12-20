@@ -64,3 +64,14 @@
     text-decoration: none;
     color:black;
 }
+
+.white-btn::after{
+    content: url(../../images/common/btn-chevron_white.svh.svg);
+    position: absolute;
+    width: 6px;
+    height: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    z-index: 3;
+}
