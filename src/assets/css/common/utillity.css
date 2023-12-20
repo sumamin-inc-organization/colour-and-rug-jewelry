@@ -64,6 +64,9 @@
     text-decoration: none;
     color:black;
 }
+.white-btn:hover{
+    cursor: pointer;
+}
 
 .white-btn::after{
     content: url(../../images/common/btn-chevron_white.svh.svg);
