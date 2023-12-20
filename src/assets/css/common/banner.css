@@ -40,7 +40,7 @@
 } */
 
 .banner-wrapper{
-    transform: translateY(-350px);
+    transform: translateY(-550px);
 }
 
 
@@ -64,4 +64,8 @@
   
 #advantage{
     min-height: 100vh;
+}
+
+.banner_subtitle{
+    line-height: 40px;
 }

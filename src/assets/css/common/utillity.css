@@ -78,3 +78,13 @@
     right: 0;
     z-index: 3;
 }
+
+.mobile-only{
+    display: none;
+}
+
+@media(max-width:768px){
+    .mobile-only{
+        display: block;
+    }
+}
