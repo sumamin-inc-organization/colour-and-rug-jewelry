@@ -121,3 +121,6 @@
     0% { transform:translateX(0); }
     100% { transform:translateX(-100%); }
 }
+.and_text{
+    font-size: 85px;
+}
