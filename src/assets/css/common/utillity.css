@@ -2,6 +2,10 @@
 /* Utility             */
 /* ------------------- */
 
+body{
+    color: #3E3A39;
+}
+
 /*----------------------------
     Main Grid
     メイングリッド
@@ -23,8 +27,8 @@
     grid-column: 1 / 4;
 }
 
-.main-grid-column-2_4{
-    grid-column: 2 / 4;
+.main-grid-column-2_3{
+    grid-column: 2 / 3;
 }
 
 
