@@ -6,8 +6,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Roboto:wght@400;500&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Zen+Old+Mincho:wght@400;500&display=swap" rel="stylesheet">
+    <!-- SLick CSS -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <title>COLOR & RUG-JEWELRY</title>
-<script defer src="main0bacd804bb0df459f893.js"></script><link href="main.98a44e0b9d93e2ddc9b4.css" rel="stylesheet"></head>
+<script defer src="main.0bacd804bb0df459f893.js"></script><link href="main.css" rel="stylesheet"></head>
 <body>
     <header>
     </header>
@@ -93,7 +95,79 @@
     </section>
 
     <section id="recommended"></section>
-    <section id="inspiration"></section>
+    <section id="inspiration" class="main-grid">
+      <div class="inspiration-container main-grid-column-2">
+        <p class="sec_title_en inspiration-eng">INSPIRATION</p>
+        <h2 class="sec_title inspiration-jp">インスピレーション</h2>
+        <div class="slider-controls">
+          <ul class="indicators" role="list">
+            <li class="indicator regular fs-14 font-zenkaku" data-slide-index="0">01</li>
+            <li class="indicator regular fs-14 font-zenkaku" data-slide-index="1">02</li>
+            <li class="indicator regular fs-14 font-zenkaku" data-slide-index="2">03</li>
+            <li class="indicator regular fs-14 font-zenkaku" data-slide-index="3">04</li>
+            <li class="indicator regular fs-14 font-zenkaku" data-slide-index="4">05</li>
+          </ul>
+          <div class="slider-buttons">
+            <button class="prev" id="prev"><img src="./images/chevron_left.svg" alt="previous" class="prev_img"></button>
+            <button class="next" id="next"><img src="./images/chevron_right.svg" alt="next" class="next_img"></button>
+          </div>
+        </div>
+        <div class="slider-container"></div>
+        <div class="your-slider">
+          <div class="card">
+            <div class="before">
+              <p class="font-bellefair fs-16 regular">BEFORE</p>
+              <img src="./images/before.jpg" alt="before" class="slide_img">
+            </div>
+            <div class="after">
+              <p class="font-bellefair fs-16 regular">AFTER</p>
+              <img src="./images/after.jpg" alt="after" class="slide_img">
+            </div>
+          </div>
+          <div class="card">
+            <div class="before">
+              <p class="font-bellefair fs-16 regular">BEFORE</p>
+              <img src="./images/before.jpg" alt="before">
+            </div>
+            <div class="after">
+              <p class="font-bellefair fs-16 regular">AFTER</p>
+              <img src="./images/after.jpg" alt="after">
+            </div>
+          </div>
+          <div class="card">
+            <div class="before">
+              <p class="font-bellefair fs-16 regular">BEFORE</p>
+              <img src="./images/before.jpg" alt="before">
+            </div>
+            <div class="after">
+              <p class="font-bellefair fs-16 regular">AFTER</p>
+              <img src="./images/after.jpg" alt="after">
+            </div>
+          </div>
+          <div class="card">
+            <div class="before">
+              <p class="font-bellefair fs-16 regular">BEFORE</p>
+              <img src="./images/before.jpg" alt="before">
+            </div>
+            <div class="after">
+              <p class="font-bellefair fs-16 regular">AFTER</p>
+              <img src="./images/after.jpg" alt="after">
+            </div>
+          </div>
+          <div class="card">
+            <div class="before">
+              <p class="font-bellefair fs-16 regular">BEFORE</p>
+              <img src="./images/before.jpg" alt="before">
+            </div>
+            <div class="after">
+              <p class="font-bellefair fs-16 regular">AFTER</p>
+              <img src="./images/after.jpg" alt="after">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
     <section id="advantage"></section>
     <section id="consultancy"></section>
     <section id="item"></section>
@@ -106,5 +180,38 @@
     <footer>
 
     </footer>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+  $(document).ready(function() {
+  var $slider = $('.your-slider');
+
+  $slider.slick({
+    // Slick options here
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    // Add other options as needed
+  });
+
+  // Click event for indicators
+  $('.indicators .indicator').on('click', function() {
+    var slideIndex = $(this).data('slide-index');
+    $slider.slick('slickGoTo', parseInt(slideIndex));
+  });
+
+  // Click events for navigation buttons
+  $('.prev-slide').on('click', function() {
+    $slider.slick('slickPrev');
+  });
+
+  $('.next-slide').on('click', function() {
+    $slider.slick('slickNext');
+  });
+});
+
+</script>
 </body>
 </html>

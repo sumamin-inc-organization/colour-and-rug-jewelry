@@ -2,3 +2,37 @@
     background-color: #fff;
     padding: 140px 0;
 }
+
+.rc_top{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.rc_top h2{
+    margin-top: 32px;
+}
+
+.rc_top p{
+    text-align: justify;
+    line-height: 40px;
+    margin-top: 53px;
+    padding-right: 70px;
+}
+
+.rc_list li{
+    position: relative;
+    /* list-style: none; */
+}
+
+.rc_list li::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: -29px;
+    width: 12px;
+    height: 8px;
+    border-left: 1px solid #C38C80;
+    border-bottom: 1px solid #C38C80;
+    transform: rotate(-45deg);
+  }

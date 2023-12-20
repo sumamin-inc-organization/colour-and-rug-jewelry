@@ -1,0 +1,133 @@
+/* ------------------- */
+/* INSPIRATION            */
+/* ------------------- */
+
+
+/*----------------------------
+    Margins And Padding
+    マージンとパディング
+----------------------------*/
+.inspiration-container {
+  padding-top: 81.2px;
+  padding-bottom: 67px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.inspiration-eng {
+  margin-bottom: 42px;
+}
+.inspiration-jp {
+  padding-left: 1px;
+}
+
+/*----------------------------
+    Slider Controls
+    スライダーコントロール
+----------------------------*/
+
+.slider-controls {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 36px;
+  margin-bottom: 38.3px;
+}
+
+.indicators {
+  display: flex;
+  gap: 31px;
+  padding: 0;
+  margin: 0;
+}
+.indicators:hover {
+  cursor: pointer;
+}
+
+.slider-buttons {
+  display: flex;
+  gap: 20px;
+}
+.slider-btn {
+  background: transparent;
+  border: none;
+  display: grid;
+  place-items: center;
+}
+.slider-btn img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.slider-btn:hover {
+  cursor: pointer;
+}
+
+/*----------------------------
+    Slider
+    スライダー
+----------------------------*/
+
+.slide_img {
+  width: 100%;
+}
+.slide_item {
+  width: 50%;
+  position: relative;
+}
+
+.card-inner {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+}
+
+.slide_item p {
+  position: absolute;
+  width: 180px;
+  height: 40px;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color: #ffffff;
+  clip-path: polygon(0 0, 100% 0, 74% 100%, 0 100%);
+  display: grid;
+  place-content: center;
+  letter-spacing: 2.88px;
+}
+
+.active {
+  color: black;
+}
+
+/*----------------------------
+   Inspiration Bottom
+   インスピレーションボトム
+----------------------------*/
+
+.inspiration-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30.2px;
+}
+
+/*----------------------------
+   Inspiration Button
+   インスピレーションボタン
+----------------------------*/
+
+.inspiration-button.black-btn {
+  padding: 7.1px 46.2px 8.9px 35.6px;
+}
+
+.inspiration-button.black-btn::after {
+  top: 14px;
+  right: 20px;
+}
+
+.card{
+    -webkit-backface-visibility: hidden; 
+}
