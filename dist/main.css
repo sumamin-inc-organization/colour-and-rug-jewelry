@@ -247,6 +247,11 @@ a{
 .and_text{
     font-size: 85px;
 }
+@media (max-width: 767px) {
+    .company_name{
+        font-size: 70px;
+    }
+}
 
 /*----------------------------
     Responsive 
@@ -449,7 +454,6 @@ a{
 }
 
 .kv_bottom .kv_text{
-    /* margin-top: 70px; */
     margin-left: 9.73vw;
 }
 
@@ -482,6 +486,57 @@ a{
 
 .kv_bottom .kv_02{
     width: 41vw;
+}
+
+@media (max-width: 768px) {
+    .kv_top{
+        display: block;
+        position: relative;
+    }
+    .kv_top .kv_01{
+        width: 300px;
+    }
+    .kv_top .kv_title{
+        width: 300px;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+    }
+    .kv_bottom{
+        flex-flow: column;
+        margin-top: 80px;
+        padding-bottom: 80px;
+    }
+    .kv_bottom .kv_text {
+        margin-left: 5%;
+        margin-right: auto;
+    }
+    .kv_bottom .kv_text .kagayaku{
+        font-size: 16px;
+    }
+    .kv_bottom .kv_text h2{
+        font-size: 28px;
+        letter-spacing: 0.15em;
+        margin-top: 1.68vw;
+    }
+    .kv_bottom .kv_text .and{
+        font-size: 18px;
+    }
+    .kv_bottom .kv_text .kararagu{
+        font-size: 16px;
+        margin-left: 0;
+    }
+    .kv_bottom .kv_text p{
+        font-size: 16px;
+        line-height: 2rem;
+        max-width: 95%;
+        margin-bottom: 45px;
+    }
+    .kv_bottom .kv_02{
+        width: 280px;
+        height: 280px;
+        object-fit: cover;
+    }
 }
 /*!******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/newplan.css ***!
@@ -806,6 +861,7 @@ a{
     margin-top: 40px;
 }
 .advantage_text{
+    margin-top: 80px;
     line-height: 2.5;
 }
 .advantage_top_img{
@@ -816,7 +872,6 @@ a{
     width: 100%;
     object-fit: cover;
 }
-
 .advantage_flex{
     display: flex;
     justify-content: space-between;
@@ -832,12 +887,11 @@ a{
     gap: 40px;
 }
 .interior_color img{
-    width: 15vw
+    width: 285px
 }
 .interior_text{
     line-height: 2;
 }
-
 .color_title{
     text-align: center;
     padding: 3px 0;
@@ -910,26 +964,58 @@ a{
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .advantage_top{
         flex-flow: column;
         align-items: start;
-        padding: 85px 0;
+        padding: 85px 0 55px;
         gap: 50px;
         justify-content: start;
         width: 100%;
     }
     .advantage_top_img{
-        width: 270vw;
+        width: 95vw;
+    }
+    .advantage_top_img img{
+        height: auto;
+        width: 100%;
     }
     .sec_title{
         margin-top: 35px;
     }
+    .advantage_text{
+        margin-top: 0;
+        line-height: 2;
+    }
+    .advantage_flex{
+        flex-flow: column;
+        justify-content: start;
+        margin-bottom: 30px;
+    }
+    .warm,.relaxed{
+        width: 100%;
+    }
     .interior_color{
-        gap: 20px;
+        gap: 10px;
     }
     .interior_color img{
-        width: 40%;
+        width: 180px
+    }
+    .interior_text{
+        line-height: 1.8;
+    }
+    .color_title{
+        width: 150px;
+    }
+    .color_scheme{
+        font-size: 18px;
+        margin: 15px 0 10px;
+        letter-spacing: 0px;
+    }
+    .interior_story{
+        font-size: 18px;
+        padding: 30px 0 10px;
+        letter-spacing: 5px;
     }
 }
 /*!**********************************************************************************!*\
@@ -1077,6 +1163,24 @@ height: 100%;
         width: 95vw;
     }
 }
+
+@media (max-width: 768px) {
+    .flow_content{
+        flex-flow: column;
+        gap: 50px;
+        margin: 80px 0 50px;
+    }
+    .flow_column{
+        padding: 40px 20px 50px 30px;
+        width: 95vw;
+    }
+    .flow_number{
+        padding-left: 0;
+    }
+    .flow_title{
+        font-size: 18px;
+    }
+}
 /*!******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/gallery.css ***!
   \******************************************************************************/
@@ -1114,7 +1218,6 @@ height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    flex-flow: ;
     gap: 15px;
 }
 .insta_flex a{
@@ -1125,6 +1228,32 @@ height: 100%;
     opacity: 0.8;
 }
 /* ここまで仮置き */
+
+@media (max-width: 768px) {
+    .gallery_content{
+        margin: 35px 0 80px;
+    }
+    .gallery_top{
+        margin-bottom: 45px;
+    }
+    .follow_btn{
+        margin-right: 0;
+        margin-top: 25px;
+        justify-content: end;
+    }
+    .follow_btn p{
+        font-size: 14px;
+    }
+    /* 仮置きなのでInstagramAPI対応後削除予定 */
+    .insta_flex{
+        gap: 10px;
+    }
+    .insta_flex a{
+        width: calc(50% - 5px);
+    }
+    /* ここまで仮置き */
+
+}
 /*!**************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/faq.css ***!
   \**************************************************************************/

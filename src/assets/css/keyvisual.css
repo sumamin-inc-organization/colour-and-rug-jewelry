@@ -23,7 +23,6 @@
 }
 
 .kv_bottom .kv_text{
-    /* margin-top: 70px; */
     margin-left: 9.73vw;
 }
 
@@ -56,4 +55,56 @@
 
 .kv_bottom .kv_02{
     width: 41vw;
+}
+
+@media (max-width: 768px) {
+    .kv_top{
+        display: block;
+        position: relative;
+    }
+    .kv_top .kv_01{
+        width: 300px;
+    }
+    .kv_top .kv_title{
+        width: 300px;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        margin: 0;
+    }
+    .kv_bottom{
+        flex-flow: column;
+        margin-top: 80px;
+        padding-bottom: 80px;
+    }
+    .kv_bottom .kv_text {
+        margin-left: 5%;
+        margin-right: auto;
+    }
+    .kv_bottom .kv_text .kagayaku{
+        font-size: 16px;
+    }
+    .kv_bottom .kv_text h2{
+        font-size: 28px;
+        letter-spacing: 0.15em;
+        margin-top: 1.68vw;
+    }
+    .kv_bottom .kv_text .and{
+        font-size: 18px;
+    }
+    .kv_bottom .kv_text .kararagu{
+        font-size: 16px;
+        margin-left: 0;
+    }
+    .kv_bottom .kv_text p{
+        font-size: 16px;
+        line-height: 2rem;
+        max-width: 95%;
+        margin-bottom: 45px;
+    }
+    .kv_bottom .kv_02{
+        width: 280px;
+        height: 280px;
+        object-fit: cover;
+    }
 }
