@@ -219,8 +219,8 @@
           </div>
         </div>
       </div>
-      <div class="banner inspiration-banner main-grid-column-1_4">
-        <div class="banner-wrapper parallax"  data-speed="-3">
+      <div class="banner inspiration-banner main-grid-column-1_4 main-grid">
+        <div class="banner-wrapper parallax main-grid-column-2"  data-speed="-3">
           <h2 class="font-bellefair fs-55 regular white banner_title">CONTACT US</h2>
           <p class="font-zenkaku medium fs-16 white banner_subtitle">まずは話を聞いてみたい、<br class="mobile-only">という方も大歓迎です。<br> お気軽にお問い合わせください。</p>
           <div class="banner-btn_wrapper " >
@@ -229,7 +229,6 @@
           </div>
         </div>
       </div>
-      </h2>
       <!-- <div class="banner test  main-grid-column-1_4">
         <div class="banner-cont "  data-speed="-1.5">
           <h2 class="font-bellefair fs-55 regular white">CONTACT US</h2>
@@ -242,17 +241,22 @@
       </div> -->
     </section>
     <section id="advantage">
-      <div class="advantage_top">
-        <div class="main-grid-column-2">
-          <span class="sec_title_en">ADVANTAGE</span>
-          <h2 class="sec_title font-zenold">カララグは、<br>カラースキーム作りから<br>始めます</h2>
-          <p class="service_text font-zenkaku gray fs-16 advantage_text">リノベーションを始めるときに最初に必要なのが「住まいの色を整える」こと。壁・床・天井・ドアなど、あらゆる建材を選ばなければならないなかで、すべての色を整えることはとても容易ではありません。一つひとつを選んでいくうちに、いつの間にかちぐはぐなインテリアになり、居心地の悪い空間になってしまうことも。</p>
-          <p class="service_text font-zenkaku gray fs-16 advantage_text">カララグでは、一人ひとりのストーリーを大切にし、あなただけのカラースキーム作りからスタートします。</p>
-        </div>
-        <div class="advantage_top_img">
-          <img src="./images/advantage.jpg" alt="カラースキーム作りの様子">
+      <div class="main-grid">
+        <div class="main-grid-column-2_3">
+          <div class="advantage_top">
+            <div>
+              <span class="sec_title_en">ADVANTAGE</span>
+              <h2 class="sec_title font-zenold">カララグは、<br>カラースキーム作りから<br>始めます</h2>
+              <p class="service_text font-zenkaku gray fs-16 advantage_text">リノベーションを始めるときに最初に必要なのが「住まいの色を整える」こと。壁・床・天井・ドアなど、あらゆる建材を選ばなければならないなかで、すべての色を整えることはとても容易ではありません。一つひとつを選んでいくうちに、いつの間にかちぐはぐなインテリアになり、居心地の悪い空間になってしまうことも。</p>
+              <p class="service_text font-zenkaku gray fs-16 advantage_text">カララグでは、一人ひとりのストーリーを大切にし、あなただけのカラースキーム作りからスタートします。</p>
+            </div>
+            <div class="advantage_top_img">
+              <img src="./images/advantage.jpg" alt="カラースキーム作りの様子">
+            </div>
         </div>
       </div>
+    </div>
+
       <div class="main-grid">
         <div class="advantage_flex main-grid-column-2">
           <div class="warm">
@@ -275,11 +279,13 @@
               </div>
             </div>
             <p class="interior_story">INTERIOR STORY</p>
-            <p class="interior_text font-zenkaku">
-              温もりとリラックスを感じさせるリビングルーム。<br>
-              大人の愛らしさや優しさを感じるくすんだピンクに包まれた空間は、<br>
-              温かさと癒しをもたらしてくれます。
-            </p>
+            <div class="interior_box">
+              <p class="interior_text font-zenkaku">
+                温もりとリラックスを感じさせるリビングルーム。<br>
+                大人の愛らしさや優しさを感じるくすんだピンクに包まれた空間は、<br>
+                温かさと癒しをもたらしてくれます。
+              </p>
+            </div>
           </div>
           <div class="relaxed">
             <div class="interior_color">
@@ -310,7 +316,16 @@
         </div>
       </div>
       <div class="company_name">
-        <p class="font-bellefair">COLOR&RUG-Jewelry</p>
+          <ul>
+            <li class="font-bellefair">COLOR<span class="and_text">&</span>RUG-Jewelry</li>
+            <li class="font-bellefair">COLOR<span class="and_text">&</span>RUG-Jewelry</li>
+            <li class="font-bellefair">COLOR<span class="and_text">&</span>RUG-Jewelry</li>
+            <li class="font-bellefair">COLOR<span class="and_text">&</span>RUG-Jewelry</li>
+            <li class="font-bellefair">COLOR<span class="and_text">&</span>RUG-Jewelry</li>
+            <li class="font-bellefair">COLOR<span class="and_text">&</span>RUG-Jewelry</li>
+            <li class="font-bellefair">COLOR<span class="and_text">&</span>RUG-Jewelry</li>
+            <li class="font-bellefair">COLOR<span class="and_text">&</span>RUG-Jewelry</li>
+          </ul>
       </div>
     </section>
     <section id="consultancy" class="main-grid">
@@ -331,9 +346,11 @@
 
     <section id="item" class="main-grid">
       <div class="it_wrap main-grid-column-2">
-        <div class="it_left">
-          <span class="sec_title_en">ITEM</span>
-          <h2 class="sec_title">カララグこだわりの<br>インテリアエレメント</h2>
+        <div class="sticky">
+          <div class="it_left">
+            <span class="sec_title_en">ITEM</span>
+            <h2 class="sec_title">カララグこだわりの<br>インテリアエレメント</h2>
+          </div>
         </div>
 
         <div class="it_right">
@@ -345,26 +362,147 @@
 
           <!-- <img src="assets/images/item/it_farrow"> -->
           <div class="graybox"></div>
-          <span class="font-zenold medium gray fs-20">世界に誇る上質な色で空間を彩るウォールペイント</span>
-          <h3 class="font-bellefair gray fs-39">Farrow & Ball</h3>
-          <p class="font-zenkaku regular gray fs-16">世界中から愛されてきたFarrow&Ball のペイントで壁を彩ります。最高級の原料のみでつくられたFarrow&Ball が生みだす132 色もの美しい色は、どんなときも心に寄り添ってくれるような優しいカラーバリエーション。どの部屋にも安心して使用できる、環境にも配慮されたペイントは、包み込んでくれるような温かさと安らぎのある空間を演出します。</p>
+          <span class="font-zenold medium gray fs-20">最高の足触りを実現した極上のフロアラグ</span>
+          <h3 class="font-bellefair gray fs-39">JAB CARPETS</h3>
+          <p class="font-zenkaku regular gray fs-16">空間のアクセントはもちろん、埃の舞い上がりやスリップ防止効果もあるフロアラグは、アレルギーの方やペットのいるご家庭にもおすすめのアイテム。ドイツJAB社のフロアラグは、足を踏み入れた瞬間に捉える毛足の感覚が、脳をオフモードにスイッチしてくれるほど上質な触り心地。日常を極上なものへと昇華させてくれる逸品です。</p>
         </div>
+        </div>
+      </div>
+
+      <div class="banner inspiration-banner main-grid-column-1_4 main-grid">
+        <div class="banner-wrapper parallax main-grid-column-2"  data-speed="-3">
+          <h2 class="font-bellefair fs-55 regular white banner_title">CONTACT US</h2>
+          <p class="font-zenkaku medium fs-16 white banner_subtitle">まずは話を聞いてみたい、<br class="mobile-only">という方も大歓迎です。<br> お気軽にお問い合わせください。</p>
+          <div class="banner-btn_wrapper " >
+            <button class="banner_book white-btn"><a href="#" class="font-zenkaku fs-16 medium gray">来店予約</a></button>
+            <button class="banner_contact white-btn"><a href="#" class="font-zenkaku fs-16 medium gray">お問い合わせ</a></button>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="flow"></section>
-    <section id="gallery"></section>
+    <section id="flow">
+      <div class="main-grid">
+        <div class="main-grid-column-2_3">
+          <div class="flow_content">
+            <div>
+              <span class="sec_title_en">FLOW</span>
+              <h2 class="sec_title font-zenold">導入までの流れ</h2>
+            </div>
+            <div class="flow_column">
+              <div class="flow_flex">
+                <p class="flow_number font-bellefair">1</p>
+                <div>
+                  <h3 class="flow_title">まずは無料相談</h3>
+                  <p class="flow_text">お気軽にお問い合わせください。</p>
+                </div>
+              </div>
+              <div class="flow_line"></div>
+              <div class="flow_flex">
+                <p class="flow_number font-bellefair">2</p>
+                <div>
+                  <h3 class="flow_title">ご契約</h3>
+                  <p class="flow_text">いよいよ、あなただけの住まいづくりのスタートです！</p>
+                </div>
+              </div>
+              <div class="flow_line"></div>
+              <div class="flow_flex">
+                <p class="flow_number font-bellefair">3</p>
+                <div>
+                  <h3 class="flow_title">カラーコンサルタンシー</h3>
+                  <p class="flow_text">プロと一緒にリノベーションのガイドとなる、カラースキームを作成します。</p>
+                </div>
+              </div>
+              <div class="flow_line"></div>
+              <div class="flow_flex">
+                <p class="flow_number font-bellefair">4</p>
+                <div>
+                  <h3 class="flow_title">着工</h3>
+                  <p class="flow_text">日常を特別にするための「色」を壁にペイントさせていただきます。</p>
+                </div>
+              </div>
+              <div class="flow_line"></div>
+              <div class="flow_flex">
+                <p class="flow_number font-bellefair">5</p>
+                <div>
+                  <h3 class="flow_title">施工確認</h3>
+                  <p class="flow_text">理想の空間をご確認いただきます。</p>
+                </div>
+              </div>
+              <div class="flow_line"></div>
+              <div class="flow_flex">
+                <p class="flow_number font-bellefair">6</p>
+                <div>
+                  <h3 class="flow_title">完工</h3>
+                  <p class="flow_text">ラグを設置し、理想の住まいが完成。</p>
+                </div>
+              </div>
+              <div class="flow_line"></div>
+              <div class="flow_flex">
+                <p class="flow_number font-bellefair">7</p>
+                <div>
+                  <h3 class="flow_title">お引渡し</h3>
+                  <p class="flow_text">日常がちょっと特別になる、あなたらしい暮らしが始まります。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="company_name">
+        <ul>
+          <li class="font-bellefair">COLOR<span class="and_text">&</span>RUG-Jewelry</li>
+          <li class="font-bellefair">COLOR<span class="and_text">&</span>RUG-Jewelry</li>
+          <li class="font-bellefair">COLOR<span class="and_text">&</span>RUG-Jewelry</li>
+          <li class="font-bellefair">COLOR<span class="and_text">&</span>RUG-Jewelry</li>
+          <li class="font-bellefair">COLOR<span class="and_text">&</span>RUG-Jewelry</li>
+          <li class="font-bellefair">COLOR<span class="and_text">&</span>RUG-Jewelry</li>
+          <li class="font-bellefair">COLOR<span class="and_text">&</span>RUG-Jewelry</li>
+          <li class="font-bellefair">COLOR<span class="and_text">&</span>RUG-Jewelry</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="main-grid">
+        <div class="main-grid-column-2">
+          <div class="gallery_content">
+            <div class="gallery_top">
+              <div>
+                <span class="sec_title_en">INSTAGRAM</span>
+                <h2 class="sec_title font-zenold">インスタギャラリー</h2>
+              </div>
+              <div>
+                <p>FOLLOW US</p>
+                <img src="./images/inta_icon.svg">
+              </div>
+            </div>
+            <!-- InstagramAPIで埋め込み予定 -->
+            <div class="insta_flex">
+              <img src="./images/insta_dummy.jpg">
+              <img src="./images/insta_dummy.jpg">
+              <img src="./images/insta_dummy.jpg">
+              <img src="./images/insta_dummy.jpg">
+              <img src="./images/insta_dummy.jpg">
+              <img src="./images/insta_dummy.jpg">
+            </div>
+            <!---------- ここまで ---------->
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="faq" class="main-grid">
       <div class="faq-title main-grid-column-2">
-        <p class="sec_title_en inspiration-eng">FAQ</p>
-        <h2 class="sec_title inspiration-jp">よくある質問と回答</h2>
+        <p class="sec_title_en faq-eng">FAQ</p>
+        <h2 class="sec_title faq-jp">よくある質問と回答</h2>
       </div>
       <div class="faq-container main-grid-column-2">
         <div class="faq" data-question-number="1">
           <div class="question">
-            <img src="./images/Q.svg" alt="question">
-            <h3 class="font-zenold fs-20">施工期間はどのくらいかかりますか？</h3>
+            <div class="left">
+              <p class="font-bellefair fs-29 brown">Q</p>
+              <h3 class="font-zenold fs-20">施工期間はどのくらいかかりますか？</h3>
+            </div>
             <img src="./images/chevron_faq.svg" alt="accordion icon">
           </div>
           <div class="answer">
@@ -375,8 +513,10 @@
         </div>
         <div class="faq" data-question-number="2">
           <div class="question">
-            <img src="./images/Q.svg" alt="question">
-            <h3 class="font-zenold fs-20">住みながらリノベーションはできますか？</h3>
+            <div class="left">
+              <p class="font-bellefair fs-29 brown">Q</p>
+              <h3 class="font-zenold fs-20">住みながらリノベーションはできますか？</h3>
+            </div>
             <img src="./images/chevron_faq.svg" alt="accordion icon">
           </div>
           <div class="answer">
@@ -387,8 +527,10 @@
         </div>
         <div class="faq" data-question-number="3">
           <div class="question">
-            <img src="./images/Q.svg" alt="question">
-            <h3 class="font-zenold fs-20">塗装は体に悪くない？</h3>
+            <div class="left">
+              <p class="font-bellefair fs-29 brown">Q</p>
+              <h3 class="font-zenold fs-20">塗装は体に悪くない？</h3>
+            </div>
             <img src="./images/chevron_faq.svg" alt="accordion icon">
           </div>
           <div class="answer">
@@ -399,8 +541,10 @@
         </div>
         <div class="faq" data-question-number="4">
           <div class="question">
-            <img src="./images/Q.svg" alt="question">
-            <h3 class="font-zenold fs-20">色に飽きたら塗り替えはできる？</h3>
+            <div class="left">
+              <p class="font-bellefair fs-29 brown">Q</p>
+              <h3 class="font-zenold fs-20">色に飽きたら塗り替えはできる？</h3>
+            </div>
             <img src="./images/chevron_faq.svg" alt="accordion icon">
           </div>
           <div class="answer">
@@ -411,8 +555,10 @@
         </div>
         <div class="faq" data-question-number="5">
           <div class="question">
-            <img src="./images/Q.svg" alt="question">
-            <h3 class="font-zenold fs-20">汚れた時は？</h3>
+            <div class="left">
+              <p class="font-bellefair fs-29 brown">Q</p>
+              <h3 class="font-zenold fs-20">汚れた時は？</h3>
+            </div>
             <img src="./images/chevron_faq.svg" alt="accordion icon">
           </div>
           <div class="answer">
