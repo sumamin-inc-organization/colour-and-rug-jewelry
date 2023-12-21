@@ -1,0 +1,40 @@
+
+/* ------------------- */
+/*        FAQ          */
+/* ------------------- */
+
+#faq{
+    border: 1px solid black;
+}
+
+.faq-title{
+    /* border:1px solid red; */
+    margin-bottom:94.7px ;
+    /* display: flex;
+    flex-direction: column; */
+    /* gap: 33.5px; */
+}
+
+
+.faq{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 37.4px;
+    /* margin-bottom: ; */
+}
+
+
+.question{
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left{
+    /* border: 1px solid blue; */
+    display: flex;
+    gap: 23.6px;
+
+}
