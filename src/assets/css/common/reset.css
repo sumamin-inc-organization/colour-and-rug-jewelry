@@ -100,7 +100,7 @@
    横方向のオーバーフローを非表示にする*/
    html,
    body {
-     overflow-x: hidden;
+     overflow-x: clip;
    }
    
    body {
