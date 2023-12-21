@@ -1,71 +1,71 @@
-#recommended{
-    background-color: #fff;
-    padding: 140px 0 200px;
+#recommended {
+  background-color: #fff;
+  padding: 140px 0 200px;
 }
 
-.rc_top{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.rc_top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.rc_top h2{
-    margin-top: 32px;
+.rc_top h2 {
+  margin-top: 32px;
 }
 
-.rc_top p{
-    text-align: justify;
-    line-height: 40px;
-    margin-top: 53px;
-    padding-right: 70px;
+.rc_top p {
+  text-align: justify;
+  line-height: 40px;
+  margin-top: 53px;
+  padding-right: 70px;
 }
 
-.rc_bottom{
-    display: flex;
-    position: relative;
-    margin-top: 67px;
+.rc_bottom {
+  display: flex;
+  position: relative;
+  margin-top: 67px;
 }
 
-.rc_bottom img{
-    width: 40%;
-    z-index: 1;
+.rc_bottom img {
+  width: 40%;
+  z-index: 1;
 }
 
-.rc_list{
-    background-color: #EFE3E0;
-    padding: 79px 93px 77px 0;
-    width: 65.8%;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    position: absolute;
-    top: 79px;
-    right: 0;
+.rc_list {
+  background-color: #efe3e0;
+  padding: 79px 93px 77px 0;
+  width: 65.8%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: absolute;
+  top: 79px;
+  right: 0;
 }
 
-.rc_list ul{
-    letter-spacing: 1.2px;
+.rc_list ul {
+  letter-spacing: 1.2px;
 }
 
-.rc_list li{
-    position: relative;
-    /* list-style: none; */
-    margin-top: 18px;
-    padding-left: 45px;
+.rc_list li {
+  position: relative;
+  /* list-style: none; */
+  margin-top: 18px;
+  padding-left: 45px;
 }
 
-.rc_list li:first-child{
-    margin-top: 0;
+.rc_list li:first-child {
+  margin-top: 0;
 }
 
 .rc_list li::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 10px;
-    left: 0;
-    width: 12px;
-    height: 8px;
-    border-left: 1px solid #C38C80;
-    border-bottom: 1px solid #C38C80;
-    transform: rotate(-45deg);
-  }
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 12px;
+  height: 8px;
+  border-left: 1px solid #c38c80;
+  border-bottom: 1px solid #c38c80;
+  transform: rotate(-45deg);
+}

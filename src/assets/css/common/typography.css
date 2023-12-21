@@ -5,103 +5,103 @@
 /*----------------------------
   Font weight /フォントの太さ 
 ----------------------------*/
-  .light {
+.light {
   /* ライト */
-    font-weight: 300;
-  }
-  .regular {
+  font-weight: 300;
+}
+.regular {
   /* レギュラー */
-    font-weight: 400;
-  }
-  .medium {
-    /* ミディアム */
-    font-weight: 500;
-  }
+  font-weight: 400;
+}
+.medium {
+  /* ミディアム */
+  font-weight: 500;
+}
 
-  /*----------------------------
+/*----------------------------
     Font Style /フォントのスタイル 
   ----------------------------*/
-  .font-roboto {
-    font-family: 'Roboto', sans-serif;
-  }
-  .font-zenkaku {
-    font-family: 'Zen Kaku Gothic New', sans-serif;
-  }
-  .font-zenold {
-    font-family: 'Zen Old Mincho', serif;
-  }
-  .font-bellefair {
-    font-family: 'Bellefair', serif;
-    font-weight: 400;
-  }
-  
-  /*----------------------------
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+}
+.font-zenkaku {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+.font-zenold {
+  font-family: "Zen Old Mincho", serif;
+}
+.font-bellefair {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+}
+
+/*----------------------------
     Font Sizes / フォントサイズ
   ----------------------------*/
-  .fs-14 {
-    font-size: 14px;
-  }
-  .fs-16 {
-    font-size: 16px;
-  }
-  .fs-20 {
-    font-size: 20px;
-  }
-  .fs-24 {
-    font-size: 24px;
-  }
-  .fs-25 {
-    font-size: 25px;
-  }
-  .fs-29 {
-    font-size: 29px;
-  }
-  .fs-30 {
-    font-size: 30px;
-  }
-  .fs-39 {
-    font-size: 39px;
-  }
-  .fs-55 {
-    font-size: 55px;
-  }
-  .fs-65 {
-    font-size: 65px;
-  }
-  .fs-85 {
-    font-size: 85px;
-  }
-  .fs-105 {
-    font-size: 105px;
-  }
-  .fs-136 {
-    font-size: 136px;
-  }
-  /*----------------------------
+.fs-14 {
+  font-size: 14px;
+}
+.fs-16 {
+  font-size: 16px;
+}
+.fs-20 {
+  font-size: 20px;
+}
+.fs-24 {
+  font-size: 24px;
+}
+.fs-25 {
+  font-size: 25px;
+}
+.fs-29 {
+  font-size: 29px;
+}
+.fs-30 {
+  font-size: 30px;
+}
+.fs-39 {
+  font-size: 39px;
+}
+.fs-55 {
+  font-size: 55px;
+}
+.fs-65 {
+  font-size: 65px;
+}
+.fs-85 {
+  font-size: 85px;
+}
+.fs-105 {
+  font-size: 105px;
+}
+.fs-136 {
+  font-size: 136px;
+}
+/*----------------------------
     Font Colors / フォントの色"
   ----------------------------*/
-  
-  .white {
-    color: #ffffff;
-  }
-  
-  .gray {
-    color: #3e3a39;
-  }
-  
-  .light-gray{
-    color: #B8B7B6;
-  }
-  
-  .brown {
-    color: #c38c80;
-  }
-  
-  .black{
-      color: black;
-  }
 
-/*----------------------------------
+.white {
+  color: #ffffff;
+}
+
+.gray {
+  color: #3e3a39;
+}
+
+.light-gray {
+  color: #b8b7b6;
+}
+
+.brown {
+  color: #c38c80;
+}
+
+.black {
+  color: black;
+}
+
+/*---------------------------------
   Section Title / セクションタイトル
 ----------------------------------*/
 .sec_title{
@@ -121,7 +121,34 @@
 .sec_title_en{
   font-family: 'Bellefair', serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   letter-spacing: 2.5px;
 }
+
+/* ------------------- */
+/* MOBILE              */
+/* ------------------- */
+
+/*-------------------------------------------------
+  Section Title - Mobile/ セクションタイトル - モバイル
+---------------------------------------------------*/
+
+
+@media (max-width: 768px) {
+
+/* PC     -> 30px 
+   mobile -> 22px */
+
+  .sec_title {
+    font-size: 22px;
+  }
+
+/* PC     -> 16px 
+   mobile -> 14px */
+   .sec_title_en {
+    font-size: 14px;
+  }
+
+}
+
