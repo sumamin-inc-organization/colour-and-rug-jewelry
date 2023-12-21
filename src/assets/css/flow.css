@@ -4,7 +4,6 @@
     display: flex;
     gap: 80px;
     margin: 140px 0 80px;
-    justify-content: end;
     width: 90.264vw;
 }
 .flow_content .sec_title{
