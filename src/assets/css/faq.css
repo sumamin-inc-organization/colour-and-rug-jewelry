@@ -4,7 +4,7 @@
 /* ------------------- */
 
 #faq{
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .faq-title{
@@ -37,7 +37,16 @@
 
 .left{
     /* border: 1px solid blue; */
+    margin: 0;
     display: flex;
+    align-items: center;
     gap: 23.6px;
 
 }
+.left:hover{
+    cursor: pointer;
+}
+
+.faq-container .faq:not(:first-child) {
+    margin-top: 41.4px;
+  }
