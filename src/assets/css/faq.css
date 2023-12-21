@@ -27,7 +27,7 @@
 }
 
 .answer{
-    padding-bottom: 70px;
+    /* margin-bottom: 70px; */
 }
 .question{
     /* border: 1px solid blue; */
@@ -50,4 +50,16 @@
 
 .faq-container .faq:not(:first-child) {
     margin-top: 41.4px;
+  }
+
+
+ .answer{
+    /* border: 1px solid blue;  */
+    max-height: 0px;
+    overflow: hidden;
+  }
+  
+ .answer.active{
+    max-height: 300px;
+    margin-bottom: 70px;
   }
