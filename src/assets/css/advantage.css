@@ -6,7 +6,7 @@
     padding: 140px 0;
     gap: 100px;
     justify-content: space-around;
-    margin-left: 9.73vw;
+    width: 90.264vw;
 }
 .sec_title{
     margin-top: 40px;
@@ -14,7 +14,6 @@
 .advantage_text{
     width: 40vw;
     min-width: 400px;
-    padding-bottom: 40px;
     line-height: 2.5;
 }
 .advantage_top_img{
@@ -38,12 +37,6 @@
 }
 .interior_color img{
     width: 285px;
-}
-.interior_box:nth-child(odd){
-    margin-right: calc(50% - 50vw);
-    margin-left: -30px;
-    padding-right: calc(50vw - 50%);
-    padding-left: 30px;
 }
 .interior_text{
     line-height: 2;

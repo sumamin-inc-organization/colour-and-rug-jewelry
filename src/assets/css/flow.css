@@ -4,8 +4,7 @@
     display: flex;
     gap: 80px;
     margin: 140px 0 80px;
-    justify-content: space-between;
-    margin-left: 9.73vw;
+    width: 90.264vw;
 }
 .flow_content .sec_title{
     width: 240px;
@@ -16,7 +15,7 @@
     gap: 10px;
     background-color: #EFE3E0;
     padding: 70px 10% 100px 60px;
-    width: 70%;
+    width: 65vw;
 }
 .flow_flex{
     display: flex;
