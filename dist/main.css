@@ -123,6 +123,10 @@ body{
     color: #3E3A39;
 }
 
+a{
+    cursor: pointer;
+}
+
 /*----------------------------
     Main Grid
     メイングリッド
@@ -209,29 +213,6 @@ body{
     right: 0;
     z-index: 3;
 }
-/*----------------------------
-    Responsive 
-    レスポンシブ
-----------------------------*/
-
-/* スクリーン幅が768px未満のデバイスでのみ表示 */
-.mobile-only{
-    display: none;
-}
-/* スクリーン幅が768pxより大きいデバイスでのみ表示 */
-.pc-only{
-    display: block;
-}
-
-@media(max-width:768px){
-    .mobile-only{
-        display: block;
-    }
-
-    .pc-only{
-        display: none;
-    }
-}
 
 /*----------------------------
     company_name 
@@ -266,6 +247,42 @@ body{
 .and_text{
     font-size: 85px;
 }
+
+/*----------------------------
+    Responsive 
+    レスポンシブ
+----------------------------*/
+
+/* スクリーン幅が768px未満のデバイスでのみ表示 */
+.mobile-only{
+    display: none;
+}
+/* スクリーン幅が768pxより大きいデバイスでのみ表示 */
+.pc-only{
+    display: block;
+}
+
+@media(max-width:768px){
+    .mobile-only{
+        display: block;
+    }
+
+    .pc-only{
+        display: none;
+    }
+}
+
+/*----------------------------
+    Main Grid
+    メイングリッド tab〜mobile
+----------------------------*/
+@media (max-width: 1200px) {
+    .main-grid{
+        display: grid;
+        grid-template-columns: 1fr 90% 1fr;
+    }
+}
+
 /*!****************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/typography.css ***!
   \****************************************************************************************/
@@ -376,16 +393,20 @@ body{
   Section Title / セクションタイトル
 ----------------------------------*/
 .sec_title{
-  color: #3E3A39;
   font-family: 'Zen Old Mincho', serif;
   font-weight: 500;
   font-size: 30px;
   line-height: 52px;
   letter-spacing: 4.2px;
 }
+@media (max-width: 767px) {
+  .sec_title{
+    font-size: 22px;
+    line-height: 3rem;
+  }
+}
 
 .sec_title_en{
-  color: #3E3A39;
   font-family: 'Bellefair', serif;
   font-weight: 400;
   font-size: 14px;
@@ -779,29 +800,31 @@ body{
     padding: 140px 0;
     gap: 100px;
     justify-content: space-between;
-    width: 90.264vw;
+    width: 88vw;
 }
 .sec_title{
     margin-top: 40px;
 }
 .advantage_text{
-    width: 40vw;
-    min-width: 400px;
     line-height: 2.5;
 }
 .advantage_top_img{
-    width: 51.2vw;
-    max-width: 750px;
-    min-width: 410px;
-    overflow: hidden;
+    width: 200vw;
 }
+.advantage_top_img img{
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+}
+
 .advantage_flex{
     display: flex;
     justify-content: space-between;
     margin-bottom: 80px;
+    gap: 50px;
 }
 .warm,.relaxed{
-    width: 525px;
+    width: 50%;
 }
 .interior_color{
     display: flex;
@@ -809,7 +832,7 @@ body{
     gap: 40px;
 }
 .interior_color img{
-    width: 285px;
+    width: 15vw
 }
 .interior_text{
     line-height: 2;
@@ -868,6 +891,46 @@ body{
     font-size: 20px;
     padding: 40px 0 20px;
     letter-spacing: 5px;
+}
+
+/* tab */
+@media (max-width: 1200px) {
+    .advantage_top{
+        width: 94vw;
+        gap: 50px;
+    }
+    .advantage_top_img{
+        width: 270vw;
+    }
+    .interior_color{
+        gap: 20px;
+    }
+    .interior_color img{
+        width: 40%;
+    }
+}
+
+@media (max-width: 767px) {
+    .advantage_top{
+        flex-flow: column;
+        align-items: start;
+        padding: 85px 0;
+        gap: 50px;
+        justify-content: start;
+        width: 100%;
+    }
+    .advantage_top_img{
+        width: 270vw;
+    }
+    .sec_title{
+        margin-top: 35px;
+    }
+    .interior_color{
+        gap: 20px;
+    }
+    .interior_color img{
+        width: 40%;
+    }
 }
 /*!**********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/consultancy.css ***!
@@ -968,6 +1031,7 @@ height: 100%;
 
 .flow_content{
     display: flex;
+    justify-content: space-between;
     gap: 80px;
     margin: 140px 0 80px;
     width: 90.264vw;
@@ -1006,14 +1070,61 @@ height: 100%;
     width: 100%;
     border-bottom: solid 1px #E1C5BF;
 }
+
+/* tab */
+@media (max-width: 1200px) {
+    .flow_content{
+        width: 95vw;
+    }
+}
 /*!******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/gallery.css ***!
   \******************************************************************************/
 @charset "utf-8";
 
+.gallery_content{
+    margin: 50px 0 140px;
+}
 .gallery_top{
     display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 70px;
 }
+.follow_btn{
+    display: flex;
+    align-items: end;
+    gap: 15px;
+}
+.follow_btn p{
+    padding-bottom: 5px;
+    border-bottom: solid #000 1px;
+    letter-spacing: 2px;
+}
+.follow_btn p:hover{
+    color: #C38C80;
+    transition: 0.3s;
+    padding-bottom: 2px;
+}
+.follow_btn img{
+    width: 30px;
+}
+/* 仮置きなのでInstagramAPI対応後削除予定 */
+.insta_flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-flow: ;
+    gap: 15px;
+}
+.insta_flex a{
+    width: calc(28% - 45px);
+}
+.insta_flex a:hover{
+    transition: 0.3s;
+    opacity: 0.8;
+}
+/* ここまで仮置き */
 /*!**************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/faq.css ***!
   \**************************************************************************/

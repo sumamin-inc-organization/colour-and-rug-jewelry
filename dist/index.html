@@ -247,12 +247,15 @@
             <div>
               <span class="sec_title_en">ADVANTAGE</span>
               <h2 class="sec_title font-zenold">カララグは、<br>カラースキーム作りから<br>始めます</h2>
-              <p class="service_text font-zenkaku gray fs-16 advantage_text">リノベーションを始めるときに最初に必要なのが「住まいの色を整える」こと。壁・床・天井・ドアなど、あらゆる建材を選ばなければならないなかで、すべての色を整えることはとても容易ではありません。一つひとつを選んでいくうちに、いつの間にかちぐはぐなインテリアになり、居心地の悪い空間になってしまうことも。</p>
-              <p class="service_text font-zenkaku gray fs-16 advantage_text">カララグでは、一人ひとりのストーリーを大切にし、あなただけのカラースキーム作りからスタートします。</p>
+              <p class="service_text font-zenkaku gray fs-16 advantage_text pc-only">リノベーションを始めるときに最初に必要なのが「住まいの色を整える」こと。壁・床・天井・ドアなど、あらゆる建材を選ばなければならないなかで、すべての色を整えることはとても容易ではありません。一つひとつを選んでいくうちに、いつの間にかちぐはぐなインテリアになり、居心地の悪い空間になってしまうことも。</p>
+              <p class="service_text font-zenkaku gray fs-16 advantage_text pc-only">カララグでは、一人ひとりのストーリーを大切にし、あなただけのカラースキーム作りからスタートします。</p>
             </div>
             <div class="advantage_top_img">
-              <img src="./images/advantage.jpg" alt="カラースキーム作りの様子">
+              <img class="pc-only" src="./images/advantage.jpg" alt="カラースキーム作りの様子">
+              <img class="mobile-only" src="./images/advantage_sp.jpg" alt="カラースキーム作りの様子">
             </div>
+            <p class="font-zenkaku gray fs-16 advantage_text mobile-only">リノベーションを始めるときに最初に必要なのが「住まいの色を整える」こと。壁・床・天井・ドアなど、あらゆる建材を選ばなければならないなかで、すべての色を整えることはとても容易ではありません。一つひとつを選んでいくうちに、いつの間にかちぐはぐなインテリアになり、居心地の悪い空間になってしまうことも。</p>
+            <p class="font-zenkaku gray fs-16 advantage_text mobile-only">カララグでは、一人ひとりのストーリーを大切にし、あなただけのカラースキーム作りからスタートします。</p>
         </div>
       </div>
     </div>
@@ -472,19 +475,21 @@
                 <span class="sec_title_en">INSTAGRAM</span>
                 <h2 class="sec_title font-zenold">インスタギャラリー</h2>
               </div>
-              <div>
+              <a class="follow_btn">
                 <p>FOLLOW US</p>
                 <img src="./images/inta_icon.svg">
-              </div>
+              </a>
             </div>
             <!-- InstagramAPIで埋め込み予定 -->
             <div class="insta_flex">
-              <img src="./images/insta_dummy.jpg">
-              <img src="./images/insta_dummy.jpg">
-              <img src="./images/insta_dummy.jpg">
-              <img src="./images/insta_dummy.jpg">
-              <img src="./images/insta_dummy.jpg">
-              <img src="./images/insta_dummy.jpg">
+              <a><img src="./images/insta_dummy.jpg"></a>
+              <a><img src="./images/insta_dummy.jpg"></a>
+              <a><img src="./images/insta_dummy.jpg"></a>
+              <a><img src="./images/insta_dummy.jpg"></a>
+              <a><img src="./images/insta_dummy.jpg"></a>
+              <a><img src="./images/insta_dummy.jpg"></a>
+              <a><img src="./images/insta_dummy.jpg"></a>
+              <a><img src="./images/insta_dummy.jpg"></a>
             </div>
             <!---------- ここまで ---------->
           </div>
@@ -569,7 +574,14 @@
         </div>
       </div>
     </section>
-    <section id="contact"></section>
+    <section id="contact">
+      <script src="https://sdk.form.run/js/v2/embed.js"></script>
+      <div
+        class="formrun-embed"
+        data-formrun-form="@colour-rug"
+        data-formrun-redirect="true">
+      </div>
+    </section>
     <section id="form"></section>
 
     <footer>
@@ -610,5 +622,6 @@
 // });
 
 </script>
+<script src="https://sdk.form.run/js/v2/embed.js"></script>
 </body>
 </html>

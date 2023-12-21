@@ -105,16 +105,20 @@
   Section Title / セクションタイトル
 ----------------------------------*/
 .sec_title{
-  color: #3E3A39;
   font-family: 'Zen Old Mincho', serif;
   font-weight: 500;
   font-size: 30px;
   line-height: 52px;
   letter-spacing: 4.2px;
 }
+@media (max-width: 767px) {
+  .sec_title{
+    font-size: 22px;
+    line-height: 3rem;
+  }
+}
 
 .sec_title_en{
-  color: #3E3A39;
   font-family: 'Bellefair', serif;
   font-weight: 400;
   font-size: 14px;
