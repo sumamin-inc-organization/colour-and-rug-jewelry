@@ -6,106 +6,105 @@
 
 /* Box sizing rules 
    ボックスサイジングのルール */
-   *,
-   *::before,
-   *::after {
-     box-sizing: border-box;
-   }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 /* Remove default margin 
       デフォルトのマージンを削除する */
-   body,
-   h1,
-   h2,
-   h3,
-   h4,
-   p,
-   figure,
-   blockquote,
-   dl,
-   dd,
-   ul,
-   li {
-     margin-block-start: 0;
-     margin-block-end: 0;
-   }
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+li {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
 
-   /* Remove default padding 
+/* Remove default padding 
       デフォルトのマージンを削除する */
-    ul{
-      padding-inline-start: 0;
-    }
-   
-   /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed.
+ul {
+  padding-inline-start: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed.
       ul、ol要素のリストスタイルを削除する。リストの役割が指定されているため、デフォルトのスタイリングが削除されます */
-   ul[role="list"],
-   ol[role="list"] {
-     list-style: none;
-   }
-   
-   /* Set core root defaults 
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults 
       コアルートのデフォルトを設定する */
-   html:focus-within {
-     scroll-behavior: smooth;
-   }
-   
-   /* Set core body defaults 
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults 
       コアボディのデフォルトを設定する */
-   body {
-     min-height: 100dvh;
-     text-rendering: optimizeSpeed;
-     line-height: 1.5;
-   }
-   
-   /* A elements that don't have a class get default styles 
+body {
+  min-height: 100dvh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles 
       class属性を持たない"a"要素にはデフォルトのスタイルが適用されます */
-   a:not([class]) {
-     text-decoration-skip-ink: auto;
-   }
-   
-   /* Make images easier to work with
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with
       画像の操作を容易にする */
-   img,
-   picture {
-     max-width: 100%;
-     display: block;
-   }
-   
-   /* Inherit fonts for inputs and buttons
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons
       入力フィールドとボタンにフォントを継承させる  */
-   input,
-   button,
-   textarea,
-   select {
-     font: inherit;
-   }
-   
-   /* Remove all animations, transitions and smooth scroll for people that prefer not to see them.
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them.
    アニメーション、トランジション、スムーズスクロールを全て削除し、それらを見たくない人のために設定します  */
-   @media (prefers-reduced-motion: reduce) {
-     html:focus-within {
-       scroll-behavior: auto;
-     }
-   
-     *,
-     *::before,
-     *::after {
-       animation-duration: 0.01ms !important;
-       animation-iteration-count: 1 !important;
-       transition-duration: 0.01ms !important;
-       scroll-behavior: auto !important;
-     }
-   }
-   
-   /* hide overflow x 
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* hide overflow x 
    横方向のオーバーフローを非表示にする*/
-   html,
-   body {
-     overflow-x: clip;
-   }
-   
-   body {
-     padding: 0;
-     margin: 0;
-     position: relative;
-   }
-   
+html,
+body {
+  overflow-x: clip;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
