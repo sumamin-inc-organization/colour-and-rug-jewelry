@@ -101,7 +101,7 @@
   color: black;
 }
 
-/*----------------------------------
+/*---------------------------------
   Section Title / セクションタイトル
 ----------------------------------*/
 .sec_title {
@@ -117,7 +117,34 @@
   color: #3e3a39;
   font-family: "Bellefair", serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   letter-spacing: 2.5px;
 }
+
+/* ------------------- */
+/* MOBILE              */
+/* ------------------- */
+
+/*-------------------------------------------------
+  Section Title - Mobile/ セクションタイトル - モバイル
+---------------------------------------------------*/
+
+
+@media (max-width: 768px) {
+
+/* PC     -> 30px 
+   mobile -> 22px */
+
+  .sec_title {
+    font-size: 22px;
+  }
+
+/* PC     -> 16px 
+   mobile -> 14px */
+   .sec_title_en {
+    font-size: 14px;
+  }
+
+}
+
