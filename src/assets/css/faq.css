@@ -5,7 +5,7 @@
 
 #faq{
     /* border: 1px solid black; */
-    padding-bottom: 140px;
+    padding-bottom: 140pxgit ;
 }
 
 .faq-title{
@@ -44,7 +44,7 @@
     gap: 23.6px;
 
 }
-.left:hover{
+.question:hover{
     cursor: pointer;
 }
 
