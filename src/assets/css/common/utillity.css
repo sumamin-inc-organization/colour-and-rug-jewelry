@@ -2,8 +2,8 @@
 /* Utility             */
 /* ------------------- */
 
-body{
-    color: #3E3A39;
+body {
+  color: #3e3a39;
 }
 
 a{
@@ -15,56 +15,55 @@ a{
     メイングリッド
 ----------------------------*/
 /* コンテンツ幅1100px */
-.main-grid{
-    display: grid;
-    grid-template-columns: 1fr 1100px 1fr;
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1100px 1fr;
 }
 
 /* 中央に配置 */
-.main-grid-column-2{
-    grid-column: 2;
-    /* grid-column: 2/3; */
+.main-grid-column-2 {
+  grid-column: 2;
+  /* grid-column: 2/3; */
 }
 
 /* メイングリッドの3つのカラムすべてを占有する */
-.main-grid-column-1_4{
-    grid-column: 1 / 4;
+.main-grid-column-1_4 {
+  grid-column: 1 / 4;
 }
 
-.main-grid-column-2_3{
-    grid-column: 2 / 3;
+.main-grid-column-2_3 {
+  grid-column: 2 / 3;
 }
-
 
 /*----------------------------
     Section Buttons - black
     セクションボタン - 黒
 ----------------------------*/
 
-.black-btn{
-    border: none;
-    background-color: black;
-    position: relative;
+.black-btn {
+  border: none;
+  background-color: black;
+  position: relative;
 }
 
-.black-btn a{
-    text-decoration: none;
-    color:white;
+.black-btn a {
+  text-decoration: none;
+  color: white;
 }
 
-.black-btn:hover{
-    cursor: pointer;
+.black-btn:hover {
+  cursor: pointer;
 }
 
-.black-btn::after{
-    content: url(../../images/inspiration/btn-chevron.svg);
-    position: absolute;
-    width: 6px;
-    height: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-    z-index: 3;
+.black-btn::after {
+  content: url(../../images/inspiration/btn-chevron.svg);
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  z-index: 3;
 }
 
 /*----------------------------
@@ -72,29 +71,52 @@ a{
     セクションボタン - 白
 ----------------------------*/
 
-.white-btn{
-    border: none;
-    background-color: white;
-    position: relative;
+.white-btn {
+  border: none;
+  background-color: white;
+  position: relative;
 }
 
-.white-btn a{
-    text-decoration: none;
-    color:black;
+.white-btn a {
+  text-decoration: none;
+  color: black;
 }
-.white-btn:hover{
-    cursor: pointer;
+.white-btn:hover {
+  cursor: pointer;
 }
 
-.white-btn::after{
-    content: url(../../images/common/btn-chevron_white.svh.svg);
-    position: absolute;
-    width: 6px;
-    height: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-    z-index: 3;
+.white-btn::after {
+  content: url(../../images/common/btn-chevron_white.svh.svg);
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  z-index: 3;
+}
+/*----------------------------
+    Responsive 
+    レスポンシブ
+----------------------------*/
+
+/* スクリーン幅が768px未満のデバイスでのみ表示 */
+.mobile-only {
+  display: none;
+}
+/* スクリーン幅が768pxより大きいデバイスでのみ表示 */
+.pc-only {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
+
+  .pc-only {
+    display: none;
+  }
 }
 
 /*----------------------------
@@ -102,31 +124,36 @@ a{
     流れる会社名
 ----------------------------*/
 
-.company_name{
-    font-size: 136px;
-    color: #EFE3E0;
-    letter-spacing: 13px;
-    display: flex;
-    overflow:hidden;
-    align-items: center;
-    width: 100%;
-    white-space:nowrap;
-    z-index: 1;
+.company_name {
+  font-size: 136px;
+  color: #efe3e0;
+  letter-spacing: 13px;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  width: 100%;
+  white-space: nowrap;
+  z-index: 1;
 }
 .company_name ul {
-    animation: flowing 100s linear infinite;
-    transform:translateX(100%);
-    margin: 0;
-    padding: 0;
+  animation: flowing 100s linear infinite;
+  transform: translateX(100%);
+  margin: 0;
+  padding: 0;
 }
-.company_name ul li{
-    display: inline-block;
-    padding-right: 30px;
+.company_name ul li {
+  display: inline-block;
+  padding-right: 30px;
 }
 @keyframes flowing {
-    0% { transform:translateX(0); }
-    100% { transform:translateX(-100%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
+
 .and_text{
     font-size: 85px;
 }
