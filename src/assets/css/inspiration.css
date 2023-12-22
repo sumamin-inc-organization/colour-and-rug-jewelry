@@ -129,3 +129,26 @@
 .card {
   -webkit-backface-visibility: hidden;
 }
+
+/* ------------------- */
+/*       MOBILE        */
+/* ------------------- */
+
+
+/*----------------------------
+   Responsive Typography
+   レスポンシブなティポグラフィ
+----------------------------*/
+
+
+@media(max-width:425px){
+  .insp-sp{
+    font-size: 14px;
+  }
+  .indicator.fs-14{
+    font-size: 12px;
+  }
+  .inspiration-bottom > .fs-20{
+    font-size: 16px;
+  }
+}
