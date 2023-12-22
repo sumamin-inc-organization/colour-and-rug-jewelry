@@ -1,12 +1,13 @@
 @charset "utf-8";
 
-ul{
-    list-style: none;
-}
+
 footer{
     color: #fff;
     background-color: #C38C80;
     padding: 80px 0;
+}
+footer ul{
+    list-style: none;
 }
 .footer_top{
     display: flex;
@@ -58,10 +59,10 @@ footer{
     color: #fff;
 }
 
-a{
+footer a{
     color: #fff;
 }
-a:hover{
+footer a:hover{
     color: #3E3A39;
     transition: 0.3s;
 }

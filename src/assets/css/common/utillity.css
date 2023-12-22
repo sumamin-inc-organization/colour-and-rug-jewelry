@@ -2,10 +2,12 @@
 /* Utility             */
 /* ------------------- */
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   color: #3e3a39;
 }
-
 a{
     cursor: pointer;
     text-decoration: none;
