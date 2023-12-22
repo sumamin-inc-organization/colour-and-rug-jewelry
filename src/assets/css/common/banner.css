@@ -70,11 +70,11 @@
 
 
 /*----------------------------
-   Responsive Typography
+   Responsive Typography 
    レスポンシブなティポグラフィ
 ----------------------------*/
 
-@media (max-width:425px) {
+@media (max-width:466px) {
   .banner_title{
     font-size: 29px;
     letter-spacing: 2.9px;
@@ -91,10 +91,10 @@ letter-spacing:2.4px;
 }
 }
 /*----------------------------
-    Banner Background
-    バナーの背景
+    Banner Background - Mobile
+    バナーの背景 - モバイル
 ----------------------------*/
-@media (max-width:425px) {
+@media (max-width:466px) {
   .banner {
     width: 100%;
     height: 400px;
@@ -106,11 +106,11 @@ letter-spacing:2.4px;
 }
 
 /*----------------------------
-    Banner Buttons
-    バナーボタン
+    Banner Buttons - Mobile
+    バナーボタン  - モバイル
 ----------------------------*/
 
-@media (max-width:425px) {
+@media (max-width:466px) {
   .banner-btn_wrapper {
     display: flex;
     flex-direction: column;
@@ -121,5 +121,41 @@ letter-spacing:2.4px;
   }
   .banner_contact {
     padding: 12.06px 68.65px 13.8px 69.35px;
+  }
+}
+
+/*----------------------------
+    Banner Wrapper - Mobile
+    バナーのラッパー  - モバイル
+----------------------------*/
+
+@media(max-width:466px){
+  .banner-wrapper {
+    margin: 0;
+    padding: 0;
+   padding-top: 62.5px;
+   padding-bottom: 60px;
+  }
+}
+
+
+/*----------------------------
+    Banner Other - Mobile
+   バナーその他 - モバイル
+----------------------------*/
+
+@media(max-width:466px){
+  .banner_title{
+    /* border: 1px solid red; */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+  .banner_subtitle{
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: center
   }
 }
