@@ -15,10 +15,6 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.rc_top h2 {
-  margin-top: 32px;
-}
-
 .rc_top p {
   text-align: justify;
   line-height: 40px;
