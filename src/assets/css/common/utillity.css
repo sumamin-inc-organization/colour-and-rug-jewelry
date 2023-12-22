@@ -141,16 +141,16 @@ a{
     レスポンシブ
 ----------------------------*/
 
-/* スクリーン幅が768px未満のデバイスでのみ表示 */
+/* スクリーン幅が767px以下のデバイスでのみ表示 */
 .mobile-only{
     display: none;
 }
-/* スクリーン幅が768pxより大きいデバイスでのみ表示 */
+/* スクリーン幅が767pxより大きいデバイスでのみ表示 */
 .pc-only{
     display: block;
 }
 
-@media(max-width:768px){
+@media(max-width:767px){
     .mobile-only{
         display: block;
     }
