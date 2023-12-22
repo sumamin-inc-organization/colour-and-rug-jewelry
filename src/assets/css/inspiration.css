@@ -171,3 +171,29 @@
     padding-bottom: 22px;
   }
 }
+
+/*----------------------------
+   Slider Controls - Mobile
+   スライダーコントロール - モバイル
+----------------------------*/
+
+@media (max-width:768px){
+  .slider-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 38px;
+    margin-bottom: 19px;
+    margin-top: 32px;
+   
+  }
+  .indicators {
+    display: flex;
+    gap: 21px;
+  }
+  .slider-buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+}
