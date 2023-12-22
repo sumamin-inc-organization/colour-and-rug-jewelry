@@ -212,6 +212,29 @@ a{
   right: 0;
   z-index: 3;
 }
+/*----------------------------
+    Responsive 
+    レスポンシブ
+----------------------------*/
+
+/* スクリーン幅が768px未満のデバイスでのみ表示 */
+.mobile-only {
+  display: none;
+}
+/* スクリーン幅が768pxより大きいデバイスでのみ表示 */
+.pc-only {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
+
+  .pc-only {
+    display: none;
+  }
+}
 
 /*----------------------------
     company_name 
@@ -858,7 +881,9 @@ a{
 .advantage_top_img img{
     height: 600px;
     width: 100%;
+    /* width: 80vw; */
     object-fit: cover;
+    /* border: 1px solid red; */
 }
 .advantage_flex{
     display: flex;
@@ -1026,6 +1051,7 @@ a{
 .consultancy-img_wrapper {
   margin-top: 47.9;
   width: 90.264vw;
+  width: 95vw;
   justify-self: start;
 }
 .consultancy-top_description {
@@ -1188,12 +1214,12 @@ a{
   width: 30px;
 }
 /* 仮置きなのでInstagramAPI対応後削除予定 */
-.insta_flex{
-    display: flex;
-    flex-wrap: wrap;
+.insta_flex {
+  display: flex;
+  flex-wrap: wrap;
     justify-content: space-between;
     flex-flow: ;
-    gap: 15px;
+  gap: 15px;
 }
 .insta_flex a {
   width: calc(28% - 45px);
