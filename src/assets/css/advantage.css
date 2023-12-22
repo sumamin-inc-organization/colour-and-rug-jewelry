@@ -6,10 +6,7 @@
     padding: 140px 0;
     gap: 100px;
     justify-content: space-between;
-    width: 88vw;
-}
-.sec_title{
-    margin-top: 40px;
+    width: 96vw;
 }
 .advantage_text{
     margin-top: 80px;
@@ -32,7 +29,7 @@
 .warm,.relaxed{
     width: 50%;
 }
-.interior_color{
+.interior_color {
     display: flex;
     align-items: end;
     gap: 40px;
@@ -40,7 +37,7 @@
 .interior_color img{
     width: 285px
 }
-.interior_text{
+.interior_text {
     line-height: 2;
 }
 .color_content{
@@ -58,7 +55,13 @@
     margin: 20px 0 10px;
     letter-spacing: 0.01rem;
 }
-.color_box{
+.color_scheme {
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 0 10px;
+    letter-spacing: 0.01rem;
+}
+.color_box {
     color: #fff;
     padding: 40px 10px 10px;
     font-size: 16px;
@@ -66,46 +69,48 @@
     position: relative;
     line-height: 1.2;
 }
-.warm_color1{
-    background-color: #AD9A88;
+.warm_color1 {
+    background-color: #ad9a88;
     margin-bottom: 10px;
 }
-.warm_color2{
-    background-color: #C7A494;
+.warm_color2 {
+    background-color: #c7a494;
     width: 60%;
 }
-.relaxed_color1{
-    background-color: #4D5357;
+.relaxed_color1 {
+    background-color: #4d5357;
     margin-bottom: 10px;
 }
-.relaxed_color2{
-    background-color: #43403B;
+.relaxed_color2 {
+    background-color: #43403b;
     width: 60%;
 }
-.sofa_color{
-    background-color: #D8D7D6;
+.sofa_color {
+    background-color: #d8d7d6;
     width: 40%;
 }
-.sofa_color p{
+.sofa_color p {
     position: absolute;
     bottom: 10px;
     left: 10px;
 }
-.color_flex{
+.color_flex {
     display: flex;
     gap: 10px;
 }
-.interior_story{
+.interior_story {
     font-size: 20px;
     padding: 40px 0 20px;
-    letter-spacing: 5px;
+    letter-spacing: 0.3rem;
 }
 
-/* tab */
 @media (max-width: 1200px) {
     .advantage_top{
-        width: 94vw;
+        width: 95vw;
         gap: 50px;
+    }
+    #advantage .sec_title{
+        font-size: 28px;
     }
     .advantage_top_img{
         width: 270vw;
@@ -122,7 +127,7 @@
     .advantage_top{
         flex-flow: column;
         align-items: start;
-        padding: 85px 0 55px;
+        padding: 80px 0 55px;
         gap: 50px;
         justify-content: start;
         width: 100%;
@@ -133,6 +138,9 @@
     .advantage_top_img img{
         height: auto;
         width: 100%;
+    }
+    #advantage .sec_title{
+        font-size: 22px;
     }
     .advantage_text{
         margin-top: 0;
@@ -150,7 +158,7 @@
         gap: 10px;
     }
     .interior_color img{
-        width: 44vw
+        width: 46vw
     }
     .interior_text{
         line-height: 1.8;
@@ -163,6 +171,5 @@
     .interior_story{
         font-size: 18px;
         padding: 30px 0 10px;
-        letter-spacing: 0.05rem;
     }
 }

@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="./assets/images/common/favicon.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Roboto:wght@400;500&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Zen+Old+Mincho:wght@400;500&display=swap" rel="stylesheet">
-    <!-- SLick CSS -->
+    <!-- Slick CSS -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 <body>
@@ -17,15 +17,15 @@
 
     <section id="keyvisual">
       <div class="kv_top">
-        <img class="kv_01" src="assets/images/keyvisual/kv_01.jpg">
+        <img class="kv_01 pc-only" src="assets/images/keyvisual/kv_01.jpg">
+        <img class="kv_01 mobile-only" src="assets/images/keyvisual/kv_01_sp.jpg">
         <img class="kv_title" src="assets/images/keyvisual/kv_title.svg">
       </div>
-
       <div class="kv_bottom">
         <div class="kv_text gray">
           <span class="kagayaku font-zenold font-weight-500">輝くわたしをつくる、暮らしをつくる。</span>
-          <h2><span class="font-bellefair">COLOR<span class="and">&</span>RUG-Jewelry</span><span class="kararagu font-zenold">-カララグ-</span></h2>
-          <p class="font-zenkaku font-weight-400">カラー&ラグジュアリーは、「カラーコンサルタンシー」「ラグのオーダー<br>メイド」「プチリノベ」の３ステップで憧れのインテリアを実現する、日<br>本で唯一のインテリアカラーコーディネートサービスです。</p>
+          <h2><span class="font-bellefair">COLOR<span class="and">&</span>RUG-Jewelry</span><br class="mobile-only"><span class="kararagu font-zenold">-カララグ-</span></h2>
+          <p class="font-zenkaku font-weight-400">カラー&ラグジュアリーは、「カラーコンサルタンシー」「ラグのオーダー<br class="pc-only">メイド」「プチリノベ」の３ステップで憧れのインテリアを実現する、日<br class="pc-only">本で唯一のインテリアカラーコーディネートサービスです。</p>
         </div>
         <img class="kv_02" src="assets/images/keyvisual/kv_02.jpg">
       </div>
@@ -96,7 +96,7 @@
 
     <section id="recommended" class="main-grid">
       <div class="rc_top main-grid-column-2">
-        <div>
+        <div class="rec-top_wrapper">
           <span class="sec_title_en">RECOMMENDED</span>
           <h2 class="sec_title">こんな方におすすめ</h2>
         </div>
@@ -107,9 +107,9 @@
         <img src="assets/images/recommended/rc_img.jpg">
 
         <div class="rc_list">
-          <ul class="font-zenold medium gray fs-20" role="list">
+          <ul class="font-zenold medium gray fs-20 rc_fs" role="list">
             <li>家を建てたが、どこか物足りない</li>
-            <li>部屋のイメージを低予算でガラリと変えたい</li>
+            <li>部屋のイメージを低予算で<br class="mobile-only">ガラリと変えたい</li>
             <li>今のおうちを自分らしい家にしたい</li>
             <li>あこがれの暮らしを実現したい</li>
             <li>おうちをクラスアップしたい</li>
@@ -229,16 +229,6 @@
           </div>
         </div>
       </div>
-      <!-- <div class="banner test  main-grid-column-1_4">
-        <div class="banner-cont "  data-speed="-1.5">
-          <h2 class="font-bellefair fs-55 regular white">CONTACT US</h2>
-          <p class="font-zenkaku medium fs-16 white ">まずは話を聞いてみたい、という方も大歓迎です。 お気軽にお問い合わせください。</p>
-          <div class="banner-btn_wrapper " >
-            <button class="banner_book white-btn"><a href="#" class="font-zenkaku fs-16 medium gray">来店予約</a></button>
-            <button class="banner_contact white-btn"><a href="#" class="font-zenkaku fs-16 medium gray">お問い合わせ</a></button>
-          </div>
-        </div>
-      </div> -->
     </section>
     <section id="advantage">
       <div class="main-grid">
@@ -269,8 +259,8 @@
             <div class="interior_color">
               <img src="./assets/images/advantage/advantage_interior1.jpg" alt="Warm Neutral">
               <div class="color_content">
-                <p class="color_title">Warm Neutral</p>
-                <p class="color_scheme">COLOR SCHEME</p>
+                <p class="color_title font-bellefair">Warm Neutral</p>
+                <p class="color_scheme font-bellefair">COLOR SCHEME</p>
                 <div class="warm_color1 color_box">
                   <p class="font-zenkaku">Wall Paint<br>aaaaaaaaaa<br>No.295</p>
                 </div>
@@ -284,7 +274,7 @@
                 </div>
               </div>
             </div>
-            <p class="interior_story">INTERIOR STORY</p>
+            <p class="interior_story font-bellefair">INTERIOR STORY</p>
             <div class="interior_box">
               <p class="interior_text font-zenkaku">
                 温もりとリラックスを感じさせるリビングルーム。<br class="pc-only">
@@ -297,8 +287,8 @@
             <div class="interior_color">
               <img src="./assets/images/advantage/advantage_interior2.jpg" alt="Relaxed Neutral">
               <div class="color_content">
-                <p class="color_title">Relaxed Neutral</p>
-                <p class="color_scheme">COLOR SCHEME</p>
+                <p class="color_title font-bellefair">Relaxed Neutral</p>
+                <p class="color_scheme font-bellefair">COLOR SCHEME</p>
                 <div class="relaxed_color1 color_box">
                   <p class="font-zenkaku">Wall Paint<br>aaaaaaaaaa<br>No.26</p>
                 </div>
@@ -312,7 +302,7 @@
                 </div>
               </div>
             </div>
-            <p class="interior_story">INTERIOR STORY</p>
+            <p class="interior_story font-bellefair">INTERIOR STORY</p>
             <p class="interior_text font-zenkaku">
               スタイリッシュで上質なモダンさを感じさせるリビングルーム。
               決して強すぎない柔らかさのあるFarrow & Ballの深い色と
@@ -352,13 +342,10 @@
 
     <section id="item" class="main-grid">
       <div class="it_wrap main-grid-column-2">
-        <div class="sticky">
           <div class="it_left">
             <span class="sec_title_en">ITEM</span>
             <h2 class="sec_title">カララグこだわりの<br>インテリアエレメント</h2>
           </div>
-        </div>
-
         <div class="it_right">
           <!-- <img src="assets/images/item/it_farrow"> -->
           <div class="graybox"></div>
@@ -371,7 +358,6 @@
           <span class="font-zenold medium gray fs-20">最高の足触りを実現した極上のフロアラグ</span>
           <h3 class="font-bellefair gray fs-39">JAB CARPETS</h3>
           <p class="font-zenkaku regular gray fs-16">空間のアクセントはもちろん、埃の舞い上がりやスリップ防止効果もあるフロアラグは、アレルギーの方やペットのいるご家庭にもおすすめのアイテム。ドイツJAB社のフロアラグは、足を踏み入れた瞬間に捉える毛足の感覚が、脳をオフモードにスイッチしてくれるほど上質な触り心地。日常を極上なものへと昇華させてくれる逸品です。</p>
-        </div>
         </div>
       </div>
 
@@ -505,7 +491,7 @@
         <h2 class="sec_title faq-jp">よくある質問と回答</h2>
       </div>
       <div class="faq-container main-grid-column-2">
-        <div class="faq" data-question-number="1">
+        <div class="faq active" data-question-number="1">
           <div class="question">
             <div class="left">
               <p class="font-bellefair fs-29 brown">Q</p>
@@ -543,7 +529,7 @@
           </div>
           <div class="answer">
             <p class="fs-16 regular font-zenkaku">
-              イギリスでは、赤ちゃんのおもちゃにも使用されているFarrow&Ballの塗料を使用するので、臭いもなくあんぜんです。
+              イギリスでは、赤ちゃんのおもちゃにも使用されているFarrow&Ballの塗料を使用するので、臭いもなく安全です。
             </p>
           </div>
         </div>
@@ -593,38 +579,6 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script>
-//   $(document).ready(function() {
-//   var $slider = $('.insp-slider');
-//   var $indicators = $('.indicators .indicator');
-
-//   $slider.slick({
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     autoplay: false,
-//     autoplaySpeed: 2000,
-//     nextArrow: document.getElementById('slider-next'),
-//     prevArrow: document.getElementById('slider-prev'),
-//   });
-
-//   // Click event for indicators
-//   // インジケータのクリックイベント
-
-//   $('.indicators .indicator').on('click', function() {
-//     var slideIndex = $(this).data('slide-index');
-//     $slider.slick('slickGoTo', parseInt(slideIndex));
-//   });
-
-//   // Click events for navigation buttons
-//   // ナビゲーションボタンのクリックイベント
-  
-//   $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-//     $indicators.removeClass('active');
-//     $indicators.eq(nextSlide).addClass('active');
-//   });
-// });
-
-</script>
 <script src="https://sdk.form.run/js/v2/embed.js"></script>
 </body>
 </html>

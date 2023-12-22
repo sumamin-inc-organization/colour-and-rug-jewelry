@@ -1,71 +1,201 @@
-#recommended{
-    background-color: #fff;
-    padding: 140px 0 200px;
+/* ------------------- */
+/* RECOMMENDED          */
+/* ------------------- */
+
+#recommended {
+  background-color: #fff;
+  padding: 140px 0 200px;
+}
+/*-------------------
+ Recommended Top
+---------------------*/
+
+.rc_top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.rc_top{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.rc_top p {
+  text-align: justify;
+  line-height: 40px;
+  margin-top: 53px;
+  padding-right: 70px;
 }
 
-.rc_top h2{
-    margin-top: 32px;
+/*-------------------
+ Recommended Bottom
+---------------------*/
+
+.rc_bottom {
+  display: flex;
+  position: relative;
+  margin-top: 67px;
 }
 
-.rc_top p{
-    text-align: justify;
-    line-height: 40px;
-    margin-top: 53px;
-    padding-right: 70px;
+.rc_bottom img {
+  width: 40%;
+  z-index: 1;
 }
 
-.rc_bottom{
-    display: flex;
-    position: relative;
-    margin-top: 67px;
+.rc_list {
+  background-color: #efe3e0;
+  padding: 79px 93px 77px 0;
+  width: 65.8%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: absolute;
+  top: 79px;
+  right: 0;
 }
 
-.rc_bottom img{
-    width: 40%;
-    z-index: 1;
+.rc_list ul {
+  letter-spacing: 1.2px;
 }
 
-.rc_list{
-    background-color: #EFE3E0;
-    padding: 79px 93px 77px 0;
-    width: 65.8%;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    position: absolute;
-    top: 79px;
-    right: 0;
+.rc_list li {
+  position: relative;
+  margin-top: 18px;
+  padding-left: 45px;
 }
 
-.rc_list ul{
-    letter-spacing: 1.2px;
-}
-
-.rc_list li{
-    position: relative;
-    /* list-style: none; */
-    margin-top: 18px;
-    padding-left: 45px;
-}
-
-.rc_list li:first-child{
-    margin-top: 0;
+.rc_list li:first-child {
+  margin-top: 0;
 }
 
 .rc_list li::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 10px;
-    left: 0;
-    width: 12px;
-    height: 8px;
-    border-left: 1px solid #C38C80;
-    border-bottom: 1px solid #C38C80;
-    transform: rotate(-45deg);
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 12px;
+  height: 8px;
+  border-left: 1px solid #c38c80;
+  border-bottom: 1px solid #c38c80;
+  transform: rotate(-45deg);
+}
+
+
+
+/*-----------------
+      Mobile
+-------------------*/
+
+/*------------------------
+  Recommended Top - Mobile
+--------------------------*/
+
+
+@media (max-width:768px){
+  .rc_top {
+    display: grid;
+    grid-template-columns: 1fr 90% 1fr;
+    /* border: 1px solid black; */
   }
+  .rec-top_wrapper{
+    /* border: 1px solid green; */
+    grid-column: 2;
+  }
+  .rc_top p {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0;
+   line-height: 30px;
+   padding-left: 10.26vw; 
+   /* border: 1px solid red; */
+   grid-column: 2;
+  }
+  #recommended {
+    background-color: #fff;
+    padding: 80px 0 80px;
+  }
+
+  /* メインのグリッドとモバイルセクションのデザインが合わないため、パディングを追加しました。 */
+  .rc_top h2 {
+    padding-left: 2.82vw;
+  }
+  .rc_top span {
+    padding-left: 2.82vw;
+  }
+  .rc_top p {
+    padding-left: 10.26vw; 
+   }
+}
+
+/*---------------------------
+  Recommended Bottom - Mobile
+-----------------------------*/
+@media (max-width:768px){
+
+  #recommended{
+    display: block;
+  }
+  .rc_bottom{
+    display: grid;
+    grid-template-columns: 1fr 90% 1fr;
+    width: 100vw;
+  }
+  .rc_list {
+    width: 94.87vw;
+    left: 0;
+    padding: 0;
+    padding-top:6.25em ;
+    padding: 6em 60.85px 57px 41px;
+    padding-left: 0; 
+    display: grid;
+    place-content: center;
+    z-index: 1;
+    top: 70%;
+    grid-column: 2/3;
+  }
+  .rc_fs{
+
+    padding-left: 30px;
+    padding-top: 50px;
+  }
+  .rc_fs li{
+    letter-spacing: 1px;
+  }
+  .rc_bottom img {
+    width: 90vw;
+    aspect-ratio: 1.4;
+    z-index: 2;
+    grid-column: 1/3;
+  }
+  .rc_list li {
+    position: relative;
+    margin-top: 25px;
+    padding-left: 30px;
+    text-wrap: nowrap;
+    margin-left: 10.77vw; 
+  }
+  
+  .rc_list li:first-child {
+    margin-top: 0;
+  }
+}
+
+
+
+
+@media(max-width:600px){
+ .rc_fs li{
+    font-size: 16px;
+    letter-spacing: 0;
+  }
+  .rc_fs{
+    padding-left: 30px;
+    padding-top: 25px;
+  }
+
+}
+
+@media(min-width:600px) and (max-width:768px){
+  .rc_fs{
+
+    padding-left: 30px;
+    padding-top: 100px;
+  }
+}

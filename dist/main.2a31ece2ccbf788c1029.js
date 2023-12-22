@@ -382,8 +382,23 @@ $(document).ready(function() {
       $indicators.eq(nextSlide).addClass('active');
     });
   });
+
+  /*----------------------------
+    FAQ
+  ----------------------------*/
+
+
+  const faqs = document.querySelectorAll('.faq');
+  
+
+  faqs.forEach(faq =>{
+    faq.addEventListener('click',(e)=>{
+      faq.classList.toggle('active')
+    })
+  })
+  
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.82b3020dfd2bd4d14198.js.map
+//# sourceMappingURL=main.2a31ece2ccbf788c1029.js.map

@@ -2,7 +2,6 @@
 /* INSPIRATION         */
 /* ------------------- */
 
-
 /*----------------------------
     Margins And Padding
     マージンとパディング
@@ -27,7 +26,6 @@
 ----------------------------*/
 
 .slider-controls {
-  /* border: 1px solid black; */
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -128,6 +126,6 @@
   right: 20px;
 }
 
-.card{
-    -webkit-backface-visibility: hidden; 
+.card {
+  -webkit-backface-visibility: hidden;
 }
