@@ -1,45 +1,46 @@
 @charset "utf-8";
 
-.gallery_content{
-    margin: 50px 0 140px;
+.gallery_content {
+  margin: 50px 0 140px;
 }
-.gallery_top{
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    margin-bottom: 70px;
+.gallery_top {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 70px;
 }
-.follow_btn{
-    display: flex;
-    align-items: end;
-    gap: 15px;
+.follow_btn {
+  display: flex;
+  align-items: end;
+  gap: 15px;
 }
-.follow_btn p{
-    padding-bottom: 5px;
-    border-bottom: solid #000 1px;
-    letter-spacing: 2px;
+.follow_btn p {
+  padding-bottom: 5px;
+  border-bottom: solid #000 1px;
+  letter-spacing: 2px;
 }
-.follow_btn p:hover{
-    color: #C38C80;
-    transition: 0.3s;
-    padding-bottom: 2px;
+.follow_btn p:hover {
+  color: #c38c80;
+  transition: 0.3s;
+  padding-bottom: 2px;
 }
-.follow_btn img{
-    width: 30px;
+.follow_btn img {
+  width: 30px;
 }
 /* 仮置きなのでInstagramAPI対応後削除予定 */
-.insta_flex{
-    display: flex;
-    flex-wrap: wrap;
+.insta_flex {
+  display: flex;
+  flex-wrap: wrap;
     justify-content: space-between;
-    gap: 15px;
+    flex-flow: ;
+  gap: 15px;
 }
-.insta_flex a{
-    width: calc(28% - 45px);
+.insta_flex a {
+  width: calc(28% - 45px);
 }
-.insta_flex a:hover{
-    transition: 0.3s;
-    opacity: 0.8;
+.insta_flex a:hover {
+  transition: 0.3s;
+  opacity: 0.8;
 }
 /* ここまで仮置き */
 
