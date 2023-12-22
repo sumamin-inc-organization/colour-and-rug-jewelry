@@ -6,6 +6,7 @@
 .rc_top {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  /* border: 1px solid red; */
 }
 
 .rc_top h2 {
@@ -17,6 +18,7 @@
   line-height: 40px;
   margin-top: 53px;
   padding-right: 70px;
+  /* border: 1px solid black; */
 }
 
 .rc_bottom {
@@ -68,4 +70,35 @@
   border-left: 1px solid #c38c80;
   border-bottom: 1px solid #c38c80;
   transform: rotate(-45deg);
+}
+
+
+
+/*-------------------------------------------------
+  Section Title - Mobile/ セクションタイトル - モバイル
+---------------------------------------------------*/
+
+
+
+@media (max-width:768px){
+  .rc_top {
+    display: grid;
+    grid-template-columns: auto
+  }
+  
+  .rc_top p {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0;
+   line-height: 30px;
+  }
+  .rc_top h2 {
+    margin-top: 28px;
+  }
+  #recommended {
+    background-color: #fff;
+    padding: 80px 0 80px;
+  }
+  
 }
