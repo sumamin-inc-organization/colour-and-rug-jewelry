@@ -5,6 +5,7 @@
 #recommended {
   background-color: #fff;
   padding: 140px 0 200px;
+  /* border: 1px solid red; */
 }
 /*-------------------
  Recommended Top
@@ -112,7 +113,7 @@
   }
   #recommended {
     background-color: #fff;
-    padding: 80px 0 80px;
+    padding: 80px 0 500px;
   }
 
   /* メインのグリッドとモバイルセクションのデザインが合わないため、パディングを追加しました。 */
