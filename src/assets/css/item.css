@@ -9,10 +9,6 @@
   display: grid;
   grid-template-columns: 40% 60%;
 }
-.it_left h2 {
-  margin-top: 32px;
-}
-
 .it_right {
   height: max-content;
 }

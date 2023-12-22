@@ -108,8 +108,9 @@
   font-family: 'Zen Old Mincho', serif;
   font-weight: 500;
   font-size: 30px;
-  line-height: 52px;
+  line-height: 1.8;
   letter-spacing: 4.2px;
+  margin-top: 30px;
 }
 @media (max-width: 767px) {
   .sec_title{
@@ -134,21 +135,16 @@
   Section Title - Mobile/ セクションタイトル - モバイル
 ---------------------------------------------------*/
 
-
-@media (max-width: 768px) {
-
-/* PC     -> 30px 
+@media (max-width: 767px) {
+  /* PC     -> 30px 
    mobile -> 22px */
-
-  .sec_title {
+  .sec_title{
     font-size: 22px;
+    margin-top: 20px;
   }
-
-/* PC     -> 16px 
+  /* PC     -> 16px 
    mobile -> 14px */
    .sec_title_en {
     font-size: 14px;
   }
-
 }
-

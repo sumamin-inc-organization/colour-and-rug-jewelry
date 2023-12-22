@@ -2,12 +2,15 @@
 /* Utility             */
 /* ------------------- */
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   color: #3e3a39;
 }
-
 a{
     cursor: pointer;
+    text-decoration: none;
 }
 
 /*----------------------------
@@ -109,7 +112,7 @@ a{
   display: block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .mobile-only {
     display: block;
   }
@@ -145,6 +148,9 @@ a{
   display: inline-block;
   padding-right: 30px;
 }
+.and_text{
+  font-size: 85px;
+}
 @keyframes flowing {
   0% {
     transform: translateX(0);
@@ -154,13 +160,16 @@ a{
   }
 }
 
-.and_text{
-    font-size: 85px;
-}
 @media (max-width: 767px) {
-    .company_name{
-        font-size: 70px;
-    }
+  .company_name{
+    font-size: 68px;
+    color: #F5EEE9;
+    letter-spacing: 0;
+    font-weight: 100;
+  }
+  .and_text{
+    font-size: 40px;
+}
 }
 
 /*----------------------------
@@ -168,16 +177,19 @@ a{
     レスポンシブ
 ----------------------------*/
 
-/* スクリーン幅が768px未満のデバイスでのみ表示 */
+/* スクリーン幅が767px以下のデバイスでのみ表示 */
 .mobile-only{
     display: none;
 }
-/* スクリーン幅が768pxより大きいデバイスでのみ表示 */
+/* スクリーン幅が767pxより大きいデバイスでのみ表示 */
 .pc-only{
     display: block;
 }
 
-@media(max-width:768px){
+.sp_425{
+  display: none;
+}
+@media(max-width:767px){
     .mobile-only{
         display: block;
     }
@@ -186,7 +198,11 @@ a{
         display: none;
     }
 }
-
+@media (max-width:425px){
+  .sp_425{
+    display: block;
+  }
+}
 /*----------------------------
     Main Grid
     メイングリッド tab〜mobile
