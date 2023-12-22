@@ -48,9 +48,7 @@
 }
 
 .kv_bottom .kv_text p {
-  /* font-size: 1.17vw; */
   font-size: min(1.17vw, 16px);
-  /* line-height: 2.49vw; */
   line-height: min(2.49vw, 34px);
   margin-top: 3.66vw;
   width: 41vw;
@@ -60,16 +58,16 @@
     width: 41vw;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .kv_top{
         display: block;
         position: relative;
     }
     .kv_top .kv_01{
-        width: 300px;
+        width: 76vw;
     }
     .kv_top .kv_title{
-        width: 300px;
+        width: 65vw;
         position: absolute;
         top: 80px;
         right: 20px;
@@ -102,6 +100,7 @@
     .kv_bottom .kv_text p{
         font-size: 16px;
         line-height: 2rem;
+        width: 100%;
         max-width: 95%;
         margin-bottom: 45px;
     }

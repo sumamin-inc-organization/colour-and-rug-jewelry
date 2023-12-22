@@ -31,8 +31,7 @@
 .insta_flex {
   display: flex;
   flex-wrap: wrap;
-    justify-content: space-between;
-    flex-flow: ;
+  justify-content: space-between;
   gap: 15px;
 }
 .insta_flex a {
@@ -44,12 +43,12 @@
 }
 /* ここまで仮置き */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .gallery_content{
         margin: 35px 0 80px;
     }
     .gallery_top{
-        margin-bottom: 45px;
+        margin-bottom: 40px;
     }
     .follow_btn{
         margin-right: 0;

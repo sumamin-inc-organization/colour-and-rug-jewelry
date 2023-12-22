@@ -125,6 +125,7 @@ body {
 
 a{
     cursor: pointer;
+    text-decoration: none;
 }
 
 /*----------------------------
@@ -226,7 +227,7 @@ a{
   display: block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .mobile-only {
     display: block;
   }
@@ -284,11 +285,6 @@ a{
   .and_text{
     font-size: 40px;
 }
-}
-@media (max-width: 767px) {
-    .company_name{
-        font-size: 70px;
-    }
 }
 
 /*----------------------------
@@ -439,7 +435,7 @@ a{
   font-family: 'Zen Old Mincho', serif;
   font-weight: 500;
   font-size: 30px;
-  line-height: 1.7;
+  line-height: 1.8;
   letter-spacing: 4.2px;
   margin-top: 30px;
 }
@@ -465,7 +461,6 @@ a{
    mobile -> 22px */
   .sec_title{
     font-size: 22px;
-    line-height: 3rem;
     margin-top: 20px;
   }
   /* PC     -> 16px 
@@ -535,9 +530,7 @@ a{
 }
 
 .kv_bottom .kv_text p {
-  /* font-size: 1.17vw; */
   font-size: min(1.17vw, 16px);
-  /* line-height: 2.49vw; */
   line-height: min(2.49vw, 34px);
   margin-top: 3.66vw;
   width: 41vw;
@@ -547,16 +540,16 @@ a{
     width: 41vw;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .kv_top{
         display: block;
         position: relative;
     }
     .kv_top .kv_01{
-        width: 300px;
+        width: 76vw;
     }
     .kv_top .kv_title{
-        width: 300px;
+        width: 65vw;
         position: absolute;
         top: 80px;
         right: 20px;
@@ -589,6 +582,7 @@ a{
     .kv_bottom .kv_text p{
         font-size: 16px;
         line-height: 2rem;
+        width: 100%;
         max-width: 95%;
         margin-bottom: 45px;
     }
@@ -702,6 +696,7 @@ a{
 #recommended {
   background-color: #fff;
   padding: 140px 0 200px;
+  /* border: 1px solid red; */
 }
 /*-------------------
  Recommended Top
@@ -784,7 +779,7 @@ a{
 --------------------------*/
 
 
-@media (max-width:768px){
+@media (max-width:767px){
   .rc_top {
     display: grid;
     grid-template-columns: 1fr 90% 1fr;
@@ -804,12 +799,9 @@ a{
    /* border: 1px solid red; */
    grid-column: 2;
   }
-  .rc_top h2 {
-    margin-top: 28px;
-  }
   #recommended {
     background-color: #fff;
-    padding: 80px 0 80px;
+    padding: 80px 0 500px;
   }
 
   /* メインのグリッドとモバイルセクションのデザインが合わないため、パディングを追加しました。 */
@@ -827,7 +819,7 @@ a{
 /*---------------------------
   Recommended Bottom - Mobile
 -----------------------------*/
-@media (max-width:768px){
+@media (max-width:767px){
 
   #recommended{
     display: block;
@@ -892,7 +884,7 @@ a{
 
 }
 
-@media(min-width:600px) and (max-width:768px){
+@media(min-width:600px) and (max-width:767px){
   .rc_fs{
 
     padding-left: 30px;
@@ -1047,9 +1039,6 @@ a{
     justify-content: space-between;
     width: 96vw;
 }
-.sec_title {
-    margin-top: 40px;
-}
 .advantage_text{
     margin-top: 80px;
     line-height: 2.5;
@@ -1082,33 +1071,26 @@ a{
 .interior_text {
     line-height: 2;
 }
-<<<<<<< HEAD
 .color_content{
     width: 100%;
 }
-=======
->>>>>>> main
 .color_title{
     text-align: center;
     padding: 3px 0;
     width: 100%;
     border: solid 1px#000;
-<<<<<<< HEAD
 }
 .color_scheme{
     text-align: center;
     font-size: 20px;
     margin: 20px 0 10px;
     letter-spacing: 0.01rem;
-=======
-    letter-spacing: 2px;
->>>>>>> main
 }
 .color_scheme {
-  text-align: center;
-  font-size: 20px;
-  margin: 20px 0 10px;
-  letter-spacing: 3px;
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 0 10px;
+    letter-spacing: 0.01rem;
 }
 .color_box {
     color: #fff;
@@ -1150,13 +1132,16 @@ a{
 .interior_story {
     font-size: 20px;
     padding: 40px 0 20px;
-    letter-spacing: 5px;
+    letter-spacing: 0.3rem;
 }
-/* tab */
+
 @media (max-width: 1200px) {
     .advantage_top{
         width: 95vw;
         gap: 50px;
+    }
+    #advantage .sec_title{
+        font-size: 28px;
     }
     .advantage_top_img{
         width: 270vw;
@@ -1169,11 +1154,11 @@ a{
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .advantage_top{
         flex-flow: column;
         align-items: start;
-        padding: 85px 0 55px;
+        padding: 80px 0 55px;
         gap: 50px;
         justify-content: start;
         width: 100%;
@@ -1184,6 +1169,9 @@ a{
     .advantage_top_img img{
         height: auto;
         width: 100%;
+    }
+    #advantage .sec_title{
+        font-size: 22px;
     }
     .advantage_text{
         margin-top: 0;
@@ -1201,38 +1189,19 @@ a{
         gap: 10px;
     }
     .interior_color img{
-<<<<<<< HEAD
-        width: 44vw
-=======
-        width: 180px
->>>>>>> main
+        width: 46vw
     }
     .interior_text{
         line-height: 1.8;
     }
-<<<<<<< HEAD
     .color_scheme{
         font-size: 18px;
         margin: 15px 0 10px;
         letter-spacing: 0.05rem;
-=======
-    .color_title{
-        width: 150px;
-    }
-    .color_scheme{
-        font-size: 18px;
-        margin: 15px 0 10px;
-        letter-spacing: 0px;
->>>>>>> main
     }
     .interior_story{
         font-size: 18px;
         padding: 30px 0 10px;
-<<<<<<< HEAD
-        letter-spacing: 0.05rem;
-=======
-        letter-spacing: 5px;
->>>>>>> main
     }
 }
 
@@ -1454,8 +1423,7 @@ a{
 .insta_flex {
   display: flex;
   flex-wrap: wrap;
-    justify-content: space-between;
-    flex-flow: ;
+  justify-content: space-between;
   gap: 15px;
 }
 .insta_flex a {
@@ -1467,12 +1435,12 @@ a{
 }
 /* ここまで仮置き */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .gallery_content{
         margin: 35px 0 80px;
     }
     .gallery_top{
-        margin-bottom: 45px;
+        margin-bottom: 40px;
     }
     .follow_btn{
         margin-right: 0;
@@ -1579,6 +1547,84 @@ a{
 /*!*****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/footer.css ***!
   \*****************************************************************************/
+@charset "utf-8";
+
+ul{
+    list-style: none;
+}
+
+footer{
+    color: #fff;
+    background-color: #C38C80;
+    padding: 80px 0;
+}
+.footer_top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    gap: 40px;
+}
+.footer_logo{
+    margin-bottom: 50px;
+}
+.footer_menu{
+    min-width: 260px;
+}
+.footer_menu p{
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    border-bottom: solid #fff 1px;
+}
+.footer_menu_content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+.footer_menu_item{
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+}
+.copy{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.copy p{
+    font-size: 14px;
+}
+.totop{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+.totop a{
+    padding-top: 3px;
+    color: #fff;
+}
+
+a{
+    color: #fff;
+}
+a:hover{
+    color: #3E3A39;
+    transition: 0.3s;
+}
+
+@media (max-width: 767px) {
+    .copy{
+        font-size: 12px;
+    }
+    .copy p{
+        font-size: 12px;
+    }
+    .totop{
+        gap: 10px;
+    }
+}
+
 
 /*!************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/banner.css ***!

@@ -88,7 +88,7 @@
 --------------------------*/
 
 
-@media (max-width:768px){
+@media (max-width:767px){
   .rc_top {
     display: grid;
     grid-template-columns: 1fr 90% 1fr;
@@ -128,7 +128,7 @@
 /*---------------------------
   Recommended Bottom - Mobile
 -----------------------------*/
-@media (max-width:768px){
+@media (max-width:767px){
 
   #recommended{
     display: block;
@@ -193,7 +193,7 @@
 
 }
 
-@media(min-width:600px) and (max-width:768px){
+@media(min-width:600px) and (max-width:767px){
   .rc_fs{
 
     padding-left: 30px;
