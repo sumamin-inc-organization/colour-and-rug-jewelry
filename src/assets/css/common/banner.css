@@ -83,4 +83,10 @@
     letter-spacing: 0.32px;
     line-height: 30px;
   }
+  .banner_contact a {
+  letter-spacing: 1.28px;
+}
+.banner_book a{
+letter-spacing:2.4px;
+}
 }
