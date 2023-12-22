@@ -262,6 +262,9 @@ a{
   display: inline-block;
   padding-right: 30px;
 }
+.and_text{
+  font-size: 85px;
+}
 @keyframes flowing {
   0% {
     transform: translateX(0);
@@ -271,8 +274,16 @@ a{
   }
 }
 
-.and_text{
-    font-size: 85px;
+@media (max-width: 767px) {
+  .company_name{
+    font-size: 68px;
+    color: #F5EEE9;
+    letter-spacing: 0;
+    font-weight: 100;
+  }
+  .and_text{
+    font-size: 40px;
+}
 }
 @media (max-width: 767px) {
     .company_name{
@@ -285,16 +296,16 @@ a{
     レスポンシブ
 ----------------------------*/
 
-/* スクリーン幅が768px未満のデバイスでのみ表示 */
+/* スクリーン幅が767px以下のデバイスでのみ表示 */
 .mobile-only{
     display: none;
 }
-/* スクリーン幅が768pxより大きいデバイスでのみ表示 */
+/* スクリーン幅が767pxより大きいデバイスでのみ表示 */
 .pc-only{
     display: block;
 }
 
-@media(max-width:768px){
+@media(max-width:767px){
     .mobile-only{
         display: block;
     }
@@ -428,14 +439,9 @@ a{
   font-family: 'Zen Old Mincho', serif;
   font-weight: 500;
   font-size: 30px;
-  line-height: 52px;
+  line-height: 1.7;
   letter-spacing: 4.2px;
-}
-@media (max-width: 767px) {
-  .sec_title{
-    font-size: 22px;
-    line-height: 3rem;
-  }
+  margin-top: 30px;
 }
 
 .sec_title_en{
@@ -454,25 +460,20 @@ a{
   Section Title - Mobile/ セクションタイトル - モバイル
 ---------------------------------------------------*/
 
-
-@media (max-width: 768px) {
-
-/* PC     -> 30px 
+@media (max-width: 767px) {
+  /* PC     -> 30px 
    mobile -> 22px */
-
-  .sec_title {
+  .sec_title{
     font-size: 22px;
+    line-height: 3rem;
+    margin-top: 20px;
   }
-
-/* PC     -> 16px 
+  /* PC     -> 16px 
    mobile -> 14px */
    .sec_title_en {
     font-size: 14px;
   }
-
 }
-
-
 /*!*****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/header.css ***!
   \*****************************************************************************/
@@ -611,10 +612,6 @@ a{
   text-align: center;
 }
 
-#service h2 {
-  margin-top: 28px;
-}
-
 .service_text {
   line-height: 28px;
   letter-spacing: 1px;
@@ -698,18 +695,21 @@ a{
 /*!**********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/recommended.css ***!
   \**********************************************************************************/
+/* ------------------- */
+/* RECOMMENDED          */
+/* ------------------- */
+
 #recommended {
   background-color: #fff;
   padding: 140px 0 200px;
 }
+/*-------------------
+ Recommended Top
+---------------------*/
 
 .rc_top {
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
-
-.rc_top h2 {
-  margin-top: 32px;
 }
 
 .rc_top p {
@@ -718,6 +718,10 @@ a{
   margin-top: 53px;
   padding-right: 70px;
 }
+
+/*-------------------
+ Recommended Bottom
+---------------------*/
 
 .rc_bottom {
   display: flex;
@@ -748,7 +752,6 @@ a{
 
 .rc_list li {
   position: relative;
-  /* list-style: none; */
   margin-top: 18px;
   padding-left: 45px;
 }
@@ -770,6 +773,132 @@ a{
   transform: rotate(-45deg);
 }
 
+
+
+/*-----------------
+      Mobile
+-------------------*/
+
+/*------------------------
+  Recommended Top - Mobile
+--------------------------*/
+
+
+@media (max-width:768px){
+  .rc_top {
+    display: grid;
+    grid-template-columns: 1fr 90% 1fr;
+    /* border: 1px solid black; */
+  }
+  .rec-top_wrapper{
+    /* border: 1px solid green; */
+    grid-column: 2;
+  }
+  .rc_top p {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0;
+   line-height: 30px;
+   padding-left: 10.26vw; 
+   /* border: 1px solid red; */
+   grid-column: 2;
+  }
+  .rc_top h2 {
+    margin-top: 28px;
+  }
+  #recommended {
+    background-color: #fff;
+    padding: 80px 0 80px;
+  }
+
+  /* メインのグリッドとモバイルセクションのデザインが合わないため、パディングを追加しました。 */
+  .rc_top h2 {
+    padding-left: 2.82vw;
+  }
+  .rc_top span {
+    padding-left: 2.82vw;
+  }
+  .rc_top p {
+    padding-left: 10.26vw; 
+   }
+}
+
+/*---------------------------
+  Recommended Bottom - Mobile
+-----------------------------*/
+@media (max-width:768px){
+
+  #recommended{
+    display: block;
+  }
+  .rc_bottom{
+    display: grid;
+    grid-template-columns: 1fr 90% 1fr;
+    width: 100vw;
+  }
+  .rc_list {
+    width: 94.87vw;
+    left: 0;
+    padding: 0;
+    padding-top:6.25em ;
+    padding: 6em 60.85px 57px 41px;
+    padding-left: 0; 
+    display: grid;
+    place-content: center;
+    z-index: 1;
+    top: 70%;
+    grid-column: 2/3;
+  }
+  .rc_fs{
+
+    padding-left: 30px;
+    padding-top: 50px;
+  }
+  .rc_fs li{
+    letter-spacing: 1px;
+  }
+  .rc_bottom img {
+    width: 90vw;
+    aspect-ratio: 1.4;
+    z-index: 2;
+    grid-column: 1/3;
+  }
+  .rc_list li {
+    position: relative;
+    margin-top: 25px;
+    padding-left: 30px;
+    text-wrap: nowrap;
+    margin-left: 10.77vw; 
+  }
+  
+  .rc_list li:first-child {
+    margin-top: 0;
+  }
+}
+
+
+
+
+@media(max-width:600px){
+ .rc_fs li{
+    font-size: 16px;
+    letter-spacing: 0;
+  }
+  .rc_fs{
+    padding-left: 30px;
+    padding-top: 25px;
+  }
+
+}
+
+@media(min-width:600px) and (max-width:768px){
+  .rc_fs{
+
+    padding-left: 30px;
+    padding-top: 100px;
+  }
+}
 /*!**********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/inspiration.css ***!
   \**********************************************************************************/
@@ -916,10 +1045,10 @@ a{
     padding: 140px 0;
     gap: 100px;
     justify-content: space-between;
-    width: 88vw;
+    width: 96vw;
 }
 .sec_title {
-  margin-top: 40px;
+    margin-top: 40px;
 }
 .advantage_text{
     margin-top: 80px;
@@ -931,9 +1060,7 @@ a{
 .advantage_top_img img{
     height: 600px;
     width: 100%;
-    /* width: 80vw; */
     object-fit: cover;
-    /* border: 1px solid red; */
 }
 .advantage_flex{
     display: flex;
@@ -945,74 +1072,90 @@ a{
     width: 50%;
 }
 .interior_color {
-  display: flex;
-  align-items: end;
-  gap: 40px;
+    display: flex;
+    align-items: end;
+    gap: 40px;
 }
 .interior_color img{
     width: 285px
 }
 .interior_text {
-  line-height: 2;
+    line-height: 2;
 }
+<<<<<<< HEAD
+.color_content{
+    width: 100%;
+}
+=======
+>>>>>>> main
 .color_title{
     text-align: center;
     padding: 3px 0;
-    width: 200px;
+    width: 100%;
     border: solid 1px#000;
+<<<<<<< HEAD
+}
+.color_scheme{
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 0 10px;
+    letter-spacing: 0.01rem;
+=======
+    letter-spacing: 2px;
+>>>>>>> main
 }
 .color_scheme {
   text-align: center;
   font-size: 20px;
   margin: 20px 0 10px;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 .color_box {
-  color: #fff;
-  padding: 40px 10px 10px;
-  font-size: 16px;
-  font-weight: 100;
-  position: relative;
-  line-height: 1.2;
+    color: #fff;
+    padding: 40px 10px 10px;
+    font-size: 16px;
+    font-weight: 100;
+    position: relative;
+    line-height: 1.2;
 }
 .warm_color1 {
-  background-color: #ad9a88;
-  margin-bottom: 10px;
+    background-color: #ad9a88;
+    margin-bottom: 10px;
 }
 .warm_color2 {
-  background-color: #c7a494;
-  width: 60%;
+    background-color: #c7a494;
+    width: 60%;
 }
 .relaxed_color1 {
-  background-color: #4d5357;
-  margin-bottom: 10px;
+    background-color: #4d5357;
+    margin-bottom: 10px;
 }
 .relaxed_color2 {
-  background-color: #43403b;
-  width: 60%;
+    background-color: #43403b;
+    width: 60%;
 }
 .sofa_color {
-  background-color: #d8d7d6;
-  width: 40%;
+    background-color: #d8d7d6;
+    width: 40%;
 }
 .sofa_color p {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
 }
 .color_flex {
-  display: flex;
-  gap: 10px;
+    display: flex;
+    gap: 10px;
 }
 .interior_story {
-  font-size: 20px;
-  padding: 40px 0 20px;
-  letter-spacing: 5px;
+    font-size: 20px;
+    padding: 40px 0 20px;
+    letter-spacing: 5px;
 }
 /* tab */
 @media (max-width: 1200px) {
     .advantage_top{
-        width: 94vw;
+        width: 95vw;
         gap: 50px;
     }
     .advantage_top_img{
@@ -1042,9 +1185,6 @@ a{
         height: auto;
         width: 100%;
     }
-    .sec_title{
-        margin-top: 35px;
-    }
     .advantage_text{
         margin-top: 0;
         line-height: 2;
@@ -1061,11 +1201,21 @@ a{
         gap: 10px;
     }
     .interior_color img{
+<<<<<<< HEAD
+        width: 44vw
+=======
         width: 180px
+>>>>>>> main
     }
     .interior_text{
         line-height: 1.8;
     }
+<<<<<<< HEAD
+    .color_scheme{
+        font-size: 18px;
+        margin: 15px 0 10px;
+        letter-spacing: 0.05rem;
+=======
     .color_title{
         width: 150px;
     }
@@ -1073,11 +1223,16 @@ a{
         font-size: 18px;
         margin: 15px 0 10px;
         letter-spacing: 0px;
+>>>>>>> main
     }
     .interior_story{
         font-size: 18px;
         padding: 30px 0 10px;
+<<<<<<< HEAD
+        letter-spacing: 0.05rem;
+=======
         letter-spacing: 5px;
+>>>>>>> main
     }
 }
 
@@ -1125,10 +1280,6 @@ a{
   display: grid;
   grid-template-columns: 40% 60%;
 }
-.it_left h2 {
-  margin-top: 32px;
-}
-
 .it_right {
   height: max-content;
 }
@@ -1181,7 +1332,7 @@ a{
     justify-content: space-between;
     gap: 80px;
     margin: 140px 0 80px;
-    width: 90.264vw;
+    width: 96vw;
 }
 .flow_content .sec_title {
   width: 240px;
@@ -1229,22 +1380,41 @@ a{
         width: 95vw;
     }
 }
+@media (max-width: 820px) {
+    .flow_content{
+      gap: 60px;
+  }
+    .flow_column{
+      padding: 60px 40px 60px 20px;
+      width: 95vw;
+  }
+}
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .flow_content{
         flex-flow: column;
         gap: 50px;
-        margin: 80px 0 50px;
+        margin: 60px 0 20px
     }
     .flow_column{
-        padding: 40px 20px 50px 30px;
+        padding: 20px 20px 30px;
         width: 95vw;
+        gap: 5px;
+    }
+    .flow_flex{
+      align-items: start;
     }
     .flow_number{
         padding-left: 0;
+        height: 80px;
+        object-fit: cover;
     }
     .flow_title{
         font-size: 18px;
+        margin-top: 15px;
+    }
+    .flow_text{
+      margin-bottom: 15px;
     }
 }
 
