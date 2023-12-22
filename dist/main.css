@@ -508,10 +508,8 @@ a{
   padding-bottom: 140px;
 }
 
-.kv_bottom .kv_text {
-  /* margin-top: 70px; */
-  margin-left: 9.73vw;
-  /* width: 41vw; */
+.kv_bottom .kv_text{
+    margin-left: 9.73vw;
 }
 
 .kv_bottom .kv_text .kagayaku {
@@ -544,8 +542,60 @@ a{
   width: 41vw;
 }
 
-.kv_bottom .kv_02 {
-  width: 41vw;
+.kv_bottom .kv_02{
+    width: 41vw;
+}
+
+@media (max-width: 768px) {
+    .kv_top{
+        display: block;
+        position: relative;
+    }
+    .kv_top .kv_01{
+        width: 300px;
+    }
+    .kv_top .kv_title{
+        width: 300px;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        margin: 0;
+    }
+    .kv_bottom{
+        flex-flow: column;
+        margin-top: 80px;
+        padding-bottom: 80px;
+    }
+    .kv_bottom .kv_text {
+        margin-left: 5%;
+        margin-right: auto;
+    }
+    .kv_bottom .kv_text .kagayaku{
+        font-size: 16px;
+    }
+    .kv_bottom .kv_text h2{
+        font-size: 28px;
+        letter-spacing: 0.15em;
+        margin-top: 1.68vw;
+    }
+    .kv_bottom .kv_text .and{
+        font-size: 18px;
+    }
+    .kv_bottom .kv_text .kararagu{
+        font-size: 16px;
+        margin-left: 0;
+    }
+    .kv_bottom .kv_text p{
+        font-size: 16px;
+        line-height: 2rem;
+        max-width: 95%;
+        margin-bottom: 45px;
+    }
+    .kv_bottom .kv_02{
+        width: 280px;
+        height: 280px;
+        object-fit: cover;
+    }
 }
 
 /*!******************************************************************************!*\
@@ -995,8 +1045,7 @@ a{
     .sec_title{
         margin-top: 35px;
     }
-    .advantage_text
-    {
+    .advantage_text{
         margin-top: 0;
         line-height: 2;
     }
@@ -1181,6 +1230,24 @@ a{
     }
 }
 
+@media (max-width: 767px) {
+    .flow_content{
+        flex-flow: column;
+        gap: 50px;
+        margin: 80px 0 50px;
+    }
+    .flow_column{
+        padding: 40px 20px 50px 30px;
+        width: 95vw;
+    }
+    .flow_number{
+        padding-left: 0;
+    }
+    .flow_title{
+        font-size: 18px;
+    }
+}
+
 /*!******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/gallery.css ***!
   \******************************************************************************/
@@ -1229,6 +1296,32 @@ a{
   opacity: 0.8;
 }
 /* ここまで仮置き */
+
+@media (max-width: 768px) {
+    .gallery_content{
+        margin: 35px 0 80px;
+    }
+    .gallery_top{
+        margin-bottom: 45px;
+    }
+    .follow_btn{
+        margin-right: 0;
+        margin-top: 25px;
+        justify-content: end;
+    }
+    .follow_btn p{
+        font-size: 14px;
+    }
+    /* 仮置きなのでInstagramAPI対応後削除予定 */
+    .insta_flex{
+        gap: 10px;
+    }
+    .insta_flex a{
+        width: calc(50% - 5px);
+    }
+    /* ここまで仮置き */
+
+}
 
 /*!**************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/faq.css ***!
