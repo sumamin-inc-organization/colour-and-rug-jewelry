@@ -237,16 +237,22 @@
             <div>
               <span class="sec_title_en">ADVANTAGE</span>
               <h2 class="sec_title font-zenold">カララグは、<br>カラースキーム作りから<br>始めます</h2>
-              <p class="service_text font-zenkaku gray fs-16 advantage_text">リノベーションを始めるときに最初に必要なのが「住まいの色を整える」こと。壁・床・天井・ドアなど、あらゆる建材を選ばなければならないなかで、すべての色を整えることはとても容易ではありません。一つひとつを選んでいくうちに、いつの間にかちぐはぐなインテリアになり、居心地の悪い空間になってしまうことも。</p>
-              <p class="service_text font-zenkaku gray fs-16 advantage_text">カララグでは、一人ひとりのストーリーを大切にし、あなただけのカラースキーム作りからスタートします。</p>
+              <p class="font-zenkaku gray fs-16 advantage_text pc-only">
+                リノベーションを始めるときに最初に必要なのが「住まいの色を整える」こと。壁・床・天井・ドアなど、あらゆる建材を選ばなければならないなかで、すべての色を整えることはとても容易ではありません。一つひとつを選んでいくうちに、いつの間にかちぐはぐなインテリアになり、居心地の悪い空間になってしまうことも。<br><br>
+                カララグでは、一人ひとりのストーリーを大切にし、あなただけのカラースキーム作りからスタートします。
+              </p>
             </div>
             <div class="advantage_top_img">
-              <img src="./images/advantage.jpg" alt="カラースキーム作りの様子">
+              <img class="pc-only" src="./images/advantage.jpg" alt="カラースキーム作りの様子">
+              <img class="mobile-only" src="./images/advantage_sp.jpg" alt="カラースキーム作りの様子">
             </div>
+            <p class="font-zenkaku gray fs-16 advantage_text mobile-only">
+              リノベーションを始めるときに最初に必要なのが「住まいの色を整える」こと。壁・床・天井・ドアなど、あらゆる建材を選ばなければならないなかで、すべての色を整えることはとても容易ではありません。一つひとつを選んでいくうちに、いつの間にかちぐはぐなインテリアになり、居心地の悪い空間になってしまうことも。<br><br>
+              カララグでは、一人ひとりのストーリーを大切にし、あなただけのカラースキーム作りからスタートします。
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-
       <div class="main-grid">
         <div class="advantage_flex main-grid-column-2">
           <div class="warm">
@@ -271,8 +277,8 @@
             <p class="interior_story">INTERIOR STORY</p>
             <div class="interior_box">
               <p class="interior_text font-zenkaku">
-                温もりとリラックスを感じさせるリビングルーム。<br>
-                大人の愛らしさや優しさを感じるくすんだピンクに包まれた空間は、<br>
+                温もりとリラックスを感じさせるリビングルーム。<br class="pc-only">
+                大人の愛らしさや優しさを感じるくすんだピンクに包まれた空間は、<br class="pc-only">
                 温かさと癒しをもたらしてくれます。
               </p>
             </div>
@@ -458,10 +464,10 @@
                 <span class="sec_title_en">INSTAGRAM</span>
                 <h2 class="sec_title font-zenold">インスタギャラリー</h2>
               </div>
-              <div class="follow_btn">
+              <a class="follow_btn">
                 <p>FOLLOW US</p>
                 <img src="./images/inta_icon.svg">
-              </div>
+              </a>
             </div>
             <!-- InstagramAPIで埋め込み予定 -->
             <div class="insta_flex">
@@ -557,7 +563,14 @@
         </div>
       </div>
     </section>
-    <section id="contact"></section>
+    <section id="contact">
+      <script src="https://sdk.form.run/js/v2/embed.js"></script>
+      <div
+        class="formrun-embed"
+        data-formrun-form="@colour-rug"
+        data-formrun-redirect="true">
+      </div>
+    </section>
     <section id="form"></section>
 
     <footer>
@@ -566,5 +579,6 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://sdk.form.run/js/v2/embed.js"></script>
 </body>
 </html>

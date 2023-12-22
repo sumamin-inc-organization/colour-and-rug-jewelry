@@ -123,6 +123,10 @@ body {
   color: #3e3a39;
 }
 
+a{
+    cursor: pointer;
+}
+
 /*----------------------------
     Main Grid
     メイングリッド
@@ -266,8 +270,49 @@ body {
     transform: translateX(-100%);
   }
 }
-.and_text {
-  font-size: 85px;
+
+.and_text{
+    font-size: 85px;
+}
+@media (max-width: 767px) {
+    .company_name{
+        font-size: 70px;
+    }
+}
+
+/*----------------------------
+    Responsive 
+    レスポンシブ
+----------------------------*/
+
+/* スクリーン幅が768px未満のデバイスでのみ表示 */
+.mobile-only{
+    display: none;
+}
+/* スクリーン幅が768pxより大きいデバイスでのみ表示 */
+.pc-only{
+    display: block;
+}
+
+@media(max-width:768px){
+    .mobile-only{
+        display: block;
+    }
+
+    .pc-only{
+        display: none;
+    }
+}
+
+/*----------------------------
+    Main Grid
+    メイングリッド tab〜mobile
+----------------------------*/
+@media (max-width: 1200px) {
+    .main-grid{
+        display: grid;
+        grid-template-columns: 1fr 90% 1fr;
+    }
 }
 
 /*!****************************************************************************************!*\
@@ -376,26 +421,57 @@ body {
   color: black;
 }
 
-/*----------------------------------
+/*---------------------------------
   Section Title / セクションタイトル
 ----------------------------------*/
-.sec_title {
-  color: #3e3a39;
-  font-family: "Zen Old Mincho", serif;
+.sec_title{
+  font-family: 'Zen Old Mincho', serif;
   font-weight: 500;
   font-size: 30px;
   line-height: 52px;
   letter-spacing: 4.2px;
 }
+@media (max-width: 767px) {
+  .sec_title{
+    font-size: 22px;
+    line-height: 3rem;
+  }
+}
 
-.sec_title_en {
-  color: #3e3a39;
-  font-family: "Bellefair", serif;
+.sec_title_en{
+  font-family: 'Bellefair', serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   letter-spacing: 2.5px;
 }
+
+/* ------------------- */
+/* MOBILE              */
+/* ------------------- */
+
+/*-------------------------------------------------
+  Section Title - Mobile/ セクションタイトル - モバイル
+---------------------------------------------------*/
+
+
+@media (max-width: 768px) {
+
+/* PC     -> 30px 
+   mobile -> 22px */
+
+  .sec_title {
+    font-size: 22px;
+  }
+
+/* PC     -> 16px 
+   mobile -> 14px */
+   .sec_title_en {
+    font-size: 14px;
+  }
+
+}
+
 
 /*!*****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/header.css ***!
@@ -784,54 +860,56 @@ body {
   \********************************************************************************/
 @charset "utf-8";
 
-.advantage_top {
-  display: flex;
-  align-items: end;
-  padding: 140px 0;
-  gap: 100px;
-  justify-content: space-between;
-  width: 90.264vw;
+.advantage_top{
+    display: flex;
+    align-items: end;
+    padding: 140px 0;
+    gap: 100px;
+    justify-content: space-between;
+    width: 88vw;
 }
 .sec_title {
   margin-top: 40px;
 }
-.advantage_text {
-  width: 40vw;
-  min-width: 400px;
-  line-height: 2.5;
+.advantage_text{
+    margin-top: 80px;
+    line-height: 2.5;
 }
-.advantage_top_img {
-  width: 51.2vw;
-  max-width: 750px;
-  min-width: 410px;
-  overflow: hidden;
+.advantage_top_img{
+    width: 200vw;
 }
-.advantage_flex {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 80px;
+.advantage_top_img img{
+    height: 600px;
+    width: 100%;
+    /* width: 80vw; */
+    object-fit: cover;
+    /* border: 1px solid red; */
 }
-.warm,
-.relaxed {
-  width: 525px;
+.advantage_flex{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    gap: 50px;
+}
+.warm,.relaxed{
+    width: 50%;
 }
 .interior_color {
   display: flex;
   align-items: end;
   gap: 40px;
 }
-.interior_color img {
-  width: 285px;
+.interior_color img{
+    width: 285px
 }
 .interior_text {
   line-height: 2;
 }
-
-.color_title {
-  text-align: center;
-  padding: 3px 0;
-  width: 200px;
-  border: solid 1px#000;
+.color_title{
+    text-align: center;
+    padding: 3px 0;
+    width: 200px;
+    border: solid 1px#000;
 }
 .color_scheme {
   text-align: center;
@@ -881,6 +959,78 @@ body {
   padding: 40px 0 20px;
   letter-spacing: 5px;
 }
+/* tab */
+@media (max-width: 1200px) {
+    .advantage_top{
+        width: 94vw;
+        gap: 50px;
+    }
+    .advantage_top_img{
+        width: 270vw;
+    }
+    .interior_color{
+        gap: 20px;
+    }
+    .interior_color img{
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .advantage_top{
+        flex-flow: column;
+        align-items: start;
+        padding: 85px 0 55px;
+        gap: 50px;
+        justify-content: start;
+        width: 100%;
+    }
+    .advantage_top_img{
+        width: 95vw;
+    }
+    .advantage_top_img img{
+        height: auto;
+        width: 100%;
+    }
+    .sec_title{
+        margin-top: 35px;
+    }
+    .advantage_text
+    {
+        margin-top: 0;
+        line-height: 2;
+    }
+    .advantage_flex{
+        flex-flow: column;
+        justify-content: start;
+        margin-bottom: 30px;
+    }
+    .warm,.relaxed{
+        width: 100%;
+    }
+    .interior_color{
+        gap: 10px;
+    }
+    .interior_color img{
+        width: 180px
+    }
+    .interior_text{
+        line-height: 1.8;
+    }
+    .color_title{
+        width: 150px;
+    }
+    .color_scheme{
+        font-size: 18px;
+        margin: 15px 0 10px;
+        letter-spacing: 0px;
+    }
+    .interior_story{
+        font-size: 18px;
+        padding: 30px 0 10px;
+        letter-spacing: 5px;
+    }
+}
 
 /*!**********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/consultancy.css ***!
@@ -901,6 +1051,7 @@ body {
 .consultancy-img_wrapper {
   margin-top: 47.9;
   width: 90.264vw;
+  width: 95vw;
   justify-self: start;
 }
 .consultancy-top_description {
@@ -976,11 +1127,12 @@ body {
   \***************************************************************************/
 @charset "utf-8";
 
-.flow_content {
-  display: flex;
-  gap: 80px;
-  margin: 140px 0 80px;
-  width: 90.264vw;
+.flow_content{
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    margin: 140px 0 80px;
+    width: 90.264vw;
 }
 .flow_content .sec_title {
   width: 240px;
@@ -1015,6 +1167,18 @@ body {
   content: "";
   width: 100%;
   border-bottom: solid 1px #e1c5bf;
+}
+.flow_line{
+    content: "";
+    width: 100%;
+    border-bottom: solid 1px #E1C5BF;
+}
+
+/* tab */
+@media (max-width: 1200px) {
+    .flow_content{
+        width: 95vw;
+    }
 }
 
 /*!******************************************************************************!*\
@@ -1053,6 +1217,8 @@ body {
 .insta_flex {
   display: flex;
   flex-wrap: wrap;
+    justify-content: space-between;
+    flex-flow: ;
   gap: 15px;
 }
 .insta_flex a {
