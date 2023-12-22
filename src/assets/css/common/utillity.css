@@ -6,6 +6,10 @@ body {
   color: #3e3a39;
 }
 
+a{
+    cursor: pointer;
+}
+
 /*----------------------------
     Main Grid
     メイングリッド
@@ -149,6 +153,47 @@ body {
     transform: translateX(-100%);
   }
 }
-.and_text {
-  font-size: 85px;
+
+.and_text{
+    font-size: 85px;
+}
+@media (max-width: 767px) {
+    .company_name{
+        font-size: 70px;
+    }
+}
+
+/*----------------------------
+    Responsive 
+    レスポンシブ
+----------------------------*/
+
+/* スクリーン幅が768px未満のデバイスでのみ表示 */
+.mobile-only{
+    display: none;
+}
+/* スクリーン幅が768pxより大きいデバイスでのみ表示 */
+.pc-only{
+    display: block;
+}
+
+@media(max-width:768px){
+    .mobile-only{
+        display: block;
+    }
+
+    .pc-only{
+        display: none;
+    }
+}
+
+/*----------------------------
+    Main Grid
+    メイングリッド tab〜mobile
+----------------------------*/
+@media (max-width: 1200px) {
+    .main-grid{
+        display: grid;
+        grid-template-columns: 1fr 90% 1fr;
+    }
 }

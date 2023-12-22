@@ -31,6 +31,8 @@
 .insta_flex {
   display: flex;
   flex-wrap: wrap;
+    justify-content: space-between;
+    flex-flow: ;
   gap: 15px;
 }
 .insta_flex a {
