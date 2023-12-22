@@ -1,12 +1,18 @@
+/* ------------------- */
+/* RECOMMENDED          */
+/* ------------------- */
+
 #recommended {
   background-color: #fff;
   padding: 140px 0 200px;
 }
+/*-------------------
+ Recommended Top
+---------------------*/
 
 .rc_top {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* border: 1px solid red; */
 }
 
 .rc_top h2 {
@@ -18,8 +24,11 @@
   line-height: 40px;
   margin-top: 53px;
   padding-right: 70px;
-  /* border: 1px solid black; */
 }
+
+/*-------------------
+ Recommended Bottom
+---------------------*/
 
 .rc_bottom {
   display: flex;
@@ -50,7 +59,6 @@
 
 .rc_list li {
   position: relative;
-  /* list-style: none; */
   margin-top: 18px;
   padding-left: 45px;
 }
@@ -74,10 +82,13 @@
 
 
 
-/*-------------------------------------------------
-  Section Title - Mobile/ セクションタイトル - モバイル
----------------------------------------------------*/
+/*-----------------
+      Mobile
+-------------------*/
 
+/*------------------------
+  Recommended Top - Mobile
+--------------------------*/
 
 
 @media (max-width:768px){
@@ -85,13 +96,13 @@
     display: grid;
     grid-template-columns: auto
   }
-  
   .rc_top p {
    display: flex;
    justify-content: center;
    align-items: center;
    padding: 0;
    line-height: 30px;
+   padding-left: 10.26vw; 
   }
   .rc_top h2 {
     margin-top: 28px;
@@ -100,5 +111,22 @@
     background-color: #fff;
     padding: 80px 0 80px;
   }
-  
+
+  /* メインのグリッドとモバイルセクションのデザインが合わないため、パディングを追加しました。 */
+  .rc_top h2 {
+    padding-left: 2.82vw;
+  }
+  .rc_top span {
+    padding-left: 2.82vw;
+  }
+  .rc_top p {
+    padding-left: 10.26vw; 
+   }
+}
+
+/*---------------------------
+  Recommended Bottom - Mobile
+-----------------------------*/
+@media (max-width:768px){
+
 }
