@@ -14,7 +14,7 @@
 }
 
 .inspiration-eng {
-  margin-bottom: 42px;
+  margin-bottom: 32px;
 }
 .inspiration-jp {
   padding-left: 1px;
@@ -128,4 +128,104 @@
 
 .card {
   -webkit-backface-visibility: hidden;
+}
+
+/* ------------------- */
+/*       MOBILE        */
+/* ------------------- */
+
+
+/*----------------------------
+   Responsive Typography
+   レスポンシブなティポグラフィ
+----------------------------*/
+
+
+@media(max-width:425px){
+  .insp-sp{
+    font-size: 14px;
+  }
+  .indicator.fs-14{
+    font-size: 12px;
+  }
+  .inspiration-bottom > .fs-20{
+    font-size: 16px;
+  }
+}
+
+/*----------------------------
+  Inspiration Bottom - Mobile
+  インスピレーションボトム - モバイル
+----------------------------*/
+
+@media (max-width:768px){
+  .inspiration-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 25px;
+    gap:10px;
+  }
+  .inspiration-bottom p{
+    padding-bottom: 22px;
+  }
+}
+
+/*----------------------------
+   Slider Controls - Mobile
+   スライダーコントロール - モバイル
+----------------------------*/
+
+@media (max-width:768px){
+  .slider-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 38px;
+    margin-bottom: 19px;
+    margin-top: 32px;
+   
+  }
+  .indicators {
+    display: flex;
+    gap: 21px;
+  }
+  .slider-buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+}
+
+/*----------------------------
+   Slider - Mobile
+   スライダー - モバイル
+----------------------------*/
+
+@media (max-width:768px){
+  .slide_item p {
+    position: absolute;
+    width: 110px;
+    height: 24px;
+    z-index: 3;
+    letter-spacing: 2.52px;
+  }
+}
+
+/*----------------------------
+    Margins And Padding - Mobile
+    マージンとパディング - モバイル
+----------------------------*/
+
+@media (max-width:768px){
+  .inspiration-eng {
+    margin-bottom: 28px;
+  }
+  .inspiration-container {
+    padding-top: 57px;
+    padding-bottom: 60px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
 }

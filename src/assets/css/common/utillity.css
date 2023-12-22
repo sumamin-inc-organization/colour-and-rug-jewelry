@@ -186,6 +186,9 @@ a{
     display: block;
 }
 
+.sp_425{
+  display: none;
+}
 @media(max-width:767px){
     .mobile-only{
         display: block;
@@ -195,7 +198,11 @@ a{
         display: none;
     }
 }
-
+@media (max-width:425px){
+  .sp_425{
+    display: block;
+  }
+}
 /*----------------------------
     Main Grid
     メイングリッド tab〜mobile
