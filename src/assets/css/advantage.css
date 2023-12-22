@@ -6,7 +6,7 @@
     padding: 140px 0;
     gap: 100px;
     justify-content: space-between;
-    width: 88vw;
+    width: 96vw;
 }
 .sec_title {
     margin-top: 40px;
@@ -48,12 +48,13 @@
     padding: 3px 0;
     width: 200px;
     border: solid 1px#000;
+    letter-spacing: 2px;
 }
 .color_scheme {
-    text-align: center;
-    font-size: 20px;
-    margin: 20px 0 10px;
-    letter-spacing: 2px;
+  text-align: center;
+  font-size: 20px;
+  margin: 20px 0 10px;
+  letter-spacing: 3px;
 }
 .color_box {
     color: #fff;
@@ -100,7 +101,7 @@
 /* tab */
 @media (max-width: 1200px) {
     .advantage_top{
-        width: 94vw;
+        width: 95vw;
         gap: 50px;
     }
     .advantage_top_img{
