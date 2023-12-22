@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="./assets/images/common/favicon.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Roboto:wght@400;500&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Zen+Old+Mincho:wght@400;500&display=swap" rel="stylesheet">
-    <!-- SLick CSS -->
+    <!-- Slick CSS -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 <body>
@@ -17,15 +17,15 @@
 
     <section id="keyvisual">
       <div class="kv_top">
-        <img class="kv_01" src="assets/images/keyvisual/kv_01.jpg">
+        <img class="kv_01 pc-only" src="assets/images/keyvisual/kv_01.jpg">
+        <img class="kv_01 mobile-only" src="assets/images/keyvisual/kv_01_sp.jpg">
         <img class="kv_title" src="assets/images/keyvisual/kv_title.svg">
       </div>
-
       <div class="kv_bottom">
         <div class="kv_text gray">
           <span class="kagayaku font-zenold font-weight-500">輝くわたしをつくる、暮らしをつくる。</span>
-          <h2><span class="font-bellefair">COLOR<span class="and">&</span>RUG-Jewelry</span><span class="kararagu font-zenold">-カララグ-</span></h2>
-          <p class="font-zenkaku font-weight-400">カラー&ラグジュアリーは、「カラーコンサルタンシー」「ラグのオーダーメイド」「プチリノベ」の３ステップで憧れのインテリアを実現する、日本で唯一のインテリアカラーコーディネートサービスです。</p>
+          <h2><span class="font-bellefair">COLOR<span class="and">&</span>RUG-Jewelry</span><br class="mobile-only"><span class="kararagu font-zenold">-カララグ-</span></h2>
+          <p class="font-zenkaku font-weight-400">カラー&ラグジュアリーは、「カラーコンサルタンシー」「ラグのオーダー<br class="pc-only">メイド」「プチリノベ」の３ステップで憧れのインテリアを実現する、日<br class="pc-only">本で唯一のインテリアカラーコーディネートサービスです。</p>
         </div>
         <img class="kv_02" src="assets/images/keyvisual/kv_02.jpg">
       </div>
@@ -229,16 +229,6 @@
           </div>
         </div>
       </div>
-      <!-- <div class="banner test  main-grid-column-1_4">
-        <div class="banner-cont "  data-speed="-1.5">
-          <h2 class="font-bellefair fs-55 regular white">CONTACT US</h2>
-          <p class="font-zenkaku medium fs-16 white ">まずは話を聞いてみたい、という方も大歓迎です。 お気軽にお問い合わせください。</p>
-          <div class="banner-btn_wrapper " >
-            <button class="banner_book white-btn"><a href="#" class="font-zenkaku fs-16 medium gray">来店予約</a></button>
-            <button class="banner_contact white-btn"><a href="#" class="font-zenkaku fs-16 medium gray">お問い合わせ</a></button>
-          </div>
-        </div>
-      </div> -->
     </section>
     <section id="advantage">
       <div class="main-grid">
@@ -247,16 +237,22 @@
             <div>
               <span class="sec_title_en">ADVANTAGE</span>
               <h2 class="sec_title font-zenold">カララグは、<br>カラースキーム作りから<br>始めます</h2>
-              <p class="service_text font-zenkaku gray fs-16 advantage_text">リノベーションを始めるときに最初に必要なのが「住まいの色を整える」こと。壁・床・天井・ドアなど、あらゆる建材を選ばなければならないなかで、すべての色を整えることはとても容易ではありません。一つひとつを選んでいくうちに、いつの間にかちぐはぐなインテリアになり、居心地の悪い空間になってしまうことも。</p>
-              <p class="service_text font-zenkaku gray fs-16 advantage_text">カララグでは、一人ひとりのストーリーを大切にし、あなただけのカラースキーム作りからスタートします。</p>
+              <p class="font-zenkaku gray fs-16 advantage_text pc-only">
+                リノベーションを始めるときに最初に必要なのが「住まいの色を整える」こと。壁・床・天井・ドアなど、あらゆる建材を選ばなければならないなかで、すべての色を整えることはとても容易ではありません。一つひとつを選んでいくうちに、いつの間にかちぐはぐなインテリアになり、居心地の悪い空間になってしまうことも。<br><br>
+                カララグでは、一人ひとりのストーリーを大切にし、あなただけのカラースキーム作りからスタートします。
+              </p>
             </div>
             <div class="advantage_top_img">
-              <img src="./assets/images/advantage/advantage.jpg" alt="カラースキーム作りの様子">
+              <img class="pc-only" src="./assets/images/advantage/advantage.jpg" alt="カラースキーム作りの様子">
+              <img class="mobile-only" src="./assets/images/advantage/advantage_sp.jpg" alt="カラースキーム作りの様子">
             </div>
+            <p class="font-zenkaku gray fs-16 advantage_text mobile-only">
+              リノベーションを始めるときに最初に必要なのが「住まいの色を整える」こと。壁・床・天井・ドアなど、あらゆる建材を選ばなければならないなかで、すべての色を整えることはとても容易ではありません。一つひとつを選んでいくうちに、いつの間にかちぐはぐなインテリアになり、居心地の悪い空間になってしまうことも。<br><br>
+              カララグでは、一人ひとりのストーリーを大切にし、あなただけのカラースキーム作りからスタートします。
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-
       <div class="main-grid">
         <div class="advantage_flex main-grid-column-2">
           <div class="warm">
@@ -281,8 +277,8 @@
             <p class="interior_story">INTERIOR STORY</p>
             <div class="interior_box">
               <p class="interior_text font-zenkaku">
-                温もりとリラックスを感じさせるリビングルーム。<br>
-                大人の愛らしさや優しさを感じるくすんだピンクに包まれた空間は、<br>
+                温もりとリラックスを感じさせるリビングルーム。<br class="pc-only">
+                大人の愛らしさや優しさを感じるくすんだピンクに包まれた空間は、<br class="pc-only">
                 温かさと癒しをもたらしてくれます。
               </p>
             </div>
@@ -346,13 +342,10 @@
 
     <section id="item" class="main-grid">
       <div class="it_wrap main-grid-column-2">
-        <!-- <div class="sticky"> -->
           <div class="it_left">
             <span class="sec_title_en">ITEM</span>
             <h2 class="sec_title">カララグこだわりの<br>インテリアエレメント</h2>
           </div>
-        <!-- </div> -->
-
         <div class="it_right">
           <!-- <img src="assets/images/item/it_farrow"> -->
           <div class="graybox"></div>
@@ -471,10 +464,10 @@
                 <span class="sec_title_en">INSTAGRAM</span>
                 <h2 class="sec_title font-zenold">インスタギャラリー</h2>
               </div>
-              <div class="follow_btn">
+              <a class="follow_btn">
                 <p>FOLLOW US</p>
                 <img src="../src/assets/images/gallery/inta_icon.svg">
-              </div>
+              </a>
             </div>
             <!-- InstagramAPIで埋め込み予定 -->
             <div class="insta_flex">
@@ -570,7 +563,14 @@
         </div>
       </div>
     </section>
-    <section id="contact"></section>
+    <section id="contact">
+      <script src="https://sdk.form.run/js/v2/embed.js"></script>
+      <div
+        class="formrun-embed"
+        data-formrun-form="@colour-rug"
+        data-formrun-redirect="true">
+      </div>
+    </section>
     <section id="form"></section>
 
     <footer>
@@ -579,37 +579,6 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script>
-//   $(document).ready(function() {
-//   var $slider = $('.insp-slider');
-//   var $indicators = $('.indicators .indicator');
-
-//   $slider.slick({
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     autoplay: false,
-//     autoplaySpeed: 2000,
-//     nextArrow: document.getElementById('slider-next'),
-//     prevArrow: document.getElementById('slider-prev'),
-//   });
-
-//   // Click event for indicators
-//   // インジケータのクリックイベント
-
-//   $('.indicators .indicator').on('click', function() {
-//     var slideIndex = $(this).data('slide-index');
-//     $slider.slick('slickGoTo', parseInt(slideIndex));
-//   });
-
-//   // Click events for navigation buttons
-//   // ナビゲーションボタンのクリックイベント
-  
-//   $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-//     $indicators.removeClass('active');
-//     $indicators.eq(nextSlide).addClass('active');
-//   });
-// });
-
-</script>
+<script src="https://sdk.form.run/js/v2/embed.js"></script>
 </body>
 </html>
