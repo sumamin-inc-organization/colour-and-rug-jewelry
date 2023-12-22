@@ -94,15 +94,16 @@ letter-spacing:2.4px;
     Banner Background
     バナーの背景
 ----------------------------*/
-.banner {
-  width: 100%;
-  height: 400px;
-  background: url(../../images/common/banner_sp.jpg);
-  background-size: cover;
-  overflow: hidden;
-  margin-top: 140px;
+@media (max-width:425px) {
+  .banner {
+    width: 100%;
+    height: 400px;
+    background: url(../../images/common/banner_sp.jpg);
+    background-size: cover;
+    overflow: hidden;
+    margin-top: 140px;
+  }
 }
-
 
 /*----------------------------
     Banner Buttons
