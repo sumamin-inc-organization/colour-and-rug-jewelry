@@ -62,3 +62,25 @@
 .banner_title {
   letter-spacing: 5px;
 }
+
+
+/* ------------------- */
+/*       MOBILE        */
+/* ------------------- */
+
+
+/*----------------------------
+   Responsive Typography
+   レスポンシブなティポグラフィ
+----------------------------*/
+
+@media (max-width:425px) {
+  .banner_title{
+    font-size: 29px;
+    letter-spacing: 2.9px;
+  }
+  .banner_subtitle{
+    letter-spacing: 0.32px;
+    line-height: 30px;
+  }
+}
