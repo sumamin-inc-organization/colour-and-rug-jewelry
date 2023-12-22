@@ -119,12 +119,15 @@ body {
 /* Utility             */
 /* ------------------- */
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   color: #3e3a39;
 }
-
 a{
     cursor: pointer;
+    text-decoration: none;
 }
 
 /*----------------------------
@@ -226,7 +229,7 @@ a{
   display: block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .mobile-only {
     display: block;
   }
@@ -300,6 +303,9 @@ a{
     display: block;
 }
 
+.sp_425{
+  display: none;
+}
 @media(max-width:767px){
     .mobile-only{
         display: block;
@@ -309,7 +315,11 @@ a{
         display: none;
     }
 }
-
+@media (max-width:425px){
+  .sp_425{
+    display: block;
+  }
+}
 /*----------------------------
     Main Grid
     メイングリッド tab〜mobile
@@ -529,9 +539,7 @@ a{
 }
 
 .kv_bottom .kv_text p {
-  /* font-size: 1.17vw; */
   font-size: min(1.17vw, 16px);
-  /* line-height: 2.49vw; */
   line-height: min(2.49vw, 34px);
   margin-top: 3.66vw;
   width: 41vw;
@@ -541,16 +549,16 @@ a{
     width: 41vw;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .kv_top{
         display: block;
         position: relative;
     }
     .kv_top .kv_01{
-        width: 300px;
+        width: 76vw;
     }
     .kv_top .kv_title{
-        width: 300px;
+        width: 65vw;
         position: absolute;
         top: 80px;
         right: 20px;
@@ -583,6 +591,7 @@ a{
     .kv_bottom .kv_text p{
         font-size: 16px;
         line-height: 2rem;
+        width: 100%;
         max-width: 95%;
         margin-bottom: 45px;
     }
@@ -779,7 +788,7 @@ a{
 --------------------------*/
 
 
-@media (max-width:768px){
+@media (max-width:767px){
   .rc_top {
     display: grid;
     grid-template-columns: 1fr 90% 1fr;
@@ -819,7 +828,7 @@ a{
 /*---------------------------
   Recommended Bottom - Mobile
 -----------------------------*/
-@media (max-width:768px){
+@media (max-width:767px){
 
   #recommended{
     display: block;
@@ -884,7 +893,7 @@ a{
 
 }
 
-@media(min-width:600px) and (max-width:768px){
+@media(min-width:600px) and (max-width:767px){
   .rc_fs{
 
     padding-left: 30px;
@@ -1523,8 +1532,7 @@ a{
 .insta_flex {
   display: flex;
   flex-wrap: wrap;
-    justify-content: space-between;
-    flex-flow: ;
+  justify-content: space-between;
   gap: 15px;
 }
 .insta_flex a {
@@ -1536,12 +1544,12 @@ a{
 }
 /* ここまで仮置き */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .gallery_content{
         margin: 35px 0 80px;
     }
     .gallery_top{
-        margin-bottom: 45px;
+        margin-bottom: 40px;
     }
     .follow_btn{
         margin-right: 0;
@@ -1648,6 +1656,97 @@ a{
 /*!*****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/footer.css ***!
   \*****************************************************************************/
+@charset "utf-8";
+
+
+footer{
+    color: #fff;
+    background-color: #C38C80;
+    padding: 80px 0;
+}
+footer ul{
+    list-style: none;
+}
+.footer_top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    gap: 40px;
+}
+.footer_address{
+    line-height: 2;
+}
+.footer_logo{
+    margin-bottom: 50px;
+}
+.footer_menu{
+    min-width: 260px;
+}
+.footer_menu p{
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    border-bottom: solid #fff 1px;
+}
+.footer_menu_content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+.footer_menu_item{
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+}
+.copy{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.copy p{
+    font-size: 14px;
+}
+.totop{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+.totop a{
+    padding-top: 3px;
+    color: #fff;
+}
+
+footer a{
+    color: #fff;
+}
+footer a:hover{
+    color: #3E3A39;
+    transition: 0.3s;
+}
+
+@media (max-width: 767px) {
+    footer{
+        padding: 70px 0 50px;
+    }
+    .footer_top{
+        margin-bottom: 40px;
+    }
+    .footer_logo{
+        width: 60px;
+        margin-bottom: 25px;
+    }
+    .copy{
+        font-size: 12px;
+    }
+    .copy p{
+        font-size: 12px;
+    }
+    .totop{
+        gap: 10px;
+    }
+}
+
 
 /*!************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/banner.css ***!
@@ -1715,6 +1814,100 @@ a{
 
 .banner_title {
   letter-spacing: 5px;
+}
+
+/* ------------------- */
+/*       MOBILE        */
+/* ------------------- */
+
+/*----------------------------
+   Responsive Typography 
+   レスポンシブなティポグラフィ
+----------------------------*/
+
+@media (max-width: 466px) {
+  .banner_title {
+    font-size: 29px;
+    letter-spacing: 2.9px;
+  }
+  .banner_subtitle {
+    letter-spacing: 0.32px;
+    line-height: 30px;
+  }
+  .banner_contact a {
+    letter-spacing: 1.28px;
+  }
+  .banner_book a {
+    letter-spacing: 2.4px;
+  }
+}
+/*----------------------------
+    Banner Background - Mobile
+    バナーの背景 - モバイル
+----------------------------*/
+@media (max-width: 466px) {
+  .banner {
+    width: 100%;
+    height: 400px;
+    background: url(./images/banner_sp.jpg);
+    background-size: cover;
+    overflow: hidden;
+    margin-top: 140px;
+  }
+}
+
+/*----------------------------
+    Banner Buttons - Mobile
+    バナーボタン  - モバイル
+----------------------------*/
+
+@media (max-width: 466px) {
+  .banner-btn_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .banner_book {
+    padding: 12.06px 83.65px 13.9px 84.35px;
+  }
+  .banner_contact {
+    padding: 12.06px 68.65px 13.8px 69.35px;
+  }
+}
+
+/*----------------------------
+    Banner Wrapper - Mobile
+    バナーのラッパー  - モバイル
+----------------------------*/
+
+@media (max-width: 466px) {
+  .banner-wrapper {
+    margin: 0;
+    padding: 0;
+    padding-top: 62.5px;
+    padding-bottom: 60px;
+  }
+}
+
+/*----------------------------
+    Banner Other - Mobile
+   バナーその他 - モバイル
+----------------------------*/
+
+@media (max-width: 466px) {
+  .banner_title {
+    /* border: 1px solid red; */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+  .banner_subtitle {
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 
