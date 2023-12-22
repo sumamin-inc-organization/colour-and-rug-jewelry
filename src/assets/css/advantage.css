@@ -8,9 +8,6 @@
     justify-content: space-between;
     width: 96vw;
 }
-.sec_title {
-    margin-top: 40px;
-}
 .advantage_text{
     margin-top: 80px;
     line-height: 2.5;
@@ -43,18 +40,26 @@
 .interior_text {
     line-height: 2;
 }
+.color_content{
+    width: 100%;
+}
 .color_title{
     text-align: center;
     padding: 3px 0;
-    width: 200px;
+    width: 100%;
     border: solid 1px#000;
-    letter-spacing: 2px;
+}
+.color_scheme{
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 0 10px;
+    letter-spacing: 0.01rem;
 }
 .color_scheme {
-  text-align: center;
-  font-size: 20px;
-  margin: 20px 0 10px;
-  letter-spacing: 3px;
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 0 10px;
+    letter-spacing: 0.01rem;
 }
 .color_box {
     color: #fff;
@@ -96,13 +101,16 @@
 .interior_story {
     font-size: 20px;
     padding: 40px 0 20px;
-    letter-spacing: 5px;
+    letter-spacing: 0.3rem;
 }
-/* tab */
+
 @media (max-width: 1200px) {
     .advantage_top{
         width: 95vw;
         gap: 50px;
+    }
+    #advantage .sec_title{
+        font-size: 28px;
     }
     .advantage_top_img{
         width: 270vw;
@@ -115,11 +123,11 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .advantage_top{
         flex-flow: column;
         align-items: start;
-        padding: 85px 0 55px;
+        padding: 80px 0 55px;
         gap: 50px;
         justify-content: start;
         width: 100%;
@@ -130,6 +138,9 @@
     .advantage_top_img img{
         height: auto;
         width: 100%;
+    }
+    #advantage .sec_title{
+        font-size: 22px;
     }
     .advantage_text{
         margin-top: 0;
@@ -147,22 +158,18 @@
         gap: 10px;
     }
     .interior_color img{
-        width: 180px
+        width: 46vw
     }
     .interior_text{
         line-height: 1.8;
     }
-    .color_title{
-        width: 150px;
-    }
     .color_scheme{
         font-size: 18px;
         margin: 15px 0 10px;
-        letter-spacing: 0px;
+        letter-spacing: 0.05rem;
     }
     .interior_story{
         font-size: 18px;
         padding: 30px 0 10px;
-        letter-spacing: 5px;
     }
 }

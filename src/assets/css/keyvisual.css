@@ -60,7 +60,7 @@
     width: 41vw;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .kv_top{
         display: block;
         position: relative;
@@ -69,7 +69,7 @@
         width: 300px;
     }
     .kv_top .kv_title{
-        width: 300px;
+        width: 260px;
         position: absolute;
         top: 80px;
         right: 20px;
@@ -102,6 +102,7 @@
     .kv_bottom .kv_text p{
         font-size: 16px;
         line-height: 2rem;
+        width: 100%;
         max-width: 95%;
         margin-bottom: 45px;
     }

@@ -5,6 +5,7 @@
 #recommended {
   background-color: #fff;
   padding: 140px 0 200px;
+  /* border: 1px solid red; */
 }
 /*-------------------
  Recommended Top
@@ -87,7 +88,7 @@
 --------------------------*/
 
 
-@media (max-width:768px){
+@media (max-width:767px){
   .rc_top {
     display: grid;
     grid-template-columns: 1fr 90% 1fr;
@@ -107,12 +108,9 @@
    /* border: 1px solid red; */
    grid-column: 2;
   }
-  .rc_top h2 {
-    margin-top: 28px;
-  }
   #recommended {
     background-color: #fff;
-    padding: 80px 0 80px;
+    padding: 80px 0 500px;
   }
 
   /* メインのグリッドとモバイルセクションのデザインが合わないため、パディングを追加しました。 */
@@ -130,7 +128,7 @@
 /*---------------------------
   Recommended Bottom - Mobile
 -----------------------------*/
-@media (max-width:768px){
+@media (max-width:767px){
 
   #recommended{
     display: block;
@@ -195,7 +193,7 @@
 
 }
 
-@media(min-width:600px) and (max-width:768px){
+@media(min-width:600px) and (max-width:767px){
   .rc_fs{
 
     padding-left: 30px;
