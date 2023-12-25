@@ -69,7 +69,9 @@
     transform: translateY(0px);
   }
 }
-
+.left h3{
+  letter-spacing: 0.8px;
+}
 /* ------------------- */
 /*       MOBILE        */
 /* ------------------- */
@@ -82,5 +84,33 @@
 @media (max-width:425px){
   .left h3{
     font-size: 18px;
+    letter-spacing: 0.72px;
   }
+
+}
+
+/*----------------------------
+     Chevron Placements
+     シェブロンの配置
+----------------------------*/
+@media (max-width:425px){
+  .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* border: 1px solid red; */
+  } 
+  .question img{
+    margin-top: 1ch;
+  }
+
+  .faq[data-question-number="3"]  .question,
+  .faq[data-question-number="5"]  .question{
+    align-items: center;
+  }
+  .faq[data-question-number="3"]  .question img,
+  .faq[data-question-number="5"]  .question img{
+    margin-top:0;
+  }
+  
 }
