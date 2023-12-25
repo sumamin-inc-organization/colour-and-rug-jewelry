@@ -40,3 +40,16 @@
   }
 }
 
+/*----------------------------
+   Color Consultancy Image - Mobile
+  Color Consultancy 画像 - モバイル
+----------------------------*/
+
+@media (max-width:768px){
+  .consultancy-img_wrapper {
+    margin-top: 47.9;
+    width: 100vw;
+    justify-self: center;
+  }
+}
+
