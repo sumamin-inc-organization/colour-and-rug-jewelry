@@ -12,7 +12,7 @@
   justify-content: space-between;
 }
 .consultancy-img_wrapper {
-  margin-top: 47.9;
+  margin-top: 48px;
   width: 90.264vw;
   width: 95vw;
   justify-self: start;
@@ -47,7 +47,7 @@
 
 @media (max-width:768px){
   .consultancy-img_wrapper {
-    margin-top: 47.9;
+    margin-top: 22px;
     width: 100vw;
     justify-self: center;
   }
