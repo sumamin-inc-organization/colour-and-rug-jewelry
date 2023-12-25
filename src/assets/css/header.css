@@ -80,7 +80,28 @@ header {
 ------------------------------------*/
 .header-info {
     height: 40px;
+    /* border: 1px solid red; */
+
   }
   .header-btn {
     height: 40px;
   }
+  .header-decor {
+   height: 40px;
+  }
+
+
+/*----------------------------------
+   Header Typography
+   ヘッダーのタイポグラフィ
+------------------------------------*/
+.header-btn_p{
+    /* letter-spacing: 1.92px; */
+}
+.tel-number{
+    letter-spacing: 0.25px;
+}
+
+.time {
+    letter-spacing: 1.96px;
+}
