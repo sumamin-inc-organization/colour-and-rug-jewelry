@@ -229,3 +229,20 @@
     border-bottom: 1px solid black;
   }
 }
+
+
+/*----------------------------
+  Inspiration Button - Mobile
+  インスピレーションボタン - モバイル
+----------------------------*/
+
+@media(max-width:768px){
+  .inspiration-button.black-btn {
+    display: grid;
+    place-content: center;
+    padding: 7.1px 46.2px 8.9px 35.6px;
+  }
+  .inspiration-button.black-btn p{
+    padding: 0;
+  }
+}
