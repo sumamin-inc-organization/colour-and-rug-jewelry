@@ -17,6 +17,11 @@ header{
     align-items: center;
     
 }
+.header_right{
+    border: 1px solid green;
+    height: 100%;
+    display: flex;
+}
 /*----------------------------------
    Header Paddings and Margins
    ヘッダーのパディング、マージン
@@ -26,5 +31,13 @@ header{
 padding-left: 30px;
 padding-right: 40px;
     
+}
+
+.header-tel_img{
+    margin-right: 12px;
+}
+
+.header-info{
+margin-right: 24px;
 }
 
