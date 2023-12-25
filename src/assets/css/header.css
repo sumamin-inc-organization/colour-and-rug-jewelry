@@ -1,6 +1,30 @@
+/* ------------------- */
+/* HEADER            */
+/* ------------------- */
+
+/*----------------------------------
+   Header alignment and positioning
+   ヘッダーの配置と位置合わせ
+------------------------------------*/
+
 header{
     border: 1px solid red;
     width: 100%;
     position: absolute;
     top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 }
+/*----------------------------------
+   Header Paddings and Margins
+   ヘッダーのパディング、マージン
+------------------------------------*/
+
+header{
+padding-left: 30px;
+padding-right: 40px;
+    
+}
+
