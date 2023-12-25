@@ -8,7 +8,7 @@
   background: url(../../images/common/banner.jpg);
   background-size: cover;
   overflow: hidden;
-  margin-top: 140px;
+  /* margin-top: 140px; */ /* jpg用に一旦マージンを削除 */
 }
 
 /*----------------------------
@@ -99,7 +99,7 @@
     background: url(../../images/common/banner_sp.jpg);
     background-size: cover;
     overflow: hidden;
-    margin-top: 140px;
+    /* margin-top: 140px; */ /* jpg用に一旦マージンを削除 */
   }
 }
 
