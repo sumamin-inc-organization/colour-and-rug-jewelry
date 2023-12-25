@@ -3,7 +3,7 @@
 /* ------------------- */
 
 #consultancy {
-  margin-top: 75.2px;
+  margin-top: 67px;
   row-gap: 47.9px;
 }
 .consultancy-top_jp {
@@ -30,6 +30,18 @@
 /* ------------------- */
 
 /*----------------------------
+  Mobile Margins
+   レスポンシブなティポグラフィ
+----------------------------*/
+
+@media (max-width:768px){
+  #consultancy {
+    margin-top: 42px;
+    row-gap: 22px;
+  }
+}
+
+/*----------------------------
    Responsive Typography 
    レスポンシブなティポグラフィ
 ----------------------------*/
@@ -53,14 +65,13 @@
   }
 }
 
-/*----------------------------
+/*------------------------------------------
   Color Consultancy Title Placement - Mobile
   Color Consultancy タイトル配置 - モバイル
-----------------------------*/
+--------------------------------------------*/
 
 @media (max-width:768px){
   .consultancy-top_jp {
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
