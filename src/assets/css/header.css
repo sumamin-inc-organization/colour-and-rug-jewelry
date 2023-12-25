@@ -100,8 +100,11 @@ header {
 }
 .tel-number{
     letter-spacing: 0.25px;
+    transform: translateY(-10px);
 }
 
 .time {
     letter-spacing: 1.96px;
+    transform: translateY(-15px);
 }
+
