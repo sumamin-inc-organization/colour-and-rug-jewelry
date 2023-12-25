@@ -22,6 +22,10 @@ header{
     height: 100%;
     display: flex;
 }
+.header-btn{
+    display: grid;
+    place-content: center;
+}
 /*----------------------------------
    Header Paddings and Margins
    ヘッダーのパディング、マージン
@@ -42,6 +46,10 @@ margin-right: 24px;
 }
 .header-decor{
     margin-right:30px ;
+}
+
+.header-btn{
+    padding: 6.92px 50.2px 9px 50px;
 }
 /*----------------------------------
    Header Decor
