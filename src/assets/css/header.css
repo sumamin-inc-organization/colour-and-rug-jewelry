@@ -40,4 +40,15 @@ padding-right: 40px;
 .header-info{
 margin-right: 24px;
 }
+.header-decor{
+    margin-right:30px ;
+}
+/*----------------------------------
+   Header Decor
+   ヘッダーデコレーション
+------------------------------------*/
 
+.header-decor{
+width: 1px;
+background-color: #45484B;
+}
