@@ -86,3 +86,14 @@
 
   }
 }
+
+
+/*----------------------------
+    Wrap- Mobile
+----------------------------*/
+@media (max-width:768px){
+  .it_wrap {
+    display: flex;
+    flex-direction: column;
+  }
+}
