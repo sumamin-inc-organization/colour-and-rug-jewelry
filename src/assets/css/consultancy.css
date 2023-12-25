@@ -30,7 +30,7 @@
 /* ------------------- */
 
 /*----------------------------
-  Mobile Margins
+    Mobile Margins
    レスポンシブなティポグラフィ
 ----------------------------*/
 
@@ -39,7 +39,9 @@
     margin-top: 42px;
     row-gap: 22px;
   }
+
 }
+
 
 /*----------------------------
    Responsive Typography 
@@ -75,6 +77,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 40px;
   }
 }
 
