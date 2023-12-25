@@ -24,3 +24,19 @@
   width: 100%;
   height: 100%;
 }
+
+/* ------------------- */
+/*       MOBILE        */
+/* ------------------- */
+
+/*----------------------------
+   Responsive Typography 
+   レスポンシブなティポグラフィ
+----------------------------*/
+
+@media (max-width:768px){
+  .consultancy-top_description{
+    line-height: 30px;
+  }
+}
+
