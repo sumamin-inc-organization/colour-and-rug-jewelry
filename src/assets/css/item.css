@@ -75,3 +75,14 @@
     font-size:30px;
   }
 }
+
+/*----------------------------
+    Sticky Remove
+    Stickyを削除
+----------------------------*/
+@media (max-width:768px){
+  .it_left {
+    position: static;
+
+  }
+}
