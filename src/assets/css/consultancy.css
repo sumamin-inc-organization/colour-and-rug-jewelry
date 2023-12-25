@@ -41,7 +41,7 @@
 }
 
 /*----------------------------
-   Color Consultancy Image - Mobile
+  Color Consultancy Image - Mobile
   Color Consultancy 画像 - モバイル
 ----------------------------*/
 
@@ -52,4 +52,19 @@
     justify-self: center;
   }
 }
+
+/*----------------------------
+  Color Consultancy Title Placement - Mobile
+  Color Consultancy タイトル配置 - モバイル
+----------------------------*/
+
+@media (max-width:768px){
+  .consultancy-top_jp {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
 
