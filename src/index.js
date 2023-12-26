@@ -87,3 +87,23 @@ $(document).ready(function() {
     })
   })
   
+
+  /*----------------------------
+    FAQ Animations
+    FAQ アニメーション
+----------------------------*/
+gsap.registerPlugin(ScrollTrigger);
+let faqtl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#faq",
+    start: "-=300px",
+    scrub: false,
+    //onEnter, onLeave, onEnterBack, onLeaveBack
+    // toggleActions: "play none none reset",
+    // pin: true,
+    //  markers: true
+  },
+});
+
+faqtl
+  .to(".faq", { "--beforeAnimation": "100%", duration: 3 });
