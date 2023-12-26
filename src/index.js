@@ -22,6 +22,7 @@ import "./assets/css/common/banner.css";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 // gsap.registerPlugin(ScrollTrigger);
 
@@ -197,8 +198,8 @@ let itemtl = gsap.timeline({
 });
 
 itemtl
-  .from(".item-eng", { x: -50, opacity: 0, duration: 1 })
-  .from(".item-jp", { x: 50, opacity: 0, duration: 1 }, "-=0.8");
+  .from(".item-eng", { x: 50, opacity: 0, duration: 1 })
+  .from(".item-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8");
 
 /*----------------------------
     Flow Animations
@@ -215,8 +216,8 @@ let flowtl = gsap.timeline({
 });
 
 flowtl
-  .from(".flow-eng", { x: 50, opacity: 0, duration: 1 })
-  .from(".flow-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8");
+  .from(".flow-eng", { x: -50, opacity: 0, duration: 1 })
+  .from(".flow-jp", { x: 50, opacity: 0, duration: 1 }, "-=0.8");
 
 /*----------------------------
     Gallary Animations
@@ -233,33 +234,16 @@ let gallerytl = gsap.timeline({
 });
 
 gallerytl
-  .from(".gallery-eng", { x: -50, opacity: 0, duration: 1 })
-  .from(".gallery-jp", { x: 50, opacity: 0, duration: 1 }, "-=0.8");
+  .from(".gallery-eng", { x: 50, opacity: 0, duration: 1 })
+  .from(".gallery-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8");
 
-
-// /*----------------------------
-//     FAQ Animations
-//     FAQ アニメーション
-// ----------------------------*/
-//   let faqtl = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: "#gallery",
-//       start: "-=500px",
-//       scrub: false,
-//       // markers:true
-//     },
-//   });
-  
-//   faqtl
-//     .from(".faq-eng", { x: -50, opacity: 0, duration: 1 })
-//     .from(".gallery-jp", { x: 50, opacity: 0, duration: 1 }, "-=0.8");
 
 
     /*----------------------------
     FAQ Animations
     FAQ アニメーション
 ----------------------------*/
-gsap.registerPlugin(ScrollTrigger);
+
 let faqtl = gsap.timeline({
   scrollTrigger: {
     trigger: "#faq",
@@ -270,7 +254,7 @@ let faqtl = gsap.timeline({
 });
 
 faqtl
-      .from(".faq-eng", { x: 50, opacity: 0, duration: 1 })  
-      .from(".faq-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8")
+      .from(".faq-eng", { x: -50, opacity: 0, duration: 1 })  
+      .from(".faq-jp", { x: 50, opacity: 0, duration: 1 }, "-=0.8")
       .to(".faq", { "--beforeAnimation": "100%", duration: 5 });
 
