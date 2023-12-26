@@ -98,12 +98,36 @@ let faqtl = gsap.timeline({
     trigger: "#faq",
     start: "-=300px",
     scrub: false,
-    //onEnter, onLeave, onEnterBack, onLeaveBack
-    // toggleActions: "play none none reset",
-    // pin: true,
-    //  markers: true
   },
 });
 
 faqtl
-  .to(".faq", { "--beforeAnimation": "100%", duration: 3 });
+  .to(".faq", { "--beforeAnimation": "100%", duration: 5 });
+
+
+  /*----------------------------
+    Company Name Animations
+    Company Name  アニメーション
+----------------------------*/
+
+const scrollers = document.querySelectorAll('.scroller'); //target the scrollers
+
+if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){ //check if user prefers reduced motion.( but inthis case it doesnt matter because its jus the logo)
+  addAnimation();
+} 
+
+function addAnimation(){
+  scrollers.forEach(scroller =>{
+    scroller.setAttribute('data-animated','true');
+
+    const scrollerInner = scroller.querySelector(".scroller-inner"); //the ul
+    const scrollerContent = Array.from(scrollerInner.children); //get an array out of it all
+
+    scrollerContent.forEach(item => {
+      const duplicatedItem = item.cloneNode(true); //clone the children
+      duplicatedItem.setAttribute('aria-hidden',true); //add aria hidden attribute for screen readers
+      scrollerInner.appendChild(duplicatedItem);  //append
+    })
+  })
+}
+
