@@ -259,7 +259,7 @@ a{
 }
 .company_name ul {
   animation: flowing 100s linear infinite;
-  transform: translateX(100%);
+  width: max-content;
   margin: 0;
   padding: 0;
 }
@@ -271,12 +271,20 @@ a{
   font-size: 85px;
 }
 @keyframes flowing {
-  0% {
-    transform: translateX(0);
-  }
   100% {
-    transform: translateX(-100%);
+    transform: translate(-50%);
   }
+}
+.scroller{
+  max-width: 100vw;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
 @media (max-width: 767px) {
@@ -450,6 +458,12 @@ a{
   letter-spacing: 4.2px;
   margin-top: 30px;
 }
+@media (max-width: 767px) {
+  .sec_title{
+    font-size: 22px;
+    line-height: 3rem;
+  }
+}
 
 .sec_title_en{
   font-family: 'Bellefair', serif;
@@ -480,6 +494,7 @@ a{
     font-size: 14px;
   }
 }
+
 /*!*****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/header.css ***!
   \*****************************************************************************/
@@ -902,6 +917,7 @@ a{
     padding-top: 100px;
   }
 }
+
 /*!**********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/inspiration.css ***!
   \**********************************************************************************/
