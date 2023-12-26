@@ -221,3 +221,8 @@ a{
         grid-template-columns: 1fr 90% 1fr;
     }
 }
+
+
+.inline-block{
+  display: inline-block;
+}
