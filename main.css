@@ -164,7 +164,7 @@ a{
 
 .black-btn {
   border: none;
-  background-color: black;
+  background-color: #3E3A39;
   position: relative;
 }
 
@@ -201,7 +201,7 @@ a{
 
 .white-btn a {
   text-decoration: none;
-  color: black;
+  color: #3E3A39;
 }
 .white-btn:hover {
   cursor: pointer;
@@ -341,6 +341,10 @@ a{
     }
 }
 
+
+.inline-block{
+  display: inline-block;
+}
 /*!****************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/typography.css ***!
   \****************************************************************************************/
@@ -932,8 +936,8 @@ a{
 .inspiration-container {
   padding-top: 81.2px;
   padding-bottom: 67px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid #969493;
+  border-bottom: 1px solid #969493;
 }
 
 .inspiration-eng {
@@ -1020,7 +1024,7 @@ a{
 }
 
 .active {
-  color: black;
+  color: #3E3A39;
 }
 
 /*----------------------------
@@ -1148,8 +1152,8 @@ a{
   .inspiration-container {
     padding-top: 57px;
     padding-bottom: 60px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid #969493;
+    border-bottom: 1px solid #969493;
   }
 }
 
