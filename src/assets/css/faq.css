@@ -98,7 +98,6 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    /* border: 1px solid red; */
   } 
   .question img{
     margin-top: 1ch;
@@ -114,3 +113,32 @@
   }
   
 }
+
+/*----------------------------
+    Q Placements
+    Q の配置
+----------------------------*/
+
+@media (max-width:425px){
+
+  .left {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 23.6px;
+  }
+
+  .center-q{
+    height: 100%;
+  }
+  .q-icon_top{
+    transform: translateY(-7px);
+  }
+  .q-icon_center{
+    transform: translateY(3px);
+  }
+  .left.flex-start{
+    align-items: flex-start;
+  }
+}
+
