@@ -140,7 +140,7 @@ a{
 }
 .company_name ul {
   animation: flowing 100s linear infinite;
-  transform: translateX(100%);
+  width: max-content;
   margin: 0;
   padding: 0;
 }
@@ -152,12 +152,20 @@ a{
   font-size: 85px;
 }
 @keyframes flowing {
-  0% {
-    transform: translateX(0);
-  }
   100% {
-    transform: translateX(-100%);
+    transform: translate(-50%);
   }
+}
+.scroller{
+  max-width: 100vw;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
 @media (max-width: 767px) {
