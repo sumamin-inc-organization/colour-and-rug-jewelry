@@ -9,8 +9,8 @@
 .inspiration-container {
   padding-top: 81.2px;
   padding-bottom: 67px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid #969493;
+  border-bottom: 1px solid #969493;
 }
 
 .inspiration-eng {
@@ -97,7 +97,7 @@
 }
 
 .active {
-  color: black;
+  color: #3E3A39;
 }
 
 /*----------------------------
@@ -225,8 +225,8 @@
   .inspiration-container {
     padding-top: 57px;
     padding-bottom: 60px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid #969493;
+    border-bottom: 1px solid #969493;
   }
 }
 
