@@ -10144,7 +10144,7 @@ let faqtl = gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.timeline({
     trigger: "#faq",
     start: "-=500px",
     scrub: false,
-    markers:true
+    // markers:true
   },
 });
 
@@ -10158,4 +10158,4 @@ faqtl
 
 /******/ })()
 ;
-//# sourceMappingURL=main.70ca22b04dc8049a4cb1.js.map
+//# sourceMappingURL=main.4fb47aeb814516619254.js.map
