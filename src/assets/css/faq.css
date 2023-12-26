@@ -10,12 +10,25 @@
   margin-bottom: 94.7px;
 }
 
-.faq {
+.faq{
+  --beforeAnimation: 0;
   display: flex;
   flex-direction: column;
   gap: 37.4px;
-  border-bottom: 1px solid #e1c5bf;
+  /* border-bottom: 1px solid #e1c5bf; */
+  position: relative;
 }
+
+.faq::after{
+  width: var(--beforeAnimation);
+  content: "";
+  /* width: 100%; */
+  height: 1px;
+  background-color: #e1c5bf ;
+  position: absolute;
+  bottom: 0;
+}
+
 
 .question {
   display: flex;
