@@ -249,7 +249,7 @@ let faqtl = gsap.timeline({
     trigger: "#faq",
     start: "-=500px",
     scrub: false,
-    markers:true
+    // markers:true
   },
 });
 
