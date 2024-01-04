@@ -9580,18 +9580,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/assets/css/common/animations.css":
-/*!**********************************************!*\
-  !*** ./src/assets/css/common/animations.css ***!
-  \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
 /***/ "./src/assets/css/common/banner.css":
 /*!******************************************!*\
   !*** ./src/assets/css/common/banner.css ***!
@@ -9903,9 +9891,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_css_form_css__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./assets/css/form.css */ "./src/assets/css/form.css");
 /* harmony import */ var _assets_css_footer_css__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./assets/css/footer.css */ "./src/assets/css/footer.css");
 /* harmony import */ var _assets_css_common_banner_css__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./assets/css/common/banner.css */ "./src/assets/css/common/banner.css");
-/* harmony import */ var _assets_css_common_animations_css__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./assets/css/common/animations.css */ "./src/assets/css/common/animations.css");
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
 
 
 
@@ -9930,9 +9917,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_22__.ScrollTrigger);
+gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_21__.ScrollTrigger);
 
 // gsap.registerPlugin(ScrollTrigger);
 
@@ -10026,7 +10011,7 @@ function addAnimation() {
     RECOMMENDED Animations
     RECOMMENDED  アニメーション
 ----------------------------*/
-let recommendedtl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
+let recommendedtl = gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.timeline({
   scrollTrigger: {
     trigger: "#recommended",
     start: "-=500px",
@@ -10044,7 +10029,7 @@ recommendedtl
     Inspiration  アニメーション
 ----------------------------*/
 
-let inspirationtl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
+let inspirationtl = gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.timeline({
   scrollTrigger: {
     trigger: "#inspiration",
     start: "-=500px",
@@ -10062,7 +10047,7 @@ inspirationtl
     Advantage  アニメーション
 ----------------------------*/
 
-let advantagetl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
+let advantagetl = gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.timeline({
   scrollTrigger: {
     trigger: "#advantage",
     start: "-=500px",
@@ -10080,7 +10065,7 @@ advantagetl
     Consultancy  アニメーション
 ----------------------------*/
 
-let consultancytl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
+let consultancytl = gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.timeline({
   scrollTrigger: {
     trigger: "#consultancy",
     start: "-=500px",
@@ -10098,7 +10083,7 @@ consultancytl
     Item アニメーション
 ----------------------------*/
 
-let itemtl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
+let itemtl = gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.timeline({
   scrollTrigger: {
     trigger: "#item",
     start: "-=500px",
@@ -10116,7 +10101,7 @@ itemtl
     Flow アニメーション
 ----------------------------*/
 
-let flowtl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
+let flowtl = gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.timeline({
   scrollTrigger: {
     trigger: "#flow",
     start: "-=500px",
@@ -10134,7 +10119,7 @@ flowtl
     Gallary アニメーション
 ----------------------------*/
 
-let gallerytl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
+let gallerytl = gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.timeline({
   scrollTrigger: {
     trigger: "#gallery",
     start: "-=500px",
@@ -10154,7 +10139,7 @@ gallerytl
     FAQ アニメーション
 ----------------------------*/
 
-let faqtl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
+let faqtl = gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.timeline({
   scrollTrigger: {
     trigger: "#faq",
     start: "-=500px",
@@ -10169,39 +10154,8 @@ faqtl
       .to(".faq", { "--beforeAnimation": "100%", duration: 5 });
 
 
-
-/*----------------------------
-    page transition
-    page ページ遷移の実装
-----------------------------*/
-
-let intro = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline()
-
-// intro.set('#keyvisual',{opacity:0, delay:1})
-// .to('.transition-item',{y:'0'})
-// .to('.transition-item-white',{y:'0'})
-// .set('.transition-item',{y:'100%'})
-// .set('.transition-img',{opacity:0})
-// // .to('.main-container',{zIndex:1003})
-// // .from('.main-container',{y:"100%"})
-// .to('.transition-item-white',{y:'100%'})
-// .to('#keyvisual',{opacity:1} )
-
-intro
-.to('.transition-item',{y:'0',delay:3})
-.to('.transition-item-white',{y:'0'})
-.set('.transition-item',{y:'100%'})
-.set('.transition-img',{opacity:0})
-// .to('.main-container',{zIndex:1003})
-// .from('.main-container',{y:"100%"})
-.to('.transition-item-white',{y:'-100%'})
-
-
-
-
-
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.85b1d149a4079cd932c0.js.map
+//# sourceMappingURL=main.4fb47aeb814516619254.js.map

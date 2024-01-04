@@ -154,7 +154,6 @@
 
 @media (max-width: 466px) {
   .banner_title {
-    /* border: 1px solid red; */
     display: grid;
     justify-content: center;
     align-items: center;
