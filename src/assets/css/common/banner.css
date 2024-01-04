@@ -68,8 +68,8 @@
 /* ------------------- */
 
 /*----------------------------
-   Responsive Typography 
-   レスポンシブなティポグラフィ
+    Responsive Typography 
+    レスポンシブなティポグラフィ
 ----------------------------*/
 
 @media (max-width: 466px) {
@@ -110,6 +110,8 @@
 
 @media (max-width: 466px) {
   .banner-btn_wrapper {
+    width: 70%;
+    margin: auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -163,6 +165,7 @@
     display: grid;
     justify-content: center;
     align-items: center;
+    margin-bottom: 35px;
   }
 }
 

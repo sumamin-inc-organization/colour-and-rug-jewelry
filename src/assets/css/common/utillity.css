@@ -49,6 +49,11 @@ a{
   position: relative;
 }
 
+.black-btn:hover {
+  background-color: #C38C80;
+  transition: 0.3s;
+}
+
 .black-btn a {
   text-decoration: none;
   color: white;
