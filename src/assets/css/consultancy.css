@@ -7,9 +7,12 @@
   row-gap: 47.9px;
 }
 .consultancy-top_jp {
-  /* border: 1px solid red; */
   display: flex;
   justify-content: space-between;
+  gap: 40px;
+}
+.consultancy-top_jp p{
+  width: 45%;
 }
 .consultancy-img_wrapper {
   margin-top: 47.9;

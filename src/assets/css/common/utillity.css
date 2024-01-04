@@ -45,8 +45,13 @@ a{
 
 .black-btn {
   border: none;
-  background-color: black;
+  background-color: #3E3A39;
   position: relative;
+}
+
+.black-btn:hover {
+  background-color: #C38C80;
+  transition: 0.3s;
 }
 
 .black-btn a {
