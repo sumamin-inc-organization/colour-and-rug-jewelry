@@ -112,6 +112,12 @@
   letter-spacing: 0.15rem;
   margin-top: 30px;
 }
+@media (max-width: 767px) {
+  .sec_title{
+    font-size: 22px;
+    line-height: 3rem;
+  }
+}
 
 .sec_title_en{
   font-family: 'Bellefair', serif;

@@ -7,7 +7,7 @@ module.exports = {
   mode:'development',
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'FUTURE L DAYS',
+      title: 'Color and Rug Jewelry',
       filename:'index.html',
       template:'src/index.html',
     }),

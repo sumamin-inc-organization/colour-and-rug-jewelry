@@ -39,7 +39,7 @@
 }
 
 .graybox:nth-of-type(2) {
-  margin-top: 100px;
+  margin-top: 70px;
 }
 /*----------------------------
     Sticky
@@ -50,3 +50,75 @@
   top: 20px;
   height: fit-content;
 }
+
+
+
+/* ------------------- */
+/*       MOBILE        */
+/* ------------------- */
+
+
+/*----------------------------
+   Responsive Typography 
+   レスポンシブなティポグラフィ
+----------------------------*/
+
+@media (max-width:768px){
+  .it_right span {
+    display: block;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.64px;
+  }
+  .it_eng{
+    font-size:30px;
+  }
+}
+
+/*----------------------------
+    Sticky Remove
+    Stickyを削除
+----------------------------*/
+@media (max-width:768px){
+  .it_left {
+    position: static;
+
+  }
+}
+
+
+/*----------------------------
+    Wrap- Mobile
+----------------------------*/
+@media (max-width:768px){
+  .it_wrap {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*----------------------------
+    Mobile Margins and paddings
+    モバイルのマージンとパディング
+----------------------------*/
+@media (max-width:768px){
+  .it_right {
+   margin-top: 45px;
+  }
+  .it_right span {
+    margin-top: 42px;
+  }
+  .it_right h3 {
+    margin-top: 15px;
+  }
+  .it_right p {
+    margin-top: 35px;
+  }
+  #item {
+    padding-top: 79px;
+  }
+  .item-banner{
+    margin-top: 55px !important;
+  }
+}
+

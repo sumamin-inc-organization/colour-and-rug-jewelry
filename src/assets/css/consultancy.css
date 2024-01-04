@@ -3,7 +3,7 @@
 /* ------------------- */
 
 #consultancy {
-  margin-top: 75.2px;
+  margin-top: 67px;
   row-gap: 47.9px;
 }
 .consultancy-top_jp {
@@ -15,7 +15,7 @@
   width: 45%;
 }
 .consultancy-img_wrapper {
-  margin-top: 47.9;
+  /* margin-top: 48px; */
   width: 90.264vw;
   width: 95vw;
   justify-self: start;
@@ -27,3 +27,61 @@
   width: 100%;
   height: 100%;
 }
+
+/* ------------------- */
+/*       MOBILE        */
+/* ------------------- */
+
+/*----------------------------
+    Mobile Margins
+    モバイルのマージン
+----------------------------*/
+
+@media (max-width:768px){
+  #consultancy {
+    margin-top: 42px;
+    row-gap: 22px;
+  }
+
+}
+
+
+/*----------------------------
+   Responsive Typography 
+   レスポンシブなティポグラフィ
+----------------------------*/
+
+@media (max-width:768px){
+  .consultancy-top_description{
+    line-height: 30px;
+  }
+}
+
+/*----------------------------
+  Color Consultancy Image - Mobile
+  Color Consultancy 画像 - モバイル
+----------------------------*/
+
+@media (max-width:768px){
+  .consultancy-img_wrapper {
+    margin-top: 22px;
+    width: 100vw;
+    justify-self: center;
+  }
+}
+
+/*------------------------------------------
+  Color Consultancy Title Placement - Mobile
+  Color Consultancy タイトル配置 - モバイル
+--------------------------------------------*/
+
+@media (max-width:768px){
+  .consultancy-top_jp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+  }
+}
+
+
