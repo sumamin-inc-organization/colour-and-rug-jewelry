@@ -9,8 +9,8 @@
 .inspiration-container {
   padding-top: 81.2px;
   padding-bottom: 67px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid #969493;
+  border-bottom: 1px solid #969493;
 }
 
 .inspiration-eng {
@@ -97,7 +97,7 @@
 }
 
 .active {
-  color: black;
+  color: #3E3A39;
 }
 
 .ba_label{
@@ -244,7 +244,24 @@
   .inspiration-container {
     padding-top: 57px;
     padding-bottom: 60px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid #969493;
+    border-bottom: 1px solid #969493;
+  }
+}
+
+
+/*----------------------------
+  Inspiration Button - Mobile
+  インスピレーションボタン - モバイル
+----------------------------*/
+
+@media(max-width:768px){
+  .inspiration-button.black-btn {
+    display: grid;
+    place-content: center;
+    padding: 7.1px 46.2px 8.9px 35.6px;
+  }
+  .inspiration-button.black-btn p{
+    padding: 0;
   }
 }

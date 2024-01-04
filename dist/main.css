@@ -112,6 +112,8 @@ body {
   position: relative;
 }
 
+
+
 /*!**************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/utillity.css ***!
   \**************************************************************************************/
@@ -123,7 +125,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  color: #3e3a39;
+  color: #45484B;
 }
 a{
     cursor: pointer;
@@ -204,7 +206,7 @@ a{
 
 .white-btn a {
   text-decoration: none;
-  color: black;
+  color: #3E3A39;
 }
 .white-btn:hover {
   cursor: pointer;
@@ -262,7 +264,7 @@ a{
 }
 .company_name ul {
   animation: flowing 100s linear infinite;
-  transform: translateX(100%);
+  width: max-content;
   margin: 0;
   padding: 0;
 }
@@ -274,12 +276,20 @@ a{
   font-size: 85px;
 }
 @keyframes flowing {
-  0% {
-    transform: translateX(0);
-  }
   100% {
-    transform: translateX(-100%);
+    transform: translate(-50%);
   }
+}
+.scroller{
+  max-width: 100vw;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
 @media (max-width: 767px) {
@@ -336,6 +346,10 @@ a{
     }
 }
 
+
+.inline-block{
+  display: inline-block;
+}
 /*!****************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/typography.css ***!
   \****************************************************************************************/
@@ -453,6 +467,12 @@ a{
   letter-spacing: 0.15rem;
   margin-top: 30px;
 }
+@media (max-width: 767px) {
+  .sec_title{
+    font-size: 22px;
+    line-height: 3rem;
+  }
+}
 
 .sec_title_en{
   font-family: 'Bellefair', serif;
@@ -483,6 +503,7 @@ a{
     font-size: 14px;
   }
 }
+
 /*!*****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/header.css ***!
   \*****************************************************************************/
@@ -615,7 +636,7 @@ a{
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/service.css ***!
   \******************************************************************************/
 #service {
-  background-color: #efe3e0;
+  background-color: #E2D0CA;
   padding: 140px 0;
   text-align: center;
 }
@@ -684,7 +705,7 @@ a{
 .plus {
   display: inline-block;
   vertical-align: middle;
-  color: #c38c80;
+  color: #C38C80;
   line-height: 1;
   width: 2px;
   height: 40px;
@@ -984,6 +1005,7 @@ Recommended Bottom
     padding-top: 100px;
   }
 }
+
 /*!**********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/inspiration.css ***!
   \**********************************************************************************/
@@ -998,8 +1020,8 @@ Recommended Bottom
 .inspiration-container {
   padding-top: 81.2px;
   padding-bottom: 67px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid #969493;
+  border-bottom: 1px solid #969493;
 }
 
 .inspiration-eng {
@@ -1086,7 +1108,7 @@ Recommended Bottom
 }
 
 .active {
-  color: black;
+  color: #3E3A39;
 }
 
 .ba_label{
@@ -1233,11 +1255,27 @@ Recommended Bottom
   .inspiration-container {
     padding-top: 57px;
     padding-bottom: 60px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid #969493;
+    border-bottom: 1px solid #969493;
   }
 }
 
+
+/*----------------------------
+  Inspiration Button - Mobile
+  インスピレーションボタン - モバイル
+----------------------------*/
+
+@media(max-width:768px){
+  .inspiration-button.black-btn {
+    display: grid;
+    place-content: center;
+    padding: 7.1px 46.2px 8.9px 35.6px;
+  }
+  .inspiration-button.black-btn p{
+    padding: 0;
+  }
+}
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/advantage.css ***!
   \********************************************************************************/
@@ -1425,7 +1463,7 @@ Recommended Bottom
 /* ------------------- */
 
 #consultancy {
-  margin-top: 75.2px;
+  margin-top: 67px;
   row-gap: 47.9px;
 }
 .consultancy-top_jp {
@@ -1437,7 +1475,7 @@ Recommended Bottom
   width: 45%;
 }
 .consultancy-img_wrapper {
-  margin-top: 47.9;
+  /* margin-top: 48px; */
   width: 90.264vw;
   width: 95vw;
   justify-self: start;
@@ -1449,6 +1487,64 @@ Recommended Bottom
   width: 100%;
   height: 100%;
 }
+
+/* ------------------- */
+/*       MOBILE        */
+/* ------------------- */
+
+/*----------------------------
+    Mobile Margins
+    モバイルのマージン
+----------------------------*/
+
+@media (max-width:768px){
+  #consultancy {
+    margin-top: 42px;
+    row-gap: 22px;
+  }
+
+}
+
+
+/*----------------------------
+   Responsive Typography 
+   レスポンシブなティポグラフィ
+----------------------------*/
+
+@media (max-width:768px){
+  .consultancy-top_description{
+    line-height: 30px;
+  }
+}
+
+/*----------------------------
+  Color Consultancy Image - Mobile
+  Color Consultancy 画像 - モバイル
+----------------------------*/
+
+@media (max-width:768px){
+  .consultancy-img_wrapper {
+    margin-top: 22px;
+    width: 100vw;
+    justify-self: center;
+  }
+}
+
+/*------------------------------------------
+  Color Consultancy Title Placement - Mobile
+  Color Consultancy タイトル配置 - モバイル
+--------------------------------------------*/
+
+@media (max-width:768px){
+  .consultancy-top_jp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+  }
+}
+
+
 
 /*!***************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/item.css ***!
@@ -1494,7 +1590,7 @@ Recommended Bottom
 }
 
 .graybox:nth-of-type(2) {
-  margin-top: 100px;
+  margin-top: 70px;
 }
 /*----------------------------
     Sticky
@@ -1505,6 +1601,78 @@ Recommended Bottom
   top: 20px;
   height: fit-content;
 }
+
+
+
+/* ------------------- */
+/*       MOBILE        */
+/* ------------------- */
+
+
+/*----------------------------
+   Responsive Typography 
+   レスポンシブなティポグラフィ
+----------------------------*/
+
+@media (max-width:768px){
+  .it_right span {
+    display: block;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.64px;
+  }
+  .it_eng{
+    font-size:30px;
+  }
+}
+
+/*----------------------------
+    Sticky Remove
+    Stickyを削除
+----------------------------*/
+@media (max-width:768px){
+  .it_left {
+    position: static;
+
+  }
+}
+
+
+/*----------------------------
+    Wrap- Mobile
+----------------------------*/
+@media (max-width:768px){
+  .it_wrap {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*----------------------------
+    Mobile Margins and paddings
+    モバイルのマージンとパディング
+----------------------------*/
+@media (max-width:768px){
+  .it_right {
+   margin-top: 45px;
+  }
+  .it_right span {
+    margin-top: 42px;
+  }
+  .it_right h3 {
+    margin-top: 15px;
+  }
+  .it_right p {
+    margin-top: 35px;
+  }
+  #item {
+    padding-top: 79px;
+  }
+  .item-banner{
+    margin-top: 55px !important;
+  }
+}
+
 
 /*!***************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/flow.css ***!
@@ -1691,12 +1859,25 @@ Recommended Bottom
   margin-bottom: 94.7px;
 }
 
-.faq {
+.faq{
+  --beforeAnimation: 0;
   display: flex;
   flex-direction: column;
   gap: 37.4px;
-  border-bottom: 1px solid #e1c5bf;
+  /* border-bottom: 1px solid #e1c5bf; */
+  position: relative;
 }
+
+.faq::after{
+  width: var(--beforeAnimation);
+  content: "";
+  /* width: 100%; */
+  height: 1px;
+  background-color: #e1c5bf ;
+  position: absolute;
+  bottom: 0;
+}
+
 
 .question {
   display: flex;
@@ -1750,6 +1931,79 @@ Recommended Bottom
     transform: translateY(0px);
   }
 }
+.left h3{
+  letter-spacing: 0.8px;
+}
+/* ------------------- */
+/*       MOBILE        */
+/* ------------------- */
+
+/*----------------------------
+   Responsive Typography 
+   レスポンシブなティポグラフィ
+----------------------------*/
+
+@media (max-width:425px){
+  .left h3{
+    font-size: 18px;
+    letter-spacing: 0.72px;
+  }
+
+}
+
+/*----------------------------
+     Chevron Placements
+     シェブロンの配置
+----------------------------*/
+@media (max-width:425px){
+  .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  } 
+  .question img{
+    margin-top: 1ch;
+  }
+
+  .faq[data-question-number="3"]  .question,
+  .faq[data-question-number="5"]  .question{
+    align-items: center;
+  }
+  .faq[data-question-number="3"]  .question img,
+  .faq[data-question-number="5"]  .question img{
+    margin-top:0;
+  }
+  
+}
+
+/*----------------------------
+    Q Placements
+    Q の配置
+----------------------------*/
+
+@media (max-width:425px){
+
+  .left {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 23.6px;
+  }
+
+  .center-q{
+    height: 100%;
+  }
+  .q-icon_top{
+    transform: translateY(-7px);
+  }
+  .q-icon_center{
+    transform: translateY(3px);
+  }
+  .left.flex-start{
+    align-items: flex-start;
+  }
+}
+
 
 /*!******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/contact.css ***!
@@ -1927,8 +2181,8 @@ footer a:hover{
 /* ------------------- */
 
 /*----------------------------
-   Responsive Typography 
-   レスポンシブなティポグラフィ
+    Responsive Typography 
+    レスポンシブなティポグラフィ
 ----------------------------*/
 
 @media (max-width: 466px) {
@@ -1969,15 +2223,26 @@ footer a:hover{
 
 @media (max-width: 466px) {
   .banner-btn_wrapper {
+    width: 70%;
+    margin: auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
   .banner_book {
     padding: 12.06px 83.65px 13.9px 84.35px;
+    display: grid;
+    place-content: center;
   }
   .banner_contact {
     padding: 12.06px 68.65px 13.8px 69.35px;
+    display: grid;
+    place-content: center;
+  }
+  .banner-btn_text{
+    width: fit-content;
+    height: fit-content;
+    /* border: 1px solid red; */
   }
 }
 
@@ -2002,7 +2267,6 @@ footer a:hover{
 
 @media (max-width: 466px) {
   .banner_title {
-    /* border: 1px solid red; */
     display: grid;
     justify-content: center;
     align-items: center;
@@ -2013,8 +2277,20 @@ footer a:hover{
     display: grid;
     justify-content: center;
     align-items: center;
+    margin-bottom: 35px;
   }
 }
+
+@media(max-width:768px){
+  .banner {
+    margin-top: 80px;
+  }
+}
+
+
+
+
+
 
 
 /*# sourceMappingURL=main.css.map*/

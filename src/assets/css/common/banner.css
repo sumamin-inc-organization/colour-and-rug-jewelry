@@ -118,9 +118,18 @@
   }
   .banner_book {
     padding: 12.06px 83.65px 13.9px 84.35px;
+    display: grid;
+    place-content: center;
   }
   .banner_contact {
     padding: 12.06px 68.65px 13.8px 69.35px;
+    display: grid;
+    place-content: center;
+  }
+  .banner-btn_text{
+    width: fit-content;
+    height: fit-content;
+    /* border: 1px solid red; */
   }
 }
 
@@ -158,3 +167,14 @@
     margin-bottom: 35px;
   }
 }
+
+@media(max-width:768px){
+  .banner {
+    margin-top: 80px;
+  }
+}
+
+
+
+
+
