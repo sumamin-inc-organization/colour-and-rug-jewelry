@@ -35,7 +35,7 @@ a{
 }
 
 /* 左寄せ */
-.main-grid-column-1_4 {
+.main-grid-column-1_3 {
   grid-column: 1 / 3;
 }
 
@@ -92,7 +92,8 @@ a{
 
 .white-btn a {
   text-decoration: none;
-  color: #3E3A39;
+  color: #45484B;
+  font-weight: 500;
 }
 .white-btn:hover {
   cursor: pointer;
@@ -126,7 +127,6 @@ a{
   .mobile-only {
     display: block;
   }
-
   .pc-only {
     display: none;
   }
@@ -139,7 +139,7 @@ a{
 
 .company_name {
   font-size: 136px;
-  color: #efe3e0;
+  color: #E2D0CA;
   letter-spacing: 13px;
   display: flex;
   overflow: hidden;
@@ -181,7 +181,6 @@ a{
 @media (max-width: 768px) {
   .company_name{
     font-size: 68px;
-    color: #F5EEE9;
     letter-spacing: 0;
     font-weight: 100;
   }
@@ -231,7 +230,6 @@ a{
         grid-template-columns: 1fr 90% 1fr;
     }
 }
-
 
 .inline-block{
   display: inline-block;
