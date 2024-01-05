@@ -125,7 +125,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  color: #3e3a39;
+  color: #45484B;
 }
 a{
     cursor: pointer;
@@ -153,6 +153,11 @@ a{
   grid-column: 1 / 4;
 }
 
+/* 左寄せ */
+.main-grid-column-1_3 {
+  grid-column: 1 / 3;
+}
+
 .main-grid-column-2_3 {
   grid-column: 2 / 3;
 }
@@ -166,6 +171,11 @@ a{
   border: none;
   background-color: #3E3A39;
   position: relative;
+}
+
+.black-btn:hover {
+  background-color: #C38C80;
+  transition: 0.3s;
 }
 
 .black-btn a {
@@ -201,10 +211,13 @@ a{
 
 .white-btn a {
   text-decoration: none;
-  color: #3E3A39;
+  color: #45484B;
+  font-weight: 500;
 }
 .white-btn:hover {
   cursor: pointer;
+  background-color: #EFE3E0;
+  transition: 0.3s;
 }
 
 .white-btn::after {
@@ -231,11 +244,10 @@ a{
   display: block;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .mobile-only {
     display: block;
   }
-
   .pc-only {
     display: none;
   }
@@ -248,7 +260,7 @@ a{
 
 .company_name {
   font-size: 136px;
-  color: #efe3e0;
+  color: #E2D0CA;
   letter-spacing: 13px;
   display: flex;
   overflow: hidden;
@@ -287,10 +299,9 @@ a{
   mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .company_name{
     font-size: 68px;
-    color: #F5EEE9;
     letter-spacing: 0;
     font-weight: 100;
   }
@@ -304,7 +315,7 @@ a{
     レスポンシブ
 ----------------------------*/
 
-/* スクリーン幅が767px以下のデバイスでのみ表示 */
+/* スクリーン幅が767x以下のデバイスでのみ表示 */
 .mobile-only{
     display: none;
 }
@@ -316,7 +327,7 @@ a{
 .sp_425{
   display: none;
 }
-@media(max-width:767px){
+@media(max-width:768px){
     .mobile-only{
         display: block;
     }
@@ -340,7 +351,6 @@ a{
         grid-template-columns: 1fr 90% 1fr;
     }
 }
-
 
 .inline-block{
   display: inline-block;
@@ -376,13 +386,18 @@ a{
 }
 .font-zenkaku {
   font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 300;
 }
 .font-zenold {
   font-family: "Zen Old Mincho", serif;
+  font-weight: 300;
 }
 .font-bellefair {
   font-family: "Bellefair", serif;
   font-weight: 400;
+}
+.font-josefin {
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 /*----------------------------
@@ -427,6 +442,7 @@ a{
 .fs-136 {
   font-size: 136px;
 }
+
 /*----------------------------
     Font Colors / フォントの色"
   ----------------------------*/
@@ -458,15 +474,9 @@ a{
   font-family: 'Zen Old Mincho', serif;
   font-weight: 500;
   font-size: 30px;
-  line-height: 1.8;
-  letter-spacing: 4.2px;
+  line-height: 1.7;
+  letter-spacing: 0.15rem;
   margin-top: 30px;
-}
-@media (max-width: 767px) {
-  .sec_title{
-    font-size: 22px;
-    line-height: 3rem;
-  }
 }
 
 .sec_title_en{
@@ -494,7 +504,7 @@ a{
   }
   /* PC     -> 16px 
    mobile -> 14px */
-   .sec_title_en {
+  .sec_title_en {
     font-size: 14px;
   }
 }
@@ -570,7 +580,7 @@ a{
     width: 41vw;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .kv_top{
         display: block;
         position: relative;
@@ -617,84 +627,94 @@ a{
         margin-bottom: 45px;
     }
     .kv_bottom .kv_02{
-        width: 280px;
+        width: 72vw;
         height: 280px;
         object-fit: cover;
     }
 }
 
 /*!******************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/newplan.css ***!
-  \******************************************************************************/
-
-/*!******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/service.css ***!
   \******************************************************************************/
+.service-container{
+  background-image: url(./images/newplan_bkg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center top;
+}
 #service {
-  background-color: #efe3e0;
-  padding: 140px 0;
+  background-color: rgba(226, 208, 202, 0.8);
+  padding: 110px 0;
+  padding-top: 128px;
   text-align: center;
 }
-
 .service_text {
-  line-height: 28px;
-  letter-spacing: 1px;
-  margin-top: 32px;
+  line-height: 2.5;
+  letter-spacing: 0.1rem;
+  margin-top: 65px;
+  color: black;
 }
-
 .service_flex {
   display: flex;
   justify-content: space-between;
 }
-
+.service_content{
+  background-color: #F6EEEB;
+  padding: 80px 60px 100px;
+  border-radius: 550px 550px 0 0;
+  margin-top: 100px;
+}
 .service_item {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .service_item {
   margin-top: 40px;
 }
-
 .service_item img {
   width: 230px;
+  z-index: 2;
 }
-
-.service_item h3 {
+.service_item p{
+  margin: auto;
+  line-height: 1.7;
+}
+.service_inner{
+  width: 310px;
+  height: 160px;
+  background-color: #E2D0CA;
+  padding: 40px 0 30px;
+  margin-top: -25px;
   z-index: 1;
-  margin-top: 10px;
-  letter-spacing: 3.5px;
 }
-
-.service_item p {
+.service_think{
   text-align: center;
-  width: 340px;
-  height: 110px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  margin-top: -23px;
-  line-height: 28px;
-  letter-spacing: 1px;
+  width: 600px;
+  padding: 50px 0 20px;
 }
-
+.service_item h3 {
+  font-size: 24px;
+  line-height: 1.7;
+  letter-spacing: 0.1rem;
+  margin: auto;
+}
+.service_text_br{
+  display: none;
+}
 .arrow_down {
   display: flex;
   justify-content: center;
   padding-top: 40px;
 }
-
 .arrow_down img {
   width: 53px;
   display: block;
 }
-
 .plus {
   display: inline-block;
   vertical-align: middle;
-  color: #c38c80;
+  color: #C38C80;
   line-height: 1;
   width: 2px;
   height: 40px;
@@ -703,7 +723,6 @@ a{
   position: relative;
   margin-top: 135px;
 }
-
 .plus::before {
   content: "";
   position: absolute;
@@ -716,6 +735,107 @@ a{
   transform: rotate(90deg);
 }
 
+/* new plan */
+#newplan{
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+#newplan h2{
+  font-size: 39px;
+  letter-spacing: 0.2rem;
+}
+.decor-div{
+  grid-column: 2;
+}
+
+@media (max-width: 1200px) {
+  .service_content{
+    padding: 60px 30px;
+  }
+  .service_inner{
+    width: 250px;
+    height: 180px;
+  }
+  .service_think{
+    width: 400px;
+    height: 160px;
+  }
+  .service_text_br{
+    display: block;
+  }
+  .plus{
+    height: 30px;
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 950px) {
+  .service_inner{
+    width: 200px;
+  }
+  .service_think{
+    width: 400px;
+  }
+  .service_item img {
+    width: 160px;
+  }
+  .service_item h3{
+    letter-spacing: 0.1rem;
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  #service{
+    padding: 50px 0 80px;
+  }
+  .service_content{
+    padding: 20px 20px 60px;
+    margin-top: 60px;
+  }
+  .service_flex {
+    display: block;
+    align-items: center;
+  }
+  .service_item img{
+    width: 230px;
+  }
+  .service_item p {
+    font-size: 16px;
+    width: 100%;
+  }
+  .service_text{
+    line-height: 1.9;
+    text-align: left;
+    margin-top: 45px;
+  }
+  .service_text_br{
+    display: none;
+  }
+  .service_inner{
+    width: 100%;
+    height: 160px;
+    padding: 35px 0 20px;
+
+  }
+  .arrow_down img{
+    width: 40px;
+  }
+  .plus{
+    margin-top: 30px;
+  }
+  .service-container{
+    background-image: url(./images/newplan_bkg-sp.jpg);
+  }
+  #newplan {
+    height: 680px;
+  }
+  #newplan h2{
+    font-size: 29px;
+  }
+}
 /*!**********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/recommended.css ***!
   \**********************************************************************************/
@@ -729,7 +849,7 @@ a{
   /* border: 1px solid red; */
 }
 /*-------------------
- Recommended Top
+Recommended Top
 ---------------------*/
 
 .rc_top {
@@ -745,7 +865,7 @@ a{
 }
 
 /*-------------------
- Recommended Bottom
+Recommended Bottom
 ---------------------*/
 
 .rc_bottom {
@@ -799,6 +919,21 @@ a{
 }
 
 
+@media (max-width:1090px){
+  .rc_list {
+    padding: 60px 40px 60px 0;
+  }
+}
+@media (max-width:980px){
+  .rc_list {
+    padding: 50px 30px 50px 70px;
+  }
+  .rc_list li{
+    padding-left: 25px;
+    font-size: 16px;
+  }
+}
+
 
 /*-----------------
       Mobile
@@ -809,47 +944,38 @@ a{
 --------------------------*/
 
 
-@media (max-width:767px){
+@media (max-width:768px){
   .rc_top {
     display: grid;
     grid-template-columns: 1fr 90% 1fr;
-    /* border: 1px solid black; */
   }
   .rec-top_wrapper{
-    /* border: 1px solid green; */
     grid-column: 2;
   }
   .rc_top p {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   padding: 0;
-   line-height: 30px;
-   padding-left: 10.26vw; 
-   /* border: 1px solid red; */
-   grid-column: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  line-height: 30px;
+  width: 95%;
+  grid-column: 2;
   }
   #recommended {
     background-color: #fff;
-    padding: 80px 0 500px;
+    padding: 80px 0 450px;
   }
 
   /* メインのグリッドとモバイルセクションのデザインが合わないため、パディングを追加しました。 */
-  .rc_top h2 {
+  .rc_top h2,.rc_top span,.rc_top p {
     padding-left: 2.82vw;
   }
-  .rc_top span {
-    padding-left: 2.82vw;
-  }
-  .rc_top p {
-    padding-left: 10.26vw; 
-   }
 }
 
 /*---------------------------
   Recommended Bottom - Mobile
 -----------------------------*/
-@media (max-width:767px){
+@media (max-width:768px){
 
   #recommended{
     display: block;
@@ -857,8 +983,15 @@ a{
   .rc_bottom{
     display: grid;
     grid-template-columns: 1fr 90% 1fr;
-    width: 100vw;
+    margin-top: 60px;
   }
+
+  .rc_bottom img {
+    width: 95%;
+    z-index: 2;
+    grid-column: 1/3;
+  }
+
   .rc_list {
     width: 94.87vw;
     left: 0;
@@ -872,23 +1005,19 @@ a{
     top: 70%;
     grid-column: 2/3;
   }
-  .rc_fs{
 
+  .rc_fs{
     padding-left: 30px;
     padding-top: 50px;
   }
+
   .rc_fs li{
     letter-spacing: 1px;
   }
-  .rc_bottom img {
-    width: 90vw;
-    aspect-ratio: 1.4;
-    z-index: 2;
-    grid-column: 1/3;
-  }
+
   .rc_list li {
     position: relative;
-    margin-top: 25px;
+    margin-top: 20px;
     padding-left: 30px;
     text-wrap: nowrap;
     margin-left: 10.77vw; 
@@ -899,11 +1028,8 @@ a{
   }
 }
 
-
-
-
 @media(max-width:600px){
- .rc_fs li{
+  .rc_fs li{
     font-size: 16px;
     letter-spacing: 0;
   }
@@ -914,9 +1040,8 @@ a{
 
 }
 
-@media(min-width:600px) and (max-width:767px){
+@media(min-width:600px) and (max-width:768px){
   .rc_fs{
-
     padding-left: 30px;
     padding-top: 100px;
   }
@@ -1027,9 +1152,13 @@ a{
   color: #3E3A39;
 }
 
+.ba_label{
+  font-size: 16px;
+}
+
 /*----------------------------
-   Inspiration Bottom
-   インスピレーションボトム
+    Inspiration Bottom
+    インスピレーションボトム
 ----------------------------*/
 
 .inspiration-bottom {
@@ -1040,8 +1169,8 @@ a{
 }
 
 /*----------------------------
-   Inspiration Button
-   インスピレーションボタン
+    Inspiration Button
+    インスピレーションボタン
 ----------------------------*/
 
 .inspiration-button.black-btn {
@@ -1055,7 +1184,15 @@ a{
 
 .card {
   -webkit-backface-visibility: hidden;
+  padding: 0 4px;
 }
+
+@media(max-width:1000px){
+  .inspiration-bottom p{
+    width: 65%;
+  }
+}
+
 
 /* ------------------- */
 /*       MOBILE        */
@@ -1063,8 +1200,8 @@ a{
 
 
 /*----------------------------
-   Responsive Typography
-   レスポンシブなティポグラフィ
+    Responsive Typography
+    レスポンシブなティポグラフィ
 ----------------------------*/
 
 
@@ -1081,8 +1218,8 @@ a{
 }
 
 /*----------------------------
-  Inspiration Bottom - Mobile
-  インスピレーションボトム - モバイル
+    Inspiration Bottom - Mobile
+    インスピレーションボトム - モバイル
 ----------------------------*/
 
 @media (max-width:768px){
@@ -1096,12 +1233,13 @@ a{
   }
   .inspiration-bottom p{
     padding-bottom: 22px;
+    width: 100%;
   }
 }
 
 /*----------------------------
-   Slider Controls - Mobile
-   スライダーコントロール - モバイル
+    Slider Controls - Mobile
+    スライダーコントロール - モバイル
 ----------------------------*/
 
 @media (max-width:768px){
@@ -1112,7 +1250,7 @@ a{
     gap: 38px;
     margin-bottom: 19px;
     margin-top: 32px;
-   
+  
   }
   .indicators {
     display: flex;
@@ -1126,17 +1264,23 @@ a{
 }
 
 /*----------------------------
-   Slider - Mobile
-   スライダー - モバイル
+    Slider - Mobile
+    スライダー - モバイル
 ----------------------------*/
 
 @media (max-width:768px){
   .slide_item p {
+    font-size: 14px;
     position: absolute;
     width: 110px;
     height: 24px;
     z-index: 3;
     letter-spacing: 2.52px;
+    padding-right: 10px;
+  }
+  .slick-slide img{
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
   }
 }
 
@@ -1227,17 +1371,11 @@ a{
     width: 100%;
     border: solid 1px#000;
 }
-.color_scheme{
-    text-align: center;
-    font-size: 20px;
-    margin: 20px 0 10px;
-    letter-spacing: 0.01rem;
-}
 .color_scheme {
     text-align: center;
     font-size: 20px;
     margin: 20px 0 10px;
-    letter-spacing: 0.01rem;
+    letter-spacing: 0.2rem;
 }
 .color_box {
     color: #fff;
@@ -1246,9 +1384,10 @@ a{
     font-weight: 100;
     position: relative;
     line-height: 1.2;
+    font-family: 'Josefin Sans', sans-serif;
 }
 .warm_color1 {
-    background-color: #ad9a88;
+    background-color: #AE8270;
     margin-bottom: 10px;
 }
 .warm_color2 {
@@ -1300,8 +1439,13 @@ a{
         width: 40%;
     }
 }
+@media (max-width:837px) {
+    .color_scheme {
+        letter-spacing: 0.1rem;
+    }
+}
 
-@media (max-width: 767px) {
+@media (max-width:768px) {
     .advantage_top{
         flex-flow: column;
         align-items: start;
@@ -1338,9 +1482,6 @@ a{
     .interior_color img{
         width: 46vw
     }
-    .interior_text{
-        line-height: 1.8;
-    }
     .color_scheme{
         font-size: 18px;
         margin: 15px 0 10px;
@@ -1364,9 +1505,12 @@ a{
   row-gap: 47.9px;
 }
 .consultancy-top_jp {
-  /* border: 1px solid red; */
   display: flex;
   justify-content: space-between;
+  gap: 40px;
+}
+.consultancy-top_jp p{
+  width: 45%;
 }
 .consultancy-img_wrapper {
   /* margin-top: 48px; */
@@ -1396,13 +1540,11 @@ a{
     margin-top: 42px;
     row-gap: 22px;
   }
-
 }
 
-
 /*----------------------------
-   Responsive Typography 
-   レスポンシブなティポグラフィ
+  Responsive Typography 
+  レスポンシブなティポグラフィ
 ----------------------------*/
 
 @media (max-width:768px){
@@ -1436,6 +1578,9 @@ a{
     justify-content: space-between;
     gap: 40px;
   }
+  .consultancy-top_jp p{
+    width: 100%;
+  }
 }
 
 
@@ -1456,6 +1601,9 @@ a{
 }
 .it_right {
   height: max-content;
+}
+.item_img{
+  margin-top: 100px;
 }
 
 .it_right span {
@@ -1496,16 +1644,13 @@ a{
   height: fit-content;
 }
 
-
-
 /* ------------------- */
 /*       MOBILE        */
 /* ------------------- */
 
-
 /*----------------------------
-   Responsive Typography 
-   レスポンシブなティポグラフィ
+    Responsive Typography 
+    レスポンシブなティポグラフィ
 ----------------------------*/
 
 @media (max-width:768px){
@@ -1527,10 +1672,8 @@ a{
 @media (max-width:768px){
   .it_left {
     position: static;
-
   }
 }
-
 
 /*----------------------------
     Wrap- Mobile
@@ -1554,7 +1697,7 @@ a{
     margin-top: 42px;
   }
   .it_right h3 {
-    margin-top: 15px;
+    margin-top: 10px;
   }
   .it_right p {
     margin-top: 35px;
@@ -1565,8 +1708,144 @@ a{
   .item-banner{
     margin-top: 55px !important;
   }
+  .item_img{
+    margin-top: 75px;
+  }
 }
 
+
+/*!***************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/plan.css ***!
+  \***************************************************************************/
+@charset "utf-8";
+#plan{
+    padding: 140px 0;
+    background-color: #F6EEEB;
+}
+.plan_content{
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: start;
+    gap: 100px;
+    margin-top: 60px;
+}
+
+/* slide show */
+.slide_show{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.img-01,.img-02,.img-03{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-01{
+    background-image: url(./images/plan1.jpg);
+    animation: slide-animation-01 15s infinite;
+}
+.img-02{
+    background-image: url(./images/plan2.jpg);
+    animation: slide-animation-02 15s infinite;
+}
+.img-03{
+    background-image: url(./images/plan3.jpg);
+    animation: slide-animation-03 15s infinite;
+}
+@keyframes slide-animation-01 {
+    0% {opacity: 1;}
+    30% {opacity: 1;}
+    40% {opacity: 0;}
+    90% {opacity: 0}
+    100% {opacity: 1;}
+}
+@keyframes slide-animation-02 {
+    0% {opacity: 0;}
+    30% {opacity: 0;}
+    40% {opacity: 1;}
+    60% {opacity: 1;}
+    70% {opacity: 0;}
+    100% {opacity: 0;}
+}
+@keyframes slide-animation-03 {
+    0% {opacity: 0;}
+    60% {opacity: 0;}
+    70% {opacity: 1;}
+    90% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.plan_text_inner{
+    display: flex;
+    flex-flow: column;
+    gap: 25px;
+    margin-top: 35px;
+}
+.plan_text_item{
+    display: flex;
+    align-items: start;
+    gap: 25px;
+    line-height: 2;
+}
+.plan_line{
+    content: "";
+    width: 100%;
+    border-bottom: solid 1px #45484B;
+}
+.plan_text_number{
+    font-size: 65px;
+    color: #C38C80;
+    line-height: 1;
+}
+.plan_text_title{
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.item3{
+    align-items: center;
+}
+
+
+@media (max-width:767px) {
+    #plan{
+        padding: 80px 0;
+    }
+    .plan_content{
+        flex-flow: column;
+        gap: 50px;
+        margin-top: 45px;
+        grid-column: 2;
+    }
+    .slide_show{
+        position: relative;
+        width: 100%;
+        aspect-ratio: 7 / 6;
+    }
+    .plan_text_inner{
+        gap: 20px;
+        margin-top: 25px;
+    }
+    .plan_text_item{
+        flex-flow: column;
+        align-items: center;
+        text-align: center;
+        gap: 0;
+    }
+    .plan_text_number{
+        font-size: 40px;
+    }
+    .plan_text_title{
+        margin-bottom: 0;
+    }
+}
 
 /*!***************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/flow.css ***!
@@ -1587,7 +1866,7 @@ a{
   display: flex;
   flex-flow: column;
   gap: 10px;
-  background-color: #efe3e0;
+  background-color: #E2D0CA;
   padding: 70px 10% 100px 60px;
   width: 65vw;
 }
@@ -1612,12 +1891,7 @@ a{
 .flow_line {
   content: "";
   width: 100%;
-  border-bottom: solid 1px #e1c5bf;
-}
-.flow_line{
-    content: "";
-    width: 100%;
-    border-bottom: solid 1px #E1C5BF;
+  border-bottom: solid 1px #fff;
 }
 
 /* tab */
@@ -1636,11 +1910,11 @@ a{
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .flow_content{
         flex-flow: column;
         gap: 50px;
-        margin: 60px 0 20px
+        margin: 60px 0 40px
     }
     .flow_column{
         padding: 20px 20px 30px;
@@ -1684,6 +1958,7 @@ a{
   gap: 15px;
 }
 .follow_btn p {
+  color: #45484B;
   padding-bottom: 5px;
   border-bottom: solid #000 1px;
   letter-spacing: 2px;
@@ -1712,27 +1987,27 @@ a{
 }
 /* ここまで仮置き */
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .gallery_content{
-        margin: 35px 0 80px;
+      margin: 35px 0 100px;
     }
     .gallery_top{
-        margin-bottom: 40px;
+      margin-bottom: 40px;
     }
     .follow_btn{
-        margin-right: 0;
-        margin-top: 25px;
-        justify-content: end;
+      margin-right: 0;
+      margin-top: 25px;
+      justify-content: end;
     }
     .follow_btn p{
-        font-size: 14px;
+      font-size: 14px;
     }
     /* 仮置きなのでInstagramAPI対応後削除予定 */
     .insta_flex{
-        gap: 10px;
+      gap: 10px;
     }
     .insta_flex a{
-        width: calc(50% - 5px);
+      width: calc(50% - 5px);
     }
     /* ここまで仮置き */
 
@@ -1767,7 +2042,7 @@ a{
   content: "";
   /* width: 100%; */
   height: 1px;
-  background-color: #e1c5bf ;
+  background-color: #E3E3E3 ;
   position: absolute;
   bottom: 0;
 }
@@ -1801,6 +2076,7 @@ a{
   max-height: 300px;
   margin-bottom: 70px;
   animation: fade 500ms ease-in-out;
+  line-height: 2;
 }
 
 .answer {
@@ -1826,7 +2102,8 @@ a{
   }
 }
 .left h3{
-  letter-spacing: 0.8px;
+  line-height: 1.8;
+  letter-spacing: 0.1rem;
 }
 /* ------------------- */
 /*       MOBILE        */
@@ -1837,7 +2114,7 @@ a{
    レスポンシブなティポグラフィ
 ----------------------------*/
 
-@media (max-width:425px){
+@media (max-width:768px){
   .left h3{
     font-size: 18px;
     letter-spacing: 0.72px;
@@ -1849,7 +2126,7 @@ a{
      Chevron Placements
      シェブロンの配置
 ----------------------------*/
-@media (max-width:425px){
+@media (max-width:768px){
   .question {
     display: flex;
     justify-content: space-between;
@@ -1857,6 +2134,7 @@ a{
   } 
   .question img{
     margin-top: 1ch;
+    width: 12px;
   }
 
   .faq[data-question-number="3"]  .question,
@@ -1875,15 +2153,13 @@ a{
     Q の配置
 ----------------------------*/
 
-@media (max-width:425px){
-
+@media (max-width:768px){
   .left {
     margin: 0;
     display: flex;
     align-items: center;
     gap: 23.6px;
   }
-
   .center-q{
     height: 100%;
   }
@@ -1898,11 +2174,275 @@ a{
   }
 }
 
-
+@media (max-width:768px){
+  #faq{
+    padding-bottom: 80px;
+  }
+  .faq{
+    gap: 25px;
+  }
+  .faq-title{
+    margin-bottom: 55px;
+  }
+  .faq.active .answer{
+    margin-bottom: 25px;
+  }
+  .faq-container .faq:not(:first-child){
+    margin-top: 30px;
+  }
+}
 /*!******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/contact.css ***!
   \******************************************************************************/
+#contact{
+    background-color: #E2D0CA;
+    padding-top: 138px;
+    padding-bottom: 144px;
+}
 
+
+.contact-title{
+    margin-bottom: 85px;
+}
+
+.contact-main{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+/*----------------------------
+    Left Side (pc)
+    左側（PC）
+----------------------------*/
+
+.contact-top{
+    width: 40%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+}
+
+.cont-top{
+    grid-column: 1/3;
+}
+.cont-left{
+    /* grid-column: 1/2; */
+    min-height: 294px;
+    min-width: 277px;
+}
+.cont-right{
+    /* grid-column: 2/3; */
+    min-height: 294px;
+    min-width: 237px;
+
+}
+
+.cont-bottom-img{
+    display: flex;
+    gap: 10px;
+}
+
+
+/*----------------------------
+    Right Side (pc)
+    右側（PC）
+----------------------------*/
+
+.contact-bottom{
+    width: 45%;
+}
+
+/*----------------------------
+    Main Content Title
+    メインコンテンツのタイトル
+----------------------------*/
+
+.contact-bottom-title_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-title-left{
+    margin-right: 20px;
+}
+
+.contact-info_heading{
+    border-bottom: 1px solid black;
+    margin-bottom: 11px;
+}
+
+.contact-medium{
+    font-weight: 500;
+}
+
+.contact-closed_title,
+.contact-about_title ,
+.contact-address_title{
+    margin-bottom: 11px;
+}
+
+.contact-bottom_info{
+    /* margin-bottom: 24px; */
+}
+
+/*----------------------------
+    Main Content Descriptions
+    メインコンテンツのタイトル
+----------------------------*/
+.cont-main-desc{
+    line-height: 30px;
+}
+.postal{
+    margin-bottom: 10px;
+}
+
+/*----------------------------
+    Contact Section Buttons
+    Contactnせセクションのボタン
+----------------------------*/
+
+.contact-bottom_btn-container{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    column-gap: 10px;
+    row-gap: 7px;
+}
+
+.contact-bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 7px;
+}
+
+
+.bottom-btn{
+    background-color: white;
+    grid-column: 1/3;
+    display: grid;
+    place-content: center;
+   height: 80px;
+}
+.bottom-btn:hover{
+    cursor: pointer;
+    background-color: #EFE3E0;
+    transition: 0.3s;
+}
+.contact-btn_top{
+    display: grid;
+    place-items: center;
+}
+.contact-btn_top::after{
+    right: 20px;
+    top: 14px;
+}
+.cont-top_black{
+    padding: 7px 82px 9px 82px ;
+}
+
+.cont-bottom-btn_description,
+.cont-bottom-btn_data{
+    text-align: center;
+}
+
+.cont-bottom-btn_data{
+    display: flex;
+    align-items: center;
+}
+
+.tel::before{
+    content: url(./images/tel-icon.png);
+    margin-right: 7px;
+}
+
+/* ------------------- */
+/*       MOBILE        */
+/* ------------------- */
+
+@media (max-width:768px){
+    .contact-main{
+       flex-direction: column;
+    }
+    .contact-title{
+        margin-bottom: 50px;
+    }
+    #contact{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+
+
+/*----------------------------------------
+    Left Side  ==> Top Side (mobile)
+     左側 ==> 上側（モバイル）
+------------------------------------------*/
+ @media (max-width:768px){
+    .contact-main{
+        /* border: 1px solid red; */
+    }
+    .contact-top{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 10px;
+        margin-bottom: 48.6px;
+    }
+    
+    .cont-top{
+        grid-column: 1/3;
+    }
+    .cont-left{
+        min-height: 180px;
+        min-width: 190px;
+    }
+    .cont-right{
+        /* grid-column: 2/3; */
+        min-height: 180px;
+        min-width: 150px;
+    
+    }
+    
+    .cont-bottom-img{
+        display: flex;
+        gap: 10px;
+    }
+    
+    
+ }
+
+ /*----------------------------------------
+    Right Side  ==> Bottom Side (mobile)
+    右側 ==> 下側（モバイル）
+------------------------------------------*/
+
+
+@media (max-width:768px){
+    .contact-bottom{
+        width: 100%;
+        /* border: 1px solid red; */
+    }
+    .contact-bottom-title_container{
+        display: flex;
+        justify-content: flex-start;
+        width: 51.28vw;
+        /* border: 1px solid red; */
+    }
+    .cont-top_black{
+        padding: 7px 48.5px 9px 49.5px ;
+    }
+}
+
+
+@media(max-width:500px){
+    .cont-title-left{
+        font-size: 14px;
+    }
+    .cont-title-right{
+        font-size: 16px;
+    }
+}
 /*!***************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/form.css ***!
   \***************************************************************************/
@@ -1915,8 +2455,9 @@ a{
 
 footer{
     color: #fff;
-    background-color: #C38C80;
+    background-color: #45484B;
     padding: 80px 0;
+    letter-spacing: 0.1rem;
 }
 footer ul{
     list-style: none;
@@ -1932,6 +2473,7 @@ footer ul{
 }
 .footer_logo{
     margin-bottom: 50px;
+    width: 88px;
 }
 .footer_menu{
     min-width: 260px;
@@ -1952,6 +2494,10 @@ footer ul{
     flex-flow: column;
     gap: 20px;
 }
+.instagram_arrow{
+    display: inline-block;
+    width: 16px;
+}
 .copy{
     display: flex;
     align-items: center;
@@ -1970,24 +2516,23 @@ footer ul{
     padding-top: 3px;
     color: #fff;
 }
-
 footer a{
     color: #fff;
 }
 footer a:hover{
-    color: #3E3A39;
+    color: #E2D0CA;
     transition: 0.3s;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     footer{
-        padding: 70px 0 50px;
+        padding: 60px 0;
     }
     .footer_top{
         margin-bottom: 40px;
     }
     .footer_logo{
-        width: 60px;
+        width: 87px;
         margin-bottom: 25px;
     }
     .copy{
@@ -1995,9 +2540,11 @@ footer a:hover{
     }
     .copy p{
         font-size: 12px;
+        letter-spacing: normal;
     }
     .totop{
         gap: 10px;
+        letter-spacing: 0.05rem;
     }
 }
 
@@ -2011,7 +2558,6 @@ footer a:hover{
 
 .banner {
   width: 100%;
-  height: 380px;
   background: url(./images/banner.jpg);
   background-size: cover;
   overflow: hidden;
@@ -2026,7 +2572,7 @@ footer a:hover{
   margin: 0;
   padding: 0;
   margin-left: 23px;
-  margin-top: 74.3px;
+  margin: 74.3px 0;
 }
 
 /*----------------------------
@@ -2075,8 +2621,8 @@ footer a:hover{
 /* ------------------- */
 
 /*----------------------------
-   Responsive Typography 
-   レスポンシブなティポグラフィ
+    Responsive Typography 
+    レスポンシブなティポグラフィ
 ----------------------------*/
 
 @media (max-width: 466px) {
@@ -2102,7 +2648,6 @@ footer a:hover{
 @media (max-width: 466px) {
   .banner {
     width: 100%;
-    height: 400px;
     background: url(./images/banner_sp.jpg);
     background-size: cover;
     overflow: hidden;
@@ -2115,11 +2660,14 @@ footer a:hover{
     バナーボタン  - モバイル
 ----------------------------*/
 
-@media (max-width: 466px) {
+@media (max-width: 768px) {
   .banner-btn_wrapper {
+    width: 70%;
+    margin: auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    justify-content: center;
   }
   .banner_book {
     padding: 12.06px 83.65px 13.9px 84.35px;
@@ -2134,7 +2682,6 @@ footer a:hover{
   .banner-btn_text{
     width: fit-content;
     height: fit-content;
-    /* border: 1px solid red; */
   }
 }
 
@@ -2143,12 +2690,13 @@ footer a:hover{
     バナーのラッパー  - モバイル
 ----------------------------*/
 
-@media (max-width: 466px) {
+@media (max-width: 768px) {
   .banner-wrapper {
     margin: 0;
     padding: 0;
-    padding-top: 62.5px;
+    padding: 62.5px 0;
     padding-bottom: 60px;
+    text-align: center;
   }
 }
 
@@ -2157,9 +2705,8 @@ footer a:hover{
    バナーその他 - モバイル
 ----------------------------*/
 
-@media (max-width: 466px) {
+@media (max-width: 767px) {
   .banner_title {
-    /* border: 1px solid red; */
     display: grid;
     justify-content: center;
     align-items: center;
@@ -2170,15 +2717,12 @@ footer a:hover{
     display: grid;
     justify-content: center;
     align-items: center;
+    margin-bottom: 35px;
   }
-}
-
-@media(max-width:768px){
   .banner {
     margin-top: 80px;
   }
 }
-
 
 
 

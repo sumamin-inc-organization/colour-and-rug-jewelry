@@ -9772,10 +9772,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/assets/css/newplan.css":
-/*!************************************!*\
-  !*** ./src/assets/css/newplan.css ***!
-  \************************************/
+/***/ "./src/assets/css/plan.css":
+/*!*********************************!*\
+  !*** ./src/assets/css/plan.css ***!
+  \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -9877,13 +9877,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_css_header_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/css/header.css */ "./src/assets/css/header.css");
 /* harmony import */ var _assets_css_nav_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/css/nav.css */ "./src/assets/css/nav.css");
 /* harmony import */ var _assets_css_keyvisual_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/css/keyvisual.css */ "./src/assets/css/keyvisual.css");
-/* harmony import */ var _assets_css_newplan_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/css/newplan.css */ "./src/assets/css/newplan.css");
-/* harmony import */ var _assets_css_service_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/css/service.css */ "./src/assets/css/service.css");
-/* harmony import */ var _assets_css_recommended_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/css/recommended.css */ "./src/assets/css/recommended.css");
-/* harmony import */ var _assets_css_inspiration_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./assets/css/inspiration.css */ "./src/assets/css/inspiration.css");
-/* harmony import */ var _assets_css_advantage_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./assets/css/advantage.css */ "./src/assets/css/advantage.css");
-/* harmony import */ var _assets_css_consultancy_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./assets/css/consultancy.css */ "./src/assets/css/consultancy.css");
-/* harmony import */ var _assets_css_item_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./assets/css/item.css */ "./src/assets/css/item.css");
+/* harmony import */ var _assets_css_service_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/css/service.css */ "./src/assets/css/service.css");
+/* harmony import */ var _assets_css_recommended_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/css/recommended.css */ "./src/assets/css/recommended.css");
+/* harmony import */ var _assets_css_inspiration_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/css/inspiration.css */ "./src/assets/css/inspiration.css");
+/* harmony import */ var _assets_css_advantage_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./assets/css/advantage.css */ "./src/assets/css/advantage.css");
+/* harmony import */ var _assets_css_consultancy_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./assets/css/consultancy.css */ "./src/assets/css/consultancy.css");
+/* harmony import */ var _assets_css_item_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./assets/css/item.css */ "./src/assets/css/item.css");
+/* harmony import */ var _assets_css_plan_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./assets/css/plan.css */ "./src/assets/css/plan.css");
 /* harmony import */ var _assets_css_flow_css__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./assets/css/flow.css */ "./src/assets/css/flow.css");
 /* harmony import */ var _assets_css_gallery_css__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./assets/css/gallery.css */ "./src/assets/css/gallery.css");
 /* harmony import */ var _assets_css_faq_css__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./assets/css/faq.css */ "./src/assets/css/faq.css");
@@ -9979,7 +9979,6 @@ faqs.forEach((faq) => {
     faq.classList.toggle("active");
   });
 });
-
 
 /*----------------------------
     Company Name Animations
@@ -10132,9 +10131,7 @@ gallerytl
   .from(".gallery-eng", { x: 50, opacity: 0, duration: 1 })
   .from(".gallery-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8");
 
-
-
-    /*----------------------------
+/*----------------------------
     FAQ Animations
     FAQ アニメーション
 ----------------------------*/
@@ -10149,13 +10146,30 @@ let faqtl = gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.timeline({
 });
 
 faqtl
-      .from(".faq-eng", { x: -50, opacity: 0, duration: 1 })  
-      .from(".faq-jp", { x: 50, opacity: 0, duration: 1 }, "-=0.8")
-      .to(".faq", { "--beforeAnimation": "100%", duration: 5 });
+  .from(".faq-eng", { x: -50, opacity: 0, duration: 1 })
+  .from(".faq-jp", { x: 50, opacity: 0, duration: 1 }, "-=0.8")
+  .to(".faq", { "--beforeAnimation": "100%", duration: 5 });
 
+/*----------------------------
+    CONTACT Animations
+    CONTACT アニメーション
+----------------------------*/
+
+let conttl = gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.timeline({
+  scrollTrigger: {
+    trigger: "#contact",
+    start: "-=500px",
+    scrub: false,
+    // markers:true
+  },
+});
+
+conttl
+  .from(".contact-eng", { x: 50, opacity: 0, duration: 1 })
+  .from(".contact-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8");
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.4fb47aeb814516619254.js.map
+//# sourceMappingURL=main.cbbc2d0898370b39606e.js.map
