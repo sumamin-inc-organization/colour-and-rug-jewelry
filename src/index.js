@@ -85,7 +85,6 @@ faqs.forEach((faq) => {
   });
 });
 
-
 /*----------------------------
     Company Name Animations
     Company Name  アニメーション
@@ -237,9 +236,7 @@ gallerytl
   .from(".gallery-eng", { x: 50, opacity: 0, duration: 1 })
   .from(".gallery-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8");
 
-
-
-    /*----------------------------
+/*----------------------------
     FAQ Animations
     FAQ アニメーション
 ----------------------------*/
@@ -254,7 +251,26 @@ let faqtl = gsap.timeline({
 });
 
 faqtl
-      .from(".faq-eng", { x: -50, opacity: 0, duration: 1 })  
-      .from(".faq-jp", { x: 50, opacity: 0, duration: 1 }, "-=0.8")
-      .to(".faq", { "--beforeAnimation": "100%", duration: 5 });
+  .from(".faq-eng", { x: -50, opacity: 0, duration: 1 })
+  .from(".faq-jp", { x: 50, opacity: 0, duration: 1 }, "-=0.8")
+  .to(".faq", { "--beforeAnimation": "100%", duration: 5 });
 
+
+  /*----------------------------
+    CONTACT Animations
+    CONTACT アニメーション
+----------------------------*/
+
+
+let conttl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#contact",
+    start: "-=500px",
+    scrub: false,
+    // markers:true
+  },
+});
+
+conttl
+  .from(".contact-eng", { x: 50, opacity: 0, duration: 1 })
+  .from(".contact-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8")
