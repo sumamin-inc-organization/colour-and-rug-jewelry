@@ -65,7 +65,7 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 .warm_color1 {
-    background-color: #ad9a88;
+    background-color: #AE8270;
     margin-bottom: 10px;
 }
 .warm_color2 {
@@ -159,9 +159,6 @@
     }
     .interior_color img{
         width: 46vw
-    }
-    .interior_text{
-        line-height: 1.8;
     }
     .color_scheme{
         font-size: 18px;
