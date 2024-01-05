@@ -127,7 +127,7 @@
     height: 30px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   #service{
     padding: 80px 0;
   }

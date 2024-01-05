@@ -58,7 +58,7 @@
     width: 41vw;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .kv_top{
         display: block;
         position: relative;
@@ -105,7 +105,7 @@
         margin-bottom: 45px;
     }
     .kv_bottom .kv_02{
-        width: 280px;
+        width: 72vw;
         height: 280px;
         object-fit: cover;
     }

@@ -381,9 +381,11 @@ a{
 }
 .font-zenkaku {
   font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 100;
 }
 .font-zenold {
   font-family: "Zen Old Mincho", serif;
+  font-weight: 100;
 }
 .font-bellefair {
   font-family: "Bellefair", serif;
@@ -1342,17 +1344,11 @@ Recommended Bottom
     width: 100%;
     border: solid 1px#000;
 }
-.color_scheme{
-    text-align: center;
-    font-size: 20px;
-    margin: 20px 0 10px;
-    letter-spacing: 0.01rem;
-}
 .color_scheme {
     text-align: center;
     font-size: 20px;
     margin: 20px 0 10px;
-    letter-spacing: 0.01rem;
+    letter-spacing: 0.2rem;
 }
 .color_box {
     color: #fff;

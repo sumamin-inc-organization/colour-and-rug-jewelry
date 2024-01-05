@@ -103,7 +103,7 @@ Recommended Bottom
 --------------------------*/
 
 
-@media (max-width:767px){
+@media (max-width:768px){
   .rc_top {
     display: grid;
     grid-template-columns: 1fr 90% 1fr;
@@ -143,7 +143,7 @@ Recommended Bottom
 /*---------------------------
   Recommended Bottom - Mobile
 -----------------------------*/
-@media (max-width:767px){
+@media (max-width:768px){
 
   #recommended{
     display: block;
@@ -196,7 +196,7 @@ Recommended Bottom
 }
 
 @media(max-width:600px){
- .rc_fs li{
+  .rc_fs li{
     font-size: 16px;
     letter-spacing: 0;
   }
@@ -207,7 +207,7 @@ Recommended Bottom
 
 }
 
-@media(min-width:600px) and (max-width:767px){
+@media(min-width:600px) and (max-width:768px){
   .rc_fs{
 
     padding-left: 30px;

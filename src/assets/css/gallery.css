@@ -43,7 +43,7 @@
 }
 /* ここまで仮置き */
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .gallery_content{
         margin: 35px 0 80px;
     }
