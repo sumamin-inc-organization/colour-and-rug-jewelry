@@ -107,10 +107,8 @@ Recommended Bottom
   .rc_top {
     display: grid;
     grid-template-columns: 1fr 90% 1fr;
-    /* border: 1px solid black; */
   }
   .rec-top_wrapper{
-    /* border: 1px solid green; */
     grid-column: 2;
   }
   .rc_top p {
@@ -119,7 +117,6 @@ Recommended Bottom
   align-items: center;
   padding: 0;
   line-height: 30px;
-  padding-left: 10.26vw; 
   width: 95%;
   grid-column: 2;
   }
@@ -129,14 +126,8 @@ Recommended Bottom
   }
 
   /* メインのグリッドとモバイルセクションのデザインが合わないため、パディングを追加しました。 */
-  .rc_top h2 {
+  .rc_top h2,.rc_top span,.rc_top p {
     padding-left: 2.82vw;
-  }
-  .rc_top span {
-    padding-left: 2.82vw;
-  }
-  .rc_top p {
-    padding-left: 10.26vw; 
   }
 }
 
@@ -151,6 +142,7 @@ Recommended Bottom
   .rc_bottom{
     display: grid;
     grid-template-columns: 1fr 90% 1fr;
+    margin-top: 60px;
   }
 
   .rc_bottom img {
@@ -209,7 +201,6 @@ Recommended Bottom
 
 @media(min-width:600px) and (max-width:768px){
   .rc_fs{
-
     padding-left: 30px;
     padding-top: 100px;
   }
