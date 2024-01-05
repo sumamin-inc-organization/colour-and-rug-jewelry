@@ -1,6 +1,16 @@
+.service-container{
+  background-image: url(../images/service/newplan_bkg.jpg);
+  background-attachment: fixed;
+  -moz-background-size: 100% 100%;
+-webkit-background-size: 100% 100%;
+-o-background-size: 100% 100%;
+background-size: 100% 100%;
+}
 #service {
   background-color: #E2D0CA;
+  background-color: rgba(226, 208, 202, 0.8);
   padding: 110px 0;
+  padding-top: 128px;
   text-align: center;
 }
 
@@ -160,8 +170,6 @@
 }
 
 #newplan{
-  border: 1px solid red;
-  grid-column: 2;
   height: 100dvh;;
   display: grid;
   place-content: center;
