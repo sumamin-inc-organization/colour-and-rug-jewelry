@@ -1,10 +1,15 @@
 .service-container{
   background-image: url(../images/service/newplan_bkg.jpg);
   background-attachment: fixed;
-  -moz-background-size: 100% 100%;
+  /* -moz-background-size: 100% 100%;
 -webkit-background-size: 100% 100%;
 -o-background-size: 100% 100%;
-background-size: 100% 100%;
+background-size: 100% 100%; */
+
+-moz-background-size: 100vw 100vh;
+-webkit-background-size: 100vw 100vh;
+-o-background-size: 100vw 100vh;
+background-size: 100vw 100vh;
 }
 
 
@@ -168,6 +173,9 @@ background-size: 100% 100%;
   .plus{
     height: 40px;
     margin-top: 30px;
+  }
+  .service-container{
+    background-image: url(../images/service/newplan_bkg-sp.jpg);
   }
 }
 
