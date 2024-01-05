@@ -170,7 +170,7 @@
     インスピレーションボトム - モバイル
 ----------------------------*/
 
-@media (max-width:767px){
+@media (max-width:768px){
   .inspiration-bottom {
     display: flex;
     flex-direction: column;
@@ -190,7 +190,7 @@
     スライダーコントロール - モバイル
 ----------------------------*/
 
-@media (max-width:767px){
+@media (max-width:768px){
   .slider-controls {
     display: flex;
     justify-content: flex-end;
@@ -216,7 +216,7 @@
     スライダー - モバイル
 ----------------------------*/
 
-@media (max-width:767px){
+@media (max-width:768px){
   .slide_item p {
     font-size: 14px;
     position: absolute;
@@ -237,7 +237,7 @@
     マージンとパディング - モバイル
 ----------------------------*/
 
-@media (max-width:767px){
+@media (max-width:768px){
   .inspiration-eng {
     margin-bottom: 28px;
   }

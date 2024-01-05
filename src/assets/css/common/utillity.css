@@ -117,7 +117,7 @@ a{
   display: block;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .mobile-only {
     display: block;
   }
@@ -173,7 +173,7 @@ a{
   mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .company_name{
     font-size: 68px;
     color: #F5EEE9;
@@ -190,7 +190,7 @@ a{
     レスポンシブ
 ----------------------------*/
 
-/* スクリーン幅が767px以下のデバイスでのみ表示 */
+/* スクリーン幅が767x以下のデバイスでのみ表示 */
 .mobile-only{
     display: none;
 }
@@ -202,7 +202,7 @@ a{
 .sp_425{
   display: none;
 }
-@media(max-width:767px){
+@media(max-width:768px){
     .mobile-only{
         display: block;
     }

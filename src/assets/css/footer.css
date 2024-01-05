@@ -3,8 +3,9 @@
 
 footer{
     color: #fff;
-    background-color: #C38C80;
+    background-color: #3E3A39;
     padding: 80px 0;
+    letter-spacing: 0.1rem;
 }
 footer ul{
     list-style: none;
@@ -20,6 +21,7 @@ footer ul{
 }
 .footer_logo{
     margin-bottom: 50px;
+    width: 88px;
 }
 .footer_menu{
     min-width: 260px;
@@ -40,6 +42,10 @@ footer ul{
     flex-flow: column;
     gap: 20px;
 }
+.instagram_arrow{
+    display: inline-block;
+    width: 16px;
+}
 .copy{
     display: flex;
     align-items: center;
@@ -58,16 +64,15 @@ footer ul{
     padding-top: 3px;
     color: #fff;
 }
-
 footer a{
     color: #fff;
 }
 footer a:hover{
-    color: #3E3A39;
+    color: #E2D0CA;
     transition: 0.3s;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     footer{
         padding: 70px 0 50px;
     }

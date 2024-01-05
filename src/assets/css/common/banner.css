@@ -4,7 +4,6 @@
 
 .banner {
   width: 100%;
-  height: 380px;
   background: url(../../images/common/banner.jpg);
   background-size: cover;
   overflow: hidden;
@@ -19,7 +18,7 @@
   margin: 0;
   padding: 0;
   margin-left: 23px;
-  margin-top: 74.3px;
+  margin: 74.3px 0;
 }
 
 /*----------------------------
@@ -95,7 +94,6 @@
 @media (max-width: 466px) {
   .banner {
     width: 100%;
-    height: 400px;
     background: url(../../images/common/banner_sp.jpg);
     background-size: cover;
     overflow: hidden;
@@ -108,13 +106,14 @@
     バナーボタン  - モバイル
 ----------------------------*/
 
-@media (max-width: 466px) {
+@media (max-width: 768px) {
   .banner-btn_wrapper {
     width: 70%;
     margin: auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    justify-content: center;
   }
   .banner_book {
     padding: 12.06px 83.65px 13.9px 84.35px;
@@ -129,7 +128,6 @@
   .banner-btn_text{
     width: fit-content;
     height: fit-content;
-    /* border: 1px solid red; */
   }
 }
 
@@ -138,12 +136,13 @@
     バナーのラッパー  - モバイル
 ----------------------------*/
 
-@media (max-width: 466px) {
+@media (max-width: 768px) {
   .banner-wrapper {
     margin: 0;
     padding: 0;
-    padding-top: 62.5px;
+    padding: 62.5px 0;
     padding-bottom: 60px;
+    text-align: center;
   }
 }
 
@@ -152,7 +151,7 @@
    バナーその他 - モバイル
 ----------------------------*/
 
-@media (max-width: 466px) {
+@media (max-width: 767px) {
   .banner_title {
     display: grid;
     justify-content: center;
@@ -166,14 +165,10 @@
     align-items: center;
     margin-bottom: 35px;
   }
-}
-
-@media(max-width:768px){
   .banner {
     margin-top: 80px;
   }
 }
-
 
 
 
