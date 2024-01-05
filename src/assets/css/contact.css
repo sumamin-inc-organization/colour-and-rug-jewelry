@@ -59,7 +59,7 @@
 
 /*----------------------------
     Main Content Title
-    
+    メインコンテンツのタイトル
 ----------------------------*/
 
 .contact-bottom-title_container{
@@ -86,3 +86,20 @@
 .contact-address_title{
     margin-bottom: 11px;
 }
+
+.contact-bottom_info{
+    margin-bottom: 24px;
+}
+
+/*----------------------------
+    Main Content Descriptions
+    メインコンテンツのタイトル
+----------------------------*/
+
+.postal{
+    margin-bottom: 10px;
+}
+
+
+
+
