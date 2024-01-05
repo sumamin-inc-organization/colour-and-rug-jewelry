@@ -173,26 +173,24 @@
 
 
 /*----------------------------------------
-    Right Side  ==> Bottom Side (mobile)
-    右側 ==> 下側（モバイル）
+    Left Side  ==> Top Side (mobile)
+     左側 ==> 上側（モバイル）
 ------------------------------------------*/
  @media (max-width:768px){
     .contact-main{
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
     .contact-top{
-        /* width: 100%; */
         display: grid;
         grid-template-columns: 1fr 1fr;
         row-gap: 10px;
-        /* border: 1px solid red; */
+        margin-bottom: 48.6px;
     }
     
     .cont-top{
         grid-column: 1/3;
     }
     .cont-left{
-        /* grid-column: 1/2; */
         min-height: 180px;
         min-width: 190px;
     }
@@ -210,3 +208,22 @@
     
     
  }
+
+ /*----------------------------------------
+    Right Side  ==> Bottom Side (mobile)
+    右側 ==> 下側（モバイル）
+------------------------------------------*/
+
+
+@media (max-width:768pc){
+    .contact-bottom{
+        width: 100%;
+        /* border: 1px solid red; */
+    }
+    .contact-bottom-title_container{
+        display: flex;
+        justify-content: flex-start;
+        width: 51.28vw;
+        /* border: 1px solid red; */
+    }
+}
