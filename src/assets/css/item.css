@@ -12,6 +12,9 @@
 .it_right {
   height: max-content;
 }
+.item_img{
+  margin-top: 100px;
+}
 
 .it_right span {
   display: block;
@@ -51,16 +54,13 @@
   height: fit-content;
 }
 
-
-
 /* ------------------- */
 /*       MOBILE        */
 /* ------------------- */
 
-
 /*----------------------------
-   Responsive Typography 
-   レスポンシブなティポグラフィ
+    Responsive Typography 
+    レスポンシブなティポグラフィ
 ----------------------------*/
 
 @media (max-width:768px){

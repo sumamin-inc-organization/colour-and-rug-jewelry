@@ -15,6 +15,7 @@
   gap: 15px;
 }
 .follow_btn p {
+  color: #45484B;
   padding-bottom: 5px;
   border-bottom: solid #000 1px;
   letter-spacing: 2px;
@@ -45,25 +46,25 @@
 
 @media (max-width: 768px) {
     .gallery_content{
-        margin: 35px 0 80px;
+      margin: 35px 0 80px;
     }
     .gallery_top{
-        margin-bottom: 40px;
+      margin-bottom: 40px;
     }
     .follow_btn{
-        margin-right: 0;
-        margin-top: 25px;
-        justify-content: end;
+      margin-right: 0;
+      margin-top: 25px;
+      justify-content: end;
     }
     .follow_btn p{
-        font-size: 14px;
+      font-size: 14px;
     }
     /* 仮置きなのでInstagramAPI対応後削除予定 */
     .insta_flex{
-        gap: 10px;
+      gap: 10px;
     }
     .insta_flex a{
-        width: calc(50% - 5px);
+      width: calc(50% - 5px);
     }
     /* ここまで仮置き */
 

@@ -236,7 +236,7 @@ a{
   display: block;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .mobile-only {
     display: block;
   }
@@ -292,7 +292,7 @@ a{
   mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .company_name{
     font-size: 68px;
     color: #F5EEE9;
@@ -309,7 +309,7 @@ a{
     レスポンシブ
 ----------------------------*/
 
-/* スクリーン幅が767px以下のデバイスでのみ表示 */
+/* スクリーン幅が767x以下のデバイスでのみ表示 */
 .mobile-only{
     display: none;
 }
@@ -321,7 +321,7 @@ a{
 .sp_425{
   display: none;
 }
-@media(max-width:767px){
+@media(max-width:768px){
     .mobile-only{
         display: block;
     }
@@ -381,11 +381,11 @@ a{
 }
 .font-zenkaku {
   font-family: "Zen Kaku Gothic New", sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .font-zenold {
   font-family: "Zen Old Mincho", serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .font-bellefair {
   font-family: "Bellefair", serif;
@@ -437,6 +437,7 @@ a{
 .fs-136 {
   font-size: 136px;
 }
+
 /*----------------------------
     Font Colors / フォントの色"
   ----------------------------*/
@@ -472,6 +473,7 @@ a{
   letter-spacing: 0.15rem;
   margin-top: 30px;
 }
+
 @media (max-width: 767px) {
   .sec_title{
     font-size: 22px;
@@ -504,7 +506,7 @@ a{
   }
   /* PC     -> 16px 
    mobile -> 14px */
-   .sec_title_en {
+  .sec_title_en {
     font-size: 14px;
   }
 }
@@ -580,7 +582,7 @@ a{
     width: 41vw;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .kv_top{
         display: block;
         position: relative;
@@ -627,7 +629,7 @@ a{
         margin-bottom: 45px;
     }
     .kv_bottom .kv_02{
-        width: 280px;
+        width: 72vw;
         height: 280px;
         object-fit: cover;
     }
@@ -640,9 +642,18 @@ a{
 /*!******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/service.css ***!
   \******************************************************************************/
+.service-container{
+  background-image: url(./images/newplan_bkg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center top;
+}
+
 #service {
   background-color: #E2D0CA;
+  background-color: rgba(226, 208, 202, 0.8);
   padding: 110px 0;
+  padding-top: 128px;
   text-align: center;
 }
 
@@ -650,6 +661,7 @@ a{
   line-height: 2.5;
   letter-spacing: 0.1rem;
   margin-top: 65px;
+  color: black;
 }
 
 .service_flex {
@@ -769,7 +781,8 @@ a{
     height: 30px;
   }
 }
-@media (max-width: 767px) {
+
+@media (max-width: 768px) {
   #service{
     padding: 80px 0;
   }
@@ -777,9 +790,9 @@ a{
     display: block;
     align-items: center;
   }
-.service_item img{
-  width: 230px;
-}
+  .service_item img{
+    width: 230px;
+  }
   .service_item h3{
     letter-spacing: 0.2rem;
     font-size: 29px;
@@ -799,6 +812,19 @@ a{
     height: 40px;
     margin-top: 30px;
   }
+  .service-container{
+    background-image: url(./images/newplan_bkg-sp.jpg);
+  }
+}
+
+#newplan{
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.decor-div{
+  grid-column: 2;
 }
 /*!**********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/recommended.css ***!
@@ -908,7 +934,7 @@ Recommended Bottom
 --------------------------*/
 
 
-@media (max-width:767px){
+@media (max-width:768px){
   .rc_top {
     display: grid;
     grid-template-columns: 1fr 90% 1fr;
@@ -948,7 +974,7 @@ Recommended Bottom
 /*---------------------------
   Recommended Bottom - Mobile
 -----------------------------*/
-@media (max-width:767px){
+@media (max-width:768px){
 
   #recommended{
     display: block;
@@ -1001,7 +1027,7 @@ Recommended Bottom
 }
 
 @media(max-width:600px){
- .rc_fs li{
+  .rc_fs li{
     font-size: 16px;
     letter-spacing: 0;
   }
@@ -1012,7 +1038,7 @@ Recommended Bottom
 
 }
 
-@media(min-width:600px) and (max-width:767px){
+@media(min-width:600px) and (max-width:768px){
   .rc_fs{
 
     padding-left: 30px;
@@ -1195,7 +1221,7 @@ Recommended Bottom
     インスピレーションボトム - モバイル
 ----------------------------*/
 
-@media (max-width:767px){
+@media (max-width:768px){
   .inspiration-bottom {
     display: flex;
     flex-direction: column;
@@ -1215,7 +1241,7 @@ Recommended Bottom
     スライダーコントロール - モバイル
 ----------------------------*/
 
-@media (max-width:767px){
+@media (max-width:768px){
   .slider-controls {
     display: flex;
     justify-content: flex-end;
@@ -1241,7 +1267,7 @@ Recommended Bottom
     スライダー - モバイル
 ----------------------------*/
 
-@media (max-width:767px){
+@media (max-width:768px){
   .slide_item p {
     font-size: 14px;
     position: absolute;
@@ -1262,7 +1288,7 @@ Recommended Bottom
     マージンとパディング - モバイル
 ----------------------------*/
 
-@media (max-width:767px){
+@media (max-width:768px){
   .inspiration-eng {
     margin-bottom: 28px;
   }
@@ -1412,8 +1438,13 @@ Recommended Bottom
         width: 40%;
     }
 }
+@media (max-width:837px) {
+    .color_scheme {
+        letter-spacing: 0.1rem;
+    }
+}
 
-@media (max-width: 767px) {
+@media (max-width:768px) {
     .advantage_top{
         flex-flow: column;
         align-items: start;
@@ -1511,13 +1542,11 @@ Recommended Bottom
     margin-top: 42px;
     row-gap: 22px;
   }
-
 }
 
-
 /*----------------------------
-   Responsive Typography 
-   レスポンシブなティポグラフィ
+  Responsive Typography 
+  レスポンシブなティポグラフィ
 ----------------------------*/
 
 @media (max-width:768px){
@@ -1550,6 +1579,9 @@ Recommended Bottom
     flex-direction: column;
     justify-content: space-between;
     gap: 40px;
+  }
+  .consultancy-top_jp p{
+    width: 100%;
   }
 }
 
@@ -1751,7 +1783,7 @@ Recommended Bottom
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .flow_content{
         flex-flow: column;
         gap: 50px;
@@ -1799,6 +1831,7 @@ Recommended Bottom
   gap: 15px;
 }
 .follow_btn p {
+  color: #45484B;
   padding-bottom: 5px;
   border-bottom: solid #000 1px;
   letter-spacing: 2px;
@@ -1827,27 +1860,27 @@ Recommended Bottom
 }
 /* ここまで仮置き */
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .gallery_content{
-        margin: 35px 0 80px;
+      margin: 35px 0 80px;
     }
     .gallery_top{
-        margin-bottom: 40px;
+      margin-bottom: 40px;
     }
     .follow_btn{
-        margin-right: 0;
-        margin-top: 25px;
-        justify-content: end;
+      margin-right: 0;
+      margin-top: 25px;
+      justify-content: end;
     }
     .follow_btn p{
-        font-size: 14px;
+      font-size: 14px;
     }
     /* 仮置きなのでInstagramAPI対応後削除予定 */
     .insta_flex{
-        gap: 10px;
+      gap: 10px;
     }
     .insta_flex a{
-        width: calc(50% - 5px);
+      width: calc(50% - 5px);
     }
     /* ここまで仮置き */
 
@@ -2030,8 +2063,9 @@ Recommended Bottom
 
 footer{
     color: #fff;
-    background-color: #C38C80;
+    background-color: #3E3A39;
     padding: 80px 0;
+    letter-spacing: 0.1rem;
 }
 footer ul{
     list-style: none;
@@ -2047,6 +2081,7 @@ footer ul{
 }
 .footer_logo{
     margin-bottom: 50px;
+    width: 88px;
 }
 .footer_menu{
     min-width: 260px;
@@ -2067,6 +2102,10 @@ footer ul{
     flex-flow: column;
     gap: 20px;
 }
+.instagram_arrow{
+    display: inline-block;
+    width: 16px;
+}
 .copy{
     display: flex;
     align-items: center;
@@ -2085,16 +2124,15 @@ footer ul{
     padding-top: 3px;
     color: #fff;
 }
-
 footer a{
     color: #fff;
 }
 footer a:hover{
-    color: #3E3A39;
+    color: #E2D0CA;
     transition: 0.3s;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     footer{
         padding: 70px 0 50px;
     }
@@ -2126,7 +2164,6 @@ footer a:hover{
 
 .banner {
   width: 100%;
-  height: 380px;
   background: url(./images/banner.jpg);
   background-size: cover;
   overflow: hidden;
@@ -2141,7 +2178,7 @@ footer a:hover{
   margin: 0;
   padding: 0;
   margin-left: 23px;
-  margin-top: 74.3px;
+  margin: 74.3px 0;
 }
 
 /*----------------------------
@@ -2217,7 +2254,6 @@ footer a:hover{
 @media (max-width: 466px) {
   .banner {
     width: 100%;
-    height: 400px;
     background: url(./images/banner_sp.jpg);
     background-size: cover;
     overflow: hidden;
@@ -2230,13 +2266,14 @@ footer a:hover{
     バナーボタン  - モバイル
 ----------------------------*/
 
-@media (max-width: 466px) {
+@media (max-width: 768px) {
   .banner-btn_wrapper {
     width: 70%;
     margin: auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    justify-content: center;
   }
   .banner_book {
     padding: 12.06px 83.65px 13.9px 84.35px;
@@ -2251,7 +2288,6 @@ footer a:hover{
   .banner-btn_text{
     width: fit-content;
     height: fit-content;
-    /* border: 1px solid red; */
   }
 }
 
@@ -2260,12 +2296,13 @@ footer a:hover{
     バナーのラッパー  - モバイル
 ----------------------------*/
 
-@media (max-width: 466px) {
+@media (max-width: 768px) {
   .banner-wrapper {
     margin: 0;
     padding: 0;
-    padding-top: 62.5px;
+    padding: 62.5px 0;
     padding-bottom: 60px;
+    text-align: center;
   }
 }
 
@@ -2274,7 +2311,7 @@ footer a:hover{
    バナーその他 - モバイル
 ----------------------------*/
 
-@media (max-width: 466px) {
+@media (max-width: 767px) {
   .banner_title {
     display: grid;
     justify-content: center;
@@ -2288,14 +2325,10 @@ footer a:hover{
     align-items: center;
     margin-bottom: 35px;
   }
-}
-
-@media(max-width:768px){
   .banner {
     margin-top: 80px;
   }
 }
-
 
 
 
