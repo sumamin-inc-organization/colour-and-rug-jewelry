@@ -26,13 +26,18 @@
 }
 .font-zenkaku {
   font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 100;
 }
 .font-zenold {
   font-family: "Zen Old Mincho", serif;
+  font-weight: 100;
 }
 .font-bellefair {
   font-family: "Bellefair", serif;
   font-weight: 400;
+}
+.font-josefin {
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 /*----------------------------

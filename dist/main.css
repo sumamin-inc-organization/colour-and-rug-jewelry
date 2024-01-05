@@ -389,6 +389,9 @@ a{
   font-family: "Bellefair", serif;
   font-weight: 400;
 }
+.font-josefin {
+  font-family: 'Josefin Sans', sans-serif;
+}
 
 /*----------------------------
     Font Sizes / フォントサイズ
@@ -642,7 +645,7 @@ a{
 }
 
 .service_text {
-  line-height: 2;
+  line-height: 2.5;
   letter-spacing: 0.1rem;
   margin-top: 65px;
 }
@@ -1358,6 +1361,7 @@ Recommended Bottom
     font-weight: 100;
     position: relative;
     line-height: 1.2;
+    font-family: 'Josefin Sans', sans-serif;
 }
 .warm_color1 {
     background-color: #ad9a88;
