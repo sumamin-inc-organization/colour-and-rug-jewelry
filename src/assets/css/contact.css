@@ -88,7 +88,7 @@
 }
 
 .contact-bottom_info{
-    margin-bottom: 24px;
+    /* margin-bottom: 24px; */
 }
 
 /*----------------------------
@@ -100,6 +100,18 @@
     margin-bottom: 10px;
 }
 
+/*----------------------------
+    Contact Section Buttons
+    Contactnせセクションのボタン
+----------------------------*/
 
+.contact-bottom_btn-container{
+    border: 1px solid red;
+}
 
-
+.contact-bottom{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
