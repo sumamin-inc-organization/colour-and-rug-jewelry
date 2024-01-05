@@ -169,6 +169,10 @@
     .contact-main{
        flex-direction: column;
     }
+    .contact-title{
+        margin-bottom: 50px;
+    }
+    
 }
 
 
