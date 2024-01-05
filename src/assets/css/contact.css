@@ -54,5 +54,25 @@
 ----------------------------*/
 
 .contact-bottom{
-    width: 50%;
+    width: 45%;
+}
+
+/*----------------------------
+    Main Content Title
+    
+----------------------------*/
+
+.contact-bottom-title_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-title-left{
+    margin-right: 20px;
+}
+
+.contact-info_heading{
+    border-bottom: 1px solid black;
+    margin-bottom: 11px;
 }
