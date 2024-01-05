@@ -157,5 +157,7 @@
 }
 
 .tel::before{
-    
+    content: url(../images/contact/tel.png);
+    width: 10px;
+    height: 10px;
 }
