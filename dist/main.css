@@ -389,6 +389,9 @@ a{
   font-family: "Bellefair", serif;
   font-weight: 400;
 }
+.font-josefin {
+  font-family: 'Josefin Sans', sans-serif;
+}
 
 /*----------------------------
     Font Sizes / フォントサイズ
@@ -463,7 +466,7 @@ a{
   font-family: 'Zen Old Mincho', serif;
   font-weight: 500;
   font-size: 30px;
-  line-height: 1.8;
+  line-height: 1.7;
   letter-spacing: 0.15rem;
   margin-top: 30px;
 }
@@ -637,19 +640,26 @@ a{
   \******************************************************************************/
 #service {
   background-color: #E2D0CA;
-  padding: 140px 0;
+  padding: 110px 0;
   text-align: center;
 }
 
 .service_text {
-  line-height: 28px;
-  letter-spacing: 1px;
-  margin-top: 32px;
+  line-height: 2.5;
+  letter-spacing: 0.1rem;
+  margin-top: 65px;
 }
 
 .service_flex {
   display: flex;
   justify-content: space-between;
+}
+
+.service_content{
+  background-color: #F6EEEB;
+  padding: 100px 60px;
+  border-radius: 550px 550px 0 0;
+  margin-top: 100px;
 }
 
 .service_item {
@@ -664,27 +674,33 @@ a{
 
 .service_item img {
   width: 230px;
+  z-index: 2;
+}
+
+.service_item p{
+  margin: auto;
+}
+
+.service_innner{
+  width: 310px;
+  height: 160px;
+  background-color: #E2D0CA;
+  padding: 40px 0 30px;
+  margin-top: -25px;
+  z-index: 1;
+}
+
+.service_think{
+  text-align: center;
+  width: 600px;
+  padding: 50px 0 20px;
 }
 
 .service_item h3 {
-  z-index: 1;
-  margin-top: 10px;
-  letter-spacing: 3.5px;
-  font-size: 29px;
-}
-
-.service_item p {
-  font-size: 16px;
-  text-align: center;
-  width: 340px;
-  height: 110px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  margin-top: -23px;
+  font-size: 24px;
   line-height: 1.7;
   letter-spacing: 0.1rem;
+  margin: auto;
 }
 
 .service_text_br{
@@ -728,9 +744,6 @@ a{
 }
 
 @media (max-width: 1200px) {
-  .service_item p {
-    width: 290px;
-  }
   .service_text_br{
     display: block;
   }
@@ -746,7 +759,6 @@ a{
   .service_item p {
     font-size: 14px;
     letter-spacing: 0.05rem;
-    width: 220px;
   }
   .service_text_br{
     display: block;
@@ -1349,6 +1361,7 @@ Recommended Bottom
     font-weight: 100;
     position: relative;
     line-height: 1.2;
+    font-family: 'Josefin Sans', sans-serif;
 }
 .warm_color1 {
     background-color: #ad9a88;
