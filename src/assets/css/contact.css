@@ -11,4 +11,14 @@
 
 .contact-main{
     border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-top{
+    width: 40%;
+}
+
+.contact-bottom{
+    width: 50%;
 }
