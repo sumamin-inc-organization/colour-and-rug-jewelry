@@ -91,6 +91,8 @@ a{
 }
 .white-btn:hover {
   cursor: pointer;
+  background-color: #EFE3E0;
+  transition: 0.3s;
 }
 
 .white-btn::after {
