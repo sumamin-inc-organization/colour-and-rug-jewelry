@@ -160,3 +160,90 @@
     content: url(../images/contact/tel-icon.png);
     margin-right: 7px;
 }
+
+/* ------------------- */
+/*       MOBILE        */
+/* ------------------- */
+
+@media (max-width:768px){
+    .contact-main{
+       flex-direction: column;
+    }
+    .contact-title{
+        margin-bottom: 50px;
+    }
+    #contact{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+
+
+/*----------------------------------------
+    Left Side  ==> Top Side (mobile)
+     左側 ==> 上側（モバイル）
+------------------------------------------*/
+ @media (max-width:768px){
+    .contact-main{
+        /* border: 1px solid red; */
+    }
+    .contact-top{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 10px;
+        margin-bottom: 48.6px;
+    }
+    
+    .cont-top{
+        grid-column: 1/3;
+    }
+    .cont-left{
+        min-height: 180px;
+        min-width: 190px;
+    }
+    .cont-right{
+        /* grid-column: 2/3; */
+        min-height: 180px;
+        min-width: 150px;
+    
+    }
+    
+    .cont-bottom-img{
+        display: flex;
+        gap: 10px;
+    }
+    
+    
+ }
+
+ /*----------------------------------------
+    Right Side  ==> Bottom Side (mobile)
+    右側 ==> 下側（モバイル）
+------------------------------------------*/
+
+
+@media (max-width:768px){
+    .contact-bottom{
+        width: 100%;
+        /* border: 1px solid red; */
+    }
+    .contact-bottom-title_container{
+        display: flex;
+        justify-content: flex-start;
+        width: 51.28vw;
+        /* border: 1px solid red; */
+    }
+    .cont-top_black{
+        padding: 7px 48.5px 9px 49.5px ;
+    }
+}
+
+
+@media(max-width:500px){
+    .cont-title-left{
+        font-size: 14px;
+    }
+    .cont-title-right{
+        font-size: 16px;
+    }
+}
