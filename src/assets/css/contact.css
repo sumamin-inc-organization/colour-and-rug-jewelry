@@ -10,7 +10,7 @@
 }
 
 .contact-main{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
 }
@@ -74,5 +74,15 @@
 
 .contact-info_heading{
     border-bottom: 1px solid black;
+    margin-bottom: 11px;
+}
+
+.contact-medium{
+    font-weight: 500;
+}
+
+.contact-closed_title,
+.contact-about_title ,
+.contact-address_title{
     margin-bottom: 11px;
 }
