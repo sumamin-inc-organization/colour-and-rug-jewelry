@@ -158,3 +158,16 @@
     margin-top: 30px;
   }
 }
+
+#newplan{
+  border: 1px solid red;
+  grid-column: 2;
+  height: 100dvh;;
+  display: grid;
+  place-content: center;
+}
+
+.decor-div{
+height: 100vh;
+grid-column: 2;
+}
