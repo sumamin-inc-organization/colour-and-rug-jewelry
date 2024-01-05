@@ -14,7 +14,7 @@
   display: flex;
   flex-flow: column;
   gap: 10px;
-  background-color: #efe3e0;
+  background-color: #E2D0CA;
   padding: 70px 10% 100px 60px;
   width: 65vw;
 }
@@ -39,12 +39,7 @@
 .flow_line {
   content: "";
   width: 100%;
-  border-bottom: solid 1px #e1c5bf;
-}
-.flow_line{
-    content: "";
-    width: 100%;
-    border-bottom: solid 1px #E1C5BF;
+  border-bottom: solid 1px #fff;
 }
 
 /* tab */
@@ -67,7 +62,7 @@
     .flow_content{
         flex-flow: column;
         gap: 50px;
-        margin: 60px 0 20px
+        margin: 60px 0 40px
     }
     .flow_column{
         padding: 20px 20px 30px;

@@ -24,7 +24,7 @@
   content: "";
   /* width: 100%; */
   height: 1px;
-  background-color: #e1c5bf ;
+  background-color: #E3E3E3 ;
   position: absolute;
   bottom: 0;
 }
@@ -58,6 +58,7 @@
   max-height: 300px;
   margin-bottom: 70px;
   animation: fade 500ms ease-in-out;
+  line-height: 2;
 }
 
 .answer {
@@ -83,7 +84,8 @@
   }
 }
 .left h3{
-  letter-spacing: 0.8px;
+  line-height: 1.8;
+  letter-spacing: 0.1rem;
 }
 /* ------------------- */
 /*       MOBILE        */
@@ -94,7 +96,7 @@
    レスポンシブなティポグラフィ
 ----------------------------*/
 
-@media (max-width:425px){
+@media (max-width:768px){
   .left h3{
     font-size: 18px;
     letter-spacing: 0.72px;
@@ -106,7 +108,7 @@
      Chevron Placements
      シェブロンの配置
 ----------------------------*/
-@media (max-width:425px){
+@media (max-width:768px){
   .question {
     display: flex;
     justify-content: space-between;
@@ -114,6 +116,7 @@
   } 
   .question img{
     margin-top: 1ch;
+    width: 12px;
   }
 
   .faq[data-question-number="3"]  .question,
@@ -132,15 +135,13 @@
     Q の配置
 ----------------------------*/
 
-@media (max-width:425px){
-
+@media (max-width:768px){
   .left {
     margin: 0;
     display: flex;
     align-items: center;
     gap: 23.6px;
   }
-
   .center-q{
     height: 100%;
   }
@@ -155,3 +156,20 @@
   }
 }
 
+@media (max-width:768px){
+  #faq{
+    padding-bottom: 80px;
+  }
+  .faq{
+    gap: 25px;
+  }
+  .faq-title{
+    margin-bottom: 55px;
+  }
+  .faq.active .answer{
+    margin-bottom: 25px;
+  }
+  .faq-container .faq:not(:first-child){
+    margin-top: 30px;
+  }
+}

@@ -3,7 +3,7 @@
 
 footer{
     color: #fff;
-    background-color: #3E3A39;
+    background-color: #45484B;
     padding: 80px 0;
     letter-spacing: 0.1rem;
 }
@@ -74,13 +74,13 @@ footer a:hover{
 
 @media (max-width: 768px) {
     footer{
-        padding: 70px 0 50px;
+        padding: 60px 0;
     }
     .footer_top{
         margin-bottom: 40px;
     }
     .footer_logo{
-        width: 60px;
+        width: 87px;
         margin-bottom: 25px;
     }
     .copy{
@@ -88,9 +88,11 @@ footer a:hover{
     }
     .copy p{
         font-size: 12px;
+        letter-spacing: normal;
     }
     .totop{
         gap: 10px;
+        letter-spacing: 0.05rem;
     }
 }
 
