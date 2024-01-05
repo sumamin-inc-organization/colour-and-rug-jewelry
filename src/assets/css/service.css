@@ -1,17 +1,9 @@
 .service-container{
   background-image: url(../images/service/newplan_bkg.jpg);
   background-attachment: fixed;
-  /* -moz-background-size: 100% 100%;
--webkit-background-size: 100% 100%;
--o-background-size: 100% 100%;
-background-size: 100% 100%; */
-
--moz-background-size: 100vw 100vh;
--webkit-background-size: 100vw 100vh;
--o-background-size: 100vw 100vh;
-background-size: 100vw 100vh;
+  background-size: cover;
+  background-position: center top;
 }
-
 
 #service {
   background-color: #E2D0CA;
@@ -25,6 +17,7 @@ background-size: 100vw 100vh;
   line-height: 2.5;
   letter-spacing: 0.1rem;
   margin-top: 65px;
+  color: black;
 }
 
 .service_flex {
@@ -144,7 +137,8 @@ background-size: 100vw 100vh;
     height: 30px;
   }
 }
-@media (max-width: 767px) {
+
+@media (max-width: 768px) {
   #service{
     padding: 80px 0;
   }
@@ -152,9 +146,9 @@ background-size: 100vw 100vh;
     display: block;
     align-items: center;
   }
-.service_item img{
-  width: 230px;
-}
+  .service_item img{
+    width: 230px;
+  }
   .service_item h3{
     letter-spacing: 0.2rem;
     font-size: 29px;
@@ -180,12 +174,11 @@ background-size: 100vw 100vh;
 }
 
 #newplan{
-  height: 100dvh;;
+  height: 100vh;
   display: grid;
   place-content: center;
 }
 
 .decor-div{
-height: 100vh;
-grid-column: 2;
+  grid-column: 2;
 }

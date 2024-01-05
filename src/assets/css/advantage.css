@@ -117,8 +117,13 @@
         width: 40%;
     }
 }
+@media (max-width:837px) {
+    .color_scheme {
+        letter-spacing: 0.1rem;
+    }
+}
 
-@media (max-width: 767px) {
+@media (max-width:768px) {
     .advantage_top{
         flex-flow: column;
         align-items: start;
