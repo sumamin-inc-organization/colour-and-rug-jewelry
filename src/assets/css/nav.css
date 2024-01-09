@@ -209,6 +209,17 @@
   grid-column: 1/3;
  }
 
- .header-btn  {
-  display: none;
+
+ .primary-nav_transition{
+  position: fixed;
+  width: 100vw;
+  height: 100dvh;
+  background-color: black;
+  z-index: 8000;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
  }
+
+
+

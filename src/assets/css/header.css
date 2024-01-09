@@ -15,7 +15,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  z-index: 8000;
+  z-index: 8001;
 }
 .header_right {
   /* border: 1px solid green; */

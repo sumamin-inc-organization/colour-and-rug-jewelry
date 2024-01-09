@@ -293,15 +293,27 @@ conttl
   .from(".contact-jp", { x: 50, opacity: 0, duration: 1 }, "-=0.8");
 
 
+  /*----------------------------
+    NAV Animations
+    Nav アニメーション
+----------------------------*/
 
-  let icon = document.querySelector(".menu_icon");
+// hamburger
+
+let icon = document.querySelector(".menu_icon");
+let headerBtn = document.querySelector('.header-btn');
 
 icon.addEventListener("click", () => {
   icon.classList.toggle("clicked");
   if( icon.classList.contains("clicked")){
-    icon.setAttribute('aria-expanded', 'true'); 
+    icon.setAttribute('aria-expanded', 'true');
+    headerBtn.classList.add('opacity-0');
   }
   else{
     icon.setAttribute('aria-expanded', 'false'); 
+    headerBtn.classList.remove('opacity-0');
   }
 });
+
+
+ 
