@@ -291,3 +291,17 @@ let conttl = gsap.timeline({
 conttl
   .from(".contact-eng", { x: -50, opacity: 0, duration: 1 })
   .from(".contact-jp", { x: 50, opacity: 0, duration: 1 }, "-=0.8");
+
+
+
+  let icon = document.querySelector(".menu_icon");
+
+icon.addEventListener("click", () => {
+  icon.classList.toggle("clicked");
+  if( icon.classList.contains("clicked")){
+    icon.setAttribute('aria-expanded', 'true'); 
+  }
+  else{
+    icon.setAttribute('aria-expanded', 'false'); 
+  }
+});
