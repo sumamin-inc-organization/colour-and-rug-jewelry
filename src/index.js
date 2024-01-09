@@ -200,6 +200,25 @@ itemtl
   .from(".item-eng", { x: 50, opacity: 0, duration: 1 })
   .from(".item-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8");
 
+
+  /*----------------------------
+    Plan Animations
+    Plan アニメーション
+----------------------------*/
+let plantl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#plan",
+    start: "-=500px",
+    scrub: false,
+    // markers:true
+  },
+});
+
+plantl
+  .from(".plan-eng", { x: -50, opacity: 0, duration: 1 })
+  .from(".plan-jp", { x: 50, opacity: 0, duration: 1 }, "-=0.8");
+
+
 /*----------------------------
     Flow Animations
     Flow アニメーション
@@ -215,8 +234,8 @@ let flowtl = gsap.timeline({
 });
 
 flowtl
-  .from(".flow-eng", { x: -50, opacity: 0, duration: 1 })
-  .from(".flow-jp", { x: 50, opacity: 0, duration: 1 }, "-=0.8");
+  .from(".flow-eng", { x: 50, opacity: 0, duration: 1 })
+  .from(".flow-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8");
 
 /*----------------------------
     Gallary Animations
@@ -233,8 +252,8 @@ let gallerytl = gsap.timeline({
 });
 
 gallerytl
-  .from(".gallery-eng", { x: 50, opacity: 0, duration: 1 })
-  .from(".gallery-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8");
+  .from(".gallery-eng", { x: -50, opacity: 0, duration: 1 })
+  .from(".gallery-jp", { x: 50, opacity: 0, duration: 1 }, "-=0.8");
 
 /*----------------------------
     FAQ Animations
@@ -251,8 +270,8 @@ let faqtl = gsap.timeline({
 });
 
 faqtl
-  .from(".faq-eng", { x: -50, opacity: 0, duration: 1 })
-  .from(".faq-jp", { x: 50, opacity: 0, duration: 1 }, "-=0.8")
+  .from(".faq-eng", { x: 50, opacity: 0, duration: 1 })
+  .from(".faq-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8")
   .to(".faq", { "--beforeAnimation": "100%", duration: 5 });
 
 /*----------------------------
@@ -270,5 +289,5 @@ let conttl = gsap.timeline({
 });
 
 conttl
-  .from(".contact-eng", { x: 50, opacity: 0, duration: 1 })
-  .from(".contact-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8");
+  .from(".contact-eng", { x: -50, opacity: 0, duration: 1 })
+  .from(".contact-jp", { x: 50, opacity: 0, duration: 1 }, "-=0.8");
