@@ -142,3 +142,39 @@
  display: grid;
  padding: 95px 132.5px 102.8px 133.5px;
 }
+
+.primary-nav_reservation{
+  /* border: 1px solid red; */
+  display: grid;
+  place-content: center;
+  row-gap: 60px;
+}
+
+.primary_book{
+  /* border: 1px solid green; */
+  padding: 14px 164.5px 16.4px 166.6px;
+}
+
+.primary_book::after{
+  top:24px;
+  right: 20px;
+}
+
+/* .nav-decor{
+  height: 1px;
+  width: 100%;
+  background-color: white;
+} */
+.primary-contact{
+  position: relative;
+}
+
+.primary-contact::before{
+  content: "";
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top:-30px;
+  left: 0;
+  background-color: white;
+}
