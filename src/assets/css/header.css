@@ -104,6 +104,10 @@ header {
     transform: translateY(-10px);
 }
 
+.tel-number a{
+  color: #45484B;
+}
+
 .time {
     letter-spacing: 1.96px;
     transform: translateY(-15px);
