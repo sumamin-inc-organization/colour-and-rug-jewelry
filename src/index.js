@@ -321,15 +321,6 @@ function animateHamburger(){
 }
 
 
-// function openNav(){
-//   let openAnim = gsap.timeline()
-//   openAnim
-//   .set('.header-info',{opacity:0})
-//   .set('.header-btn',{opacity:0})
-//   .set('.header-tel_img',{opacity:0})
-//   .to('.primary-nav',{opacity:1,duration:1})
-// }
-
 function openNav(){
   let openAnim = gsap.timeline()
   openAnim
