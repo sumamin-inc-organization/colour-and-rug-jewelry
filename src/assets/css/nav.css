@@ -144,7 +144,7 @@
 }
 
 .primary-nav_reservation{
-  /* border: 1px solid red; */
+  border: 1px solid white;
   display: grid;
   place-content: center;
   row-gap: 60px;
@@ -179,18 +179,25 @@
   background-color: white;
 }
 
-.primary-nav_list li{
+.nav-link{
   /* border: 1px solid green; */
+  border-bottom: 1px solid white;
+  display: flex;
+  align-items: center;
 
 }
 .primary-nav_list{
   grid-template-columns: 1fr 1fr;
+  column-gap: 60px;
  }
  
  .sns{
   grid-column: 2;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
  }
 
  .sns img{
