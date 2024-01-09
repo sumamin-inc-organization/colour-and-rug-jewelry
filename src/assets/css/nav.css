@@ -82,10 +82,12 @@
   /* Adjusted styles for clicked state */
   .clicked .one {
     transform: translateY(12px) rotate(45deg); /* Adjusted translation and rotation */
+    background-color: white;
   }
   
   .clicked .three {
     transform: translateY(-7px) rotate(-45deg); /* Adjusted translation and rotation */
+    background-color: white;
   }
   
   .clicked .two span:nth-child(1) {
