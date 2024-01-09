@@ -216,6 +216,8 @@ a{
 }
 .white-btn:hover {
   cursor: pointer;
+  background-color: #EFE3E0;
+  transition: 0.3s;
 }
 
 .white-btn::after {
@@ -1562,10 +1564,6 @@ Recommended Bottom
     width: 100vw;
     justify-self: center;
   }
-  .consultancy-img_wrapper img {
-    height: 300px;
-    object-fit: cover;
-  }
 }
 
 /*------------------------------------------
@@ -1674,10 +1672,8 @@ Recommended Bottom
 @media (max-width:768px){
   .it_left {
     position: static;
-
   }
 }
-
 
 /*----------------------------
     Wrap- Mobile
@@ -1701,7 +1697,7 @@ Recommended Bottom
     margin-top: 42px;
   }
   .it_right h3 {
-    margin-top: 15px;
+    margin-top: 10px;
   }
   .it_right p {
     margin-top: 35px;
@@ -1711,6 +1707,9 @@ Recommended Bottom
   }
   .item-banner{
     margin-top: 55px !important;
+  }
+  .item_img{
+    margin-top: 75px;
   }
 }
 
@@ -1915,7 +1914,7 @@ Recommended Bottom
     .flow_content{
         flex-flow: column;
         gap: 50px;
-        margin: 60px 0 20px
+        margin: 60px 0 40px
     }
     .flow_column{
         padding: 20px 20px 30px;
@@ -1990,7 +1989,7 @@ Recommended Bottom
 
 @media (max-width: 768px) {
     .gallery_content{
-      margin: 35px 0 80px;
+      margin: 35px 0 100px;
     }
     .gallery_top{
       margin-bottom: 40px;
@@ -2043,7 +2042,7 @@ Recommended Bottom
   content: "";
   /* width: 100%; */
   height: 1px;
-  background-color: #e1c5bf ;
+  background-color: #E3E3E3 ;
   position: absolute;
   bottom: 0;
 }
@@ -2077,6 +2076,7 @@ Recommended Bottom
   max-height: 300px;
   margin-bottom: 70px;
   animation: fade 500ms ease-in-out;
+  line-height: 2;
 }
 
 .answer {
@@ -2102,7 +2102,8 @@ Recommended Bottom
   }
 }
 .left h3{
-  letter-spacing: 0.8px;
+  line-height: 1.8;
+  letter-spacing: 0.1rem;
 }
 /* ------------------- */
 /*       MOBILE        */
@@ -2113,7 +2114,7 @@ Recommended Bottom
    レスポンシブなティポグラフィ
 ----------------------------*/
 
-@media (max-width:425px){
+@media (max-width:768px){
   .left h3{
     font-size: 18px;
     letter-spacing: 0.72px;
@@ -2125,7 +2126,7 @@ Recommended Bottom
      Chevron Placements
      シェブロンの配置
 ----------------------------*/
-@media (max-width:425px){
+@media (max-width:768px){
   .question {
     display: flex;
     justify-content: space-between;
@@ -2133,6 +2134,7 @@ Recommended Bottom
   } 
   .question img{
     margin-top: 1ch;
+    width: 12px;
   }
 
   .faq[data-question-number="3"]  .question,
@@ -2151,15 +2153,13 @@ Recommended Bottom
     Q の配置
 ----------------------------*/
 
-@media (max-width:425px){
-
+@media (max-width:768px){
   .left {
     margin: 0;
     display: flex;
     align-items: center;
     gap: 23.6px;
   }
-
   .center-q{
     height: 100%;
   }
@@ -2174,15 +2174,286 @@ Recommended Bottom
   }
 }
 
-
+@media (max-width:768px){
+  #faq{
+    padding-bottom: 80px;
+  }
+  .faq{
+    gap: 25px;
+  }
+  .faq-title{
+    margin-bottom: 55px;
+  }
+  .faq.active .answer{
+    margin-bottom: 25px;
+  }
+  .faq-container .faq:not(:first-child){
+    margin-top: 30px;
+  }
+}
 /*!******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/contact.css ***!
   \******************************************************************************/
+#contact{
+    background-color: #E2D0CA;
+    padding-top: 138px;
+    padding-bottom: 144px;
+}
 
+
+.contact-title{
+    margin-bottom: 85px;
+}
+
+.contact-main{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+/*----------------------------
+    Left Side (pc)
+    左側（PC）
+----------------------------*/
+
+.contact-top{
+    width: 40%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+}
+
+.cont-top{
+    grid-column: 1/3;
+}
+.cont-left{
+    /* grid-column: 1/2; */
+    min-height: 294px;
+    min-width: 277px;
+}
+.cont-right{
+    /* grid-column: 2/3; */
+    min-height: 294px;
+    min-width: 237px;
+
+}
+
+.cont-bottom-img{
+    display: flex;
+    gap: 10px;
+}
+
+
+/*----------------------------
+    Right Side (pc)
+    右側（PC）
+----------------------------*/
+
+.contact-bottom{
+    width: 45%;
+}
+
+/*----------------------------
+    Main Content Title
+    メインコンテンツのタイトル
+----------------------------*/
+
+.contact-bottom-title_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-title-left{
+    margin-right: 20px;
+}
+
+.contact-info_heading{
+    border-bottom: 1px solid black;
+    margin-bottom: 11px;
+}
+
+.contact-medium{
+    font-weight: 500;
+}
+
+.contact-closed_title,
+.contact-about_title ,
+.contact-address_title{
+    margin-bottom: 11px;
+}
+
+.contact-bottom_info{
+    /* margin-bottom: 24px; */
+}
+
+/*----------------------------
+    Main Content Descriptions
+    メインコンテンツのタイトル
+----------------------------*/
+.cont-main-desc{
+    line-height: 30px;
+}
+.postal{
+    margin-bottom: 10px;
+}
+
+/*----------------------------
+    Contact Section Buttons
+    Contactnせセクションのボタン
+----------------------------*/
+
+.contact-bottom_btn-container{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    column-gap: 10px;
+    row-gap: 7px;
+}
+
+.contact-bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 7px;
+}
+
+
+.bottom-btn{
+    background-color: white;
+    grid-column: 1/3;
+    display: grid;
+    place-content: center;
+   height: 80px;
+}
+.bottom-btn:hover{
+    cursor: pointer;
+    background-color: #EFE3E0;
+    transition: 0.3s;
+}
+.contact-btn_top{
+    display: grid;
+    place-items: center;
+}
+.contact-btn_top::after{
+    right: 20px;
+    top: 14px;
+}
+.cont-top_black{
+    padding: 7px 82px 9px 82px ;
+}
+
+.cont-bottom-btn_description,
+.cont-bottom-btn_data{
+    text-align: center;
+}
+
+.cont-bottom-btn_data{
+    display: flex;
+    align-items: center;
+}
+
+.tel::before{
+    content: url(./images/tel-icon.png);
+    margin-right: 7px;
+}
+
+/* ------------------- */
+/*       MOBILE        */
+/* ------------------- */
+
+@media (max-width:768px){
+    .contact-main{
+       flex-direction: column;
+    }
+    .contact-title{
+        margin-bottom: 50px;
+    }
+    #contact{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+
+
+/*----------------------------------------
+    Left Side  ==> Top Side (mobile)
+     左側 ==> 上側（モバイル）
+------------------------------------------*/
+ @media (max-width:768px){
+    .contact-main{
+        /* border: 1px solid red; */
+    }
+    .contact-top{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 10px;
+        margin-bottom: 48.6px;
+    }
+    
+    .cont-top{
+        grid-column: 1/3;
+    }
+    .cont-left{
+        min-height: 180px;
+        min-width: 190px;
+    }
+    .cont-right{
+        /* grid-column: 2/3; */
+        min-height: 180px;
+        min-width: 150px;
+    
+    }
+    
+    .cont-bottom-img{
+        display: flex;
+        gap: 10px;
+    }
+    
+    
+ }
+
+ /*----------------------------------------
+    Right Side  ==> Bottom Side (mobile)
+    右側 ==> 下側（モバイル）
+------------------------------------------*/
+
+
+@media (max-width:768px){
+    .contact-bottom{
+        width: 100%;
+        /* border: 1px solid red; */
+    }
+    .contact-bottom-title_container{
+        display: flex;
+        justify-content: flex-start;
+        width: 51.28vw;
+        /* border: 1px solid red; */
+    }
+    .cont-top_black{
+        padding: 7px 48.5px 9px 49.5px ;
+    }
+}
+
+
+@media(max-width:500px){
+    .cont-title-left{
+        font-size: 14px;
+    }
+    .cont-title-right{
+        font-size: 16px;
+    }
+}
 /*!***************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/form.css ***!
   \***************************************************************************/
-
+#form{
+    padding: 135px 0 200px;
+}
+@media (max-width: 768px) {
+    #form{
+        padding: 80px 0 90px;
+    }
+}
 /*!*****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/footer.css ***!
   \*****************************************************************************/
@@ -2191,7 +2462,7 @@ Recommended Bottom
 
 footer{
     color: #fff;
-    background-color: #3E3A39;
+    background-color: #45484B;
     padding: 80px 0;
     letter-spacing: 0.1rem;
 }
@@ -2262,13 +2533,13 @@ footer a:hover{
 
 @media (max-width: 768px) {
     footer{
-        padding: 70px 0 50px;
+        padding: 60px 0;
     }
     .footer_top{
         margin-bottom: 40px;
     }
     .footer_logo{
-        width: 60px;
+        width: 87px;
         margin-bottom: 25px;
     }
     .copy{
@@ -2276,9 +2547,11 @@ footer a:hover{
     }
     .copy p{
         font-size: 12px;
+        letter-spacing: normal;
     }
     .totop{
         gap: 10px;
+        letter-spacing: 0.05rem;
     }
 }
 
