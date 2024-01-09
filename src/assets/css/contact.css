@@ -102,10 +102,6 @@
     margin-bottom: 10px;
 }
 
-.address{
-    line-height: 30px;
-}
-
 /*----------------------------
     Contact Section Buttons
     Contactnせセクションのボタン
@@ -158,7 +154,6 @@
 .cont-bottom-btn_data{
     display: flex;
     align-items: center;
-    /* background-color: green; */
 }
 
 .tel::before{
@@ -207,6 +202,7 @@
         min-width: 190px;
     }
     .cont-right{
+        /* grid-column: 2/3; */
         min-height: 180px;
         min-width: 150px;
     
@@ -216,9 +212,7 @@
         display: flex;
         gap: 10px;
     }
-    .bottom-btn{
-       height: 100px;
-    }
+    
     
  }
 
@@ -242,12 +236,6 @@
     .cont-top_black{
         padding: 7px 48.5px 9px 49.5px ;
     }
-    .cont-bottom-btn_data{
-        flex-direction: column;
-    }
-    .contact-bottom_info{
-        margin-bottom: 24px;
-    }
 }
 
 
@@ -258,7 +246,6 @@
     .cont-title-right{
         font-size: 16px;
     }
-    .cont-bottom-btn_description{
-        font-size: 14px;
-    }
 }
+
+
