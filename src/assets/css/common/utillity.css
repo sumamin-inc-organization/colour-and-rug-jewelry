@@ -236,3 +236,12 @@ a{
 .inline-block{
   display: inline-block;
 }
+
+.display-none{
+  display: none;
+}
+
+.opacity-0{
+  opacity: 0;
+}
+

@@ -293,15 +293,71 @@ conttl
   .from(".contact-jp", { x: 50, opacity: 0, duration: 1 }, "-=0.8");
 
 
+  /*----------------------------
+    NAV Animations
+    Nav アニメーション
+----------------------------*/
 
-  let icon = document.querySelector(".menu_icon");
+// hamburger
+
+let icon = document.querySelector(".menu_icon");
+let headerBtn = document.querySelector('.header-btn');
 
 icon.addEventListener("click", () => {
+  animateHamburger()
+});
+
+
+function animateHamburger(){
   icon.classList.toggle("clicked");
   if( icon.classList.contains("clicked")){
-    icon.setAttribute('aria-expanded', 'true'); 
+    icon.setAttribute('aria-expanded', 'true');
+    openNav();
   }
   else{
     icon.setAttribute('aria-expanded', 'false'); 
+    closeNav()
   }
-});
+}
+
+
+// function openNav(){
+//   let openAnim = gsap.timeline()
+//   openAnim
+//   .set('.header-info',{opacity:0})
+//   .set('.header-btn',{opacity:0})
+//   .set('.header-tel_img',{opacity:0})
+//   .to('.primary-nav',{opacity:1,duration:1})
+// }
+
+function openNav(){
+  let openAnim = gsap.timeline()
+  openAnim
+  .to('.primary-nav',{opacity:1,duration:1})
+  .to('.header-info',{opacity:0},"-=1")
+  .to('.header-btn',{opacity:0},"-=1")
+  .to('.header-tel_img',{opacity:0},"-=1")
+
+}
+
+
+function closeNav(){
+  let openAnim = gsap.timeline()
+  openAnim
+  .set('.header-info',{opacity:1})
+  .set('.header-btn',{opacity:1})
+  // .set('.overflow-control',{position:"relative"})
+  .set('.header-tel_img',{opacity:1})
+  .to('.primary-nav',{opacity:0,duration:1})
+}
+
+
+ const navLinks = document.querySelectorAll('.nav-link');
+
+
+ navLinks.forEach(link =>{
+  link.addEventListener('click',(e)=>{
+    animateHamburger()
+    closeNav()
+  })
+ })
