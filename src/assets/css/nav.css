@@ -221,5 +221,7 @@
   transform: translateX(100%);
  }
 
-
+.primary-nav{
+  opacity: 0;
+}
 

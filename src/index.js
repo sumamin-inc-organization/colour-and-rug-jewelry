@@ -307,13 +307,35 @@ icon.addEventListener("click", () => {
   icon.classList.toggle("clicked");
   if( icon.classList.contains("clicked")){
     icon.setAttribute('aria-expanded', 'true');
-    headerBtn.classList.add('opacity-0');
+    openNav();
   }
   else{
     icon.setAttribute('aria-expanded', 'false'); 
-    headerBtn.classList.remove('opacity-0');
+    closeNav()
   }
 });
+
+
+function openNav(){
+  let openAnim = gsap.timeline()
+  openAnim
+  .set('.header-info',{opacity:0})
+  .set('.header-btn',{opacity:0})
+  .set('.header-tel_img',{opacity:0})
+  // .set('.overflow-control',{position:"fixed"})
+  .to('.primary-nav',{opacity:1,duration:1})
+
+}
+
+function closeNav(){
+  let openAnim = gsap.timeline()
+  openAnim
+  .set('.header-info',{opacity:1})
+  .set('.header-btn',{opacity:1})
+  // .set('.overflow-control',{position:"relative"})
+  .set('.header-tel_img',{opacity:1})
+  .to('.primary-nav',{opacity:0,duration:1})
+}
 
 
  
