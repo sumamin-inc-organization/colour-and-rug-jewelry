@@ -1,0 +1,115 @@
+/* ------------------- */
+/* HEADER            */
+/* ------------------- */
+
+/*----------------------------------
+   Header alignment and positioning
+   ヘッダーの配置と位置合わせ
+------------------------------------*/
+
+header {
+  /* border: 1px solid red; */
+  width: 100%;
+  position: absolute;
+  top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.header_right {
+  /* border: 1px solid green; */
+  height: 100%;
+  display: flex;
+  align-items: center
+}
+.header-btn {
+  display: grid;
+  place-content: center;
+}
+/*----------------------------------
+   Header Paddings
+   ヘッダーのパディング
+------------------------------------*/
+
+header {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+.header-btn {
+  padding: 6.92px 50.2px 9px 50px;
+  width: 170px;
+}
+/*----------------------------------
+   Header Margins
+   ヘッダーのパディング
+------------------------------------*/
+
+.header-tel_img {
+  margin-right: 12px;
+}
+
+.header-info {
+  margin-right: 24px;
+}
+.header-decor {
+  margin-right: 30px;
+}
+
+/*----------------------------------
+   Header Decor
+   ヘッダーデコレーション
+------------------------------------*/
+
+.header-decor {
+  width: 1px;
+  background-color: #45484b;
+}
+
+/*----------------------------------
+   Header Button
+   ヘッダーボタン
+------------------------------------*/
+
+.header-btn::after {
+    top: 14px;
+    right: 12px;
+  }
+
+/*----------------------------------
+   Header Heights
+   ヘッダー要素の高さ
+------------------------------------*/
+.header-info {
+    height: 40px;
+    /* border: 1px solid red; */
+
+  }
+  .header-btn {
+    height: 40px;
+  }
+  .header-decor {
+   height: 40px;
+  }
+
+
+/*----------------------------------
+   Header Typography
+   ヘッダーのタイポグラフィ
+------------------------------------*/
+.header-btn_p{
+    /* letter-spacing: 1.92px; */
+}
+.tel-number{
+    letter-spacing: 0.25px;
+    transform: translateY(-10px);
+}
+
+.tel-number a{
+  color: #45484B;
+}
+
+.time {
+    letter-spacing: 1.96px;
+    transform: translateY(-15px);
+}
+
