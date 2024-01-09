@@ -304,6 +304,11 @@ let icon = document.querySelector(".menu_icon");
 let headerBtn = document.querySelector('.header-btn');
 
 icon.addEventListener("click", () => {
+  animateHamburger()
+});
+
+
+function animateHamburger(){
   icon.classList.toggle("clicked");
   if( icon.classList.contains("clicked")){
     icon.setAttribute('aria-expanded', 'true');
@@ -313,19 +318,28 @@ icon.addEventListener("click", () => {
     icon.setAttribute('aria-expanded', 'false'); 
     closeNav()
   }
-});
+}
 
+
+// function openNav(){
+//   let openAnim = gsap.timeline()
+//   openAnim
+//   .set('.header-info',{opacity:0})
+//   .set('.header-btn',{opacity:0})
+//   .set('.header-tel_img',{opacity:0})
+//   .to('.primary-nav',{opacity:1,duration:1})
+// }
 
 function openNav(){
   let openAnim = gsap.timeline()
   openAnim
-  .set('.header-info',{opacity:0})
-  .set('.header-btn',{opacity:0})
-  .set('.header-tel_img',{opacity:0})
-  // .set('.overflow-control',{position:"fixed"})
   .to('.primary-nav',{opacity:1,duration:1})
+  .to('.header-info',{opacity:0},"-=1")
+  .to('.header-btn',{opacity:0},"-=1")
+  .to('.header-tel_img',{opacity:0},"-=1")
 
 }
+
 
 function closeNav(){
   let openAnim = gsap.timeline()
@@ -338,4 +352,12 @@ function closeNav(){
 }
 
 
- 
+ const navLinks = document.querySelectorAll('.nav-link');
+
+
+ navLinks.forEach(link =>{
+  link.addEventListener('click',(e)=>{
+    animateHamburger()
+    closeNav()
+  })
+ })
