@@ -92,13 +92,13 @@
   
   .clicked .two span:nth-child(1) {
     transform: translateX(10px); /* Adjusted translation */
-    background-color: red;
+    background-color: white;
     opacity: 0;
   }
   
   .clicked .two span:nth-child(2) {
     transform: translateX(-10px); /* Adjusted translation */
-    background-color: red;
+    background-color: white;
     opacity: 0;
   }
 
@@ -111,3 +111,11 @@
    メインナビゲーション(PC)
 ------------------------------------*/
 
+.primary-nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  background-color:#45484B ;
+  width: 100vw;
+}
