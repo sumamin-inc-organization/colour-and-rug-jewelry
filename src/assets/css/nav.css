@@ -112,10 +112,33 @@
 ------------------------------------*/
 
 .primary-nav{
+  z-index: 7999;
   position: fixed;
   top: 0;
   left: 0;
   display: flex;
   background-color:#45484B ;
   width: 100vw;
+}
+
+.primary-nav_img{
+  width: 40vw;
+  height: 100vh;
+}
+.primary-nav_hero{
+  width: 100%;
+  height: 100%;
+}
+
+
+/*----------------------------------
+   Main Nav(PC)  - Nav Links
+   メインナビ(PC) - ナビゲーションリンク
+------------------------------------*/
+
+.primary-nav_list{
+ border: 1px solid red;
+ width: 60vw;
+ display: grid;
+ padding: 95px 132.5px 102.8px 133.5px;
 }
