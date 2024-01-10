@@ -671,6 +671,7 @@ header {
   padding: 5px 0;
     /* border: 1px solid blue; */
     margin-left: 20px;
+    z-index: 9000;
   }
  .container:hover{
   cursor: pointer;
@@ -763,7 +764,8 @@ header {
 ------------------------------------*/
 
 .primary-nav{
-  z-index: 7999;
+  /* z-index: 7999; */
+  z-index: -1;
   position: fixed;
   top: 0;
   left: 0;

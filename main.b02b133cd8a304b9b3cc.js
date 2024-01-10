@@ -10197,6 +10197,8 @@ conttl
 
 let icon = document.querySelector(".menu_icon");
 let headerBtn = document.querySelector('.header-btn');
+const body = document.body;
+console.log(body)
 
 icon.addEventListener("click", () => {
   animateHamburger()
@@ -10219,10 +10221,16 @@ function animateHamburger(){
 function openNav(){
   let openAnim = gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.timeline()
   openAnim
-  .to('.primary-nav',{opacity:1,duration:1})
-  .to('.header-info',{opacity:0},"-=1")
-  .to('.header-btn',{opacity:0},"-=1")
-  .to('.header-tel_img',{opacity:0},"-=1")
+  .to('.primary-nav',{opacity:1,duration:1,zIndex:7999})
+  .fromTo(".header-btn", { opacity: 1 }, { opacity: 0 },"<")
+  .fromTo(".header-info", { opacity: 1 }, { opacity: 0 },"<")
+  .fromTo(".header-tel_img", { opacity: 1 }, { opacity: 0 },"<")
+  // .to('.header-btn',{opacity:0})
+  // .to('.header-info',{opacity:0})
+  // .fromTo(".header-btn", { opacity: 1 }, { opacity: 0 },"<")
+  // .to('.header-tel_img',{opacity:0})
+  .to(body,{position:"fixed"})
+  
 
 }
 
@@ -10230,11 +10238,14 @@ function openNav(){
 function closeNav(){
   let openAnim = gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.timeline()
   openAnim
-  .set('.header-info',{opacity:1})
-  .set('.header-btn',{opacity:1})
-  // .set('.overflow-control',{position:"relative"})
-  .set('.header-tel_img',{opacity:1})
-  .to('.primary-nav',{opacity:0,duration:1})
+  .to('.primary-nav',{opacity:0,duration:1,zIndex:"-1"})
+  .fromTo(".header-info", { opacity: 0 }, { opacity: 1 },"<")
+  .fromTo(".header-btn", { opacity: 0 }, { opacity: 1 },"<")
+  // .set('.header-btn',{opacity:1})
+  .fromTo(".header-tel_img", { opacity: 0 }, { opacity: 1 },"<")
+  // .set('.header-tel_img',{opacity:1})
+  .to(body,{position:"relative"})
+  
 }
 
 
@@ -10251,4 +10262,4 @@ function closeNav(){
 
 /******/ })()
 ;
-//# sourceMappingURL=main.3aa6dd9da77e1b49b74a.js.map
+//# sourceMappingURL=main.b02b133cd8a304b9b3cc.js.map
