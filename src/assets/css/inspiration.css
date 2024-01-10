@@ -288,19 +288,21 @@
 .story{
   padding-top: 130px;
   /* padding-right: 80px; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .popup-heading{
   width: 100%;
   padding-right: 80px;
   /* border: 1px solid green; */
   margin-bottom: 30px;
+  line-height: 40px;
 }
 
 .popup-description{
   width: 100%;
   padding-right: 80px;
   margin-top: 55px;
+  line-height: 40px;
   /* border: 1px solid green; */
 }
 .popup-decor{
