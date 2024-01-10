@@ -9580,6 +9580,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/assets/css/animations.css":
+/*!***************************************!*\
+  !*** ./src/assets/css/animations.css ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/assets/css/common/banner.css":
 /*!******************************************!*\
   !*** ./src/assets/css/common/banner.css ***!
@@ -9891,8 +9903,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_css_form_css__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./assets/css/form.css */ "./src/assets/css/form.css");
 /* harmony import */ var _assets_css_footer_css__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./assets/css/footer.css */ "./src/assets/css/footer.css");
 /* harmony import */ var _assets_css_common_banner_css__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./assets/css/common/banner.css */ "./src/assets/css/common/banner.css");
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+/* harmony import */ var _assets_css_animations_css__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./assets/css/animations.css */ "./src/assets/css/animations.css");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
 
 
 
@@ -9917,7 +9930,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_21__.ScrollTrigger);
+
+gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_22__.ScrollTrigger);
 
 // gsap.registerPlugin(ScrollTrigger);
 
@@ -10010,7 +10024,7 @@ function addAnimation() {
     RECOMMENDED Animations
     RECOMMENDED  アニメーション
 ----------------------------*/
-let recommendedtl = gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.timeline({
+let recommendedtl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
   scrollTrigger: {
     trigger: "#recommended",
     start: "-=500px",
@@ -10028,7 +10042,7 @@ recommendedtl
     Inspiration  アニメーション
 ----------------------------*/
 
-let inspirationtl = gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.timeline({
+let inspirationtl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
   scrollTrigger: {
     trigger: "#inspiration",
     start: "-=500px",
@@ -10046,7 +10060,7 @@ inspirationtl
     Advantage  アニメーション
 ----------------------------*/
 
-let advantagetl = gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.timeline({
+let advantagetl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
   scrollTrigger: {
     trigger: "#advantage",
     start: "-=500px",
@@ -10064,7 +10078,7 @@ advantagetl
     Consultancy  アニメーション
 ----------------------------*/
 
-let consultancytl = gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.timeline({
+let consultancytl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
   scrollTrigger: {
     trigger: "#consultancy",
     start: "-=500px",
@@ -10082,7 +10096,7 @@ consultancytl
     Item アニメーション
 ----------------------------*/
 
-let itemtl = gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.timeline({
+let itemtl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
   scrollTrigger: {
     trigger: "#item",
     start: "-=500px",
@@ -10100,7 +10114,7 @@ itemtl
     Plan Animations
     Plan アニメーション
 ----------------------------*/
-let plantl = gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.timeline({
+let plantl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
   scrollTrigger: {
     trigger: "#plan",
     start: "-=500px",
@@ -10119,7 +10133,7 @@ plantl
     Flow アニメーション
 ----------------------------*/
 
-let flowtl = gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.timeline({
+let flowtl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
   scrollTrigger: {
     trigger: "#flow",
     start: "-=500px",
@@ -10137,7 +10151,7 @@ flowtl
     Gallary アニメーション
 ----------------------------*/
 
-let gallerytl = gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.timeline({
+let gallerytl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
   scrollTrigger: {
     trigger: "#gallery",
     start: "-=500px",
@@ -10155,7 +10169,7 @@ gallerytl
     FAQ アニメーション
 ----------------------------*/
 
-let faqtl = gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.timeline({
+let faqtl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
   scrollTrigger: {
     trigger: "#faq",
     start: "-=500px",
@@ -10174,7 +10188,7 @@ faqtl
     CONTACT アニメーション
 ----------------------------*/
 
-let conttl = gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.timeline({
+let conttl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
   scrollTrigger: {
     trigger: "#contact",
     start: "-=500px",
@@ -10202,6 +10216,7 @@ console.log(body)
 
 icon.addEventListener("click", () => {
   animateHamburger()
+  console.log('clicked')
 });
 
 
@@ -10219,7 +10234,7 @@ function animateHamburger(){
 
 
 function openNav(){
-  let openAnim = gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.timeline()
+  let openAnim = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline()
   openAnim
   // .to(body,{position:"fixed"})
   .to('.primary-nav',{opacity:1,duration:1,zIndex:7999})
@@ -10236,7 +10251,7 @@ function openNav(){
 
 
 function closeNav(){
-  let openAnim = gsap__WEBPACK_IMPORTED_MODULE_20__.gsap.timeline()
+  let openAnim = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline()
   openAnim
   .to('.primary-nav',{opacity:0,duration:1,zIndex:"-1"})
   .fromTo(".header-info", { opacity: 0 }, { opacity: 1 },"<")
@@ -10259,8 +10274,28 @@ function closeNav(){
     closeNav()
   })
  })
+
+
+
+  /*----------------------------
+   Page Loader
+  ページローダー
+----------------------------*/
+
+ document.addEventListener('DOMContentLoaded',(e)=>{
+  let intro = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline()
+
+  intro
+.to('.transition-item',{y:'0',delay:2})
+.to('.transition-item-white',{y:'0'})
+.set('.transition-item',{y:'100%'})
+.set('.transition-img',{opacity:0})
+.set('.transition-img',{x:"100%"})
+.to('.transition-item-white',{y:'-100%'})
+})
+
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.44ad58807d7fa90bd2d9.js.map
+//# sourceMappingURL=main.30102e3451e1543f6f8d.js.map
