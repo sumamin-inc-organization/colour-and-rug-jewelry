@@ -324,3 +324,7 @@ justify-content: center;
   justify-content: space-between;
   gap: 10px;
 }
+
+.primary-contact.bottom-btn{
+  background-color: transparent;
+}
