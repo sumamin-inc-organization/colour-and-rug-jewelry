@@ -684,7 +684,8 @@ header {
     margin-left: 20px;
     z-index: 9000;
   }
- .container:hover{
+ .container:hover,
+ .menu_icon:hover{
   cursor: pointer;
  }
   .menu_icon span {
