@@ -413,6 +413,9 @@ a{
 /*----------------------------
     Font Sizes / フォントサイズ
   ----------------------------*/
+.fs-11{
+  font-size: 11px;
+}
 .fs-14 {
   font-size: 14px;
 }
@@ -646,6 +649,12 @@ header {
 }
 
 
+@media (max-width:500px) {
+  .logo{
+    width: 53.17px;
+    height: 60px;
+  }
+}
 /*!**************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/nav.css ***!
   \**************************************************************************/
@@ -884,6 +893,96 @@ header {
   .header-btn{
     display: none;
   }
+}
+
+/*----------------------------------
+   Main Nav(SP)
+   メインナビゲーション(SP)
+------------------------------------*/
+
+
+@media(max-width:768px) {
+  .primary-nav_list{
+    /* border: 1px solid red; */
+    width: 100vw;
+    height: 100dvh;
+    padding: 100px 40px 0px 40px;
+   }
+   .primary-nav_list{
+    display: flex;
+    flex-direction: column;
+  
+   }
+   .primary-nav_reservation{
+    display: none;
+   }
+   .nav-link{
+    padding-bottom: 16px;
+    padding-top: 16px;
+   }
+   .sns{
+    padding-top: 30px;
+   }
+}
+/*----------------------------------
+   Main Nav(SP)-bottom banner
+   メインナビゲーション(SP)-下部バナー
+------------------------------------*/
+.primary-nav-bottom_sp{
+/* border: 1px solid red; */
+position: fixed;
+bottom: 0;
+width: 100%;
+background-color: #FFFFFF;
+padding: 14.5px 25px 15px 25px;
+}
+
+.nav-bottom-inner{
+display: flex;
+/* border: 1px solid red; */
+align-items: center;
+justify-content: center;
+}
+.bottom-nav-btn{
+  /* border: 1px solid green; */
+  padding: 7.6px 44.6px 8.4px 47.4px;
+  height: 40px;
+  width: 160px;
+  display: grid;
+  place-content: center;
+}
+
+.bottom-nav-btn::after{
+  display: none;
+}
+
+.location-img{
+  width: 17.53px;
+  height: 24.41px;
+}
+
+.tel-img{
+  width: 18px;
+  height: 18px;
+}
+
+.location,
+.tel-no{
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  width: 70px;
+  height: 40px;
+  border-right: 1px solid #45484B;
+}
+
+.tel-no{
+  margin-right: 30px;
+  justify-content: space-between;
+  gap: 10px;
 }
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/keyvisual.css ***!
