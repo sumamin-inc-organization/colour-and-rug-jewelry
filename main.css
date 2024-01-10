@@ -396,11 +396,11 @@ a{
 }
 .font-zenkaku {
   font-family: "Zen Kaku Gothic New", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
 }
 .font-zenold {
   font-family: "Zen Old Mincho", serif;
-  font-weight: 400;
+  font-weight: 300;
 }
 .font-bellefair {
   font-family: "Bellefair", serif;
@@ -2912,6 +2912,9 @@ Recommended Bottom
     }
     .cont-top_black{
         padding: 7px 48.5px 9px 49.5px ;
+    }
+    .contact-bottom_info{
+        margin-bottom: 29px;
     }
 }
 
