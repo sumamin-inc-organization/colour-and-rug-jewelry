@@ -235,8 +235,35 @@
   }
 }
 
-#keyvisual{
-  /* background-color: black; */
-}
 
+
+/*----------------------------------
+   Main Nav(SP)
+   メインナビゲーション(SP)
+------------------------------------*/
+
+
+@media(max-width:768px) {
+  .primary-nav_list{
+    /* border: 1px solid red; */
+    width: 100vw;
+    height: 100dvh;
+    padding: 100px 40px 0px 40px;
+   }
+   .primary-nav_list{
+    display: flex;
+    flex-direction: column;
+  
+   }
+   .primary-nav_reservation{
+    display: none;
+   }
+   .nav-link{
+    padding-bottom: 19.2px;
+    padding-top: 18px;
+   }
+   .sns{
+    padding-top: 30px;
+   }
+}
 
