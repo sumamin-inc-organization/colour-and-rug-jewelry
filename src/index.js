@@ -400,7 +400,16 @@ const closeBtn =document.querySelector('.close-popup-btn');
 inspirationBtn.addEventListener('click',(e)=>{
   e.preventDefault;
   modal.style.display = "block";
+  animateleft()
 })
 closeBtn.addEventListener('click',(e)=>{
   modal.style.display = "none";
 })
+
+function animateleft(){
+  let popimage =  gsap.timeline();
+  popimage
+  .from(".popup",{opacity:0,duration:0.5})
+  // .from(".story",{x:"100%"})
+  // .from(".animate-text",{opacity:0});
+}
