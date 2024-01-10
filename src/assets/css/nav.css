@@ -328,3 +328,10 @@ justify-content: center;
 .primary-contact.bottom-btn{
   background-color: transparent;
 }
+
+
+.tel.header-tel-white::before{
+  content: url(../images/nav/tel-white.png);
+  width: 20px;
+  height: 20px;
+}
