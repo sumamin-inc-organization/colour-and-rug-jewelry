@@ -385,3 +385,22 @@ function closeNav(){
 .set('.transition-img',{x:"100%"})
 .to('.transition-item-white',{y:'-100%'})
 })
+
+
+
+/*----------------------------
+  Pop Up Modal
+  ポップアップモーダル
+----------------------------*/
+
+const inspirationBtn = document.querySelector('[data-insp="1"]');
+const modal = document.querySelector('[data-story="1"]');
+const closeBtn =document.querySelector('.close-popup-btn');
+
+inspirationBtn.addEventListener('click',(e)=>{
+  e.preventDefault;
+  modal.style.display = "block";
+})
+closeBtn.addEventListener('click',(e)=>{
+  modal.style.display = "none";
+})
