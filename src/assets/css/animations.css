@@ -6,6 +6,7 @@
     height: 100dvh;
     position: fixed;
     z-index: 1000;
+    z-index: 9500;
     /* background-image: url(../../images/animation/transition_bg.jpg) ; */
     background-size: cover;
     /* opacity: 0; */
@@ -41,6 +42,7 @@
     height: 100dvh;
     position: fixed;
     z-index: 1001;
+    z-index: 9501;
     background-color: #B9786A;
     transform: translateY(100%);
 }
@@ -49,6 +51,7 @@
     height: 100dvh;
     position: fixed;
     z-index: 1002;
+    z-index: 9502;
     background-color: white;
     transform: translateY(100%);
 }

@@ -19,6 +19,7 @@ import "./assets/css/contact.css";
 import "./assets/css/form.css";
 import "./assets/css/footer.css";
 import "./assets/css/common/banner.css";
+import "./assets/css/animations.css";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -307,6 +308,7 @@ console.log(body)
 
 icon.addEventListener("click", () => {
   animateHamburger()
+  console.log('clicked')
 });
 
 
@@ -364,3 +366,22 @@ function closeNav(){
     closeNav()
   })
  })
+
+
+
+  /*----------------------------
+   Page Loader
+  ページローダー
+----------------------------*/
+
+ document.addEventListener('DOMContentLoaded',(e)=>{
+  let intro = gsap.timeline()
+
+  intro
+.to('.transition-item',{y:'0',delay:2})
+.to('.transition-item-white',{y:'0'})
+.set('.transition-item',{y:'100%'})
+.set('.transition-img',{opacity:0})
+.set('.transition-img',{x:"100%"})
+.to('.transition-item-white',{y:'-100%'})
+})
