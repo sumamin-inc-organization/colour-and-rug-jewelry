@@ -112,7 +112,8 @@
 ------------------------------------*/
 
 .primary-nav{
-  z-index: 7999;
+  /* z-index: 7999; */
+  z-index: -1;
   position: fixed;
   top: 0;
   left: 0;

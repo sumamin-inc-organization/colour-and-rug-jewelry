@@ -324,7 +324,7 @@ function animateHamburger(){
 function openNav(){
   let openAnim = gsap.timeline()
   openAnim
-  .to('.primary-nav',{opacity:1,duration:1})
+  .to('.primary-nav',{opacity:1,duration:1,zIndex:7999})
   .to('.header-info',{opacity:0},"-=1")
   .to('.header-btn',{opacity:0},"-=1")
   .to('.header-tel_img',{opacity:0},"-=1")
@@ -339,7 +339,7 @@ function closeNav(){
   .set('.header-btn',{opacity:1})
   // .set('.overflow-control',{position:"relative"})
   .set('.header-tel_img',{opacity:1})
-  .to('.primary-nav',{opacity:0,duration:1})
+  .to('.primary-nav',{opacity:0,duration:1,zIndex:"-1"})
 }
 
 
