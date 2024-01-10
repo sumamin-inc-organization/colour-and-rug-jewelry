@@ -281,7 +281,33 @@
   z-index: 9200;
   background-color: white;
 }
+.popup_inner{
+  display: flex;
+  gap: 80px;
+}
+.story{
+  padding-top: 130px;
+  /* padding-right: 80px; */
+  border: 1px solid red;
+}
+.popup-heading{
+  width: 100%;
+  padding-right: 80px;
+  /* border: 1px solid green; */
+  margin-bottom: 30px;
+}
 
+.popup-description{
+  width: 100%;
+  padding-right: 80px;
+  margin-top: 55px;
+  /* border: 1px solid green; */
+}
+.popup-decor{
+  width: 100%;
+  height: 1px;
+  background-color: #45484B;
+}
 .close-popup-btn{
   position: absolute;
   top: 20px;
