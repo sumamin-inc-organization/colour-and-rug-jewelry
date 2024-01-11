@@ -169,7 +169,7 @@ a{
 
 .black-btn {
   border: none;
-  background-color: #3E3A39;
+  background-color: #45484B;
   position: relative;
 }
 
@@ -393,7 +393,6 @@ a{
   font-family: 'Josefin Sans', sans-serif;
 }
 
-
 /*----------------------------
     Font Sizes / フォントサイズ
   ----------------------------*/
@@ -508,10 +507,6 @@ a{
   }
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> main
 .letter-spacing-30{
   letter-spacing: 0.06em;
 }
@@ -531,7 +526,7 @@ a{
 header {
   /* border: 1px solid red; */
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 30px;
   display: flex;
   justify-content: space-between;
@@ -641,6 +636,25 @@ header {
     width: 53.17px;
     height: 60px;
   }
+}
+
+main{
+  /* border: 1px solid red; */
+}
+
+.logo{
+  /* filter: invert(1); */
+}
+
+.header-tel_img {
+  /* fill: #fff; */
+}
+
+.kv_bottom{
+  /* border: 1px solid red; */
+}
+.sticking{
+  background-color: red;
 }
 /*!**************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/nav.css ***!
@@ -970,7 +984,7 @@ justify-content: center;
 .tel-no{
   margin-right: 30px;
   justify-content: space-between;
-  gap: 10px;
+  gap: 11.5px;
 }
 
 .primary-contact.bottom-btn{
@@ -1518,6 +1532,9 @@ Recommended Bottom
   border-top: 1px solid #969493;
   border-bottom: 1px solid #969493;
 }
+.inspiration-container h2{
+  padding-bottom: 0;
+}
 .inspiration-jp {
   padding-left: 1px;
 }
@@ -1532,7 +1549,7 @@ Recommended Bottom
   justify-content: flex-end;
   align-items: center;
   gap: 36px;
-  margin-bottom: 38.3px;
+  margin-bottom: 20px;
 }
 
 .indicators {
@@ -1599,7 +1616,7 @@ Recommended Bottom
 }
 
 .active {
-  color: #3E3A39;
+  color: #45484B;
 }
 
 .ba_label{
@@ -1743,6 +1760,9 @@ Recommended Bottom
     border-top: 1px solid #969493;
     border-bottom: 1px solid #969493;
   }
+  .inspiration-container h2{
+    padding-bottom: 30px;
+  }
 }
 
 
@@ -1848,14 +1868,14 @@ Recommended Bottom
     width: 200vw;
 }
 .advantage_top_img img{
-    height: 600px;
+    height: 670px;
     width: 100%;
     object-fit: cover;
 }
 .advantage_flex{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     gap: 50px;
 }
 .warm,.relaxed{
@@ -2010,7 +2030,7 @@ Recommended Bottom
 /* ------------------- */
 
 #consultancy {
-  margin-top: 67px;
+  margin-top: 30px;
   row-gap: 78px;
 }
 .consultancy-top_jp {
@@ -2032,7 +2052,9 @@ Recommended Bottom
 }
 .consultancy-img_wrapper img {
   width: 100%;
-  height: 100%;
+  height: 640px;
+  object-fit: cover;
+  object-position: top;
 }
 
 /* ------------------- */
@@ -2420,7 +2442,7 @@ Recommended Bottom
 @media (max-width: 768px) {
     .flow_content{
         flex-flow: column;
-        gap: 50px;
+        gap: 0;
         margin: 60px 0 40px
     }
     .flow_column{
@@ -2695,10 +2717,10 @@ Recommended Bottom
     gap: 25px;
   }
   .faq-title{
-    margin-bottom: 55px;
+    margin-bottom: 10px;
   }
   .faq.active .answer{
-    margin-bottom: 25px;
+    padding-bottom: 25px;
   }
   .faq-container .faq:not(:first-child){
     margin-top: 30px;
@@ -2879,7 +2901,7 @@ Recommended Bottom
        flex-direction: column;
     }
     .contact-title{
-        margin-bottom: 50px;
+        margin-bottom: 0;
     }
     #contact{
         padding-top: 80px;
@@ -3052,7 +3074,7 @@ footer a:hover{
 
 @media (max-width: 768px) {
     footer{
-        padding: 60px 0;
+        padding: 60px 0 130px;
     }
     .footer_top{
         margin-bottom: 40px;
@@ -3072,6 +3094,32 @@ footer a:hover{
         gap: 10px;
         letter-spacing: 0.05rem;
     }
+
+    #fixed-footer{
+        z-index: 3000;
+        border-top: solid 1px #45484B;
+    }
+
+    #fixed-footer p{
+        letter-spacing: 0;
+    }
+
+    /* 最初は非表示 */
+    .fixed-footer{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(50px);
+        transition: opacity 0.5s,visibility 0.5s, transform 0.5s;
+    }
+
+    /*このクラスが付与されると表示する*/
+    .active{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+    }
+
+    
 }
 
 
@@ -3095,10 +3143,9 @@ footer a:hover{
     バナーのラッパー
 ----------------------------*/
 .banner-wrapper {
-  margin: 0;
   padding: 0;
-  margin-left: 23px;
-  margin: 74.3px 0;
+  margin: 74.3px auto;
+  width: 60vw;
 }
 
 /*----------------------------
@@ -3223,6 +3270,7 @@ footer a:hover{
     padding: 62.5px 0;
     padding-bottom: 60px;
     text-align: center;
+    width: 100%
   }
 }
 
