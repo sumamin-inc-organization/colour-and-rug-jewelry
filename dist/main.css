@@ -490,7 +490,6 @@ a{
   .sec_title{
     font-size: 22px;
     padding-bottom: 45px;
-    letter-spacing: 0.01rem;
   }
   /* PC     -> 16px 
    mobile -> 14px */
@@ -808,17 +807,37 @@ main{
  padding: 95px 132.5px 102.8px 133.5px;
 }
 
-.primary-nav_reservation{
+/* .primary-nav_reservation{
   border: 1px solid white;
   display: grid;
   place-content: center;
   row-gap: 60px;
+} */
+
+.primary-nav_reservation{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border: 1px solid white;
+gap: 60px;
 }
 
 .primary_book{
   /* border: 1px solid green; */
-  padding: 14px 164.5px 16.4px 166.6px;
+  /* padding: 14px 164.5px 16.4px 166.6px; */
+  display: grid;
+  place-content: center;
+  width: calc(100% - 12.5%);
+  height: 60px;
 }
+/* @media (max-width:1200px){
+  .primary_book{
+ 
+    padding: 14px 100px 16.4px 100.6px;
+  }
+} */
+
 
 .primary_book::after{
   top:24px;
@@ -832,6 +851,7 @@ main{
 } */
 .primary-contact{
   position: relative;
+  width: calc(100% - 12.5%);
 }
 
 .primary-contact::before{
@@ -839,9 +859,10 @@ main{
   height: 1px;
   width: 100%;
   position: absolute;
-  top:-30px;
+  top:-20px;
   left: 0;
   background-color: white;
+
 }
 
 .nav-link{
@@ -1032,12 +1053,12 @@ justify-content: center;
 
 .kv_bottom .kv_text .kagayaku {
   font-size: 1.46vw;
-  letter-spacing: 2.9px;
+  letter-spacing: 0.15rem;
 }
 
 .kv_bottom .kv_text h2 {
   font-size: 2.86vw;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.15rem;
   margin-top: 1.68vw;
 }
 
@@ -1114,6 +1135,17 @@ justify-content: center;
     }
 }
 
+@media (max-width: 380px) {
+  .kv_bottom .kv_text .kagayaku {
+    letter-spacing: 0.1rem;
+  }
+  
+  .kv_bottom .kv_text h2 {
+    letter-spacing: 0.1rem;
+  }
+}
+
+
 /*!******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/service.css ***!
   \******************************************************************************/
@@ -1133,10 +1165,12 @@ justify-content: center;
   padding: 128px 0 140px;
   text-align: center;
 }
+#service .sec_title{
+  letter-spacing: 0.01rem;
+}
 .service_text {
   line-height: 2.5;
   letter-spacing: 0.1rem;
-  color: black;
 }
 .service_flex {
   display: flex;
@@ -1673,7 +1707,7 @@ Recommended Bottom
 ----------------------------*/
 
 
-@media(max-width:425px){
+@media(max-width:768px){
   .insp-sp{
     font-size: 14px;
   }
@@ -1953,7 +1987,7 @@ Recommended Bottom
 }
 .color_title{
     text-align: center;
-    padding: 3px 0;
+    padding: 5px 0;
     width: 100%;
     border: solid 1px#000;
 }
@@ -1965,7 +1999,7 @@ Recommended Bottom
 }
 .color_box {
     color: #fff;
-    padding: 40px 10px 10px;
+    padding: 45px 10px 10px;
     font-size: 16px;
     font-weight: 100;
     position: relative;
@@ -2010,7 +2044,7 @@ Recommended Bottom
 @media (max-width: 1200px) {
     .advantage_top{
         width: 95vw;
-        gap: 0;
+        gap: 40px;
     }
     #advantage .sec_title{
         font-size: 28px;
@@ -2069,12 +2103,18 @@ Recommended Bottom
     }
     .color_scheme{
         font-size: 18px;
-        margin: 15px 0 10px;
+        margin: 15px 0 13px;
         letter-spacing: 0.05rem;
     }
     .interior_story{
         font-size: 18px;
         padding: 30px 0 10px;
+    }
+}
+
+@media (max-width:768px) {
+    .color_box p{
+        font-size: 14px;
     }
 }
 
@@ -2188,6 +2228,7 @@ Recommended Bottom
 .it_wrap {
   display: grid;
   grid-template-columns: 40% 60%;
+  gap: 40px;
 }
 .it_right {
   height: max-content;
@@ -2399,6 +2440,14 @@ Recommended Bottom
     align-items: center;
 }
 
+@media (max-width:1000px) {
+    .plan_content{
+        grid-column: 1 / 3;
+        display: flex;
+        justify-content: start;
+        gap: 50px;
+    }
+}
 
 @media (max-width:767px) {
     #plan{
@@ -2805,28 +2854,32 @@ Recommended Bottom
 ----------------------------*/
 
 .contact-top{
-    width: 40%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 10px;
+    width: 525px;
 }
-
 .cont-top{
-    grid-column: 1/3;
+    padding-bottom: 10px;
 }
 .cont-left{
-    min-height: 294px;
-    min-width: 277px;
+    /* min-height: 294px;
+    min-width: 277px; */
+    width: 60%;
+    aspect-ratio: 27 / 29;
+    object-fit: cover;
 }
 .cont-right{
-    min-height: 294px;
-    min-width: 237px;
-
+    /* min-height: 294px;
+    min-width: 237px; */
+    width: 40%;
+    height: auto;
+    aspect-ratio: 23 / 29;
+    object-fit: cover;
 }
 
 .cont-bottom-img{
     display: flex;
     gap: 10px;
+    overflow: hidden;
+    height: 295px;
 }
 
 
@@ -2837,6 +2890,9 @@ Recommended Bottom
 
 .contact-bottom{
     width: 45%;
+}
+.contact-bottom_info{
+    margin-bottom: 20px;
 }
 
 /*----------------------------
@@ -2893,14 +2949,14 @@ Recommended Bottom
     display: grid;
     grid-template-columns:1fr 1fr;
     column-gap: 10px;
-    row-gap: 7px;
+    gap: 10px;
 }
 
 .contact-bottom{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    row-gap: 7px;
+    row-gap: 20px;
 }
 
 .bottom-btn{
@@ -2925,7 +2981,7 @@ Recommended Bottom
     top: 14px;
 }
 .cont-top_black{
-    padding: 7px 82px 9px 82px ;
+    padding: 7px 0 9px;
 }
 
 .cont-bottom-btn_description,
@@ -2943,6 +2999,27 @@ Recommended Bottom
     margin-right: 7px;
 }
 
+@media (max-width:1120px){
+    .contact-top{
+        width: 450px;
+    }
+    .cont-top_black{
+        padding: 7px 0 9px ;
+    }
+}
+@media (max-width:1000px){
+    .contact-top{
+        width: 360px;
+    }
+    .cont-bottom-btn_data{
+        flex-flow: column;
+    }
+    .bottom-btn{
+        height: auto;
+        padding: 10px;
+    }
+}
+
 /* ------------------- */
 /*       MOBILE        */
 /* ------------------- */
@@ -2958,12 +3035,18 @@ Recommended Bottom
         padding-top: 80px;
         padding-bottom: 80px;
     }
+    .cont-top{
+        padding: 0;
+    }
+    .cont-bottom-img{
+        height: 180px;
+    }
 }
 
 
 /*----------------------------------------
     Left Side  ==> Top Side (mobile)
-     左側 ==> 上側（モバイル）
+    左側 ==> 上側（モバイル）
 ------------------------------------------*/
  @media (max-width:768px){
     .contact-top{
@@ -2985,18 +3068,15 @@ Recommended Bottom
         /* grid-column: 2/3; */
         min-height: 180px;
         min-width: 150px;
-    
     }
-    
     .cont-bottom-img{
         display: flex;
         gap: 10px;
+        width: 90vw;
     }
-    
-    
- }
+}
 
- /*----------------------------------------
+/*----------------------------------------
     Right Side  ==> Bottom Side (mobile)
     右側 ==> 下側（モバイル）
 ------------------------------------------*/
@@ -3005,22 +3085,14 @@ Recommended Bottom
 @media (max-width:768px){
     .contact-bottom{
         width: 100%;
-        /* border: 1px solid red; */
     }
     .contact-bottom-title_container{
         display: flex;
         justify-content: flex-start;
         width: 51.28vw;
-        /* border: 1px solid red; */
-    }
-    .cont-top_black{
-        padding: 7px 48.5px 9px 49.5px ;
     }
     .contact-bottom_info{
-        margin-bottom: 45px;
-    }
-    .cont-bottom-btn_data{
-        flex-flow: column;
+        margin-bottom: 25px;
     }
     .bottom-btn{
         height: auto;
