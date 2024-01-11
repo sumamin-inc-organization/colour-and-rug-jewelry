@@ -416,6 +416,16 @@ function animateleft(){
   // .from(".animate-text",{opacity:0});
 }
 
+const closeBtn_sp =document.querySelector('.close-popup-btn_sp');
+
+// inspirationBtn.addEventListener('click',(e)=>{
+//   e.preventDefault;
+//   modal.style.display = "block";
+//   animateleft()
+// })
+closeBtn_sp.addEventListener('click',(e)=>{
+  modal.style.display = "none";
+})
 
 const headerTel = document.querySelector('.header-tel_img');
 
