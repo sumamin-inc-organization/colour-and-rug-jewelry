@@ -422,6 +422,8 @@ const headerTel = document.querySelector('.header-tel_img');
 const header = document.getElementById('header');
 const newplan = document.querySelectorAll('#newplan');
 const kv = document.querySelector('.kv-trigger');
+const inspBanner = document.querySelector('.insp-banner-trigger');
+const itemBanner =document.querySelector('.item-banner-trigger');
 
 // dark backgrounds
 function changeTimeToWhite(){
@@ -473,7 +475,6 @@ ScrollTrigger.create({
   trigger: kv,
   start: "bottom top",
   // end:".service-container",
-  markers:true,
   onEnter: changeLogoToBlack,
   // onLeave: changeLogoToWhite,
   onEnterBack: changeLogoToBlack,
@@ -491,5 +492,38 @@ ScrollTrigger.create({
   onLeaveBack:changeToBlack
 });
 
+// banner trigger inspiration banner
+ScrollTrigger.create({
+  trigger: inspBanner,
+  start: "-100px top",
+  markers:true,
+  onEnter: changeToWhite,
+  onLeave: changeToBlack,
+  onEnterBack: changeToWhite,
+  onLeaveBack:changeToBlack
+});
 
 
+// banner trigger inspiration banner
+ScrollTrigger.create({
+  trigger: inspBanner,
+  start: "-100px top",
+  markers:true,
+  onEnter: changeToWhite,
+  onLeave: changeToBlack,
+  onEnterBack: changeToWhite,
+  onLeaveBack:changeToBlack
+});
+
+
+
+// banner trigger inspiration banner
+ScrollTrigger.create({
+  trigger: itemBanner,
+  start: "-100px top",
+  markers:true,
+  onEnter: changeToWhite,
+  // onLeave: changeToBlack,
+  onEnterBack: changeToWhite,
+  // onLeaveBack:changeToBlack
+});
