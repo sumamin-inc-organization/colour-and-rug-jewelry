@@ -10382,6 +10382,11 @@ function animateleft(){
   // .from(".animate-text",{opacity:0});
 }
 
+const closeBtn_sp =document.querySelector('.close-popup-btn_sp');
+
+closeBtn_sp.addEventListener('click',(e)=>{
+  modal.style.display = "none";
+})
 
 const headerTel = document.querySelector('.header-tel_img');
 
@@ -10558,4 +10563,4 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
 
 /******/ })()
 ;
-//# sourceMappingURL=main.cc707c6726ee872b5791.js.map
+//# sourceMappingURL=main.11f20db296383dfa1e9c.js.map
