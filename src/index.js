@@ -382,10 +382,11 @@ function closeNav(){
   intro
 .to('.transition-item',{y:'0',delay:2})
 .to('.transition-item-white',{y:'0'})
-.set('.transition-item',{y:'100%'})
+.set('.transition-item',{y:'-100%'})
 .set('.transition-img',{opacity:0})
-.set('.transition-img',{x:"100%"})
+.set('.transition-img',{x:"100%" ,})
 .to('.transition-item-white',{y:'-100%'})
+.to('.transition-item-white',{display:"none"})
 })
 
 
