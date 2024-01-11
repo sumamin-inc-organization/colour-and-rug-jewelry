@@ -421,6 +421,7 @@ const headerTel = document.querySelector('.header-tel_img');
 
 const header = document.getElementById('header');
 const newplan = document.querySelectorAll('#newplan');
+const kv = document.querySelector('.kv-trigger');
 
 // dark backgrounds
 function changeTimeToWhite(){
@@ -441,7 +442,7 @@ function changeToWhite(){
   changeTimeToWhite();
   changeTelToWhite();
   changeHeadDecorToWhite();
-  changeLogoToBlack();
+  changeLogoToWhite();
 }
 
 // light backgrounds
@@ -464,10 +465,23 @@ function changeToBlack(){
   changeTimeToBlack();
   changeTelToBlack();
   changeHeadDecorToBlack();
-  changeLogoToWhite();
+  changeLogoToBlack();
 }
 
+//trigger for logo when it htis the end of the kv
+ScrollTrigger.create({
+  trigger: kv,
+  start: "bottom top",
+  // end:".service-container",
+  markers:true,
+  onEnter: changeLogoToBlack,
+  // onLeave: changeLogoToWhite,
+  onEnterBack: changeLogoToBlack,
+  onLeaveBack:changeLogoToWhite
+});
 
+
+// newplan trigger
 ScrollTrigger.create({
   trigger: newplan,
   start: "top top",
@@ -479,4 +493,3 @@ ScrollTrigger.create({
 
 
 
-// navObserver.observe(blackbg[0]);
