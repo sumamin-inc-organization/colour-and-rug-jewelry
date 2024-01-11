@@ -45,7 +45,7 @@
 }
 .color_title{
     text-align: center;
-    padding: 3px 0;
+    padding: 5px 0;
     width: 100%;
     border: solid 1px#000;
 }
@@ -57,7 +57,7 @@
 }
 .color_box {
     color: #fff;
-    padding: 40px 10px 10px;
+    padding: 45px 10px 10px;
     font-size: 16px;
     font-weight: 100;
     position: relative;
@@ -102,7 +102,7 @@
 @media (max-width: 1200px) {
     .advantage_top{
         width: 95vw;
-        gap: 0;
+        gap: 40px;
     }
     #advantage .sec_title{
         font-size: 28px;
@@ -161,11 +161,17 @@
     }
     .color_scheme{
         font-size: 18px;
-        margin: 15px 0 10px;
+        margin: 15px 0 13px;
         letter-spacing: 0.05rem;
     }
     .interior_story{
         font-size: 18px;
         padding: 30px 0 10px;
+    }
+}
+
+@media (max-width:768px) {
+    .color_box p{
+        font-size: 14px;
     }
 }

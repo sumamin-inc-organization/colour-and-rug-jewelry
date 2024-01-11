@@ -151,7 +151,7 @@
 ----------------------------*/
 
 
-@media(max-width:425px){
+@media(max-width:768px){
   .insp-sp{
     font-size: 14px;
   }

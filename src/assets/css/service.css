@@ -14,10 +14,12 @@
   padding: 128px 0 140px;
   text-align: center;
 }
+#service .sec_title{
+  letter-spacing: 0.01rem;
+}
 .service_text {
   line-height: 2.5;
   letter-spacing: 0.1rem;
-  color: black;
 }
 .service_flex {
   display: flex;

@@ -21,28 +21,32 @@
 ----------------------------*/
 
 .contact-top{
-    width: 40%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 10px;
+    width: 525px;
 }
-
 .cont-top{
-    grid-column: 1/3;
+    padding-bottom: 10px;
 }
 .cont-left{
-    min-height: 294px;
-    min-width: 277px;
+    /* min-height: 294px;
+    min-width: 277px; */
+    width: 60%;
+    aspect-ratio: 27 / 29;
+    object-fit: cover;
 }
 .cont-right{
-    min-height: 294px;
-    min-width: 237px;
-
+    /* min-height: 294px;
+    min-width: 237px; */
+    width: 40%;
+    height: auto;
+    aspect-ratio: 23 / 29;
+    object-fit: cover;
 }
 
 .cont-bottom-img{
     display: flex;
     gap: 10px;
+    overflow: hidden;
+    height: 295px;
 }
 
 
@@ -53,6 +57,9 @@
 
 .contact-bottom{
     width: 45%;
+}
+.contact-bottom_info{
+    margin-bottom: 20px;
 }
 
 /*----------------------------
@@ -109,14 +116,14 @@
     display: grid;
     grid-template-columns:1fr 1fr;
     column-gap: 10px;
-    row-gap: 7px;
+    gap: 10px;
 }
 
 .contact-bottom{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    row-gap: 7px;
+    row-gap: 20px;
 }
 
 .bottom-btn{
@@ -141,7 +148,7 @@
     top: 14px;
 }
 .cont-top_black{
-    padding: 7px 82px 9px 82px ;
+    padding: 7px 0 9px;
 }
 
 .cont-bottom-btn_description,
@@ -159,6 +166,27 @@
     margin-right: 7px;
 }
 
+@media (max-width:1120px){
+    .contact-top{
+        width: 450px;
+    }
+    .cont-top_black{
+        padding: 7px 0 9px ;
+    }
+}
+@media (max-width:1000px){
+    .contact-top{
+        width: 360px;
+    }
+    .cont-bottom-btn_data{
+        flex-flow: column;
+    }
+    .bottom-btn{
+        height: auto;
+        padding: 10px;
+    }
+}
+
 /* ------------------- */
 /*       MOBILE        */
 /* ------------------- */
@@ -174,12 +202,18 @@
         padding-top: 80px;
         padding-bottom: 80px;
     }
+    .cont-top{
+        padding: 0;
+    }
+    .cont-bottom-img{
+        height: 180px;
+    }
 }
 
 
 /*----------------------------------------
     Left Side  ==> Top Side (mobile)
-     左側 ==> 上側（モバイル）
+    左側 ==> 上側（モバイル）
 ------------------------------------------*/
  @media (max-width:768px){
     .contact-top{
@@ -201,18 +235,15 @@
         /* grid-column: 2/3; */
         min-height: 180px;
         min-width: 150px;
-    
     }
-    
     .cont-bottom-img{
         display: flex;
         gap: 10px;
+        width: 90vw;
     }
-    
-    
- }
+}
 
- /*----------------------------------------
+/*----------------------------------------
     Right Side  ==> Bottom Side (mobile)
     右側 ==> 下側（モバイル）
 ------------------------------------------*/
@@ -221,22 +252,14 @@
 @media (max-width:768px){
     .contact-bottom{
         width: 100%;
-        /* border: 1px solid red; */
     }
     .contact-bottom-title_container{
         display: flex;
         justify-content: flex-start;
         width: 51.28vw;
-        /* border: 1px solid red; */
-    }
-    .cont-top_black{
-        padding: 7px 48.5px 9px 49.5px ;
     }
     .contact-bottom_info{
-        margin-bottom: 45px;
-    }
-    .cont-bottom-btn_data{
-        flex-flow: column;
+        margin-bottom: 25px;
     }
     .bottom-btn{
         height: auto;
