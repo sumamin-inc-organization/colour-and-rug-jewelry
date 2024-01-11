@@ -187,18 +187,22 @@ a{
   display: none;
 }
 
-/* SPテキストのみ左右30pxのpadding */
-.sp_padding{
-  width: 90%;
-}
-
 @media(max-width:768px){
-    .mobile-only{
-        display: block;
-    }
-    .pc-only{
-        display: none;
-    }
+  .mobile-only{
+    display: block;
+  }
+  .pc-only{
+    display: none;
+  }
+  /* SPテキストのみ左右30pxのpadding */
+  .sp_padding{
+    width: 85vw;
+    margin: auto !important;
+  }
+  .sp_padding_ingrid{
+    width: 80vw;
+    margin: auto !important;
+  }
 }
 @media (max-width:425px){
   .sp_425{
