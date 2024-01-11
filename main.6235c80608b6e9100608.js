@@ -10430,7 +10430,7 @@ function changeTelToBlack(){
   gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.change',{color:"black"});
 }
 function changeHeadDecorToBlack(){
-  gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.header-decor',{backgroundColor:"black"});
+  gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.header-decor',{backgroundColor:"#45484b"});
 }
 function changeLogoToWhite(){
   gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.logo',{filter:" invert(0)"});
@@ -10563,4 +10563,4 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
 
 /******/ })()
 ;
-//# sourceMappingURL=main.11f20db296383dfa1e9c.js.map
+//# sourceMappingURL=main.6235c80608b6e9100608.js.map
