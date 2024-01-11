@@ -102,7 +102,7 @@
 
 /*----------------------------
     Contact Section Buttons
-    Contactnせセクションのボタン
+    Contactセクションのボタン
 ----------------------------*/
 
 .contact-bottom_btn-container{
@@ -182,9 +182,6 @@
      左側 ==> 上側（モバイル）
 ------------------------------------------*/
  @media (max-width:768px){
-    .contact-main{
-        /* border: 1px solid red; */
-    }
     .contact-top{
         width: 100%;
         display: grid;
