@@ -10347,10 +10347,11 @@ function closeNav(){
   intro
 .to('.transition-item',{y:'0',delay:2})
 .to('.transition-item-white',{y:'0'})
-.set('.transition-item',{y:'100%'})
+.set('.transition-item',{y:'-100%'})
 .set('.transition-img',{opacity:0})
-.set('.transition-img',{x:"100%"})
+.set('.transition-img',{x:"100%" ,})
 .to('.transition-item-white',{y:'-100%'})
+.to('.transition-item-white',{display:"none"})
 })
 
 
@@ -10557,4 +10558,4 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
 
 /******/ })()
 ;
-//# sourceMappingURL=main.c41e5e0f401818c3d264.js.map
+//# sourceMappingURL=main.cc707c6726ee872b5791.js.map
