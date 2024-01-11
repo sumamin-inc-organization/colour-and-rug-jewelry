@@ -9818,6 +9818,26 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
 
+/***/ }),
+
+/***/ "./src/assets/images/nav/icon_tel-white.svg":
+/*!**************************************************!*\
+  !*** ./src/assets/images/nav/icon_tel-white.svg ***!
+  \**************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "./images/icon_tel-white.svg";
+
+/***/ }),
+
+/***/ "./src/assets/images/nav/icon_tel.svg":
+/*!********************************************!*\
+  !*** ./src/assets/images/nav/icon_tel.svg ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "./images/icon_tel.svg";
+
 /***/ })
 
 /******/ 	});
@@ -9859,6 +9879,18 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -9873,6 +9905,29 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
@@ -9904,8 +9959,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_css_footer_css__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./assets/css/footer.css */ "./src/assets/css/footer.css");
 /* harmony import */ var _assets_css_common_banner_css__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./assets/css/common/banner.css */ "./src/assets/css/common/banner.css");
 /* harmony import */ var _assets_css_animations_css__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./assets/css/animations.css */ "./src/assets/css/animations.css");
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+/* harmony import */ var _assets_images_nav_icon_tel_white_svg__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./assets/images/nav/icon_tel-white.svg */ "./src/assets/images/nav/icon_tel-white.svg");
+/* harmony import */ var _assets_images_nav_icon_tel_svg__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./assets/images/nav/icon_tel.svg */ "./src/assets/images/nav/icon_tel.svg");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
 
 
 
@@ -9931,7 +9988,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_22__.ScrollTrigger);
+
+
+gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger);
 
 // gsap.registerPlugin(ScrollTrigger);
 
@@ -10024,7 +10083,7 @@ function addAnimation() {
     RECOMMENDED Animations
     RECOMMENDED  アニメーション
 ----------------------------*/
-let recommendedtl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
+let recommendedtl = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline({
   scrollTrigger: {
     trigger: "#recommended",
     start: "-=500px",
@@ -10042,7 +10101,7 @@ recommendedtl
     Inspiration  アニメーション
 ----------------------------*/
 
-let inspirationtl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
+let inspirationtl = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline({
   scrollTrigger: {
     trigger: "#inspiration",
     start: "-=500px",
@@ -10060,7 +10119,7 @@ inspirationtl
     Advantage  アニメーション
 ----------------------------*/
 
-let advantagetl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
+let advantagetl = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline({
   scrollTrigger: {
     trigger: "#advantage",
     start: "-=500px",
@@ -10078,7 +10137,7 @@ advantagetl
     Consultancy  アニメーション
 ----------------------------*/
 
-let consultancytl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
+let consultancytl = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline({
   scrollTrigger: {
     trigger: "#consultancy",
     start: "-=500px",
@@ -10096,7 +10155,7 @@ consultancytl
     Item アニメーション
 ----------------------------*/
 
-let itemtl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
+let itemtl = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline({
   scrollTrigger: {
     trigger: "#item",
     start: "-=500px",
@@ -10114,7 +10173,7 @@ itemtl
     Plan Animations
     Plan アニメーション
 ----------------------------*/
-let plantl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
+let plantl = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline({
   scrollTrigger: {
     trigger: "#plan",
     start: "-=500px",
@@ -10133,7 +10192,7 @@ plantl
     Flow アニメーション
 ----------------------------*/
 
-let flowtl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
+let flowtl = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline({
   scrollTrigger: {
     trigger: "#flow",
     start: "-=500px",
@@ -10151,7 +10210,7 @@ flowtl
     Gallary アニメーション
 ----------------------------*/
 
-let gallerytl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
+let gallerytl = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline({
   scrollTrigger: {
     trigger: "#gallery",
     start: "-=500px",
@@ -10169,7 +10228,7 @@ gallerytl
     FAQ アニメーション
 ----------------------------*/
 
-let faqtl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
+let faqtl = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline({
   scrollTrigger: {
     trigger: "#faq",
     start: "-=500px",
@@ -10188,7 +10247,7 @@ faqtl
     CONTACT アニメーション
 ----------------------------*/
 
-let conttl = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline({
+let conttl = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline({
   scrollTrigger: {
     trigger: "#contact",
     start: "-=500px",
@@ -10234,7 +10293,7 @@ function animateHamburger(){
 
 
 function openNav(){
-  let openAnim = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline()
+  let openAnim = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline()
   openAnim
   // .to(body,{position:"fixed"})
   .to('.primary-nav',{opacity:1,duration:1,zIndex:7999})
@@ -10251,7 +10310,7 @@ function openNav(){
 
 
 function closeNav(){
-  let openAnim = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline()
+  let openAnim = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline()
   openAnim
   .to('.primary-nav',{opacity:0,duration:1,zIndex:"-1"})
   .fromTo(".header-info", { opacity: 0 }, { opacity: 1 },"<")
@@ -10283,7 +10342,7 @@ function closeNav(){
 ----------------------------*/
 
  document.addEventListener('DOMContentLoaded',(e)=>{
-  let intro = gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline()
+  let intro = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline()
 
   intro
 .to('.transition-item',{y:'0',delay:2})
@@ -10315,14 +10374,187 @@ closeBtn.addEventListener('click',(e)=>{
 })
 
 function animateleft(){
-  let popimage =  gsap__WEBPACK_IMPORTED_MODULE_21__.gsap.timeline();
+  let popimage =  gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline();
   popimage
   .from(".popup",{opacity:0,duration:0.5})
   // .from(".story",{x:"100%"})
   // .from(".animate-text",{opacity:0});
 }
+
+
+const headerTel = document.querySelector('.header-tel_img');
+
+const header = document.getElementById('header');
+const newplan = document.querySelectorAll('#newplan');
+const kv = document.querySelector('.kv-trigger');
+const inspBanner = document.querySelector('.insp-banner-trigger');
+const itemBanner =document.querySelector('.item-banner-trigger');
+const advantageTrigger = document.querySelector('.advantage-trigger');
+const consultancyTrigger = document.querySelector('.consultancy-trigger');
+
+
+// dark backgrounds
+function changeTimeToWhite(){
+  gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.time',{color:"white"});
+}
+function changeTelToWhite(){
+  gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.change',{color:"white"});
+}
+function changeHeadDecorToWhite(){
+  gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.header-decor',{backgroundColor:"white"});
+}
+function changeLogoToBlack(){
+  gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.logo',{filter:" invert(1)"});
+}
+
+function changeToWhite(){
+  headerTel.src = _assets_images_nav_icon_tel_white_svg__WEBPACK_IMPORTED_MODULE_21__;
+  changeTimeToWhite();
+  changeTelToWhite();
+  changeHeadDecorToWhite();
+  changeLogoToWhite();
+}
+
+// light backgrounds
+
+function changeTimeToBlack(){
+  gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.time',{color:"black"});
+}
+function changeTelToBlack(){
+  gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.change',{color:"black"});
+}
+function changeHeadDecorToBlack(){
+  gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.header-decor',{backgroundColor:"black"});
+}
+function changeLogoToWhite(){
+  gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.logo',{filter:" invert(0)"});
+}
+
+function changeToBlack(){
+  headerTel.src = _assets_images_nav_icon_tel_svg__WEBPACK_IMPORTED_MODULE_22__;
+  changeTimeToBlack();
+  changeTelToBlack();
+  changeHeadDecorToBlack();
+  changeLogoToBlack();
+}
+
+function onlyRightToWhite(){
+  headerTel.src = _assets_images_nav_icon_tel_white_svg__WEBPACK_IMPORTED_MODULE_21__;
+  changeTimeToWhite();
+  changeTelToWhite();
+  changeHeadDecorToWhite();
+}
+function onlyRightToBlack(){
+  headerTel.src = _assets_images_nav_icon_tel_svg__WEBPACK_IMPORTED_MODULE_22__;
+  changeTimeToBlack();
+  changeTelToBlack();
+  changeHeadDecorToBlack();
+}
+
+
+
+// triggers
+
+//trigger for logo when it htis the end of the kv
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
+  trigger: kv,
+  start: "bottom top",
+  // end:".service-container",
+  onEnter: changeLogoToBlack,
+  // onLeave: changeLogoToWhite,
+  onEnterBack: changeLogoToBlack,
+  onLeaveBack:changeLogoToWhite
+});
+
+
+// newplan trigger
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
+  trigger: newplan,
+  start: "top top",
+  onEnter: changeToWhite,
+  onLeave: changeToBlack,
+  onEnterBack: changeToWhite,
+  onLeaveBack:changeToBlack
+});
+
+// banner trigger inspiration banner
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
+  trigger: inspBanner,
+  start: "-100px top",
+  // markers:true,
+  onEnter: changeToWhite,
+  onLeave: changeToBlack,
+  onEnterBack: changeToWhite,
+  onLeaveBack:changeToBlack
+});
+
+
+// banner trigger inspiration banner
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
+  trigger: inspBanner,
+  start: "-100px top",
+  // markers:true,
+  onEnter: changeToWhite,
+  onLeave: changeToBlack,
+  onEnterBack: changeToWhite,
+  onLeaveBack:changeToBlack
+});
+
+
+
+// banner trigger inspiration banner
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
+  trigger: itemBanner,
+  start: "-100px top",
+  // markers:true,
+  onEnter: changeToWhite,
+  onLeave: onlyRightToBlack,
+  onEnterBack: changeToWhite,
+  onLeaveBack:onlyRightToWhite,
+});
+
+
+// advantage image trigger for only right side of the nav
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
+  trigger: advantageTrigger,
+  start: "-50px top",
+  // markers:true,
+  onEnter: onlyRightToWhite,
+  onLeave: onlyRightToBlack,
+  onEnterBack: onlyRightToWhite,
+  onLeaveBack:onlyRightToBlack
+});
+
+// color consultancy image trigger for only right side of the nav
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
+  trigger: consultancyTrigger,
+  start: "-50px top",
+  // markers:true,
+  onEnter: onlyRightToWhite,
+  onLeave: onlyRightToBlack,
+  onEnterBack: onlyRightToWhite,
+  onLeaveBack:onlyRightToBlack
+});
+
+//  // plan trigger 
+//  ScrollTrigger.create({
+//   trigger: "#plan",
+//   start: "-50px top",
+//   onEnter: changeToBlack,
+//   // onLeave: changeToBlack,
+//   // onEnterBack: changeToWhite,
+//   onLeaveBack:changeToWhite
+// });
+
+ // flow trigger 
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
+  trigger: "#flow",
+  start: "-50px top",
+  onEnter: changeToBlack,
+  onLeaveBack:changeToWhite
+});
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.163cb2f079a04c995448.js.map
+//# sourceMappingURL=main.c41e5e0f401818c3d264.js.map
