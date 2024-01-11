@@ -40,6 +40,14 @@ header {
   padding: 6.92px 50.2px 9px 50px;
   width: 170px;
 }
+
+@media screen and (max-width:768px){
+  header{
+    padding: 0 20px 90px;
+    top: 20px;
+  }
+}
+
 /*----------------------------------
    Header Margins
    ヘッダーのパディング
