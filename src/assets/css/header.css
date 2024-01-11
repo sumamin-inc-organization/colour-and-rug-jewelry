@@ -133,3 +133,10 @@ main{
 .header-tel_img {
   /* fill: #fff; */
 }
+
+.kv_bottom{
+  /* border: 1px solid red; */
+}
+.sticking{
+  background-color: red;
+}

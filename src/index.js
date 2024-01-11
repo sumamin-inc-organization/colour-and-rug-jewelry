@@ -20,6 +20,8 @@ import "./assets/css/form.css";
 import "./assets/css/footer.css";
 import "./assets/css/common/banner.css";
 import "./assets/css/animations.css";
+import iconWhite from './assets/images/nav/icon_tel-white.svg';
+import iconBlack from './assets/images/nav/icon_tel.svg';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -415,3 +417,66 @@ function animateleft(){
 }
 
 
+const headerTel = document.querySelector('.header-tel_img');
+
+const header = document.getElementById('header');
+const newplan = document.querySelectorAll('#newplan');
+
+// dark backgrounds
+function changeTimeToWhite(){
+  gsap.to('.time',{color:"white"});
+}
+function changeTelToWhite(){
+  gsap.to('.change',{color:"white"});
+}
+function changeHeadDecorToWhite(){
+  gsap.to('.header-decor',{backgroundColor:"white"});
+}
+function changeLogoToBlack(){
+  gsap.to('.logo',{filter:" invert(1)"});
+}
+
+function changeToWhite(){
+  headerTel.src = iconWhite;
+  changeTimeToWhite();
+  changeTelToWhite();
+  changeHeadDecorToWhite();
+  changeLogoToBlack();
+}
+
+// light backgrounds
+
+function changeTimeToBlack(){
+  gsap.to('.time',{color:"black"});
+}
+function changeTelToBlack(){
+  gsap.to('.change',{color:"black"});
+}
+function changeHeadDecorToBlack(){
+  gsap.to('.header-decor',{backgroundColor:"black"});
+}
+function changeLogoToWhite(){
+  gsap.to('.logo',{filter:" invert(0)"});
+}
+
+function changeToBlack(){
+  headerTel.src = iconBlack;
+  changeTimeToBlack();
+  changeTelToBlack();
+  changeHeadDecorToBlack();
+  changeLogoToWhite();
+}
+
+
+ScrollTrigger.create({
+  trigger: newplan,
+  start: "top top",
+  onEnter: changeToWhite,
+  onLeave: changeToBlack,
+  onEnterBack: changeToWhite,
+  onLeaveBack:changeToBlack
+});
+
+
+
+// navObserver.observe(blackbg[0]);
