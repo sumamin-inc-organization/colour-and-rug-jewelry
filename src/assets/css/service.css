@@ -1,7 +1,10 @@
 .service-container{
   background-image: url(../images/service/newplan_bkg.jpg);
-  background-attachment: fixed;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+  background-attachment: fixed !important;
   background-position: center top;
 }
 #service {

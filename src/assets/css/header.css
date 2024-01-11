@@ -10,7 +10,7 @@
 header {
   /* border: 1px solid red; */
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 30px;
   display: flex;
   justify-content: space-between;
@@ -120,4 +120,8 @@ header {
     width: 53.17px;
     height: 60px;
   }
+}
+
+main{
+  /* border: 1px solid red; */
 }
