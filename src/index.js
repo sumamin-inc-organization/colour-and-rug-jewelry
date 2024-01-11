@@ -424,6 +424,9 @@ const newplan = document.querySelectorAll('#newplan');
 const kv = document.querySelector('.kv-trigger');
 const inspBanner = document.querySelector('.insp-banner-trigger');
 const itemBanner =document.querySelector('.item-banner-trigger');
+const advantageTrigger = document.querySelector('.advantage-trigger');
+const consultancyTrigger = document.querySelector('.consultancy-trigger');
+
 
 // dark backgrounds
 function changeTimeToWhite(){
@@ -470,6 +473,23 @@ function changeToBlack(){
   changeLogoToBlack();
 }
 
+function onlyRightToWhite(){
+  headerTel.src = iconWhite;
+  changeTimeToWhite();
+  changeTelToWhite();
+  changeHeadDecorToWhite();
+}
+function onlyRightToBlack(){
+  headerTel.src = iconBlack;
+  changeTimeToBlack();
+  changeTelToBlack();
+  changeHeadDecorToBlack();
+}
+
+
+
+// triggers
+
 //trigger for logo when it htis the end of the kv
 ScrollTrigger.create({
   trigger: kv,
@@ -508,7 +528,7 @@ ScrollTrigger.create({
 ScrollTrigger.create({
   trigger: inspBanner,
   start: "-100px top",
-  markers:true,
+  // markers:true,
   onEnter: changeToWhite,
   onLeave: changeToBlack,
   onEnterBack: changeToWhite,
@@ -521,9 +541,32 @@ ScrollTrigger.create({
 ScrollTrigger.create({
   trigger: itemBanner,
   start: "-100px top",
-  markers:true,
+  // markers:true,
   onEnter: changeToWhite,
   // onLeave: changeToBlack,
   onEnterBack: changeToWhite,
   // onLeaveBack:changeToBlack
+});
+
+
+// advantage image trigger for only right side of the nav
+ScrollTrigger.create({
+  trigger: advantageTrigger,
+  start: "-50px top",
+  markers:true,
+  onEnter: onlyRightToWhite,
+  onLeave: onlyRightToBlack,
+  onEnterBack: onlyRightToWhite,
+  onLeaveBack:onlyRightToBlack
+});
+
+// color consultancy image trigger for only right side of the nav
+ScrollTrigger.create({
+  trigger: consultancyTrigger,
+  start: "-50px top",
+  markers:true,
+  onEnter: onlyRightToWhite,
+  onLeave: onlyRightToBlack,
+  onEnterBack: onlyRightToWhite,
+  onLeaveBack:onlyRightToBlack
 });
