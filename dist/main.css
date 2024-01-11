@@ -356,26 +356,11 @@ a{
 /* ------------------- */
 
 /*----------------------------
-  Font weight /フォントの太さ 
-----------------------------*/
-.light {
-  /* ライト */
-  font-weight: 300;
-}
-.regular {
-  /* レギュラー */
-  font-weight: 400;
-}
-.medium {
-  /* ミディアム */
-  font-weight: 500;
-}
-
-/*----------------------------
     Font Style /フォントのスタイル 
   ----------------------------*/
 .font-roboto {
   font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 .font-zenkaku {
   font-family: "Zen Kaku Gothic New", sans-serif;
@@ -391,6 +376,15 @@ a{
 }
 .font-josefin {
   font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+}
+
+/*----------------------------
+  Font weight /フォントの太さ 
+----------------------------*/
+.medium {
+  /* ミディアム */
+  font-weight: 500;
 }
 
 /*----------------------------
@@ -1012,7 +1006,7 @@ justify-content: center;
 
 .kv_top .kv_title {
   width: 39.1vw;
-  margin-top: 9.3vw;
+  margin-top: 10.5vw;
   margin-right: 4.39vw;
 }
 
@@ -1123,6 +1117,8 @@ justify-content: center;
   background-size: cover;
   background-attachment: fixed !important;
   background-position: center top;
+  background-repeat: no-repeat;
+  position: relative;
 }
 #service {
   background-color: rgba(226, 208, 202, 0.8);
@@ -1269,7 +1265,7 @@ justify-content: center;
 
 @media (max-width: 768px) {
   #service{
-    padding: 50px 0 80px;
+    padding: 73px 0 80px;
   }
   .service_content{
     padding: 20px 20px 60px;
@@ -1297,7 +1293,6 @@ justify-content: center;
     width: 100%;
     height: 160px;
     padding: 35px 0 20px;
-
   }
   .arrow_down img{
     width: 40px;
@@ -1339,7 +1334,7 @@ Recommended Top
 .rc_top p {
   text-align: justify;
   line-height: 40px;
-  padding-top: 70px;
+  padding-top: 40px;
   padding-right: 70px;
 }
 
@@ -1359,7 +1354,7 @@ Recommended Bottom
 }
 
 .rc_list {
-  background-color: #efe3e0;
+  background-color: #E2D0CA;
   padding: 79px 93px 77px 0;
   width: 65.8%;
   display: flex;
@@ -1432,7 +1427,7 @@ Recommended Bottom
     grid-column: 2;
   }
   .rc_top p {
-  padding-right: 0;
+  padding: 0;
   line-height: 30px;
   }
   #recommended {
@@ -1466,7 +1461,7 @@ Recommended Bottom
     left: 0;
     padding: 0;
     padding-top:6.25em ;
-    padding: 6em 60.85px 57px 41px;
+    padding: 6em 45px 57px 41px;
     padding-left: 0; 
     display: grid;
     place-content: center;
@@ -1488,8 +1483,6 @@ Recommended Bottom
     position: relative;
     margin-top: 20px;
     padding-left: 30px;
-    text-wrap: nowrap;
-    margin-left: 10.77vw; 
   }
   
   .rc_list li:first-child {
@@ -2095,6 +2088,9 @@ Recommended Bottom
     width: 100vw;
     justify-self: center;
   }
+  .consultancy-img_wrapper img {
+    height: 100%;
+  }
 }
 
 /*------------------------------------------
@@ -2235,9 +2231,6 @@ Recommended Bottom
   }
   #item {
     padding-top: 79px;
-  }
-  .item-banner{
-    margin-top: 55px !important;
   }
   .item_img{
     margin-top: 75px;
@@ -2567,21 +2560,18 @@ Recommended Bottom
   --beforeAnimation: 0;
   display: flex;
   flex-direction: column;
-  gap: 37.4px;
-  /* border-bottom: 1px solid #e1c5bf; */
+  gap: 40px;
   position: relative;
 }
 
 .faq::after{
   width: var(--beforeAnimation);
   content: "";
-  /* width: 100%; */
   height: 1px;
   background-color: #E3E3E3 ;
   position: absolute;
   bottom: 0;
 }
-
 
 .question {
   display: flex;
@@ -2600,7 +2590,7 @@ Recommended Bottom
 }
 
 .faq-container .faq:not(:first-child) {
-  margin-top: 41.4px;
+  margin-top: 40px;
 }
 .answer {
   max-height: 0px;
@@ -2609,7 +2599,7 @@ Recommended Bottom
 
 .faq.active .answer {
   max-height: 300px;
-  padding-bottom: 70px;
+  padding-bottom: 45px;
   animation: fade 500ms ease-in-out;
   line-height: 2;
 }
@@ -2737,7 +2727,7 @@ Recommended Bottom
 
 
 .contact-title{
-    margin-bottom: 85px;
+    margin-bottom: 25px;
 }
 
 .contact-main{
@@ -2762,12 +2752,10 @@ Recommended Bottom
     grid-column: 1/3;
 }
 .cont-left{
-    /* grid-column: 1/2; */
     min-height: 294px;
     min-width: 277px;
 }
 .cont-right{
-    /* grid-column: 2/3; */
     min-height: 294px;
     min-width: 237px;
 
@@ -2818,8 +2806,8 @@ Recommended Bottom
     margin-bottom: 11px;
 }
 
-.contact-bottom_info{
-    /* margin-bottom: 24px; */
+.contact-about_title{
+    letter-spacing: 0.1rem;
 }
 
 /*----------------------------
@@ -2852,13 +2840,13 @@ Recommended Bottom
     row-gap: 7px;
 }
 
-
 .bottom-btn{
+    padding-top: 10px;
     background-color: white;
     grid-column: 1/3;
     display: grid;
     place-content: center;
-   height: 80px;
+    height: 80px;
 }
 .bottom-btn:hover{
     cursor: pointer;
@@ -2919,6 +2907,7 @@ Recommended Bottom
         /* border: 1px solid red; */
     }
     .contact-top{
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
         row-gap: 10px;
@@ -2928,26 +2917,18 @@ Recommended Bottom
     .cont-top{
         grid-column: 1/3;
     }
-    .cont-left{
-        min-height: 180px;
-        min-width: 190px;
+    .cont-left,.cont-right{
+        height: auto;
+        width: 100%;
     }
-    .cont-right{
-        /* grid-column: 2/3; */
-        min-height: 180px;
-        min-width: 150px;
-    
-    }
-    
     .cont-bottom-img{
         display: flex;
         gap: 10px;
+        width: 100%;
     }
-    
-    
- }
+}
 
- /*----------------------------------------
+/*----------------------------------------
     Right Side  ==> Bottom Side (mobile)
     右側 ==> 下側（モバイル）
 ------------------------------------------*/
@@ -2968,14 +2949,24 @@ Recommended Bottom
         padding: 7px 48.5px 9px 49.5px ;
     }
     .contact-bottom_info{
-        margin-bottom: 29px;
+        margin-bottom: 45px;
+    }
+    .cont-bottom-btn_data{
+        flex-flow: column;
+    }
+    .bottom-btn{
+        height: auto;
+        padding: 15px 0;
     }
 }
 
-
 @media(max-width:500px){
+    .contact-about_title{
+        letter-spacing: 0;
+    }
     .cont-title-left{
         font-size: 14px;
+        margin-right: 10px;
     }
     .cont-title-right{
         font-size: 16px;
@@ -3144,7 +3135,7 @@ footer a:hover{
 ----------------------------*/
 .banner-wrapper {
   padding: 0;
-  margin: 74.3px auto;
+  margin: 70px auto;
   width: 60vw;
 }
 
@@ -3186,6 +3177,8 @@ footer a:hover{
 }
 
 .banner_title {
+  color: #fff;
+  font-size: 56px;
   letter-spacing: 5px;
 }
 
@@ -3224,7 +3217,7 @@ footer a:hover{
     background: url(./images/banner_sp.jpg);
     background-size: cover;
     overflow: hidden;
-    margin-top: 140px;
+    margin-top: 80px;
   }
 }
 

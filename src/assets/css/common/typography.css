@@ -3,26 +3,11 @@
 /* ------------------- */
 
 /*----------------------------
-  Font weight /フォントの太さ 
-----------------------------*/
-.light {
-  /* ライト */
-  font-weight: 300;
-}
-.regular {
-  /* レギュラー */
-  font-weight: 400;
-}
-.medium {
-  /* ミディアム */
-  font-weight: 500;
-}
-
-/*----------------------------
     Font Style /フォントのスタイル 
   ----------------------------*/
 .font-roboto {
   font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 .font-zenkaku {
   font-family: "Zen Kaku Gothic New", sans-serif;
@@ -38,6 +23,15 @@
 }
 .font-josefin {
   font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+}
+
+/*----------------------------
+  Font weight /フォントの太さ 
+----------------------------*/
+.medium {
+  /* ミディアム */
+  font-weight: 500;
 }
 
 /*----------------------------
