@@ -419,11 +419,6 @@ function animateleft(){
 
 const closeBtn_sp =document.querySelector('.close-popup-btn_sp');
 
-// inspirationBtn.addEventListener('click',(e)=>{
-//   e.preventDefault;
-//   modal.style.display = "block";
-//   animateleft()
-// })
 closeBtn_sp.addEventListener('click',(e)=>{
   modal.style.display = "none";
 })
@@ -470,7 +465,7 @@ function changeTelToBlack(){
   gsap.to('.change',{color:"black"});
 }
 function changeHeadDecorToBlack(){
-  gsap.to('.header-decor',{backgroundColor:"black"});
+  gsap.to('.header-decor',{backgroundColor:"#45484b"});
 }
 function changeLogoToWhite(){
   gsap.to('.logo',{filter:" invert(0)"});
