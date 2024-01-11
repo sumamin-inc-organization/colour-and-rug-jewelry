@@ -10347,10 +10347,11 @@ function closeNav(){
   intro
 .to('.transition-item',{y:'0',delay:2})
 .to('.transition-item-white',{y:'0'})
-.set('.transition-item',{y:'100%'})
+.set('.transition-item',{y:'-100%'})
 .set('.transition-img',{opacity:0})
-.set('.transition-img',{x:"100%"})
+.set('.transition-img',{x:"100%" ,})
 .to('.transition-item-white',{y:'-100%'})
+.to('.transition-item-white',{display:"none"})
 })
 
 
@@ -10381,6 +10382,16 @@ function animateleft(){
   // .from(".animate-text",{opacity:0});
 }
 
+const closeBtn_sp =document.querySelector('.close-popup-btn_sp');
+
+// inspirationBtn.addEventListener('click',(e)=>{
+//   e.preventDefault;
+//   modal.style.display = "block";
+//   animateleft()
+// })
+closeBtn_sp.addEventListener('click',(e)=>{
+  modal.style.display = "none";
+})
 
 const headerTel = document.querySelector('.header-tel_img');
 
@@ -10557,4 +10568,4 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
 
 /******/ })()
 ;
-//# sourceMappingURL=main.c41e5e0f401818c3d264.js.map
+//# sourceMappingURL=main.814e86a08d2faabd6824.js.map
