@@ -170,7 +170,7 @@
        flex-direction: column;
     }
     .contact-title{
-        margin-bottom: 50px;
+        margin-bottom: 0;
     }
     #contact{
         padding-top: 80px;

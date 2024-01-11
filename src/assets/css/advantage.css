@@ -9,21 +9,21 @@
     width: 96vw;
 }
 .advantage_text{
-    margin-top: 80px;
+    padding-top: 20px;
     line-height: 2.5;
 }
 .advantage_top_img{
     width: 200vw;
 }
 .advantage_top_img img{
-    height: 600px;
+    height: 670px;
     width: 100%;
     object-fit: cover;
 }
 .advantage_flex{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     gap: 50px;
 }
 .warm,.relaxed{
@@ -102,7 +102,7 @@
 @media (max-width: 1200px) {
     .advantage_top{
         width: 95vw;
-        gap: 50px;
+        gap: 0;
     }
     #advantage .sec_title{
         font-size: 28px;
@@ -128,7 +128,6 @@
         flex-flow: column;
         align-items: start;
         padding: 80px 0 55px;
-        gap: 50px;
         justify-content: start;
         width: 100%;
     }
@@ -143,7 +142,7 @@
         font-size: 22px;
     }
     .advantage_text{
-        margin-top: 0;
+        padding-top: 45px;
         line-height: 2;
     }
     .advantage_flex{

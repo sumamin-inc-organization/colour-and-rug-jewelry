@@ -19,7 +19,7 @@ Recommended Top
 .rc_top p {
   text-align: justify;
   line-height: 40px;
-  margin-top: 53px;
+  padding-top: 70px;
   padding-right: 70px;
 }
 
@@ -112,7 +112,7 @@ Recommended Bottom
     grid-column: 2;
   }
   .rc_top p {
-  padding: 0;
+  padding-right: 0;
   line-height: 30px;
   }
   #recommended {

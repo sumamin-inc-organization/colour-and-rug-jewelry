@@ -230,28 +230,6 @@ a{
   right: 0;
   z-index: 3;
 }
-/*----------------------------
-    Responsive 
-    レスポンシブ
-----------------------------*/
-
-/* スクリーン幅が768px未満のデバイスでのみ表示 */
-.mobile-only {
-  display: none;
-}
-/* スクリーン幅が768pxより大きいデバイスでのみ表示 */
-.pc-only {
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .mobile-only {
-    display: block;
-  }
-  .pc-only {
-    display: none;
-  }
-}
 
 /*----------------------------
     company_name 
@@ -327,14 +305,19 @@ a{
 .sp_425{
   display: none;
 }
-@media(max-width:768px){
-    .mobile-only{
-        display: block;
-    }
 
-    .pc-only{
-        display: none;
-    }
+@media(max-width:768px){
+  .mobile-only{
+    display: block;
+  }
+  .pc-only{
+    display: none;
+  }
+  /* SPテキストのみ左右30pxのpadding */
+  .sp_padding{
+    width: 85vw;
+    margin: auto !important;
+  }
 }
 @media (max-width:425px){
   .sp_425{
@@ -396,11 +379,11 @@ a{
 }
 .font-zenkaku {
   font-family: "Zen Kaku Gothic New", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 .font-zenold {
   font-family: "Zen Old Mincho", serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 .font-bellefair {
   font-family: "Bellefair", serif;
@@ -409,7 +392,6 @@ a{
 .font-josefin {
   font-family: 'Josefin Sans', sans-serif;
 }
-
 
 /*----------------------------
     Font Sizes / フォントサイズ
@@ -467,19 +449,15 @@ a{
 .white {
   color: #ffffff;
 }
-
 .gray {
-  color: #3e3a39;
+  color: #45484B;
 }
-
 .light-gray {
   color: #b8b7b6;
 }
-
 .brown {
   color: #c38c80;
 }
-
 .black {
   color: black;
 }
@@ -493,7 +471,7 @@ a{
   font-size: 30px;
   line-height: 1.7;
   letter-spacing: 0.15rem;
-  margin-top: 30px;
+  padding-bottom: 60px;
 }
 
 .sec_title_en{
@@ -502,6 +480,7 @@ a{
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 2.5px;
+  padding-bottom: 30px;
 }
 
 /* ------------------- */
@@ -517,15 +496,16 @@ a{
    mobile -> 22px */
   .sec_title{
     font-size: 22px;
-    margin-top: 20px;
+    padding-bottom: 45px;
+    letter-spacing: 0.01rem;
   }
   /* PC     -> 16px 
    mobile -> 14px */
   .sec_title_en {
     font-size: 14px;
+    padding-bottom: 20px;
   }
 }
-
 
 .letter-spacing-30{
   letter-spacing: 0.06em;
@@ -1021,7 +1001,7 @@ justify-content: center;
   display: flex;
   justify-content: space-between;
   align-items: end;
-  margin-top: -23%;
+  margin-top: -21%;
   padding-bottom: 140px;
 }
 
@@ -1104,7 +1084,6 @@ justify-content: center;
         font-size: 16px;
         line-height: 2rem;
         width: 100%;
-        max-width: 95%;
         margin-bottom: 45px;
     }
     .kv_bottom .kv_02{
@@ -1125,14 +1104,12 @@ justify-content: center;
 }
 #service {
   background-color: rgba(226, 208, 202, 0.8);
-  padding: 110px 0;
-  padding-top: 128px;
+  padding: 128px 0 140px;
   text-align: center;
 }
 .service_text {
   line-height: 2.5;
   letter-spacing: 0.1rem;
-  margin-top: 65px;
   color: black;
 }
 .service_flex {
@@ -1290,7 +1267,6 @@ justify-content: center;
   .service_text{
     line-height: 1.9;
     text-align: left;
-    margin-top: 45px;
   }
   .service_text_br{
     display: none;
@@ -1341,7 +1317,7 @@ Recommended Top
 .rc_top p {
   text-align: justify;
   line-height: 40px;
-  margin-top: 53px;
+  padding-top: 70px;
   padding-right: 70px;
 }
 
@@ -1427,29 +1403,19 @@ Recommended Bottom
 
 @media (max-width:768px){
   .rc_top {
-    display: grid;
+    display: block;
     grid-template-columns: 1fr 90% 1fr;
   }
   .rec-top_wrapper{
     grid-column: 2;
   }
   .rc_top p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
+  padding-right: 0;
   line-height: 30px;
-  width: 95%;
-  grid-column: 2;
   }
   #recommended {
     background-color: #fff;
     padding: 80px 0 450px;
-  }
-
-  /* メインのグリッドとモバイルセクションのデザインが合わないため、パディングを追加しました。 */
-  .rc_top h2,.rc_top span,.rc_top p {
-    padding-left: 2.82vw;
   }
 }
 
@@ -1540,14 +1506,9 @@ Recommended Bottom
     マージンとパディング
 ----------------------------*/
 .inspiration-container {
-  padding-top: 81.2px;
-  padding-bottom: 67px;
+  padding: 80px 0;
   border-top: 1px solid #969493;
   border-bottom: 1px solid #969493;
-}
-
-.inspiration-eng {
-  margin-bottom: 32px;
 }
 .inspiration-jp {
   padding-left: 1px;
@@ -1730,8 +1691,6 @@ Recommended Bottom
     align-items: center;
     gap: 38px;
     margin-bottom: 19px;
-    margin-top: 32px;
-  
   }
   .indicators {
     display: flex;
@@ -1771,12 +1730,8 @@ Recommended Bottom
 ----------------------------*/
 
 @media (max-width:768px){
-  .inspiration-eng {
-    margin-bottom: 28px;
-  }
   .inspiration-container {
-    padding-top: 57px;
-    padding-bottom: 60px;
+    padding: 60px 0;
     border-top: 1px solid #969493;
     border-bottom: 1px solid #969493;
   }
@@ -1878,7 +1833,7 @@ Recommended Bottom
     width: 96vw;
 }
 .advantage_text{
-    margin-top: 80px;
+    padding-top: 20px;
     line-height: 2.5;
 }
 .advantage_top_img{
@@ -1971,7 +1926,7 @@ Recommended Bottom
 @media (max-width: 1200px) {
     .advantage_top{
         width: 95vw;
-        gap: 50px;
+        gap: 0;
     }
     #advantage .sec_title{
         font-size: 28px;
@@ -1997,7 +1952,6 @@ Recommended Bottom
         flex-flow: column;
         align-items: start;
         padding: 80px 0 55px;
-        gap: 50px;
         justify-content: start;
         width: 100%;
     }
@@ -2012,7 +1966,7 @@ Recommended Bottom
         font-size: 22px;
     }
     .advantage_text{
-        margin-top: 0;
+        padding-top: 45px;
         line-height: 2;
     }
     .advantage_flex{
@@ -2049,7 +2003,7 @@ Recommended Bottom
 
 #consultancy {
   margin-top: 67px;
-  row-gap: 47.9px;
+  row-gap: 78px;
 }
 .consultancy-top_jp {
   display: flex;
@@ -2123,7 +2077,7 @@ Recommended Bottom
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 40px;
+    gap: 0;
   }
   .consultancy-top_jp p{
     width: 100%;
@@ -2238,7 +2192,7 @@ Recommended Bottom
 ----------------------------*/
 @media (max-width:768px){
   .it_right {
-   margin-top: 45px;
+   margin-top: 0;
   }
   .it_right span {
     margin-top: 42px;
@@ -2274,7 +2228,6 @@ Recommended Bottom
     display: flex;
     justify-content: start;
     gap: 100px;
-    margin-top: 60px;
 }
 
 /* slide show */
@@ -2368,7 +2321,6 @@ Recommended Bottom
     .plan_content{
         flex-flow: column;
         gap: 50px;
-        margin-top: 45px;
         grid-column: 2;
     }
     .slide_show{
@@ -2460,7 +2412,7 @@ Recommended Bottom
 @media (max-width: 768px) {
     .flow_content{
         flex-flow: column;
-        gap: 50px;
+        gap: 0;
         margin: 60px 0 40px
     }
     .flow_column{
@@ -2498,6 +2450,9 @@ Recommended Bottom
   align-items: end;
   justify-content: space-between;
   margin-bottom: 70px;
+}
+.gallery_top h2{
+  padding-bottom: 0;
 }
 .follow_btn {
   display: flex;
@@ -2539,7 +2494,10 @@ Recommended Bottom
       margin: 35px 0 100px;
     }
     .gallery_top{
-      margin-bottom: 40px;
+      margin-bottom: 0;
+    }
+    .gallery_top h2{
+      padding-bottom: 45px;
     }
     .follow_btn{
       margin-right: 0;
@@ -2572,7 +2530,7 @@ Recommended Bottom
 }
 
 .faq-title {
-  margin-bottom: 94.7px;
+  margin-bottom: 26px;
 }
 
 .faq{
@@ -2621,7 +2579,7 @@ Recommended Bottom
 
 .faq.active .answer {
   max-height: 300px;
-  margin-bottom: 70px;
+  padding-bottom: 70px;
   animation: fade 500ms ease-in-out;
   line-height: 2;
 }
@@ -2657,8 +2615,8 @@ Recommended Bottom
 /* ------------------- */
 
 /*----------------------------
-   Responsive Typography 
-   レスポンシブなティポグラフィ
+  Responsive Typography 
+  レスポンシブなティポグラフィ
 ----------------------------*/
 
 @media (max-width:768px){
@@ -2670,8 +2628,8 @@ Recommended Bottom
 }
 
 /*----------------------------
-     Chevron Placements
-     シェブロンの配置
+  Chevron Placements
+  シェブロンの配置
 ----------------------------*/
 @media (max-width:768px){
   .question {
@@ -2729,10 +2687,10 @@ Recommended Bottom
     gap: 25px;
   }
   .faq-title{
-    margin-bottom: 55px;
+    margin-bottom: 10px;
   }
   .faq.active .answer{
-    margin-bottom: 25px;
+    padding-bottom: 25px;
   }
   .faq-container .faq:not(:first-child){
     margin-top: 30px;
@@ -2913,7 +2871,7 @@ Recommended Bottom
        flex-direction: column;
     }
     .contact-title{
-        margin-bottom: 50px;
+        margin-bottom: 0;
     }
     #contact{
         padding-top: 80px;

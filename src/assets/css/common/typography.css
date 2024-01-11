@@ -96,19 +96,15 @@
 .white {
   color: #ffffff;
 }
-
 .gray {
   color: #45484B;
 }
-
 .light-gray {
   color: #b8b7b6;
 }
-
 .brown {
   color: #c38c80;
 }
-
 .black {
   color: black;
 }
@@ -122,7 +118,7 @@
   font-size: 30px;
   line-height: 1.7;
   letter-spacing: 0.15rem;
-  padding-top: 30px;
+  padding-bottom: 60px;
 }
 
 .sec_title_en{
@@ -131,6 +127,7 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 2.5px;
+  padding-bottom: 30px;
 }
 
 /* ------------------- */
@@ -146,13 +143,14 @@
    mobile -> 22px */
   .sec_title{
     font-size: 22px;
-    padding-top: 20px;
+    padding-bottom: 45px;
     letter-spacing: 0.01rem;
   }
   /* PC     -> 16px 
    mobile -> 14px */
   .sec_title_en {
     font-size: 14px;
+    padding-bottom: 20px;
   }
 }
 

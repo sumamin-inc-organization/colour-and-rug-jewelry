@@ -50,7 +50,7 @@ a{
 
 .black-btn {
   border: none;
-  background-color: #3E3A39;
+  background-color: #45484B;
   position: relative;
 }
 
@@ -197,10 +197,6 @@ a{
   /* SPテキストのみ左右30pxのpadding */
   .sp_padding{
     width: 85vw;
-    margin: auto !important;
-  }
-  .sp_padding_ingrid{
-    width: 80vw;
     margin: auto !important;
   }
 }

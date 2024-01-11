@@ -101,7 +101,7 @@
 ----------------------------*/
 @media (max-width:768px){
   .it_right {
-   margin-top: 45px;
+   margin-top: 0;
   }
   .it_right span {
     margin-top: 42px;

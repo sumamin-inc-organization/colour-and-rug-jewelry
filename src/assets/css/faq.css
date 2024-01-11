@@ -7,7 +7,7 @@
 }
 
 .faq-title {
-  margin-bottom: 94.7px;
+  margin-bottom: 26px;
 }
 
 .faq{
@@ -56,7 +56,7 @@
 
 .faq.active .answer {
   max-height: 300px;
-  margin-bottom: 70px;
+  padding-bottom: 70px;
   animation: fade 500ms ease-in-out;
   line-height: 2;
 }
@@ -92,8 +92,8 @@
 /* ------------------- */
 
 /*----------------------------
-   Responsive Typography 
-   レスポンシブなティポグラフィ
+  Responsive Typography 
+  レスポンシブなティポグラフィ
 ----------------------------*/
 
 @media (max-width:768px){
@@ -105,8 +105,8 @@
 }
 
 /*----------------------------
-     Chevron Placements
-     シェブロンの配置
+  Chevron Placements
+  シェブロンの配置
 ----------------------------*/
 @media (max-width:768px){
   .question {
@@ -164,10 +164,10 @@
     gap: 25px;
   }
   .faq-title{
-    margin-bottom: 55px;
+    margin-bottom: 10px;
   }
   .faq.active .answer{
-    margin-bottom: 25px;
+    padding-bottom: 25px;
   }
   .faq-container .faq:not(:first-child){
     margin-top: 30px;
