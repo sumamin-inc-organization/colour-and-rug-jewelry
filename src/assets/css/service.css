@@ -6,14 +6,12 @@
 }
 #service {
   background-color: rgba(226, 208, 202, 0.8);
-  padding: 110px 0;
-  padding-top: 128px;
+  padding: 128px 0 140px;
   text-align: center;
 }
 .service_text {
   line-height: 2.5;
   letter-spacing: 0.1rem;
-  margin-top: 65px;
   color: black;
 }
 .service_flex {
@@ -171,7 +169,6 @@
   .service_text{
     line-height: 1.9;
     text-align: left;
-    margin-top: 45px;
   }
   .service_text_br{
     display: none;
