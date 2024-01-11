@@ -111,28 +111,6 @@ a{
   right: 0;
   z-index: 3;
 }
-/*----------------------------
-    Responsive 
-    レスポンシブ
-----------------------------*/
-
-/* スクリーン幅が768px未満のデバイスでのみ表示 */
-.mobile-only {
-  display: none;
-}
-/* スクリーン幅が768pxより大きいデバイスでのみ表示 */
-.pc-only {
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .mobile-only {
-    display: block;
-  }
-  .pc-only {
-    display: none;
-  }
-}
 
 /*----------------------------
     company_name 
@@ -208,11 +186,16 @@ a{
 .sp_425{
   display: none;
 }
+
+/* SPテキストのみ左右30pxのpadding */
+.sp_padding{
+  width: 90%;
+}
+
 @media(max-width:768px){
     .mobile-only{
         display: block;
     }
-
     .pc-only{
         display: none;
     }
@@ -236,3 +219,12 @@ a{
 .inline-block{
   display: inline-block;
 }
+
+.display-none{
+  display: none;
+}
+
+.opacity-0{
+  opacity: 0;
+}
+

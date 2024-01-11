@@ -355,6 +355,16 @@ a{
 .inline-block{
   display: inline-block;
 }
+
+.display-none{
+  display: none;
+}
+
+.opacity-0{
+  opacity: 0;
+}
+
+
 /*!****************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/typography.css ***!
   \****************************************************************************************/
@@ -400,14 +410,21 @@ a{
   font-family: 'Josefin Sans', sans-serif;
 }
 
+
 /*----------------------------
     Font Sizes / フォントサイズ
   ----------------------------*/
+.fs-11{
+  font-size: 11px;
+}
 .fs-14 {
   font-size: 14px;
 }
 .fs-16 {
   font-size: 16px;
+}
+.fs-18{
+  font-size: 18px;
 }
 .fs-20 {
   font-size: 20px;
@@ -509,14 +526,478 @@ a{
   }
 }
 
+
+.letter-spacing-30{
+  letter-spacing: 0.06em;
+}
+
 /*!*****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/header.css ***!
   \*****************************************************************************/
+/* ------------------- */
+/* HEADER            */
+/* ------------------- */
 
+/*----------------------------------
+   Header alignment and positioning
+   ヘッダーの配置と位置合わせ
+------------------------------------*/
+
+header {
+  /* border: 1px solid red; */
+  width: 100%;
+  position: absolute;
+  top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 8001;
+}
+.header_right {
+  /* border: 1px solid green; */
+  height: 100%;
+  display: flex;
+  align-items: center
+}
+.header-btn {
+  display: grid;
+  place-content: center;
+}
+/*----------------------------------
+   Header Paddings
+   ヘッダーのパディング
+------------------------------------*/
+
+header {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+.header-btn {
+  padding: 6.92px 50.2px 9px 50px;
+  width: 170px;
+}
+/*----------------------------------
+   Header Margins
+   ヘッダーのパディング
+------------------------------------*/
+
+.header-tel_img {
+  margin-right: 12px;
+}
+
+.header-info {
+  margin-right: 24px;
+}
+.header-decor {
+  margin-right: 30px;
+}
+
+/*----------------------------------
+   Header Decor
+   ヘッダーデコレーション
+------------------------------------*/
+
+.header-decor {
+  width: 1px;
+  background-color: #45484b;
+}
+
+/*----------------------------------
+   Header Button
+   ヘッダーボタン
+------------------------------------*/
+
+.header-btn::after {
+    top: 14px;
+    right: 12px;
+  }
+
+/*----------------------------------
+   Header Heights
+   ヘッダー要素の高さ
+------------------------------------*/
+.header-info {
+    height: 40px;
+    /* border: 1px solid red; */
+
+  }
+  .header-btn {
+    height: 40px;
+  }
+  .header-decor {
+   height: 40px;
+  }
+
+
+/*----------------------------------
+   Header Typography
+   ヘッダーのタイポグラフィ
+------------------------------------*/
+.header-btn_p{
+    /* letter-spacing: 1.92px; */
+}
+.tel-number{
+    letter-spacing: 0.25px;
+    transform: translateY(-10px);
+}
+
+.tel-number a{
+  color: #45484B;
+}
+
+.time {
+    letter-spacing: 1.96px;
+    transform: translateY(-15px);
+}
+
+
+@media (max-width:500px) {
+  .logo{
+    width: 53.17px;
+    height: 60px;
+  }
+}
 /*!**************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/nav.css ***!
   \**************************************************************************/
+/* ------------------- */
+/*           NAV       */
+/* ------------------- */
 
+
+/*----------------------------------
+   Hamburger Menu
+    ハンバーガーメニュー
+------------------------------------*/
+
+.menu_icon {
+  width: 30.5px;
+  height: 19.5px;
+  margin: auto;
+  z-index: 10;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+    /* border: 1px solid blue; */
+    margin-left: 20px;
+    z-index: 9000;
+  }
+ .container:hover,
+ .menu_icon:hover{
+  cursor: pointer;
+ }
+  .menu_icon span {
+    position: absolute;
+    display: block;
+    height: 1px; /* Adjusted height for the spans */
+    width: 30.5px; /* Width remains the same */
+    transform: rotate(0);
+  }
+  .one,
+  .three {
+    background-color: black;
+  }
+  
+  .two {
+    width: 30.5px;
+    height: 5px;
+    z-index: 10;
+    position: relative;
+    display: flex;
+    background-color: none;
+  }
+  
+  .two span {
+    position: absolute;
+    display: block;
+    height: 1px;
+    width: 20px;
+    background-color: black;
+    transform: rotate(0);
+  }
+  
+  .two span:nth-child(2) {
+    right: 0;
+  }
+  
+  .two span:nth-child(1),
+  .two span:nth-child(2) {
+    transform: translateX(0);
+    transition: all 200ms 500ms ease;
+  }
+  
+  span.one {
+    top: 0px;
+    transition: all 200ms cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  }
+  
+  span.two {
+    top: 8.5px; /* Adjusted top position */
+    transition: all 400ms cubic-bezier(0.895, 0.03, 0.685, 1.92);
+  }
+  
+  span.three {
+    bottom: 0; /* Adjusted position to align at the bottom */
+    transition: all 500ms cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  }
+  
+  /* Adjusted styles for clicked state */
+  .clicked .one {
+    transform: translateY(12px) rotate(45deg); /* Adjusted translation and rotation */
+    background-color: white;
+  }
+  
+  .clicked .three {
+    transform: translateY(-7px) rotate(-45deg); /* Adjusted translation and rotation */
+    background-color: white;
+  }
+  
+  .clicked .two span:nth-child(1) {
+    transform: translateX(10px); /* Adjusted translation */
+    background-color: white;
+    opacity: 0;
+  }
+  
+  .clicked .two span:nth-child(2) {
+    transform: translateX(-10px); /* Adjusted translation */
+    background-color: white;
+    opacity: 0;
+  }
+
+  .hidden-span{
+    opacity:0 !important;
+  }
+
+/*----------------------------------
+   Main Nav(PC)
+   メインナビゲーション(PC)
+------------------------------------*/
+
+.primary-nav{
+  /* z-index: 7999; */
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  background-color:#45484B ;
+  width: 100vw;
+}
+
+.primary-nav_img{
+  width: 40vw;
+  height: 100vh;
+}
+.primary-nav_hero{
+  width: 100%;
+  height: 100%;
+}
+
+
+/*----------------------------------
+   Main Nav(PC)  - Nav Links
+   メインナビ(PC) - ナビゲーションリンク
+------------------------------------*/
+
+.primary-nav_list{
+ /* border: 1px solid red; */
+ width: 60vw;
+ display: grid;
+ padding: 95px 132.5px 102.8px 133.5px;
+}
+
+.primary-nav_reservation{
+  border: 1px solid white;
+  display: grid;
+  place-content: center;
+  row-gap: 60px;
+}
+
+.primary_book{
+  /* border: 1px solid green; */
+  padding: 14px 164.5px 16.4px 166.6px;
+}
+
+.primary_book::after{
+  top:24px;
+  right: 20px;
+}
+
+/* .nav-decor{
+  height: 1px;
+  width: 100%;
+  background-color: white;
+} */
+.primary-contact{
+  position: relative;
+}
+
+.primary-contact::before{
+  content: "";
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top:-30px;
+  left: 0;
+  background-color: white;
+}
+
+.nav-link{
+  /* border: 1px solid green; */
+  border-bottom: 1px solid white;
+  display: flex;
+  align-items: center;
+
+}
+.primary-nav_list{
+  grid-template-columns: 1fr 1fr;
+  column-gap: 60px;
+ }
+ 
+ .sns{
+  grid-column: 2;
+  /* border: 1px solid green; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+ }
+
+ .sns img{
+  width: 30px;
+  height: 30px;
+ }
+
+ .primary-nav_reservation{
+  grid-column: 1/3;
+ }
+
+
+ .primary-nav_transition{
+  position: fixed;
+  width: 100vw;
+  height: 100dvh;
+  background-color: black;
+  z-index: 8000;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+ }
+
+.primary-nav{
+  opacity: 0;
+}
+
+
+
+@media(max-width:768px){
+  .header-btn{
+    display: none;
+  }
+}
+
+/*----------------------------------
+   Main Nav(SP)
+   メインナビゲーション(SP)
+------------------------------------*/
+
+
+@media(max-width:768px) {
+  .primary-nav_list{
+    /* border: 1px solid red; */
+    width: 100vw;
+    height: 100dvh;
+    padding: 100px 40px 0px 40px;
+   }
+   .primary-nav_list{
+    display: flex;
+    flex-direction: column;
+  
+   }
+   .primary-nav_reservation{
+    display: none;
+   }
+   .nav-link{
+    padding-bottom: 16px;
+    padding-top: 16px;
+   }
+   .sns{
+    padding-top: 30px;
+   }
+}
+/*----------------------------------
+   Main Nav(SP)-bottom banner
+   メインナビゲーション(SP)-下部バナー
+------------------------------------*/
+.primary-nav-bottom_sp{
+/* border: 1px solid red; */
+position: fixed;
+bottom: 0;
+width: 100%;
+background-color: #FFFFFF;
+padding: 14.5px 25px 15px 25px;
+}
+
+.nav-bottom-inner{
+display: flex;
+/* border: 1px solid red; */
+align-items: center;
+justify-content: center;
+}
+.bottom-nav-btn{
+  /* border: 1px solid green; */
+  padding: 7.6px 44.6px 8.4px 47.4px;
+  height: 40px;
+  width: 160px;
+  display: grid;
+  place-content: center;
+}
+
+.bottom-nav-btn::after{
+  display: none;
+}
+
+.location-img{
+  width: 17.53px;
+  height: 24.41px;
+}
+
+.tel-img{
+  width: 18px;
+  height: 18px;
+}
+
+.location,
+.tel-no{
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  width: 70px;
+  height: 40px;
+  border-right: 1px solid #45484B;
+}
+
+.tel-no{
+  margin-right: 30px;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.primary-contact.bottom-btn{
+  background-color: transparent;
+}
+
+
+.tel.header-tel-white::before{
+  content: url(./images/tel-white.png);
+  width: 20px;
+  height: 20px;
+}
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/keyvisual.css ***!
   \********************************************************************************/
@@ -1316,6 +1797,72 @@ Recommended Bottom
   .inspiration-button.black-btn p{
     padding: 0;
   }
+}
+
+
+
+/*----------------------------
+  Pop Up Modal
+  ポップアップモーダル
+----------------------------*/
+
+.popup{
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9200;
+  background-color: #f6eeeb;
+  display: none;
+}
+.popup_inner{
+  display: flex;
+  gap: 80px;
+}
+.story{
+  height: 100dvh;
+  width: 50vw;
+  padding-top: 130px;
+  /* padding-right: 80px; */
+  /* border: 1px solid red; */
+  display: grid;
+  place-content: center;
+}
+.popup-heading{
+  width: 100%;
+  padding-right: 80px;
+  /* border: 1px solid green; */
+  margin-bottom: 30px;
+  line-height: 40px;
+}
+
+.popup-description{
+  width: 100%;
+  padding-right: 80px;
+  margin-top: 55px;
+  line-height: 40px;
+  /* border: 1px solid green; */
+}
+.popup-decor{
+  width: 100%;
+  height: 1px;
+  background-color: #45484B;
+}
+.close-popup-btn{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.popup-img{
+  width: 50vw;
+  height: 100%;
+}
+.close-popup-btn{
+  z-index: 100;
+}
+.close-popup-btn:hover{
+  cursor: pointer;
 }
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/advantage.css ***!
@@ -2432,6 +2979,9 @@ Recommended Bottom
     .cont-top_black{
         padding: 7px 48.5px 9px 49.5px ;
     }
+    .contact-bottom_info{
+        margin-bottom: 29px;
+    }
 }
 
 
@@ -2443,6 +2993,9 @@ Recommended Bottom
         font-size: 16px;
     }
 }
+
+
+
 /*!***************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/form.css ***!
   \***************************************************************************/
@@ -2732,6 +3285,89 @@ footer a:hover{
 }
 
 
+
+
+
+/*!*********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/animations.css ***!
+  \*********************************************************************************/
+/* width: 65vw; */
+
+.transition-img{
+    /* border: 1px solid red; */
+    width: 100vw;
+    height: 100dvh;
+    position: fixed;
+    z-index: 1000;
+    z-index: 9500;
+    /* background-image: url(../../images/animation/transition_bg.jpg) ; */
+    background-size: cover;
+    /* opacity: 0; */
+    background-color: #C38C80;
+}
+.transition-wrapper{
+    /* position: relative; */
+}
+.transition_bg{
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+   object-fit: cover;
+}
+
+.transition_logo{
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    z-index: 10;
+}
+.transition_title{
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 40vw;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 70px;
+}
+.transition-item{
+    width: 100vw;
+    height: 100dvh;
+    position: fixed;
+    z-index: 1001;
+    z-index: 9501;
+    background-color: #B9786A;
+    transform: translateY(100%);
+}
+.transition-item-white{
+    width: 100vw;
+    height: 100dvh;
+    position: fixed;
+    z-index: 1002;
+    z-index: 9502;
+    background-color: white;
+    transform: translateY(100%);
+}
+.main-container{
+    position: relative;
+    /* z-index: 1003; */
+    background-color: white;
+}
+
+.load-logo{
+    width: 15%;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@media(max-width:500px){
+    .load-logo{
+        width: 35%;
+    }
+}
 
 
 

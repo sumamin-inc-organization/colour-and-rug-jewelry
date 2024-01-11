@@ -265,3 +265,69 @@
     padding: 0;
   }
 }
+
+
+
+/*----------------------------
+  Pop Up Modal
+  ポップアップモーダル
+----------------------------*/
+
+.popup{
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9200;
+  background-color: #f6eeeb;
+  display: none;
+}
+.popup_inner{
+  display: flex;
+  gap: 80px;
+}
+.story{
+  height: 100dvh;
+  width: 50vw;
+  padding-top: 130px;
+  /* padding-right: 80px; */
+  /* border: 1px solid red; */
+  display: grid;
+  place-content: center;
+}
+.popup-heading{
+  width: 100%;
+  padding-right: 80px;
+  /* border: 1px solid green; */
+  margin-bottom: 30px;
+  line-height: 40px;
+}
+
+.popup-description{
+  width: 100%;
+  padding-right: 80px;
+  margin-top: 55px;
+  line-height: 40px;
+  /* border: 1px solid green; */
+}
+.popup-decor{
+  width: 100%;
+  height: 1px;
+  background-color: #45484B;
+}
+.close-popup-btn{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.popup-img{
+  width: 50vw;
+  height: 100%;
+}
+.close-popup-btn{
+  z-index: 100;
+}
+.close-popup-btn:hover{
+  cursor: pointer;
+}

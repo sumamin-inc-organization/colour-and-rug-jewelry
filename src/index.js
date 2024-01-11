@@ -19,6 +19,7 @@ import "./assets/css/contact.css";
 import "./assets/css/form.css";
 import "./assets/css/footer.css";
 import "./assets/css/common/banner.css";
+import "./assets/css/animations.css";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -291,3 +292,124 @@ let conttl = gsap.timeline({
 conttl
   .from(".contact-eng", { x: -50, opacity: 0, duration: 1 })
   .from(".contact-jp", { x: 50, opacity: 0, duration: 1 }, "-=0.8");
+
+
+  /*----------------------------
+    NAV Animations
+    Nav アニメーション
+----------------------------*/
+
+// hamburger
+
+let icon = document.querySelector(".menu_icon");
+let headerBtn = document.querySelector('.header-btn');
+const body = document.body;
+console.log(body)
+
+icon.addEventListener("click", () => {
+  animateHamburger()
+  console.log('clicked')
+});
+
+
+function animateHamburger(){
+  icon.classList.toggle("clicked");
+  if( icon.classList.contains("clicked")){
+    icon.setAttribute('aria-expanded', 'true');
+    openNav();
+  }
+  else{
+    icon.setAttribute('aria-expanded', 'false'); 
+    closeNav()
+  }
+}
+
+
+function openNav(){
+  let openAnim = gsap.timeline()
+  openAnim
+  // .to(body,{position:"fixed"})
+  .to('.primary-nav',{opacity:1,duration:1,zIndex:7999})
+  .fromTo(".header-btn", { opacity: 1 }, { opacity: 0 },"<")
+  .fromTo(".header-info", { opacity: 1 }, { opacity: 0 },"<")
+  .fromTo(".header-tel_img", { opacity: 1 }, { opacity: 0 },"<");
+
+  document.documentElement.style.overflow = 'hidden';
+  document.body.style.overflow = 'hidden';
+  
+  
+
+}
+
+
+function closeNav(){
+  let openAnim = gsap.timeline()
+  openAnim
+  .to('.primary-nav',{opacity:0,duration:1,zIndex:"-1"})
+  .fromTo(".header-info", { opacity: 0 }, { opacity: 1 },"<")
+  .fromTo(".header-btn", { opacity: 0 }, { opacity: 1 },"<")
+  .fromTo(".header-tel_img", { opacity: 0 }, { opacity: 1 },"<")
+  // .to(body,{position:"relative"})
+
+  document.body.style.overflow = 'auto';
+  document.documentElement.style.overflow = 'auto';
+  
+}
+
+
+ const navLinks = document.querySelectorAll('.nav-link');
+
+
+ navLinks.forEach(link =>{
+  link.addEventListener('click',(e)=>{
+    animateHamburger()
+    closeNav()
+  })
+ })
+
+
+
+  /*----------------------------
+   Page Loader
+  ページローダー
+----------------------------*/
+
+ document.addEventListener('DOMContentLoaded',(e)=>{
+  let intro = gsap.timeline()
+
+  intro
+.to('.transition-item',{y:'0',delay:2})
+.to('.transition-item-white',{y:'0'})
+.set('.transition-item',{y:'100%'})
+.set('.transition-img',{opacity:0})
+.set('.transition-img',{x:"100%"})
+.to('.transition-item-white',{y:'-100%'})
+})
+
+
+
+/*----------------------------
+  Pop Up Modal
+  ポップアップモーダル
+----------------------------*/
+
+const inspirationBtn = document.querySelector('[data-insp="1"]');
+const modal = document.querySelector('[data-story="1"]');
+const closeBtn =document.querySelector('.close-popup-btn');
+
+inspirationBtn.addEventListener('click',(e)=>{
+  e.preventDefault;
+  modal.style.display = "block";
+  animateleft()
+})
+closeBtn.addEventListener('click',(e)=>{
+  modal.style.display = "none";
+})
+
+function animateleft(){
+  let popimage =  gsap.timeline();
+  popimage
+  .from(".popup",{opacity:0,duration:0.5})
+  // .from(".story",{x:"100%"})
+  // .from(".animate-text",{opacity:0});
+}

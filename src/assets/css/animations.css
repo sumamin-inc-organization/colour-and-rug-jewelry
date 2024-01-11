@@ -1,0 +1,79 @@
+/* width: 65vw; */
+
+.transition-img{
+    /* border: 1px solid red; */
+    width: 100vw;
+    height: 100dvh;
+    position: fixed;
+    z-index: 1000;
+    z-index: 9500;
+    /* background-image: url(../../images/animation/transition_bg.jpg) ; */
+    background-size: cover;
+    /* opacity: 0; */
+    background-color: #C38C80;
+}
+.transition-wrapper{
+    /* position: relative; */
+}
+.transition_bg{
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+   object-fit: cover;
+}
+
+.transition_logo{
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    z-index: 10;
+}
+.transition_title{
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 40vw;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 70px;
+}
+.transition-item{
+    width: 100vw;
+    height: 100dvh;
+    position: fixed;
+    z-index: 1001;
+    z-index: 9501;
+    background-color: #B9786A;
+    transform: translateY(100%);
+}
+.transition-item-white{
+    width: 100vw;
+    height: 100dvh;
+    position: fixed;
+    z-index: 1002;
+    z-index: 9502;
+    background-color: white;
+    transform: translateY(100%);
+}
+.main-container{
+    position: relative;
+    /* z-index: 1003; */
+    background-color: white;
+}
+
+.load-logo{
+    width: 15%;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@media(max-width:500px){
+    .load-logo{
+        width: 35%;
+    }
+}
+
+

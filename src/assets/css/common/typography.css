@@ -40,14 +40,21 @@
   font-family: 'Josefin Sans', sans-serif;
 }
 
+
 /*----------------------------
     Font Sizes / フォントサイズ
   ----------------------------*/
+.fs-11{
+  font-size: 11px;
+}
 .fs-14 {
   font-size: 14px;
 }
 .fs-16 {
   font-size: 16px;
+}
+.fs-18{
+  font-size: 18px;
 }
 .fs-20 {
   font-size: 20px;
@@ -92,7 +99,7 @@
 }
 
 .gray {
-  color: #3e3a39;
+  color: #45484B;
 }
 
 .light-gray {
@@ -147,4 +154,9 @@
   .sec_title_en {
     font-size: 14px;
   }
+}
+
+
+.letter-spacing-30{
+  letter-spacing: 0.06em;
 }
