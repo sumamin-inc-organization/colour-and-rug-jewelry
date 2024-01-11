@@ -393,6 +393,7 @@ a{
   font-family: 'Josefin Sans', sans-serif;
 }
 
+
 /*----------------------------
     Font Sizes / フォントサイズ
   ----------------------------*/
@@ -507,6 +508,10 @@ a{
   }
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 .letter-spacing-30{
   letter-spacing: 0.06em;
 }
@@ -1098,8 +1103,11 @@ justify-content: center;
   \******************************************************************************/
 .service-container{
   background-image: url(./images/newplan_bkg.jpg);
-  background-attachment: fixed;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+  background-attachment: fixed !important;
   background-position: center top;
 }
 #service {
@@ -2412,7 +2420,7 @@ Recommended Bottom
 @media (max-width: 768px) {
     .flow_content{
         flex-flow: column;
-        gap: 0;
+        gap: 50px;
         margin: 60px 0 40px
     }
     .flow_column{
@@ -2687,10 +2695,10 @@ Recommended Bottom
     gap: 25px;
   }
   .faq-title{
-    margin-bottom: 10px;
+    margin-bottom: 55px;
   }
   .faq.active .answer{
-    padding-bottom: 25px;
+    margin-bottom: 25px;
   }
   .faq-container .faq:not(:first-child){
     margin-top: 30px;
@@ -2871,7 +2879,7 @@ Recommended Bottom
        flex-direction: column;
     }
     .contact-title{
-        margin-bottom: 0;
+        margin-bottom: 50px;
     }
     #contact{
         padding-top: 80px;
