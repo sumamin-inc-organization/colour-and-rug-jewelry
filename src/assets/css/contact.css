@@ -165,7 +165,11 @@
     content: url(../images/contact/tel-icon.png);
     margin-right: 7px;
 }
-
+@media (max-width:1200px){
+    .cont-bottom-btn_data{
+        flex-flow: column;
+    }
+}
 @media (max-width:1120px){
     .contact-top{
         width: 450px;
@@ -177,9 +181,6 @@
 @media (max-width:1000px){
     .contact-top{
         width: 360px;
-    }
-    .cont-bottom-btn_data{
-        flex-flow: column;
     }
     .bottom-btn{
         height: auto;
