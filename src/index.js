@@ -413,3 +413,5 @@ function animateleft(){
   // .from(".story",{x:"100%"})
   // .from(".animate-text",{opacity:0});
 }
+
+
