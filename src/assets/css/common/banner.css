@@ -15,10 +15,9 @@
     バナーのラッパー
 ----------------------------*/
 .banner-wrapper {
-  margin: 0;
   padding: 0;
-  margin-left: 23px;
-  margin: 74.3px 0;
+  margin: 74.3px auto;
+  width: 60vw;
 }
 
 /*----------------------------
@@ -143,6 +142,7 @@
     padding: 62.5px 0;
     padding-bottom: 60px;
     text-align: center;
+    width: 100%
   }
 }
 

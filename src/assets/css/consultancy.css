@@ -3,8 +3,8 @@
 /* ------------------- */
 
 #consultancy {
-  margin-top: 67px;
-  row-gap: 47.9px;
+  margin-top: 30px;
+  row-gap: 78px;
 }
 .consultancy-top_jp {
   display: flex;
@@ -25,7 +25,9 @@
 }
 .consultancy-img_wrapper img {
   width: 100%;
-  height: 100%;
+  height: 640px;
+  object-fit: cover;
+  object-position: top;
 }
 
 /* ------------------- */
@@ -78,7 +80,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 40px;
+    gap: 0;
   }
   .consultancy-top_jp p{
     width: 100%;

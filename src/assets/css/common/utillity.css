@@ -50,7 +50,7 @@ a{
 
 .black-btn {
   border: none;
-  background-color: #3E3A39;
+  background-color: #45484B;
   position: relative;
 }
 
@@ -110,28 +110,6 @@ a{
   transform: translateY(-50%);
   right: 0;
   z-index: 3;
-}
-/*----------------------------
-    Responsive 
-    レスポンシブ
-----------------------------*/
-
-/* スクリーン幅が768px未満のデバイスでのみ表示 */
-.mobile-only {
-  display: none;
-}
-/* スクリーン幅が768pxより大きいデバイスでのみ表示 */
-.pc-only {
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .mobile-only {
-    display: block;
-  }
-  .pc-only {
-    display: none;
-  }
 }
 
 /*----------------------------
@@ -208,14 +186,19 @@ a{
 .sp_425{
   display: none;
 }
-@media(max-width:768px){
-    .mobile-only{
-        display: block;
-    }
 
-    .pc-only{
-        display: none;
-    }
+@media(max-width:768px){
+  .mobile-only{
+    display: block;
+  }
+  .pc-only{
+    display: none;
+  }
+  /* SPテキストのみ左右30pxのpadding */
+  .sp_padding{
+    width: 85vw;
+    margin: auto !important;
+  }
 }
 @media (max-width:425px){
   .sp_425{

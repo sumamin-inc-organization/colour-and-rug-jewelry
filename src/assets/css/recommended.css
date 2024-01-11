@@ -19,7 +19,7 @@ Recommended Top
 .rc_top p {
   text-align: justify;
   line-height: 40px;
-  margin-top: 53px;
+  padding-top: 70px;
   padding-right: 70px;
 }
 
@@ -105,29 +105,19 @@ Recommended Bottom
 
 @media (max-width:768px){
   .rc_top {
-    display: grid;
+    display: block;
     grid-template-columns: 1fr 90% 1fr;
   }
   .rec-top_wrapper{
     grid-column: 2;
   }
   .rc_top p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
+  padding-right: 0;
   line-height: 30px;
-  width: 95%;
-  grid-column: 2;
   }
   #recommended {
     background-color: #fff;
     padding: 80px 0 450px;
-  }
-
-  /* メインのグリッドとモバイルセクションのデザインが合わないため、パディングを追加しました。 */
-  .rc_top h2,.rc_top span,.rc_top p {
-    padding-left: 2.82vw;
   }
 }
 

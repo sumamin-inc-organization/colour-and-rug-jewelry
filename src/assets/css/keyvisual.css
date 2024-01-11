@@ -18,7 +18,7 @@
   display: flex;
   justify-content: space-between;
   align-items: end;
-  margin-top: -23%;
+  margin-top: -21%;
   padding-bottom: 140px;
 }
 
@@ -101,7 +101,6 @@
         font-size: 16px;
         line-height: 2rem;
         width: 100%;
-        max-width: 95%;
         margin-bottom: 45px;
     }
     .kv_bottom .kv_02{
