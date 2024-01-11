@@ -465,7 +465,7 @@ function changeTelToBlack(){
   gsap.to('.change',{color:"black"});
 }
 function changeHeadDecorToBlack(){
-  gsap.to('.header-decor',{backgroundColor:"black"});
+  gsap.to('.header-decor',{backgroundColor:"#45484b"});
 }
 function changeLogoToWhite(){
   gsap.to('.logo',{filter:" invert(0)"});
