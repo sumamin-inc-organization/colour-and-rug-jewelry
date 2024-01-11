@@ -419,11 +419,6 @@ function animateleft(){
 
 const closeBtn_sp =document.querySelector('.close-popup-btn_sp');
 
-// inspirationBtn.addEventListener('click',(e)=>{
-//   e.preventDefault;
-//   modal.style.display = "block";
-//   animateleft()
-// })
 closeBtn_sp.addEventListener('click',(e)=>{
   modal.style.display = "none";
 })
