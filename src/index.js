@@ -516,7 +516,7 @@ ScrollTrigger.create({
 ScrollTrigger.create({
   trigger: inspBanner,
   start: "-100px top",
-  markers:true,
+  // markers:true,
   onEnter: changeToWhite,
   onLeave: changeToBlack,
   onEnterBack: changeToWhite,
@@ -543,9 +543,9 @@ ScrollTrigger.create({
   start: "-100px top",
   // markers:true,
   onEnter: changeToWhite,
-  // onLeave: changeToBlack,
+  onLeave: onlyRightToBlack,
   onEnterBack: changeToWhite,
-  // onLeaveBack:changeToBlack
+  onLeaveBack:onlyRightToWhite,
 });
 
 
@@ -553,7 +553,7 @@ ScrollTrigger.create({
 ScrollTrigger.create({
   trigger: advantageTrigger,
   start: "-50px top",
-  markers:true,
+  // markers:true,
   onEnter: onlyRightToWhite,
   onLeave: onlyRightToBlack,
   onEnterBack: onlyRightToWhite,
@@ -564,9 +564,27 @@ ScrollTrigger.create({
 ScrollTrigger.create({
   trigger: consultancyTrigger,
   start: "-50px top",
-  markers:true,
+  // markers:true,
   onEnter: onlyRightToWhite,
   onLeave: onlyRightToBlack,
   onEnterBack: onlyRightToWhite,
   onLeaveBack:onlyRightToBlack
+});
+
+//  // plan trigger 
+//  ScrollTrigger.create({
+//   trigger: "#plan",
+//   start: "-50px top",
+//   onEnter: changeToBlack,
+//   // onLeave: changeToBlack,
+//   // onEnterBack: changeToWhite,
+//   onLeaveBack:changeToWhite
+// });
+
+ // flow trigger 
+ScrollTrigger.create({
+  trigger: "#flow",
+  start: "-50px top",
+  onEnter: changeToBlack,
+  onLeaveBack:changeToWhite
 });
