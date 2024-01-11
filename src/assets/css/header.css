@@ -125,3 +125,11 @@ header {
 main{
   /* border: 1px solid red; */
 }
+
+.logo{
+  /* filter: invert(1); */
+}
+
+.header-tel_img {
+  /* fill: #fff; */
+}
