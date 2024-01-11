@@ -74,7 +74,7 @@ footer a:hover{
 
 @media (max-width: 768px) {
     footer{
-        padding: 60px 0;
+        padding: 60px 0 130px;
     }
     .footer_top{
         margin-bottom: 40px;
@@ -94,5 +94,31 @@ footer a:hover{
         gap: 10px;
         letter-spacing: 0.05rem;
     }
+
+    #fixed-footer{
+        z-index: 3000;
+        border-top: solid 1px #45484B;
+    }
+
+    #fixed-footer p{
+        letter-spacing: 0;
+    }
+
+    /* 最初は非表示 */
+    .fixed-footer{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(50px);
+        transition: opacity 0.5s,visibility 0.5s, transform 0.5s;
+    }
+
+    /*このクラスが付与されると表示する*/
+    .active{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+    }
+
+    
 }
 

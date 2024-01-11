@@ -413,3 +413,23 @@ function animateleft(){
   // .from(".story",{x:"100%"})
   // .from(".animate-text",{opacity:0});
 }
+
+
+
+/*----------------------------
+  Fixed Footer
+  固定フッター
+----------------------------*/
+$(function() {
+  // 変数にクラスを入れる
+  var btn = $('.fixed-footer');
+  
+  //スクロールしてページトップから100に達したらボタンを表示
+  $(window).on('load scroll', function(){
+    if($(this).scrollTop() > 2000) {
+      btn.addClass('active');
+    }else{
+      btn.removeClass('active');
+    }
+  });
+});
