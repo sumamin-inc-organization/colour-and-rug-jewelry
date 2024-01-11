@@ -839,5 +839,24 @@
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="https://sdk.form.run/js/v2/embed.js"></script>
+  <script>
+    /*----------------------------
+  Fixed Footer
+  固定フッター
+----------------------------*/
+$(function() {
+  // 変数にクラスを入れる
+  var btn = $('.fixed-footer');
+  
+  //スクロールしてページトップから100に達したらボタンを表示
+  $(window).on('load scroll', function(){
+    if($(this).scrollTop() > 2000) {
+      btn.addClass('active');
+    }else{
+      btn.removeClass('active');
+    }
+  });
+});
+  </script>
 </body>
 </html>
