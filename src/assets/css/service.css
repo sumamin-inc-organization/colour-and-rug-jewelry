@@ -6,6 +6,8 @@
   background-size: cover;
   background-attachment: fixed !important;
   background-position: center top;
+  background-repeat: no-repeat;
+  position: relative;
 }
 #service {
   background-color: rgba(226, 208, 202, 0.8);
@@ -152,7 +154,7 @@
 
 @media (max-width: 768px) {
   #service{
-    padding: 50px 0 80px;
+    padding: 73px 0 80px;
   }
   .service_content{
     padding: 20px 20px 60px;
@@ -180,7 +182,6 @@
     width: 100%;
     height: 160px;
     padding: 35px 0 20px;
-
   }
   .arrow_down img{
     width: 40px;
