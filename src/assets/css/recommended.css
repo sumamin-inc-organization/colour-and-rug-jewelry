@@ -19,7 +19,7 @@ Recommended Top
 .rc_top p {
   text-align: justify;
   line-height: 40px;
-  padding-top: 70px;
+  padding-top: 40px;
   padding-right: 70px;
 }
 
@@ -39,7 +39,7 @@ Recommended Bottom
 }
 
 .rc_list {
-  background-color: #efe3e0;
+  background-color: #E2D0CA;
   padding: 79px 93px 77px 0;
   width: 65.8%;
   display: flex;
@@ -112,7 +112,7 @@ Recommended Bottom
     grid-column: 2;
   }
   .rc_top p {
-  padding-right: 0;
+  padding: 0;
   line-height: 30px;
   }
   #recommended {
@@ -146,7 +146,7 @@ Recommended Bottom
     left: 0;
     padding: 0;
     padding-top:6.25em ;
-    padding: 6em 60.85px 57px 41px;
+    padding: 6em 45px 57px 41px;
     padding-left: 0; 
     display: grid;
     place-content: center;
@@ -168,8 +168,6 @@ Recommended Bottom
     position: relative;
     margin-top: 20px;
     padding-left: 30px;
-    text-wrap: nowrap;
-    margin-left: 10.77vw; 
   }
   
   .rc_list li:first-child {
