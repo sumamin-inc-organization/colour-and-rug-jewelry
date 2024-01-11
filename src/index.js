@@ -20,6 +20,8 @@ import "./assets/css/form.css";
 import "./assets/css/footer.css";
 import "./assets/css/common/banner.css";
 import "./assets/css/animations.css";
+import iconWhite from './assets/images/nav/icon_tel-white.svg';
+import iconBlack from './assets/images/nav/icon_tel.svg';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -415,3 +417,174 @@ function animateleft(){
 }
 
 
+const headerTel = document.querySelector('.header-tel_img');
+
+const header = document.getElementById('header');
+const newplan = document.querySelectorAll('#newplan');
+const kv = document.querySelector('.kv-trigger');
+const inspBanner = document.querySelector('.insp-banner-trigger');
+const itemBanner =document.querySelector('.item-banner-trigger');
+const advantageTrigger = document.querySelector('.advantage-trigger');
+const consultancyTrigger = document.querySelector('.consultancy-trigger');
+
+
+// dark backgrounds
+function changeTimeToWhite(){
+  gsap.to('.time',{color:"white"});
+}
+function changeTelToWhite(){
+  gsap.to('.change',{color:"white"});
+}
+function changeHeadDecorToWhite(){
+  gsap.to('.header-decor',{backgroundColor:"white"});
+}
+function changeLogoToBlack(){
+  gsap.to('.logo',{filter:" invert(1)"});
+}
+
+function changeToWhite(){
+  headerTel.src = iconWhite;
+  changeTimeToWhite();
+  changeTelToWhite();
+  changeHeadDecorToWhite();
+  changeLogoToWhite();
+}
+
+// light backgrounds
+
+function changeTimeToBlack(){
+  gsap.to('.time',{color:"black"});
+}
+function changeTelToBlack(){
+  gsap.to('.change',{color:"black"});
+}
+function changeHeadDecorToBlack(){
+  gsap.to('.header-decor',{backgroundColor:"black"});
+}
+function changeLogoToWhite(){
+  gsap.to('.logo',{filter:" invert(0)"});
+}
+
+function changeToBlack(){
+  headerTel.src = iconBlack;
+  changeTimeToBlack();
+  changeTelToBlack();
+  changeHeadDecorToBlack();
+  changeLogoToBlack();
+}
+
+function onlyRightToWhite(){
+  headerTel.src = iconWhite;
+  changeTimeToWhite();
+  changeTelToWhite();
+  changeHeadDecorToWhite();
+}
+function onlyRightToBlack(){
+  headerTel.src = iconBlack;
+  changeTimeToBlack();
+  changeTelToBlack();
+  changeHeadDecorToBlack();
+}
+
+
+
+// triggers
+
+//trigger for logo when it htis the end of the kv
+ScrollTrigger.create({
+  trigger: kv,
+  start: "bottom top",
+  // end:".service-container",
+  onEnter: changeLogoToBlack,
+  // onLeave: changeLogoToWhite,
+  onEnterBack: changeLogoToBlack,
+  onLeaveBack:changeLogoToWhite
+});
+
+
+// newplan trigger
+ScrollTrigger.create({
+  trigger: newplan,
+  start: "top top",
+  onEnter: changeToWhite,
+  onLeave: changeToBlack,
+  onEnterBack: changeToWhite,
+  onLeaveBack:changeToBlack
+});
+
+// banner trigger inspiration banner
+ScrollTrigger.create({
+  trigger: inspBanner,
+  start: "-100px top",
+  // markers:true,
+  onEnter: changeToWhite,
+  onLeave: changeToBlack,
+  onEnterBack: changeToWhite,
+  onLeaveBack:changeToBlack
+});
+
+
+// banner trigger inspiration banner
+ScrollTrigger.create({
+  trigger: inspBanner,
+  start: "-100px top",
+  // markers:true,
+  onEnter: changeToWhite,
+  onLeave: changeToBlack,
+  onEnterBack: changeToWhite,
+  onLeaveBack:changeToBlack
+});
+
+
+
+// banner trigger inspiration banner
+ScrollTrigger.create({
+  trigger: itemBanner,
+  start: "-100px top",
+  // markers:true,
+  onEnter: changeToWhite,
+  onLeave: onlyRightToBlack,
+  onEnterBack: changeToWhite,
+  onLeaveBack:onlyRightToWhite,
+});
+
+
+// advantage image trigger for only right side of the nav
+ScrollTrigger.create({
+  trigger: advantageTrigger,
+  start: "-50px top",
+  // markers:true,
+  onEnter: onlyRightToWhite,
+  onLeave: onlyRightToBlack,
+  onEnterBack: onlyRightToWhite,
+  onLeaveBack:onlyRightToBlack
+});
+
+// color consultancy image trigger for only right side of the nav
+ScrollTrigger.create({
+  trigger: consultancyTrigger,
+  start: "-50px top",
+  // markers:true,
+  onEnter: onlyRightToWhite,
+  onLeave: onlyRightToBlack,
+  onEnterBack: onlyRightToWhite,
+  onLeaveBack:onlyRightToBlack
+});
+
+//  // plan trigger 
+//  ScrollTrigger.create({
+//   trigger: "#plan",
+//   start: "-50px top",
+//   onEnter: changeToBlack,
+//   // onLeave: changeToBlack,
+//   // onEnterBack: changeToWhite,
+//   onLeaveBack:changeToWhite
+// });
+
+ // flow trigger 
+ScrollTrigger.create({
+  trigger: "#flow",
+  start: "-50px top",
+  onEnter: changeToBlack,
+  onLeaveBack:changeToWhite
+});
