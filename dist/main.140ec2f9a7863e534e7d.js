@@ -10337,10 +10337,10 @@ function openNav(){
   openAnim
   // .to(body,{position:"fixed"})
   .to('.primary-nav',{opacity:1,duration:1,zIndex:7999})
-  .fromTo(".header-btn", { opacity: 1 }, { opacity: 0 },"<")
-  .fromTo(".header-info", { opacity: 1 }, { opacity: 0 },"<")
-  .fromTo(".header-tel_img", { opacity: 1 }, { opacity: 0 },"<")
-  .fromTo(".header-decor", { opacity: 1 }, { opacity: 0 },"<");
+  .fromTo(".header-btn", { opacity: 1 }, { opacity: 0 ,pointerEvents:"none"},"<")
+  .fromTo(".header-info", { opacity: 1 }, { opacity: 0 ,pointerEvents:"none"},"<")
+  .fromTo(".header-tel_img", { opacity: 1 }, { opacity: 0 ,pointerEvents:"none"},"<")
+  .fromTo(".header-decor", { opacity: 1 }, { opacity: 0,pointerEvents:"none" },"<");
 
   document.documentElement.style.overflow = 'hidden';
   document.body.style.overflow = 'hidden';
@@ -10355,9 +10355,9 @@ function closeNav(){
   openAnim
   .to('.primary-nav',{opacity:0,duration:1,zIndex:"-1"})
   .fromTo(".header-info", { opacity: 0 }, { opacity: 1 },"<")
-  .fromTo(".header-btn", { opacity: 0 }, { opacity: 1 },"<")
-  .fromTo(".header-tel_img", { opacity: 0 }, { opacity: 1 },"<")
-  .fromTo(".header-decor", { opacity: 0 }, { opacity: 1 },"<")
+  .fromTo(".header-btn", { opacity: 0,pointerEvents:"none" }, { opacity: 1 ,pointerEvents:"auto"},"<")
+  .fromTo(".header-tel_img", { opacity: 0 ,pointerEvents:"none"}, { opacity: 1 ,pointerEvents:"auto"},"<")
+  .fromTo(".header-decor", { opacity: 0 ,pointerEvents:"none"}, { opacity: 1 ,pointerEvents:"auto"},"<")
   // .to(body,{position:"relative"})
 
   document.body.style.overflow = 'auto';
@@ -10608,4 +10608,4 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
 
 /******/ })()
 ;
-//# sourceMappingURL=main.f8e9fa159632103024ed.js.map
+//# sourceMappingURL=main.140ec2f9a7863e534e7d.js.map
