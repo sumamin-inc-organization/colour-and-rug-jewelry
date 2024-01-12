@@ -173,17 +173,14 @@ a{
 }
 
 .black-btn:hover {
-  background-color: #C38C80;
+  /* background-color: #C38C80; */
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .black-btn a {
   text-decoration: none;
   color: white;
-}
-
-.black-btn:hover {
-  cursor: pointer;
 }
 
 .black-btn::after {
@@ -215,7 +212,7 @@ a{
 }
 .white-btn:hover {
   cursor: pointer;
-  background-color: #EFE3E0;
+  /* background-color: #EFE3E0; */
   transition: 0.3s;
 }
 
@@ -3565,5 +3562,21 @@ footer a:hover{
 
 
 
+/*!**************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/btnhover.css ***!
+  \**************************************************************************************/
+
+.header-btn:hover{
+    background-color: white;
+    border: 1px solid #45484B;
+}
+
+.header-btn:hover p{
+  color:#45484B ;
+}
+.header-btn:hover::after {
+    content: url(./images/btn-chevron_white.svh.svg);
+
+  }
 
 /*# sourceMappingURL=main.css.map*/
