@@ -13,14 +13,15 @@ footer ul{
 .footer_top{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
     gap: 40px;
 }
 .footer_address{
     line-height: 2;
+    padding-top: 1px;
 }
 .footer_logo{
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     width: 88px;
 }
 .footer_menu{
@@ -34,13 +35,13 @@ footer ul{
 .footer_menu_content{
     display: flex;
     flex-wrap: wrap;
-    gap: 60px;
+    gap: 80px;
     justify-content: space-between;
 }
 .footer_menu_item{
     display: flex;
     flex-flow: column;
-    gap: 20px;
+    gap: 22px;
 }
 .instagram_arrow{
     display: inline-block;
@@ -61,7 +62,7 @@ footer ul{
     justify-content: center;
 }
 .totop a{
-    padding-top: 3px;
+    padding-top: 5px;
     color: #fff;
 }
 
@@ -93,6 +94,21 @@ footer a:hover::after {
 
 .totop_arrow::after{
     opacity: 0;
+}
+
+.br_1300{
+    display: none;
+}
+
+@media screen and (max-width: 1300px){
+    .br_1300{
+        display: block;
+    }
+
+    .footer_menu_content{
+        /* gap: 2rem; */
+    }
+
 }
 
 @media (max-width: 768px) {
