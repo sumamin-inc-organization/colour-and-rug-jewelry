@@ -3,12 +3,11 @@
 /* ------------------- */
 
 /*----------------------------------
-   Header alignment and positioning
-   ヘッダーの配置と位置合わせ
+  Header alignment and positioning
+  ヘッダーの配置と位置合わせ
 ------------------------------------*/
 
 header {
-  /* border: 1px solid red; */
   width: 100%;
   position: fixed;
   top: 30px;
@@ -18,15 +17,11 @@ header {
   z-index: 8001;
 }
 .header_right {
-  /* border: 1px solid green; */
   height: 100%;
   display: flex;
   align-items: center
 }
-.header-btn {
-  display: grid;
-  place-content: center;
-}
+
 /*----------------------------------
    Header Paddings
    ヘッダーのパディング
@@ -35,11 +30,6 @@ header {
 header {
   padding-left: 30px;
   padding-right: 40px;
-  /* padding-right: calc(100vw - 100% + 40px) ; */
-}
-.header-btn {
-  padding: 6.92px 50.2px 9px 50px;
-  width: 170px;
 }
 
 @media screen and (max-width:768px){
@@ -80,10 +70,18 @@ header {
    ヘッダーボタン
 ------------------------------------*/
 
+.header-btn {
+  display: grid;
+  place-content: center;
+  letter-spacing: 0.2rem;
+  width: 170px;
+  height: 40px;
+}
 .header-btn::after {
     top: 14px;
     right: 12px;
-  }
+}
+
 
 /*----------------------------------
    Header Heights
@@ -92,10 +90,6 @@ header {
 .header-info {
     height: 40px;
     /* border: 1px solid red; */
-
-  }
-  .header-btn {
-    height: 40px;
   }
   .header-decor {
    height: 40px;
@@ -103,15 +97,13 @@ header {
 
 
 /*----------------------------------
-   Header Typography
-   ヘッダーのタイポグラフィ
+  Header Typography
+  ヘッダーのタイポグラフィ
 ------------------------------------*/
-.header-btn_p{
-    /* letter-spacing: 1.92px; */
-}
+
 .tel-number{
-    letter-spacing: 0.25px;
-    transform: translateY(-10px);
+  letter-spacing: 0.25px;
+  transform: translateY(-10px);
 }
 
 .tel-number a{
@@ -119,33 +111,12 @@ header {
 }
 
 .time {
-    letter-spacing: 1.96px;
-    transform: translateY(-15px);
+  letter-spacing: 1.96px;
+  transform: translateY(-15px);
 }
-
 
 @media (max-width:500px) {
   .logo{
-    width: 53.17px;
-    height: 60px;
+    width: 70.9px;
   }
-}
-
-main{
-  /* border: 1px solid red; */
-}
-
-.logo{
-  /* filter: invert(1); */
-}
-
-.header-tel_img {
-  /* fill: #fff; */
-}
-
-.kv_bottom{
-  /* border: 1px solid red; */
-}
-.sticking{
-  background-color: red;
 }
