@@ -560,11 +560,6 @@ header {
 header {
   padding-left: 30px;
   padding-right: 40px;
-  /* padding-right: calc(100vw - 100% + 40px) ; */
-}
-.header-btn {
-  padding: 6.92px 50.2px 9px 50px;
-  width: 170px;
 }
 
 @media screen and (max-width:768px){
@@ -653,7 +648,6 @@ header {
 @media (max-width:500px) {
   .logo{
     width: 70.9px;
-    height: auto;
   }
 }
 /*!**************************************************************************!*\
@@ -954,17 +948,16 @@ header {
   .nav-link{
     padding-bottom: 16px;
     padding-top: 16px;
-   }
-   .sns{
+  }
+  .sns{
     padding-top: 30px;
-   }
+  }
 }
 /*----------------------------------
    Main Nav(SP)-bottom banner
    メインナビゲーション(SP)-下部バナー
 ------------------------------------*/
 .primary-nav-bottom_sp{
-/* border: 1px solid red; */
 position: fixed;
 bottom: 0;
 width: 100%;
@@ -974,13 +967,11 @@ padding: 14.5px 25px 15px 25px;
 
 .nav-bottom-inner{
 display: flex;
-/* border: 1px solid red; */
 align-items: center;
 justify-content: center;
 }
 .bottom-nav-btn{
-  /* border: 1px solid green; */
-  padding: 7.6px 44.6px 8.4px 47.4px;
+  padding: 7.6px 0 8.4px;
   height: 40px;
   width: 160px;
   display: grid;
@@ -1030,6 +1021,11 @@ justify-content: center;
   width: 20px;
   height: 20px;
 }
+
+.nav-logo-img{
+  display: none;
+}
+
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/keyvisual.css ***!
   \********************************************************************************/
@@ -1195,7 +1191,7 @@ justify-content: center;
 }
 
 #service {
-  background-color: rgba(226, 208, 202, 0.8);
+  background-color: rgba(226, 208, 202, 0.9);
   padding: 128px 0 140px;
   text-align: center;
 }
@@ -1403,6 +1399,10 @@ justify-content: center;
 
 .newplan-spacing{
   height: 100vh;
+}
+
+.service_text{
+  font-weight: 500 !important;
 }
 /*!**********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/recommended.css ***!
@@ -1647,6 +1647,10 @@ Recommended Bottom
 }
 .indicators:hover {
   cursor: pointer;
+}
+
+.indicator{
+  letter-spacing: 0.18em;
 }
 
 .slider-buttons {
@@ -1919,6 +1923,7 @@ Recommended Bottom
   padding-right: 80px;
   margin-top: 55px;
   line-height: 40px;
+  text-align: justify;
   /* border: 1px solid green; */
 }
 .popup-decor{
@@ -2350,6 +2355,7 @@ Recommended Bottom
   position: -webkit-sticky;
   position: sticky;
   top: 20px;
+  top: 140px;
   height: fit-content;
   margin-right: 40px;
 }
@@ -2650,6 +2656,20 @@ Recommended Bottom
       margin-bottom: 15px;
     }
 }
+
+
+@media (min-width:768px){
+  .flow-sticky{
+    position: relative;
+  }
+  
+  .flow-stick_inner{
+    position: sticky;
+    top: 20px;
+    top: 140px;
+  }
+}
+
 
 /*!******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/gallery.css ***!
@@ -3227,7 +3247,7 @@ Recommended Bottom
 footer{
     color: #fff;
     background-color: #45484B;
-    padding: 80px 0;
+    padding: 80px 100px;
     letter-spacing: 0.1rem;
 }
 footer ul{
@@ -3236,14 +3256,15 @@ footer ul{
 .footer_top{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
     gap: 40px;
 }
 .footer_address{
     line-height: 2;
+    padding-top: 1px;
 }
 .footer_logo{
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     width: 88px;
 }
 .footer_menu{
@@ -3257,13 +3278,13 @@ footer ul{
 .footer_menu_content{
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 40px;
     justify-content: space-between;
 }
 .footer_menu_item{
     display: flex;
     flex-flow: column;
-    gap: 20px;
+    gap: 22px;
 }
 .instagram_arrow{
     display: inline-block;
@@ -3280,17 +3301,23 @@ footer ul{
 .totop{
     display: flex;
     align-items: center;
-    gap: 15px;
+    /* gap: 15px; */
     justify-content: center;
 }
 .totop a{
-    padding-top: 3px;
+    padding-top: 5px;
     color: #fff;
 }
+
+.totop img{
+    margin-left: 15px;
+}
+
 footer a{
     color: #fff;
     position: relative;
 }
+
 footer a::after {
     position: absolute;
     left: 0;
@@ -3308,9 +3335,43 @@ footer a:hover::after {
     transform-origin: left top;
 }
 
+.totop_arrow::after{
+    opacity: 0;
+}
+
+.br_1300{
+    display: none;
+}
+
+@media screen and (max-width: 1400px){
+    .br_1300{
+        display: block;
+    }
+
+    .footer_menu p{
+        padding-bottom: 24px;
+        margin-bottom: 38px;
+    }
+
+    .footer_menu_content{
+        gap: 2rem;
+    }
+
+    .footer_menu_item{
+        gap: 30px;
+    }
+
+}
+
+@media screen and (max-width: 1050px) {
+    .footer_menu{
+        width: 370px;
+    }
+}
+
 @media (max-width: 768px) {
     footer{
-        padding: 60px 0 130px;
+        padding: 60px 20px 130px;
     }
     .footer_top{
         margin-bottom: 40px;
@@ -3327,17 +3388,21 @@ footer a:hover::after {
         letter-spacing: normal;
     }
     .totop{
-        gap: 10px;
+        /* gap: 10px; */
         letter-spacing: 0.05rem;
     }
 
-    #fixed-footer{
-        z-index: 3000;
-        border-top: solid 1px #45484B;
+    .totop img{
+        margin-left: 10px;
     }
 
-    #fixed-footer p{
-        letter-spacing: 0;
+    #fixed-footer{
+        position: fixed;
+        z-index: 3000;
+        border-top: solid 1px #45484B;
+        width: 100%;
+        bottom: 0;
+        left: 0;
     }
 
     /* 最初は非表示 */
@@ -3482,12 +3547,12 @@ footer a:hover::after {
     justify-content: center;
   }
   .banner_book {
-    padding: 12.06px 83.65px 13.9px 84.35px;
+    padding: 12.06px 0 13.9px;
     display: grid;
     place-content: center;
   }
   .banner_contact {
-    padding: 12.06px 68.65px 13.8px 69.35px;
+    padding: 12.06px 0 13.9px;
     display: grid;
     place-content: center;
   }
@@ -3515,7 +3580,7 @@ footer a:hover::after {
 
 /*----------------------------
     Banner Other - Mobile
-   バナーその他 - モバイル
+    バナーその他 - モバイル
 ----------------------------*/
 
 @media (max-width: 767px) {
@@ -3589,7 +3654,7 @@ footer a:hover::after {
     position: fixed;
     z-index: 1001;
     z-index: 9501;
-    background-color: #B9786A;
+    background-color: #E2D0CA;
     transform: translateY(100%);
 }
 .transition-item-white{
@@ -3598,7 +3663,7 @@ footer a:hover::after {
     position: fixed;
     z-index: 1002;
     z-index: 9502;
-    background-color: white;
+    background-color: #F6EEEB;
     transform: translateY(100%);
 }
 .main-container{
@@ -3623,7 +3688,12 @@ footer a:hover::after {
 }
 
 
+/* intro animations */
 
+
+.newplan-anim-txt{
+    opacity: 0;
+}
 /*!**************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/btnhover.css ***!
   \**************************************************************************************/
@@ -3699,8 +3769,6 @@ footer a:hover::after {
 ----------------------------*/
 
 .banner-btn{
-    /* background-color: transparent; */
-    /* border: 1px solid #FFFFFF; */
     background-color:  #FFFFFF;
     border: 1px solid #FFFFFF;
 }
@@ -3710,24 +3778,19 @@ footer a:hover::after {
 }
 
 .banner-btn p{
-    /* color: #FFFFFF; */
     color: #45484B;
 }
 .banner-btn:hover{
-    /* background-color:  #FFFFFF; */
     background-color: transparent;
     border: 1px solid #FFFFFF;
 
 }
 .banner-btn:hover p{
-    /* color: #45484B; */
     color: #FFFFFF;
 }
 
 .banner-btn:hover::after {
     content: url(./images/btn-chevron.svg);
-
 }
-
 
 /*# sourceMappingURL=main.css.map*/
