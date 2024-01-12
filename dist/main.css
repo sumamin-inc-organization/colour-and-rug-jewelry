@@ -347,6 +347,22 @@ a{
 }
 
 
+
+#keyvisual,
+#recommended,
+#inspiration,
+#advantage,
+#consultancy,
+#item,
+#flow,
+#gallery,
+#faq,
+#form
+{
+  background-color: #FFFF;
+}
+
+
 /*!****************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/typography.css ***!
   \****************************************************************************************/
@@ -543,7 +559,7 @@ header {
 header {
   padding-left: 30px;
   padding-right: 40px;
-  padding-right: calc(100vw - 100% + 40px) ;
+  /* padding-right: calc(100vw - 100% + 40px) ; */
 }
 .header-btn {
   padding: 6.92px 50.2px 9px 50px;
@@ -1186,8 +1202,8 @@ justify-content: center;
 /*!******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/service.css ***!
   \******************************************************************************/
-.service-container{
-  background-image: url(./images/newplan_bkg.jpg);
+/* .service-container{
+  background-image: url(../images/service/newplan_bkg.jpg);
   -webkit-background-size: cover !important;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1196,7 +1212,31 @@ justify-content: center;
   background-position: center top;
   background-repeat: no-repeat;
   position: relative;
+} */
+.test-cont {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  transform: scale(1.0);
 }
+
+.test-cont:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(./images/newplan_bkg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 #service {
   background-color: rgba(226, 208, 202, 0.8);
   padding: 128px 0 140px;
@@ -1379,15 +1419,33 @@ justify-content: center;
   .plus{
     margin-top: 30px;
   }
-  .service-container{
-    background-image: url(./images/newplan_bkg-sp.jpg);
-  }
+  /* .service-container{
+    background-image: url(../images/service/newplan_bkg-sp.jpg);
+  } */
   #newplan {
     height: 680px;
   }
   #newplan h2{
     font-size: 29px;
   }
+  .test-cont:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/newplan_bkg-sp.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+
+.newplan-spacing{
+  height: 100vh;
 }
 /*!**********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/recommended.css ***!
@@ -2190,7 +2248,7 @@ Recommended Bottom
 /* ------------------- */
 
 #consultancy {
-  margin-top: 30px;
+  padding-top: 30px;
   row-gap: 78px;
 }
 .consultancy-top_jp {
@@ -2228,7 +2286,7 @@ Recommended Bottom
 
 @media (max-width:768px){
   #consultancy {
-    margin-top: 42px;
+    padding-top: 42px;
     row-gap: 22px;
   }
 }
@@ -3331,6 +3389,7 @@ footer a:hover::after {
         visibility: hidden;
         transform: translateY(50px);
         transition: opacity 0.5s,visibility 0.5s, transform 0.5s;
+        
     }
 
     /*このクラスが付与されると表示する*/
