@@ -280,7 +280,7 @@ let faqtl = gsap.timeline({
 faqtl
   .from(".faq-eng", { x: 50, opacity: 0, duration: 1 })
   .from(".faq-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8")
-  .to(".faq", { "--beforeAnimation": "100%", duration: 5 });
+  .to(".faq", { "--beforeAnimation": "100%", duration: 2.5 });
 
 /*----------------------------
     CONTACT Animations
