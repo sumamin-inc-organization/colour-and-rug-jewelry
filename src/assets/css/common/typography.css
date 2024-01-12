@@ -109,6 +109,9 @@
 .letter-spacing-30{
   letter-spacing: 0.06em;
 }
+.letter-spacing-01{
+  letter-spacing: 0.1rem;
+}
 .letter-spacing-02{
   letter-spacing: 0.2rem;
 }
