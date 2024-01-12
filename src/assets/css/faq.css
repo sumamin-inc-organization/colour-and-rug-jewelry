@@ -7,28 +7,25 @@
 }
 
 .faq-title {
-  margin-bottom: 94.7px;
+  margin-bottom: 26px;
 }
 
 .faq{
   --beforeAnimation: 0;
   display: flex;
   flex-direction: column;
-  gap: 37.4px;
-  /* border-bottom: 1px solid #e1c5bf; */
+  gap: 40px;
   position: relative;
 }
 
 .faq::after{
   width: var(--beforeAnimation);
   content: "";
-  /* width: 100%; */
   height: 1px;
   background-color: #E3E3E3 ;
   position: absolute;
   bottom: 0;
 }
-
 
 .question {
   display: flex;
@@ -47,7 +44,7 @@
 }
 
 .faq-container .faq:not(:first-child) {
-  margin-top: 41.4px;
+  margin-top: 40px;
 }
 .answer {
   max-height: 0px;
@@ -56,7 +53,7 @@
 
 .faq.active .answer {
   max-height: 300px;
-  margin-bottom: 70px;
+  padding-bottom: 45px;
   animation: fade 500ms ease-in-out;
   line-height: 2;
 }
@@ -92,8 +89,8 @@
 /* ------------------- */
 
 /*----------------------------
-   Responsive Typography 
-   レスポンシブなティポグラフィ
+  Responsive Typography 
+  レスポンシブなティポグラフィ
 ----------------------------*/
 
 @media (max-width:768px){
@@ -105,8 +102,8 @@
 }
 
 /*----------------------------
-     Chevron Placements
-     シェブロンの配置
+  Chevron Placements
+  シェブロンの配置
 ----------------------------*/
 @media (max-width:768px){
   .question {
@@ -164,10 +161,10 @@
     gap: 25px;
   }
   .faq-title{
-    margin-bottom: 55px;
+    margin-bottom: 10px;
   }
   .faq.active .answer{
-    margin-bottom: 25px;
+    padding-bottom: 25px;
   }
   .faq-container .faq:not(:first-child){
     margin-top: 30px;

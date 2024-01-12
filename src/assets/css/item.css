@@ -52,6 +52,7 @@
   position: sticky;
   top: 20px;
   height: fit-content;
+  margin-right: 40px;
 }
 
 /* ------------------- */
@@ -101,7 +102,7 @@
 ----------------------------*/
 @media (max-width:768px){
   .it_right {
-   margin-top: 45px;
+   margin-top: 0;
   }
   .it_right span {
     margin-top: 42px;
@@ -114,9 +115,6 @@
   }
   #item {
     padding-top: 79px;
-  }
-  .item-banner{
-    margin-top: 55px !important;
   }
   .item_img{
     margin-top: 75px;

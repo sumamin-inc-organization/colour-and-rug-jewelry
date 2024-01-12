@@ -1,20 +1,25 @@
 .service-container{
   background-image: url(../images/service/newplan_bkg.jpg);
-  background-attachment: fixed;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+  background-attachment: fixed !important;
   background-position: center top;
+  background-repeat: no-repeat;
+  position: relative;
 }
 #service {
   background-color: rgba(226, 208, 202, 0.8);
-  padding: 110px 0;
-  padding-top: 128px;
+  padding: 128px 0 140px;
   text-align: center;
+}
+#service .sec_title{
+  letter-spacing: 0.01rem;
 }
 .service_text {
   line-height: 2.5;
   letter-spacing: 0.1rem;
-  margin-top: 65px;
-  color: black;
 }
 .service_flex {
   display: flex;
@@ -151,7 +156,7 @@
 
 @media (max-width: 768px) {
   #service{
-    padding: 50px 0 80px;
+    padding: 73px 0 80px;
   }
   .service_content{
     padding: 20px 20px 60px;
@@ -171,7 +176,6 @@
   .service_text{
     line-height: 1.9;
     text-align: left;
-    margin-top: 45px;
   }
   .service_text_br{
     display: none;
@@ -180,7 +184,6 @@
     width: 100%;
     height: 160px;
     padding: 35px 0 20px;
-
   }
   .arrow_down img{
     width: 40px;

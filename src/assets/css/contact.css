@@ -1,0 +1,285 @@
+#contact{
+    background-color: #E2D0CA;
+    padding-top: 138px;
+    padding-bottom: 144px;
+}
+
+
+.contact-title{
+    margin-bottom: 25px;
+}
+
+.contact-main{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+/*----------------------------
+    Left Side (pc)
+    左側（PC）
+----------------------------*/
+
+.contact-top{
+    width: 525px;
+}
+.cont-top{
+    padding-bottom: 10px;
+}
+.cont-left{
+    /* min-height: 294px;
+    min-width: 277px; */
+    width: 60%;
+    aspect-ratio: 27 / 29;
+    object-fit: cover;
+}
+.cont-right{
+    /* min-height: 294px;
+    min-width: 237px; */
+    width: 40%;
+    height: auto;
+    aspect-ratio: 23 / 29;
+    object-fit: cover;
+}
+
+.cont-bottom-img{
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+    height: 295px;
+}
+
+
+/*----------------------------
+    Right Side (pc)
+    右側（PC）
+----------------------------*/
+
+.contact-bottom{
+    width: 45%;
+}
+.contact-bottom_info{
+    margin-bottom: 20px;
+}
+
+/*----------------------------
+    Main Content Title
+    メインコンテンツのタイトル
+----------------------------*/
+
+.contact-bottom-title_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-title-left{
+    margin-right: 20px;
+}
+
+.contact-info_heading{
+    border-bottom: 1px solid black;
+    margin-bottom: 11px;
+}
+
+.contact-medium{
+    font-weight: 500;
+}
+
+.contact-closed_title,
+.contact-about_title ,
+.contact-address_title{
+    margin-bottom: 11px;
+}
+
+.contact-about_title{
+    letter-spacing: 0.1rem;
+}
+
+/*----------------------------
+    Main Content Descriptions
+    メインコンテンツのタイトル
+----------------------------*/
+.cont-main-desc{
+    line-height: 30px;
+}
+.postal{
+    margin-bottom: 10px;
+}
+
+/*----------------------------
+    Contact Section Buttons
+    Contactセクションのボタン
+----------------------------*/
+
+.contact-bottom_btn-container{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    column-gap: 10px;
+    gap: 10px;
+}
+
+.contact-bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 20px;
+}
+
+.bottom-btn{
+    padding-top: 10px;
+    background-color: #FFFFFF;
+    grid-column: 1/3;
+    display: grid;
+    place-content: center;
+    height: 80px;
+}
+.bottom-btn:hover{
+    cursor: pointer;
+    background-color: #45484B;
+    color:#FFFFFF ;
+    transition: 0.3s;
+}
+.contact-btn_top{
+    display: grid;
+    place-items: center;
+}
+.contact-btn_top::after{
+    right: 20px;
+    top: 14px;
+}
+.cont-top_black{
+    padding: 7px 0 9px;
+}
+
+.cont-bottom-btn_description,
+.cont-bottom-btn_data{
+    text-align: center;
+}
+
+.cont-bottom-btn_data{
+    display: flex;
+    align-items: center;
+}
+
+.tel::before{
+    content: url(../images/contact/tel-icon.png);
+    margin-right: 7px;
+}
+@media (max-width:1200px){
+    .cont-bottom-btn_data{
+        flex-flow: column;
+    }
+}
+@media (max-width:1120px){
+    .contact-top{
+        width: 450px;
+    }
+    .cont-top_black{
+        padding: 7px 0 9px ;
+    }
+}
+@media (max-width:1000px){
+    .contact-top{
+        width: 360px;
+    }
+    .bottom-btn{
+        height: auto;
+        padding: 10px;
+    }
+}
+
+/* ------------------- */
+/*       MOBILE        */
+/* ------------------- */
+
+@media (max-width:768px){
+    .contact-main{
+       flex-direction: column;
+    }
+    .contact-title{
+        margin-bottom: 0;
+    }
+    #contact{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .cont-top{
+        padding: 0;
+    }
+    .cont-bottom-img{
+        height: 180px;
+    }
+}
+
+
+/*----------------------------------------
+    Left Side  ==> Top Side (mobile)
+    左側 ==> 上側（モバイル）
+------------------------------------------*/
+ @media (max-width:768px){
+    .contact-top{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 10px;
+        margin-bottom: 48.6px;
+    }
+    
+    .cont-top{
+        grid-column: 1/3;
+    }
+    .cont-left{
+        min-height: 180px;
+        min-width: 190px;
+    }
+    .cont-right{
+        /* grid-column: 2/3; */
+        min-height: 180px;
+        min-width: 150px;
+    }
+    .cont-bottom-img{
+        display: flex;
+        gap: 10px;
+        width: 90vw;
+    }
+}
+
+/*----------------------------------------
+    Right Side  ==> Bottom Side (mobile)
+    右側 ==> 下側（モバイル）
+------------------------------------------*/
+
+
+@media (max-width:768px){
+    .contact-bottom{
+        width: 100%;
+    }
+    .contact-bottom-title_container{
+        display: flex;
+        justify-content: flex-start;
+        width: 51.28vw;
+    }
+    .contact-bottom_info{
+        margin-bottom: 25px;
+    }
+    .bottom-btn{
+        height: auto;
+        padding: 15px 0;
+    }
+}
+
+@media(max-width:500px){
+    .contact-about_title{
+        letter-spacing: 0;
+    }
+    .cont-title-left{
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .cont-title-right{
+        font-size: 16px;
+    }
+}
+
+

@@ -10,7 +10,7 @@
 
 .kv_top .kv_title {
   width: 39.1vw;
-  margin-top: 9.3vw;
+  margin-top: 10.5vw;
   margin-right: 4.39vw;
 }
 
@@ -18,7 +18,7 @@
   display: flex;
   justify-content: space-between;
   align-items: end;
-  margin-top: -23%;
+  margin-top: -21%;
   padding-bottom: 140px;
 }
 
@@ -28,12 +28,12 @@
 
 .kv_bottom .kv_text .kagayaku {
   font-size: 1.46vw;
-  letter-spacing: 2.9px;
+  letter-spacing: 0.15rem;
 }
 
 .kv_bottom .kv_text h2 {
   font-size: 2.86vw;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.15rem;
   margin-top: 1.68vw;
 }
 
@@ -101,7 +101,6 @@
         font-size: 16px;
         line-height: 2rem;
         width: 100%;
-        max-width: 95%;
         margin-bottom: 45px;
     }
     .kv_bottom .kv_02{
@@ -110,3 +109,14 @@
         object-fit: cover;
     }
 }
+
+@media (max-width: 380px) {
+  .kv_bottom .kv_text .kagayaku {
+    letter-spacing: 0.1rem;
+  }
+  
+  .kv_bottom .kv_text h2 {
+    letter-spacing: 0.1rem;
+  }
+}
+

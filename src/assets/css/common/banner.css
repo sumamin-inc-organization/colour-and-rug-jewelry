@@ -15,10 +15,9 @@
     バナーのラッパー
 ----------------------------*/
 .banner-wrapper {
-  margin: 0;
   padding: 0;
-  margin-left: 23px;
-  margin: 74.3px 0;
+  margin: 70px auto;
+  width: 60vw;
 }
 
 /*----------------------------
@@ -59,6 +58,8 @@
 }
 
 .banner_title {
+  color: #fff;
+  font-size: 56px;
   letter-spacing: 5px;
 }
 
@@ -97,7 +98,7 @@
     background: url(../../images/common/banner_sp.jpg);
     background-size: cover;
     overflow: hidden;
-    margin-top: 140px;
+    margin-top: 80px;
   }
 }
 
@@ -143,6 +144,7 @@
     padding: 62.5px 0;
     padding-bottom: 60px;
     text-align: center;
+    width: 100%
   }
 }
 

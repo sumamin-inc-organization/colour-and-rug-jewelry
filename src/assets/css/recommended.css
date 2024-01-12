@@ -19,7 +19,7 @@ Recommended Top
 .rc_top p {
   text-align: justify;
   line-height: 40px;
-  margin-top: 53px;
+  padding-top: 40px;
   padding-right: 70px;
 }
 
@@ -39,7 +39,7 @@ Recommended Bottom
 }
 
 .rc_list {
-  background-color: #efe3e0;
+  background-color: #E2D0CA;
   padding: 79px 93px 77px 0;
   width: 65.8%;
   display: flex;
@@ -105,29 +105,19 @@ Recommended Bottom
 
 @media (max-width:768px){
   .rc_top {
-    display: grid;
+    display: block;
     grid-template-columns: 1fr 90% 1fr;
   }
   .rec-top_wrapper{
     grid-column: 2;
   }
   .rc_top p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 0;
   line-height: 30px;
-  width: 95%;
-  grid-column: 2;
   }
   #recommended {
     background-color: #fff;
     padding: 80px 0 450px;
-  }
-
-  /* メインのグリッドとモバイルセクションのデザインが合わないため、パディングを追加しました。 */
-  .rc_top h2,.rc_top span,.rc_top p {
-    padding-left: 2.82vw;
   }
 }
 
@@ -156,7 +146,7 @@ Recommended Bottom
     left: 0;
     padding: 0;
     padding-top:6.25em ;
-    padding: 6em 60.85px 57px 41px;
+    padding: 6em 45px 57px 41px;
     padding-left: 0; 
     display: grid;
     place-content: center;
@@ -178,8 +168,6 @@ Recommended Bottom
     position: relative;
     margin-top: 20px;
     padding-left: 30px;
-    text-wrap: nowrap;
-    margin-left: 10.77vw; 
   }
   
   .rc_list li:first-child {

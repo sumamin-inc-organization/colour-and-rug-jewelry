@@ -61,7 +61,7 @@
 @media (max-width: 768px) {
     .flow_content{
         flex-flow: column;
-        gap: 50px;
+        gap: 0;
         margin: 60px 0 40px
     }
     .flow_column{

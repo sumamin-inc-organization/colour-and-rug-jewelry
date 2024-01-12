@@ -3,34 +3,19 @@
 /* ------------------- */
 
 /*----------------------------
-  Font weight /フォントの太さ 
-----------------------------*/
-.light {
-  /* ライト */
-  font-weight: 300;
-}
-.regular {
-  /* レギュラー */
-  font-weight: 400;
-}
-.medium {
-  /* ミディアム */
-  font-weight: 500;
-}
-
-/*----------------------------
     Font Style /フォントのスタイル 
   ----------------------------*/
 .font-roboto {
   font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 .font-zenkaku {
   font-family: "Zen Kaku Gothic New", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 .font-zenold {
   font-family: "Zen Old Mincho", serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 .font-bellefair {
   font-family: "Bellefair", serif;
@@ -38,16 +23,31 @@
 }
 .font-josefin {
   font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+}
+
+/*----------------------------
+  Font weight /フォントの太さ 
+----------------------------*/
+.medium {
+  /* ミディアム */
+  font-weight: 500;
 }
 
 /*----------------------------
     Font Sizes / フォントサイズ
   ----------------------------*/
+.fs-11{
+  font-size: 11px;
+}
 .fs-14 {
   font-size: 14px;
 }
 .fs-16 {
   font-size: 16px;
+}
+.fs-18{
+  font-size: 18px;
 }
 .fs-20 {
   font-size: 20px;
@@ -90,19 +90,15 @@
 .white {
   color: #ffffff;
 }
-
 .gray {
-  color: #3e3a39;
+  color: #45484B;
 }
-
 .light-gray {
   color: #b8b7b6;
 }
-
 .brown {
   color: #c38c80;
 }
-
 .black {
   color: black;
 }
@@ -116,7 +112,7 @@
   font-size: 30px;
   line-height: 1.7;
   letter-spacing: 0.15rem;
-  margin-top: 30px;
+  padding-bottom: 60px;
 }
 
 .sec_title_en{
@@ -125,6 +121,7 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 2.5px;
+  padding-bottom: 30px;
 }
 
 /* ------------------- */
@@ -140,11 +137,16 @@
    mobile -> 22px */
   .sec_title{
     font-size: 22px;
-    margin-top: 20px;
+    padding-bottom: 45px;
   }
   /* PC     -> 16px 
    mobile -> 14px */
   .sec_title_en {
     font-size: 14px;
+    padding-bottom: 20px;
   }
+}
+
+.letter-spacing-30{
+  letter-spacing: 0.06em;
 }

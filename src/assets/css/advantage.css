@@ -9,21 +9,21 @@
     width: 96vw;
 }
 .advantage_text{
-    margin-top: 80px;
+    padding-top: 20px;
     line-height: 2.5;
 }
 .advantage_top_img{
     width: 200vw;
 }
 .advantage_top_img img{
-    height: 600px;
+    height: 670px;
     width: 100%;
     object-fit: cover;
 }
 .advantage_flex{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     gap: 50px;
 }
 .warm,.relaxed{
@@ -45,7 +45,7 @@
 }
 .color_title{
     text-align: center;
-    padding: 3px 0;
+    padding: 5px 0;
     width: 100%;
     border: solid 1px#000;
 }
@@ -57,7 +57,7 @@
 }
 .color_box {
     color: #fff;
-    padding: 40px 10px 10px;
+    padding: 45px 10px 10px;
     font-size: 16px;
     font-weight: 100;
     position: relative;
@@ -102,7 +102,7 @@
 @media (max-width: 1200px) {
     .advantage_top{
         width: 95vw;
-        gap: 50px;
+        gap: 40px;
     }
     #advantage .sec_title{
         font-size: 28px;
@@ -128,9 +128,9 @@
         flex-flow: column;
         align-items: start;
         padding: 80px 0 55px;
-        gap: 50px;
         justify-content: start;
         width: 100%;
+        gap: 0;
     }
     .advantage_top_img{
         width: 95vw;
@@ -143,7 +143,7 @@
         font-size: 22px;
     }
     .advantage_text{
-        margin-top: 0;
+        padding-top: 45px;
         line-height: 2;
     }
     .advantage_flex{
@@ -155,6 +155,7 @@
         width: 100%;
     }
     .interior_color{
+        display: none;
         gap: 10px;
     }
     .interior_color img{
@@ -162,11 +163,17 @@
     }
     .color_scheme{
         font-size: 18px;
-        margin: 15px 0 10px;
+        margin: 15px 0 13px;
         letter-spacing: 0.05rem;
     }
     .interior_story{
         font-size: 18px;
         padding: 30px 0 10px;
+    }
+}
+
+@media (max-width:768px) {
+    .color_box p{
+        font-size: 14px;
     }
 }

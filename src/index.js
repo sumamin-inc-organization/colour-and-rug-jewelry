@@ -19,6 +19,14 @@ import "./assets/css/contact.css";
 import "./assets/css/form.css";
 import "./assets/css/footer.css";
 import "./assets/css/common/banner.css";
+import "./assets/css/animations.css";
+import "./assets/css/common/btnhover.css";
+
+
+import iconWhite from './assets/images/nav/icon_tel-white.svg';
+import iconBlack from './assets/images/nav/icon_tel.svg';
+import mainLogoBlack from './assets/images/nav/logo_main-blk.svg';
+import mainLogoWhite from './assets/images/nav/logo_main.svg';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -84,7 +92,6 @@ faqs.forEach((faq) => {
     faq.classList.toggle("active");
   });
 });
-
 
 /*----------------------------
     Company Name Animations
@@ -201,6 +208,25 @@ itemtl
   .from(".item-eng", { x: 50, opacity: 0, duration: 1 })
   .from(".item-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8");
 
+
+  /*----------------------------
+    Plan Animations
+    Plan アニメーション
+----------------------------*/
+let plantl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#plan",
+    start: "-=500px",
+    scrub: false,
+    // markers:true
+  },
+});
+
+plantl
+  .from(".plan-eng", { x: -50, opacity: 0, duration: 1 })
+  .from(".plan-jp", { x: 50, opacity: 0, duration: 1 }, "-=0.8");
+
+
 /*----------------------------
     Flow Animations
     Flow アニメーション
@@ -216,8 +242,8 @@ let flowtl = gsap.timeline({
 });
 
 flowtl
-  .from(".flow-eng", { x: -50, opacity: 0, duration: 1 })
-  .from(".flow-jp", { x: 50, opacity: 0, duration: 1 }, "-=0.8");
+  .from(".flow-eng", { x: 50, opacity: 0, duration: 1 })
+  .from(".flow-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8");
 
 /*----------------------------
     Gallary Animations
@@ -234,12 +260,10 @@ let gallerytl = gsap.timeline({
 });
 
 gallerytl
-  .from(".gallery-eng", { x: 50, opacity: 0, duration: 1 })
-  .from(".gallery-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8");
+  .from(".gallery-eng", { x: -50, opacity: 0, duration: 1 })
+  .from(".gallery-jp", { x: 50, opacity: 0, duration: 1 }, "-=0.8");
 
-
-
-    /*----------------------------
+/*----------------------------
     FAQ Animations
     FAQ アニメーション
 ----------------------------*/
@@ -254,7 +278,329 @@ let faqtl = gsap.timeline({
 });
 
 faqtl
-      .from(".faq-eng", { x: -50, opacity: 0, duration: 1 })  
-      .from(".faq-jp", { x: 50, opacity: 0, duration: 1 }, "-=0.8")
-      .to(".faq", { "--beforeAnimation": "100%", duration: 5 });
+  .from(".faq-eng", { x: 50, opacity: 0, duration: 1 })
+  .from(".faq-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8")
+  .to(".faq", { "--beforeAnimation": "100%", duration: 5 });
 
+/*----------------------------
+    CONTACT Animations
+    CONTACT アニメーション
+----------------------------*/
+
+let conttl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#contact",
+    start: "-=500px",
+    scrub: false,
+    // markers:true
+  },
+});
+
+conttl
+  .from(".contact-eng", { x: -50, opacity: 0, duration: 1 })
+  .from(".contact-jp", { x: 50, opacity: 0, duration: 1 }, "-=0.8");
+
+
+  /*----------------------------
+    NAV Animations
+    Nav アニメーション
+----------------------------*/
+
+// hamburger
+
+let icon = document.querySelector(".menu_icon");
+let headerBtn = document.querySelector('.header-btn');
+const body = document.body;
+console.log(body)
+
+icon.addEventListener("click", () => {
+  animateHamburger()
+  console.log('clicked')
+});
+
+
+function animateHamburger(){
+  icon.classList.toggle("clicked");
+  if( icon.classList.contains("clicked")){
+    icon.setAttribute('aria-expanded', 'true');
+    openNav();
+  }
+  else{
+    icon.setAttribute('aria-expanded', 'false'); 
+    closeNav()
+  }
+}
+
+
+function openNav(){
+  let openAnim = gsap.timeline()
+  openAnim
+  // .to(body,{position:"fixed"})
+  .to('.primary-nav',{opacity:1,duration:1,zIndex:7999})
+  .fromTo(".header-btn", { opacity: 1 }, { opacity: 0 },"<")
+  .fromTo(".header-info", { opacity: 1 }, { opacity: 0 },"<")
+  .fromTo(".header-tel_img", { opacity: 1 }, { opacity: 0 },"<")
+  .fromTo(".header-decor", { opacity: 1 }, { opacity: 0 },"<");
+
+  document.documentElement.style.overflow = 'hidden';
+  document.body.style.overflow = 'hidden';
+  
+  
+
+}
+
+
+function closeNav(){
+  let openAnim = gsap.timeline()
+  openAnim
+  .to('.primary-nav',{opacity:0,duration:1,zIndex:"-1"})
+  .fromTo(".header-info", { opacity: 0 }, { opacity: 1 },"<")
+  .fromTo(".header-btn", { opacity: 0 }, { opacity: 1 },"<")
+  .fromTo(".header-tel_img", { opacity: 0 }, { opacity: 1 },"<")
+  .fromTo(".header-decor", { opacity: 0 }, { opacity: 1 },"<")
+  // .to(body,{position:"relative"})
+
+  document.body.style.overflow = 'auto';
+  document.documentElement.style.overflow = 'auto';
+  
+}
+
+
+ const navLinks = document.querySelectorAll('.nav-link');
+
+
+ navLinks.forEach(link =>{
+  link.addEventListener('click',(e)=>{
+    animateHamburger()
+    closeNav()
+  })
+ })
+
+
+
+  /*----------------------------
+   Page Loader
+  ページローダー
+----------------------------*/
+
+ document.addEventListener('DOMContentLoaded',(e)=>{
+  let intro = gsap.timeline()
+
+  intro
+.to('.transition-item',{y:'0',delay:2})
+.to('.transition-item-white',{y:'0'})
+.set('.transition-item',{y:'-100%'})
+.set('.transition-img',{opacity:0})
+.set('.transition-img',{x:"100%" ,})
+.to('.transition-item-white',{y:'-100%'})
+.to('.transition-item-white',{display:"none"})
+})
+
+
+
+/*----------------------------
+  Pop Up Modal
+  ポップアップモーダル
+----------------------------*/
+
+const inspirationBtn = document.querySelector('[data-insp="1"]');
+const modal = document.querySelector('[data-story="1"]');
+const closeBtn =document.querySelector('.close-popup-btn');
+
+inspirationBtn.addEventListener('click',(e)=>{
+  e.preventDefault;
+  modal.style.display = "block";
+  animateleft()
+})
+closeBtn.addEventListener('click',(e)=>{
+  modal.style.display = "none";
+})
+
+function animateleft(){
+  let popimage =  gsap.timeline();
+  popimage
+  .from(".popup",{opacity:0,duration:0.5})
+  // .from(".story",{x:"100%"})
+  // .from(".animate-text",{opacity:0});
+}
+
+const closeBtn_sp =document.querySelector('.close-popup-btn_sp');
+
+closeBtn_sp.addEventListener('click',(e)=>{
+  modal.style.display = "none";
+})
+
+const headerTel = document.querySelector('.header-tel_img');
+
+const header = document.getElementById('header');
+const newplan = document.querySelectorAll('#newplan');
+const kv = document.querySelector('.kv-trigger');
+const inspBanner = document.querySelector('.insp-banner-trigger');
+const itemBanner =document.querySelector('.item-banner-trigger');
+const advantageTrigger = document.querySelector('.advantage-trigger');
+const consultancyTrigger = document.querySelector('.consultancy-trigger');
+const logoimg = document.querySelector('.logo-img');
+
+// dark backgrounds
+function changeTimeToWhite(){
+  gsap.to('.time',{color:"white"});
+}
+function changeTelToWhite(){
+  gsap.to('.change',{color:"white"});
+}
+function changeHeadDecorToWhite(){
+  gsap.to('.header-decor',{backgroundColor:"white"});
+}
+function changeLogoToBlack(){
+  // gsap.to('.logo',{filter:" invert(1)"});
+  logoimg.src = mainLogoBlack;
+}
+
+function changeToWhite(){
+  headerTel.src = iconWhite;
+  changeTimeToWhite();
+  changeTelToWhite();
+  changeHeadDecorToWhite();
+  changeLogoToWhite();
+}
+
+// light backgrounds
+
+function changeTimeToBlack(){
+  gsap.to('.time',{color:"#45484b"});
+}
+function changeTelToBlack(){
+  gsap.to('.change',{color:"#45484b"});
+}
+function changeHeadDecorToBlack(){
+  gsap.to('.header-decor',{backgroundColor:"#45484b"});
+}
+function changeLogoToWhite(){
+  // gsap.to('.logo',{filter:" invert(0)"});
+  logoimg.src = mainLogoWhite;
+  
+}
+
+function changeToBlack(){
+  headerTel.src = iconBlack;
+  changeTimeToBlack();
+  changeTelToBlack();
+  changeHeadDecorToBlack();
+  changeLogoToBlack();
+}
+
+function onlyRightToWhite(){
+  headerTel.src = iconWhite;
+  changeTimeToWhite();
+  changeTelToWhite();
+  changeHeadDecorToWhite();
+}
+function onlyRightToBlack(){
+  headerTel.src = iconBlack;
+  changeTimeToBlack();
+  changeTelToBlack();
+  changeHeadDecorToBlack();
+}
+
+
+
+// triggers
+
+//trigger for logo when it htis the end of the kv
+ScrollTrigger.create({
+  trigger: kv,
+  start: "bottom top",
+  // end:".service-container",
+  onEnter: changeLogoToBlack,
+  // onLeave: changeLogoToWhite,
+  onEnterBack: changeLogoToBlack,
+  onLeaveBack:changeLogoToWhite
+});
+
+
+// newplan trigger
+ScrollTrigger.create({
+  trigger: newplan,
+  start: "top top",
+  onEnter: changeToWhite,
+  onLeave: changeToBlack,
+  onEnterBack: changeToWhite,
+  onLeaveBack:changeToBlack
+});
+
+// banner trigger inspiration banner
+ScrollTrigger.create({
+  trigger: inspBanner,
+  start: "-100px top",
+  // markers:true,
+  onEnter: changeToWhite,
+  onLeave: changeToBlack,
+  onEnterBack: changeToWhite,
+  onLeaveBack:changeToBlack
+});
+
+
+// banner trigger inspiration banner
+ScrollTrigger.create({
+  trigger: inspBanner,
+  start: "-100px top",
+  // markers:true,
+  onEnter: changeToWhite,
+  onLeave: changeToBlack,
+  onEnterBack: changeToWhite,
+  onLeaveBack:changeToBlack
+});
+
+
+
+// banner trigger item banner
+ScrollTrigger.create({
+  trigger: itemBanner,
+  start: "-100px top",
+  // markers:true,
+  onEnter: changeToWhite,
+  onLeave: changeToBlack,
+  onEnterBack: changeToWhite,
+  onLeaveBack:changeToBlack,
+});
+
+
+// advantage image trigger for only right side of the nav
+ScrollTrigger.create({
+  trigger: advantageTrigger,
+  start: "-50px top",
+  // markers:true,
+  onEnter: onlyRightToWhite,
+  onLeave: onlyRightToBlack,
+  onEnterBack: onlyRightToWhite,
+  onLeaveBack:onlyRightToBlack
+});
+
+// color consultancy image trigger for only right side of the nav
+ScrollTrigger.create({
+  trigger: consultancyTrigger,
+  start: "-50px top",
+  // markers:true,
+  onEnter: onlyRightToWhite,
+  onLeave: onlyRightToBlack,
+  onEnterBack: onlyRightToWhite,
+  onLeaveBack:onlyRightToBlack
+});
+
+//  // plan trigger 
+ ScrollTrigger.create({
+  trigger: ".slide_show",
+  start: "-10px top",
+  onEnter:changeToWhite,
+  onLeave: changeToBlack,
+  onEnterBack: changeToWhite,
+  onLeaveBack:changeToBlack
+});
+
+ // flow trigger 
+ScrollTrigger.create({
+  trigger: "#flow",
+  start: "-50px top",
+  onEnter: changeToBlack,
+  onLeaveBack:changeToWhite
+});

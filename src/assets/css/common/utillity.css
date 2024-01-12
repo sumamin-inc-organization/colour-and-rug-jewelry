@@ -26,7 +26,6 @@ a{
 /* 中央に配置 */
 .main-grid-column-2 {
   grid-column: 2;
-  /* grid-column: 2/3; */
 }
 
 /* メイングリッドの3つのカラムすべてを占有する */
@@ -50,22 +49,19 @@ a{
 
 .black-btn {
   border: none;
-  background-color: #3E3A39;
+  background-color: #45484B;
   position: relative;
 }
 
 .black-btn:hover {
-  background-color: #C38C80;
+  /* background-color: #C38C80; */
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .black-btn a {
   text-decoration: none;
   color: white;
-}
-
-.black-btn:hover {
-  cursor: pointer;
 }
 
 .black-btn::after {
@@ -97,6 +93,8 @@ a{
 }
 .white-btn:hover {
   cursor: pointer;
+  /* background-color: #EFE3E0; */
+  transition: 0.3s;
 }
 
 .white-btn::after {
@@ -108,28 +106,6 @@ a{
   transform: translateY(-50%);
   right: 0;
   z-index: 3;
-}
-/*----------------------------
-    Responsive 
-    レスポンシブ
-----------------------------*/
-
-/* スクリーン幅が768px未満のデバイスでのみ表示 */
-.mobile-only {
-  display: none;
-}
-/* スクリーン幅が768pxより大きいデバイスでのみ表示 */
-.pc-only {
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .mobile-only {
-    display: block;
-  }
-  .pc-only {
-    display: none;
-  }
 }
 
 /*----------------------------
@@ -196,24 +172,32 @@ a{
 
 /* スクリーン幅が767x以下のデバイスでのみ表示 */
 .mobile-only{
-    display: none;
+    display: none ;
 }
 /* スクリーン幅が767pxより大きいデバイスでのみ表示 */
 .pc-only{
     display: block;
 }
-
 .sp_425{
   display: none;
 }
-@media(max-width:768px){
-    .mobile-only{
-        display: block;
-    }
 
-    .pc-only{
-        display: none;
-    }
+@media(max-width:768px){
+  .mobile-only{
+    display: block;
+  }
+  .pc-only{
+    display: none;
+  }
+  /* SPテキストのみ左右30pxのpadding */
+  .sp_padding{
+    width: 85vw;
+    margin: auto !important;
+  }
+  /* SPテキスト幅調整 */
+  .sp_justify{
+    text-align: justify !important;
+  }
 }
 @media (max-width:425px){
   .sp_425{
@@ -234,3 +218,12 @@ a{
 .inline-block{
   display: inline-block;
 }
+
+.display-none{
+  display: none;
+}
+
+.opacity-0{
+  opacity: 0;
+}
+
