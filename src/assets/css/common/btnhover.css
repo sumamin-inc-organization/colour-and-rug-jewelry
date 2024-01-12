@@ -62,3 +62,32 @@
 .white-to-black_outline:hover p{
    color: #FFFFFF;
 }
+
+/*----------------------------
+ Banner button Fix
+----------------------------*/
+
+.banner-btn{
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+}
+
+.banner-btn::after {
+    content: url(../../images/inspiration/btn-chevron.svg);
+}
+
+.banner-btn p{
+    color: #FFFFFF;
+}
+.banner-btn:hover{
+    background-color:  #FFFFFF;
+    border: none;
+}
+.banner-btn:hover p{
+    color: #45484B;
+}
+
+.banner-btn:hover::after {
+    content: url(../../images/common/btn-chevron_white.svh.svg);
+
+}
