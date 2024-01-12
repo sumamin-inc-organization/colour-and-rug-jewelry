@@ -280,7 +280,7 @@ let faqtl = gsap.timeline({
 faqtl
   .from(".faq-eng", { x: 50, opacity: 0, duration: 1 })
   .from(".faq-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8")
-  .to(".faq", { "--beforeAnimation": "100%", duration: 5 });
+  .to(".faq", { "--beforeAnimation": "100%", duration: 2.5 });
 
 /*----------------------------
     CONTACT Animations
@@ -412,10 +412,15 @@ const closeBtn =document.querySelector('.close-popup-btn');
 inspirationBtn.addEventListener('click',(e)=>{
   e.preventDefault;
   modal.style.display = "block";
+  document.documentElement.style.overflow = 'hidden';
+  document.body.style.overflow = 'hidden';
   animateleft()
 })
 closeBtn.addEventListener('click',(e)=>{
   modal.style.display = "none";
+  document.body.style['overflow-y'] = 'visible';
+  document.documentElement.style.overflow = 'auto';
+  document.body.style['overflow-x'] = 'clip';
 })
 
 function animateleft(){
@@ -606,3 +611,10 @@ ScrollTrigger.create({
   onEnter: changeToBlack,
   // onLeaveBack:changeToWhite
 });
+
+
+ /*----------------------------
+    KV Animations
+    KV アニメーション
+----------------------------*/
+

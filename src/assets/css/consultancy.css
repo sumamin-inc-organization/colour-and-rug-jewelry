@@ -3,7 +3,7 @@
 /* ------------------- */
 
 #consultancy {
-  margin-top: 30px;
+  padding-top: 30px;
   row-gap: 78px;
 }
 .consultancy-top_jp {
@@ -41,7 +41,7 @@
 
 @media (max-width:768px){
   #consultancy {
-    margin-top: 42px;
+    padding-top: 42px;
     row-gap: 22px;
   }
 }

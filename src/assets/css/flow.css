@@ -85,3 +85,17 @@
       margin-bottom: 15px;
     }
 }
+
+
+@media (min-width:768px){
+  .flow-sticky{
+    position: relative;
+  }
+  
+  .flow-stick_inner{
+    position: sticky;
+    top: 20px;
+    top: 140px;
+  }
+}
+
