@@ -2,9 +2,8 @@
 /* Button Hover Fix     */
 /* ------------------- */
 
-
 /*----------------------------
-  White ==> Black
+   Black ==> White
 ----------------------------*/
 .black-to-white:hover{
     background-color: white;
@@ -20,7 +19,7 @@
 }
 
 /*----------------------------
-   Black ==> White
+  White ==> Black
 ----------------------------*/
 
 .arrow-hover-white:hover::after {
@@ -39,4 +38,27 @@
 }
 .white-to-black:hover p{
    color: #FFFFFF ;
+}
+
+/*----------------------------
+  White ==> Black Outline
+----------------------------*/
+
+.arrow-hover-white:hover::after {
+    content: url(../../images/inspiration/btn-chevron.svg);
+}
+.white-to-black_outline{
+    color: #45484B ;
+}
+.white-to-black_outline p{
+    color: #45484B;
+}
+.white-to-black_outline:hover{
+    background-color:  #45484B;
+   color: #FFFFFF ;
+   transition: 0.3s;
+   border: 1px solid #FFFFFF;
+}
+.white-to-black_outline:hover p{
+   color: #FFFFFF;
 }
