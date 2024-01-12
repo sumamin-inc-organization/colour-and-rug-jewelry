@@ -35,7 +35,7 @@ header {
 header {
   padding-left: 30px;
   padding-right: 40px;
-  padding-right: calc(100vw - 100% + 40px) ;
+  /* padding-right: calc(100vw - 100% + 40px) ; */
 }
 .header-btn {
   padding: 6.92px 50.2px 9px 50px;
