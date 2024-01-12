@@ -63,6 +63,7 @@
     position: relative;
     line-height: 1.2;
     font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
 }
 .warm_color1 {
     background-color: #AE8270;
