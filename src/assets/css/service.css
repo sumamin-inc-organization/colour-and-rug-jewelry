@@ -34,7 +34,7 @@
 }
 
 #service {
-  background-color: rgba(226, 208, 202, 0.8);
+  background-color: rgba(226, 208, 202, 0.9);
   padding: 128px 0 140px;
   text-align: center;
 }
@@ -242,4 +242,8 @@
 
 .newplan-spacing{
   height: 100vh;
+}
+
+.service_text{
+  font-weight: 500 !important;
 }

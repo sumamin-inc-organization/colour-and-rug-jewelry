@@ -78,7 +78,7 @@
 }
 
 .contact-info_heading{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #45484B;
     margin-bottom: 11px;
 }
 
@@ -170,6 +170,10 @@
     .cont-bottom-btn_data{
         flex-flow: column;
     }
+    .bottom-btn{
+        height: auto;
+        padding: 10px;
+    }
 }
 @media (max-width:1120px){
     .contact-top{
@@ -182,10 +186,6 @@
 @media (max-width:1000px){
     .contact-top{
         width: 360px;
-    }
-    .bottom-btn{
-        height: auto;
-        padding: 10px;
     }
 }
 

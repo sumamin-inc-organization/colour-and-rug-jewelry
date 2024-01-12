@@ -280,7 +280,7 @@ let faqtl = gsap.timeline({
 faqtl
   .from(".faq-eng", { x: 50, opacity: 0, duration: 1 })
   .from(".faq-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8")
-  .to(".faq", { "--beforeAnimation": "100%", duration: 5 });
+  .to(".faq", { "--beforeAnimation": "100%", duration: 2.5 });
 
 /*----------------------------
     CONTACT Animations
@@ -311,7 +311,8 @@ conttl
 let icon = document.querySelector(".menu_icon");
 let headerBtn = document.querySelector('.header-btn');
 const body = document.body;
-console.log(body)
+const logoimg = document.querySelector('.trigger-logo');
+const logoNav = document.querySelector('.nav-logo-img');
 
 icon.addEventListener("click", () => {
   animateHamburger()
@@ -332,6 +333,7 @@ function animateHamburger(){
 }
 
 
+
 function openNav(){
   let openAnim = gsap.timeline()
   openAnim
@@ -344,8 +346,9 @@ function openNav(){
 
   document.documentElement.style.overflow = 'hidden';
   document.body.style.overflow = 'hidden';
-  
-  
+  logoNav.style.display = "block"
+  logoimg.style.display = "none"
+  // changeLogoToWhite()
 
 }
 
@@ -363,7 +366,9 @@ function closeNav(){
   document.body.style['overflow-y'] = 'visible';
   document.documentElement.style.overflow = 'auto';
   document.body.style['overflow-x'] = 'clip';
-
+  // changeLogoToBlack()
+  logoNav.style.display = "none"
+  logoimg.style.display = "block"
   
 }
 
@@ -418,10 +423,15 @@ const closeBtn =document.querySelector('.close-popup-btn');
 inspirationBtn.addEventListener('click',(e)=>{
   e.preventDefault;
   modal.style.display = "block";
+  document.documentElement.style.overflow = 'hidden';
+  document.body.style.overflow = 'hidden';
   animateleft()
 })
 closeBtn.addEventListener('click',(e)=>{
   modal.style.display = "none";
+  document.body.style['overflow-y'] = 'visible';
+  document.documentElement.style.overflow = 'auto';
+  document.body.style['overflow-x'] = 'clip';
 })
 
 function animateleft(){
@@ -447,7 +457,7 @@ const inspBanner = document.querySelector('.insp-banner-trigger');
 const itemBanner =document.querySelector('.item-banner-trigger');
 const advantageTrigger = document.querySelector('.advantage-trigger');
 const consultancyTrigger = document.querySelector('.consultancy-trigger');
-const logoimg = document.querySelector('.logo-img');
+
 
 // dark backgrounds
 function changeTimeToWhite(){
@@ -612,3 +622,10 @@ ScrollTrigger.create({
   onEnter: changeToBlack,
   // onLeaveBack:changeToWhite
 });
+
+
+ /*----------------------------
+    KV Animations
+    KV アニメーション
+----------------------------*/
+
