@@ -412,10 +412,15 @@ const closeBtn =document.querySelector('.close-popup-btn');
 inspirationBtn.addEventListener('click',(e)=>{
   e.preventDefault;
   modal.style.display = "block";
+  document.documentElement.style.overflow = 'hidden';
+  document.body.style.overflow = 'hidden';
   animateleft()
 })
 closeBtn.addEventListener('click',(e)=>{
   modal.style.display = "none";
+  document.body.style['overflow-y'] = 'visible';
+  document.documentElement.style.overflow = 'auto';
+  document.body.style['overflow-x'] = 'clip';
 })
 
 function animateleft(){
