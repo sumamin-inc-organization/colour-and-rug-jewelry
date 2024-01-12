@@ -83,6 +83,7 @@
 .banner-btn p{
     /* color: #FFFFFF; */
     color: #45484B;
+    letter-spacing: 0.07em;
 }
 .banner-btn:hover{
     /* background-color:  #FFFFFF; */

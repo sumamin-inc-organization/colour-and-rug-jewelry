@@ -374,7 +374,7 @@ function closeNav(){
 
 
  const navLinks = document.querySelectorAll('.nav-link');
-
+ const salon = document.querySelector('.location');
 
  navLinks.forEach(link =>{
   link.addEventListener('click',(e)=>{
@@ -384,6 +384,12 @@ function closeNav(){
  })
 
 
+
+salon.addEventListener('click',(e)=>{
+  e.preventDefault;
+  animateHamburger()
+  closeNav()
+})
 
   /*----------------------------
    Page Loader

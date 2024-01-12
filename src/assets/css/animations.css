@@ -82,7 +82,7 @@
 
 .kv_title{
     position: relative;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .kv_title::after{
@@ -91,6 +91,6 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-color: red;
+    /* background-color: red; */
     z-index: 2;
 }

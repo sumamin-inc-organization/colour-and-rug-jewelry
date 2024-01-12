@@ -41,6 +41,10 @@
   cursor: pointer;
 }
 
+.indicator{
+  letter-spacing: 0.18em;
+}
+
 .slider-buttons {
   display: flex;
   gap: 20px;
@@ -311,6 +315,7 @@
   padding-right: 80px;
   margin-top: 55px;
   line-height: 40px;
+  text-align: justify;
   /* border: 1px solid green; */
 }
 .popup-decor{
