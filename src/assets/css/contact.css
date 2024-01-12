@@ -128,7 +128,7 @@
 
 .bottom-btn{
     padding-top: 10px;
-    background-color: white;
+    background-color: #FFFFFF;
     grid-column: 1/3;
     display: grid;
     place-content: center;
@@ -136,7 +136,8 @@
 }
 .bottom-btn:hover{
     cursor: pointer;
-    background-color: #EFE3E0;
+    background-color: #45484B;
+    color:#FFFFFF ;
     transition: 0.3s;
 }
 .contact-btn_top{
