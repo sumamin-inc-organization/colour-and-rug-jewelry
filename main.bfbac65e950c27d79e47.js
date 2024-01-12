@@ -10407,8 +10407,6 @@ salon.addEventListener('click',(e)=>{
 .set('.transition-img',{x:"100%" ,})
 .to('.transition-item-white',{y:'-100%'})
 .to('.transition-item-white',{display:"none"})
-// .to('.kv_title',{"--anim-width":0})
-.from('.kv_title',{y:50,opacity:0,duration:1.5},"-=1")
 })
 
 
@@ -10522,15 +10520,7 @@ function onlyRightToBlack(){
   changeHeadDecorToBlack();
 }
 
-function newplanGSAP(){
-  // gsap.fromTo(".newplan-anim-txt", { y:100,opacity: 0 }, { y:0,opacity: 1,duration:1.5})
-  gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.to(".newplan-anim-txt",{ y:0,opacity: 1,duration:1.5})
-}
 
-function newplanAnim(){
-  changeToWhite();
-  newplanGSAP()
-}
 
 // triggers
 
@@ -10538,7 +10528,6 @@ function newplanAnim(){
 gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
   trigger: kv,
   start: "bottom top",
-  // markers:true,
   // end:".service-container",
   onEnter: changeLogoToBlack,
   // onLeave: changeLogoToWhite,
@@ -10551,7 +10540,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
 gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
   trigger: newplan,
   start: "top top",
-  onEnter: newplanAnim,
+  onEnter: changeToWhite,
   onLeave: changeToBlack,
   onEnterBack: changeToWhite,
   onLeaveBack:changeToBlack
@@ -10641,21 +10630,8 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
 ----------------------------*/
 
 
-let kvtl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
-  scrollTrigger: {
-    trigger: ".kv_bottom",
-    start: "-=200px",
-    scrub: false,
-    // markers:true
-  },
-});
-
-kvtl
-  .from(".kv-eng", { x: 50, opacity: 0, duration: 1 })
-  .from(".kv-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8");
-
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.8384acde5203d7b05633.js.map
+//# sourceMappingURL=main.bfbac65e950c27d79e47.js.map
