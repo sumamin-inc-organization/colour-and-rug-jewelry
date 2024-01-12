@@ -585,14 +585,15 @@ ScrollTrigger.create({
 });
 
 //  // plan trigger 
-//  ScrollTrigger.create({
-//   trigger: "#plan",
-//   start: "-50px top",
-//   onEnter: changeToBlack,
-//   // onLeave: changeToBlack,
-//   // onEnterBack: changeToWhite,
-//   onLeaveBack:changeToWhite
-// });
+ ScrollTrigger.create({
+  trigger: ".slide_show",
+  start: "-10px top",
+  markers:true,
+  onEnter:changeToWhite,
+  onLeave: changeToBlack,
+  onEnterBack: changeToWhite,
+  onLeaveBack:changeToBlack
+});
 
  // flow trigger 
 ScrollTrigger.create({
