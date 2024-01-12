@@ -407,6 +407,8 @@ salon.addEventListener('click',(e)=>{
 .set('.transition-img',{x:"100%" ,})
 .to('.transition-item-white',{y:'-100%'})
 .to('.transition-item-white',{display:"none"})
+// .to('.kv_title',{"--anim-width":0})
+.from('.kv_title',{y:50,opacity:0,duration:1.5},"-=1")
 })
 
 
@@ -520,7 +522,15 @@ function onlyRightToBlack(){
   changeHeadDecorToBlack();
 }
 
+function newplanGSAP(){
+  // gsap.fromTo(".newplan-anim-txt", { y:100,opacity: 0 }, { y:0,opacity: 1,duration:1.5})
+  gsap.to(".newplan-anim-txt",{ y:0,opacity: 1,duration:1.5})
+}
 
+function newplanAnim(){
+  changeToWhite();
+  newplanGSAP()
+}
 
 // triggers
 
@@ -528,6 +538,7 @@ function onlyRightToBlack(){
 ScrollTrigger.create({
   trigger: kv,
   start: "bottom top",
+  // markers:true,
   // end:".service-container",
   onEnter: changeLogoToBlack,
   // onLeave: changeLogoToWhite,
@@ -540,7 +551,7 @@ ScrollTrigger.create({
 ScrollTrigger.create({
   trigger: newplan,
   start: "top top",
-  onEnter: changeToWhite,
+  onEnter: newplanAnim,
   onLeave: changeToBlack,
   onEnterBack: changeToWhite,
   onLeaveBack:changeToBlack
@@ -629,3 +640,16 @@ ScrollTrigger.create({
     KV アニメーション
 ----------------------------*/
 
+
+let kvtl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".kv_bottom",
+    start: "-=200px",
+    scrub: false,
+    // markers:true
+  },
+});
+
+kvtl
+  .from(".kv-eng", { x: 50, opacity: 0, duration: 1 })
+  .from(".kv-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8");
