@@ -1,4 +1,6 @@
-
+/* ------------------- */
+/* Button Hover Fix     */
+/* ------------------- */
 .header-btn:hover{
     background-color: white;
     border: 1px solid #45484B;
@@ -7,3 +9,7 @@
 .header-btn:hover p{
   color:#45484B ;
 }
+.header-btn:hover::after {
+    content: url(../../images/common/btn-chevron_white.svh.svg);
+
+  }
