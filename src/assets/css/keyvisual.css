@@ -28,12 +28,12 @@
 
 .kv_bottom .kv_text .kagayaku {
   font-size: 1.46vw;
-  letter-spacing: 2.9px;
+  letter-spacing: 0.15rem;
 }
 
 .kv_bottom .kv_text h2 {
   font-size: 2.86vw;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.15rem;
   margin-top: 1.68vw;
 }
 
@@ -109,3 +109,14 @@
         object-fit: cover;
     }
 }
+
+@media (max-width: 380px) {
+  .kv_bottom .kv_text .kagayaku {
+    letter-spacing: 0.1rem;
+  }
+  
+  .kv_bottom .kv_text h2 {
+    letter-spacing: 0.1rem;
+  }
+}
+

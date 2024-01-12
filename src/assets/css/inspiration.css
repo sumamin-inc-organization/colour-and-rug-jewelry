@@ -134,8 +134,8 @@
 }
 
 @media(max-width:1000px){
-  .inspiration-bottom p{
-    width: 65%;
+  .inspiration-button.black-btn {
+    padding: 7.1px 46.2px 8.9px 35.6px;
   }
 }
 
@@ -151,7 +151,7 @@
 ----------------------------*/
 
 
-@media(max-width:425px){
+@media(max-width:768px){
   .insp-sp{
     font-size: 14px;
   }
@@ -168,7 +168,7 @@
     インスピレーションボトム - モバイル
 ----------------------------*/
 
-@media (max-width:768px){
+@media (max-width:1000px){
   .inspiration-bottom {
     display: flex;
     flex-direction: column;
@@ -180,6 +180,9 @@
   .inspiration-bottom p{
     padding-bottom: 22px;
     width: 100%;
+  }
+  .inspiration-button.black-btn p {
+    padding: 0;
   }
 }
 

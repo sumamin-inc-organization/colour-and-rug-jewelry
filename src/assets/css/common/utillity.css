@@ -54,17 +54,14 @@ a{
 }
 
 .black-btn:hover {
-  background-color: #C38C80;
+  /* background-color: #C38C80; */
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .black-btn a {
   text-decoration: none;
   color: white;
-}
-
-.black-btn:hover {
-  cursor: pointer;
 }
 
 .black-btn::after {
@@ -96,7 +93,7 @@ a{
 }
 .white-btn:hover {
   cursor: pointer;
-  background-color: #EFE3E0;
+  /* background-color: #EFE3E0; */
   transition: 0.3s;
 }
 

@@ -1,0 +1,24 @@
+/* ------------------- */
+/* Button Hover Fix     */
+/* ------------------- */
+
+
+/*----------------------------
+  White ==> Black
+----------------------------*/
+.black-to-white:hover{
+    background-color: white;
+    border: 1px solid #45484B;
+}
+
+.black-to-white:hover p{
+  color:#45484B ;
+}
+.black-to-white:hover::after {
+    content: url(../../images/common/btn-chevron_white.svh.svg);
+
+}
+
+/*----------------------------
+   Black ==> White
+----------------------------*/

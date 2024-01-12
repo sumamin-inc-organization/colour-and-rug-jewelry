@@ -20,8 +20,13 @@ import "./assets/css/form.css";
 import "./assets/css/footer.css";
 import "./assets/css/common/banner.css";
 import "./assets/css/animations.css";
+import "./assets/css/common/btnhover.css";
+
+
 import iconWhite from './assets/images/nav/icon_tel-white.svg';
 import iconBlack from './assets/images/nav/icon_tel.svg';
+import mainLogoBlack from './assets/images/nav/logo_main-blk.svg';
+import mainLogoWhite from './assets/images/nav/logo_main.svg';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -434,7 +439,7 @@ const inspBanner = document.querySelector('.insp-banner-trigger');
 const itemBanner =document.querySelector('.item-banner-trigger');
 const advantageTrigger = document.querySelector('.advantage-trigger');
 const consultancyTrigger = document.querySelector('.consultancy-trigger');
-
+const logoimg = document.querySelector('.logo-img');
 
 // dark backgrounds
 function changeTimeToWhite(){
@@ -447,7 +452,8 @@ function changeHeadDecorToWhite(){
   gsap.to('.header-decor',{backgroundColor:"white"});
 }
 function changeLogoToBlack(){
-  gsap.to('.logo',{filter:" invert(1)"});
+  // gsap.to('.logo',{filter:" invert(1)"});
+  logoimg.src = mainLogoBlack;
 }
 
 function changeToWhite(){
@@ -461,16 +467,18 @@ function changeToWhite(){
 // light backgrounds
 
 function changeTimeToBlack(){
-  gsap.to('.time',{color:"black"});
+  gsap.to('.time',{color:"#45484b"});
 }
 function changeTelToBlack(){
-  gsap.to('.change',{color:"black"});
+  gsap.to('.change',{color:"#45484b"});
 }
 function changeHeadDecorToBlack(){
   gsap.to('.header-decor',{backgroundColor:"#45484b"});
 }
 function changeLogoToWhite(){
-  gsap.to('.logo',{filter:" invert(0)"});
+  // gsap.to('.logo',{filter:" invert(0)"});
+  logoimg.src = mainLogoWhite;
+  
 }
 
 function changeToBlack(){
@@ -545,15 +553,15 @@ ScrollTrigger.create({
 
 
 
-// banner trigger inspiration banner
+// banner trigger item banner
 ScrollTrigger.create({
   trigger: itemBanner,
   start: "-100px top",
   // markers:true,
   onEnter: changeToWhite,
-  onLeave: onlyRightToBlack,
+  onLeave: changeToBlack,
   onEnterBack: changeToWhite,
-  onLeaveBack:onlyRightToWhite,
+  onLeaveBack:changeToBlack,
 });
 
 
@@ -580,14 +588,15 @@ ScrollTrigger.create({
 });
 
 //  // plan trigger 
-//  ScrollTrigger.create({
-//   trigger: "#plan",
-//   start: "-50px top",
-//   onEnter: changeToBlack,
-//   // onLeave: changeToBlack,
-//   // onEnterBack: changeToWhite,
-//   onLeaveBack:changeToWhite
-// });
+ ScrollTrigger.create({
+  trigger: ".slide_show",
+  start: "-10px top",
+  markers:true,
+  onEnter:changeToWhite,
+  onLeave: changeToBlack,
+  onEnterBack: changeToWhite,
+  onLeaveBack:changeToBlack
+});
 
  // flow trigger 
 ScrollTrigger.create({
