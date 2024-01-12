@@ -490,7 +490,6 @@ a{
   .sec_title{
     font-size: 22px;
     padding-bottom: 45px;
-    letter-spacing: 0.01rem;
   }
   /* PC     -> 16px 
    mobile -> 14px */
@@ -697,7 +696,7 @@ main{
   }
   .one,
   .three {
-    background-color: black;
+    background-color: #45484B;
   }
   
   .two {
@@ -714,7 +713,7 @@ main{
     display: block;
     height: 1px;
     width: 20px;
-    background-color: black;
+    background-color: #45484B;
     transform: rotate(0);
   }
   
@@ -793,6 +792,7 @@ main{
 .primary-nav_hero{
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 
@@ -867,7 +867,6 @@ gap: 60px;
 }
 
 .nav-link{
-  /* border: 1px solid green; */
   border-bottom: 1px solid white;
   display: flex;
   align-items: center;
@@ -880,7 +879,6 @@ gap: 60px;
  
  .sns{
   grid-column: 2;
-  /* border: 1px solid green; */
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -890,10 +888,18 @@ gap: 60px;
  .sns img{
   width: 30px;
   height: 30px;
- }
+}
+
+.hamburger_insta{
+  display: flex;
+  gap: 15px;
+  align-items: end;
+  color: #fff;
+}
 
  .primary-nav_reservation{
   grid-column: 1/3;
+  /* padding: 30px; */
  }
 
 
@@ -912,7 +918,17 @@ gap: 60px;
   opacity: 0;
 }
 
-
+@media(max-width:1120px){
+  .primary-nav_list{
+    padding: 95px 60px 102.8px 60px;
+  }
+}
+@media(max-width:870px){
+  .primary-nav_list{
+    padding: 95px 40px 102.8px 40px;
+    column-gap: 40px;
+  }
+}
 
 @media(max-width:768px){
   .header-btn{
@@ -1021,6 +1037,15 @@ justify-content: center;
   width: 20px;
   height: 20px;
 }
+
+/* タブレット版 */
+@media screen and (min-width: 769px) and (max-width: 1024px){
+  .primary-nav_list{
+    column-gap: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/keyvisual.css ***!
   \********************************************************************************/
@@ -1054,12 +1079,12 @@ justify-content: center;
 
 .kv_bottom .kv_text .kagayaku {
   font-size: 1.46vw;
-  letter-spacing: 2.9px;
+  letter-spacing: 0.15rem;
 }
 
 .kv_bottom .kv_text h2 {
   font-size: 2.86vw;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.15rem;
   margin-top: 1.68vw;
 }
 
@@ -1136,6 +1161,17 @@ justify-content: center;
     }
 }
 
+@media (max-width: 380px) {
+  .kv_bottom .kv_text .kagayaku {
+    letter-spacing: 0.1rem;
+  }
+  
+  .kv_bottom .kv_text h2 {
+    letter-spacing: 0.1rem;
+  }
+}
+
+
 /*!******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/service.css ***!
   \******************************************************************************/
@@ -1155,10 +1191,12 @@ justify-content: center;
   padding: 128px 0 140px;
   text-align: center;
 }
+#service .sec_title{
+  letter-spacing: 0.01rem;
+}
 .service_text {
   line-height: 2.5;
   letter-spacing: 0.1rem;
-  color: black;
 }
 .service_flex {
   display: flex;
@@ -1678,8 +1716,8 @@ Recommended Bottom
 }
 
 @media(max-width:1000px){
-  .inspiration-bottom p{
-    width: 65%;
+  .inspiration-button.black-btn {
+    padding: 7.1px 46.2px 8.9px 35.6px;
   }
 }
 
@@ -1695,7 +1733,7 @@ Recommended Bottom
 ----------------------------*/
 
 
-@media(max-width:425px){
+@media(max-width:768px){
   .insp-sp{
     font-size: 14px;
   }
@@ -1712,7 +1750,7 @@ Recommended Bottom
     インスピレーションボトム - モバイル
 ----------------------------*/
 
-@media (max-width:768px){
+@media (max-width:1000px){
   .inspiration-bottom {
     display: flex;
     flex-direction: column;
@@ -1724,6 +1762,9 @@ Recommended Bottom
   .inspiration-bottom p{
     padding-bottom: 22px;
     width: 100%;
+  }
+  .inspiration-button.black-btn p {
+    padding: 0;
   }
 }
 
@@ -1862,7 +1903,8 @@ Recommended Bottom
 
 .popup-img{
   width: 50vw;
-  height: 100%;
+  /* height: 100%; */
+  object-fit: cover;
 }
 .close-popup-btn{
   z-index: 100;
@@ -1871,12 +1913,20 @@ Recommended Bottom
   cursor: pointer;
 }
 
+.is-pc-only{
+  display: block;
+}
+
+.mobile-tablet{
+  display: none;
+}
+
 /*----------------------------
   Pop Up Modal - Mobile
-  ポップアップモーダル - モバイル
+  ポップアップモーダル - タブレット・モバイル
 ----------------------------*/
 
-@media screen and (max-width:768px){
+@media screen and (max-width:1024px){
   .popup{
     overflow-y: scroll;
   }
@@ -1923,6 +1973,14 @@ Recommended Bottom
   }
   .close-popup-btn_sp:hover{
     cursor: pointer;
+  }
+
+  .is-pc-only{
+    display: none;;
+  }
+
+  .mobile-tablet{
+    display: block;
   }
 }
 /*!********************************************************************************!*\
@@ -1975,7 +2033,7 @@ Recommended Bottom
 }
 .color_title{
     text-align: center;
-    padding: 3px 0;
+    padding: 5px 0;
     width: 100%;
     border: solid 1px#000;
 }
@@ -1987,7 +2045,7 @@ Recommended Bottom
 }
 .color_box {
     color: #fff;
-    padding: 40px 10px 10px;
+    padding: 45px 10px 10px;
     font-size: 16px;
     font-weight: 100;
     position: relative;
@@ -2032,7 +2090,7 @@ Recommended Bottom
 @media (max-width: 1200px) {
     .advantage_top{
         width: 95vw;
-        gap: 0;
+        gap: 40px;
     }
     #advantage .sec_title{
         font-size: 28px;
@@ -2091,12 +2149,18 @@ Recommended Bottom
     }
     .color_scheme{
         font-size: 18px;
-        margin: 15px 0 10px;
+        margin: 15px 0 13px;
         letter-spacing: 0.05rem;
     }
     .interior_story{
         font-size: 18px;
         padding: 30px 0 10px;
+    }
+}
+
+@media (max-width:768px) {
+    .color_box p{
+        font-size: 14px;
     }
 }
 
@@ -2254,6 +2318,7 @@ Recommended Bottom
   position: sticky;
   top: 20px;
   height: fit-content;
+  margin-right: 40px;
 }
 
 /* ------------------- */
@@ -2421,6 +2486,14 @@ Recommended Bottom
     align-items: center;
 }
 
+@media (max-width:1000px) {
+    .plan_content{
+        grid-column: 1 / 3;
+        display: flex;
+        justify-content: start;
+        gap: 50px;
+    }
+}
 
 @media (max-width:767px) {
     #plan{
@@ -2827,28 +2900,32 @@ Recommended Bottom
 ----------------------------*/
 
 .contact-top{
-    width: 40%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 10px;
+    width: 525px;
 }
-
 .cont-top{
-    grid-column: 1/3;
+    padding-bottom: 10px;
 }
 .cont-left{
-    min-height: 294px;
-    min-width: 277px;
+    /* min-height: 294px;
+    min-width: 277px; */
+    width: 60%;
+    aspect-ratio: 27 / 29;
+    object-fit: cover;
 }
 .cont-right{
-    min-height: 294px;
-    min-width: 237px;
-
+    /* min-height: 294px;
+    min-width: 237px; */
+    width: 40%;
+    height: auto;
+    aspect-ratio: 23 / 29;
+    object-fit: cover;
 }
 
 .cont-bottom-img{
     display: flex;
     gap: 10px;
+    overflow: hidden;
+    height: 295px;
 }
 
 
@@ -2859,6 +2936,9 @@ Recommended Bottom
 
 .contact-bottom{
     width: 45%;
+}
+.contact-bottom_info{
+    margin-bottom: 20px;
 }
 
 /*----------------------------
@@ -2915,14 +2995,14 @@ Recommended Bottom
     display: grid;
     grid-template-columns:1fr 1fr;
     column-gap: 10px;
-    row-gap: 7px;
+    gap: 10px;
 }
 
 .contact-bottom{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    row-gap: 7px;
+    row-gap: 20px;
 }
 
 .bottom-btn{
@@ -2947,7 +3027,7 @@ Recommended Bottom
     top: 14px;
 }
 .cont-top_black{
-    padding: 7px 82px 9px 82px ;
+    padding: 7px 0 9px;
 }
 
 .cont-bottom-btn_description,
@@ -2963,6 +3043,28 @@ Recommended Bottom
 .tel::before{
     content: url(./images/tel-icon.png);
     margin-right: 7px;
+}
+@media (max-width:1200px){
+    .cont-bottom-btn_data{
+        flex-flow: column;
+    }
+}
+@media (max-width:1120px){
+    .contact-top{
+        width: 450px;
+    }
+    .cont-top_black{
+        padding: 7px 0 9px ;
+    }
+}
+@media (max-width:1000px){
+    .contact-top{
+        width: 360px;
+    }
+    .bottom-btn{
+        height: auto;
+        padding: 10px;
+    }
 }
 
 /* ------------------- */
@@ -2980,12 +3082,18 @@ Recommended Bottom
         padding-top: 80px;
         padding-bottom: 80px;
     }
+    .cont-top{
+        padding: 0;
+    }
+    .cont-bottom-img{
+        height: 180px;
+    }
 }
 
 
 /*----------------------------------------
     Left Side  ==> Top Side (mobile)
-     左側 ==> 上側（モバイル）
+    左側 ==> 上側（モバイル）
 ------------------------------------------*/
  @media (max-width:768px){
     .contact-top{
@@ -3007,18 +3115,15 @@ Recommended Bottom
         /* grid-column: 2/3; */
         min-height: 180px;
         min-width: 150px;
-    
     }
-    
     .cont-bottom-img{
         display: flex;
         gap: 10px;
+        width: 90vw;
     }
-    
-    
- }
+}
 
- /*----------------------------------------
+/*----------------------------------------
     Right Side  ==> Bottom Side (mobile)
     右側 ==> 下側（モバイル）
 ------------------------------------------*/
@@ -3027,22 +3132,14 @@ Recommended Bottom
 @media (max-width:768px){
     .contact-bottom{
         width: 100%;
-        /* border: 1px solid red; */
     }
     .contact-bottom-title_container{
         display: flex;
         justify-content: flex-start;
         width: 51.28vw;
-        /* border: 1px solid red; */
-    }
-    .cont-top_black{
-        padding: 7px 48.5px 9px 49.5px ;
     }
     .contact-bottom_info{
-        margin-bottom: 45px;
-    }
-    .cont-bottom-btn_data{
-        flex-flow: column;
+        margin-bottom: 25px;
     }
     .bottom-btn{
         height: auto;
