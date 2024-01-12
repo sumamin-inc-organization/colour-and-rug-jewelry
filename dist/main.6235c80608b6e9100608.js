@@ -10384,11 +10384,6 @@ function animateleft(){
 
 const closeBtn_sp =document.querySelector('.close-popup-btn_sp');
 
-// inspirationBtn.addEventListener('click',(e)=>{
-//   e.preventDefault;
-//   modal.style.display = "block";
-//   animateleft()
-// })
 closeBtn_sp.addEventListener('click',(e)=>{
   modal.style.display = "none";
 })
@@ -10435,7 +10430,7 @@ function changeTelToBlack(){
   gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.change',{color:"black"});
 }
 function changeHeadDecorToBlack(){
-  gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.header-decor',{backgroundColor:"black"});
+  gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.header-decor',{backgroundColor:"#45484b"});
 }
 function changeLogoToWhite(){
   gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.logo',{filter:" invert(0)"});
@@ -10568,4 +10563,4 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
 
 /******/ })()
 ;
-//# sourceMappingURL=main.814e86a08d2faabd6824.js.map
+//# sourceMappingURL=main.6235c80608b6e9100608.js.map
