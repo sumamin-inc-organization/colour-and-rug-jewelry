@@ -5,9 +5,11 @@
 /*----------------------------
    Black ==> White
 ----------------------------*/
+.black-to-white{
+    border: 1px solid #45484B;
+}
 .black-to-white:hover{
     background-color: white;
-    outline: 1px solid #45484B;
 }
 
 .black-to-white:hover p{
