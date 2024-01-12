@@ -4,7 +4,7 @@
 footer{
     color: #fff;
     background-color: #45484B;
-    padding: 80px 0;
+    padding: 80px 100px;
     letter-spacing: 0.1rem;
 }
 footer ul{
@@ -34,7 +34,7 @@ footer ul{
 .footer_menu_content{
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 60px;
     justify-content: space-between;
 }
 .footer_menu_item{
@@ -57,17 +57,23 @@ footer ul{
 .totop{
     display: flex;
     align-items: center;
-    gap: 15px;
+    /* gap: 15px; */
     justify-content: center;
 }
 .totop a{
     padding-top: 3px;
     color: #fff;
 }
+
+.totop img{
+    margin-left: 15px;
+}
+
 footer a{
     color: #fff;
     position: relative;
 }
+
 footer a::after {
     position: absolute;
     left: 0;
@@ -85,9 +91,13 @@ footer a:hover::after {
     transform-origin: left top;
 }
 
+.totop_arrow::after{
+    opacity: 0;
+}
+
 @media (max-width: 768px) {
     footer{
-        padding: 60px 0 130px;
+        padding: 60px 20px 130px;
     }
     .footer_top{
         margin-bottom: 40px;
@@ -104,13 +114,21 @@ footer a:hover::after {
         letter-spacing: normal;
     }
     .totop{
-        gap: 10px;
+        /* gap: 10px; */
         letter-spacing: 0.05rem;
     }
 
+    .totop img{
+        margin-left: 10px;
+    }
+
     #fixed-footer{
+        position: fixed;
         z-index: 3000;
         border-top: solid 1px #45484B;
+        width: 100%;
+        bottom: 0;
+        left: 0;
     }
 
     #fixed-footer p{
