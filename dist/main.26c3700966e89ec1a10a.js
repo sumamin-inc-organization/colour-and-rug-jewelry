@@ -10360,8 +10360,10 @@ function closeNav(){
   .fromTo(".header-decor", { opacity: 0 ,pointerEvents:"none"}, { opacity: 1 ,pointerEvents:"auto"},"<")
   // .to(body,{position:"relative"})
 
-  document.body.style.overflow = 'auto';
+  document.body.style['overflow-y'] = 'visible';
   document.documentElement.style.overflow = 'auto';
+  document.body.style['overflow-x'] = 'clip';
+
   
 }
 
@@ -10608,4 +10610,4 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
 
 /******/ })()
 ;
-//# sourceMappingURL=main.140ec2f9a7863e534e7d.js.map
+//# sourceMappingURL=main.26c3700966e89ec1a10a.js.map

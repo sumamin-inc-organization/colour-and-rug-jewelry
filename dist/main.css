@@ -456,6 +456,16 @@ a{
 }
 
 /*---------------------------------
+  letter spacing
+----------------------------------*/
+.letter-spacing-30{
+  letter-spacing: 0.06em;
+}
+.letter-spacing-02{
+  letter-spacing: 0.2rem;
+}
+
+/*---------------------------------
   Section Title / セクションタイトル
 ----------------------------------*/
 .sec_title{
@@ -499,10 +509,6 @@ a{
   }
 }
 
-.letter-spacing-30{
-  letter-spacing: 0.06em;
-}
-
 /*!*****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/header.css ***!
   \*****************************************************************************/
@@ -511,12 +517,11 @@ a{
 /* ------------------- */
 
 /*----------------------------------
-   Header alignment and positioning
-   ヘッダーの配置と位置合わせ
+  Header alignment and positioning
+  ヘッダーの配置と位置合わせ
 ------------------------------------*/
 
 header {
-  /* border: 1px solid red; */
   width: 100%;
   position: fixed;
   top: 30px;
@@ -526,15 +531,11 @@ header {
   z-index: 8001;
 }
 .header_right {
-  /* border: 1px solid green; */
   height: 100%;
   display: flex;
   align-items: center
 }
-.header-btn {
-  display: grid;
-  place-content: center;
-}
+
 /*----------------------------------
    Header Paddings
    ヘッダーのパディング
@@ -543,11 +544,6 @@ header {
 header {
   padding-left: 30px;
   padding-right: 40px;
-  /* padding-right: calc(100vw - 100% + 40px) ; */
-}
-.header-btn {
-  padding: 6.92px 50.2px 9px 50px;
-  width: 170px;
 }
 
 @media screen and (max-width:768px){
@@ -588,10 +584,18 @@ header {
    ヘッダーボタン
 ------------------------------------*/
 
+.header-btn {
+  display: grid;
+  place-content: center;
+  letter-spacing: 0.2rem;
+  width: 170px;
+  height: 40px;
+}
 .header-btn::after {
     top: 14px;
     right: 12px;
-  }
+}
+
 
 /*----------------------------------
    Header Heights
@@ -600,10 +604,6 @@ header {
 .header-info {
     height: 40px;
     /* border: 1px solid red; */
-
-  }
-  .header-btn {
-    height: 40px;
   }
   .header-decor {
    height: 40px;
@@ -611,15 +611,13 @@ header {
 
 
 /*----------------------------------
-   Header Typography
-   ヘッダーのタイポグラフィ
+  Header Typography
+  ヘッダーのタイポグラフィ
 ------------------------------------*/
-.header-btn_p{
-    /* letter-spacing: 1.92px; */
-}
+
 .tel-number{
-    letter-spacing: 0.25px;
-    transform: translateY(-10px);
+  letter-spacing: 0.25px;
+  transform: translateY(-10px);
 }
 
 .tel-number a{
@@ -627,35 +625,15 @@ header {
 }
 
 .time {
-    letter-spacing: 1.96px;
-    transform: translateY(-15px);
+  letter-spacing: 1.96px;
+  transform: translateY(-15px);
 }
-
 
 @media (max-width:500px) {
   .logo{
-    width: 53.17px;
-    height: 60px;
+    width: 70.9px;
+    height: auto;
   }
-}
-
-main{
-  /* border: 1px solid red; */
-}
-
-.logo{
-  /* filter: invert(1); */
-}
-
-.header-tel_img {
-  /* fill: #fff; */
-}
-
-.kv_bottom{
-  /* border: 1px solid red; */
-}
-.sticking{
-  background-color: red;
 }
 /*!**************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/nav.css ***!
@@ -666,7 +644,7 @@ main{
 
 
 /*----------------------------------
-   Hamburger Menu
+  Hamburger Menu
     ハンバーガーメニュー
 ------------------------------------*/
 
@@ -680,14 +658,14 @@ main{
   display: flex;
   align-items: center;
   padding: 5px 0;
-    /* border: 1px solid blue; */
-    margin-left: 20px;
-    z-index: 9000;
-  }
- .container:hover,
- .menu_icon:hover{
+  margin-left: 20px;
+  z-index: 9000;
+}
+
+.container:hover,
+.menu_icon:hover{
   cursor: pointer;
- }
+}
   .menu_icon span {
     position: absolute;
     display: block;
@@ -776,8 +754,7 @@ main{
 ------------------------------------*/
 
 .primary-nav{
-  /* z-index: 7999; */
-  z-index: -1;
+    z-index: -1;
   position: fixed;
   top: 0;
   left: 0;
@@ -787,7 +764,7 @@ main{
 }
 
 .primary-nav_img{
-  width: 40vw;
+  width: 45vw;
   height: 100vh;
 }
 .primary-nav_hero{
@@ -798,59 +775,39 @@ main{
 
 
 /*----------------------------------
-   Main Nav(PC)  - Nav Links
-   メインナビ(PC) - ナビゲーションリンク
+  Main Nav(PC)  - Nav Links
+  メインナビ(PC) - ナビゲーションリンク
 ------------------------------------*/
 
 .primary-nav_list{
- /* border: 1px solid red; */
- width: 60vw;
- display: grid;
- padding: 95px 132.5px 102.8px 133.5px;
+  width: 55vw;
+  display: grid;
+  padding: 95px 132.5px 102.8px 133.5px;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 60px;
 }
 
-/* .primary-nav_reservation{
-  border: 1px solid white;
-  display: grid;
-  place-content: center;
-  row-gap: 60px;
-} */
-
 .primary-nav_reservation{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-border: 1px solid white;
-gap: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  gap: 60px;
 }
 
 .primary_book{
-  /* border: 1px solid green; */
-  /* padding: 14px 164.5px 16.4px 166.6px; */
   display: grid;
   place-content: center;
   width: calc(100% - 12.5%);
   height: 60px;
 }
-/* @media (max-width:1200px){
-  .primary_book{
- 
-    padding: 14px 100px 16.4px 100.6px;
-  }
-} */
-
 
 .primary_book::after{
   top:24px;
   right: 20px;
 }
 
-/* .nav-decor{
-  height: 1px;
-  width: 100%;
-  background-color: white;
-} */
 .primary-contact{
   position: relative;
   width: calc(100% - 12.5%);
@@ -864,39 +821,33 @@ gap: 60px;
   top:-20px;
   left: 0;
   background-color: white;
-
 }
 
 .nav-link{
   border-bottom: 1px solid white;
   display: flex;
   align-items: center;
-
 }
-.primary-nav_list{
-  grid-template-columns: 1fr 1fr;
-  column-gap: 60px;
- }
 
 .primary-link,
 .hamburger_insta{
   transition: opacity 0.6s;
 }
- 
+
 .primary-link:hover,
 .hamburger_insta:hover{
   opacity: .6;
 }
- 
- .sns{
+
+.sns{
   grid-column: 2;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 15px;
- }
+}
 
- .sns img{
+.sns img{
   width: 30px;
   height: 30px;
 }
@@ -908,16 +859,14 @@ gap: 60px;
   color: #fff;
 }
 
- .primary-nav_reservation{
+.primary-nav_reservation{
   grid-column: 1/3;
-  /* padding: 30px; */
- }
-
+}
 
 .primary-nav_transition{
   position: fixed;
   width: 100vw;
-  height: 100dvh;
+  height: 100vh;
   background-color: #45484B;
   z-index: 8000;
   top: 0;
@@ -929,18 +878,31 @@ gap: 60px;
   opacity: 0;
 }
 
-@media(max-width:1120px){
+@media(min-width:1500px){
+  .primary-nav_list{
+    width: 1200px;
+  }
+  .primary-nav_img{
+    width: 100%;
+  }
+}
+@media(max-width:1225px){
   .primary-nav_list{
     padding: 95px 60px 102.8px 60px;
   }
 }
-@media(max-width:870px){
+@media(max-width:950px){
   .primary-nav_list{
     padding: 95px 40px 102.8px 40px;
     column-gap: 40px;
   }
 }
-
+@media(max-width:840px){
+  .primary-nav_list{
+    padding: 95px 30px 102.8px 30px;
+    column-gap: 20px;
+  }
+}
 @media(max-width:768px){
   .header-btn{
     display: none;
@@ -948,28 +910,27 @@ gap: 60px;
 }
 
 /*----------------------------------
-   Main Nav(SP)
-   メインナビゲーション(SP)
+  Main Nav(SP)
+  メインナビゲーション(SP)
 ------------------------------------*/
 
 
 @media(max-width:768px) {
   .primary-nav_list{
-    /* border: 1px solid red; */
     width: 100vw;
-    height: 100dvh;
+    height: 100vh;
     overflow-y: scroll;
     padding: 100px 40px 100px 40px;
-   }
-   .primary-nav_list{
+  }
+  .primary-nav_list{
     display: flex;
     flex-direction: column;
   
-   }
-   .primary-nav_reservation{
+  }
+  .primary-nav_reservation{
     display: none;
-   }
-   .nav-link{
+  }
+  .nav-link{
     padding-bottom: 16px;
     padding-top: 16px;
    }
@@ -1048,15 +1009,6 @@ justify-content: center;
   width: 20px;
   height: 20px;
 }
-
-/* タブレット版 */
-@media screen and (min-width: 769px) and (max-width: 1024px){
-  .primary-nav_list{
-    column-gap: 25px;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-}
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/keyvisual.css ***!
   \********************************************************************************/
@@ -1129,7 +1081,7 @@ justify-content: center;
         width: 76vw;
     }
     .kv_top .kv_title{
-        width: 65vw;
+        width: 67vw;
         position: absolute;
         top: 80px;
         right: 20px;
@@ -1540,7 +1492,7 @@ Recommended Bottom
     left: 0;
     padding: 0;
     padding-top:6.25em ;
-    padding: 6em 45px 57px 41px;
+    padding: 6em 35px 57px 41px;
     padding-left: 0; 
     display: grid;
     place-content: center;
@@ -2986,7 +2938,7 @@ Recommended Bottom
 }
 
 .contact-info_heading{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #45484B;
     margin-bottom: 11px;
 }
 
@@ -3078,6 +3030,10 @@ Recommended Bottom
     .cont-bottom-btn_data{
         flex-flow: column;
     }
+    .bottom-btn{
+        height: auto;
+        padding: 10px;
+    }
 }
 @media (max-width:1120px){
     .contact-top{
@@ -3090,10 +3046,6 @@ Recommended Bottom
 @media (max-width:1000px){
     .contact-top{
         width: 360px;
-    }
-    .bottom-btn{
-        height: auto;
-        padding: 10px;
     }
 }
 

@@ -4,7 +4,7 @@
 
 
 /*----------------------------------
-   Hamburger Menu
+  Hamburger Menu
     ハンバーガーメニュー
 ------------------------------------*/
 
@@ -18,14 +18,14 @@
   display: flex;
   align-items: center;
   padding: 5px 0;
-    /* border: 1px solid blue; */
-    margin-left: 20px;
-    z-index: 9000;
-  }
- .container:hover,
- .menu_icon:hover{
+  margin-left: 20px;
+  z-index: 9000;
+}
+
+.container:hover,
+.menu_icon:hover{
   cursor: pointer;
- }
+}
   .menu_icon span {
     position: absolute;
     display: block;
@@ -114,8 +114,7 @@
 ------------------------------------*/
 
 .primary-nav{
-  /* z-index: 7999; */
-  z-index: -1;
+    z-index: -1;
   position: fixed;
   top: 0;
   left: 0;
@@ -125,7 +124,7 @@
 }
 
 .primary-nav_img{
-  width: 40vw;
+  width: 45vw;
   height: 100vh;
 }
 .primary-nav_hero{
@@ -136,59 +135,39 @@
 
 
 /*----------------------------------
-   Main Nav(PC)  - Nav Links
-   メインナビ(PC) - ナビゲーションリンク
+  Main Nav(PC)  - Nav Links
+  メインナビ(PC) - ナビゲーションリンク
 ------------------------------------*/
 
 .primary-nav_list{
- /* border: 1px solid red; */
- width: 60vw;
- display: grid;
- padding: 95px 132.5px 102.8px 133.5px;
+  width: 55vw;
+  display: grid;
+  padding: 95px 132.5px 102.8px 133.5px;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 60px;
 }
 
-/* .primary-nav_reservation{
-  border: 1px solid white;
-  display: grid;
-  place-content: center;
-  row-gap: 60px;
-} */
-
 .primary-nav_reservation{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-border: 1px solid white;
-gap: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  gap: 60px;
 }
 
 .primary_book{
-  /* border: 1px solid green; */
-  /* padding: 14px 164.5px 16.4px 166.6px; */
   display: grid;
   place-content: center;
   width: calc(100% - 12.5%);
   height: 60px;
 }
-/* @media (max-width:1200px){
-  .primary_book{
- 
-    padding: 14px 100px 16.4px 100.6px;
-  }
-} */
-
 
 .primary_book::after{
   top:24px;
   right: 20px;
 }
 
-/* .nav-decor{
-  height: 1px;
-  width: 100%;
-  background-color: white;
-} */
 .primary-contact{
   position: relative;
   width: calc(100% - 12.5%);
@@ -202,39 +181,33 @@ gap: 60px;
   top:-20px;
   left: 0;
   background-color: white;
-
 }
 
 .nav-link{
   border-bottom: 1px solid white;
   display: flex;
   align-items: center;
-
 }
-.primary-nav_list{
-  grid-template-columns: 1fr 1fr;
-  column-gap: 60px;
- }
 
 .primary-link,
 .hamburger_insta{
   transition: opacity 0.6s;
 }
- 
+
 .primary-link:hover,
 .hamburger_insta:hover{
   opacity: .6;
 }
- 
- .sns{
+
+.sns{
   grid-column: 2;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 15px;
- }
+}
 
- .sns img{
+.sns img{
   width: 30px;
   height: 30px;
 }
@@ -246,16 +219,14 @@ gap: 60px;
   color: #fff;
 }
 
- .primary-nav_reservation{
+.primary-nav_reservation{
   grid-column: 1/3;
-  /* padding: 30px; */
- }
-
+}
 
 .primary-nav_transition{
   position: fixed;
   width: 100vw;
-  height: 100dvh;
+  height: 100vh;
   background-color: #45484B;
   z-index: 8000;
   top: 0;
@@ -267,18 +238,31 @@ gap: 60px;
   opacity: 0;
 }
 
-@media(max-width:1120px){
+@media(min-width:1500px){
+  .primary-nav_list{
+    width: 1200px;
+  }
+  .primary-nav_img{
+    width: 100%;
+  }
+}
+@media(max-width:1225px){
   .primary-nav_list{
     padding: 95px 60px 102.8px 60px;
   }
 }
-@media(max-width:870px){
+@media(max-width:950px){
   .primary-nav_list{
     padding: 95px 40px 102.8px 40px;
     column-gap: 40px;
   }
 }
-
+@media(max-width:840px){
+  .primary-nav_list{
+    padding: 95px 30px 102.8px 30px;
+    column-gap: 20px;
+  }
+}
 @media(max-width:768px){
   .header-btn{
     display: none;
@@ -286,28 +270,27 @@ gap: 60px;
 }
 
 /*----------------------------------
-   Main Nav(SP)
-   メインナビゲーション(SP)
+  Main Nav(SP)
+  メインナビゲーション(SP)
 ------------------------------------*/
 
 
 @media(max-width:768px) {
   .primary-nav_list{
-    /* border: 1px solid red; */
     width: 100vw;
-    height: 100dvh;
+    height: 100vh;
     overflow-y: scroll;
     padding: 100px 40px 100px 40px;
-   }
-   .primary-nav_list{
+  }
+  .primary-nav_list{
     display: flex;
     flex-direction: column;
   
-   }
-   .primary-nav_reservation{
+  }
+  .primary-nav_reservation{
     display: none;
-   }
-   .nav-link{
+  }
+  .nav-link{
     padding-bottom: 16px;
     padding-top: 16px;
    }
@@ -385,13 +368,4 @@ justify-content: center;
   content: url(../images/nav/tel-white.png);
   width: 20px;
   height: 20px;
-}
-
-/* タブレット版 */
-@media screen and (min-width: 769px) and (max-width: 1024px){
-  .primary-nav_list{
-    column-gap: 25px;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
 }
