@@ -7,7 +7,7 @@
 ----------------------------*/
 .black-to-white:hover{
     background-color: white;
-    border: 1px solid #45484B;
+    outline: 1px solid #45484B;
 }
 
 .black-to-white:hover p{
@@ -81,7 +81,7 @@
 }
 .banner-btn:hover{
     background-color:  #FFFFFF;
-    border: none;
+
 }
 .banner-btn:hover p{
     color: #45484B;
