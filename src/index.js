@@ -360,8 +360,10 @@ function closeNav(){
   .fromTo(".header-decor", { opacity: 0 ,pointerEvents:"none"}, { opacity: 1 ,pointerEvents:"auto"},"<")
   // .to(body,{position:"relative"})
 
-  document.body.style.overflow = 'auto';
+  document.body.style['overflow-y'] = 'visible';
   document.documentElement.style.overflow = 'auto';
+  document.body.style['overflow-x'] = 'clip';
+
   
 }
 
