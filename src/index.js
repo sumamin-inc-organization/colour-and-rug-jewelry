@@ -461,10 +461,10 @@ function changeToWhite(){
 // light backgrounds
 
 function changeTimeToBlack(){
-  gsap.to('.time',{color:"black"});
+  gsap.to('.time',{color:"#45484b"});
 }
 function changeTelToBlack(){
-  gsap.to('.change',{color:"black"});
+  gsap.to('.change',{color:"#45484b"});
 }
 function changeHeadDecorToBlack(){
   gsap.to('.header-decor',{backgroundColor:"#45484b"});
