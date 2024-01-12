@@ -70,26 +70,32 @@
 ----------------------------*/
 
 .banner-btn{
-    background-color: transparent;
+    /* background-color: transparent; */
+    /* border: 1px solid #FFFFFF; */
+    background-color:  #FFFFFF;
     border: 1px solid #FFFFFF;
 }
 
 .banner-btn::after {
-    content: url(../../images/inspiration/btn-chevron.svg);
+    content: url(../../images/common/btn-chevron_white.svh.svg);
 }
 
 .banner-btn p{
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
+    color: #45484B;
 }
 .banner-btn:hover{
-    background-color:  #FFFFFF;
+    /* background-color:  #FFFFFF; */
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
 
 }
 .banner-btn:hover p{
-    color: #45484B;
+    /* color: #45484B; */
+    color: #FFFFFF;
 }
 
 .banner-btn:hover::after {
-    content: url(../../images/common/btn-chevron_white.svh.svg);
+    content: url(../../images/inspiration/btn-chevron.svg);
 
 }
