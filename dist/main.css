@@ -173,17 +173,14 @@ a{
 }
 
 .black-btn:hover {
-  background-color: #C38C80;
+  /* background-color: #C38C80; */
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .black-btn a {
   text-decoration: none;
   color: white;
-}
-
-.black-btn:hover {
-  cursor: pointer;
 }
 
 .black-btn::after {
@@ -215,7 +212,7 @@ a{
 }
 .white-btn:hover {
   cursor: pointer;
-  background-color: #EFE3E0;
+  /* background-color: #EFE3E0; */
   transition: 0.3s;
 }
 
@@ -294,13 +291,12 @@ a{
 
 /* スクリーン幅が767x以下のデバイスでのみ表示 */
 .mobile-only{
-    display: none;
+    display: none ;
 }
 /* スクリーン幅が767pxより大きいデバイスでのみ表示 */
 .pc-only{
     display: block;
 }
-
 .sp_425{
   display: none;
 }
@@ -316,6 +312,10 @@ a{
   .sp_padding{
     width: 85vw;
     margin: auto !important;
+  }
+  /* SPテキスト幅調整 */
+  .sp_justify{
+    text-align: justify !important;
   }
 }
 @media (max-width:425px){
@@ -696,7 +696,7 @@ main{
   }
   .one,
   .three {
-    background-color: black;
+    background-color: #45484B;
   }
   
   .two {
@@ -713,7 +713,7 @@ main{
     display: block;
     height: 1px;
     width: 20px;
-    background-color: black;
+    background-color: #45484B;
     transform: rotate(0);
   }
   
@@ -792,6 +792,7 @@ main{
 .primary-nav_hero{
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 
@@ -866,7 +867,6 @@ gap: 60px;
 }
 
 .nav-link{
-  /* border: 1px solid green; */
   border-bottom: 1px solid white;
   display: flex;
   align-items: center;
@@ -879,7 +879,6 @@ gap: 60px;
  
  .sns{
   grid-column: 2;
-  /* border: 1px solid green; */
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -889,10 +888,18 @@ gap: 60px;
  .sns img{
   width: 30px;
   height: 30px;
- }
+}
+
+.hamburger_insta{
+  display: flex;
+  gap: 15px;
+  align-items: end;
+  color: #fff;
+}
 
  .primary-nav_reservation{
   grid-column: 1/3;
+  /* padding: 30px; */
  }
 
 
@@ -911,7 +918,17 @@ gap: 60px;
   opacity: 0;
 }
 
-
+@media(max-width:1120px){
+  .primary-nav_list{
+    padding: 95px 60px 102.8px 60px;
+  }
+}
+@media(max-width:870px){
+  .primary-nav_list{
+    padding: 95px 40px 102.8px 40px;
+    column-gap: 40px;
+  }
+}
 
 @media(max-width:768px){
   .header-btn{
@@ -1019,6 +1036,15 @@ justify-content: center;
   content: url(./images/tel-white.png);
   width: 20px;
   height: 20px;
+}
+
+/* タブレット版 */
+@media screen and (min-width: 769px) and (max-width: 1024px){
+  .primary-nav_list{
+    column-gap: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/keyvisual.css ***!
@@ -1690,8 +1716,8 @@ Recommended Bottom
 }
 
 @media(max-width:1000px){
-  .inspiration-bottom p{
-    width: 65%;
+  .inspiration-button.black-btn {
+    padding: 7.1px 46.2px 8.9px 35.6px;
   }
 }
 
@@ -1724,7 +1750,7 @@ Recommended Bottom
     インスピレーションボトム - モバイル
 ----------------------------*/
 
-@media (max-width:768px){
+@media (max-width:1000px){
   .inspiration-bottom {
     display: flex;
     flex-direction: column;
@@ -1736,6 +1762,9 @@ Recommended Bottom
   .inspiration-bottom p{
     padding-bottom: 22px;
     width: 100%;
+  }
+  .inspiration-button.black-btn p {
+    padding: 0;
   }
 }
 
@@ -1874,7 +1903,8 @@ Recommended Bottom
 
 .popup-img{
   width: 50vw;
-  height: 100%;
+  /* height: 100%; */
+  object-fit: cover;
 }
 .close-popup-btn{
   z-index: 100;
@@ -1883,12 +1913,20 @@ Recommended Bottom
   cursor: pointer;
 }
 
+.is-pc-only{
+  display: block;
+}
+
+.mobile-tablet{
+  display: none;
+}
+
 /*----------------------------
   Pop Up Modal - Mobile
-  ポップアップモーダル - モバイル
+  ポップアップモーダル - タブレット・モバイル
 ----------------------------*/
 
-@media screen and (max-width:768px){
+@media screen and (max-width:1024px){
   .popup{
     overflow-y: scroll;
   }
@@ -1935,6 +1973,14 @@ Recommended Bottom
   }
   .close-popup-btn_sp:hover{
     cursor: pointer;
+  }
+
+  .is-pc-only{
+    display: none;;
+  }
+
+  .mobile-tablet{
+    display: block;
   }
 }
 /*!********************************************************************************!*\
@@ -2072,6 +2118,7 @@ Recommended Bottom
         padding: 80px 0 55px;
         justify-content: start;
         width: 100%;
+        gap: 0;
     }
     .advantage_top_img{
         width: 95vw;
@@ -2096,6 +2143,7 @@ Recommended Bottom
         width: 100%;
     }
     .interior_color{
+        display: none;
         gap: 10px;
     }
     .interior_color img{
@@ -2228,7 +2276,6 @@ Recommended Bottom
 .it_wrap {
   display: grid;
   grid-template-columns: 40% 60%;
-  gap: 40px;
 }
 .it_right {
   height: max-content;
@@ -2273,6 +2320,7 @@ Recommended Bottom
   position: sticky;
   top: 20px;
   height: fit-content;
+  margin-right: 40px;
 }
 
 /* ------------------- */
@@ -2998,7 +3046,11 @@ Recommended Bottom
     content: url(./images/tel-icon.png);
     margin-right: 7px;
 }
-
+@media (max-width:1200px){
+    .cont-bottom-btn_data{
+        flex-flow: column;
+    }
+}
 @media (max-width:1120px){
     .contact-top{
         width: 450px;
@@ -3010,9 +3062,6 @@ Recommended Bottom
 @media (max-width:1000px){
     .contact-top{
         width: 360px;
-    }
-    .cont-bottom-btn_data{
-        flex-flow: column;
     }
     .bottom-btn{
         height: auto;
@@ -3518,5 +3567,32 @@ footer a:hover{
 
 
 
+/*!**************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/btnhover.css ***!
+  \**************************************************************************************/
+/* ------------------- */
+/* Button Hover Fix     */
+/* ------------------- */
+
+
+/*----------------------------
+  White ==> Black
+----------------------------*/
+.black-to-white:hover{
+    background-color: white;
+    border: 1px solid #45484B;
+}
+
+.black-to-white:hover p{
+  color:#45484B ;
+}
+.black-to-white:hover::after {
+    content: url(./images/btn-chevron_white.svh.svg);
+
+}
+
+/*----------------------------
+   Black ==> White
+----------------------------*/
 
 /*# sourceMappingURL=main.css.map*/

@@ -9604,6 +9604,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/assets/css/common/btnhover.css":
+/*!********************************************!*\
+  !*** ./src/assets/css/common/btnhover.css ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/assets/css/common/reset.css":
 /*!*****************************************!*\
   !*** ./src/assets/css/common/reset.css ***!
@@ -9838,6 +9850,26 @@ module.exports = __webpack_require__.p + "./images/icon_tel-white.svg";
 
 module.exports = __webpack_require__.p + "./images/icon_tel.svg";
 
+/***/ }),
+
+/***/ "./src/assets/images/nav/logo_main-blk.svg":
+/*!*************************************************!*\
+  !*** ./src/assets/images/nav/logo_main-blk.svg ***!
+  \*************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "./images/logo_main-blk.svg";
+
+/***/ }),
+
+/***/ "./src/assets/images/nav/logo_main.svg":
+/*!*********************************************!*\
+  !*** ./src/assets/images/nav/logo_main.svg ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "./images/logo_main.svg";
+
 /***/ })
 
 /******/ 	});
@@ -9959,10 +9991,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_css_footer_css__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./assets/css/footer.css */ "./src/assets/css/footer.css");
 /* harmony import */ var _assets_css_common_banner_css__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./assets/css/common/banner.css */ "./src/assets/css/common/banner.css");
 /* harmony import */ var _assets_css_animations_css__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./assets/css/animations.css */ "./src/assets/css/animations.css");
-/* harmony import */ var _assets_images_nav_icon_tel_white_svg__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./assets/images/nav/icon_tel-white.svg */ "./src/assets/images/nav/icon_tel-white.svg");
-/* harmony import */ var _assets_images_nav_icon_tel_svg__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./assets/images/nav/icon_tel.svg */ "./src/assets/images/nav/icon_tel.svg");
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+/* harmony import */ var _assets_css_common_btnhover_css__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./assets/css/common/btnhover.css */ "./src/assets/css/common/btnhover.css");
+/* harmony import */ var _assets_images_nav_icon_tel_white_svg__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./assets/images/nav/icon_tel-white.svg */ "./src/assets/images/nav/icon_tel-white.svg");
+/* harmony import */ var _assets_images_nav_icon_tel_svg__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./assets/images/nav/icon_tel.svg */ "./src/assets/images/nav/icon_tel.svg");
+/* harmony import */ var _assets_images_nav_logo_main_blk_svg__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./assets/images/nav/logo_main-blk.svg */ "./src/assets/images/nav/logo_main-blk.svg");
+/* harmony import */ var _assets_images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./assets/images/nav/logo_main.svg */ "./src/assets/images/nav/logo_main.svg");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
 
 
 
@@ -9990,7 +10025,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger);
+
+
+
+
+
+gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger);
 
 // gsap.registerPlugin(ScrollTrigger);
 
@@ -10083,7 +10123,7 @@ function addAnimation() {
     RECOMMENDED Animations
     RECOMMENDED  アニメーション
 ----------------------------*/
-let recommendedtl = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline({
+let recommendedtl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
   scrollTrigger: {
     trigger: "#recommended",
     start: "-=500px",
@@ -10101,7 +10141,7 @@ recommendedtl
     Inspiration  アニメーション
 ----------------------------*/
 
-let inspirationtl = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline({
+let inspirationtl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
   scrollTrigger: {
     trigger: "#inspiration",
     start: "-=500px",
@@ -10119,7 +10159,7 @@ inspirationtl
     Advantage  アニメーション
 ----------------------------*/
 
-let advantagetl = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline({
+let advantagetl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
   scrollTrigger: {
     trigger: "#advantage",
     start: "-=500px",
@@ -10137,7 +10177,7 @@ advantagetl
     Consultancy  アニメーション
 ----------------------------*/
 
-let consultancytl = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline({
+let consultancytl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
   scrollTrigger: {
     trigger: "#consultancy",
     start: "-=500px",
@@ -10155,7 +10195,7 @@ consultancytl
     Item アニメーション
 ----------------------------*/
 
-let itemtl = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline({
+let itemtl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
   scrollTrigger: {
     trigger: "#item",
     start: "-=500px",
@@ -10173,7 +10213,7 @@ itemtl
     Plan Animations
     Plan アニメーション
 ----------------------------*/
-let plantl = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline({
+let plantl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
   scrollTrigger: {
     trigger: "#plan",
     start: "-=500px",
@@ -10192,7 +10232,7 @@ plantl
     Flow アニメーション
 ----------------------------*/
 
-let flowtl = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline({
+let flowtl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
   scrollTrigger: {
     trigger: "#flow",
     start: "-=500px",
@@ -10210,7 +10250,7 @@ flowtl
     Gallary アニメーション
 ----------------------------*/
 
-let gallerytl = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline({
+let gallerytl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
   scrollTrigger: {
     trigger: "#gallery",
     start: "-=500px",
@@ -10228,7 +10268,7 @@ gallerytl
     FAQ アニメーション
 ----------------------------*/
 
-let faqtl = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline({
+let faqtl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
   scrollTrigger: {
     trigger: "#faq",
     start: "-=500px",
@@ -10247,7 +10287,7 @@ faqtl
     CONTACT アニメーション
 ----------------------------*/
 
-let conttl = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline({
+let conttl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
   scrollTrigger: {
     trigger: "#contact",
     start: "-=500px",
@@ -10293,13 +10333,14 @@ function animateHamburger(){
 
 
 function openNav(){
-  let openAnim = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline()
+  let openAnim = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline()
   openAnim
   // .to(body,{position:"fixed"})
   .to('.primary-nav',{opacity:1,duration:1,zIndex:7999})
   .fromTo(".header-btn", { opacity: 1 }, { opacity: 0 },"<")
   .fromTo(".header-info", { opacity: 1 }, { opacity: 0 },"<")
-  .fromTo(".header-tel_img", { opacity: 1 }, { opacity: 0 },"<");
+  .fromTo(".header-tel_img", { opacity: 1 }, { opacity: 0 },"<")
+  .fromTo(".header-decor", { opacity: 1 }, { opacity: 0 },"<");
 
   document.documentElement.style.overflow = 'hidden';
   document.body.style.overflow = 'hidden';
@@ -10310,12 +10351,13 @@ function openNav(){
 
 
 function closeNav(){
-  let openAnim = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline()
+  let openAnim = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline()
   openAnim
   .to('.primary-nav',{opacity:0,duration:1,zIndex:"-1"})
   .fromTo(".header-info", { opacity: 0 }, { opacity: 1 },"<")
   .fromTo(".header-btn", { opacity: 0 }, { opacity: 1 },"<")
   .fromTo(".header-tel_img", { opacity: 0 }, { opacity: 1 },"<")
+  .fromTo(".header-decor", { opacity: 0 }, { opacity: 1 },"<")
   // .to(body,{position:"relative"})
 
   document.body.style.overflow = 'auto';
@@ -10342,7 +10384,7 @@ function closeNav(){
 ----------------------------*/
 
  document.addEventListener('DOMContentLoaded',(e)=>{
-  let intro = gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline()
+  let intro = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline()
 
   intro
 .to('.transition-item',{y:'0',delay:2})
@@ -10375,7 +10417,7 @@ closeBtn.addEventListener('click',(e)=>{
 })
 
 function animateleft(){
-  let popimage =  gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.timeline();
+  let popimage =  gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline();
   popimage
   .from(".popup",{opacity:0,duration:0.5})
   // .from(".story",{x:"100%"})
@@ -10397,24 +10439,25 @@ const inspBanner = document.querySelector('.insp-banner-trigger');
 const itemBanner =document.querySelector('.item-banner-trigger');
 const advantageTrigger = document.querySelector('.advantage-trigger');
 const consultancyTrigger = document.querySelector('.consultancy-trigger');
-
+const logoimg = document.querySelector('.logo-img');
 
 // dark backgrounds
 function changeTimeToWhite(){
-  gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.time',{color:"white"});
+  gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.to('.time',{color:"white"});
 }
 function changeTelToWhite(){
-  gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.change',{color:"white"});
+  gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.to('.change',{color:"white"});
 }
 function changeHeadDecorToWhite(){
-  gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.header-decor',{backgroundColor:"white"});
+  gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.to('.header-decor',{backgroundColor:"white"});
 }
 function changeLogoToBlack(){
-  gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.logo',{filter:" invert(1)"});
+  // gsap.to('.logo',{filter:" invert(1)"});
+  logoimg.src = _assets_images_nav_logo_main_blk_svg__WEBPACK_IMPORTED_MODULE_24__;
 }
 
 function changeToWhite(){
-  headerTel.src = _assets_images_nav_icon_tel_white_svg__WEBPACK_IMPORTED_MODULE_21__;
+  headerTel.src = _assets_images_nav_icon_tel_white_svg__WEBPACK_IMPORTED_MODULE_22__;
   changeTimeToWhite();
   changeTelToWhite();
   changeHeadDecorToWhite();
@@ -10424,20 +10467,22 @@ function changeToWhite(){
 // light backgrounds
 
 function changeTimeToBlack(){
-  gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.time',{color:"black"});
+  gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.to('.time',{color:"#45484b"});
 }
 function changeTelToBlack(){
-  gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.change',{color:"black"});
+  gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.to('.change',{color:"#45484b"});
 }
 function changeHeadDecorToBlack(){
-  gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.header-decor',{backgroundColor:"#45484b"});
+  gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.to('.header-decor',{backgroundColor:"#45484b"});
 }
 function changeLogoToWhite(){
-  gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.logo',{filter:" invert(0)"});
+  // gsap.to('.logo',{filter:" invert(0)"});
+  logoimg.src = _assets_images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_25__;
+  
 }
 
 function changeToBlack(){
-  headerTel.src = _assets_images_nav_icon_tel_svg__WEBPACK_IMPORTED_MODULE_22__;
+  headerTel.src = _assets_images_nav_icon_tel_svg__WEBPACK_IMPORTED_MODULE_23__;
   changeTimeToBlack();
   changeTelToBlack();
   changeHeadDecorToBlack();
@@ -10445,13 +10490,13 @@ function changeToBlack(){
 }
 
 function onlyRightToWhite(){
-  headerTel.src = _assets_images_nav_icon_tel_white_svg__WEBPACK_IMPORTED_MODULE_21__;
+  headerTel.src = _assets_images_nav_icon_tel_white_svg__WEBPACK_IMPORTED_MODULE_22__;
   changeTimeToWhite();
   changeTelToWhite();
   changeHeadDecorToWhite();
 }
 function onlyRightToBlack(){
-  headerTel.src = _assets_images_nav_icon_tel_svg__WEBPACK_IMPORTED_MODULE_22__;
+  headerTel.src = _assets_images_nav_icon_tel_svg__WEBPACK_IMPORTED_MODULE_23__;
   changeTimeToBlack();
   changeTelToBlack();
   changeHeadDecorToBlack();
@@ -10462,7 +10507,7 @@ function onlyRightToBlack(){
 // triggers
 
 //trigger for logo when it htis the end of the kv
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
   trigger: kv,
   start: "bottom top",
   // end:".service-container",
@@ -10474,7 +10519,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
 
 
 // newplan trigger
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
   trigger: newplan,
   start: "top top",
   onEnter: changeToWhite,
@@ -10484,7 +10529,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
 });
 
 // banner trigger inspiration banner
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
   trigger: inspBanner,
   start: "-100px top",
   // markers:true,
@@ -10496,7 +10541,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
 
 
 // banner trigger inspiration banner
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
   trigger: inspBanner,
   start: "-100px top",
   // markers:true,
@@ -10508,20 +10553,20 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
 
 
 
-// banner trigger inspiration banner
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
+// banner trigger item banner
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
   trigger: itemBanner,
   start: "-100px top",
   // markers:true,
   onEnter: changeToWhite,
-  onLeave: onlyRightToBlack,
+  onLeave: changeToBlack,
   onEnterBack: changeToWhite,
-  onLeaveBack:onlyRightToWhite,
+  onLeaveBack:changeToBlack,
 });
 
 
 // advantage image trigger for only right side of the nav
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
   trigger: advantageTrigger,
   start: "-50px top",
   // markers:true,
@@ -10532,7 +10577,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
 });
 
 // color consultancy image trigger for only right side of the nav
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
   trigger: consultancyTrigger,
   start: "-50px top",
   // markers:true,
@@ -10543,17 +10588,18 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
 });
 
 //  // plan trigger 
-//  ScrollTrigger.create({
-//   trigger: "#plan",
-//   start: "-50px top",
-//   onEnter: changeToBlack,
-//   // onLeave: changeToBlack,
-//   // onEnterBack: changeToWhite,
-//   onLeaveBack:changeToWhite
-// });
+ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
+  trigger: ".slide_show",
+  start: "-10px top",
+  markers:true,
+  onEnter:changeToWhite,
+  onLeave: changeToBlack,
+  onEnterBack: changeToWhite,
+  onLeaveBack:changeToBlack
+});
 
  // flow trigger 
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
   trigger: "#flow",
   start: "-50px top",
   onEnter: changeToBlack,
@@ -10563,4 +10609,4 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
 
 /******/ })()
 ;
-//# sourceMappingURL=main.6235c80608b6e9100608.js.map
+//# sourceMappingURL=main.09ae7bb6b5b770f3f4ca.js.map
