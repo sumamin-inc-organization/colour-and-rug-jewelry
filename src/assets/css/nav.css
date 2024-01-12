@@ -369,3 +369,7 @@ justify-content: center;
   width: 20px;
   height: 20px;
 }
+
+.nav-logo-img{
+  display: none;
+}
