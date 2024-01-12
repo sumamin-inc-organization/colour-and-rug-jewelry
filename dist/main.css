@@ -2276,6 +2276,7 @@ Recommended Bottom
 .it_wrap {
   display: grid;
   grid-template-columns: 40% 60%;
+  gap: 40px;
 }
 .it_right {
   height: max-content;
@@ -3063,6 +3064,27 @@ Recommended Bottom
 @media (max-width:1000px){
     .contact-top{
         width: 360px;
+    }
+    .bottom-btn{
+        height: auto;
+        padding: 10px;
+    }
+}
+
+@media (max-width:1120px){
+    .contact-top{
+        width: 450px;
+    }
+    .cont-top_black{
+        padding: 7px 0 9px ;
+    }
+}
+@media (max-width:1000px){
+    .contact-top{
+        width: 360px;
+    }
+    .cont-bottom-btn_data{
+        flex-flow: column;
     }
     .bottom-btn{
         height: auto;

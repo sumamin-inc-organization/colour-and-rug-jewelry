@@ -215,6 +215,16 @@ gap: 60px;
   grid-template-columns: 1fr 1fr;
   column-gap: 60px;
  }
+
+.primary-link,
+.hamburger_insta{
+  transition: opacity 0.6s;
+}
+ 
+.primary-link:hover,
+.hamburger_insta:hover{
+  opacity: .6;
+}
  
  .sns{
   grid-column: 2;
