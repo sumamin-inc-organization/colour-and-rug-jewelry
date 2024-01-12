@@ -1,4 +1,4 @@
-.service-container{
+/* .service-container{
   background-image: url(../images/service/newplan_bkg.jpg);
   -webkit-background-size: cover !important;
   -moz-background-size: cover;
@@ -8,7 +8,31 @@
   background-position: center top;
   background-repeat: no-repeat;
   position: relative;
+} */
+.test-cont {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  transform: scale(1.0);
 }
+
+.test-cont:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/service/newplan_bkg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 #service {
   background-color: rgba(226, 208, 202, 0.8);
   padding: 128px 0 140px;
@@ -191,13 +215,31 @@
   .plus{
     margin-top: 30px;
   }
-  .service-container{
+  /* .service-container{
     background-image: url(../images/service/newplan_bkg-sp.jpg);
-  }
+  } */
   #newplan {
     height: 680px;
   }
   #newplan h2{
     font-size: 29px;
   }
+  .test-cont:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/service/newplan_bkg-sp.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+
+.newplan-spacing{
+  height: 100vh;
 }
