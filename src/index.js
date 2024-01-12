@@ -611,3 +611,9 @@ ScrollTrigger.create({
   onEnter: changeToBlack,
   // onLeaveBack:changeToWhite
 });
+
+
+ /*----------------------------
+    KV Animations
+    KV アニメーション
+----------------------------*/
