@@ -22,3 +22,21 @@
 /*----------------------------
    Black ==> White
 ----------------------------*/
+
+.arrow-hover-white:hover::after {
+    content: url(../../images/inspiration/btn-chevron.svg);
+}
+.white-to-black{
+    color: #45484B ;
+}
+.white-to-black p{
+    color: #45484B;
+}
+.white-to-black:hover{
+    background-color: #45484B;
+   color: #FFFFFF ;
+   transition: 0.3s;
+}
+.white-to-black:hover p{
+   color: #FFFFFF ;
+}
