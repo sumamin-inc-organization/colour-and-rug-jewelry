@@ -10473,11 +10473,7 @@ function changeTelToBlack(){
   gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.to('.change',{color:"#45484b"});
 }
 function changeHeadDecorToBlack(){
-<<<<<<<< HEAD:dist/main.6235c80608b6e9100608.js
-  gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.header-decor',{backgroundColor:"#45484b"});
-========
   gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.to('.header-decor',{backgroundColor:"#45484b"});
->>>>>>>> main:dist/main.0bdaf4ca3995d1c635d8.js
 }
 function changeLogoToWhite(){
   // gsap.to('.logo',{filter:" invert(0)"});
@@ -10595,7 +10591,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
  gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
   trigger: ".slide_show",
   start: "-10px top",
-  onEnter:changeToWhite,
+  onEnter: changeLogoToWhite,
   onLeave: changeToBlack,
   onEnterBack: changeToWhite,
   onLeaveBack:changeToBlack
@@ -10606,14 +10602,10 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
   trigger: "#flow",
   start: "-50px top",
   onEnter: changeToBlack,
-  onLeaveBack:changeToWhite
+  // onLeaveBack:changeToWhite
 });
 })();
 
 /******/ })()
 ;
-<<<<<<<< HEAD:dist/main.6235c80608b6e9100608.js
-//# sourceMappingURL=main.6235c80608b6e9100608.js.map
-========
-//# sourceMappingURL=main.0bdaf4ca3995d1c635d8.js.map
->>>>>>>> main:dist/main.0bdaf4ca3995d1c635d8.js
+//# sourceMappingURL=main.f8e9fa159632103024ed.js.map
