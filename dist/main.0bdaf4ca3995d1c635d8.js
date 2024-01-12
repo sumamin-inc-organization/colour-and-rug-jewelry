@@ -10591,7 +10591,6 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
  gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
   trigger: ".slide_show",
   start: "-10px top",
-  markers:true,
   onEnter:changeToWhite,
   onLeave: changeToBlack,
   onEnterBack: changeToWhite,
@@ -10609,4 +10608,4 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
 
 /******/ })()
 ;
-//# sourceMappingURL=main.09ae7bb6b5b770f3f4ca.js.map
+//# sourceMappingURL=main.0bdaf4ca3995d1c635d8.js.map
