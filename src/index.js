@@ -591,7 +591,7 @@ ScrollTrigger.create({
  ScrollTrigger.create({
   trigger: ".slide_show",
   start: "-10px top",
-  onEnter:changeToWhite,
+  onEnter: changeLogoToWhite,
   onLeave: changeToBlack,
   onEnterBack: changeToWhite,
   onLeaveBack:changeToBlack
@@ -602,5 +602,5 @@ ScrollTrigger.create({
   trigger: "#flow",
   start: "-50px top",
   onEnter: changeToBlack,
-  onLeaveBack:changeToWhite
+  // onLeaveBack:changeToWhite
 });
