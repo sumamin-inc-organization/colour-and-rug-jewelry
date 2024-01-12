@@ -19,14 +19,25 @@
 }
 .follow_btn p {
   color: #45484B;
-  padding-bottom: 5px;
-  border-bottom: solid #000 1px;
   letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
 }
-.follow_btn p:hover {
-  color: #c38c80;
-  transition: 0.3s;
-  padding-bottom: 2px;
+.follow_btn p::after {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #000000;
+  transition: transform .3s;
+  transform-origin: left top;
+}
+.follow_btn p:hover::after {
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .3s;
 }
 .follow_btn img {
   width: 30px;
