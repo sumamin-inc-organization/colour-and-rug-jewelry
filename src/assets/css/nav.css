@@ -252,16 +252,16 @@ gap: 60px;
  }
 
 
- .primary-nav_transition{
+.primary-nav_transition{
   position: fixed;
   width: 100vw;
   height: 100dvh;
-  background-color: black;
+  background-color: #45484B;
   z-index: 8000;
   top: 0;
   left: 0;
   transform: translateX(100%);
- }
+}
 
 .primary-nav{
   opacity: 0;
