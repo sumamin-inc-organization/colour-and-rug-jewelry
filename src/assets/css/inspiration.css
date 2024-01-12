@@ -328,12 +328,20 @@
   cursor: pointer;
 }
 
+.is-pc-only{
+  display: block;
+}
+
+.mobile-tablet{
+  display: none;
+}
+
 /*----------------------------
   Pop Up Modal - Mobile
   ポップアップモーダル - タブレット・モバイル
 ----------------------------*/
 
-@media screen and (max-width:768px){
+@media screen and (max-width:1024px){
   .popup{
     overflow-y: scroll;
   }
@@ -380,5 +388,13 @@
   }
   .close-popup-btn_sp:hover{
     cursor: pointer;
+  }
+
+  .is-pc-only{
+    display: none;;
+  }
+
+  .mobile-tablet{
+    display: block;
   }
 }
