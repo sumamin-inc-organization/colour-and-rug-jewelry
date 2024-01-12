@@ -311,7 +311,8 @@ conttl
 let icon = document.querySelector(".menu_icon");
 let headerBtn = document.querySelector('.header-btn');
 const body = document.body;
-console.log(body)
+const logoimg = document.querySelector('.trigger-logo');
+const logoNav = document.querySelector('.nav-logo-img');
 
 icon.addEventListener("click", () => {
   animateHamburger()
@@ -332,6 +333,7 @@ function animateHamburger(){
 }
 
 
+
 function openNav(){
   let openAnim = gsap.timeline()
   openAnim
@@ -344,8 +346,9 @@ function openNav(){
 
   document.documentElement.style.overflow = 'hidden';
   document.body.style.overflow = 'hidden';
-  
-  
+  logoNav.style.display = "block"
+  logoimg.style.display = "none"
+  // changeLogoToWhite()
 
 }
 
@@ -363,7 +366,9 @@ function closeNav(){
   document.body.style['overflow-y'] = 'visible';
   document.documentElement.style.overflow = 'auto';
   document.body.style['overflow-x'] = 'clip';
-
+  // changeLogoToBlack()
+  logoNav.style.display = "none"
+  logoimg.style.display = "block"
   
 }
 
@@ -446,7 +451,7 @@ const inspBanner = document.querySelector('.insp-banner-trigger');
 const itemBanner =document.querySelector('.item-banner-trigger');
 const advantageTrigger = document.querySelector('.advantage-trigger');
 const consultancyTrigger = document.querySelector('.consultancy-trigger');
-const logoimg = document.querySelector('.logo-img');
+
 
 // dark backgrounds
 function changeTimeToWhite(){
