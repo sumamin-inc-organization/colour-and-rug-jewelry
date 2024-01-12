@@ -145,7 +145,6 @@ a{
 /* 中央に配置 */
 .main-grid-column-2 {
   grid-column: 2;
-  /* grid-column: 2/3; */
 }
 
 /* メイングリッドの3つのカラムすべてを占有する */
@@ -356,26 +355,11 @@ a{
 /* ------------------- */
 
 /*----------------------------
-  Font weight /フォントの太さ 
-----------------------------*/
-.light {
-  /* ライト */
-  font-weight: 300;
-}
-.regular {
-  /* レギュラー */
-  font-weight: 400;
-}
-.medium {
-  /* ミディアム */
-  font-weight: 500;
-}
-
-/*----------------------------
     Font Style /フォントのスタイル 
   ----------------------------*/
 .font-roboto {
   font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 .font-zenkaku {
   font-family: "Zen Kaku Gothic New", sans-serif;
@@ -391,6 +375,15 @@ a{
 }
 .font-josefin {
   font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+}
+
+/*----------------------------
+  Font weight /フォントの太さ 
+----------------------------*/
+.medium {
+  /* ミディアム */
+  font-weight: 500;
 }
 
 /*----------------------------
@@ -556,6 +549,14 @@ header {
   padding: 6.92px 50.2px 9px 50px;
   width: 170px;
 }
+
+@media screen and (max-width:768px){
+  header{
+    padding: 0 20px 90px;
+    top: 20px;
+  }
+}
+
 /*----------------------------------
    Header Margins
    ヘッダーのパディング
@@ -807,17 +808,37 @@ main{
  padding: 95px 132.5px 102.8px 133.5px;
 }
 
-.primary-nav_reservation{
+/* .primary-nav_reservation{
   border: 1px solid white;
   display: grid;
   place-content: center;
   row-gap: 60px;
+} */
+
+.primary-nav_reservation{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border: 1px solid white;
+gap: 60px;
 }
 
 .primary_book{
   /* border: 1px solid green; */
-  padding: 14px 164.5px 16.4px 166.6px;
+  /* padding: 14px 164.5px 16.4px 166.6px; */
+  display: grid;
+  place-content: center;
+  width: calc(100% - 12.5%);
+  height: 60px;
 }
+/* @media (max-width:1200px){
+  .primary_book{
+ 
+    padding: 14px 100px 16.4px 100.6px;
+  }
+} */
+
 
 .primary_book::after{
   top:24px;
@@ -831,6 +852,7 @@ main{
 } */
 .primary-contact{
   position: relative;
+  width: calc(100% - 12.5%);
 }
 
 .primary-contact::before{
@@ -838,9 +860,10 @@ main{
   height: 1px;
   width: 100%;
   position: absolute;
-  top:-30px;
+  top:-20px;
   left: 0;
   background-color: white;
+
 }
 
 .nav-link{
@@ -908,7 +931,8 @@ main{
     /* border: 1px solid red; */
     width: 100vw;
     height: 100dvh;
-    padding: 100px 40px 0px 40px;
+    overflow-y: scroll;
+    padding: 100px 40px 100px 40px;
    }
    .primary-nav_list{
     display: flex;
@@ -1012,7 +1036,7 @@ justify-content: center;
 
 .kv_top .kv_title {
   width: 39.1vw;
-  margin-top: 9.3vw;
+  margin-top: 10.5vw;
   margin-right: 4.39vw;
 }
 
@@ -1123,6 +1147,8 @@ justify-content: center;
   background-size: cover;
   background-attachment: fixed !important;
   background-position: center top;
+  background-repeat: no-repeat;
+  position: relative;
 }
 #service {
   background-color: rgba(226, 208, 202, 0.8);
@@ -1269,7 +1295,7 @@ justify-content: center;
 
 @media (max-width: 768px) {
   #service{
-    padding: 50px 0 80px;
+    padding: 73px 0 80px;
   }
   .service_content{
     padding: 20px 20px 60px;
@@ -1297,7 +1323,6 @@ justify-content: center;
     width: 100%;
     height: 160px;
     padding: 35px 0 20px;
-
   }
   .arrow_down img{
     width: 40px;
@@ -1339,7 +1364,7 @@ Recommended Top
 .rc_top p {
   text-align: justify;
   line-height: 40px;
-  padding-top: 70px;
+  padding-top: 40px;
   padding-right: 70px;
 }
 
@@ -1359,7 +1384,7 @@ Recommended Bottom
 }
 
 .rc_list {
-  background-color: #efe3e0;
+  background-color: #E2D0CA;
   padding: 79px 93px 77px 0;
   width: 65.8%;
   display: flex;
@@ -1432,7 +1457,7 @@ Recommended Bottom
     grid-column: 2;
   }
   .rc_top p {
-  padding-right: 0;
+  padding: 0;
   line-height: 30px;
   }
   #recommended {
@@ -1466,7 +1491,7 @@ Recommended Bottom
     left: 0;
     padding: 0;
     padding-top:6.25em ;
-    padding: 6em 60.85px 57px 41px;
+    padding: 6em 45px 57px 41px;
     padding-left: 0; 
     display: grid;
     place-content: center;
@@ -1488,8 +1513,6 @@ Recommended Bottom
     position: relative;
     margin-top: 20px;
     padding-left: 30px;
-    text-wrap: nowrap;
-    margin-left: 10.77vw; 
   }
   
   .rc_list li:first-child {
@@ -1833,8 +1856,8 @@ Recommended Bottom
 }
 .close-popup-btn{
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 40px;
+  right: 40px;
 }
 
 .popup-img{
@@ -1846,6 +1869,61 @@ Recommended Bottom
 }
 .close-popup-btn:hover{
   cursor: pointer;
+}
+
+/*----------------------------
+  Pop Up Modal - Mobile
+  ポップアップモーダル - モバイル
+----------------------------*/
+
+@media screen and (max-width:768px){
+  .popup{
+    overflow-y: scroll;
+  }
+
+  .popup_inner{
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .popup-img{
+    width: 100vw;
+  }
+
+  .story{
+    width: 100vw;
+    height: auto;
+    padding-top: 35px;
+    padding-left: 30px;
+    padding-bottom: 100px;
+    display: block;
+  }
+
+  .popup-heading{
+    margin-bottom: 35px;
+    padding-right: 30px;
+    font-size: 18px;
+    line-height: 34px;
+  }
+
+  .popup-description{
+    margin-top: 35px;
+    padding-right: 30px;
+    line-height: 30px
+  }
+
+  .close-popup-btn_sp{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+
+  .close-popup-btn_sp{
+    z-index: 100;
+  }
+  .close-popup-btn_sp:hover{
+    cursor: pointer;
+  }
 }
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/advantage.css ***!
@@ -2095,6 +2173,9 @@ Recommended Bottom
     width: 100vw;
     justify-self: center;
   }
+  .consultancy-img_wrapper img {
+    height: 100%;
+  }
 }
 
 /*------------------------------------------
@@ -2235,9 +2316,6 @@ Recommended Bottom
   }
   #item {
     padding-top: 79px;
-  }
-  .item-banner{
-    margin-top: 55px !important;
   }
   .item_img{
     margin-top: 75px;
@@ -2567,21 +2645,18 @@ Recommended Bottom
   --beforeAnimation: 0;
   display: flex;
   flex-direction: column;
-  gap: 37.4px;
-  /* border-bottom: 1px solid #e1c5bf; */
+  gap: 40px;
   position: relative;
 }
 
 .faq::after{
   width: var(--beforeAnimation);
   content: "";
-  /* width: 100%; */
   height: 1px;
   background-color: #E3E3E3 ;
   position: absolute;
   bottom: 0;
 }
-
 
 .question {
   display: flex;
@@ -2600,7 +2675,7 @@ Recommended Bottom
 }
 
 .faq-container .faq:not(:first-child) {
-  margin-top: 41.4px;
+  margin-top: 40px;
 }
 .answer {
   max-height: 0px;
@@ -2609,7 +2684,7 @@ Recommended Bottom
 
 .faq.active .answer {
   max-height: 300px;
-  padding-bottom: 70px;
+  padding-bottom: 45px;
   animation: fade 500ms ease-in-out;
   line-height: 2;
 }
@@ -2737,7 +2812,7 @@ Recommended Bottom
 
 
 .contact-title{
-    margin-bottom: 85px;
+    margin-bottom: 25px;
 }
 
 .contact-main{
@@ -2762,12 +2837,10 @@ Recommended Bottom
     grid-column: 1/3;
 }
 .cont-left{
-    /* grid-column: 1/2; */
     min-height: 294px;
     min-width: 277px;
 }
 .cont-right{
-    /* grid-column: 2/3; */
     min-height: 294px;
     min-width: 237px;
 
@@ -2818,8 +2891,8 @@ Recommended Bottom
     margin-bottom: 11px;
 }
 
-.contact-bottom_info{
-    /* margin-bottom: 24px; */
+.contact-about_title{
+    letter-spacing: 0.1rem;
 }
 
 /*----------------------------
@@ -2835,7 +2908,7 @@ Recommended Bottom
 
 /*----------------------------
     Contact Section Buttons
-    Contactnせセクションのボタン
+    Contactセクションのボタン
 ----------------------------*/
 
 .contact-bottom_btn-container{
@@ -2852,13 +2925,13 @@ Recommended Bottom
     row-gap: 7px;
 }
 
-
 .bottom-btn{
+    padding-top: 10px;
     background-color: white;
     grid-column: 1/3;
     display: grid;
     place-content: center;
-   height: 80px;
+    height: 80px;
 }
 .bottom-btn:hover{
     cursor: pointer;
@@ -2915,10 +2988,8 @@ Recommended Bottom
      左側 ==> 上側（モバイル）
 ------------------------------------------*/
  @media (max-width:768px){
-    .contact-main{
-        /* border: 1px solid red; */
-    }
     .contact-top{
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
         row-gap: 10px;
@@ -2968,14 +3039,24 @@ Recommended Bottom
         padding: 7px 48.5px 9px 49.5px ;
     }
     .contact-bottom_info{
-        margin-bottom: 29px;
+        margin-bottom: 45px;
+    }
+    .cont-bottom-btn_data{
+        flex-flow: column;
+    }
+    .bottom-btn{
+        height: auto;
+        padding: 15px 0;
     }
 }
 
-
 @media(max-width:500px){
+    .contact-about_title{
+        letter-spacing: 0;
+    }
     .cont-title-left{
         font-size: 14px;
+        margin-right: 10px;
     }
     .cont-title-right{
         font-size: 16px;
@@ -3144,7 +3225,7 @@ footer a:hover{
 ----------------------------*/
 .banner-wrapper {
   padding: 0;
-  margin: 74.3px auto;
+  margin: 70px auto;
   width: 60vw;
 }
 
@@ -3186,6 +3267,8 @@ footer a:hover{
 }
 
 .banner_title {
+  color: #fff;
+  font-size: 56px;
   letter-spacing: 5px;
 }
 
@@ -3224,7 +3307,7 @@ footer a:hover{
     background: url(./images/banner_sp.jpg);
     background-size: cover;
     overflow: hidden;
-    margin-top: 140px;
+    margin-top: 80px;
   }
 }
 

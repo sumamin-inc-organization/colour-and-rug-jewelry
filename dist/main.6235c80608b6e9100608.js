@@ -10347,10 +10347,11 @@ function closeNav(){
   intro
 .to('.transition-item',{y:'0',delay:2})
 .to('.transition-item-white',{y:'0'})
-.set('.transition-item',{y:'100%'})
+.set('.transition-item',{y:'-100%'})
 .set('.transition-img',{opacity:0})
-.set('.transition-img',{x:"100%"})
+.set('.transition-img',{x:"100%" ,})
 .to('.transition-item-white',{y:'-100%'})
+.to('.transition-item-white',{display:"none"})
 })
 
 
@@ -10381,6 +10382,11 @@ function animateleft(){
   // .from(".animate-text",{opacity:0});
 }
 
+const closeBtn_sp =document.querySelector('.close-popup-btn_sp');
+
+closeBtn_sp.addEventListener('click',(e)=>{
+  modal.style.display = "none";
+})
 
 const headerTel = document.querySelector('.header-tel_img');
 
@@ -10424,7 +10430,7 @@ function changeTelToBlack(){
   gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.change',{color:"black"});
 }
 function changeHeadDecorToBlack(){
-  gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.header-decor',{backgroundColor:"black"});
+  gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.header-decor',{backgroundColor:"#45484b"});
 }
 function changeLogoToWhite(){
   gsap__WEBPACK_IMPORTED_MODULE_23__.gsap.to('.logo',{filter:" invert(0)"});
@@ -10557,4 +10563,4 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_24__.ScrollTrigger.create({
 
 /******/ })()
 ;
-//# sourceMappingURL=main.c41e5e0f401818c3d264.js.map
+//# sourceMappingURL=main.6235c80608b6e9100608.js.map

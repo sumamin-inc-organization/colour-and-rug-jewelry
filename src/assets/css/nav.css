@@ -147,17 +147,37 @@
  padding: 95px 132.5px 102.8px 133.5px;
 }
 
-.primary-nav_reservation{
+/* .primary-nav_reservation{
   border: 1px solid white;
   display: grid;
   place-content: center;
   row-gap: 60px;
+} */
+
+.primary-nav_reservation{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border: 1px solid white;
+gap: 60px;
 }
 
 .primary_book{
   /* border: 1px solid green; */
-  padding: 14px 164.5px 16.4px 166.6px;
+  /* padding: 14px 164.5px 16.4px 166.6px; */
+  display: grid;
+  place-content: center;
+  width: calc(100% - 12.5%);
+  height: 60px;
 }
+/* @media (max-width:1200px){
+  .primary_book{
+ 
+    padding: 14px 100px 16.4px 100.6px;
+  }
+} */
+
 
 .primary_book::after{
   top:24px;
@@ -171,6 +191,7 @@
 } */
 .primary-contact{
   position: relative;
+  width: calc(100% - 12.5%);
 }
 
 .primary-contact::before{
@@ -178,9 +199,10 @@
   height: 1px;
   width: 100%;
   position: absolute;
-  top:-30px;
+  top:-20px;
   left: 0;
   background-color: white;
+
 }
 
 .nav-link{

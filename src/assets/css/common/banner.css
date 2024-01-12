@@ -16,7 +16,7 @@
 ----------------------------*/
 .banner-wrapper {
   padding: 0;
-  margin: 74.3px auto;
+  margin: 70px auto;
   width: 60vw;
 }
 
@@ -58,6 +58,8 @@
 }
 
 .banner_title {
+  color: #fff;
+  font-size: 56px;
   letter-spacing: 5px;
 }
 
@@ -96,7 +98,7 @@
     background: url(../../images/common/banner_sp.jpg);
     background-size: cover;
     overflow: hidden;
-    margin-top: 140px;
+    margin-top: 80px;
   }
 }
 

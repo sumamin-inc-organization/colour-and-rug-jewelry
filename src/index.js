@@ -384,10 +384,11 @@ function closeNav(){
   intro
 .to('.transition-item',{y:'0',delay:2})
 .to('.transition-item-white',{y:'0'})
-.set('.transition-item',{y:'100%'})
+.set('.transition-item',{y:'-100%'})
 .set('.transition-img',{opacity:0})
-.set('.transition-img',{x:"100%"})
+.set('.transition-img',{x:"100%" ,})
 .to('.transition-item-white',{y:'-100%'})
+.to('.transition-item-white',{display:"none"})
 })
 
 
@@ -420,11 +421,6 @@ function animateleft(){
 
 const closeBtn_sp =document.querySelector('.close-popup-btn_sp');
 
-// inspirationBtn.addEventListener('click',(e)=>{
-//   e.preventDefault;
-//   modal.style.display = "block";
-//   animateleft()
-// })
 closeBtn_sp.addEventListener('click',(e)=>{
   modal.style.display = "none";
 })
@@ -471,7 +467,7 @@ function changeTelToBlack(){
   gsap.to('.change',{color:"black"});
 }
 function changeHeadDecorToBlack(){
-  gsap.to('.header-decor',{backgroundColor:"black"});
+  gsap.to('.header-decor',{backgroundColor:"#45484b"});
 }
 function changeLogoToWhite(){
   gsap.to('.logo',{filter:" invert(0)"});
