@@ -80,20 +80,6 @@
 /* intro animations */
 
 
-.kv_title{
-    --anim-width:100%;
-    position: relative;
-    /* border: 1px solid red; */
-    transform-origin: top;
-}
-
-.kv_title::before{
-    content: "";
-    position: absolute;
-    height: var(--anim-width);
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: white;
-    z-index: 500;
+.newplan-anim-txt{
+    opacity: 0;
 }
