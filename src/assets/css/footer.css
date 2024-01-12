@@ -35,7 +35,7 @@ footer ul{
 .footer_menu_content{
     display: flex;
     flex-wrap: wrap;
-    gap: 80px;
+    gap: 40px;
     justify-content: space-between;
 }
 .footer_menu_item{
@@ -160,10 +160,6 @@ footer a:hover::after {
         width: 100%;
         bottom: 0;
         left: 0;
-    }
-
-    #fixed-footer p{
-        letter-spacing: 0;
     }
 
     /* 最初は非表示 */

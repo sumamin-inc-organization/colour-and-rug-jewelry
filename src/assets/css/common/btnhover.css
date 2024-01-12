@@ -70,8 +70,6 @@
 ----------------------------*/
 
 .banner-btn{
-    /* background-color: transparent; */
-    /* border: 1px solid #FFFFFF; */
     background-color:  #FFFFFF;
     border: 1px solid #FFFFFF;
 }
@@ -81,22 +79,17 @@
 }
 
 .banner-btn p{
-    /* color: #FFFFFF; */
     color: #45484B;
-    letter-spacing: 0.07em;
 }
 .banner-btn:hover{
-    /* background-color:  #FFFFFF; */
     background-color: transparent;
     border: 1px solid #FFFFFF;
 
 }
 .banner-btn:hover p{
-    /* color: #45484B; */
     color: #FFFFFF;
 }
 
 .banner-btn:hover::after {
     content: url(../../images/inspiration/btn-chevron.svg);
-
 }

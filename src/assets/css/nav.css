@@ -293,17 +293,16 @@
   .nav-link{
     padding-bottom: 16px;
     padding-top: 16px;
-   }
-   .sns{
+  }
+  .sns{
     padding-top: 30px;
-   }
+  }
 }
 /*----------------------------------
    Main Nav(SP)-bottom banner
    メインナビゲーション(SP)-下部バナー
 ------------------------------------*/
 .primary-nav-bottom_sp{
-/* border: 1px solid red; */
 position: fixed;
 bottom: 0;
 width: 100%;
@@ -313,13 +312,11 @@ padding: 14.5px 25px 15px 25px;
 
 .nav-bottom-inner{
 display: flex;
-/* border: 1px solid red; */
 align-items: center;
 justify-content: center;
 }
 .bottom-nav-btn{
-  /* border: 1px solid green; */
-  padding: 7.6px 44.6px 8.4px 47.4px;
+  padding: 7.6px 0 8.4px;
   height: 40px;
   width: 160px;
   display: grid;
