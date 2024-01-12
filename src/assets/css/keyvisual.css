@@ -75,7 +75,7 @@
     }
     .kv_bottom{
         flex-flow: column;
-        margin-top: 80px;
+        margin-top: 75px;
         padding-bottom: 80px;
     }
     .kv_bottom .kv_text {

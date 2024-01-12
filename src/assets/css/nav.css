@@ -318,7 +318,6 @@ justify-content: space-between;
 .nav-bottom-inner-iconflex{
   display: flex;
   justify-content: start;
-  gap: ;
 }
 .bottom-nav-btn{
   padding: 7.6px 0 8.4px;
