@@ -3565,18 +3565,31 @@ footer a:hover{
 /*!**************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/btnhover.css ***!
   \**************************************************************************************/
+/* ------------------- */
+/* Button Hover Fix     */
+/* ------------------- */
 
-.header-btn:hover{
+
+/*----------------------------
+    Header Btn
+    ヘッダーボタン
+----------------------------*/
+.black-to-white:hover{
     background-color: white;
     border: 1px solid #45484B;
 }
 
-.header-btn:hover p{
+.black-to-white:hover p{
   color:#45484B ;
 }
-.header-btn:hover::after {
+.black-to-white:hover::after {
     content: url(./images/btn-chevron_white.svh.svg);
 
-  }
+}
+
+/*----------------------------
+    Header Btn
+    ヘッダーボタン
+----------------------------*/
 
 /*# sourceMappingURL=main.css.map*/
