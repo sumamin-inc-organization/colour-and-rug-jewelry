@@ -452,7 +452,7 @@ a{
   color: #c38c80;
 }
 .black {
-  color: black;
+  color: #45484B;
 }
 
 /*---------------------------------
@@ -543,6 +543,7 @@ header {
 header {
   padding-left: 30px;
   padding-right: 40px;
+  padding-right: calc(100vw - 100% + 40px) ;
 }
 .header-btn {
   padding: 6.92px 50.2px 9px 50px;
@@ -876,6 +877,16 @@ gap: 60px;
   grid-template-columns: 1fr 1fr;
   column-gap: 60px;
  }
+
+.primary-link,
+.hamburger_insta{
+  transition: opacity 0.6s;
+}
+ 
+.primary-link:hover,
+.hamburger_insta:hover{
+  opacity: .6;
+}
  
  .sns{
   grid-column: 2;
@@ -903,16 +914,16 @@ gap: 60px;
  }
 
 
- .primary-nav_transition{
+.primary-nav_transition{
   position: fixed;
   width: 100vw;
   height: 100dvh;
-  background-color: black;
+  background-color: #45484B;
   z-index: 8000;
   top: 0;
   left: 0;
   transform: translateX(100%);
- }
+}
 
 .primary-nav{
   opacity: 0;
@@ -1643,6 +1654,10 @@ Recommended Bottom
   cursor: pointer;
 }
 
+.slider-buttons .next{
+  padding-right: 0;
+}
+
 /*----------------------------
     Slider
     スライダー
@@ -1712,7 +1727,7 @@ Recommended Bottom
 
 .card {
   -webkit-backface-visibility: hidden;
-  padding: 0 4px;
+  /* padding: 0 4px; */
 }
 
 @media(max-width:1000px){
@@ -1778,17 +1793,18 @@ Recommended Bottom
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 38px;
+    gap: 25px;
     margin-bottom: 19px;
   }
   .indicators {
     display: flex;
-    gap: 21px;
+    gap: 18px;
   }
   .slider-buttons {
     display: flex;
-    gap: 20px;
+    gap: 0;
   }
+
 
 }
 
@@ -2035,7 +2051,7 @@ Recommended Bottom
     text-align: center;
     padding: 5px 0;
     width: 100%;
-    border: solid 1px#000;
+    border: solid 1px#45484B;
 }
 .color_scheme {
     text-align: center;
@@ -2276,7 +2292,6 @@ Recommended Bottom
 .it_wrap {
   display: grid;
   grid-template-columns: 40% 60%;
-  gap: 40px;
 }
 .it_right {
   height: max-content;
@@ -2656,11 +2671,12 @@ Recommended Bottom
   content: '';
   width: 100%;
   height: 1px;
-  background: #000000;
+  background: #45484B;
+  transition: transform .3s;
+  transform-origin: left top;
 }
 .follow_btn p:hover::after {
-  transform-origin: left top;
-  transform: scale(1, 1);
+  transform: scale(0, 1);
   transform-origin: right top;
   transition: transform .3s;
 }
@@ -3074,27 +3090,6 @@ Recommended Bottom
 @media (max-width:1000px){
     .contact-top{
         width: 360px;
-    }
-    .bottom-btn{
-        height: auto;
-        padding: 10px;
-    }
-}
-
-@media (max-width:1120px){
-    .contact-top{
-        width: 450px;
-    }
-    .cont-top_black{
-        padding: 7px 0 9px ;
-    }
-}
-@media (max-width:1000px){
-    .contact-top{
-        width: 360px;
-    }
-    .cont-bottom-btn_data{
-        flex-flow: column;
     }
     .bottom-btn{
         height: auto;
@@ -3623,9 +3618,11 @@ footer a:hover::after {
 /*----------------------------
    Black ==> White
 ----------------------------*/
+.black-to-white{
+    border: 1px solid #45484B;
+}
 .black-to-white:hover{
     background-color: white;
-    border: 1px solid #45484B;
 }
 
 .black-to-white:hover p{
@@ -3686,28 +3683,35 @@ footer a:hover::after {
 ----------------------------*/
 
 .banner-btn{
-    background-color: transparent;
+    /* background-color: transparent; */
+    /* border: 1px solid #FFFFFF; */
+    background-color:  #FFFFFF;
     border: 1px solid #FFFFFF;
 }
 
 .banner-btn::after {
-    content: url(./images/btn-chevron.svg);
+    content: url(./images/btn-chevron_white.svh.svg);
 }
 
 .banner-btn p{
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
+    color: #45484B;
 }
 .banner-btn:hover{
-    background-color:  #FFFFFF;
-    border: none;
+    /* background-color:  #FFFFFF; */
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+
 }
 .banner-btn:hover p{
-    color: #45484B;
+    /* color: #45484B; */
+    color: #FFFFFF;
 }
 
 .banner-btn:hover::after {
-    content: url(./images/btn-chevron_white.svh.svg);
+    content: url(./images/btn-chevron.svg);
 
 }
+
 
 /*# sourceMappingURL=main.css.map*/
