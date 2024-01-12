@@ -477,6 +477,9 @@ a{
 .letter-spacing-30{
   letter-spacing: 0.06em;
 }
+.letter-spacing-01{
+  letter-spacing: 0.1rem;
+}
 .letter-spacing-02{
   letter-spacing: 0.2rem;
 }
@@ -968,7 +971,12 @@ padding: 14.5px 25px 15px 25px;
 .nav-bottom-inner{
 display: flex;
 align-items: center;
-justify-content: center;
+justify-content: space-between;
+}
+.nav-bottom-inner-iconflex{
+  display: flex;
+  justify-content: start;
+  gap: ;
 }
 .bottom-nav-btn{
   padding: 7.6px 0 8.4px;

@@ -70,12 +70,14 @@ footer ul{
     margin-left: 15px;
 }
 
-footer a{
+.footer_menu a,
+.totop a{
     color: #fff;
     position: relative;
 }
 
-footer a::after {
+.footer_menu a::after,
+.totop a::after {
     position: absolute;
     left: 0;
     content: '';
@@ -87,7 +89,8 @@ footer a::after {
     transform-origin: right top;
     transition: transform 0.3s;
 }
-footer a:hover::after {
+.footer_menu a:hover::after,
+.totop a:hover::after {
     transform: scale(1, 1);
     transform-origin: left top;
 }
