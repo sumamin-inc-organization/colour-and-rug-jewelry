@@ -407,6 +407,7 @@ salon.addEventListener('click',(e)=>{
 .set('.transition-img',{x:"100%" ,})
 .to('.transition-item-white',{y:'-100%'})
 .to('.transition-item-white',{display:"none"})
+.to('.kv_title',{"--anim-width":0})
 })
 
 
