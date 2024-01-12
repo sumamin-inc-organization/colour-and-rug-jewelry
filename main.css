@@ -291,13 +291,12 @@ a{
 
 /* スクリーン幅が767x以下のデバイスでのみ表示 */
 .mobile-only{
-    display: none;
+    display: none ;
 }
 /* スクリーン幅が767pxより大きいデバイスでのみ表示 */
 .pc-only{
     display: block;
 }
-
 .sp_425{
   display: none;
 }
@@ -313,6 +312,10 @@ a{
   .sp_padding{
     width: 85vw;
     margin: auto !important;
+  }
+  /* SPテキスト幅調整 */
+  .sp_justify{
+    text-align: justify !important;
   }
 }
 @media (max-width:425px){
@@ -873,6 +876,16 @@ gap: 60px;
   grid-template-columns: 1fr 1fr;
   column-gap: 60px;
  }
+
+.primary-link,
+.hamburger_insta{
+  transition: opacity 0.6s;
+}
+ 
+.primary-link:hover,
+.hamburger_insta:hover{
+  opacity: .6;
+}
  
  .sns{
   grid-column: 2;
@@ -1640,6 +1653,10 @@ Recommended Bottom
   cursor: pointer;
 }
 
+.slider-buttons .next{
+  padding-right: 0;
+}
+
 /*----------------------------
     Slider
     スライダー
@@ -1709,7 +1726,7 @@ Recommended Bottom
 
 .card {
   -webkit-backface-visibility: hidden;
-  padding: 0 4px;
+  /* padding: 0 4px; */
 }
 
 @media(max-width:1000px){
@@ -1775,17 +1792,18 @@ Recommended Bottom
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 38px;
+    gap: 25px;
     margin-bottom: 19px;
   }
   .indicators {
     display: flex;
-    gap: 21px;
+    gap: 18px;
   }
   .slider-buttons {
     display: flex;
-    gap: 20px;
+    gap: 0;
   }
+
 
 }
 
@@ -2115,6 +2133,7 @@ Recommended Bottom
         padding: 80px 0 55px;
         justify-content: start;
         width: 100%;
+        gap: 0;
     }
     .advantage_top_img{
         width: 95vw;
@@ -2139,6 +2158,7 @@ Recommended Bottom
         width: 100%;
     }
     .interior_color{
+        display: none;
         gap: 10px;
     }
     .interior_color img{
@@ -2639,14 +2659,25 @@ Recommended Bottom
 }
 .follow_btn p {
   color: #45484B;
-  padding-bottom: 5px;
-  border-bottom: solid #000 1px;
   letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
 }
-.follow_btn p:hover {
-  color: #c38c80;
-  transition: 0.3s;
-  padding-bottom: 2px;
+.follow_btn p::after {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #000000;
+  transition: transform .3s;
+  transform-origin: left top;
+}
+.follow_btn p:hover::after {
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .3s;
 }
 .follow_btn img {
   width: 30px;
@@ -3242,10 +3273,23 @@ footer ul{
 }
 footer a{
     color: #fff;
+    position: relative;
 }
-footer a:hover{
-    color: #E2D0CA;
-    transition: 0.3s;
+footer a::after {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    bottom: -1px;
+    transform: scale(0, 1);
+    transform-origin: right top;
+    transition: transform 0.3s;
+}
+footer a:hover::after {
+    transform: scale(1, 1);
+    transform-origin: left top;
 }
 
 @media (max-width: 768px) {
@@ -3573,9 +3617,11 @@ footer a:hover{
 /*----------------------------
    Black ==> White
 ----------------------------*/
+.black-to-white{
+    border: 1px solid #45484B;
+}
 .black-to-white:hover{
     background-color: white;
-    border: 1px solid #45484B;
 }
 
 .black-to-white:hover p{
@@ -3636,28 +3682,35 @@ footer a:hover{
 ----------------------------*/
 
 .banner-btn{
-    background-color: transparent;
+    /* background-color: transparent; */
+    /* border: 1px solid #FFFFFF; */
+    background-color:  #FFFFFF;
     border: 1px solid #FFFFFF;
 }
 
 .banner-btn::after {
-    content: url(./images/btn-chevron.svg);
+    content: url(./images/btn-chevron_white.svh.svg);
 }
 
 .banner-btn p{
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
+    color: #45484B;
 }
 .banner-btn:hover{
-    background-color:  #FFFFFF;
-    border: none;
+    /* background-color:  #FFFFFF; */
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+
 }
 .banner-btn:hover p{
-    color: #45484B;
+    /* color: #45484B; */
+    color: #FFFFFF;
 }
 
 .banner-btn:hover::after {
-    content: url(./images/btn-chevron_white.svh.svg);
+    content: url(./images/btn-chevron.svg);
 
 }
+
 
 /*# sourceMappingURL=main.css.map*/
