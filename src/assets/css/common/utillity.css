@@ -227,3 +227,19 @@ a{
   opacity: 0;
 }
 
+
+
+#keyvisual,
+#recommended,
+#inspiration,
+#advantage,
+#consultancy,
+#item,
+#flow,
+#gallery,
+#faq,
+#form
+{
+  background-color: #FFFF;
+}
+

@@ -123,6 +123,7 @@ footer a:hover::after {
         visibility: hidden;
         transform: translateY(50px);
         transition: opacity 0.5s,visibility 0.5s, transform 0.5s;
+        
     }
 
     /*このクラスが付与されると表示する*/
