@@ -172,13 +172,12 @@ a{
 
 /* スクリーン幅が767x以下のデバイスでのみ表示 */
 .mobile-only{
-    display: none;
+    display: none ;
 }
 /* スクリーン幅が767pxより大きいデバイスでのみ表示 */
 .pc-only{
     display: block;
 }
-
 .sp_425{
   display: none;
 }
@@ -194,6 +193,10 @@ a{
   .sp_padding{
     width: 85vw;
     margin: auto !important;
+  }
+  /* SPテキスト幅調整 */
+  .sp_justify{
+    text-align: justify !important;
   }
 }
 @media (max-width:425px){
