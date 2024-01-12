@@ -550,15 +550,15 @@ ScrollTrigger.create({
 
 
 
-// banner trigger inspiration banner
+// banner trigger item banner
 ScrollTrigger.create({
   trigger: itemBanner,
   start: "-100px top",
   // markers:true,
   onEnter: changeToWhite,
-  onLeave: onlyRightToBlack,
+  onLeave: changeToBlack,
   onEnterBack: changeToWhite,
-  onLeaveBack:onlyRightToWhite,
+  onLeaveBack:changeToBlack,
 });
 
 
