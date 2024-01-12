@@ -100,15 +100,30 @@ footer a:hover::after {
     display: none;
 }
 
-@media screen and (max-width: 1300px){
+@media screen and (max-width: 1400px){
     .br_1300{
         display: block;
     }
 
-    .footer_menu_content{
-        /* gap: 2rem; */
+    .footer_menu p{
+        padding-bottom: 24px;
+        margin-bottom: 38px;
     }
 
+    .footer_menu_content{
+        gap: 2rem;
+    }
+
+    .footer_menu_item{
+        gap: 30px;
+    }
+
+}
+
+@media screen and (max-width: 1050px) {
+    .footer_menu{
+        width: 370px;
+    }
 }
 
 @media (max-width: 768px) {
