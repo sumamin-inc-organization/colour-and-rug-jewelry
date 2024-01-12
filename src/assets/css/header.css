@@ -115,7 +115,6 @@ header {
   transform: translateY(-15px);
 }
 
-
 @media (max-width:500px) {
   .logo{
     width: 70.9px;
