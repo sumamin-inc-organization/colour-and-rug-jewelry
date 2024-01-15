@@ -803,3 +803,18 @@ ScrollTrigger.create({
 });
 
 
+/*-----------------------------------------
+Color Consultancy Section Animations - Mobile
+Color Consultancy アニメーション - SP
+--------------------------------------------*/
+
+//Color Consultancy 画像を超えるときにモバイルロゴの色を変更
+
+ScrollTrigger.create({
+  trigger: ".consultancy-trigger-mobile",
+  start: "-50px top",
+  onEnter: changeMobileLogoToWhite,
+  onLeave: changeMobileLogoToBlack,
+  onEnterBack: changeMobileLogoToWhite,
+  onLeaveBack:changeMobileLogoToBlack
+});
