@@ -757,7 +757,6 @@ Inspiration アニメーション - SP
 
 ScrollTrigger.create({
   trigger: ".insp-slider",
-  markers:true,
   start: "-20px top",
   onEnter: changeMobileLogoToWhite,
   onLeave: changeMobileLogoToBlack,
@@ -781,3 +780,26 @@ ScrollTrigger.create({
   onEnterBack: changeMobileLogoToWhite,
   onLeaveBack:changeMobileLogoToBlack
 });
+
+//インテリアストーリーセクションの画像によってトリガーされたときにロゴの色を変更する
+ScrollTrigger.create({
+  trigger: ".adv-trigger-colorscheme",
+  start: "-50px top",
+  // markers:true,
+  onEnter: changeMobileLogoToWhite,
+  onLeave: changeMobileLogoToBlack,
+  onEnterBack: changeMobileLogoToWhite,
+  onLeaveBack:changeMobileLogoToBlack
+});
+
+ScrollTrigger.create({
+  trigger: ".adv-trigger-colorscheme2",
+  start: "-50px top",
+  // markers:true,
+  onEnter: changeMobileLogoToWhite,
+  onLeave: changeMobileLogoToBlack,
+  onEnterBack: changeMobileLogoToWhite,
+  onLeaveBack:changeMobileLogoToBlack
+});
+
+
