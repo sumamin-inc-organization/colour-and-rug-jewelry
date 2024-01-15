@@ -313,6 +313,7 @@ let headerBtn = document.querySelector('.header-btn');
 const body = document.body;
 const logoimg = document.querySelector('.trigger-logo');
 const logoNav = document.querySelector('.nav-logo-img');
+const logoMobile = document.querySelector('.mobile-logo');
 
 icon.addEventListener("click", () => {
   animateHamburger()
@@ -348,6 +349,7 @@ function openNav(){
   document.body.style.overflow = 'hidden';
   logoNav.style.display = "block"
   logoimg.style.display = "none"
+  logoMobile.style.display = "none"
   // changeLogoToWhite()
 
 }
@@ -369,6 +371,7 @@ function closeNav(){
   // changeLogoToBlack()
   logoNav.style.display = "none"
   logoimg.style.display = "block"
+  logoMobile.style.display = "block"
   
 }
 
