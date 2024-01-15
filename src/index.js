@@ -717,20 +717,16 @@ Item アニメーション - SP
 --------------------------------------------*/
 changeLogoColor(".item-trigger_top");
 changeLogoColor(".item-trigger_bottom");
-
 /*-----------------------------------------
 Plan Section Animations - Mobile
 Plan アニメーション - SP
 --------------------------------------------*/
 changeLogoColor(".plan-mobile-trigger");
-
 /*-----------------------------------------
 Gallary Section Animations - Mobile
 Gallary アニメーション - SP
 --------------------------------------------*/
-
 changeLogoColor(".gallary-mobile-trigger");
-
 /*-----------------------------------------
 Contact Section Animations - Mobile
 Contact アニメーション - SP
