@@ -35,7 +35,7 @@ footer ul{
 .footer_menu_content{
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 60px;
     justify-content: space-between;
 }
 .footer_menu_item{
@@ -107,25 +107,21 @@ footer ul{
     .br_1300{
         display: block;
     }
-
     .footer_menu p{
         padding-bottom: 24px;
         margin-bottom: 38px;
     }
-
-    .footer_menu_content{
-        gap: 2rem;
-    }
-
     .footer_menu_item{
         gap: 30px;
     }
-
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1100px) {
     .footer_menu{
         width: 370px;
+    }
+    .footer_menu_content{
+        gap: 40px;
     }
 }
 
