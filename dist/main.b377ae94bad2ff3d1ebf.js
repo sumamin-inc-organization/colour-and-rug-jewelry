@@ -10616,15 +10616,9 @@ function changeBothLogoVerToWhite(){
   (0,_assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeMobileLogoToWhite)();
 }
 
-function newplanGSAP(){
-  // gsap.fromTo(".newplan-anim-txt", { y:100,opacity: 0 }, { y:0,opacity: 1,duration:1.5})
-  gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.to(".newplan-anim-txt",{ y:0,opacity: 1,duration:1.5})
-}
-
 function newplanAnim(){
   changeBothLogoVerToWhite()
   changeToWhite();
-  newplanGSAP()
 }
 
 function NewplanColorToBlack(){
@@ -10933,21 +10927,29 @@ let planAnitl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
 planAnitl
   .from(".plan_line",{width:0,duration:1})  
   .from(".plan_text_number-anime1",{scale:0,duration:0.5})
-  .from(".plan-txt-title_anime1",{opacity:0,height:0})
+  .from(".plan-txt-title_anime1",{opacity:0,x:-10})
   .from(".plan-txt_anime1",{opacity:0})
   .from(".plan_text_number-anime2",{scale:0,duration:0.5})
-  .from(".plan-txt-title_anime2",{opacity:0,height:0})
+  .from(".plan-txt-title_anime2",{opacity:0,x:-10})
   .from(".plan-txt_anime2",{opacity:0})
   .from(".plan_text_number-anime3",{scale:0,duration:0.5})
-  .from(".plan-txt-title_anime3",{opacity:0,height:0})
+  .from(".plan-txt-title_anime3",{opacity:0,x:-10})
 
  
 
+  let newplanAnitl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
+    scrollTrigger: {
+      trigger: newplan,
+      start: "-250px top",
+      scrub: false,
+      // markers:true
+    },
+  });
 
-
-
+ newplanAnitl
+  .from(".newplan-anim-txt",{ y:100,opacity: 0,duration:1.5})
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.94ce9944ef305ffeb8f2.js.map
+//# sourceMappingURL=main.b377ae94bad2ff3d1ebf.js.map
