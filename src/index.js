@@ -564,8 +564,19 @@ function newplanGSAP(){
 }
 
 function newplanAnim(){
+  changeBothLogoVerToWhite()
   changeToWhite();
   newplanGSAP()
+}
+
+function NewplanColorToBlack(){
+  changeBothLogoVerToBlack();
+  changeToBlack();
+}
+
+function NewplanColorToWhite(){
+  changeBothLogoVerToWhite();
+  changeToWhite();
 }
 
 // triggers
@@ -586,18 +597,17 @@ ScrollTrigger.create({
 // newplan trigger
 ScrollTrigger.create({
   trigger: newplan,
-  start: "top top",
+  start: "-50px top",
   onEnter: newplanAnim,
-  onLeave: changeToBlack,
-  onEnterBack: changeToWhite,
-  onLeaveBack:changeToBlack
+  onLeave: NewplanColorToBlack,
+  onEnterBack: NewplanColorToWhite,
+  onLeaveBack:NewplanColorToBlack
 });
 
 // banner trigger inspiration banner
 ScrollTrigger.create({
   trigger: inspBanner,
   start: "-100px top",
-  // markers:true,
   onEnter: changeToWhite,
   onLeave: changeToBlack,
   onEnterBack: changeToWhite,
