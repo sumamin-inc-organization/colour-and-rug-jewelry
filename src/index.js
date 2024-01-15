@@ -706,6 +706,13 @@ kvtl
 /*        MOBILE SPECIFIC ANIMATIONS           */
 /* ------------------------------------------- */
 
+
+ /*-----------------------------------------
+    Recommended Section Animations - Mobile
+    Recommended アニメーション - SP
+--------------------------------------------*/
+
+//recommended 画像を超えるときにモバイルロゴの色を変更
 ScrollTrigger.create({
   trigger: ".sp-rc_img",
   start: "-30px top",
