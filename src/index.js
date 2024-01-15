@@ -531,6 +531,18 @@ function onlyRightToBlack(){
   changeHeadDecorToBlack();
 }
 
+//changes both the mobile version and the desktop version of the logo to black
+function changeBothLogoVerToBlack(){
+  changeLogoToBlack();
+  changeMobileLogoToBlack();
+}
+
+//changes both the mobile version and the desktop version of the logo to white
+function changeBothLogoVerToWhite(){
+  changeLogoToWhite();
+  changeMobileLogoToWhite();
+}
+
 function newplanGSAP(){
   // gsap.fromTo(".newplan-anim-txt", { y:100,opacity: 0 }, { y:0,opacity: 1,duration:1.5})
   gsap.to(".newplan-anim-txt",{ y:0,opacity: 1,duration:1.5})
