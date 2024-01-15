@@ -579,6 +579,31 @@ function NewplanColorToWhite(){
   changeToWhite();
 }
 
+//when both the mobile version and desktop are the same
+
+function changeToWhiteSpandPc(){
+  changeToWhite()
+  changeMobileLogoToWhite()
+}
+
+
+function changeToBlackSpandPc(){
+  changeToBlack()
+  changeMobileLogoToBlack()
+}
+
+//when only the right side and the mobile logo changes
+
+function onlyRightandMobileToWhite(){
+  onlyRightToWhite();
+  changeMobileLogoToWhite();
+}
+
+function onlyRightandMobileToBlack(){
+  onlyRightToBlack();
+  changeMobileLogoToBlack();
+}
+
 // triggers
 
 //trigger for logo when it htis the end of the kv
@@ -608,39 +633,24 @@ ScrollTrigger.create({
 ScrollTrigger.create({
   trigger: inspBanner,
   start: "-100px top",
-  onEnter: changeToWhite,
-  onLeave: changeToBlack,
+  onEnter: changeToWhiteSpandPc,
+  onLeave: changeToBlackSpandPc,
   onEnterBack: changeToWhite,
-  onLeaveBack:changeToBlack
+  onLeaveBack:changeToBlackSpandPc
 });
-
-
-// banner trigger inspiration banner
-ScrollTrigger.create({
-  trigger: inspBanner,
-  start: "-100px top",
-  // markers:true,
-  onEnter: changeToWhite,
-  onLeave: changeToBlack,
-  onEnterBack: changeToWhite,
-  onLeaveBack:changeToBlack
-});
-
-
 
 // banner trigger item banner
 ScrollTrigger.create({
   trigger: itemBanner,
   start: "-100px top",
   // markers:true,
-  onEnter: changeToWhite,
-  onLeave: changeToBlack,
-  onEnterBack: changeToWhite,
-  onLeaveBack:changeToBlack,
+  onEnter: changeToWhiteSpandPc,
+  onLeave: changeToBlackSpandPc,
+  onEnterBack: changeToWhiteSpandPc,
+  onLeaveBack:changeToBlackSpandPc
 });
 
-
-// advantage image trigger for only right side of the nav
+// advantage image trigger for only  the right side 
 ScrollTrigger.create({
   trigger: advantageTrigger,
   start: "-50px top",
@@ -736,4 +746,38 @@ onEnter: changeMobileLogoToWhite,
 onLeave: changeMobileLogoToBlack,
 onEnterBack: changeMobileLogoToWhite,
 onLeaveBack:changeMobileLogoToBlack
+});
+
+/*-----------------------------------------
+Inspiration Section Animations - Mobile
+Inspiration アニメーション - SP
+--------------------------------------------*/
+
+//Inspiration 画像を超えるときにモバイルロゴの色を変更
+
+ScrollTrigger.create({
+  trigger: ".insp-slider",
+  markers:true,
+  start: "-20px top",
+  onEnter: changeMobileLogoToWhite,
+  onLeave: changeMobileLogoToBlack,
+  onEnterBack: changeMobileLogoToWhite,
+  onLeaveBack:changeMobileLogoToBlack
+  });
+
+
+/*-----------------------------------------
+Advantage Section Animations - Mobile
+Advantage アニメーション - SP
+--------------------------------------------*/
+
+//advantage 画像を超えるときにモバイルロゴの色を変更
+ScrollTrigger.create({
+  trigger: ".advantage-trigger-mobile",
+  start: "-50px top",
+  // markers:true,
+  onEnter: changeMobileLogoToWhite,
+  onLeave: changeMobileLogoToBlack,
+  onEnterBack: changeMobileLogoToWhite,
+  onLeaveBack:changeMobileLogoToBlack
 });
