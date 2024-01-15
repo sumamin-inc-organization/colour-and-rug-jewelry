@@ -156,6 +156,7 @@
 
 @media (max-width:768px){
   #faq{
+    padding-top: 0;
     padding-bottom: 80px;
   }
   .faq{
