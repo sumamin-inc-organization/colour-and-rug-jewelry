@@ -17,6 +17,13 @@
     aspect-ratio: 1 / 1;
     overflow: hidden;
     margin: 0 auto;
+    /* border: 1px solid red; */
+}
+
+@media(min-width:768px){
+    .slide_show{
+        min-height: 766px;
+    }
 }
 .img-01,.img-02,.img-03{
     position: absolute;
