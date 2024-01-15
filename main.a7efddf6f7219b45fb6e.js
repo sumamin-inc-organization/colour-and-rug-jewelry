@@ -10616,15 +10616,9 @@ function changeBothLogoVerToWhite(){
   (0,_assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeMobileLogoToWhite)();
 }
 
-function newplanGSAP(){
-  // gsap.fromTo(".newplan-anim-txt", { y:100,opacity: 0 }, { y:0,opacity: 1,duration:1.5})
-  gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.to(".newplan-anim-txt",{ y:0,opacity: 1,duration:1.5})
-}
-
 function newplanAnim(){
   changeBothLogoVerToWhite()
   changeToWhite();
-  newplanGSAP()
 }
 
 function NewplanColorToBlack(){
@@ -10943,11 +10937,19 @@ planAnitl
 
  
 
+  let newplanAnitl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
+    scrollTrigger: {
+      trigger: newplan,
+      start: "-250px top",
+      scrub: false,
+      // markers:true
+    },
+  });
 
-
-
+ newplanAnitl
+  .from(".newplan-anim-txt",{ y:100,opacity: 0,duration:1.5})
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.94ce9944ef305ffeb8f2.js.map
+//# sourceMappingURL=main.a7efddf6f7219b45fb6e.js.map
