@@ -30,21 +30,9 @@ import mainLogoWhite from './assets/images/nav/logo_main.svg';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import changeLogoColor from "./assets/js/mobileLogoTrigger";
+import { changeLogoToBlack, changeLogoToWhite, changeMobileLogoToBlack, changeMobileLogoToWhite } from "./assets/js/changeLogoColor";
 gsap.registerPlugin(ScrollTrigger);
-
-// gsap.registerPlugin(ScrollTrigger);
-
-// let images = gsap.utils.toArray(".parallax");
-
-// images.forEach((image) => {
-//   gsap.to(image, {
-//     yPercent: -100 * image.dataset.speed,
-//     ease: "none",
-//     scrollTrigger: {
-//       scrub: image.dataset.speed,
-//     },
-//   });
-// });
 
 /*----------------------------
     Slider
@@ -489,13 +477,6 @@ function changeTelToWhite(){
 function changeHeadDecorToWhite(){
   gsap.to('.header-decor',{backgroundColor:"white"});
 }
-function changeLogoToBlack(){
-  // gsap.to('.logo',{filter:" invert(1)"});
-  logoimg.src = mainLogoBlack;
-}
-function changeMobileLogoToBlack(){
-  logoMobile.src = mainLogoBlack;
-}
 
 function changeToWhite(){
   headerTel.src = iconWhite;
@@ -515,14 +496,6 @@ function changeTelToBlack(){
 }
 function changeHeadDecorToBlack(){
   gsap.to('.header-decor',{backgroundColor:"#45484b"});
-}
-function changeLogoToWhite(){
-  // gsap.to('.logo',{filter:" invert(0)"});
-  logoimg.src = mainLogoWhite;
-  
-}
-function changeMobileLogoToWhite(){
-  logoMobile.src = mainLogoWhite;
 }
 
 function changeToBlack(){
@@ -716,105 +689,30 @@ kvtl
 /*        MOBILE SPECIFIC ANIMATIONS           */
 /* ------------------------------------------- */
 
-
- /*-----------------------------------------
+/*-----------------------------------------
     Recommended Section Animations - Mobile
     Recommended アニメーション - SP
 --------------------------------------------*/
-
-//recommended 画像を超えるときにモバイルロゴの色を変更
-ScrollTrigger.create({
-  trigger: ".sp-rc_img",
-  start: "-30px top",
-  onEnter: changeMobileLogoToWhite,
-  onLeave: changeMobileLogoToBlack,
-  onEnterBack: changeMobileLogoToWhite,
-  onLeaveBack:changeMobileLogoToBlack
-});
-
-/*-----------------------------------------
-Recommended Section Animations - Mobile
-Recommended アニメーション - SP
---------------------------------------------*/
-
-//recommended 画像を超えるときにモバイルロゴの色を変更
-ScrollTrigger.create({
-trigger: ".insp-slider",
-markers:true,
-start: "-20px top",
-onEnter: changeMobileLogoToWhite,
-onLeave: changeMobileLogoToBlack,
-onEnterBack: changeMobileLogoToWhite,
-onLeaveBack:changeMobileLogoToBlack
-});
-
+changeLogoColor(".sp-rc_img")
 /*-----------------------------------------
 Inspiration Section Animations - Mobile
 Inspiration アニメーション - SP
 --------------------------------------------*/
-
-//Inspiration 画像を超えるときにモバイルロゴの色を変更
-
-ScrollTrigger.create({
-  trigger: ".insp-slider",
-  start: "-20px top",
-  onEnter: changeMobileLogoToWhite,
-  onLeave: changeMobileLogoToBlack,
-  onEnterBack: changeMobileLogoToWhite,
-  onLeaveBack:changeMobileLogoToBlack
-  });
-
-
+changeLogoColor(".insp-slider")
 /*-----------------------------------------
 Advantage Section Animations - Mobile
 Advantage アニメーション - SP
 --------------------------------------------*/
-
-//advantage 画像を超えるときにモバイルロゴの色を変更
-ScrollTrigger.create({
-  trigger: ".advantage-trigger-mobile",
-  start: "-50px top",
-  // markers:true,
-  onEnter: changeMobileLogoToWhite,
-  onLeave: changeMobileLogoToBlack,
-  onEnterBack: changeMobileLogoToWhite,
-  onLeaveBack:changeMobileLogoToBlack
-});
-
-//インテリアストーリーセクションの画像によってトリガーされたときにロゴの色を変更する
-ScrollTrigger.create({
-  trigger: ".adv-trigger-colorscheme",
-  start: "-50px top",
-  // markers:true,
-  onEnter: changeMobileLogoToWhite,
-  onLeave: changeMobileLogoToBlack,
-  onEnterBack: changeMobileLogoToWhite,
-  onLeaveBack:changeMobileLogoToBlack
-});
-
-ScrollTrigger.create({
-  trigger: ".adv-trigger-colorscheme2",
-  start: "-50px top",
-  // markers:true,
-  onEnter: changeMobileLogoToWhite,
-  onLeave: changeMobileLogoToBlack,
-  onEnterBack: changeMobileLogoToWhite,
-  onLeaveBack:changeMobileLogoToBlack
-});
-
-
+changeLogoColor(".advantage-trigger-mobile")
+changeLogoColor(".adv-trigger-colorscheme")
+changeLogoColor(".adv-trigger-colorscheme2")
 /*-----------------------------------------
 Color Consultancy Section Animations - Mobile
 Color Consultancy アニメーション - SP
 --------------------------------------------*/
-
-//Color Consultancy 画像を超えるときにモバイルロゴの色を変更
-
-ScrollTrigger.create({
-  trigger: ".consultancy-trigger-mobile",
-  start: "-50px top",
-  onEnter: changeMobileLogoToWhite,
-  onLeave: changeMobileLogoToBlack,
-  onEnterBack: changeMobileLogoToWhite,
-  onLeaveBack:changeMobileLogoToBlack
-});
+changeLogoColor(".consultancy-trigger-mobile")
+/*-----------------------------------------
+Item Section Animations - Mobile
+Item アニメーション - SP
+--------------------------------------------*/
+changeLogoColor(".item-trigger_top")
