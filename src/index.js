@@ -705,3 +705,12 @@ kvtl
 /* ------------------------------------------- */
 /*        MOBILE SPECIFIC ANIMATIONS           */
 /* ------------------------------------------- */
+
+ScrollTrigger.create({
+  trigger: ".sp-rc_img",
+  start: "-30px top",
+  onEnter: changeMobileLogoToWhite,
+  onLeave: changeMobileLogoToBlack,
+  onEnterBack: changeMobileLogoToWhite,
+  onLeaveBack:changeMobileLogoToBlack
+});
