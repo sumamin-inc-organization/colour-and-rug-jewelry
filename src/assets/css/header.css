@@ -120,3 +120,11 @@ header {
     width: 70.9px;
   }
 }
+
+@media(max-width:768px){
+  .trigger-logo{
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}

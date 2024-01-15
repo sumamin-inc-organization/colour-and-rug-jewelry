@@ -653,3 +653,9 @@ let kvtl = gsap.timeline({
 kvtl
   .from(".kv-eng", { x: 50, opacity: 0, duration: 1 })
   .from(".kv-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8");
+
+
+
+/* ------------------------------------------- */
+/*        MOBILE SPECIFIC ANIMATIONS           */
+/* ------------------------------------------- */
