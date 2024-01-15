@@ -1043,6 +1043,14 @@ justify-content: space-between;
   display: none;
 }
 
+
+.primary-link{
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/keyvisual.css ***!
   \********************************************************************************/
