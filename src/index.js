@@ -748,7 +748,6 @@ let servicetl = gsap.timeline({
     trigger:".service-title-trigger",
     start: "top top",
     scrub: false,
-    markers:true
   },
 });
 
