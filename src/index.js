@@ -314,6 +314,14 @@ const body = document.body;
 const logoimg = document.querySelector('.trigger-logo');
 const logoNav = document.querySelector('.nav-logo-img');
 const logoMobile = document.querySelector('.mobile-logo');
+const isItSp = window.matchMedia("(max-width: 768px)");
+const isItPc = window.matchMedia("(min-width: 769px)");
+
+// if(isItSp.matches){
+//   console.log("mobile")
+// }else if (isItPc.matches){
+//   console.log("pc")
+// }
 
 icon.addEventListener("click", () => {
   animateHamburger()
@@ -370,9 +378,13 @@ function closeNav(){
   document.body.style['overflow-x'] = 'clip';
   // changeLogoToBlack()
   logoNav.style.display = "none"
-  logoimg.style.display = "block"
-  logoMobile.style.display = "block"
-  
+  // logoimg.style.display = "block"
+  // logoMobile.style.display = "block"
+  if(isItSp.matches){
+    logoMobile.style.display = "block"
+  }else if (isItPc.matches){
+    logoimg.style.display = "block"
+  }
 }
 
 
@@ -561,10 +573,10 @@ ScrollTrigger.create({
   start: "bottom top",
   // markers:true,
   // end:".service-container",
-  onEnter: changeLogoToBlack,
+  onEnter: changeBothLogoVerToBlack,
   // onLeave: changeLogoToWhite,
-  onEnterBack: changeLogoToBlack,
-  onLeaveBack:changeLogoToWhite
+  onEnterBack: changeBothLogoVerToBlack,
+  onLeaveBack:changeBothLogoVerToWhite
 });
 
 
