@@ -770,42 +770,42 @@ servicetl
   .from(".rc-anime",{x:100,opacity:0,duration:1})
   .from(".rc_list",{x:-100,opacity:0,duration:1},"<")
   .from(".rec-li_anime1", {
-    duration: 0.5,
+    duration: 0.3,
     opacity:0,
     y: 50,
     ease: "power4.out",
     skewY: 7,
   })
   .from(".rec-li_anime2", {
-    duration: 0.5,
+    duration: 0.3,
     opacity:0,
     y: 50,
     ease: "power4.out",
     skewY: 7,
   })
   .from(".rec-li_anime3", {
-    duration: 0.5,
+    duration: 0.3,
     opacity:0,
     y: 50,
     ease: "power4.out",
     skewY: 7,
   })
   .from(".rec-li_anime4", {
-    duration: 0.5,
+    duration: 0.3,
     opacity:0,
     y: 50,
     ease: "power4.out",
     skewY: 7,
   })
   .from(".rec-li_anime5", {
-    duration: 0.5,
+    duration: 0.3,
     opacity:0,
     y: 50,
     ease: "power4.out",
     skewY: 7,
   })
   .from(".rec-li_anime6", {
-    duration: 0.5,
+    duration: 0.3,
     opacity:0,
     y: 50,
     ease: "power4.out",
