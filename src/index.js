@@ -610,7 +610,7 @@ ScrollTrigger.create({
   start: "-100px top",
   onEnter: changeToWhiteSpandPc,
   onLeave: changeToBlackSpandPc,
-  onEnterBack: changeToWhite,
+  onEnterBack: changeToWhiteSpandPc,
   onLeaveBack:changeToBlackSpandPc
 });
 
@@ -703,7 +703,7 @@ changeLogoColor(".sp-rc_img");
 Inspiration Section Animations - Mobile
 Inspiration アニメーション - SP
 --------------------------------------------*/
-changeLogoColor(".insp-slider");
+// changeLogoColor(".insp-slider");
 /*-----------------------------------------
 Advantage Section Animations - Mobile
 Advantage アニメーション - SP
