@@ -730,3 +730,9 @@ Gallary アニメーション - SP
 --------------------------------------------*/
 
 changeLogoColor(".gallary-mobile-trigger");
+
+/*-----------------------------------------
+Contact Section Animations - Mobile
+Contact アニメーション - SP
+--------------------------------------------*/
+changeLogoColor(".contact-mobile-tirgger");
