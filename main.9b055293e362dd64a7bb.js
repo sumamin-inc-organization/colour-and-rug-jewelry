@@ -10770,7 +10770,7 @@ kvtl
 
 
 /* ------------------------------------------- */
-/*        MOBILE SPECIFIC ANIMATIONS           */
+/*        MOBILE SPECIFIC LOGO ANIMATIONS           */
 /* ------------------------------------------- */
 
 /*-----------------------------------------
@@ -10817,8 +10817,54 @@ Contact アニメーション - SP
 --------------------------------------------*/
 (0,_assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__["default"])(".contact-mobile-tirgger");
 
+
+
+ /*----------------------------
+    Service Animations
+    Service アニメーション
+----------------------------*/
+let servicetl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
+  scrollTrigger: {
+    trigger: ".service_content",
+    start: "-=200px",
+    scrub: false,
+  },
+});
+
+servicetl
+  .from(".service-item-topimg", { scale:0, opacity: 0, duration: 1 })
+  .from(".service_think", { x:-100, opacity: 0, duration: 1 },"=-1")
+  .from(".think-text-anim", { opacity: 0, duration: 1 },"=-0.5")
+  .from(".service-arrow-anime", { y:-50,opacity: 0, duration: 1 },"=-0.5")
+  .from(".service-item1_img", { x:-50,opacity: 0, duration: 1 },"=-0.5")
+  .from(".service_inner-anime_1", { x:-50,opacity: 0, duration: 1 },"=-0.8")
+  .from(".service-item1_txt", { opacity: 0, duration: 1 },"=-0.5")
+  .from(".plus-anime_1", {opacity:0, x:-100 ,duration: 0.8},"=-0.5")
+  .from(".plus-anime_1", { "--rotate":0 ,duration: 1},"=-1")
+  .from(".service-item2_img", { x:-50,opacity: 0, duration: 1 },"=-0.5")
+  .from(".service_inner-anime_2", { x:-50,opacity: 0, duration: 1 },"=-0.8")
+  .from(".service-item2_txt", { opacity: 0, duration: 1 },"=-0.5")
+  .from(".plus-anime_2", {opacity:0, x:-100 ,duration: 0.5 },"=-0.5")
+  .from(".plus-anime_2", { "--rotate":0 ,duration: 0.5 },"=-0.5")
+  .from(".service-item3_img", { x:-50,opacity: 0, duration: 1 },"=-0.5")
+  .from(".service_inner-anime_3", { x:-50,opacity: 0, duration: 1 },"=-0.8")
+  .from(".service-item3_txt", { opacity: 0, duration: 1 },"=-0.5")
+  
+
+
+  
+
+
+
+ 
+
+ 
+
+
+
+
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.ec1840d38f63d34f6d8b.js.map
+//# sourceMappingURL=main.9b055293e362dd64a7bb.js.map

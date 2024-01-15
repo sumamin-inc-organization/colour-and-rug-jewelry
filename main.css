@@ -1275,6 +1275,7 @@ justify-content: space-between;
   display: block;
 }
 .plus {
+  --rotate:90deg;
   display: inline-block;
   vertical-align: middle;
   color: #C38C80;
@@ -1285,6 +1286,7 @@ justify-content: space-between;
   border-radius: 0;
   position: relative;
   margin-top: 135px;
+  transform: rotate(90deg);
 }
 .plus::before {
   content: "";
@@ -1295,7 +1297,8 @@ justify-content: space-between;
   height: 100%;
   background: inherit;
   border-radius: inherit;
-  transform: rotate(90deg);
+  /* transform:rotate(var(--rotate)); */
+  transform: rotate(var(--rotate));
 }
 
 /* new plan */
