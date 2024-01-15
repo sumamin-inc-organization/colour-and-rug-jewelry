@@ -945,6 +945,7 @@ header {
   .primary-nav_list{
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
     overflow-y: scroll;
     padding: 100px 40px 170px 40px;
   }
@@ -1018,6 +1019,7 @@ justify-content: space-between;
   width: 70px;
   height: 40px;
   border-right: 1px solid #45484B;
+  letter-spacing: 0.1rem;
 }
 
 .tel-no{
@@ -1070,6 +1072,7 @@ justify-content: space-between;
 
 .kv_bottom .kv_text{
     margin-left: 9.73vw;
+    margin-top: 20vw;
 }
 
 .kv_bottom .kv_text .kagayaku {
@@ -1096,8 +1099,11 @@ justify-content: space-between;
 .kv_bottom .kv_text p {
   font-size: min(1.17vw, 16px);
   line-height: min(2.49vw, 34px);
-  margin-top: 3.66vw;
   width: 41vw;
+}
+
+.kv_bottom_text{
+  margin-top: 50px;
 }
 
 .kv_bottom .kv_02{
@@ -1147,7 +1153,9 @@ justify-content: space-between;
         font-size: 16px;
         line-height: 2rem;
         width: 100%;
-        margin-bottom: 45px;
+    }
+    .kv_bottom_text{
+      margin: 37px 0 47px;
     }
     .kv_bottom .kv_02{
         width: 72vw;
@@ -1502,6 +1510,7 @@ Recommended Bottom
   border-left: 1px solid #c38c80;
   border-bottom: 1px solid #c38c80;
   transform: rotate(-45deg);
+  
 }
 
 
@@ -1559,7 +1568,7 @@ Recommended Bottom
   .rc_bottom{
     display: grid;
     grid-template-columns: 1fr 90% 1fr;
-    margin-top: 60px;
+    margin-top: 30px;
   }
 
   .rc_bottom img {
@@ -2527,8 +2536,8 @@ Recommended Bottom
 }
 .plan_line{
     content: "";
-    width: 100%;
     border-bottom: solid 1px #45484B;
+    width: 100%;
 }
 .plan_text_number{
     font-size: 65px;
@@ -2949,6 +2958,7 @@ Recommended Bottom
 
 @media (max-width:768px){
   #faq{
+    padding-top: 0;
     padding-bottom: 80px;
   }
   .faq{
@@ -3304,7 +3314,7 @@ footer ul{
 .footer_menu_content{
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 60px;
     justify-content: space-between;
 }
 .footer_menu_item{
@@ -3318,7 +3328,7 @@ footer ul{
 }
 .copy{
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
 }
 .copy p{
@@ -3376,25 +3386,21 @@ footer ul{
     .br_1300{
         display: block;
     }
-
     .footer_menu p{
         padding-bottom: 24px;
         margin-bottom: 38px;
     }
-
-    .footer_menu_content{
-        gap: 2rem;
-    }
-
     .footer_menu_item{
         gap: 30px;
     }
-
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1100px) {
     .footer_menu{
         width: 370px;
+    }
+    .footer_menu_content{
+        gap: 40px;
     }
 }
 
@@ -3537,7 +3543,6 @@ footer ul{
     letter-spacing: 2.9px;
   }
   .banner_subtitle {
-    letter-spacing: 0.32px;
     line-height: 30px;
   }
   .banner_contact a {
