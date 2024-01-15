@@ -10489,6 +10489,17 @@ salon.addEventListener('click',(e)=>{
 .to('.transition-item-white',{display:"none"})
 // .to('.kv_title',{"--anim-width":0})
 .from('.kv_title',{y:50,opacity:0,duration:1.5},"-=1")
+
+
+if(isItSp.matches){
+  
+  
+  intro
+    .from(".kv-eng", { x: 50, opacity: 0, duration: 1 })
+    .from(".kv-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8");
+  
+}
+
 })
 
 
@@ -10739,18 +10750,25 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
     KV アニメーション
 ----------------------------*/
 
+function runKvAnimations(){
+  let kvtl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
+    scrollTrigger: {
+      trigger: ".kv_bottom",
+      start: "-=200px",
+      scrub: false,
+    },
+  });
+  
+  kvtl
+    .from(".kv-eng", { x: 50, opacity: 0, duration: 1 })
+    .from(".kv-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8");
+  
+  
+}
 
-let kvtl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
-  scrollTrigger: {
-    trigger: ".kv_bottom",
-    start: "-=200px",
-    scrub: false,
-  },
-});
-
-kvtl
-  .from(".kv-eng", { x: 50, opacity: 0, duration: 1 })
-  .from(".kv-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8");
+if(isItPc.matches){
+  runKvAnimations();
+}
 
 
 
@@ -10810,30 +10828,31 @@ Contact アニメーション - SP
 ----------------------------*/
 let servicetl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
   scrollTrigger: {
-    trigger: ".service_content",
-    start: "-=200px",
+    // trigger: ".service_content",
+    trigger:".service-title-trigger",
+    start: "top top",
     scrub: false,
   },
 });
 
 servicetl
   .from(".service-item-topimg", { scale:0, opacity: 0, duration: 1 })
-  .from(".service_think", { x:-100, opacity: 0, duration: 1 },"=-1")
-  .from(".think-text-anim", { opacity: 0, duration: 1 },"=-0.5")
-  .from(".service-arrow-anime", { y:-50,opacity: 0, duration: 1 },"=-0.5")
-  .from(".service-item1_img", { x:-50,opacity: 0, duration: 1 },"=-0.5")
-  .from(".service_inner-anime_1", { x:-50,opacity: 0, duration: 1 },"=-0.8")
+  .from(".service_think", { x:-100, opacity: 0, duration: 1 },"=-0.5")
+  .from(".think-text-anim", { opacity: 0, duration: 1 },"=-0.3")
+  .from(".service-arrow-anime", { y:-50,opacity: 0, duration: 1 },"=-0.3")
+  .from(".service-item1_img", { x:-50,opacity: 0, duration: 1},"=-0.3")
+  .from(".service_inner-anime_1", { x:-50,opacity: 0, duration: 1 },"=-0.5")
   .from(".service-item1_txt", { opacity: 0, duration: 1 },"=-0.5")
-  .from(".plus-anime_1", {opacity:0, x:-100 ,duration: 0.8},"=-0.5")
-  .from(".plus-anime_1", { "--rotate":0 ,duration: 1},"=-1")
-  .from(".service-item2_img", { x:-50,opacity: 0, duration: 1 },"=-0.5")
-  .from(".service_inner-anime_2", { x:-50,opacity: 0, duration: 1 },"=-0.8")
+  .from(".plus-anime_1", {opacity:0, x:-100 ,duration: 1},"=-0.8")
+  .from(".plus-anime_1", { "--rotate":0 ,duration: 0.8},"=-1")
+  .from(".service-item2_img", { x:-50,opacity: 0, duration: 1},"=-0.3")
+  .from(".service_inner-anime_2", { x:-50,opacity: 0, duration: 1 },"=-0.5")
   .from(".service-item2_txt", { opacity: 0, duration: 1 },"=-0.5")
-  .from(".plus-anime_2", {opacity:0, x:-100 ,duration: 0.5 },"=-0.5")
-  .from(".plus-anime_2", { "--rotate":0 ,duration: 0.5 },"=-0.5")
-  .from(".service-item3_img", { x:-50,opacity: 0, duration: 1 },"=-0.5")
-  .from(".service_inner-anime_3", { x:-50,opacity: 0, duration: 1 },"=-0.8")
-  .from(".service-item3_txt", { opacity: 0, duration: 1 },"=-0.5")
+  .from(".plus-anime_2", {opacity:0, x:-100 ,duration: 1},"=-0.8")
+  .from(".plus-anime_2", { "--rotate":0 ,duration: 1},"=-1")
+  .from(".service-item3_img", { x:-50,opacity: 0, duration: 1 },"=-0.3")
+  .from(".service_inner-anime_3", { x:-50,opacity: 0, duration: 1 },"=-0.5")
+  .from(".service-item3_txt", { opacity: 0, duration: 1},"=-0.5")
   
 
 /*----------------------------
@@ -10854,42 +10873,42 @@ servicetl
   .from(".rc-anime",{x:100,opacity:0,duration:1})
   .from(".rc_list",{x:-100,opacity:0,duration:1},"<")
   .from(".rec-li_anime1", {
-    duration: 0.5,
+    duration: 0.3,
     opacity:0,
     y: 50,
     ease: "power4.out",
     skewY: 7,
   })
   .from(".rec-li_anime2", {
-    duration: 0.5,
+    duration: 0.3,
     opacity:0,
     y: 50,
     ease: "power4.out",
     skewY: 7,
   })
   .from(".rec-li_anime3", {
-    duration: 0.5,
+    duration: 0.3,
     opacity:0,
     y: 50,
     ease: "power4.out",
     skewY: 7,
   })
   .from(".rec-li_anime4", {
-    duration: 0.5,
+    duration: 0.3,
     opacity:0,
     y: 50,
     ease: "power4.out",
     skewY: 7,
   })
   .from(".rec-li_anime5", {
-    duration: 0.5,
+    duration: 0.3,
     opacity:0,
     y: 50,
     ease: "power4.out",
     skewY: 7,
   })
   .from(".rec-li_anime6", {
-    duration: 0.5,
+    duration: 0.3,
     opacity:0,
     y: 50,
     ease: "power4.out",
@@ -10931,4 +10950,4 @@ planAnitl
 
 /******/ })()
 ;
-//# sourceMappingURL=main.2da84693808af550e385.js.map
+//# sourceMappingURL=main.94ce9944ef305ffeb8f2.js.map
