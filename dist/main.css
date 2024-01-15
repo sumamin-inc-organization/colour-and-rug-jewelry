@@ -2478,6 +2478,12 @@ Recommended Bottom
     overflow: hidden;
     margin: 0 auto;
 }
+
+/* @media(min-width:768px){
+    .slide_show{
+        min-height: 766px;
+    }
+} */
 .img-01,.img-02,.img-03{
     position: absolute;
     top:0;
@@ -3726,7 +3732,7 @@ footer ul{
 
 
 .newplan-anim-txt{
-    opacity: 0;
+    /* opacity: 0; */
 }
 /*!**************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/btnhover.css ***!
