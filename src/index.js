@@ -478,6 +478,9 @@ function changeLogoToBlack(){
   // gsap.to('.logo',{filter:" invert(1)"});
   logoimg.src = mainLogoBlack;
 }
+function changeMobileLogoToBlack(){
+  logoMobile.src = mainLogoBlack;
+}
 
 function changeToWhite(){
   headerTel.src = iconWhite;
@@ -502,6 +505,9 @@ function changeLogoToWhite(){
   // gsap.to('.logo',{filter:" invert(0)"});
   logoimg.src = mainLogoWhite;
   
+}
+function changeMobileLogoToWhite(){
+  logoMobile.src = mainLogoWhite;
 }
 
 function changeToBlack(){
