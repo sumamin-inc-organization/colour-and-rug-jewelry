@@ -353,8 +353,11 @@ function openNav(){
   .fromTo(".header-tel_img", { opacity: 1 }, { opacity: 0 ,pointerEvents:"none"},"<")
   .fromTo(".header-decor", { opacity: 1 }, { opacity: 0,pointerEvents:"none" },"<");
 
+  //deals with scroll being shown in the nav
   document.documentElement.style.overflow = 'hidden';
   document.body.style.overflow = 'hidden';
+
+  //changes logo form the main page logo to nav logo
   logoNav.style.display = "block"
   logoimg.style.display = "none"
   logoMobile.style.display = "none"
@@ -373,13 +376,13 @@ function closeNav(){
   .fromTo(".header-decor", { opacity: 0 ,pointerEvents:"none"}, { opacity: 1 ,pointerEvents:"auto"},"<")
   // .to(body,{position:"relative"})
 
+  //deals with position sticky not working after closing nav
   document.body.style['overflow-y'] = 'visible';
   document.documentElement.style.overflow = 'auto';
   document.body.style['overflow-x'] = 'clip';
-  // changeLogoToBlack()
+
+    //changes logo form the main page logo to nav logo depening on device vw
   logoNav.style.display = "none"
-  // logoimg.style.display = "block"
-  // logoMobile.style.display = "block"
   if(isItSp.matches){
     logoMobile.style.display = "block"
   }else if (isItPc.matches){
