@@ -532,15 +532,9 @@ function changeBothLogoVerToWhite(){
   changeMobileLogoToWhite();
 }
 
-function newplanGSAP(){
-  // gsap.fromTo(".newplan-anim-txt", { y:100,opacity: 0 }, { y:0,opacity: 1,duration:1.5})
-  gsap.to(".newplan-anim-txt",{ y:0,opacity: 1,duration:1.5})
-}
-
 function newplanAnim(){
   changeBothLogoVerToWhite()
   changeToWhite();
-  newplanGSAP()
 }
 
 function NewplanColorToBlack(){
@@ -859,5 +853,14 @@ planAnitl
 
  
 
+  let newplanAnitl = gsap.timeline({
+    scrollTrigger: {
+      trigger: newplan,
+      start: "-250px top",
+      scrub: false,
+      // markers:true
+    },
+  });
 
-
+ newplanAnitl
+  .from(".newplan-anim-txt",{ y:100,opacity: 0,duration:1.5})
