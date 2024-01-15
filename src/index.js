@@ -406,6 +406,16 @@ salon.addEventListener('click',(e)=>{
 // .to('.kv_title',{"--anim-width":0})
 .from('.kv_title',{y:50,opacity:0,duration:1.5},"-=1")
 
+
+if(isItSp.matches){
+  
+  
+  intro
+    .from(".kv-eng", { x: 50, opacity: 0, duration: 1 })
+    .from(".kv-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8");
+  
+}
+
 })
 
 
@@ -670,6 +680,10 @@ function runKvAnimations(){
     .from(".kv-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8");
   
   
+}
+
+if(isItPc.matches){
+  runKvAnimations();
 }
 
 
