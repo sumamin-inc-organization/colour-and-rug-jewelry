@@ -723,3 +723,10 @@ Plan Section Animations - Mobile
 Plan アニメーション - SP
 --------------------------------------------*/
 changeLogoColor(".plan-mobile-trigger");
+
+/*-----------------------------------------
+Gallary Section Animations - Mobile
+Gallary アニメーション - SP
+--------------------------------------------*/
+
+changeLogoColor(".gallary-mobile-trigger");
