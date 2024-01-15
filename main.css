@@ -653,6 +653,14 @@ header {
     width: 70.9px;
   }
 }
+
+@media(max-width:768px){
+  .trigger-logo{
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
 /*!**************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/nav.css ***!
   \**************************************************************************/
