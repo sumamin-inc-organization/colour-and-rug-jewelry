@@ -369,23 +369,31 @@ function closeNav(){
 }
 
 
- const navLinks = document.querySelectorAll('.nav-link');
- const salon = document.querySelector('.location');
+const navLinks = document.querySelectorAll('.nav-link');
+const salon = document.querySelector('.location');
 
- navLinks.forEach(link =>{
-  link.addEventListener('click',(e)=>{
-    animateHamburger()
-    closeNav()
-  })
- })
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevent the default behavior of the anchor tag
+    const targetSectionId = link.getAttribute('data-prime-link');
+    scrollToSection(targetSectionId);
+    animateHamburger();
+    closeNav();
+  });
+});
 
+salon.addEventListener('click', (e) => {
+  animateHamburger();
+  closeNav();
+});
 
+function scrollToSection(sectionId) {
+  const targetSection = document.querySelector(sectionId);
+  if (targetSection) {
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 
-salon.addEventListener('click',(e)=>{
-  e.preventDefault;
-  animateHamburger()
-  closeNav()
-})
 
   /*----------------------------
    Page Loader
