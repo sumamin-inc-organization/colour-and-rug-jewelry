@@ -25,13 +25,13 @@ import "./assets/css/common/btnhover.css";
 
 import iconWhite from './assets/images/nav/icon_tel-white.svg';
 import iconBlack from './assets/images/nav/icon_tel.svg';
-import mainLogoBlack from './assets/images/nav/logo_main-blk.svg';
-import mainLogoWhite from './assets/images/nav/logo_main.svg';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import changeLogoColor from "./assets/js/mobileLogoTrigger";
 import { changeLogoToBlack, changeLogoToWhite, changeMobileLogoToBlack, changeMobileLogoToWhite } from "./assets/js/changeLogoColor";
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 /*----------------------------
@@ -693,26 +693,33 @@ kvtl
     Recommended Section Animations - Mobile
     Recommended アニメーション - SP
 --------------------------------------------*/
-changeLogoColor(".sp-rc_img")
+changeLogoColor(".sp-rc_img");
 /*-----------------------------------------
 Inspiration Section Animations - Mobile
 Inspiration アニメーション - SP
 --------------------------------------------*/
-changeLogoColor(".insp-slider")
+changeLogoColor(".insp-slider");
 /*-----------------------------------------
 Advantage Section Animations - Mobile
 Advantage アニメーション - SP
 --------------------------------------------*/
-changeLogoColor(".advantage-trigger-mobile")
-changeLogoColor(".adv-trigger-colorscheme")
-changeLogoColor(".adv-trigger-colorscheme2")
+changeLogoColor(".advantage-trigger-mobile");
+changeLogoColor(".adv-trigger-colorscheme");
+changeLogoColor(".adv-trigger-colorscheme2");
 /*-----------------------------------------
 Color Consultancy Section Animations - Mobile
 Color Consultancy アニメーション - SP
 --------------------------------------------*/
-changeLogoColor(".consultancy-trigger-mobile")
+changeLogoColor(".consultancy-trigger-mobile");
 /*-----------------------------------------
 Item Section Animations - Mobile
 Item アニメーション - SP
 --------------------------------------------*/
-changeLogoColor(".item-trigger_top")
+changeLogoColor(".item-trigger_top");
+changeLogoColor(".item-trigger_bottom");
+
+/*-----------------------------------------
+Plan Section Animations - Mobile
+Plan アニメーション - SP
+--------------------------------------------*/
+changeLogoColor(".plan-mobile-trigger");
