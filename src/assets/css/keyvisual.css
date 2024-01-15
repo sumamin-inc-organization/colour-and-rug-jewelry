@@ -24,6 +24,7 @@
 
 .kv_bottom .kv_text{
     margin-left: 9.73vw;
+    margin-top: 20vw;
 }
 
 .kv_bottom .kv_text .kagayaku {
@@ -50,8 +51,11 @@
 .kv_bottom .kv_text p {
   font-size: min(1.17vw, 16px);
   line-height: min(2.49vw, 34px);
-  margin-top: 3.66vw;
   width: 41vw;
+}
+
+.kv_bottom_text{
+  margin-top: 50px;
 }
 
 .kv_bottom .kv_02{
@@ -101,7 +105,9 @@
         font-size: 16px;
         line-height: 2rem;
         width: 100%;
-        margin-bottom: 45px;
+    }
+    .kv_bottom_text{
+      margin: 37px 0 47px;
     }
     .kv_bottom .kv_02{
         width: 72vw;
