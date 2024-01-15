@@ -25,26 +25,14 @@ import "./assets/css/common/btnhover.css";
 
 import iconWhite from './assets/images/nav/icon_tel-white.svg';
 import iconBlack from './assets/images/nav/icon_tel.svg';
-import mainLogoBlack from './assets/images/nav/logo_main-blk.svg';
-import mainLogoWhite from './assets/images/nav/logo_main.svg';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import changeLogoColor from "./assets/js/mobileLogoTrigger";
+import { changeLogoToBlack, changeLogoToWhite, changeMobileLogoToBlack, changeMobileLogoToWhite } from "./assets/js/changeLogoColor";
+
+
 gsap.registerPlugin(ScrollTrigger);
-
-// gsap.registerPlugin(ScrollTrigger);
-
-// let images = gsap.utils.toArray(".parallax");
-
-// images.forEach((image) => {
-//   gsap.to(image, {
-//     yPercent: -100 * image.dataset.speed,
-//     ease: "none",
-//     scrollTrigger: {
-//       scrub: image.dataset.speed,
-//     },
-//   });
-// });
 
 /*----------------------------
     Slider
@@ -313,6 +301,15 @@ let headerBtn = document.querySelector('.header-btn');
 const body = document.body;
 const logoimg = document.querySelector('.trigger-logo');
 const logoNav = document.querySelector('.nav-logo-img');
+const logoMobile = document.querySelector('.mobile-logo');
+const isItSp = window.matchMedia("(max-width: 768px)");
+const isItPc = window.matchMedia("(min-width: 769px)");
+
+// if(isItSp.matches){
+//   console.log("mobile")
+// }else if (isItPc.matches){
+//   console.log("pc")
+// }
 
 icon.addEventListener("click", () => {
   animateHamburger()
@@ -344,10 +341,14 @@ function openNav(){
   .fromTo(".header-tel_img", { opacity: 1 }, { opacity: 0 ,pointerEvents:"none"},"<")
   .fromTo(".header-decor", { opacity: 1 }, { opacity: 0,pointerEvents:"none" },"<");
 
+  //deals with scroll being shown in the nav
   document.documentElement.style.overflow = 'hidden';
   document.body.style.overflow = 'hidden';
+
+  //changes logo form the main page logo to nav logo
   logoNav.style.display = "block"
   logoimg.style.display = "none"
+  logoMobile.style.display = "none"
   // changeLogoToWhite()
 
 }
@@ -363,13 +364,18 @@ function closeNav(){
   .fromTo(".header-decor", { opacity: 0 ,pointerEvents:"none"}, { opacity: 1 ,pointerEvents:"auto"},"<")
   // .to(body,{position:"relative"})
 
+  //deals with position sticky not working after closing nav
   document.body.style['overflow-y'] = 'visible';
   document.documentElement.style.overflow = 'auto';
   document.body.style['overflow-x'] = 'clip';
-  // changeLogoToBlack()
+
+    //changes logo form the main page logo to nav logo depening on device vw
   logoNav.style.display = "none"
-  logoimg.style.display = "block"
-  
+  if(isItSp.matches){
+    logoMobile.style.display = "block"
+  }else if (isItPc.matches){
+    logoimg.style.display = "block"
+  }
 }
 
 
@@ -471,10 +477,6 @@ function changeTelToWhite(){
 function changeHeadDecorToWhite(){
   gsap.to('.header-decor',{backgroundColor:"white"});
 }
-function changeLogoToBlack(){
-  // gsap.to('.logo',{filter:" invert(1)"});
-  logoimg.src = mainLogoBlack;
-}
 
 function changeToWhite(){
   headerTel.src = iconWhite;
@@ -494,11 +496,6 @@ function changeTelToBlack(){
 }
 function changeHeadDecorToBlack(){
   gsap.to('.header-decor',{backgroundColor:"#45484b"});
-}
-function changeLogoToWhite(){
-  // gsap.to('.logo',{filter:" invert(0)"});
-  logoimg.src = mainLogoWhite;
-  
 }
 
 function changeToBlack(){
@@ -522,14 +519,62 @@ function onlyRightToBlack(){
   changeHeadDecorToBlack();
 }
 
+//changes both the mobile version and the desktop version of the logo to black
+function changeBothLogoVerToBlack(){
+  changeLogoToBlack();
+  changeMobileLogoToBlack();
+}
+
+//changes both the mobile version and the desktop version of the logo to white
+function changeBothLogoVerToWhite(){
+  changeLogoToWhite();
+  changeMobileLogoToWhite();
+}
+
 function newplanGSAP(){
   // gsap.fromTo(".newplan-anim-txt", { y:100,opacity: 0 }, { y:0,opacity: 1,duration:1.5})
   gsap.to(".newplan-anim-txt",{ y:0,opacity: 1,duration:1.5})
 }
 
 function newplanAnim(){
+  changeBothLogoVerToWhite()
   changeToWhite();
   newplanGSAP()
+}
+
+function NewplanColorToBlack(){
+  changeBothLogoVerToBlack();
+  changeToBlack();
+}
+
+function NewplanColorToWhite(){
+  changeBothLogoVerToWhite();
+  changeToWhite();
+}
+
+//when both the mobile version and desktop are the same
+
+function changeToWhiteSpandPc(){
+  changeToWhite()
+  changeMobileLogoToWhite()
+}
+
+
+function changeToBlackSpandPc(){
+  changeToBlack()
+  changeMobileLogoToBlack()
+}
+
+//when only the right side and the mobile logo changes
+
+function onlyRightandMobileToWhite(){
+  onlyRightToWhite();
+  changeMobileLogoToWhite();
+}
+
+function onlyRightandMobileToBlack(){
+  onlyRightToBlack();
+  changeMobileLogoToBlack();
 }
 
 // triggers
@@ -540,61 +585,45 @@ ScrollTrigger.create({
   start: "bottom top",
   // markers:true,
   // end:".service-container",
-  onEnter: changeLogoToBlack,
+  onEnter: changeBothLogoVerToBlack,
   // onLeave: changeLogoToWhite,
-  onEnterBack: changeLogoToBlack,
-  onLeaveBack:changeLogoToWhite
+  onEnterBack: changeBothLogoVerToBlack,
+  onLeaveBack:changeBothLogoVerToWhite
 });
 
 
 // newplan trigger
 ScrollTrigger.create({
   trigger: newplan,
-  start: "top top",
+  start: "-50px top",
   onEnter: newplanAnim,
-  onLeave: changeToBlack,
-  onEnterBack: changeToWhite,
-  onLeaveBack:changeToBlack
+  onLeave: NewplanColorToBlack,
+  onEnterBack: NewplanColorToWhite,
+  onLeaveBack:NewplanColorToBlack
 });
 
 // banner trigger inspiration banner
 ScrollTrigger.create({
   trigger: inspBanner,
   start: "-100px top",
-  // markers:true,
-  onEnter: changeToWhite,
-  onLeave: changeToBlack,
+  onEnter: changeToWhiteSpandPc,
+  onLeave: changeToBlackSpandPc,
   onEnterBack: changeToWhite,
-  onLeaveBack:changeToBlack
+  onLeaveBack:changeToBlackSpandPc
 });
-
-
-// banner trigger inspiration banner
-ScrollTrigger.create({
-  trigger: inspBanner,
-  start: "-100px top",
-  // markers:true,
-  onEnter: changeToWhite,
-  onLeave: changeToBlack,
-  onEnterBack: changeToWhite,
-  onLeaveBack:changeToBlack
-});
-
-
 
 // banner trigger item banner
 ScrollTrigger.create({
   trigger: itemBanner,
   start: "-100px top",
   // markers:true,
-  onEnter: changeToWhite,
-  onLeave: changeToBlack,
-  onEnterBack: changeToWhite,
-  onLeaveBack:changeToBlack,
+  onEnter: changeToWhiteSpandPc,
+  onLeave: changeToBlackSpandPc,
+  onEnterBack: changeToWhiteSpandPc,
+  onLeaveBack:changeToBlackSpandPc
 });
 
-
-// advantage image trigger for only right side of the nav
+// advantage image trigger for only  the right side 
 ScrollTrigger.create({
   trigger: advantageTrigger,
   start: "-50px top",
@@ -653,3 +682,57 @@ let kvtl = gsap.timeline({
 kvtl
   .from(".kv-eng", { x: 50, opacity: 0, duration: 1 })
   .from(".kv-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8");
+
+
+
+/* ------------------------------------------- */
+/*        MOBILE SPECIFIC ANIMATIONS           */
+/* ------------------------------------------- */
+
+/*-----------------------------------------
+    Recommended Section Animations - Mobile
+    Recommended アニメーション - SP
+--------------------------------------------*/
+changeLogoColor(".sp-rc_img");
+/*-----------------------------------------
+Inspiration Section Animations - Mobile
+Inspiration アニメーション - SP
+--------------------------------------------*/
+changeLogoColor(".insp-slider");
+/*-----------------------------------------
+Advantage Section Animations - Mobile
+Advantage アニメーション - SP
+--------------------------------------------*/
+changeLogoColor(".advantage-trigger-mobile");
+changeLogoColor(".adv-trigger-colorscheme");
+changeLogoColor(".adv-trigger-colorscheme2");
+/*-----------------------------------------
+Color Consultancy Section Animations - Mobile
+Color Consultancy アニメーション - SP
+--------------------------------------------*/
+changeLogoColor(".consultancy-trigger-mobile");
+/*-----------------------------------------
+Item Section Animations - Mobile
+Item アニメーション - SP
+--------------------------------------------*/
+changeLogoColor(".item-trigger_top");
+changeLogoColor(".item-trigger_bottom");
+
+/*-----------------------------------------
+Plan Section Animations - Mobile
+Plan アニメーション - SP
+--------------------------------------------*/
+changeLogoColor(".plan-mobile-trigger");
+
+/*-----------------------------------------
+Gallary Section Animations - Mobile
+Gallary アニメーション - SP
+--------------------------------------------*/
+
+changeLogoColor(".gallary-mobile-trigger");
+
+/*-----------------------------------------
+Contact Section Animations - Mobile
+Contact アニメーション - SP
+--------------------------------------------*/
+changeLogoColor(".contact-mobile-tirgger");
