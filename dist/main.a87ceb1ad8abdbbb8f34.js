@@ -9832,6 +9832,90 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/assets/js/changeLogoColor.js":
+/*!******************************************!*\
+  !*** ./src/assets/js/changeLogoColor.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   changeLogoToBlack: () => (/* binding */ changeLogoToBlack),
+/* harmony export */   changeLogoToWhite: () => (/* binding */ changeLogoToWhite),
+/* harmony export */   changeMobileLogoToBlack: () => (/* binding */ changeMobileLogoToBlack),
+/* harmony export */   changeMobileLogoToWhite: () => (/* binding */ changeMobileLogoToWhite)
+/* harmony export */ });
+/* harmony import */ var _images_nav_icon_tel_white_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../images/nav/icon_tel-white.svg */ "./src/assets/images/nav/icon_tel-white.svg");
+/* harmony import */ var _images_nav_icon_tel_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../images/nav/icon_tel.svg */ "./src/assets/images/nav/icon_tel.svg");
+/* harmony import */ var _images_nav_logo_main_blk_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/nav/logo_main-blk.svg */ "./src/assets/images/nav/logo_main-blk.svg");
+/* harmony import */ var _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../images/nav/logo_main.svg */ "./src/assets/images/nav/logo_main.svg");
+
+
+
+
+
+const logoimg = document.querySelector('.trigger-logo');
+const logoNav = document.querySelector('.nav-logo-img');
+const logoMobile = document.querySelector('.mobile-logo');
+
+
+
+//mobile
+
+
+function changeMobileLogoToWhite(){
+    logoMobile.src = _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_3__;
+  }
+  
+function changeMobileLogoToBlack(){
+    logoMobile.src = _images_nav_logo_main_blk_svg__WEBPACK_IMPORTED_MODULE_2__;
+  }
+
+
+  //pc
+  function changeLogoToWhite(){
+    logoimg.src = _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_3__;
+    
+  }
+  
+  function changeLogoToBlack(){
+    logoimg.src = _images_nav_logo_main_blk_svg__WEBPACK_IMPORTED_MODULE_2__;
+  }
+
+/***/ }),
+
+/***/ "./src/assets/js/mobileLogoTrigger.js":
+/*!********************************************!*\
+  !*** ./src/assets/js/mobileLogoTrigger.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ changeLogoColor)
+/* harmony export */ });
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+/* harmony import */ var _changeLogoColor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./changeLogoColor */ "./src/assets/js/changeLogoColor.js");
+
+
+
+gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger);
+
+
+function changeLogoColor(classname){
+    gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+        trigger: classname,
+        start: "-50px top",
+        onEnter: _changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeMobileLogoToWhite,
+        onLeave: _changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeMobileLogoToBlack,
+        onEnterBack: _changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeMobileLogoToWhite,
+        onLeaveBack:_changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeMobileLogoToBlack
+      });
+}
+
+/***/ }),
+
 /***/ "./src/assets/images/nav/icon_tel-white.svg":
 /*!**************************************************!*\
   !*** ./src/assets/images/nav/icon_tel-white.svg ***!
@@ -9994,10 +10078,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_css_common_btnhover_css__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./assets/css/common/btnhover.css */ "./src/assets/css/common/btnhover.css");
 /* harmony import */ var _assets_images_nav_icon_tel_white_svg__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./assets/images/nav/icon_tel-white.svg */ "./src/assets/images/nav/icon_tel-white.svg");
 /* harmony import */ var _assets_images_nav_icon_tel_svg__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./assets/images/nav/icon_tel.svg */ "./src/assets/images/nav/icon_tel.svg");
-/* harmony import */ var _assets_images_nav_logo_main_blk_svg__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./assets/images/nav/logo_main-blk.svg */ "./src/assets/images/nav/logo_main-blk.svg");
-/* harmony import */ var _assets_images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./assets/images/nav/logo_main.svg */ "./src/assets/images/nav/logo_main.svg");
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 /* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+/* harmony import */ var _assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./assets/js/mobileLogoTrigger */ "./src/assets/js/mobileLogoTrigger.js");
+/* harmony import */ var _assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./assets/js/changeLogoColor */ "./src/assets/js/changeLogoColor.js");
+
+
 
 
 
@@ -10031,20 +10117,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger);
-
-// gsap.registerPlugin(ScrollTrigger);
-
-// let images = gsap.utils.toArray(".parallax");
-
-// images.forEach((image) => {
-//   gsap.to(image, {
-//     yPercent: -100 * image.dataset.speed,
-//     ease: "none",
-//     scrollTrigger: {
-//       scrub: image.dataset.speed,
-//     },
-//   });
-// });
 
 /*----------------------------
     Slider
@@ -10313,6 +10385,15 @@ let headerBtn = document.querySelector('.header-btn');
 const body = document.body;
 const logoimg = document.querySelector('.trigger-logo');
 const logoNav = document.querySelector('.nav-logo-img');
+const logoMobile = document.querySelector('.mobile-logo');
+const isItSp = window.matchMedia("(max-width: 768px)");
+const isItPc = window.matchMedia("(min-width: 769px)");
+
+// if(isItSp.matches){
+//   console.log("mobile")
+// }else if (isItPc.matches){
+//   console.log("pc")
+// }
 
 icon.addEventListener("click", () => {
   animateHamburger()
@@ -10344,10 +10425,14 @@ function openNav(){
   .fromTo(".header-tel_img", { opacity: 1 }, { opacity: 0 ,pointerEvents:"none"},"<")
   .fromTo(".header-decor", { opacity: 1 }, { opacity: 0,pointerEvents:"none" },"<");
 
+  //deals with scroll being shown in the nav
   document.documentElement.style.overflow = 'hidden';
   document.body.style.overflow = 'hidden';
+
+  //changes logo form the main page logo to nav logo
   logoNav.style.display = "block"
   logoimg.style.display = "none"
+  logoMobile.style.display = "none"
   // changeLogoToWhite()
 
 }
@@ -10363,13 +10448,18 @@ function closeNav(){
   .fromTo(".header-decor", { opacity: 0 ,pointerEvents:"none"}, { opacity: 1 ,pointerEvents:"auto"},"<")
   // .to(body,{position:"relative"})
 
+  //deals with position sticky not working after closing nav
   document.body.style['overflow-y'] = 'visible';
   document.documentElement.style.overflow = 'auto';
   document.body.style['overflow-x'] = 'clip';
-  // changeLogoToBlack()
+
+    //changes logo form the main page logo to nav logo depening on device vw
   logoNav.style.display = "none"
-  logoimg.style.display = "block"
-  
+  if(isItSp.matches){
+    logoMobile.style.display = "block"
+  }else if (isItPc.matches){
+    logoimg.style.display = "block"
+  }
 }
 
 
@@ -10471,17 +10561,13 @@ function changeTelToWhite(){
 function changeHeadDecorToWhite(){
   gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.to('.header-decor',{backgroundColor:"white"});
 }
-function changeLogoToBlack(){
-  // gsap.to('.logo',{filter:" invert(1)"});
-  logoimg.src = _assets_images_nav_logo_main_blk_svg__WEBPACK_IMPORTED_MODULE_24__;
-}
 
 function changeToWhite(){
   headerTel.src = _assets_images_nav_icon_tel_white_svg__WEBPACK_IMPORTED_MODULE_22__;
   changeTimeToWhite();
   changeTelToWhite();
   changeHeadDecorToWhite();
-  changeLogoToWhite();
+  (0,_assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeLogoToWhite)();
 }
 
 // light backgrounds
@@ -10495,18 +10581,13 @@ function changeTelToBlack(){
 function changeHeadDecorToBlack(){
   gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.to('.header-decor',{backgroundColor:"#45484b"});
 }
-function changeLogoToWhite(){
-  // gsap.to('.logo',{filter:" invert(0)"});
-  logoimg.src = _assets_images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_25__;
-  
-}
 
 function changeToBlack(){
   headerTel.src = _assets_images_nav_icon_tel_svg__WEBPACK_IMPORTED_MODULE_23__;
   changeTimeToBlack();
   changeTelToBlack();
   changeHeadDecorToBlack();
-  changeLogoToBlack();
+  (0,_assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeLogoToBlack)();
 }
 
 function onlyRightToWhite(){
@@ -10522,14 +10603,62 @@ function onlyRightToBlack(){
   changeHeadDecorToBlack();
 }
 
+//changes both the mobile version and the desktop version of the logo to black
+function changeBothLogoVerToBlack(){
+  (0,_assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeLogoToBlack)();
+  (0,_assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeMobileLogoToBlack)();
+}
+
+//changes both the mobile version and the desktop version of the logo to white
+function changeBothLogoVerToWhite(){
+  (0,_assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeLogoToWhite)();
+  (0,_assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeMobileLogoToWhite)();
+}
+
 function newplanGSAP(){
   // gsap.fromTo(".newplan-anim-txt", { y:100,opacity: 0 }, { y:0,opacity: 1,duration:1.5})
   gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.to(".newplan-anim-txt",{ y:0,opacity: 1,duration:1.5})
 }
 
 function newplanAnim(){
+  changeBothLogoVerToWhite()
   changeToWhite();
   newplanGSAP()
+}
+
+function NewplanColorToBlack(){
+  changeBothLogoVerToBlack();
+  changeToBlack();
+}
+
+function NewplanColorToWhite(){
+  changeBothLogoVerToWhite();
+  changeToWhite();
+}
+
+//when both the mobile version and desktop are the same
+
+function changeToWhiteSpandPc(){
+  changeToWhite()
+  ;(0,_assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeMobileLogoToWhite)()
+}
+
+
+function changeToBlackSpandPc(){
+  changeToBlack()
+  ;(0,_assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeMobileLogoToBlack)()
+}
+
+//when only the right side and the mobile logo changes
+
+function onlyRightandMobileToWhite(){
+  onlyRightToWhite();
+  (0,_assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeMobileLogoToWhite)();
+}
+
+function onlyRightandMobileToBlack(){
+  onlyRightToBlack();
+  (0,_assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeMobileLogoToBlack)();
 }
 
 // triggers
@@ -10540,61 +10669,45 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
   start: "bottom top",
   // markers:true,
   // end:".service-container",
-  onEnter: changeLogoToBlack,
+  onEnter: changeBothLogoVerToBlack,
   // onLeave: changeLogoToWhite,
-  onEnterBack: changeLogoToBlack,
-  onLeaveBack:changeLogoToWhite
+  onEnterBack: changeBothLogoVerToBlack,
+  onLeaveBack:changeBothLogoVerToWhite
 });
 
 
 // newplan trigger
 gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
   trigger: newplan,
-  start: "top top",
+  start: "-50px top",
   onEnter: newplanAnim,
-  onLeave: changeToBlack,
-  onEnterBack: changeToWhite,
-  onLeaveBack:changeToBlack
+  onLeave: NewplanColorToBlack,
+  onEnterBack: NewplanColorToWhite,
+  onLeaveBack:NewplanColorToBlack
 });
 
 // banner trigger inspiration banner
 gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
   trigger: inspBanner,
   start: "-100px top",
-  // markers:true,
-  onEnter: changeToWhite,
-  onLeave: changeToBlack,
+  onEnter: changeToWhiteSpandPc,
+  onLeave: changeToBlackSpandPc,
   onEnterBack: changeToWhite,
-  onLeaveBack:changeToBlack
+  onLeaveBack:changeToBlackSpandPc
 });
-
-
-// banner trigger inspiration banner
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
-  trigger: inspBanner,
-  start: "-100px top",
-  // markers:true,
-  onEnter: changeToWhite,
-  onLeave: changeToBlack,
-  onEnterBack: changeToWhite,
-  onLeaveBack:changeToBlack
-});
-
-
 
 // banner trigger item banner
 gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
   trigger: itemBanner,
   start: "-100px top",
   // markers:true,
-  onEnter: changeToWhite,
-  onLeave: changeToBlack,
-  onEnterBack: changeToWhite,
-  onLeaveBack:changeToBlack,
+  onEnter: changeToWhiteSpandPc,
+  onLeave: changeToBlackSpandPc,
+  onEnterBack: changeToWhiteSpandPc,
+  onLeaveBack:changeToBlackSpandPc
 });
 
-
-// advantage image trigger for only right side of the nav
+// advantage image trigger for only  the right side 
 gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
   trigger: advantageTrigger,
   start: "-50px top",
@@ -10620,7 +10733,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
  gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
   trigger: ".slide_show",
   start: "-10px top",
-  onEnter: changeLogoToWhite,
+  onEnter: _assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeLogoToWhite,
   onLeave: changeToBlack,
   onEnterBack: changeToWhite,
   onLeaveBack:changeToBlack
@@ -10654,8 +10767,168 @@ kvtl
   .from(".kv-eng", { x: 50, opacity: 0, duration: 1 })
   .from(".kv-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8");
 
+
+
+/* ------------------------------------------- */
+/*        MOBILE SPECIFIC LOGO ANIMATIONS           */
+/* ------------------------------------------- */
+
+/*-----------------------------------------
+    Recommended Section Animations - Mobile
+    Recommended アニメーション - SP
+--------------------------------------------*/
+(0,_assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__["default"])(".sp-rc_img");
+/*-----------------------------------------
+Inspiration Section Animations - Mobile
+Inspiration アニメーション - SP
+--------------------------------------------*/
+(0,_assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__["default"])(".insp-slider");
+/*-----------------------------------------
+Advantage Section Animations - Mobile
+Advantage アニメーション - SP
+--------------------------------------------*/
+(0,_assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__["default"])(".advantage-trigger-mobile");
+(0,_assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__["default"])(".adv-trigger-colorscheme");
+(0,_assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__["default"])(".adv-trigger-colorscheme2");
+/*-----------------------------------------
+Color Consultancy Section Animations - Mobile
+Color Consultancy アニメーション - SP
+--------------------------------------------*/
+(0,_assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__["default"])(".consultancy-trigger-mobile");
+/*-----------------------------------------
+Item Section Animations - Mobile
+Item アニメーション - SP
+--------------------------------------------*/
+(0,_assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__["default"])(".item-trigger_top");
+(0,_assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__["default"])(".item-trigger_bottom");
+/*-----------------------------------------
+Plan Section Animations - Mobile
+Plan アニメーション - SP
+--------------------------------------------*/
+(0,_assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__["default"])(".plan-mobile-trigger");
+/*-----------------------------------------
+Gallary Section Animations - Mobile
+Gallary アニメーション - SP
+--------------------------------------------*/
+(0,_assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__["default"])(".gallary-mobile-trigger");
+/*-----------------------------------------
+Contact Section Animations - Mobile
+Contact アニメーション - SP
+--------------------------------------------*/
+(0,_assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__["default"])(".contact-mobile-tirgger");
+
+
+
+ /*----------------------------
+    Service Animations
+    Service アニメーション
+----------------------------*/
+let servicetl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
+  scrollTrigger: {
+    trigger: ".service_content",
+    start: "-=200px",
+    scrub: false,
+  },
+});
+
+servicetl
+  .from(".service-item-topimg", { scale:0, opacity: 0, duration: 1 })
+  .from(".service_think", { x:-100, opacity: 0, duration: 1 },"=-1")
+  .from(".think-text-anim", { opacity: 0, duration: 1 },"=-0.5")
+  .from(".service-arrow-anime", { y:-50,opacity: 0, duration: 1 },"=-0.5")
+  .from(".service-item1_img", { x:-50,opacity: 0, duration: 1 },"=-0.5")
+  .from(".service_inner-anime_1", { x:-50,opacity: 0, duration: 1 },"=-0.8")
+  .from(".service-item1_txt", { opacity: 0, duration: 1 },"=-0.5")
+  .from(".plus-anime_1", {opacity:0, x:-100 ,duration: 0.8},"=-0.5")
+  .from(".plus-anime_1", { "--rotate":0 ,duration: 1},"=-1")
+  .from(".service-item2_img", { x:-50,opacity: 0, duration: 1 },"=-0.5")
+  .from(".service_inner-anime_2", { x:-50,opacity: 0, duration: 1 },"=-0.8")
+  .from(".service-item2_txt", { opacity: 0, duration: 1 },"=-0.5")
+  .from(".plus-anime_2", {opacity:0, x:-100 ,duration: 0.5 },"=-0.5")
+  .from(".plus-anime_2", { "--rotate":0 ,duration: 0.5 },"=-0.5")
+  .from(".service-item3_img", { x:-50,opacity: 0, duration: 1 },"=-0.5")
+  .from(".service_inner-anime_3", { x:-50,opacity: 0, duration: 1 },"=-0.8")
+  .from(".service-item3_txt", { opacity: 0, duration: 1 },"=-0.5")
+  
+
+   /*----------------------------
+    Reccomended Animations
+    Reccomended アニメーション
+----------------------------*/
+
+  
+  let reccomendtl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
+    scrollTrigger: {
+      trigger: "#recommended",
+      start: "-=200px",
+      scrub: false,
+    },
+  });
+  
+
+
+
+  reccomendtl
+  .from(".rc-anime",{x:100,opacity:0,duration:1})
+  .from(".rc_list",{x:-100,opacity:0,duration:1},"<")
+  .from(".rec-li_anime1", {
+    duration: 0.5,
+    opacity:0,
+    y: 50,
+    ease: "power4.out",
+    skewY: 7,
+  })
+  .from(".rec-li_anime2", {
+    duration: 0.5,
+    opacity:0,
+    y: 50,
+    ease: "power4.out",
+    skewY: 7,
+  })
+  .from(".rec-li_anime3", {
+    duration: 0.5,
+    opacity:0,
+    y: 50,
+    ease: "power4.out",
+    skewY: 7,
+  })
+  .from(".rec-li_anime4", {
+    duration: 0.5,
+    opacity:0,
+    y: 50,
+    ease: "power4.out",
+    skewY: 7,
+  })
+  .from(".rec-li_anime5", {
+    duration: 0.5,
+    opacity:0,
+    y: 50,
+    ease: "power4.out",
+    skewY: 7,
+  })
+  .from(".rec-li_anime6", {
+    duration: 0.5,
+    opacity:0,
+    y: 50,
+    ease: "power4.out",
+    skewY: 7,
+  })
+  
+
+
+  
+
+
+
+ 
+
+ 
+
+
+
+
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.8384acde5203d7b05633.js.map
+//# sourceMappingURL=main.a87ceb1ad8abdbbb8f34.js.map
