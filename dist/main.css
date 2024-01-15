@@ -1568,7 +1568,7 @@ Recommended Bottom
   .rc_bottom{
     display: grid;
     grid-template-columns: 1fr 90% 1fr;
-    margin-top: 60px;
+    margin-top: 30px;
   }
 
   .rc_bottom img {
@@ -2536,8 +2536,8 @@ Recommended Bottom
 }
 .plan_line{
     content: "";
-    width: 100%;
     border-bottom: solid 1px #45484B;
+    width: 100%;
 }
 .plan_text_number{
     font-size: 65px;
@@ -2958,6 +2958,7 @@ Recommended Bottom
 
 @media (max-width:768px){
   #faq{
+    padding-top: 0;
     padding-bottom: 80px;
   }
   .faq{
@@ -3313,7 +3314,7 @@ footer ul{
 .footer_menu_content{
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 60px;
     justify-content: space-between;
 }
 .footer_menu_item{
@@ -3385,16 +3386,10 @@ footer ul{
     .br_1300{
         display: block;
     }
-
     .footer_menu p{
         padding-bottom: 24px;
         margin-bottom: 38px;
     }
-
-    .footer_menu_content{
-        gap: 2rem;
-    }
-
     .footer_menu_item{
         gap: 30px;
     }
@@ -3404,6 +3399,9 @@ footer ul{
 @media screen and (max-width: 1050px) {
     .footer_menu{
         width: 370px;
+    }
+    .footer_menu_content{
+        gap: 40px;
     }
 }
 
@@ -3546,7 +3544,6 @@ footer ul{
     letter-spacing: 2.9px;
   }
   .banner_subtitle {
-    letter-spacing: 0.32px;
     line-height: 30px;
   }
   .banner_contact a {
