@@ -653,6 +653,14 @@ header {
     width: 70.9px;
   }
 }
+
+@media(max-width:768px){
+  .trigger-logo{
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
 /*!**************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/nav.css ***!
   \**************************************************************************/
@@ -937,6 +945,7 @@ header {
   .primary-nav_list{
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
     overflow-y: scroll;
     padding: 100px 40px 170px 40px;
   }
@@ -1010,6 +1019,7 @@ justify-content: space-between;
   width: 70px;
   height: 40px;
   border-right: 1px solid #45484B;
+  letter-spacing: 0.1rem;
 }
 
 .tel-no{
@@ -1062,6 +1072,7 @@ justify-content: space-between;
 
 .kv_bottom .kv_text{
     margin-left: 9.73vw;
+    margin-top: 20vw;
 }
 
 .kv_bottom .kv_text .kagayaku {
@@ -1088,8 +1099,11 @@ justify-content: space-between;
 .kv_bottom .kv_text p {
   font-size: min(1.17vw, 16px);
   line-height: min(2.49vw, 34px);
-  margin-top: 3.66vw;
   width: 41vw;
+}
+
+.kv_bottom_text{
+  margin-top: 50px;
 }
 
 .kv_bottom .kv_02{
@@ -1139,7 +1153,9 @@ justify-content: space-between;
         font-size: 16px;
         line-height: 2rem;
         width: 100%;
-        margin-bottom: 45px;
+    }
+    .kv_bottom_text{
+      margin: 37px 0 47px;
     }
     .kv_bottom .kv_02{
         width: 72vw;
@@ -1267,6 +1283,7 @@ justify-content: space-between;
   display: block;
 }
 .plus {
+  --rotate:90deg;
   display: inline-block;
   vertical-align: middle;
   color: #C38C80;
@@ -1277,6 +1294,7 @@ justify-content: space-between;
   border-radius: 0;
   position: relative;
   margin-top: 135px;
+  transform: rotate(90deg);
 }
 .plus::before {
   content: "";
@@ -1287,7 +1305,8 @@ justify-content: space-between;
   height: 100%;
   background: inherit;
   border-radius: inherit;
-  transform: rotate(90deg);
+  /* transform:rotate(var(--rotate)); */
+  transform: rotate(var(--rotate));
 }
 
 /* new plan */
@@ -1491,6 +1510,7 @@ Recommended Bottom
   border-left: 1px solid #c38c80;
   border-bottom: 1px solid #c38c80;
   transform: rotate(-45deg);
+  
 }
 
 
@@ -3307,7 +3327,7 @@ footer ul{
 }
 .copy{
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
 }
 .copy p{
