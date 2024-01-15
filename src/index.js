@@ -116,7 +116,6 @@ let recommendedtl = gsap.timeline({
     trigger: "#recommended",
     start: "-=500px",
     scrub: false,
-    // markers:true
   },
 });
 
@@ -134,7 +133,6 @@ let inspirationtl = gsap.timeline({
     trigger: "#inspiration",
     start: "-=500px",
     scrub: false,
-    // markers:true
   },
 });
 
@@ -152,7 +150,6 @@ let advantagetl = gsap.timeline({
     trigger: "#advantage",
     start: "-=500px",
     scrub: false,
-    // markers:true
   },
 });
 
@@ -170,7 +167,6 @@ let consultancytl = gsap.timeline({
     trigger: "#consultancy",
     start: "-=500px",
     scrub: false,
-    // markers:true
   },
 });
 
@@ -188,7 +184,6 @@ let itemtl = gsap.timeline({
     trigger: "#item",
     start: "-=500px",
     scrub: false,
-    // markers:true
   },
 });
 
@@ -206,7 +201,6 @@ let plantl = gsap.timeline({
     trigger: "#plan",
     start: "-=500px",
     scrub: false,
-    // markers:true
   },
 });
 
@@ -225,7 +219,6 @@ let flowtl = gsap.timeline({
     trigger: "#flow",
     start: "-=500px",
     scrub: false,
-    // markers:true
   },
 });
 
@@ -243,7 +236,6 @@ let gallerytl = gsap.timeline({
     trigger: "#gallery",
     start: "-=500px",
     scrub: false,
-    // markers:true
   },
 });
 
@@ -261,7 +253,6 @@ let faqtl = gsap.timeline({
     trigger: "#faq",
     start: "-=500px",
     scrub: false,
-    // markers:true
   },
 });
 
@@ -280,7 +271,6 @@ let conttl = gsap.timeline({
     trigger: "#contact",
     start: "-=500px",
     scrub: false,
-    // markers:true
   },
 });
 
@@ -583,7 +573,6 @@ function onlyRightandMobileToBlack(){
 ScrollTrigger.create({
   trigger: kv,
   start: "bottom top",
-  // markers:true,
   // end:".service-container",
   onEnter: changeBothLogoVerToBlack,
   // onLeave: changeLogoToWhite,
@@ -616,7 +605,6 @@ ScrollTrigger.create({
 ScrollTrigger.create({
   trigger: itemBanner,
   start: "-100px top",
-  // markers:true,
   onEnter: changeToWhiteSpandPc,
   onLeave: changeToBlackSpandPc,
   onEnterBack: changeToWhiteSpandPc,
@@ -627,7 +615,6 @@ ScrollTrigger.create({
 ScrollTrigger.create({
   trigger: advantageTrigger,
   start: "-50px top",
-  // markers:true,
   onEnter: onlyRightToWhite,
   onLeave: onlyRightToBlack,
   onEnterBack: onlyRightToWhite,
@@ -638,7 +625,6 @@ ScrollTrigger.create({
 ScrollTrigger.create({
   trigger: consultancyTrigger,
   start: "-50px top",
-  // markers:true,
   onEnter: onlyRightToWhite,
   onLeave: onlyRightToBlack,
   onEnterBack: onlyRightToWhite,
@@ -675,7 +661,6 @@ let kvtl = gsap.timeline({
     trigger: ".kv_bottom",
     start: "-=200px",
     scrub: false,
-    // markers:true
   },
 });
 
@@ -767,7 +752,7 @@ servicetl
   .from(".service-item3_txt", { opacity: 0, duration: 1 },"=-0.5")
   
 
-   /*----------------------------
+/*----------------------------
     Reccomended Animations
     Reccomended アニメーション
 ----------------------------*/
@@ -781,9 +766,6 @@ servicetl
     },
   });
   
-
-
-
   reccomendtl
   .from(".rc-anime",{x:100,opacity:0,duration:1})
   .from(".rc_list",{x:-100,opacity:0,duration:1},"<")
@@ -831,12 +813,30 @@ servicetl
   })
   
 
-
+/*----------------------------
+    Plan Animations
+    Plan アニメーション
+----------------------------*/
   
 
+let planAnitl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#plan",
+    start: "-100px top",
+    scrub: false,
+  },
+});
 
-
- 
+planAnitl
+  .from(".plan_line",{width:0,duration:1})  
+  .from(".plan_text_number-anime1",{scale:0,duration:0.5})
+  .from(".plan-txt-title_anime1",{opacity:0,height:0})
+  .from(".plan-txt_anime1",{opacity:0})
+  .from(".plan_text_number-anime2",{scale:0,duration:0.5})
+  .from(".plan-txt-title_anime2",{opacity:0,height:0})
+  .from(".plan-txt_anime2",{opacity:0})
+  .from(".plan_text_number-anime3",{scale:0,duration:0.5})
+  .from(".plan-txt-title_anime3",{opacity:0,height:0})
 
  
 
