@@ -353,6 +353,7 @@ justify-content: space-between;
   width: 70px;
   height: 40px;
   border-right: 1px solid #45484B;
+  letter-spacing: 0.1rem;
 }
 
 .tel-no{
