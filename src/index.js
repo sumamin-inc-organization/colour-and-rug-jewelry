@@ -721,3 +721,19 @@ ScrollTrigger.create({
   onEnterBack: changeMobileLogoToWhite,
   onLeaveBack:changeMobileLogoToBlack
 });
+
+/*-----------------------------------------
+Recommended Section Animations - Mobile
+Recommended アニメーション - SP
+--------------------------------------------*/
+
+//recommended 画像を超えるときにモバイルロゴの色を変更
+ScrollTrigger.create({
+trigger: ".insp-slider",
+markers:true,
+start: "-20px top",
+onEnter: changeMobileLogoToWhite,
+onLeave: changeMobileLogoToBlack,
+onEnterBack: changeMobileLogoToWhite,
+onLeaveBack:changeMobileLogoToBlack
+});
