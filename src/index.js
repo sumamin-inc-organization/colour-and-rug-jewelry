@@ -767,6 +767,70 @@ servicetl
   .from(".service-item3_txt", { opacity: 0, duration: 1 },"=-0.5")
   
 
+   /*----------------------------
+    Reccomended Animations
+    Reccomended アニメーション
+----------------------------*/
+
+  
+  let reccomendtl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#recommended",
+      start: "-=200px",
+      scrub: false,
+    },
+  });
+  
+
+
+
+  reccomendtl
+  .from(".rc-anime",{x:100,opacity:0,duration:1})
+  .from(".rc_list",{x:-100,opacity:0,duration:1},"<")
+  .from(".rec-li_anime1", {
+    duration: 0.5,
+    opacity:0,
+    y: 50,
+    ease: "power4.out",
+    skewY: 7,
+  })
+  .from(".rec-li_anime2", {
+    duration: 0.5,
+    opacity:0,
+    y: 50,
+    ease: "power4.out",
+    skewY: 7,
+  })
+  .from(".rec-li_anime3", {
+    duration: 0.5,
+    opacity:0,
+    y: 50,
+    ease: "power4.out",
+    skewY: 7,
+  })
+  .from(".rec-li_anime4", {
+    duration: 0.5,
+    opacity:0,
+    y: 50,
+    ease: "power4.out",
+    skewY: 7,
+  })
+  .from(".rec-li_anime5", {
+    duration: 0.5,
+    opacity:0,
+    y: 50,
+    ease: "power4.out",
+    skewY: 7,
+  })
+  .from(".rec-li_anime6", {
+    duration: 0.5,
+    opacity:0,
+    y: 50,
+    ease: "power4.out",
+    skewY: 7,
+  })
+  
+
 
   
 
