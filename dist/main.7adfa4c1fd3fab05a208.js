@@ -10453,23 +10453,31 @@ function closeNav(){
 }
 
 
- const navLinks = document.querySelectorAll('.nav-link');
- const salon = document.querySelector('.location');
+const navLinks = document.querySelectorAll('.nav-link');
+const salon = document.querySelector('.location');
 
- navLinks.forEach(link =>{
-  link.addEventListener('click',(e)=>{
-    animateHamburger()
-    closeNav()
-  })
- })
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevent the default behavior of the anchor tag
+    const targetSectionId = link.getAttribute('data-prime-link');
+    scrollToSection(targetSectionId);
+    animateHamburger();
+    closeNav();
+  });
+});
 
+salon.addEventListener('click', (e) => {
+  animateHamburger();
+  closeNav();
+});
 
+function scrollToSection(sectionId) {
+  const targetSection = document.querySelector(sectionId);
+  if (targetSection) {
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 
-salon.addEventListener('click',(e)=>{
-  e.preventDefault;
-  animateHamburger()
-  closeNav()
-})
 
   /*----------------------------
    Page Loader
@@ -10686,7 +10694,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
   start: "-100px top",
   onEnter: changeToWhiteSpandPc,
   onLeave: changeToBlackSpandPc,
-  onEnterBack: changeToWhite,
+  onEnterBack: changeToWhiteSpandPc,
   onLeaveBack:changeToBlackSpandPc
 });
 
@@ -10779,7 +10787,7 @@ if(isItPc.matches){
 Inspiration Section Animations - Mobile
 Inspiration アニメーション - SP
 --------------------------------------------*/
-(0,_assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__["default"])(".insp-slider");
+// changeLogoColor(".insp-slider");
 /*-----------------------------------------
 Advantage Section Animations - Mobile
 Advantage アニメーション - SP
@@ -10952,4 +10960,4 @@ planAnitl
 
 /******/ })()
 ;
-//# sourceMappingURL=main.b377ae94bad2ff3d1ebf.js.map
+//# sourceMappingURL=main.7adfa4c1fd3fab05a208.js.map
