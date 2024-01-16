@@ -30,6 +30,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import changeLogoColor from "./assets/js/mobileLogoTrigger";
 import { changeLogoToBlack, changeLogoToWhite, changeMobileLogoToBlack, changeMobileLogoToWhite } from "./assets/js/changeLogoColor";
+import { openPopup, popupClose } from "./assets/js/popup";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -436,20 +437,19 @@ if(isItSp.matches){
 const inspirationBtn = document.querySelector('[data-insp="1"]');
 const modal = document.querySelector('[data-story="1"]');
 const closeBtn =document.querySelector('.close-popup-btn');
+const closeBtnSp = document.querySelector('.close-popup-btn_sp');
 
 inspirationBtn.addEventListener('click',(e)=>{
   e.preventDefault;
-  modal.style.display = "block";
-  document.documentElement.style.overflow = 'hidden';
-  document.body.style.overflow = 'hidden';
-  animateleft()
+  openPopup(modal);
+  animateleft();
 })
-closeBtn.addEventListener('click',(e)=>{
-  modal.style.display = "none";
-  document.body.style['overflow-y'] = 'visible';
-  document.documentElement.style.overflow = 'auto';
-  document.body.style['overflow-x'] = 'clip';
-})
+
+
+
+popupClose(closeBtn);
+popupClose(closeBtnSp);
+
 
 function animateleft(){
   let popimage =  gsap.timeline();
