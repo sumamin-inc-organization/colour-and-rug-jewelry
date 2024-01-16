@@ -850,7 +850,7 @@ let planAnitl = gsap.timeline({
 
 planAnitl
   .from(".plan_line",{width:0,duration:1})  
-  .from(".plan_text_number-anime1",{scale:0,duration:0.5})
+  .from(".plan_text_number-anime1",{scale:0,duration:0.5},"0.5")
   .from(".plan-txt-title_anime1",{opacity:0,x:-10})
   .from(".plan-txt_anime1",{opacity:0})
   .from(".plan_text_number-anime2",{scale:0,duration:0.5})
