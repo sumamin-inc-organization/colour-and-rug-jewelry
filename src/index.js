@@ -420,7 +420,7 @@ if(isItSp.matches){
   
   
   intro
-    .from(".kv-eng", { x: 50, opacity: 0, duration: 1 })
+    .from(".kv-eng", { x: 50, opacity: 0, duration: 1 },"<")
     .from(".kv-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8");
   
 }
