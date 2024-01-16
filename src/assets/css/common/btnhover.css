@@ -41,6 +41,11 @@
 .white-to-black:hover p{
    color: #FFFFFF ;
 }
+#temp:hover > .tel::before{
+    content: url(../../images/contact/contact-telicon_white.svg);
+}
+
+
 
 /*----------------------------
   White ==> Black Outline
@@ -93,3 +98,5 @@
 .banner-btn:hover::after {
     content: url(../../images/inspiration/btn-chevron.svg);
 }
+
+

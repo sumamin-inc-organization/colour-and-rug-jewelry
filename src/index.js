@@ -872,3 +872,5 @@ planAnitl
 
  newplanAnitl
   .from(".newplan-anim-txt",{ y:100,opacity: 0,duration:1.5})
+
+
