@@ -9916,6 +9916,41 @@ function changeLogoColor(classname){
 
 /***/ }),
 
+/***/ "./src/assets/js/popup.js":
+/*!********************************!*\
+  !*** ./src/assets/js/popup.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   openPopup: () => (/* binding */ openPopup),
+/* harmony export */   popupClose: () => (/* binding */ popupClose)
+/* harmony export */ });
+const modal = document.querySelector('[data-story="1"]');
+
+
+// function for closing the popup
+// ポップアップを閉じるための関数
+
+function popupClose(btn){
+    btn.addEventListener('click',(e)=>{
+        modal.style.display = "none";
+        document.body.style['overflow-y'] = 'visible';
+        document.documentElement.style.overflow = 'auto';
+        document.body.style['overflow-x'] = 'clip';
+      })
+}
+
+
+function openPopup(popupmodal){
+    popupmodal.style.display = "block";
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+}
+
+/***/ }),
+
 /***/ "./src/assets/images/nav/icon_tel-white.svg":
 /*!**************************************************!*\
   !*** ./src/assets/images/nav/icon_tel-white.svg ***!
@@ -10078,10 +10113,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_css_common_btnhover_css__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./assets/css/common/btnhover.css */ "./src/assets/css/common/btnhover.css");
 /* harmony import */ var _assets_images_nav_icon_tel_white_svg__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./assets/images/nav/icon_tel-white.svg */ "./src/assets/images/nav/icon_tel-white.svg");
 /* harmony import */ var _assets_images_nav_icon_tel_svg__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./assets/images/nav/icon_tel.svg */ "./src/assets/images/nav/icon_tel.svg");
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
 /* harmony import */ var _assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./assets/js/mobileLogoTrigger */ "./src/assets/js/mobileLogoTrigger.js");
 /* harmony import */ var _assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./assets/js/changeLogoColor */ "./src/assets/js/changeLogoColor.js");
+/* harmony import */ var _assets_js_popup__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./assets/js/popup */ "./src/assets/js/popup.js");
 
 
 
@@ -10116,7 +10152,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger);
+
+gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger);
 
 /*----------------------------
     Slider
@@ -10172,10 +10209,10 @@ faqs.forEach((faq) => {
 
 const scrollers = document.querySelectorAll(".scroller"); //target the scrollers
 
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  //check if user prefers reduced motion.( but inthis case it doesnt matter because its jus the logo)
-  addAnimation();
-}
+// if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+//   //check if user prefers reduced motion.( but inthis case it doesnt matter because its jus the logo)
+//   addAnimation();
+// }
 
 function addAnimation() {
   scrollers.forEach((scroller) => {
@@ -10191,11 +10228,12 @@ function addAnimation() {
     });
   });
 }
+addAnimation();
 /*----------------------------
     RECOMMENDED Animations
     RECOMMENDED  アニメーション
 ----------------------------*/
-let recommendedtl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
+let recommendedtl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
   scrollTrigger: {
     trigger: "#recommended",
     start: "-=500px",
@@ -10212,7 +10250,7 @@ recommendedtl
     Inspiration  アニメーション
 ----------------------------*/
 
-let inspirationtl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
+let inspirationtl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
   scrollTrigger: {
     trigger: "#inspiration",
     start: "-=500px",
@@ -10229,7 +10267,7 @@ inspirationtl
     Advantage  アニメーション
 ----------------------------*/
 
-let advantagetl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
+let advantagetl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
   scrollTrigger: {
     trigger: "#advantage",
     start: "-=500px",
@@ -10246,7 +10284,7 @@ advantagetl
     Consultancy  アニメーション
 ----------------------------*/
 
-let consultancytl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
+let consultancytl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
   scrollTrigger: {
     trigger: "#consultancy",
     start: "-=500px",
@@ -10263,7 +10301,7 @@ consultancytl
     Item アニメーション
 ----------------------------*/
 
-let itemtl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
+let itemtl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
   scrollTrigger: {
     trigger: "#item",
     start: "-=500px",
@@ -10280,7 +10318,7 @@ itemtl
     Plan Animations
     Plan アニメーション
 ----------------------------*/
-let plantl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
+let plantl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
   scrollTrigger: {
     trigger: "#plan",
     start: "-=500px",
@@ -10298,7 +10336,7 @@ plantl
     Flow アニメーション
 ----------------------------*/
 
-let flowtl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
+let flowtl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
   scrollTrigger: {
     trigger: "#flow",
     start: "-=500px",
@@ -10315,7 +10353,7 @@ flowtl
     Gallary アニメーション
 ----------------------------*/
 
-let gallerytl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
+let gallerytl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
   scrollTrigger: {
     trigger: "#gallery",
     start: "-=500px",
@@ -10332,7 +10370,7 @@ gallerytl
     FAQ アニメーション
 ----------------------------*/
 
-let faqtl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
+let faqtl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
   scrollTrigger: {
     trigger: "#faq",
     start: "-=500px",
@@ -10350,7 +10388,7 @@ faqtl
     CONTACT アニメーション
 ----------------------------*/
 
-let conttl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
+let conttl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
   scrollTrigger: {
     trigger: "#contact",
     start: "-=500px",
@@ -10406,7 +10444,7 @@ function animateHamburger(){
 
 
 function openNav(){
-  let openAnim = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline()
+  let openAnim = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline()
   openAnim
   // .to(body,{position:"fixed"})
   .to('.primary-nav',{opacity:1,duration:1,zIndex:7999})
@@ -10429,7 +10467,7 @@ function openNav(){
 
 
 function closeNav(){
-  let openAnim = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline()
+  let openAnim = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline()
   openAnim
   .to('.primary-nav',{opacity:0,duration:1,zIndex:"-1"})
   .fromTo(".header-info", { opacity: 0 }, { opacity: 1 },"<")
@@ -10485,7 +10523,7 @@ function scrollToSection(sectionId) {
 ----------------------------*/
 
  document.addEventListener('DOMContentLoaded',(e)=>{
-  let intro = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline()
+  let intro = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline()
 
   intro
 .to('.transition-item',{y:'0',delay:2})
@@ -10503,7 +10541,7 @@ if(isItSp.matches){
   
   
   intro
-    .from(".kv-eng", { x: 50, opacity: 0, duration: 1 })
+    .from(".kv-eng", { x: 50, opacity: 0, duration: 1 },"<")
     .from(".kv-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8");
   
 }
@@ -10520,23 +10558,22 @@ if(isItSp.matches){
 const inspirationBtn = document.querySelector('[data-insp="1"]');
 const modal = document.querySelector('[data-story="1"]');
 const closeBtn =document.querySelector('.close-popup-btn');
+const closeBtnSp = document.querySelector('.close-popup-btn_sp');
 
 inspirationBtn.addEventListener('click',(e)=>{
   e.preventDefault;
-  modal.style.display = "block";
-  document.documentElement.style.overflow = 'hidden';
-  document.body.style.overflow = 'hidden';
-  animateleft()
-})
-closeBtn.addEventListener('click',(e)=>{
-  modal.style.display = "none";
-  document.body.style['overflow-y'] = 'visible';
-  document.documentElement.style.overflow = 'auto';
-  document.body.style['overflow-x'] = 'clip';
+  (0,_assets_js_popup__WEBPACK_IMPORTED_MODULE_26__.openPopup)(modal);
+  animateleft();
 })
 
+
+
+;(0,_assets_js_popup__WEBPACK_IMPORTED_MODULE_26__.popupClose)(closeBtn);
+(0,_assets_js_popup__WEBPACK_IMPORTED_MODULE_26__.popupClose)(closeBtnSp);
+
+
 function animateleft(){
-  let popimage =  gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline();
+  let popimage =  gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline();
   popimage
   .from(".popup",{opacity:0,duration:0.5})
   // .from(".story",{x:"100%"})
@@ -10562,13 +10599,13 @@ const consultancyTrigger = document.querySelector('.consultancy-trigger');
 
 // dark backgrounds
 function changeTimeToWhite(){
-  gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.to('.time',{color:"white"});
+  gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.to('.time',{color:"white"});
 }
 function changeTelToWhite(){
-  gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.to('.change',{color:"white"});
+  gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.to('.change',{color:"white"});
 }
 function changeHeadDecorToWhite(){
-  gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.to('.header-decor',{backgroundColor:"white"});
+  gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.to('.header-decor',{backgroundColor:"white"});
 }
 
 function changeToWhite(){
@@ -10582,13 +10619,13 @@ function changeToWhite(){
 // light backgrounds
 
 function changeTimeToBlack(){
-  gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.to('.time',{color:"#45484b"});
+  gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.to('.time',{color:"#45484b"});
 }
 function changeTelToBlack(){
-  gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.to('.change',{color:"#45484b"});
+  gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.to('.change',{color:"#45484b"});
 }
 function changeHeadDecorToBlack(){
-  gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.to('.header-decor',{backgroundColor:"#45484b"});
+  gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.to('.header-decor',{backgroundColor:"#45484b"});
 }
 
 function changeToBlack(){
@@ -10667,7 +10704,7 @@ function onlyRightandMobileToBlack(){
 // triggers
 
 //trigger for logo when it htis the end of the kv
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger.create({
   trigger: kv,
   start: "bottom top",
   // end:".service-container",
@@ -10679,7 +10716,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
 
 
 // newplan trigger
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger.create({
   trigger: newplan,
   start: "-50px top",
   onEnter: newplanAnim,
@@ -10689,7 +10726,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
 });
 
 // banner trigger inspiration banner
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger.create({
   trigger: inspBanner,
   start: "-100px top",
   onEnter: changeToWhiteSpandPc,
@@ -10699,7 +10736,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
 });
 
 // banner trigger item banner
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger.create({
   trigger: itemBanner,
   start: "-100px top",
   onEnter: changeToWhiteSpandPc,
@@ -10709,7 +10746,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
 });
 
 // advantage image trigger for only  the right side 
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger.create({
   trigger: advantageTrigger,
   start: "-50px top",
   onEnter: onlyRightToWhite,
@@ -10719,7 +10756,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
 });
 
 // color consultancy image trigger for only right side of the nav
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger.create({
   trigger: consultancyTrigger,
   start: "-50px top",
   onEnter: onlyRightToWhite,
@@ -10729,7 +10766,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
 });
 
 //  // plan trigger 
- gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
+ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger.create({
   trigger: ".slide_show",
   start: "-10px top",
   onEnter: _assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeLogoToWhite,
@@ -10739,7 +10776,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
 });
 
  // flow trigger 
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger.create({
   trigger: "#flow",
   start: "-50px top",
   onEnter: changeToBlack,
@@ -10753,7 +10790,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_27__.ScrollTrigger.create({
 ----------------------------*/
 
 function runKvAnimations(){
-  let kvtl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
+  let kvtl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
     scrollTrigger: {
       trigger: ".kv_bottom",
       start: "-=200px",
@@ -10828,7 +10865,7 @@ Contact アニメーション - SP
     Service Animations
     Service アニメーション
 ----------------------------*/
-let servicetl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
+let servicetl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
   scrollTrigger: {
     // trigger: ".service_content",
     trigger:".service-title-trigger",
@@ -10838,23 +10875,23 @@ let servicetl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
 });
 
 servicetl
-  .from(".service-item-topimg", { scale:0, opacity: 0, duration: 1 })
-  .from(".service_think", { x:-100, opacity: 0, duration: 1 },"=-0.5")
-  .from(".think-text-anim", { opacity: 0, duration: 1 },"=-0.3")
-  .from(".service-arrow-anime", { y:-50,opacity: 0, duration: 1 },"=-0.3")
-  .from(".service-item1_img", { x:-50,opacity: 0, duration: 1},"=-0.3")
-  .from(".service_inner-anime_1", { x:-50,opacity: 0, duration: 1 },"=-0.5")
-  .from(".service-item1_txt", { opacity: 0, duration: 1 },"=-0.5")
-  .from(".plus-anime_1", {opacity:0, x:-100 ,duration: 1},"=-0.8")
-  .from(".plus-anime_1", { "--rotate":0 ,duration: 0.8},"=-1")
-  .from(".service-item2_img", { x:-50,opacity: 0, duration: 1},"=-0.3")
-  .from(".service_inner-anime_2", { x:-50,opacity: 0, duration: 1 },"=-0.5")
-  .from(".service-item2_txt", { opacity: 0, duration: 1 },"=-0.5")
-  .from(".plus-anime_2", {opacity:0, x:-100 ,duration: 1},"=-0.8")
-  .from(".plus-anime_2", { "--rotate":0 ,duration: 1},"=-1")
-  .from(".service-item3_img", { x:-50,opacity: 0, duration: 1 },"=-0.3")
-  .from(".service_inner-anime_3", { x:-50,opacity: 0, duration: 1 },"=-0.5")
-  .from(".service-item3_txt", { opacity: 0, duration: 1},"=-0.5")
+  .from(".service-item-topimg", { scale:0, opacity: 0, duration: 0.7 })
+  .from(".service_think", { x:-100, opacity: 0, duration: 0.7 },"=-0.5")
+  .from(".think-text-anim", { opacity: 0, duration: 0.7 },"=-0.3")
+  .from(".service-arrow-anime", { y:-50,opacity: 0, duration: 0.7 },"=-0.3")
+  .from(".service-item1_img", { x:-50,opacity: 0, duration: 0.7},"=-0.3")
+  .from(".service_inner-anime_1", { x:-50,opacity: 0, duration: 0.7 },"=-0.5")
+  .from(".service-item1_txt", { opacity: 0, duration: 0.7 },"=-0.5")
+  .from(".plus-anime_1", {opacity:0, y:-100 ,duration: 0.7},"=-0.8")
+  .from(".plus-anime_1", { "--rotate":0 ,duration: 0.5},"=-1")
+  .from(".service-item2_img", { x:-50,opacity: 0, duration: 0.7},"=-0.3")
+  .from(".service_inner-anime_2", { x:-50,opacity: 0, duration: 0.7 },"=-0.5")
+  .from(".service-item2_txt", { opacity: 0, duration: 0.7},"=-0.5")
+  .from(".plus-anime_2", {opacity:0, y:-100 ,duration: 0.7},"=-0.8")
+  .from(".plus-anime_2", { "--rotate":0 ,duration: 0.7},"=-1")
+  .from(".service-item3_img", { x:-50,opacity: 0, duration: 0.7 },"=-0.3")
+  .from(".service_inner-anime_3", { x:-50,opacity: 0, duration: 0.7},"=-0.5")
+  .from(".service-item3_txt", { opacity: 0, duration: 0.7},"=-0.5")
   
 
 /*----------------------------
@@ -10863,7 +10900,7 @@ servicetl
 ----------------------------*/
 
   
-  let reccomendtl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
+  let reccomendtl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
     scrollTrigger: {
       trigger: "#recommended",
       start: "-=200px",
@@ -10924,7 +10961,7 @@ servicetl
 ----------------------------*/
   
 
-let planAnitl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
+let planAnitl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
   scrollTrigger: {
     trigger: "#plan",
     start: "-100px top",
@@ -10934,7 +10971,7 @@ let planAnitl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
 
 planAnitl
   .from(".plan_line",{width:0,duration:1})  
-  .from(".plan_text_number-anime1",{scale:0,duration:0.5})
+  .from(".plan_text_number-anime1",{scale:0,duration:0.5},"0.5")
   .from(".plan-txt-title_anime1",{opacity:0,x:-10})
   .from(".plan-txt_anime1",{opacity:0})
   .from(".plan_text_number-anime2",{scale:0,duration:0.5})
@@ -10945,7 +10982,7 @@ planAnitl
 
  
 
-  let newplanAnitl = gsap__WEBPACK_IMPORTED_MODULE_26__.gsap.timeline({
+  let newplanAnitl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
     scrollTrigger: {
       trigger: newplan,
       start: "-250px top",
@@ -10955,9 +10992,16 @@ planAnitl
   });
 
  newplanAnitl
+
+
+  .fromTo(".newplan-anime_3",{ y:0,duration:1.5},{y:"100%"},)
+  .fromTo(".newplan-anime_2",{ y:0,duration:1.5},{y:"-100%"},"-=0.3")
+  .fromTo(".newplan-anime_4",{ y:0,duration:1.5},{y:"-100%"},"<")
+  .fromTo(".newplan-anime_1",{ y:0,duration:1.5},{y:"100%"},"-=0.3")
+  .fromTo(".newplan-anime_5",{ y:0,duration:1.5},{y:"100%"},"<")
   .from(".newplan-anim-txt",{ y:100,opacity: 0,duration:1.5})
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.7adfa4c1fd3fab05a208.js.map
+//# sourceMappingURL=main.1b8f6bd1d4d41c37bdb0.js.map
