@@ -871,6 +871,16 @@ planAnitl
   });
 
  newplanAnitl
+//  .fromTo(".newplan-anime_1",{ y:0,duration:1.5},{y:"100%"},)
+//  .fromTo(".newplan-anime_2",{ y:0,duration:1.5},{y:"-100%"},"<")
+//  .fromTo(".newplan-anime_3",{ y:0,duration:1.5},{y:"100%"},"<")
+//   .fromTo(".newplan-anime_4",{ y:0,duration:1.5},{y:"-100%"},"<")
+//   .fromTo(".newplan-anime_5",{ y:0,duration:1.5},{y:"100%"},"<")
+//   .from(".newplan-anim-txt",{ y:100,opacity: 0,duration:1.5})
+
+  .fromTo(".newplan-anime_3",{ y:0,duration:1.5},{y:"100%"},)
+  .fromTo(".newplan-anime_2",{ y:0,duration:1.5},{y:"-100%"},"-=0.3")
+  .fromTo(".newplan-anime_4",{ y:0,duration:1.5},{y:"-100%"},"<")
+  .fromTo(".newplan-anime_1",{ y:0,duration:1.5},{y:"100%"},"-=0.3")
+  .fromTo(".newplan-anime_5",{ y:0,duration:1.5},{y:"100%"},"<")
   .from(".newplan-anim-txt",{ y:100,opacity: 0,duration:1.5})
-
-
