@@ -376,8 +376,10 @@ const salon = document.querySelector('.location');
 
 navLinks.forEach(link => {
   link.addEventListener('click', (e) => {
-    e.preventDefault(); // Prevent the default behavior of the anchor tag
+    e.preventDefault(); 
+
     const targetSectionId = link.getAttribute('data-prime-link');
+    console.log(targetSectionId);
     scrollToSection(targetSectionId);
     animateHamburger();
     closeNav();
@@ -872,8 +874,6 @@ planAnitl
   });
 
  newplanAnitl
-
-
   .fromTo(".newplan-anime_3",{ y:0,duration:1.5},{y:"100%"},)
   .fromTo(".newplan-anime_2",{ y:0,duration:1.5},{y:"-100%"},"-=0.3")
   .fromTo(".newplan-anime_4",{ y:0,duration:1.5},{y:"-100%"},"<")
