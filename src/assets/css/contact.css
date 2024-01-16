@@ -195,7 +195,7 @@
 
 @media (max-width:768px){
     .contact-main{
-       flex-direction: column;
+        flex-direction: column;
     }
     .contact-title{
         margin-bottom: 0;
