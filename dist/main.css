@@ -1043,6 +1043,7 @@ justify-content: space-between;
   display: none;
 }
 
+
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/keyvisual.css ***!
   \********************************************************************************/
@@ -1178,17 +1179,6 @@ justify-content: space-between;
 /*!******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/service.css ***!
   \******************************************************************************/
-/* .service-container{
-  background-image: url(../images/service/newplan_bkg.jpg);
-  -webkit-background-size: cover !important;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-attachment: fixed !important;
-  background-position: center top;
-  background-repeat: no-repeat;
-  position: relative;
-} */
 .test-cont {
   position: fixed;
   top: 0;
@@ -1305,7 +1295,6 @@ justify-content: space-between;
   height: 100%;
   background: inherit;
   border-radius: inherit;
-  /* transform:rotate(var(--rotate)); */
   transform: rotate(var(--rotate));
 }
 
@@ -1314,10 +1303,16 @@ justify-content: space-between;
   height: 100vh;
   display: grid;
   place-content: center;
+  position: relative;
 }
 #newplan h2{
   font-size: 39px;
   letter-spacing: 0.2rem;
+}
+#newplan img{
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
 }
 .decor-div{
   grid-column: 2;
@@ -3180,7 +3175,7 @@ Recommended Bottom
 
 @media (max-width:768px){
     .contact-main{
-       flex-direction: column;
+        flex-direction: column;
     }
     .contact-title{
         margin-bottom: 0;
