@@ -256,11 +256,11 @@ a{
 .and_text{
   font-size: 85px;
 }
-@keyframes flowing {
+/* @keyframes flowing {
   100% {
     transform: translate(-50%);
   }
-}
+} */
 .scroller{
   max-width: 100vw;
   -webkit-mask: linear-gradient(
@@ -1393,14 +1393,16 @@ justify-content: space-between;
   .plus{
     margin-top: 30px;
   }
-  /* .service-container{
-    background-image: url(../images/service/newplan_bkg-sp.jpg);
-  } */
   #newplan {
     height: 680px;
   }
   #newplan h2{
     font-size: 29px;
+  }
+  #newplan img{
+    width: 50px;
+    bottom: 20px;
+    right: 20px;
   }
   .test-cont:after {
     content: "";
@@ -3143,9 +3145,14 @@ Recommended Bottom
 }
 
 .tel::before{
-    content: url(./images/tel-icon.png);
+    content: url(./images/contact-telicon.svg);
     margin-right: 7px;
 }
+#tempA:hover .tel::before{
+    content: url(./images/contact-telicon_white.svg);
+}
+
+
 @media (max-width:1200px){
     .cont-bottom-btn_data{
         flex-flow: column;
@@ -3723,11 +3730,27 @@ footer ul{
 }
 
 
-/* intro animations */
+/* newplan animations */
+#newplan{
+    overflow-y: clip;
+}
 
-
-.newplan-anim-txt{
-    /* opacity: 0; */
+.newplan-anime_ul{
+    width: 100vw;
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    /* background-color: red; */
+    display:flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.newplan-anime{
+    /* border: 1px solid red; */
+    width: 20vw;
+    height: 100%;
+    background-color: #C7A494;
+    transform: translateY(100%);
 }
 /*!**************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/btnhover.css ***!
@@ -3775,6 +3798,11 @@ footer ul{
 .white-to-black:hover p{
    color: #FFFFFF ;
 }
+#temp:hover > .tel::before{
+    content: url(./images/contact-telicon_white.svg);
+}
+
+
 
 /*----------------------------
   White ==> Black Outline
@@ -3827,5 +3855,8 @@ footer ul{
 .banner-btn:hover::after {
     content: url(./images/btn-chevron.svg);
 }
+
+
+
 
 /*# sourceMappingURL=main.css.map*/
