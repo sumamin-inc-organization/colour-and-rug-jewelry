@@ -436,6 +436,7 @@ if(isItSp.matches){
 const inspirationBtn = document.querySelector('[data-insp="1"]');
 const modal = document.querySelector('[data-story="1"]');
 const closeBtn =document.querySelector('.close-popup-btn');
+const closeBtnSp = document.querySelector('.close-popup-btn_sp');
 
 inspirationBtn.addEventListener('click',(e)=>{
   e.preventDefault;
@@ -449,7 +450,17 @@ closeBtn.addEventListener('click',(e)=>{
   document.body.style['overflow-y'] = 'visible';
   document.documentElement.style.overflow = 'auto';
   document.body.style['overflow-x'] = 'clip';
+
 })
+closeBtnSp.addEventListener('click',(e)=>{
+  modal.style.display = "none";
+  document.body.style['overflow-y'] = 'visible';
+  document.documentElement.style.overflow = 'auto';
+  document.body.style['overflow-x'] = 'clip';
+
+})
+
+
 
 function animateleft(){
   let popimage =  gsap.timeline();
