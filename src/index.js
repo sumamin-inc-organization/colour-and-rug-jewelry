@@ -89,10 +89,10 @@ faqs.forEach((faq) => {
 
 const scrollers = document.querySelectorAll(".scroller"); //target the scrollers
 
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  //check if user prefers reduced motion.( but inthis case it doesnt matter because its jus the logo)
-  addAnimation();
-}
+// if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+//   //check if user prefers reduced motion.( but inthis case it doesnt matter because its jus the logo)
+//   addAnimation();
+// }
 
 function addAnimation() {
   scrollers.forEach((scroller) => {
@@ -108,6 +108,7 @@ function addAnimation() {
     });
   });
 }
+addAnimation();
 /*----------------------------
     RECOMMENDED Animations
     RECOMMENDED  アニメーション
