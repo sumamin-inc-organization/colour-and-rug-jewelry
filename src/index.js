@@ -30,6 +30,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import changeLogoColor from "./assets/js/mobileLogoTrigger";
 import { changeLogoToBlack, changeLogoToWhite, changeMobileLogoToBlack, changeMobileLogoToWhite } from "./assets/js/changeLogoColor";
+import { openPopup, popupClose } from "./assets/js/popup";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -440,26 +441,14 @@ const closeBtnSp = document.querySelector('.close-popup-btn_sp');
 
 inspirationBtn.addEventListener('click',(e)=>{
   e.preventDefault;
-  modal.style.display = "block";
-  document.documentElement.style.overflow = 'hidden';
-  document.body.style.overflow = 'hidden';
-  animateleft()
-})
-closeBtn.addEventListener('click',(e)=>{
-  modal.style.display = "none";
-  document.body.style['overflow-y'] = 'visible';
-  document.documentElement.style.overflow = 'auto';
-  document.body.style['overflow-x'] = 'clip';
-
-})
-closeBtnSp.addEventListener('click',(e)=>{
-  modal.style.display = "none";
-  document.body.style['overflow-y'] = 'visible';
-  document.documentElement.style.overflow = 'auto';
-  document.body.style['overflow-x'] = 'clip';
-
+  openPopup(modal);
+  animateleft();
 })
 
+
+
+popupClose(closeBtn);
+popupClose(closeBtnSp);
 
 
 function animateleft(){
