@@ -541,7 +541,7 @@ a{
 ------------------------------------*/
 
 header {
-  width: 100%;
+  width: 100vw;
   position: fixed;
   top: 30px;
   display: flex;
@@ -1175,7 +1175,9 @@ justify-content: space-between;
   }
 }
 
-
+#keyvisual{
+  width: 100vw;
+}
 /*!******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/service.css ***!
   \******************************************************************************/
