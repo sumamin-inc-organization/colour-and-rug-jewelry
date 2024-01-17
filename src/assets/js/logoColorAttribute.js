@@ -5,7 +5,8 @@ import { changeLogoToBlack, changeLogoToWhite, changeMobileLogoToBlack, changeMo
 export function CheckCurrentColor(element){
     const logoimg = document.querySelector('.trigger-logo');
     const logoMobile = document.querySelector('.mobile-logo'); 
-
+    const hamburgerContainer = document.querySelector('.container'); 
+    
     if(element === "logo"){
         if(logoimg.dataset.color === "white" || logoMobile.dataset.color === "white" ){
             return "white"
@@ -14,7 +15,12 @@ export function CheckCurrentColor(element){
             return "black";
         }
     }else if(element === "hamburger"){
-        console.log("hamburger") //temp
+        if( hamburgerContainer.dataset.color === "white" ){
+            return "white"
+        }
+        else if(hamburgerContainer.dataset.color === "black"){
+            return "black";
+        }
     }
 
 }
