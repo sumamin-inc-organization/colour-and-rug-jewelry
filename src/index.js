@@ -407,6 +407,13 @@ let currentLogoColor =  CheckCurrentColor("logo")
 
 icon.addEventListener("click", () => {
   // changeHamburgerToWhite();
+  let currentIconColor = CheckCurrentColor("hamburger");
+  if(currentIconColor === "white"){
+    changeHamburgerToWhite();
+  }
+  else if(currentIconColor === "black"){
+    changeHamburgerToBlack();
+  }
   animateHamburger()
 });
 
