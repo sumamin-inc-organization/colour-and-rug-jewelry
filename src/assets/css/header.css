@@ -15,6 +15,7 @@ header {
   justify-content: space-between;
   align-items: flex-start;
   z-index: 8001;
+  left: calc(100vw - 100%);
 }
 .header_right {
   height: 100%;
