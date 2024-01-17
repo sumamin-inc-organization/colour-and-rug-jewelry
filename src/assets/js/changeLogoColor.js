@@ -4,7 +4,6 @@ import iconBlack from '../images/nav/icon_tel.svg';
 import mainLogoBlack from '../images/nav/logo_main-blk.svg';
 import mainLogoWhite from '../images/nav/logo_main.svg';
 const logoimg = document.querySelector('.trigger-logo');
-const logoNav = document.querySelector('.nav-logo-img');
 const logoMobile = document.querySelector('.mobile-logo');
 
 
