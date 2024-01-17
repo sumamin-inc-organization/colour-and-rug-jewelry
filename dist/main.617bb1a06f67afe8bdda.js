@@ -10458,10 +10458,17 @@ function openNav(){
   document.body.style.overflow = 'hidden';
 
   //changes logo form the main page logo to nav logo
-  logoNav.style.display = "block"
-  logoimg.style.display = "none"
-  logoMobile.style.display = "none"
-  // changeLogoToWhite()
+  // logoNav.style.display = "block"
+  // logoimg.style.display = "none"
+  // logoMobile.style.display = "none"
+  (0,_assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeLogoToWhite)()
+  ;(0,_assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeMobileLogoToWhite)()
+  logoNav.style.display = "none"
+  // if(isItSp.matches){
+  //   // logoimg.style.display = "none"
+  // }else if (isItPc.matches){
+  //   // logoMobile.style.display = "none"
+  // }
 
 }
 
@@ -10475,19 +10482,20 @@ function closeNav(){
   .fromTo(".header-tel_img", { opacity: 0 ,pointerEvents:"none"}, { opacity: 1 ,pointerEvents:"auto"},"<")
   .fromTo(".header-decor", { opacity: 0 ,pointerEvents:"none"}, { opacity: 1 ,pointerEvents:"auto"},"<")
   // .to(body,{position:"relative"})
-
+  ;(0,_assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeLogoToBlack)()
+  ;(0,_assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeMobileLogoToBlack)()
   //deals with position sticky not working after closing nav
   document.body.style['overflow-y'] = 'visible';
   document.documentElement.style.overflow = 'auto';
   document.body.style['overflow-x'] = 'clip';
 
     //changes logo form the main page logo to nav logo depening on device vw
-  logoNav.style.display = "none"
-  if(isItSp.matches){
-    logoMobile.style.display = "block"
-  }else if (isItPc.matches){
-    logoimg.style.display = "block"
-  }
+  // logoNav.style.display = "none"
+  // if(isItSp.matches){
+  //   logoMobile.style.display = "block"
+  // }else if (isItPc.matches){
+  //   logoimg.style.display = "block"
+  // }
 }
 
 
@@ -11145,4 +11153,4 @@ planAnitl
 
 /******/ })()
 ;
-//# sourceMappingURL=main.c0fb55015fbfe6bc2ce1.js.map
+//# sourceMappingURL=main.617bb1a06f67afe8bdda.js.map
