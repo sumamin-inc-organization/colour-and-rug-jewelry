@@ -9832,6 +9832,52 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/assets/js/changeHamburgerColor.js":
+/*!***********************************************!*\
+  !*** ./src/assets/js/changeHamburgerColor.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   changeHamburgerToBlack: () => (/* binding */ changeHamburgerToBlack),
+/* harmony export */   changeHamburgerToWhite: () => (/* binding */ changeHamburgerToWhite),
+/* harmony export */   changeOnlyHamburgerToBlack: () => (/* binding */ changeOnlyHamburgerToBlack),
+/* harmony export */   changeOnlyHamburgerToWhite: () => (/* binding */ changeOnlyHamburgerToWhite)
+/* harmony export */ });
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var _logoColorAttribute__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./logoColorAttribute */ "./src/assets/js/logoColorAttribute.js");
+
+
+
+
+
+document.querySelectorAll(".hamburger_line");
+
+
+function changeHamburgerToWhite(){
+    gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set('.hamburger_line',{backgroundColor:"#FFF"})
+    ;(0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_0__.changeHamburgerAttribute)("white")
+}
+
+function changeHamburgerToBlack(){
+    gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set('.hamburger_line',{backgroundColor:"#45484B"})
+    ;(0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_0__.changeHamburgerAttribute)("black")
+}
+
+
+function changeOnlyHamburgerToWhite(){
+    gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set('.hamburger_line',{backgroundColor:"#FFF"})
+    // changeHamburgerAttribute("white")
+}
+
+function changeOnlyHamburgerToBlack(){
+    gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set('.hamburger_line',{backgroundColor:"#45484B"})
+    // changeHamburgerAttribute("black")
+}
+
+/***/ }),
+
 /***/ "./src/assets/js/changeLogoColor.js":
 /*!******************************************!*\
   !*** ./src/assets/js/changeLogoColor.js ***!
@@ -9846,14 +9892,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   changeMobileLogoToBlack: () => (/* binding */ changeMobileLogoToBlack),
 /* harmony export */   changeMobileLogoToWhite: () => (/* binding */ changeMobileLogoToWhite)
 /* harmony export */ });
-/* harmony import */ var _images_nav_icon_tel_white_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../images/nav/icon_tel-white.svg */ "./src/assets/images/nav/icon_tel-white.svg");
-/* harmony import */ var _images_nav_icon_tel_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../images/nav/icon_tel.svg */ "./src/assets/images/nav/icon_tel.svg");
-/* harmony import */ var _images_nav_logo_main_blk_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/nav/logo_main-blk.svg */ "./src/assets/images/nav/logo_main-blk.svg");
-/* harmony import */ var _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../images/nav/logo_main.svg */ "./src/assets/images/nav/logo_main.svg");
-/* harmony import */ var _logoColorAttribute__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./logoColorAttribute */ "./src/assets/js/logoColorAttribute.js");
-
-
-
+/* harmony import */ var _images_nav_logo_main_blk_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../images/nav/logo_main-blk.svg */ "./src/assets/images/nav/logo_main-blk.svg");
+/* harmony import */ var _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../images/nav/logo_main.svg */ "./src/assets/images/nav/logo_main.svg");
+/* harmony import */ var _logoColorAttribute__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./logoColorAttribute */ "./src/assets/js/logoColorAttribute.js");
 
 
 
@@ -9861,39 +9902,76 @@ const logoimg = document.querySelector('.trigger-logo');
 const logoMobile = document.querySelector('.mobile-logo');
 
 
-
-//mobile
-
+// Changes the  Logo colors => Mobile
+// ロゴの色を変更します => モバイル
 
 function changeMobileLogoToWhite(){
-    logoMobile.src = _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_3__;
-    (0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_4__.changeLogoAttribute)("white")
+    logoMobile.src = _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_1__;
+    (0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_2__.changeLogoAttribute)("white")
   }
   
 function changeMobileLogoToBlack(){
-    logoMobile.src = _images_nav_logo_main_blk_svg__WEBPACK_IMPORTED_MODULE_2__;
-    (0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_4__.changeLogoAttribute)("black");
+    logoMobile.src = _images_nav_logo_main_blk_svg__WEBPACK_IMPORTED_MODULE_0__;
+    (0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_2__.changeLogoAttribute)("black");
   }
 
 
-  //pc
+  // Changes the  Logo colors => PC
+  // ロゴの色を変更します => PC
+
   function changeLogoToWhite(){
-    logoimg.src = _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_3__;
-    (0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_4__.changeLogoAttribute)("white");
+    logoimg.src = _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_1__;
+    (0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_2__.changeLogoAttribute)("white");
     
   }
   
   function changeLogoToBlack(){
-    logoimg.src = _images_nav_logo_main_blk_svg__WEBPACK_IMPORTED_MODULE_2__;
-    (0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_4__.changeLogoAttribute)("black");
+    logoimg.src = _images_nav_logo_main_blk_svg__WEBPACK_IMPORTED_MODULE_0__;
+    (0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_2__.changeLogoAttribute)("black");
   }
 
+
+//changes both mobile and pc logos without updating the attribute
+//属性を更新せずに、モバイルとPCのロゴを両方変更します
   function UpdateNavLogoWhite(){
-    logoMobile.src = _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_3__;
-    logoimg.src = _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_3__;
+    logoMobile.src = _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_1__;
+    logoimg.src = _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_1__;
   }
 
 
+
+/***/ }),
+
+/***/ "./src/assets/js/changeOnlyRightTrigger.js":
+/*!*************************************************!*\
+  !*** ./src/assets/js/changeOnlyRightTrigger.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   changeOnlyRight: () => (/* binding */ changeOnlyRight)
+/* harmony export */ });
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+/* harmony import */ var _onlyRightColorChange__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./onlyRightColorChange */ "./src/assets/js/onlyRightColorChange.js");
+
+
+
+
+gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger);
+
+
+function changeOnlyRight(classname){
+    gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+        trigger: classname,
+        start: "-50px top",
+        onEnter: _onlyRightColorChange__WEBPACK_IMPORTED_MODULE_0__.onlyRightToWhite,
+        onLeave: _onlyRightColorChange__WEBPACK_IMPORTED_MODULE_0__.onlyRightToBlack,
+        onEnterBack: _onlyRightColorChange__WEBPACK_IMPORTED_MODULE_0__.onlyRightToWhite,
+        onLeaveBack:_onlyRightColorChange__WEBPACK_IMPORTED_MODULE_0__.onlyRightToBlack
+      });
+}
 
 /***/ }),
 
@@ -9906,17 +9984,20 @@ function changeMobileLogoToBlack(){
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   CheckCurrentColor: () => (/* binding */ CheckCurrentColor),
+/* harmony export */   changeHamburgerAttribute: () => (/* binding */ changeHamburgerAttribute),
 /* harmony export */   changeLogoAttribute: () => (/* binding */ changeLogoAttribute),
 /* harmony export */   updateColor: () => (/* binding */ updateColor)
 /* harmony export */ });
 /* harmony import */ var _changeLogoColor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./changeLogoColor */ "./src/assets/js/changeLogoColor.js");
 
 
-
+//checks what the current color of the given element is
+// 指定された要素の現在の色を確認する
 function CheckCurrentColor(element){
     const logoimg = document.querySelector('.trigger-logo');
     const logoMobile = document.querySelector('.mobile-logo'); 
-
+    const hamburgerContainer = document.querySelector('.container'); 
+    
     if(element === "logo"){
         if(logoimg.dataset.color === "white" || logoMobile.dataset.color === "white" ){
             return "white"
@@ -9925,11 +10006,18 @@ function CheckCurrentColor(element){
             return "black";
         }
     }else if(element === "hamburger"){
-        console.log("hamburger") //temp
+        if( hamburgerContainer.dataset.color === "white" ){
+            return "white"
+        }
+        else if(hamburgerContainer.dataset.color === "black"){
+            return "black";
+        }
     }
 
 }
 
+//changes the data-color of the logos
+// ロゴの data-color を変更する
 function changeLogoAttribute(color){
     const logoimg = document.querySelector('.trigger-logo');
     const logoMobile = document.querySelector('.mobile-logo'); 
@@ -9942,8 +10030,28 @@ function changeLogoAttribute(color){
     }
 }
 
+function changeHamburgerAttribute(color){
+    const hamburgerContainer = document.querySelector('.container'); 
+    const line1 = document.querySelector('.one');  //top line
+    const line2 = document.querySelector('.three'); //bottom line
+    const line3 = document.querySelector(' .two .hamburger_line');  //middle line
+    const lines = document.querySelectorAll('.hamburger_line');
+    if(color === "white"){
+        hamburgerContainer.dataset.color = "white"
+        lines.forEach(line => {
+            line.dataset.color = "white";
+        })
+    } else if(color === "black"){
+        hamburgerContainer.dataset.color = "black"
+        lines.forEach(line => {
+            line.dataset.color = "black";
+        })
+    }
+}
+//updates the color depending on what its color was before opeing the nav (white or black)
+// ナビゲーションを開く前の色に基づいて色を更新します（白または黒）
+
 function updateColor(color,element){
-console.log(color)
     if(element === "logo"){
         if(color === "white"){
             (0,_changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeMobileLogoToWhite)();
@@ -9990,6 +10098,111 @@ function changeLogoColor(classname){
         onEnterBack: _changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeMobileLogoToWhite,
         onLeaveBack:_changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeMobileLogoToBlack
       });
+}
+
+/***/ }),
+
+/***/ "./src/assets/js/onlyRightColorChange.js":
+/*!***********************************************!*\
+  !*** ./src/assets/js/onlyRightColorChange.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   onlyRightToBlack: () => (/* binding */ onlyRightToBlack),
+/* harmony export */   onlyRightToWhite: () => (/* binding */ onlyRightToWhite)
+/* harmony export */ });
+/* harmony import */ var _otherColorCanges__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./otherColorCanges */ "./src/assets/js/otherColorCanges.js");
+/* harmony import */ var _changeHamburgerColor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./changeHamburgerColor */ "./src/assets/js/changeHamburgerColor.js");
+
+
+
+
+
+function onlyRightToWhite(){
+    (0,_otherColorCanges__WEBPACK_IMPORTED_MODULE_0__.changeHeaderTelWhite)();
+    (0,_otherColorCanges__WEBPACK_IMPORTED_MODULE_0__.changeTimeToWhite)();
+    (0,_otherColorCanges__WEBPACK_IMPORTED_MODULE_0__.changeTelToWhite)();
+    (0,_otherColorCanges__WEBPACK_IMPORTED_MODULE_0__.changeHeadDecorToWhite)();
+    (0,_changeHamburgerColor__WEBPACK_IMPORTED_MODULE_1__.changeHamburgerToWhite)()
+  }
+
+function onlyRightToBlack(){
+    (0,_otherColorCanges__WEBPACK_IMPORTED_MODULE_0__.changeHeaderTelBlack)()
+    ;(0,_otherColorCanges__WEBPACK_IMPORTED_MODULE_0__.changeTimeToBlack)();
+    (0,_otherColorCanges__WEBPACK_IMPORTED_MODULE_0__.changeTelToBlack)();
+    (0,_otherColorCanges__WEBPACK_IMPORTED_MODULE_0__.changeHeadDecorToBlack)();
+    (0,_changeHamburgerColor__WEBPACK_IMPORTED_MODULE_1__.changeHamburgerToBlack)()
+  }
+
+/***/ }),
+
+/***/ "./src/assets/js/otherColorCanges.js":
+/*!*******************************************!*\
+  !*** ./src/assets/js/otherColorCanges.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   changeHeadDecorToBlack: () => (/* binding */ changeHeadDecorToBlack),
+/* harmony export */   changeHeadDecorToWhite: () => (/* binding */ changeHeadDecorToWhite),
+/* harmony export */   changeHeaderTelBlack: () => (/* binding */ changeHeaderTelBlack),
+/* harmony export */   changeHeaderTelWhite: () => (/* binding */ changeHeaderTelWhite),
+/* harmony export */   changeTelToBlack: () => (/* binding */ changeTelToBlack),
+/* harmony export */   changeTelToWhite: () => (/* binding */ changeTelToWhite),
+/* harmony export */   changeTimeToBlack: () => (/* binding */ changeTimeToBlack),
+/* harmony export */   changeTimeToWhite: () => (/* binding */ changeTimeToWhite)
+/* harmony export */ });
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var _images_nav_icon_tel_white_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../images/nav/icon_tel-white.svg */ "./src/assets/images/nav/icon_tel-white.svg");
+/* harmony import */ var _images_nav_icon_tel_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../images/nav/icon_tel.svg */ "./src/assets/images/nav/icon_tel.svg");
+
+
+
+const headerTel = document.querySelector('.header-tel_img');
+// import iconWhite from '../assets/images/nav/icon_tel-white.svg';
+// import iconBlack from '../assets/images/nav/icon_tel.svg';
+
+
+
+// dark backgrounds
+
+function changeTimeToWhite(){
+    gsap__WEBPACK_IMPORTED_MODULE_2__.gsap.to('.time',{color:"white"});
+  }
+
+  function changeTelToWhite(){
+    gsap__WEBPACK_IMPORTED_MODULE_2__.gsap.to('.change',{color:"white"});
+  }
+
+  function changeHeadDecorToWhite(){
+    gsap__WEBPACK_IMPORTED_MODULE_2__.gsap.to('.header-decor',{backgroundColor:"white"});
+  }
+
+
+// light backgrounds
+
+
+function changeTimeToBlack(){
+    gsap__WEBPACK_IMPORTED_MODULE_2__.gsap.to('.time',{color:"#45484b"});
+  }
+
+function changeTelToBlack(){
+    gsap__WEBPACK_IMPORTED_MODULE_2__.gsap.to('.change',{color:"#45484b"});
+  }
+
+function changeHeadDecorToBlack(){
+    gsap__WEBPACK_IMPORTED_MODULE_2__.gsap.to('.header-decor',{backgroundColor:"#45484b"});
+  }
+
+function changeHeaderTelBlack(){
+    headerTel.src = _images_nav_icon_tel_svg__WEBPACK_IMPORTED_MODULE_1__;
+}
+
+function changeHeaderTelWhite(){
+    headerTel.src = _images_nav_icon_tel_white_svg__WEBPACK_IMPORTED_MODULE_0__;
 }
 
 /***/ }),
@@ -10191,12 +10404,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_css_common_btnhover_css__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./assets/css/common/btnhover.css */ "./src/assets/css/common/btnhover.css");
 /* harmony import */ var _assets_images_nav_icon_tel_white_svg__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./assets/images/nav/icon_tel-white.svg */ "./src/assets/images/nav/icon_tel-white.svg");
 /* harmony import */ var _assets_images_nav_icon_tel_svg__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./assets/images/nav/icon_tel.svg */ "./src/assets/images/nav/icon_tel.svg");
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
 /* harmony import */ var _assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./assets/js/mobileLogoTrigger */ "./src/assets/js/mobileLogoTrigger.js");
 /* harmony import */ var _assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./assets/js/changeLogoColor */ "./src/assets/js/changeLogoColor.js");
 /* harmony import */ var _assets_js_popup__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./assets/js/popup */ "./src/assets/js/popup.js");
 /* harmony import */ var _assets_js_logoColorAttribute__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./assets/js/logoColorAttribute */ "./src/assets/js/logoColorAttribute.js");
+/* harmony import */ var _assets_js_changeHamburgerColor__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./assets/js/changeHamburgerColor */ "./src/assets/js/changeHamburgerColor.js");
+/* harmony import */ var _assets_js_changeOnlyRightTrigger__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./assets/js/changeOnlyRightTrigger */ "./src/assets/js/changeOnlyRightTrigger.js");
+/* harmony import */ var _assets_js_otherColorCanges__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./assets/js/otherColorCanges */ "./src/assets/js/otherColorCanges.js");
 
 
 
@@ -10233,7 +10449,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_29__.ScrollTrigger);
+
+
+
+gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_32__.ScrollTrigger);
 
 /*----------------------------
     Slider
@@ -10282,38 +10501,141 @@ faqs.forEach((faq) => {
   });
 });
 
-/*----------------------------
+
+ /*----------------------------
     Company Name Animations
-    Company Name  アニメーション
+    Company Name アニメーション
 ----------------------------*/
 
-// const scrollers = document.querySelectorAll(".scroller"); //target the scrollers
 
-// if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-//   //check if user prefers reduced motion.( but inthis case it doesnt matter because its jus the logo)
-//   addAnimation();
-// }
+function horizontalLoop(items, config) {
+  items = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.utils.toArray(items);
+  config = config || {};
+  let tl = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline({
+      repeat: config.repeat,
+      paused: config.paused,
+      defaults: { ease: "none" },
+      onReverseComplete: () => tl.totalTime(tl.rawTime() + tl.duration() * 100),
+    }),
+    length = items.length,
+    startX = items[0].offsetLeft,
+    times = [],
+    widths = [],
+    xPercents = [],
+    curIndex = 0,
+    pixelsPerSecond = (config.speed || 1) * 100,
+    snap = config.snap === false ? (v) => v : gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.utils.snap(config.snap || 1), // some browsers shift by a pixel to accommodate flex layouts, so for example if width is 20% the first element's width might be 242px, and the next 243px, alternating back and forth. So we snap to 5 percentage points to make things look more natural
+    totalWidth,
+    curX,
+    distanceToStart,
+    distanceToLoop,
+    item,
+    i;
+  gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.set(items, {
+    // convert "x" to "xPercent" to make things responsive, and populate the widths/xPercents Arrays to make lookups faster.
+    xPercent: (i, el) => {
+      let w = (widths[i] = parseFloat(gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.getProperty(el, "width", "px")));
+      xPercents[i] = snap(
+        (parseFloat(gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.getProperty(el, "x", "px")) / w) * 100 +
+          gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.getProperty(el, "xPercent")
+      );
+      return xPercents[i];
+    },
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.set(items, { x: 0 });
+  totalWidth =
+    items[length - 1].offsetLeft +
+    (xPercents[length - 1] / 100) * widths[length - 1] -
+    startX +
+    items[length - 1].offsetWidth *
+      gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.getProperty(items[length - 1], "scaleX") +
+    (parseFloat(config.paddingRight) || 0);
+  for (i = 0; i < length; i++) {
+    item = items[i];
+    curX = (xPercents[i] / 100) * widths[i];
+    distanceToStart = item.offsetLeft + curX - startX;
+    distanceToLoop =
+      distanceToStart + widths[i] * gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.getProperty(item, "scaleX");
+    tl.to(
+      item,
+      {
+        xPercent: snap(((curX - distanceToLoop) / widths[i]) * 100),
+        duration: distanceToLoop / pixelsPerSecond,
+      },
+      0
+    )
+      .fromTo(
+        item,
+        {
+          xPercent: snap(
+            ((curX - distanceToLoop + totalWidth) / widths[i]) * 100
+          ),
+        },
+        {
+          xPercent: xPercents[i],
+          duration:
+            (curX - distanceToLoop + totalWidth - curX) / pixelsPerSecond,
+          immediateRender: false,
+        },
+        distanceToLoop / pixelsPerSecond
+      )
+      .add("label" + i, distanceToStart / pixelsPerSecond);
+    times[i] = distanceToStart / pixelsPerSecond;
+  }
+  function toIndex(index, vars) {
+    vars = vars || {};
+    Math.abs(index - curIndex) > length / 2 &&
+      (index += index > curIndex ? -length : length); // always go in the shortest direction
+    let newIndex = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.utils.wrap(0, length, index),
+      time = times[newIndex];
+    if (time > tl.time() !== index > curIndex) {
+      // if we're wrapping the timeline's playhead, make the proper adjustments
+      vars.modifiers = { time: gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.utils.wrap(0, tl.duration()) };
+      time += tl.duration() * (index > curIndex ? 1 : -1);
+    }
+    curIndex = newIndex;
+    vars.overwrite = true;
+    return tl.tweenTo(time, vars);
+  }
+  tl.next = (vars) => toIndex(curIndex + 1, vars);
+  tl.previous = (vars) => toIndex(curIndex - 1, vars);
+  tl.current = () => curIndex;
+  tl.toIndex = (index, vars) => toIndex(index, vars);
+  tl.times = times;
+  tl.progress(1, true).progress(0, true); // pre-render for performance
+  if (config.reversed) {
+    tl.vars.onReverseComplete();
+    tl.reverse();
+  }
+  return tl;
+}
 
-// function addAnimation() {
-//   scrollers.forEach((scroller) => {
-//     scroller.setAttribute("data-animated", "true");
 
-//     const scrollerInner = scroller.querySelector(".scroller-inner"); //the ul
-//     const scrollerContent = Array.from(scrollerInner.children); //get an array out of it all
+const listItem = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.utils.toArray(".list__item");
 
-//     scrollerContent.forEach((item) => {
-//       const duplicatedItem = item.cloneNode(true); //clone the children
-//       duplicatedItem.setAttribute("aria-hidden", true); //add aria hidden attribute for screen readers
-//       scrollerInner.appendChild(duplicatedItem); //append
-//     });
-//   });
-// }
-// addAnimation();
+
+function flowText(scrollerClass,itemClass){
+
+  gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.utils.toArray(scrollerClass).forEach((line, i) => {
+    const links = line.querySelectorAll(itemClass),
+          tl = horizontalLoop(links, {
+            repeat: -1, 
+            speed: 1 + i * 0.5,
+            reversed: i ? true : false,
+            paddingRight: parseFloat(gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.getProperty(links[0], "marginRight", "px")) // otherwise first element would be right up against the last when it loops. In this layout, the spacing is done with marginRight.
+          });
+  });
+}
+
+flowText('.scroller1',".list__item");
+flowText(".scroller2",".list__item");
+
+
 /*----------------------------
     RECOMMENDED Animations
     RECOMMENDED  アニメーション
 ----------------------------*/
-let recommendedtl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
+let recommendedtl = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline({
   scrollTrigger: {
     trigger: "#recommended",
     start: "-=500px",
@@ -10330,7 +10652,7 @@ recommendedtl
     Inspiration  アニメーション
 ----------------------------*/
 
-let inspirationtl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
+let inspirationtl = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline({
   scrollTrigger: {
     trigger: "#inspiration",
     start: "-=500px",
@@ -10347,7 +10669,7 @@ inspirationtl
     Advantage  アニメーション
 ----------------------------*/
 
-let advantagetl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
+let advantagetl = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline({
   scrollTrigger: {
     trigger: "#advantage",
     start: "-=500px",
@@ -10364,7 +10686,7 @@ advantagetl
     Consultancy  アニメーション
 ----------------------------*/
 
-let consultancytl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
+let consultancytl = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline({
   scrollTrigger: {
     trigger: "#consultancy",
     start: "-=500px",
@@ -10381,7 +10703,7 @@ consultancytl
     Item アニメーション
 ----------------------------*/
 
-let itemtl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
+let itemtl = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline({
   scrollTrigger: {
     trigger: "#item",
     start: "-=500px",
@@ -10398,7 +10720,7 @@ itemtl
     Plan Animations
     Plan アニメーション
 ----------------------------*/
-let plantl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
+let plantl = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline({
   scrollTrigger: {
     trigger: "#plan",
     start: "-=500px",
@@ -10416,7 +10738,7 @@ plantl
     Flow アニメーション
 ----------------------------*/
 
-let flowtl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
+let flowtl = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline({
   scrollTrigger: {
     trigger: "#flow",
     start: "-=500px",
@@ -10433,7 +10755,7 @@ flowtl
     Gallary アニメーション
 ----------------------------*/
 
-let gallerytl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
+let gallerytl = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline({
   scrollTrigger: {
     trigger: "#gallery",
     start: "-=500px",
@@ -10450,7 +10772,7 @@ gallerytl
     FAQ アニメーション
 ----------------------------*/
 
-let faqtl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
+let faqtl = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline({
   scrollTrigger: {
     trigger: "#faq",
     start: "-=500px",
@@ -10468,7 +10790,7 @@ faqtl
     CONTACT アニメーション
 ----------------------------*/
 
-let conttl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
+let conttl = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline({
   scrollTrigger: {
     trigger: "#contact",
     start: "-=500px",
@@ -10499,18 +10821,36 @@ const isItPc = window.matchMedia("(min-width: 769px)");
 let currentLogoColor =  (0,_assets_js_logoColorAttribute__WEBPACK_IMPORTED_MODULE_27__.CheckCurrentColor)("logo")
 
 icon.addEventListener("click", () => {
+  // let currentIconColor = CheckCurrentColor("hamburger");
+  // if(currentIconColor === "white"){
+  //   changeHamburgerToWhite();
+  // }
+  // else if(currentIconColor === "black"){
+  //   changeHamburgerToBlack();
+  // }
   animateHamburger()
 });
 
 
 function animateHamburger(){
+  let currentIconColor = (0,_assets_js_logoColorAttribute__WEBPACK_IMPORTED_MODULE_27__.CheckCurrentColor)("hamburger");
+  console.log(currentIconColor)
   icon.classList.toggle("clicked");
   if( icon.classList.contains("clicked")){
     icon.setAttribute('aria-expanded', 'true');
+   if(currentIconColor === "black"){
+    (0,_assets_js_changeHamburgerColor__WEBPACK_IMPORTED_MODULE_28__.changeOnlyHamburgerToWhite)();
+    }
     openNav();
   }
   else{
     icon.setAttribute('aria-expanded', 'false'); 
+    if(currentIconColor === "white"){
+      (0,_assets_js_changeHamburgerColor__WEBPACK_IMPORTED_MODULE_28__.changeOnlyHamburgerToWhite)();
+    }
+    else if(currentIconColor === "black"){
+      (0,_assets_js_changeHamburgerColor__WEBPACK_IMPORTED_MODULE_28__.changeOnlyHamburgerToBlack)();
+    }
     closeNav()
   }
 }
@@ -10518,7 +10858,7 @@ function animateHamburger(){
 
 
 function openNav(){
-  let openAnim = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline()
+  let openAnim = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline()
   openAnim
   // .to(body,{position:"fixed"})
   .to('.primary-nav',{opacity:1,duration:1,zIndex:7999})
@@ -10538,7 +10878,7 @@ function openNav(){
 
 
 function closeNav(){
-  let openAnim = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline()
+  let openAnim = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline()
   openAnim
   .to('.primary-nav',{opacity:0,duration:1,zIndex:"-1"})
   .fromTo(".header-info", { opacity: 0 }, { opacity: 1 },"<")
@@ -10593,7 +10933,7 @@ function scrollToSection(sectionId) {
 ----------------------------*/
 
  document.addEventListener('DOMContentLoaded',(e)=>{
-  let intro = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline()
+  let intro = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline()
 
   intro
 .to('.transition-item',{y:'0',delay:2})
@@ -10643,7 +10983,7 @@ inspirationBtn.addEventListener('click',(e)=>{
 
 
 function animateleft(){
-  let popimage =  gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline();
+  let popimage =  gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline();
   popimage
   .from(".popup",{opacity:0,duration:0.5})
   // .from(".story",{x:"100%"})
@@ -10667,57 +11007,24 @@ const advantageTrigger = document.querySelector('.advantage-trigger');
 const consultancyTrigger = document.querySelector('.consultancy-trigger');
 
 
-// dark backgrounds
-function changeTimeToWhite(){
-  gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.to('.time',{color:"white"});
-}
-function changeTelToWhite(){
-  gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.to('.change',{color:"white"});
-}
-function changeHeadDecorToWhite(){
-  gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.to('.header-decor',{backgroundColor:"white"});
-}
-
 function changeToWhite(){
   headerTel.src = _assets_images_nav_icon_tel_white_svg__WEBPACK_IMPORTED_MODULE_22__;
-  changeTimeToWhite();
-  changeTelToWhite();
-  changeHeadDecorToWhite();
+  (0,_assets_js_otherColorCanges__WEBPACK_IMPORTED_MODULE_30__.changeTimeToWhite)();
+  (0,_assets_js_otherColorCanges__WEBPACK_IMPORTED_MODULE_30__.changeTelToWhite)();
+  (0,_assets_js_otherColorCanges__WEBPACK_IMPORTED_MODULE_30__.changeHeadDecorToWhite)();
   (0,_assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeLogoToWhite)();
-}
-
-// light backgrounds
-
-function changeTimeToBlack(){
-  gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.to('.time',{color:"#45484b"});
-}
-function changeTelToBlack(){
-  gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.to('.change',{color:"#45484b"});
-}
-function changeHeadDecorToBlack(){
-  gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.to('.header-decor',{backgroundColor:"#45484b"});
+  (0,_assets_js_changeHamburgerColor__WEBPACK_IMPORTED_MODULE_28__.changeHamburgerToWhite)();
 }
 
 function changeToBlack(){
   headerTel.src = _assets_images_nav_icon_tel_svg__WEBPACK_IMPORTED_MODULE_23__;
-  changeTimeToBlack();
-  changeTelToBlack();
-  changeHeadDecorToBlack();
+  (0,_assets_js_otherColorCanges__WEBPACK_IMPORTED_MODULE_30__.changeTimeToBlack)();
+  (0,_assets_js_otherColorCanges__WEBPACK_IMPORTED_MODULE_30__.changeTelToBlack)();
+  (0,_assets_js_otherColorCanges__WEBPACK_IMPORTED_MODULE_30__.changeHeadDecorToBlack)();
   (0,_assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeLogoToBlack)();
+  (0,_assets_js_changeHamburgerColor__WEBPACK_IMPORTED_MODULE_28__.changeHamburgerToBlack)();
 }
 
-function onlyRightToWhite(){
-  headerTel.src = _assets_images_nav_icon_tel_white_svg__WEBPACK_IMPORTED_MODULE_22__;
-  changeTimeToWhite();
-  changeTelToWhite();
-  changeHeadDecorToWhite();
-}
-function onlyRightToBlack(){
-  headerTel.src = _assets_images_nav_icon_tel_svg__WEBPACK_IMPORTED_MODULE_23__;
-  changeTimeToBlack();
-  changeTelToBlack();
-  changeHeadDecorToBlack();
-}
 
 //changes both the mobile version and the desktop version of the logo to black
 function changeBothLogoVerToBlack(){
@@ -10774,7 +11081,7 @@ function onlyRightandMobileToBlack(){
 // triggers
 
 //trigger for logo when it htis the end of the kv
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_29__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_32__.ScrollTrigger.create({
   trigger: kv,
   start: "bottom top",
   // end:".service-container",
@@ -10784,9 +11091,14 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_29__.ScrollTrigger.create({
   onLeaveBack:changeBothLogoVerToWhite
 });
 
+//trigger for when the right side hits the kv bottom image
+
+if(isItPc.matches){
+  (0,_assets_js_changeOnlyRightTrigger__WEBPACK_IMPORTED_MODULE_29__.changeOnlyRight)(".kv_02");
+}
 
 // newplan trigger
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_29__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_32__.ScrollTrigger.create({
   trigger: newplan,
   start: "-50px top",
   onEnter: newplanAnim,
@@ -10796,7 +11108,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_29__.ScrollTrigger.create({
 });
 
 // banner trigger inspiration banner
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_29__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_32__.ScrollTrigger.create({
   trigger: inspBanner,
   start: "-100px top",
   onEnter: changeToWhiteSpandPc,
@@ -10806,7 +11118,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_29__.ScrollTrigger.create({
 });
 
 // banner trigger item banner
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_29__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_32__.ScrollTrigger.create({
   trigger: itemBanner,
   start: "-100px top",
   onEnter: changeToWhiteSpandPc,
@@ -10816,37 +11128,42 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_29__.ScrollTrigger.create({
 });
 
 // advantage image trigger for only  the right side 
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_29__.ScrollTrigger.create({
-  trigger: advantageTrigger,
-  start: "-50px top",
-  onEnter: onlyRightToWhite,
-  onLeave: onlyRightToBlack,
-  onEnterBack: onlyRightToWhite,
-  onLeaveBack:onlyRightToBlack
-});
+// const advantageTriggerPc = ".advantage-trigger";
+// const advantageTriggerSp = "advantage-trigger-mobile"
+
+if(isItPc.matches){
+  (0,_assets_js_changeOnlyRightTrigger__WEBPACK_IMPORTED_MODULE_29__.changeOnlyRight)(".advantage-trigger");
+}
+else{
+  (0,_assets_js_changeOnlyRightTrigger__WEBPACK_IMPORTED_MODULE_29__.changeOnlyRight)(".advantage-trigger-mobile");
+}
+
+
 
 // color consultancy image trigger for only right side of the nav
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_29__.ScrollTrigger.create({
-  trigger: consultancyTrigger,
-  start: "-50px top",
-  onEnter: onlyRightToWhite,
-  onLeave: onlyRightToBlack,
-  onEnterBack: onlyRightToWhite,
-  onLeaveBack:onlyRightToBlack
-});
+if(isItPc.matches){
+  (0,_assets_js_changeOnlyRightTrigger__WEBPACK_IMPORTED_MODULE_29__.changeOnlyRight)(".consultancy-trigger");
+}
+else{
+  (0,_assets_js_changeOnlyRightTrigger__WEBPACK_IMPORTED_MODULE_29__.changeOnlyRight)(".consultancy-trigger-mobile");
+}
+
+
 
 //  // plan trigger 
- gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_29__.ScrollTrigger.create({
+ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_32__.ScrollTrigger.create({
   trigger: ".slide_show",
   start: "-10px top",
   onEnter: _assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeLogoToWhite,
   onLeave: changeToBlack,
-  onEnterBack: changeToWhite,
+  onEnterBack: _assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeLogoToWhite,
   onLeaveBack:changeToBlack
 });
 
+(0,_assets_js_changeOnlyRightTrigger__WEBPACK_IMPORTED_MODULE_29__.changeOnlyRight)(".advantage-trigger-mobile");
+
  // flow trigger 
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_29__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_32__.ScrollTrigger.create({
   trigger: "#flow",
   start: "-50px top",
   onEnter: changeToBlack,
@@ -10860,7 +11177,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_29__.ScrollTrigger.create({
 ----------------------------*/
 
 function runKvAnimations(){
-  let kvtl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
+  let kvtl = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline({
     scrollTrigger: {
       trigger: ".kv_bottom",
       start: "-=200px",
@@ -10911,31 +11228,47 @@ Color Consultancy アニメーション - SP
 Item Section Animations - Mobile
 Item アニメーション - SP
 --------------------------------------------*/
-(0,_assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__["default"])(".item-trigger_top");
-(0,_assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__["default"])(".item-trigger_bottom");
+
+if(isItSp.matches){
+  (0,_assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__["default"])(".item-trigger_top");
+  (0,_assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__["default"])(".item-trigger_bottom");
+  (0,_assets_js_changeOnlyRightTrigger__WEBPACK_IMPORTED_MODULE_29__.changeOnlyRight)(".item-trigger_top");
+  // changeOnlyRight(".item-trigger_bottom"); //commented out beacuse the image area is light 
+}
 /*-----------------------------------------
 Plan Section Animations - Mobile
 Plan アニメーション - SP
 --------------------------------------------*/
-(0,_assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__["default"])(".plan-mobile-trigger");
+
+if(isItSp.matches){
+  (0,_assets_js_changeOnlyRightTrigger__WEBPACK_IMPORTED_MODULE_29__.changeOnlyRight)(".plan-mobile-trigger");
+  (0,_assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__["default"])(".plan-mobile-trigger");
+}
 /*-----------------------------------------
 Gallary Section Animations - Mobile
 Gallary アニメーション - SP
 --------------------------------------------*/
-(0,_assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__["default"])(".gallary-mobile-trigger");
+
+if(isItSp.matches){
+  (0,_assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__["default"])(".gallary-mobile-trigger");
+  (0,_assets_js_changeOnlyRightTrigger__WEBPACK_IMPORTED_MODULE_29__.changeOnlyRight)(".gallary-mobile-trigger");
+}
 /*-----------------------------------------
 Contact Section Animations - Mobile
 Contact アニメーション - SP
 --------------------------------------------*/
-(0,_assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__["default"])(".contact-mobile-tirgger");
 
+if(isItSp.matches){
+  (0,_assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__["default"])(".contact-mobile-tirgger");
+  (0,_assets_js_changeOnlyRightTrigger__WEBPACK_IMPORTED_MODULE_29__.changeOnlyRight)(".contact-mobile-tirgger");
+}
 
 
  /*----------------------------
     Service Animations
     Service アニメーション
 ----------------------------*/
-let servicetl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
+let servicetl = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline({
   scrollTrigger: {
     // trigger: ".service_content",
     trigger:".service-title-trigger",
@@ -10970,7 +11303,7 @@ servicetl
 ----------------------------*/
 
   
-  let reccomendtl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
+  let reccomendtl = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline({
     scrollTrigger: {
       trigger: "#recommended",
       start: "-=200px",
@@ -11031,7 +11364,7 @@ servicetl
 ----------------------------*/
   
 
-let planAnitl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
+let planAnitl = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline({
   scrollTrigger: {
     trigger: "#plan",
     start: "-100px top",
@@ -11052,7 +11385,13 @@ planAnitl
 
  
 
-  let newplanAnitl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
+
+  /*----------------------------
+    NEW PLAN Animations
+     NEW PLAN アニメーション
+----------------------------*/
+
+  let newplanAnitl = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline({
     scrollTrigger: {
       trigger: newplan,
       start: "-250px top",
@@ -11070,147 +11409,8 @@ planAnitl
   .from(".newplan-anim-txt",{ y:100,opacity: 0,duration:1.5});
 
 
-  function horizontalLoop(items, config) {
-    items = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.utils.toArray(items);
-    config = config || {};
-    let tl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
-        repeat: config.repeat,
-        paused: config.paused,
-        defaults: { ease: "none" },
-        onReverseComplete: () => tl.totalTime(tl.rawTime() + tl.duration() * 100),
-      }),
-      length = items.length,
-      startX = items[0].offsetLeft,
-      times = [],
-      widths = [],
-      xPercents = [],
-      curIndex = 0,
-      pixelsPerSecond = (config.speed || 1) * 100,
-      snap = config.snap === false ? (v) => v : gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.utils.snap(config.snap || 1), // some browsers shift by a pixel to accommodate flex layouts, so for example if width is 20% the first element's width might be 242px, and the next 243px, alternating back and forth. So we snap to 5 percentage points to make things look more natural
-      totalWidth,
-      curX,
-      distanceToStart,
-      distanceToLoop,
-      item,
-      i;
-    gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.set(items, {
-      // convert "x" to "xPercent" to make things responsive, and populate the widths/xPercents Arrays to make lookups faster.
-      xPercent: (i, el) => {
-        let w = (widths[i] = parseFloat(gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.getProperty(el, "width", "px")));
-        xPercents[i] = snap(
-          (parseFloat(gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.getProperty(el, "x", "px")) / w) * 100 +
-            gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.getProperty(el, "xPercent")
-        );
-        return xPercents[i];
-      },
-    });
-    gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.set(items, { x: 0 });
-    totalWidth =
-      items[length - 1].offsetLeft +
-      (xPercents[length - 1] / 100) * widths[length - 1] -
-      startX +
-      items[length - 1].offsetWidth *
-        gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.getProperty(items[length - 1], "scaleX") +
-      (parseFloat(config.paddingRight) || 0);
-    for (i = 0; i < length; i++) {
-      item = items[i];
-      curX = (xPercents[i] / 100) * widths[i];
-      distanceToStart = item.offsetLeft + curX - startX;
-      distanceToLoop =
-        distanceToStart + widths[i] * gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.getProperty(item, "scaleX");
-      tl.to(
-        item,
-        {
-          xPercent: snap(((curX - distanceToLoop) / widths[i]) * 100),
-          duration: distanceToLoop / pixelsPerSecond,
-        },
-        0
-      )
-        .fromTo(
-          item,
-          {
-            xPercent: snap(
-              ((curX - distanceToLoop + totalWidth) / widths[i]) * 100
-            ),
-          },
-          {
-            xPercent: xPercents[i],
-            duration:
-              (curX - distanceToLoop + totalWidth - curX) / pixelsPerSecond,
-            immediateRender: false,
-          },
-          distanceToLoop / pixelsPerSecond
-        )
-        .add("label" + i, distanceToStart / pixelsPerSecond);
-      times[i] = distanceToStart / pixelsPerSecond;
-    }
-    function toIndex(index, vars) {
-      vars = vars || {};
-      Math.abs(index - curIndex) > length / 2 &&
-        (index += index > curIndex ? -length : length); // always go in the shortest direction
-      let newIndex = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.utils.wrap(0, length, index),
-        time = times[newIndex];
-      if (time > tl.time() !== index > curIndex) {
-        // if we're wrapping the timeline's playhead, make the proper adjustments
-        vars.modifiers = { time: gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.utils.wrap(0, tl.duration()) };
-        time += tl.duration() * (index > curIndex ? 1 : -1);
-      }
-      curIndex = newIndex;
-      vars.overwrite = true;
-      return tl.tweenTo(time, vars);
-    }
-    tl.next = (vars) => toIndex(curIndex + 1, vars);
-    tl.previous = (vars) => toIndex(curIndex - 1, vars);
-    tl.current = () => curIndex;
-    tl.toIndex = (index, vars) => toIndex(index, vars);
-    tl.times = times;
-    tl.progress(1, true).progress(0, true); // pre-render for performance
-    if (config.reversed) {
-      tl.vars.onReverseComplete();
-      tl.reverse();
-    }
-    return tl;
-  }
-
-
-  const listItem = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.utils.toArray(".list__item");
-  
-
-
-  // gsap.utils.toArray('.scroller2').forEach((line, i) => {
-  //   const links = line.querySelectorAll((".list__item"),
-  //         tl = horizontalLoop(links, {
-  //           repeat: -1, 
-  //           speed: 1 + i * 0.5,
-  //           reversed: i ? true : false,
-  //           paddingRight: parseFloat(gsap.getProperty(links[0], "marginRight", "px")) // otherwise first element would be right up against the last when it loops. In this layout, the spacing is done with marginRight.
-  //         });
-  //   // links.forEach(link => {
-  //   //   link.addEventListener("mouseenter", () => gsap.to(tl, {timeScale: 0, overwrite: true}));
-  //   //   link.addEventListener("mouseleave", () => gsap.to(tl, {timeScale: i ? -1 : 1, overwrite: true}));
-  //   // });
-  // });
-
-
-  function flowText(scrollerClass,itemClass){
-
-    gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.utils.toArray(scrollerClass).forEach((line, i) => {
-      const links = line.querySelectorAll(itemClass),
-            tl = horizontalLoop(links, {
-              repeat: -1, 
-              speed: 1 + i * 0.5,
-              reversed: i ? true : false,
-              paddingRight: parseFloat(gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.getProperty(links[0], "marginRight", "px")) // otherwise first element would be right up against the last when it loops. In this layout, the spacing is done with marginRight.
-            });
-    });
-  }
-
-  flowText('.scroller1',".list__item");
-  flowText(".scroller2",".list__item");
-  
-  
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.682f4b69857a4893f226.js.map
+//# sourceMappingURL=main.fd599249ce65b4851f08.js.map
