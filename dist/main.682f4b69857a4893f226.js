@@ -9840,6 +9840,7 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   UpdateNavLogoWhite: () => (/* binding */ UpdateNavLogoWhite),
 /* harmony export */   changeLogoToBlack: () => (/* binding */ changeLogoToBlack),
 /* harmony export */   changeLogoToWhite: () => (/* binding */ changeLogoToWhite),
 /* harmony export */   changeMobileLogoToBlack: () => (/* binding */ changeMobileLogoToBlack),
@@ -9849,13 +9850,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _images_nav_icon_tel_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../images/nav/icon_tel.svg */ "./src/assets/images/nav/icon_tel.svg");
 /* harmony import */ var _images_nav_logo_main_blk_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/nav/logo_main-blk.svg */ "./src/assets/images/nav/logo_main-blk.svg");
 /* harmony import */ var _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../images/nav/logo_main.svg */ "./src/assets/images/nav/logo_main.svg");
+/* harmony import */ var _logoColorAttribute__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./logoColorAttribute */ "./src/assets/js/logoColorAttribute.js");
+
 
 
 
 
 
 const logoimg = document.querySelector('.trigger-logo');
-const logoNav = document.querySelector('.nav-logo-img');
 const logoMobile = document.querySelector('.mobile-logo');
 
 
@@ -9865,22 +9867,98 @@ const logoMobile = document.querySelector('.mobile-logo');
 
 function changeMobileLogoToWhite(){
     logoMobile.src = _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_3__;
+    (0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_4__.changeLogoAttribute)("white")
   }
   
 function changeMobileLogoToBlack(){
     logoMobile.src = _images_nav_logo_main_blk_svg__WEBPACK_IMPORTED_MODULE_2__;
+    (0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_4__.changeLogoAttribute)("black");
   }
 
 
   //pc
   function changeLogoToWhite(){
     logoimg.src = _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_3__;
+    (0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_4__.changeLogoAttribute)("white");
     
   }
   
   function changeLogoToBlack(){
     logoimg.src = _images_nav_logo_main_blk_svg__WEBPACK_IMPORTED_MODULE_2__;
+    (0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_4__.changeLogoAttribute)("black");
   }
+
+  function UpdateNavLogoWhite(){
+    logoMobile.src = _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_3__;
+    logoimg.src = _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_3__;
+  }
+
+
+
+/***/ }),
+
+/***/ "./src/assets/js/logoColorAttribute.js":
+/*!*********************************************!*\
+  !*** ./src/assets/js/logoColorAttribute.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   CheckCurrentColor: () => (/* binding */ CheckCurrentColor),
+/* harmony export */   changeLogoAttribute: () => (/* binding */ changeLogoAttribute),
+/* harmony export */   updateColor: () => (/* binding */ updateColor)
+/* harmony export */ });
+/* harmony import */ var _changeLogoColor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./changeLogoColor */ "./src/assets/js/changeLogoColor.js");
+
+
+
+function CheckCurrentColor(element){
+    const logoimg = document.querySelector('.trigger-logo');
+    const logoMobile = document.querySelector('.mobile-logo'); 
+
+    if(element === "logo"){
+        if(logoimg.dataset.color === "white" || logoMobile.dataset.color === "white" ){
+            return "white"
+        }
+        else if(logoimg.dataset.color === "black" || logoMobile.dataset.color === "black"){
+            return "black";
+        }
+    }else if(element === "hamburger"){
+        console.log("hamburger") //temp
+    }
+
+}
+
+function changeLogoAttribute(color){
+    const logoimg = document.querySelector('.trigger-logo');
+    const logoMobile = document.querySelector('.mobile-logo'); 
+    if(color === "white"){
+        logoimg.dataset.color = "white"
+        logoMobile.dataset.color = "white"
+    } else if(color === "black"){
+        logoimg.dataset.color = "black"
+        logoMobile.dataset.color = "black"
+    }
+}
+
+function updateColor(color,element){
+console.log(color)
+    if(element === "logo"){
+        if(color === "white"){
+            (0,_changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeMobileLogoToWhite)();
+            (0,_changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeLogoToWhite)();
+        }
+        else if(color === "black"){
+            (0,_changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeMobileLogoToBlack)();
+            (0,_changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeLogoToBlack)();
+        }
+    }else if(element === "hamburger"){
+        console.log("hamburger") //temp
+    }
+}
+
+
 
 /***/ }),
 
@@ -10113,11 +10191,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_css_common_btnhover_css__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./assets/css/common/btnhover.css */ "./src/assets/css/common/btnhover.css");
 /* harmony import */ var _assets_images_nav_icon_tel_white_svg__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./assets/images/nav/icon_tel-white.svg */ "./src/assets/images/nav/icon_tel-white.svg");
 /* harmony import */ var _assets_images_nav_icon_tel_svg__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./assets/images/nav/icon_tel.svg */ "./src/assets/images/nav/icon_tel.svg");
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
 /* harmony import */ var _assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./assets/js/mobileLogoTrigger */ "./src/assets/js/mobileLogoTrigger.js");
 /* harmony import */ var _assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./assets/js/changeLogoColor */ "./src/assets/js/changeLogoColor.js");
 /* harmony import */ var _assets_js_popup__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./assets/js/popup */ "./src/assets/js/popup.js");
+/* harmony import */ var _assets_js_logoColorAttribute__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./assets/js/logoColorAttribute */ "./src/assets/js/logoColorAttribute.js");
 
 
 
@@ -10153,7 +10232,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger);
+
+gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_29__.ScrollTrigger);
 
 /*----------------------------
     Slider
@@ -10233,7 +10313,7 @@ faqs.forEach((faq) => {
     RECOMMENDED Animations
     RECOMMENDED  アニメーション
 ----------------------------*/
-let recommendedtl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
+let recommendedtl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
   scrollTrigger: {
     trigger: "#recommended",
     start: "-=500px",
@@ -10250,7 +10330,7 @@ recommendedtl
     Inspiration  アニメーション
 ----------------------------*/
 
-let inspirationtl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
+let inspirationtl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
   scrollTrigger: {
     trigger: "#inspiration",
     start: "-=500px",
@@ -10267,7 +10347,7 @@ inspirationtl
     Advantage  アニメーション
 ----------------------------*/
 
-let advantagetl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
+let advantagetl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
   scrollTrigger: {
     trigger: "#advantage",
     start: "-=500px",
@@ -10284,7 +10364,7 @@ advantagetl
     Consultancy  アニメーション
 ----------------------------*/
 
-let consultancytl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
+let consultancytl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
   scrollTrigger: {
     trigger: "#consultancy",
     start: "-=500px",
@@ -10301,7 +10381,7 @@ consultancytl
     Item アニメーション
 ----------------------------*/
 
-let itemtl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
+let itemtl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
   scrollTrigger: {
     trigger: "#item",
     start: "-=500px",
@@ -10318,7 +10398,7 @@ itemtl
     Plan Animations
     Plan アニメーション
 ----------------------------*/
-let plantl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
+let plantl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
   scrollTrigger: {
     trigger: "#plan",
     start: "-=500px",
@@ -10336,7 +10416,7 @@ plantl
     Flow アニメーション
 ----------------------------*/
 
-let flowtl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
+let flowtl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
   scrollTrigger: {
     trigger: "#flow",
     start: "-=500px",
@@ -10353,7 +10433,7 @@ flowtl
     Gallary アニメーション
 ----------------------------*/
 
-let gallerytl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
+let gallerytl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
   scrollTrigger: {
     trigger: "#gallery",
     start: "-=500px",
@@ -10370,7 +10450,7 @@ gallerytl
     FAQ アニメーション
 ----------------------------*/
 
-let faqtl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
+let faqtl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
   scrollTrigger: {
     trigger: "#faq",
     start: "-=500px",
@@ -10388,7 +10468,7 @@ faqtl
     CONTACT アニメーション
 ----------------------------*/
 
-let conttl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
+let conttl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
   scrollTrigger: {
     trigger: "#contact",
     start: "-=500px",
@@ -10412,20 +10492,14 @@ let icon = document.querySelector(".menu_icon");
 let headerBtn = document.querySelector('.header-btn');
 const body = document.body;
 const logoimg = document.querySelector('.trigger-logo');
+const logomobile = document.querySelector('.mobile-logo');
 const logoNav = document.querySelector('.nav-logo-img');
-const logoMobile = document.querySelector('.mobile-logo');
 const isItSp = window.matchMedia("(max-width: 768px)");
 const isItPc = window.matchMedia("(min-width: 769px)");
-
-// if(isItSp.matches){
-//   console.log("mobile")
-// }else if (isItPc.matches){
-//   console.log("pc")
-// }
+let currentLogoColor =  (0,_assets_js_logoColorAttribute__WEBPACK_IMPORTED_MODULE_27__.CheckCurrentColor)("logo")
 
 icon.addEventListener("click", () => {
   animateHamburger()
-  console.log('clicked')
 });
 
 
@@ -10444,7 +10518,7 @@ function animateHamburger(){
 
 
 function openNav(){
-  let openAnim = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline()
+  let openAnim = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline()
   openAnim
   // .to(body,{position:"fixed"})
   .to('.primary-nav',{opacity:1,duration:1,zIndex:7999})
@@ -10456,46 +10530,32 @@ function openNav(){
   //deals with scroll being shown in the nav
   document.documentElement.style.overflow = 'hidden';
   document.body.style.overflow = 'hidden';
+  currentLogoColor =  (0,_assets_js_logoColorAttribute__WEBPACK_IMPORTED_MODULE_27__.CheckCurrentColor)("logo")
 
-  //changes logo form the main page logo to nav logo
-  // logoNav.style.display = "block"
-  // logoimg.style.display = "none"
-  // logoMobile.style.display = "none"
-  (0,_assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeLogoToWhite)()
-  ;(0,_assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeMobileLogoToWhite)()
-  logoNav.style.display = "none"
-  // if(isItSp.matches){
-  //   // logoimg.style.display = "none"
-  // }else if (isItPc.matches){
-  //   // logoMobile.style.display = "none"
-  // }
+  ;(0,_assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.UpdateNavLogoWhite)();
 
 }
 
 
 function closeNav(){
-  let openAnim = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline()
+  let openAnim = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline()
   openAnim
   .to('.primary-nav',{opacity:0,duration:1,zIndex:"-1"})
   .fromTo(".header-info", { opacity: 0 }, { opacity: 1 },"<")
   .fromTo(".header-btn", { opacity: 0,pointerEvents:"none" }, { opacity: 1 ,pointerEvents:"auto"},"<")
   .fromTo(".header-tel_img", { opacity: 0 ,pointerEvents:"none"}, { opacity: 1 ,pointerEvents:"auto"},"<")
   .fromTo(".header-decor", { opacity: 0 ,pointerEvents:"none"}, { opacity: 1 ,pointerEvents:"auto"},"<")
-  // .to(body,{position:"relative"})
-  ;(0,_assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeLogoToBlack)()
-  ;(0,_assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeMobileLogoToBlack)()
+
+  currentLogoColor =  (0,_assets_js_logoColorAttribute__WEBPACK_IMPORTED_MODULE_27__.CheckCurrentColor)("logo")
+  ;(0,_assets_js_logoColorAttribute__WEBPACK_IMPORTED_MODULE_27__.updateColor)(currentLogoColor,"logo");
+  (0,_assets_js_logoColorAttribute__WEBPACK_IMPORTED_MODULE_27__.updateColor)(currentLogoColor,"logo");
+
   //deals with position sticky not working after closing nav
   document.body.style['overflow-y'] = 'visible';
   document.documentElement.style.overflow = 'auto';
   document.body.style['overflow-x'] = 'clip';
 
     //changes logo form the main page logo to nav logo depening on device vw
-  // logoNav.style.display = "none"
-  // if(isItSp.matches){
-  //   logoMobile.style.display = "block"
-  // }else if (isItPc.matches){
-  //   logoimg.style.display = "block"
-  // }
 }
 
 
@@ -10533,7 +10593,7 @@ function scrollToSection(sectionId) {
 ----------------------------*/
 
  document.addEventListener('DOMContentLoaded',(e)=>{
-  let intro = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline()
+  let intro = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline()
 
   intro
 .to('.transition-item',{y:'0',delay:2})
@@ -10583,7 +10643,7 @@ inspirationBtn.addEventListener('click',(e)=>{
 
 
 function animateleft(){
-  let popimage =  gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline();
+  let popimage =  gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline();
   popimage
   .from(".popup",{opacity:0,duration:0.5})
   // .from(".story",{x:"100%"})
@@ -10609,13 +10669,13 @@ const consultancyTrigger = document.querySelector('.consultancy-trigger');
 
 // dark backgrounds
 function changeTimeToWhite(){
-  gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.to('.time',{color:"white"});
+  gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.to('.time',{color:"white"});
 }
 function changeTelToWhite(){
-  gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.to('.change',{color:"white"});
+  gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.to('.change',{color:"white"});
 }
 function changeHeadDecorToWhite(){
-  gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.to('.header-decor',{backgroundColor:"white"});
+  gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.to('.header-decor',{backgroundColor:"white"});
 }
 
 function changeToWhite(){
@@ -10629,13 +10689,13 @@ function changeToWhite(){
 // light backgrounds
 
 function changeTimeToBlack(){
-  gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.to('.time',{color:"#45484b"});
+  gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.to('.time',{color:"#45484b"});
 }
 function changeTelToBlack(){
-  gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.to('.change',{color:"#45484b"});
+  gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.to('.change',{color:"#45484b"});
 }
 function changeHeadDecorToBlack(){
-  gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.to('.header-decor',{backgroundColor:"#45484b"});
+  gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.to('.header-decor',{backgroundColor:"#45484b"});
 }
 
 function changeToBlack(){
@@ -10714,7 +10774,7 @@ function onlyRightandMobileToBlack(){
 // triggers
 
 //trigger for logo when it htis the end of the kv
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_29__.ScrollTrigger.create({
   trigger: kv,
   start: "bottom top",
   // end:".service-container",
@@ -10726,7 +10786,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger.create({
 
 
 // newplan trigger
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_29__.ScrollTrigger.create({
   trigger: newplan,
   start: "-50px top",
   onEnter: newplanAnim,
@@ -10736,7 +10796,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger.create({
 });
 
 // banner trigger inspiration banner
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_29__.ScrollTrigger.create({
   trigger: inspBanner,
   start: "-100px top",
   onEnter: changeToWhiteSpandPc,
@@ -10746,7 +10806,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger.create({
 });
 
 // banner trigger item banner
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_29__.ScrollTrigger.create({
   trigger: itemBanner,
   start: "-100px top",
   onEnter: changeToWhiteSpandPc,
@@ -10756,7 +10816,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger.create({
 });
 
 // advantage image trigger for only  the right side 
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_29__.ScrollTrigger.create({
   trigger: advantageTrigger,
   start: "-50px top",
   onEnter: onlyRightToWhite,
@@ -10766,7 +10826,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger.create({
 });
 
 // color consultancy image trigger for only right side of the nav
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_29__.ScrollTrigger.create({
   trigger: consultancyTrigger,
   start: "-50px top",
   onEnter: onlyRightToWhite,
@@ -10776,7 +10836,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger.create({
 });
 
 //  // plan trigger 
- gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger.create({
+ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_29__.ScrollTrigger.create({
   trigger: ".slide_show",
   start: "-10px top",
   onEnter: _assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_25__.changeLogoToWhite,
@@ -10786,7 +10846,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger.create({
 });
 
  // flow trigger 
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger.create({
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_29__.ScrollTrigger.create({
   trigger: "#flow",
   start: "-50px top",
   onEnter: changeToBlack,
@@ -10800,7 +10860,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_28__.ScrollTrigger.create({
 ----------------------------*/
 
 function runKvAnimations(){
-  let kvtl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
+  let kvtl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
     scrollTrigger: {
       trigger: ".kv_bottom",
       start: "-=200px",
@@ -10875,7 +10935,7 @@ Contact アニメーション - SP
     Service Animations
     Service アニメーション
 ----------------------------*/
-let servicetl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
+let servicetl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
   scrollTrigger: {
     // trigger: ".service_content",
     trigger:".service-title-trigger",
@@ -10910,7 +10970,7 @@ servicetl
 ----------------------------*/
 
   
-  let reccomendtl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
+  let reccomendtl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
     scrollTrigger: {
       trigger: "#recommended",
       start: "-=200px",
@@ -10971,7 +11031,7 @@ servicetl
 ----------------------------*/
   
 
-let planAnitl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
+let planAnitl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
   scrollTrigger: {
     trigger: "#plan",
     start: "-100px top",
@@ -10992,7 +11052,7 @@ planAnitl
 
  
 
-  let newplanAnitl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
+  let newplanAnitl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
     scrollTrigger: {
       trigger: newplan,
       start: "-250px top",
@@ -11011,9 +11071,9 @@ planAnitl
 
 
   function horizontalLoop(items, config) {
-    items = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.utils.toArray(items);
+    items = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.utils.toArray(items);
     config = config || {};
-    let tl = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.timeline({
+    let tl = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.timeline({
         repeat: config.repeat,
         paused: config.paused,
         defaults: { ease: "none" },
@@ -11026,38 +11086,38 @@ planAnitl
       xPercents = [],
       curIndex = 0,
       pixelsPerSecond = (config.speed || 1) * 100,
-      snap = config.snap === false ? (v) => v : gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.utils.snap(config.snap || 1), // some browsers shift by a pixel to accommodate flex layouts, so for example if width is 20% the first element's width might be 242px, and the next 243px, alternating back and forth. So we snap to 5 percentage points to make things look more natural
+      snap = config.snap === false ? (v) => v : gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.utils.snap(config.snap || 1), // some browsers shift by a pixel to accommodate flex layouts, so for example if width is 20% the first element's width might be 242px, and the next 243px, alternating back and forth. So we snap to 5 percentage points to make things look more natural
       totalWidth,
       curX,
       distanceToStart,
       distanceToLoop,
       item,
       i;
-    gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.set(items, {
+    gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.set(items, {
       // convert "x" to "xPercent" to make things responsive, and populate the widths/xPercents Arrays to make lookups faster.
       xPercent: (i, el) => {
-        let w = (widths[i] = parseFloat(gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.getProperty(el, "width", "px")));
+        let w = (widths[i] = parseFloat(gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.getProperty(el, "width", "px")));
         xPercents[i] = snap(
-          (parseFloat(gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.getProperty(el, "x", "px")) / w) * 100 +
-            gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.getProperty(el, "xPercent")
+          (parseFloat(gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.getProperty(el, "x", "px")) / w) * 100 +
+            gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.getProperty(el, "xPercent")
         );
         return xPercents[i];
       },
     });
-    gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.set(items, { x: 0 });
+    gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.set(items, { x: 0 });
     totalWidth =
       items[length - 1].offsetLeft +
       (xPercents[length - 1] / 100) * widths[length - 1] -
       startX +
       items[length - 1].offsetWidth *
-        gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.getProperty(items[length - 1], "scaleX") +
+        gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.getProperty(items[length - 1], "scaleX") +
       (parseFloat(config.paddingRight) || 0);
     for (i = 0; i < length; i++) {
       item = items[i];
       curX = (xPercents[i] / 100) * widths[i];
       distanceToStart = item.offsetLeft + curX - startX;
       distanceToLoop =
-        distanceToStart + widths[i] * gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.getProperty(item, "scaleX");
+        distanceToStart + widths[i] * gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.getProperty(item, "scaleX");
       tl.to(
         item,
         {
@@ -11088,11 +11148,11 @@ planAnitl
       vars = vars || {};
       Math.abs(index - curIndex) > length / 2 &&
         (index += index > curIndex ? -length : length); // always go in the shortest direction
-      let newIndex = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.utils.wrap(0, length, index),
+      let newIndex = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.utils.wrap(0, length, index),
         time = times[newIndex];
       if (time > tl.time() !== index > curIndex) {
         // if we're wrapping the timeline's playhead, make the proper adjustments
-        vars.modifiers = { time: gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.utils.wrap(0, tl.duration()) };
+        vars.modifiers = { time: gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.utils.wrap(0, tl.duration()) };
         time += tl.duration() * (index > curIndex ? 1 : -1);
       }
       curIndex = newIndex;
@@ -11113,7 +11173,7 @@ planAnitl
   }
 
 
-  const listItem = gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.utils.toArray(".list__item");
+  const listItem = gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.utils.toArray(".list__item");
   
 
 
@@ -11134,13 +11194,13 @@ planAnitl
 
   function flowText(scrollerClass,itemClass){
 
-    gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.utils.toArray(scrollerClass).forEach((line, i) => {
+    gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.utils.toArray(scrollerClass).forEach((line, i) => {
       const links = line.querySelectorAll(itemClass),
             tl = horizontalLoop(links, {
               repeat: -1, 
               speed: 1 + i * 0.5,
               reversed: i ? true : false,
-              paddingRight: parseFloat(gsap__WEBPACK_IMPORTED_MODULE_27__.gsap.getProperty(links[0], "marginRight", "px")) // otherwise first element would be right up against the last when it loops. In this layout, the spacing is done with marginRight.
+              paddingRight: parseFloat(gsap__WEBPACK_IMPORTED_MODULE_28__.gsap.getProperty(links[0], "marginRight", "px")) // otherwise first element would be right up against the last when it loops. In this layout, the spacing is done with marginRight.
             });
     });
   }
@@ -11153,4 +11213,4 @@ planAnitl
 
 /******/ })()
 ;
-//# sourceMappingURL=main.617bb1a06f67afe8bdda.js.map
+//# sourceMappingURL=main.682f4b69857a4893f226.js.map
