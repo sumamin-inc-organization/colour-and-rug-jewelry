@@ -694,11 +694,28 @@ ScrollTrigger.create({
 });
 
 // advantage image trigger for only  the right side 
-changeOnlyRight(".advantage-trigger");
+// const advantageTriggerPc = ".advantage-trigger";
+// const advantageTriggerSp = "advantage-trigger-mobile"
+
+if(isItPc.matches){
+  changeOnlyRight(".advantage-trigger");
+}
+else{
+  changeOnlyRight(".advantage-trigger-mobile");
+}
+
+
 
 // color consultancy image trigger for only right side of the nav
+if(isItPc.matches){
+  changeOnlyRight(".consultancy-trigger");
+}
+else{
+  changeOnlyRight(".consultancy-trigger-mobile");
+}
 
-changeOnlyRight(".consultancy-trigger");
+
+
 //  // plan trigger 
  ScrollTrigger.create({
   trigger: ".slide_show",
@@ -708,6 +725,8 @@ changeOnlyRight(".consultancy-trigger");
   onEnterBack: changeToWhite,
   onLeaveBack:changeToBlack
 });
+
+changeOnlyRight(".advantage-trigger-mobile");
 
  // flow trigger 
 ScrollTrigger.create({
@@ -775,24 +794,40 @@ changeLogoColor(".consultancy-trigger-mobile");
 Item Section Animations - Mobile
 Item アニメーション - SP
 --------------------------------------------*/
-changeLogoColor(".item-trigger_top");
-changeLogoColor(".item-trigger_bottom");
+
+if(isItSp.matches){
+  changeLogoColor(".item-trigger_top");
+  changeLogoColor(".item-trigger_bottom");
+  changeOnlyRight(".item-trigger_top");
+  // changeOnlyRight(".item-trigger_bottom"); //commented out beacuse the image area is light 
+}
 /*-----------------------------------------
 Plan Section Animations - Mobile
 Plan アニメーション - SP
 --------------------------------------------*/
-changeLogoColor(".plan-mobile-trigger");
+
+if(isItSp.matches){
+  changeOnlyRight(".plan-mobile-trigger");
+  changeLogoColor(".plan-mobile-trigger");
+}
 /*-----------------------------------------
 Gallary Section Animations - Mobile
 Gallary アニメーション - SP
 --------------------------------------------*/
-changeLogoColor(".gallary-mobile-trigger");
+
+if(isItSp.matches){
+  changeLogoColor(".gallary-mobile-trigger");
+  changeOnlyRight(".gallary-mobile-trigger");
+}
 /*-----------------------------------------
 Contact Section Animations - Mobile
 Contact アニメーション - SP
 --------------------------------------------*/
-changeLogoColor(".contact-mobile-tirgger");
 
+if(isItSp.matches){
+  changeLogoColor(".contact-mobile-tirgger");
+  changeOnlyRight(".contact-mobile-tirgger");
+}
 
 
  /*----------------------------
