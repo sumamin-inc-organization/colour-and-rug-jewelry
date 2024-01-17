@@ -974,6 +974,3 @@ planAnitl
   .fromTo(".newplan-anime_5",{ y:0,duration:1.5},{y:"100%"},"<")
   .from(".newplan-anim-txt",{ y:100,opacity: 0,duration:1.5});
 
-
-
-  
