@@ -1,13 +1,13 @@
 import { gsap } from "gsap";
 import { changeHamburgerAttribute } from "./logoColorAttribute";
 
-
-
-document.querySelectorAll(".hamburger_line");
-
+const one = document.querySelector(".one")
+const middle = document.querySelector(".middlw-line");
+const three = document.querySelector(".three");
 
 export function changeHamburgerToWhite(){
     gsap.set('.hamburger_line',{backgroundColor:"#FFF"})
+
     changeHamburgerAttribute("white")
 }
 
