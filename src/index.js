@@ -659,6 +659,9 @@ ScrollTrigger.create({
   onLeaveBack:changeBothLogoVerToWhite
 });
 
+//trigger for when the right side hits the kv bottom image
+changeOnlyRight(".kv_02");
+
 
 // newplan trigger
 ScrollTrigger.create({
