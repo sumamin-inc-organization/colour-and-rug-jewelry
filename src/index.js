@@ -31,6 +31,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import changeLogoColor from "./assets/js/mobileLogoTrigger";
 import { changeLogoToBlack, changeLogoToWhite, changeMobileLogoToBlack, changeMobileLogoToWhite } from "./assets/js/changeLogoColor";
 import { openPopup, popupClose } from "./assets/js/popup";
+import { CheckCurrentColor, updateColor } from "./assets/js/logoColorAttribute";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -292,10 +293,12 @@ let icon = document.querySelector(".menu_icon");
 let headerBtn = document.querySelector('.header-btn');
 const body = document.body;
 const logoimg = document.querySelector('.trigger-logo');
+const logomobile = document.querySelector('.mobile-logo');
 const logoNav = document.querySelector('.nav-logo-img');
-const logoMobile = document.querySelector('.mobile-logo');
 const isItSp = window.matchMedia("(max-width: 768px)");
 const isItPc = window.matchMedia("(min-width: 769px)");
+
+let currentLogoColor =  CheckCurrentColor("logo")
 
 // if(isItSp.matches){
 //   console.log("mobile")
@@ -343,7 +346,7 @@ function openNav(){
   // logoMobile.style.display = "none"
   changeLogoToWhite()
   changeMobileLogoToWhite()
-  logoNav.style.display = "none"
+  // logoNav.style.display = "none"
   // if(isItSp.matches){
   //   // logoimg.style.display = "none"
   // }else if (isItPc.matches){
@@ -361,21 +364,16 @@ function closeNav(){
   .fromTo(".header-btn", { opacity: 0,pointerEvents:"none" }, { opacity: 1 ,pointerEvents:"auto"},"<")
   .fromTo(".header-tel_img", { opacity: 0 ,pointerEvents:"none"}, { opacity: 1 ,pointerEvents:"auto"},"<")
   .fromTo(".header-decor", { opacity: 0 ,pointerEvents:"none"}, { opacity: 1 ,pointerEvents:"auto"},"<")
-  // .to(body,{position:"relative"})
-  changeLogoToBlack()
-  changeMobileLogoToBlack()
+
+  updateColor(currentLogoColor,logomobile)
+  updateColor(currentLogoColor,logomobile)
+
   //deals with position sticky not working after closing nav
   document.body.style['overflow-y'] = 'visible';
   document.documentElement.style.overflow = 'auto';
   document.body.style['overflow-x'] = 'clip';
 
     //changes logo form the main page logo to nav logo depening on device vw
-  // logoNav.style.display = "none"
-  // if(isItSp.matches){
-  //   logoMobile.style.display = "block"
-  // }else if (isItPc.matches){
-  //   logoimg.style.display = "block"
-  // }
 }
 
 
