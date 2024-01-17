@@ -29,9 +29,9 @@ import iconBlack from './assets/images/nav/icon_tel.svg';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import changeLogoColor from "./assets/js/mobileLogoTrigger";
-import { changeLogoToBlack, changeLogoToWhite, changeMobileLogoToBlack, changeMobileLogoToWhite } from "./assets/js/changeLogoColor";
+import { UpdateNavLogoWhite, changeLogoToBlack, changeLogoToWhite, changeMobileLogoToBlack, changeMobileLogoToWhite } from "./assets/js/changeLogoColor";
 import { openPopup, popupClose } from "./assets/js/popup";
-import { CheckCurrentColor, updateColor } from "./assets/js/logoColorAttribute";
+import { CheckCurrentColor, changeLogoAttribute, updateColor } from "./assets/js/logoColorAttribute";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -297,18 +297,10 @@ const logomobile = document.querySelector('.mobile-logo');
 const logoNav = document.querySelector('.nav-logo-img');
 const isItSp = window.matchMedia("(max-width: 768px)");
 const isItPc = window.matchMedia("(min-width: 769px)");
-
 let currentLogoColor =  CheckCurrentColor("logo")
-
-// if(isItSp.matches){
-//   console.log("mobile")
-// }else if (isItPc.matches){
-//   console.log("pc")
-// }
 
 icon.addEventListener("click", () => {
   animateHamburger()
-  console.log('clicked')
 });
 
 
@@ -339,19 +331,9 @@ function openNav(){
   //deals with scroll being shown in the nav
   document.documentElement.style.overflow = 'hidden';
   document.body.style.overflow = 'hidden';
+  currentLogoColor =  CheckCurrentColor("logo")
 
-  //changes logo form the main page logo to nav logo
-  // logoNav.style.display = "block"
-  // logoimg.style.display = "none"
-  // logoMobile.style.display = "none"
-  changeLogoToWhite()
-  changeMobileLogoToWhite()
-  // logoNav.style.display = "none"
-  // if(isItSp.matches){
-  //   // logoimg.style.display = "none"
-  // }else if (isItPc.matches){
-  //   // logoMobile.style.display = "none"
-  // }
+  UpdateNavLogoWhite();
 
 }
 
@@ -365,8 +347,9 @@ function closeNav(){
   .fromTo(".header-tel_img", { opacity: 0 ,pointerEvents:"none"}, { opacity: 1 ,pointerEvents:"auto"},"<")
   .fromTo(".header-decor", { opacity: 0 ,pointerEvents:"none"}, { opacity: 1 ,pointerEvents:"auto"},"<")
 
-  updateColor(currentLogoColor,logomobile)
-  updateColor(currentLogoColor,logomobile)
+  currentLogoColor =  CheckCurrentColor("logo")
+  updateColor(currentLogoColor,"logo");
+  updateColor(currentLogoColor,"logo");
 
   //deals with position sticky not working after closing nav
   document.body.style['overflow-y'] = 'visible';

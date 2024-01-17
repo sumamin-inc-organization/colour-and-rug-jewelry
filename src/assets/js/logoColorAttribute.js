@@ -31,7 +31,7 @@ export function changeLogoAttribute(color){
 }
 
 export function updateColor(color,element){
-
+console.log(color)
     if(element === "logo"){
         if(color === "white"){
             changeMobileLogoToWhite();
