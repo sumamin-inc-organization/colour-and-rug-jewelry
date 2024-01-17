@@ -9850,13 +9850,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-document.querySelectorAll(".hamburger_line");
-
+const one = document.querySelector(".one")
+const middle = document.querySelector(".middlw-line");
+const three = document.querySelector(".three");
 
 function changeHamburgerToWhite(){
     gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set('.hamburger_line',{backgroundColor:"#FFF"})
+
     ;(0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_0__.changeHamburgerAttribute)("white")
 }
 
@@ -9875,6 +9875,7 @@ function changeOnlyHamburgerToBlack(){
     gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set('.hamburger_line',{backgroundColor:"#45484B"})
     // changeHamburgerAttribute("black")
 }
+
 
 /***/ }),
 
@@ -11413,4 +11414,4 @@ planAnitl
 
 /******/ })()
 ;
-//# sourceMappingURL=main.fd599249ce65b4851f08.js.map
+//# sourceMappingURL=main.fa8d66cf071cef30c1f5.js.map
