@@ -32,6 +32,9 @@ import changeLogoColor from "./assets/js/mobileLogoTrigger";
 import { UpdateNavLogoWhite, changeLogoToBlack, changeLogoToWhite, changeMobileLogoToBlack, changeMobileLogoToWhite } from "./assets/js/changeLogoColor";
 import { openPopup, popupClose } from "./assets/js/popup";
 import { CheckCurrentColor, changeLogoAttribute, updateColor } from "./assets/js/logoColorAttribute";
+import { changeHamburgerToBlack, changeHamburgerToWhite } from "./assets/js/changeHamburgerColor";
+import { changeOnlyRight } from "./assets/js/changeOnlyRightTrigger";
+import { changeHeadDecorToBlack, changeHeadDecorToWhite, changeTelToBlack, changeTelToWhite, changeTimeToBlack, changeTimeToWhite } from "./assets/js/otherColorCanges";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -83,10 +86,7 @@ faqs.forEach((faq) => {
   });
 });
 
-/*----------------------------
-    Company Name Animations
-    Company Name  アニメーション
-----------------------------*/
+
  /*----------------------------
     Company Name Animations
     Company Name アニメーション
@@ -406,6 +406,7 @@ const isItPc = window.matchMedia("(min-width: 769px)");
 let currentLogoColor =  CheckCurrentColor("logo")
 
 icon.addEventListener("click", () => {
+  // changeHamburgerToWhite();
   animateHamburger()
 });
 
@@ -574,35 +575,13 @@ const advantageTrigger = document.querySelector('.advantage-trigger');
 const consultancyTrigger = document.querySelector('.consultancy-trigger');
 
 
-// dark backgrounds
-function changeTimeToWhite(){
-  gsap.to('.time',{color:"white"});
-}
-function changeTelToWhite(){
-  gsap.to('.change',{color:"white"});
-}
-function changeHeadDecorToWhite(){
-  gsap.to('.header-decor',{backgroundColor:"white"});
-}
-
 function changeToWhite(){
   headerTel.src = iconWhite;
   changeTimeToWhite();
   changeTelToWhite();
   changeHeadDecorToWhite();
   changeLogoToWhite();
-}
-
-// light backgrounds
-
-function changeTimeToBlack(){
-  gsap.to('.time',{color:"#45484b"});
-}
-function changeTelToBlack(){
-  gsap.to('.change',{color:"#45484b"});
-}
-function changeHeadDecorToBlack(){
-  gsap.to('.header-decor',{backgroundColor:"#45484b"});
+  changeHamburgerToWhite();
 }
 
 function changeToBlack(){
@@ -611,20 +590,9 @@ function changeToBlack(){
   changeTelToBlack();
   changeHeadDecorToBlack();
   changeLogoToBlack();
+  changeHamburgerToBlack();
 }
 
-function onlyRightToWhite(){
-  headerTel.src = iconWhite;
-  changeTimeToWhite();
-  changeTelToWhite();
-  changeHeadDecorToWhite();
-}
-function onlyRightToBlack(){
-  headerTel.src = iconBlack;
-  changeTimeToBlack();
-  changeTelToBlack();
-  changeHeadDecorToBlack();
-}
 
 //changes both the mobile version and the desktop version of the logo to black
 function changeBothLogoVerToBlack(){
@@ -723,25 +691,11 @@ ScrollTrigger.create({
 });
 
 // advantage image trigger for only  the right side 
-ScrollTrigger.create({
-  trigger: advantageTrigger,
-  start: "-50px top",
-  onEnter: onlyRightToWhite,
-  onLeave: onlyRightToBlack,
-  onEnterBack: onlyRightToWhite,
-  onLeaveBack:onlyRightToBlack
-});
+changeOnlyRight(".advantage-trigger");
 
 // color consultancy image trigger for only right side of the nav
-ScrollTrigger.create({
-  trigger: consultancyTrigger,
-  start: "-50px top",
-  onEnter: onlyRightToWhite,
-  onLeave: onlyRightToBlack,
-  onEnterBack: onlyRightToWhite,
-  onLeaveBack:onlyRightToBlack
-});
 
+changeOnlyRight(".consultancy-trigger");
 //  // plan trigger 
  ScrollTrigger.create({
   trigger: ".slide_show",
@@ -984,4 +938,4 @@ planAnitl
 
 
 
- 
+  

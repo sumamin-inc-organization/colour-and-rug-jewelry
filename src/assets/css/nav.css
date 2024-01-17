@@ -35,7 +35,7 @@
   }
   .one,
   .three {
-    background-color: #45484B;
+    /* background-color: #45484B;  here */
   }
   
   .two {
@@ -52,7 +52,7 @@
     display: block;
     height: 1px;
     width: 20px;
-    background-color: #45484B;
+    /* background-color: #45484B; here */
     transform: rotate(0);
   }
   
@@ -377,3 +377,9 @@ justify-content: space-between;
   display: none;
 }
 
+
+/* hamburger line colors */
+
+.hamburger_line{
+  background-color:#45484B;
+}
