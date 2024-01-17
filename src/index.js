@@ -32,6 +32,9 @@ import changeLogoColor from "./assets/js/mobileLogoTrigger";
 import { UpdateNavLogoWhite, changeLogoToBlack, changeLogoToWhite, changeMobileLogoToBlack, changeMobileLogoToWhite } from "./assets/js/changeLogoColor";
 import { openPopup, popupClose } from "./assets/js/popup";
 import { CheckCurrentColor, changeLogoAttribute, updateColor } from "./assets/js/logoColorAttribute";
+import { changeHamburgerToBlack, changeHamburgerToWhite, changeOnlyHamburgerToBlack, changeOnlyHamburgerToWhite } from "./assets/js/changeHamburgerColor";
+import { changeOnlyRight } from "./assets/js/changeOnlyRightTrigger";
+import { changeHeadDecorToBlack, changeHeadDecorToWhite, changeTelToBlack, changeTelToWhite, changeTimeToBlack, changeTimeToWhite } from "./assets/js/otherColorCanges";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -83,33 +86,136 @@ faqs.forEach((faq) => {
   });
 });
 
-/*----------------------------
+
+ /*----------------------------
     Company Name Animations
-    Company Name  アニメーション
+    Company Name アニメーション
 ----------------------------*/
 
-// const scrollers = document.querySelectorAll(".scroller"); //target the scrollers
 
-// if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-//   //check if user prefers reduced motion.( but inthis case it doesnt matter because its jus the logo)
-//   addAnimation();
-// }
+function horizontalLoop(items, config) {
+  items = gsap.utils.toArray(items);
+  config = config || {};
+  let tl = gsap.timeline({
+      repeat: config.repeat,
+      paused: config.paused,
+      defaults: { ease: "none" },
+      onReverseComplete: () => tl.totalTime(tl.rawTime() + tl.duration() * 100),
+    }),
+    length = items.length,
+    startX = items[0].offsetLeft,
+    times = [],
+    widths = [],
+    xPercents = [],
+    curIndex = 0,
+    pixelsPerSecond = (config.speed || 1) * 100,
+    snap = config.snap === false ? (v) => v : gsap.utils.snap(config.snap || 1), // some browsers shift by a pixel to accommodate flex layouts, so for example if width is 20% the first element's width might be 242px, and the next 243px, alternating back and forth. So we snap to 5 percentage points to make things look more natural
+    totalWidth,
+    curX,
+    distanceToStart,
+    distanceToLoop,
+    item,
+    i;
+  gsap.set(items, {
+    // convert "x" to "xPercent" to make things responsive, and populate the widths/xPercents Arrays to make lookups faster.
+    xPercent: (i, el) => {
+      let w = (widths[i] = parseFloat(gsap.getProperty(el, "width", "px")));
+      xPercents[i] = snap(
+        (parseFloat(gsap.getProperty(el, "x", "px")) / w) * 100 +
+          gsap.getProperty(el, "xPercent")
+      );
+      return xPercents[i];
+    },
+  });
+  gsap.set(items, { x: 0 });
+  totalWidth =
+    items[length - 1].offsetLeft +
+    (xPercents[length - 1] / 100) * widths[length - 1] -
+    startX +
+    items[length - 1].offsetWidth *
+      gsap.getProperty(items[length - 1], "scaleX") +
+    (parseFloat(config.paddingRight) || 0);
+  for (i = 0; i < length; i++) {
+    item = items[i];
+    curX = (xPercents[i] / 100) * widths[i];
+    distanceToStart = item.offsetLeft + curX - startX;
+    distanceToLoop =
+      distanceToStart + widths[i] * gsap.getProperty(item, "scaleX");
+    tl.to(
+      item,
+      {
+        xPercent: snap(((curX - distanceToLoop) / widths[i]) * 100),
+        duration: distanceToLoop / pixelsPerSecond,
+      },
+      0
+    )
+      .fromTo(
+        item,
+        {
+          xPercent: snap(
+            ((curX - distanceToLoop + totalWidth) / widths[i]) * 100
+          ),
+        },
+        {
+          xPercent: xPercents[i],
+          duration:
+            (curX - distanceToLoop + totalWidth - curX) / pixelsPerSecond,
+          immediateRender: false,
+        },
+        distanceToLoop / pixelsPerSecond
+      )
+      .add("label" + i, distanceToStart / pixelsPerSecond);
+    times[i] = distanceToStart / pixelsPerSecond;
+  }
+  function toIndex(index, vars) {
+    vars = vars || {};
+    Math.abs(index - curIndex) > length / 2 &&
+      (index += index > curIndex ? -length : length); // always go in the shortest direction
+    let newIndex = gsap.utils.wrap(0, length, index),
+      time = times[newIndex];
+    if (time > tl.time() !== index > curIndex) {
+      // if we're wrapping the timeline's playhead, make the proper adjustments
+      vars.modifiers = { time: gsap.utils.wrap(0, tl.duration()) };
+      time += tl.duration() * (index > curIndex ? 1 : -1);
+    }
+    curIndex = newIndex;
+    vars.overwrite = true;
+    return tl.tweenTo(time, vars);
+  }
+  tl.next = (vars) => toIndex(curIndex + 1, vars);
+  tl.previous = (vars) => toIndex(curIndex - 1, vars);
+  tl.current = () => curIndex;
+  tl.toIndex = (index, vars) => toIndex(index, vars);
+  tl.times = times;
+  tl.progress(1, true).progress(0, true); // pre-render for performance
+  if (config.reversed) {
+    tl.vars.onReverseComplete();
+    tl.reverse();
+  }
+  return tl;
+}
 
-// function addAnimation() {
-//   scrollers.forEach((scroller) => {
-//     scroller.setAttribute("data-animated", "true");
 
-//     const scrollerInner = scroller.querySelector(".scroller-inner"); //the ul
-//     const scrollerContent = Array.from(scrollerInner.children); //get an array out of it all
+const listItem = gsap.utils.toArray(".list__item");
 
-//     scrollerContent.forEach((item) => {
-//       const duplicatedItem = item.cloneNode(true); //clone the children
-//       duplicatedItem.setAttribute("aria-hidden", true); //add aria hidden attribute for screen readers
-//       scrollerInner.appendChild(duplicatedItem); //append
-//     });
-//   });
-// }
-// addAnimation();
+
+function flowText(scrollerClass,itemClass){
+
+  gsap.utils.toArray(scrollerClass).forEach((line, i) => {
+    const links = line.querySelectorAll(itemClass),
+          tl = horizontalLoop(links, {
+            repeat: -1, 
+            speed: 1 + i * 0.5,
+            reversed: i ? true : false,
+            paddingRight: parseFloat(gsap.getProperty(links[0], "marginRight", "px")) // otherwise first element would be right up against the last when it loops. In this layout, the spacing is done with marginRight.
+          });
+  });
+}
+
+flowText('.scroller1',".list__item");
+flowText(".scroller2",".list__item");
+
+
 /*----------------------------
     RECOMMENDED Animations
     RECOMMENDED  アニメーション
@@ -300,18 +406,36 @@ const isItPc = window.matchMedia("(min-width: 769px)");
 let currentLogoColor =  CheckCurrentColor("logo")
 
 icon.addEventListener("click", () => {
+  // let currentIconColor = CheckCurrentColor("hamburger");
+  // if(currentIconColor === "white"){
+  //   changeHamburgerToWhite();
+  // }
+  // else if(currentIconColor === "black"){
+  //   changeHamburgerToBlack();
+  // }
   animateHamburger()
 });
 
 
 function animateHamburger(){
+  let currentIconColor = CheckCurrentColor("hamburger");
+  console.log(currentIconColor)
   icon.classList.toggle("clicked");
   if( icon.classList.contains("clicked")){
     icon.setAttribute('aria-expanded', 'true');
+   if(currentIconColor === "black"){
+    changeOnlyHamburgerToWhite();
+    }
     openNav();
   }
   else{
     icon.setAttribute('aria-expanded', 'false'); 
+    if(currentIconColor === "white"){
+      changeOnlyHamburgerToWhite();
+    }
+    else if(currentIconColor === "black"){
+      changeOnlyHamburgerToBlack();
+    }
     closeNav()
   }
 }
@@ -468,35 +592,13 @@ const advantageTrigger = document.querySelector('.advantage-trigger');
 const consultancyTrigger = document.querySelector('.consultancy-trigger');
 
 
-// dark backgrounds
-function changeTimeToWhite(){
-  gsap.to('.time',{color:"white"});
-}
-function changeTelToWhite(){
-  gsap.to('.change',{color:"white"});
-}
-function changeHeadDecorToWhite(){
-  gsap.to('.header-decor',{backgroundColor:"white"});
-}
-
 function changeToWhite(){
   headerTel.src = iconWhite;
   changeTimeToWhite();
   changeTelToWhite();
   changeHeadDecorToWhite();
   changeLogoToWhite();
-}
-
-// light backgrounds
-
-function changeTimeToBlack(){
-  gsap.to('.time',{color:"#45484b"});
-}
-function changeTelToBlack(){
-  gsap.to('.change',{color:"#45484b"});
-}
-function changeHeadDecorToBlack(){
-  gsap.to('.header-decor',{backgroundColor:"#45484b"});
+  changeHamburgerToWhite();
 }
 
 function changeToBlack(){
@@ -505,20 +607,9 @@ function changeToBlack(){
   changeTelToBlack();
   changeHeadDecorToBlack();
   changeLogoToBlack();
+  changeHamburgerToBlack();
 }
 
-function onlyRightToWhite(){
-  headerTel.src = iconWhite;
-  changeTimeToWhite();
-  changeTelToWhite();
-  changeHeadDecorToWhite();
-}
-function onlyRightToBlack(){
-  headerTel.src = iconBlack;
-  changeTimeToBlack();
-  changeTelToBlack();
-  changeHeadDecorToBlack();
-}
 
 //changes both the mobile version and the desktop version of the logo to black
 function changeBothLogoVerToBlack(){
@@ -585,6 +676,11 @@ ScrollTrigger.create({
   onLeaveBack:changeBothLogoVerToWhite
 });
 
+//trigger for when the right side hits the kv bottom image
+
+if(isItPc.matches){
+  changeOnlyRight(".kv_02");
+}
 
 // newplan trigger
 ScrollTrigger.create({
@@ -617,24 +713,27 @@ ScrollTrigger.create({
 });
 
 // advantage image trigger for only  the right side 
-ScrollTrigger.create({
-  trigger: advantageTrigger,
-  start: "-50px top",
-  onEnter: onlyRightToWhite,
-  onLeave: onlyRightToBlack,
-  onEnterBack: onlyRightToWhite,
-  onLeaveBack:onlyRightToBlack
-});
+// const advantageTriggerPc = ".advantage-trigger";
+// const advantageTriggerSp = "advantage-trigger-mobile"
+
+if(isItPc.matches){
+  changeOnlyRight(".advantage-trigger");
+}
+else{
+  changeOnlyRight(".advantage-trigger-mobile");
+}
+
+
 
 // color consultancy image trigger for only right side of the nav
-ScrollTrigger.create({
-  trigger: consultancyTrigger,
-  start: "-50px top",
-  onEnter: onlyRightToWhite,
-  onLeave: onlyRightToBlack,
-  onEnterBack: onlyRightToWhite,
-  onLeaveBack:onlyRightToBlack
-});
+if(isItPc.matches){
+  changeOnlyRight(".consultancy-trigger");
+}
+else{
+  changeOnlyRight(".consultancy-trigger-mobile");
+}
+
+
 
 //  // plan trigger 
  ScrollTrigger.create({
@@ -645,6 +744,8 @@ ScrollTrigger.create({
   onEnterBack: changeToWhite,
   onLeaveBack:changeToBlack
 });
+
+changeOnlyRight(".advantage-trigger-mobile");
 
  // flow trigger 
 ScrollTrigger.create({
@@ -712,24 +813,40 @@ changeLogoColor(".consultancy-trigger-mobile");
 Item Section Animations - Mobile
 Item アニメーション - SP
 --------------------------------------------*/
-changeLogoColor(".item-trigger_top");
-changeLogoColor(".item-trigger_bottom");
+
+if(isItSp.matches){
+  changeLogoColor(".item-trigger_top");
+  changeLogoColor(".item-trigger_bottom");
+  changeOnlyRight(".item-trigger_top");
+  // changeOnlyRight(".item-trigger_bottom"); //commented out beacuse the image area is light 
+}
 /*-----------------------------------------
 Plan Section Animations - Mobile
 Plan アニメーション - SP
 --------------------------------------------*/
-changeLogoColor(".plan-mobile-trigger");
+
+if(isItSp.matches){
+  changeOnlyRight(".plan-mobile-trigger");
+  changeLogoColor(".plan-mobile-trigger");
+}
 /*-----------------------------------------
 Gallary Section Animations - Mobile
 Gallary アニメーション - SP
 --------------------------------------------*/
-changeLogoColor(".gallary-mobile-trigger");
+
+if(isItSp.matches){
+  changeLogoColor(".gallary-mobile-trigger");
+  changeOnlyRight(".gallary-mobile-trigger");
+}
 /*-----------------------------------------
 Contact Section Animations - Mobile
 Contact アニメーション - SP
 --------------------------------------------*/
-changeLogoColor(".contact-mobile-tirgger");
 
+if(isItSp.matches){
+  changeLogoColor(".contact-mobile-tirgger");
+  changeOnlyRight(".contact-mobile-tirgger");
+}
 
 
  /*----------------------------
@@ -853,6 +970,12 @@ planAnitl
 
  
 
+
+  /*----------------------------
+    NEW PLAN Animations
+     NEW PLAN アニメーション
+----------------------------*/
+
   let newplanAnitl = gsap.timeline({
     scrollTrigger: {
       trigger: newplan,
@@ -870,143 +993,3 @@ planAnitl
   .fromTo(".newplan-anime_5",{ y:0,duration:1.5},{y:"100%"},"<")
   .from(".newplan-anim-txt",{ y:100,opacity: 0,duration:1.5});
 
-
-  function horizontalLoop(items, config) {
-    items = gsap.utils.toArray(items);
-    config = config || {};
-    let tl = gsap.timeline({
-        repeat: config.repeat,
-        paused: config.paused,
-        defaults: { ease: "none" },
-        onReverseComplete: () => tl.totalTime(tl.rawTime() + tl.duration() * 100),
-      }),
-      length = items.length,
-      startX = items[0].offsetLeft,
-      times = [],
-      widths = [],
-      xPercents = [],
-      curIndex = 0,
-      pixelsPerSecond = (config.speed || 1) * 100,
-      snap = config.snap === false ? (v) => v : gsap.utils.snap(config.snap || 1), // some browsers shift by a pixel to accommodate flex layouts, so for example if width is 20% the first element's width might be 242px, and the next 243px, alternating back and forth. So we snap to 5 percentage points to make things look more natural
-      totalWidth,
-      curX,
-      distanceToStart,
-      distanceToLoop,
-      item,
-      i;
-    gsap.set(items, {
-      // convert "x" to "xPercent" to make things responsive, and populate the widths/xPercents Arrays to make lookups faster.
-      xPercent: (i, el) => {
-        let w = (widths[i] = parseFloat(gsap.getProperty(el, "width", "px")));
-        xPercents[i] = snap(
-          (parseFloat(gsap.getProperty(el, "x", "px")) / w) * 100 +
-            gsap.getProperty(el, "xPercent")
-        );
-        return xPercents[i];
-      },
-    });
-    gsap.set(items, { x: 0 });
-    totalWidth =
-      items[length - 1].offsetLeft +
-      (xPercents[length - 1] / 100) * widths[length - 1] -
-      startX +
-      items[length - 1].offsetWidth *
-        gsap.getProperty(items[length - 1], "scaleX") +
-      (parseFloat(config.paddingRight) || 0);
-    for (i = 0; i < length; i++) {
-      item = items[i];
-      curX = (xPercents[i] / 100) * widths[i];
-      distanceToStart = item.offsetLeft + curX - startX;
-      distanceToLoop =
-        distanceToStart + widths[i] * gsap.getProperty(item, "scaleX");
-      tl.to(
-        item,
-        {
-          xPercent: snap(((curX - distanceToLoop) / widths[i]) * 100),
-          duration: distanceToLoop / pixelsPerSecond,
-        },
-        0
-      )
-        .fromTo(
-          item,
-          {
-            xPercent: snap(
-              ((curX - distanceToLoop + totalWidth) / widths[i]) * 100
-            ),
-          },
-          {
-            xPercent: xPercents[i],
-            duration:
-              (curX - distanceToLoop + totalWidth - curX) / pixelsPerSecond,
-            immediateRender: false,
-          },
-          distanceToLoop / pixelsPerSecond
-        )
-        .add("label" + i, distanceToStart / pixelsPerSecond);
-      times[i] = distanceToStart / pixelsPerSecond;
-    }
-    function toIndex(index, vars) {
-      vars = vars || {};
-      Math.abs(index - curIndex) > length / 2 &&
-        (index += index > curIndex ? -length : length); // always go in the shortest direction
-      let newIndex = gsap.utils.wrap(0, length, index),
-        time = times[newIndex];
-      if (time > tl.time() !== index > curIndex) {
-        // if we're wrapping the timeline's playhead, make the proper adjustments
-        vars.modifiers = { time: gsap.utils.wrap(0, tl.duration()) };
-        time += tl.duration() * (index > curIndex ? 1 : -1);
-      }
-      curIndex = newIndex;
-      vars.overwrite = true;
-      return tl.tweenTo(time, vars);
-    }
-    tl.next = (vars) => toIndex(curIndex + 1, vars);
-    tl.previous = (vars) => toIndex(curIndex - 1, vars);
-    tl.current = () => curIndex;
-    tl.toIndex = (index, vars) => toIndex(index, vars);
-    tl.times = times;
-    tl.progress(1, true).progress(0, true); // pre-render for performance
-    if (config.reversed) {
-      tl.vars.onReverseComplete();
-      tl.reverse();
-    }
-    return tl;
-  }
-
-
-  const listItem = gsap.utils.toArray(".list__item");
-  
-
-
-  // gsap.utils.toArray('.scroller2').forEach((line, i) => {
-  //   const links = line.querySelectorAll((".list__item"),
-  //         tl = horizontalLoop(links, {
-  //           repeat: -1, 
-  //           speed: 1 + i * 0.5,
-  //           reversed: i ? true : false,
-  //           paddingRight: parseFloat(gsap.getProperty(links[0], "marginRight", "px")) // otherwise first element would be right up against the last when it loops. In this layout, the spacing is done with marginRight.
-  //         });
-  //   // links.forEach(link => {
-  //   //   link.addEventListener("mouseenter", () => gsap.to(tl, {timeScale: 0, overwrite: true}));
-  //   //   link.addEventListener("mouseleave", () => gsap.to(tl, {timeScale: i ? -1 : 1, overwrite: true}));
-  //   // });
-  // });
-
-
-  function flowText(scrollerClass,itemClass){
-
-    gsap.utils.toArray(scrollerClass).forEach((line, i) => {
-      const links = line.querySelectorAll(itemClass),
-            tl = horizontalLoop(links, {
-              repeat: -1, 
-              speed: 1 + i * 0.5,
-              reversed: i ? true : false,
-              paddingRight: parseFloat(gsap.getProperty(links[0], "marginRight", "px")) // otherwise first element would be right up against the last when it loops. In this layout, the spacing is done with marginRight.
-            });
-    });
-  }
-
-  flowText('.scroller1',".list__item");
-  flowText(".scroller2",".list__item");
-  
-  
