@@ -701,7 +701,7 @@ header {
   }
   .one,
   .three {
-    background-color: #45484B;
+    /* background-color: #45484B;  here */
   }
   
   .two {
@@ -718,7 +718,7 @@ header {
     display: block;
     height: 1px;
     width: 20px;
-    background-color: #45484B;
+    /* background-color: #45484B; here */
     transform: rotate(0);
   }
   
@@ -1044,6 +1044,11 @@ justify-content: space-between;
 }
 
 
+/* hamburger line colors */
+
+.hamburger_line{
+  background-color:#45484B;
+}
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/keyvisual.css ***!
   \********************************************************************************/

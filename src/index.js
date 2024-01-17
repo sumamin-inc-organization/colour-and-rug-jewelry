@@ -741,7 +741,7 @@ else{
   start: "-10px top",
   onEnter: changeLogoToWhite,
   onLeave: changeToBlack,
-  onEnterBack: changeToWhite,
+  onEnterBack: changeLogoToWhite,
   onLeaveBack:changeToBlack
 });
 
