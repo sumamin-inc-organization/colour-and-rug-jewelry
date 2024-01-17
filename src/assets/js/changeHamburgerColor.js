@@ -15,3 +15,14 @@ export function changeHamburgerToBlack(){
     gsap.set('.hamburger_line',{backgroundColor:"#45484B"})
     changeHamburgerAttribute("black")
 }
+
+
+export function changeOnlyHamburgerToWhite(){
+    gsap.set('.hamburger_line',{backgroundColor:"#FFF"})
+    // changeHamburgerAttribute("white")
+}
+
+export function changeOnlyHamburgerToBlack(){
+    gsap.set('.hamburger_line',{backgroundColor:"#45484B"})
+    // changeHamburgerAttribute("black")
+}

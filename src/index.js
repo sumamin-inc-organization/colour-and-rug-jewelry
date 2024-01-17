@@ -32,7 +32,7 @@ import changeLogoColor from "./assets/js/mobileLogoTrigger";
 import { UpdateNavLogoWhite, changeLogoToBlack, changeLogoToWhite, changeMobileLogoToBlack, changeMobileLogoToWhite } from "./assets/js/changeLogoColor";
 import { openPopup, popupClose } from "./assets/js/popup";
 import { CheckCurrentColor, changeLogoAttribute, updateColor } from "./assets/js/logoColorAttribute";
-import { changeHamburgerToBlack, changeHamburgerToWhite } from "./assets/js/changeHamburgerColor";
+import { changeHamburgerToBlack, changeHamburgerToWhite, changeOnlyHamburgerToBlack, changeOnlyHamburgerToWhite } from "./assets/js/changeHamburgerColor";
 import { changeOnlyRight } from "./assets/js/changeOnlyRightTrigger";
 import { changeHeadDecorToBlack, changeHeadDecorToWhite, changeTelToBlack, changeTelToWhite, changeTimeToBlack, changeTimeToWhite } from "./assets/js/otherColorCanges";
 
@@ -406,26 +406,36 @@ const isItPc = window.matchMedia("(min-width: 769px)");
 let currentLogoColor =  CheckCurrentColor("logo")
 
 icon.addEventListener("click", () => {
-  // changeHamburgerToWhite();
-  let currentIconColor = CheckCurrentColor("hamburger");
-  if(currentIconColor === "white"){
-    changeHamburgerToWhite();
-  }
-  else if(currentIconColor === "black"){
-    changeHamburgerToBlack();
-  }
+  // let currentIconColor = CheckCurrentColor("hamburger");
+  // if(currentIconColor === "white"){
+  //   changeHamburgerToWhite();
+  // }
+  // else if(currentIconColor === "black"){
+  //   changeHamburgerToBlack();
+  // }
   animateHamburger()
 });
 
 
 function animateHamburger(){
+  let currentIconColor = CheckCurrentColor("hamburger");
+  console.log(currentIconColor)
   icon.classList.toggle("clicked");
   if( icon.classList.contains("clicked")){
     icon.setAttribute('aria-expanded', 'true');
+   if(currentIconColor === "black"){
+    changeOnlyHamburgerToWhite();
+    }
     openNav();
   }
   else{
     icon.setAttribute('aria-expanded', 'false'); 
+    if(currentIconColor === "white"){
+      changeOnlyHamburgerToWhite();
+    }
+    else if(currentIconColor === "black"){
+      changeOnlyHamburgerToBlack();
+    }
     closeNav()
   }
 }
