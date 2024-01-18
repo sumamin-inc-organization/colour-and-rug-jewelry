@@ -77,9 +77,25 @@
 }
 
 
-/* intro animations */
+/* newplan animations */
+#newplan{
+    overflow-y: clip;
+}
 
-
-.newplan-anim-txt{
-    /* opacity: 0; */
+.newplan-anime_ul{
+    width: 100vw;
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    /* background-color: red; */
+    display:flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.newplan-anime{
+    /* border: 1px solid red; */
+    width: 20vw;
+    height: 100%;
+    background-color: #C7A494;
+    transform: translateY(100%);
 }

@@ -86,9 +86,9 @@
     <header id="header">
       <div class="logo">
         <a href="">
-          <img src="./assets/images/nav/logo_main.svg" alt="logo" class="logo-img trigger-logo">
-          <img src="./assets/images/nav/logo_main.svg" alt="logo" class="logo-img nav-logo-img">
-          <img src="./assets/images/nav/logo_main.svg" alt="logo" class="logo-img mobile-logo mobile-only">
+          <img src="./assets/images/nav/logo_main.svg" alt="logo" class="logo-img trigger-logo" data-color="white">
+          <!-- <img src="./assets/images/nav/logo_main.svg" alt="logo" class="logo-img nav-logo-img"> -->
+          <img src="./assets/images/nav/logo_main.svg" alt="logo" class="logo-img mobile-logo mobile-only" data-color="white">
         </a>
       </div>
       <div class="header_right">
@@ -99,14 +99,14 @@
         </div>
         <div class="header-decor pc-only" aria-hidden="true"></div>
         <a href="https://reserve.peraichi.com/r/f2f86520/select_date?course=6800" target="_blank" class="header-btn black-btn pc-only black-to-white" role="button"><p class="font-zenkaku fs-16 medium white pc-only">来店予約</p></a>
-        <div class="container" aria-label="nav-button">
+        <div class="container" aria-label="nav-button" data-color="black">
           <div class="menu_icon" aria-expanded="false">
-            <span class="one"></span>
-            <span class="two">
-              <span class="hidden-span"></span>
-              <span></span>
+            <span class="one hamburger_line" data-color="black"></span>
+            <span class="two" data-color="black">
+              <span class="hidden-span" data-color="black"></span>
+              <span class="hamburger_line middle-line" id="aa"></span>
             </span>
-            <span class="three"></span>
+            <span class="three hamburger_line"></span>
           </div>
         </div>
       </div>
@@ -130,6 +130,13 @@
     <div class="test-cont"></div>
     <div class="service-container">
       <div id="newplan" class="black-bg">
+        <ul class="newplan-anime_ul">
+          <li class="newplan-anime newplan-anime_1"></li>
+          <li class="newplan-anime newplan-anime_2"></li>
+          <li class="newplan-anime newplan-anime_3"></li>
+          <li class="newplan-anime newplan-anime_4"></li>
+          <li class="newplan-anime newplan-anime_5"></li>
+        </ul>
         <h2 class="font-bellefair font-weight-400 fs-39 white newplan-anim-txt">NEW PLAN</h2>
         <img src="assets/images/service/jab_logo.svg" class="JAB">
       </div>
@@ -139,7 +146,7 @@
           <p class="service_text font-zenkaku fs-16 sp_padding sp_justify">
             この度、NEWプラン「カラー&ラグジュアリー」がスタートしました。<br>
             あなたらしい「色」をコンサルティングし、空間の魅力を最大限に引き出します｡<br>
-            プロのカラースタイリストがお客さまの趣味や趣向、ご家族構成、部屋の向きや過ごす時間など､<br class="pc-only">ライフスタイルのあらゆる内容をヒアリング。<br>
+            プロのカラースタイリストがお客さまの趣味や趣向、家族構成、部屋の向きや過ごす時間など､<br class="pc-only">ライフスタイルのあらゆる内容をヒアリング。<br>
             約2000パターンある組み合わせから、お客さまに合った理想のカラースキームを導き出し､<br class="pc-only">「理想のライフスタイル」を実現します。
           </p>
           <div class="service_content">
@@ -199,9 +206,9 @@
           <ul class="font-zenold medium fs-20 rc_fs" role="list">
             <li class="rec-li_anime1">家を建てたが、どこか物足りない</li>
             <li class="rec-li_anime2">部屋のイメージを低予算で<br class="mobile-only">ガラリと変えたい</li>
-            <li class="rec-li_anime3">今のおうちを自分らしい家にしたい</li>
+            <li class="rec-li_anime3">自分らしい家にしたい</li>
             <li class="rec-li_anime4">あこがれの暮らしを実現したい</li>
-            <li class="rec-li_anime5">おうちをクラスアップしたい</li>
+            <li class="rec-li_anime5">住まいをクラスアップしたい</li>
             <li class="rec-li_anime6">インテリアに高級感をプラスしたい</li>
           </ul>
         </div>
@@ -237,7 +244,7 @@
               </div>
             </div>
             <div class="inspiration-bottom">
-              <p class="font-zenold fs-20 sp_padding letter-spacing-01">植物のグリーンを壁一面塗装することで、<br class="mobile-only">緑に包まれた癒しの空間に。</p>
+              <p class="font-zenold fs-20 sp_padding letter-spacing-01">グリーンを壁一面塗装することで、<br class="mobile-only">植物に包まれたような癒しの空間に。</p>
               <button class="inspiration-button black-btn black-to-white" data-insp="1"><p class="font-zenkaku fs-16 medium white">ストーリーを読む</p></button>
             </div>
           </div>
@@ -369,7 +376,7 @@
               <div class="interior_box">
                 <p class="interior_text font-zenkaku sp_justify">
                   温もりとリラックスを感じさせるリビングルーム。<br class="pc-only">
-                  大人の愛らしさや優しさを感じるくすんだピンクに包まれた空間は、<br class="pc-only">
+                  大人の愛らしさや優しさを感じるくすんだピンクに包まれた空間は、
                   温かさと癒しをもたらしてくれます。
                 </p>
               </div>
@@ -398,16 +405,15 @@
             <div class="sp_padding">
               <p class="interior_story font-bellefair">INTERIOR STORY</p>
               <p class="interior_text font-zenkaku sp_justify">
-                スタイリッシュで上質なモダンさを感じさせるリビングルーム。
-                決して強すぎない柔らかさのあるFarrow & Ballの深い色と
-                滑らかな足触りのラグのグレーのグラデーションがワンランク上の日常を演出します。
+                スタイリッシュで上質なモダンさを感じさせるリビングルーム。<br class="pc-only">
+                決して強すぎない柔らかなFarrow & Ballの深い色と滑らかな足触りのラグのグレーのグラデーションが、ワンランク上の日常を演出します。
               </p>
             </div>
           </div>
         </div>
       </div>
       <div class="company_name scroller">
-        <ul class="list taglist scroller-inner" id="containerElem list">
+        <ul class="list taglist scroller-inner scroller1" id="containerElem list">
           <li class="font-bellefair list__item">COLOR<span class="and_text">&</span>RUG-Jewelry</li>
           <li class="font-bellefair list__item" aria-hidden="true">COLOR<span class="and_text">&</span>RUG-Jewelry</li>
           <li class="font-bellefair list__item" aria-hidden="true">COLOR<span class="and_text">&</span>RUG-Jewelry</li>
@@ -580,7 +586,7 @@
         </div>
       </div>
       <div class="company_name scroller">
-        <ul class="list taglist scroller-inner" id="containerElem">
+        <ul class="list taglist scroller-inner scroller2" id="containerElem">
           <li class="font-bellefair list__item">COLOR<span class="and_text">&</span>RUG-Jewelry</li>
           <li class="font-bellefair list__item" aria-hidden="true">COLOR<span class="and_text">&</span>RUG-Jewelry</li>
           <li class="font-bellefair list__item" aria-hidden="true">COLOR<span class="and_text">&</span>RUG-Jewelry</li>
@@ -675,7 +681,8 @@
           </div>
           <div class="answer sp_padding">
             <p class="fs-16 font-zenkaku sp_justify">
-              イギリスでは、赤ちゃんのおもちゃにも使用されているFarrow&Ballの塗料を使用するので、臭いもなく安全です。
+              <!-- イギリスでは、赤ちゃんのおもちゃにも使用されているFarrow&Ballの塗料を使用するので、臭いもなく安全です。 -->
+              塗装に使用するペイント「Farrow&Ball」は、EUでは、玩具安全基準（BS EN 71-3:1995-玩具の安全性）を満たすために自主的に試験をし、承認されています。
             </p>
           </div>
         </div>
@@ -703,7 +710,7 @@
           </div>
           <div class="answer sp_padding">
             <p class="fs-16 font-zenkaku sp_justify">
-              簡単な水拭きで汚れを落とすこともできますが、それでも取れない頑固な汚れは上から同じ色を塗りなおすことが一番美しくなります。
+              簡単な水拭きで汚れを落とすこともできますが、それでも取れない場合は、全面を塗装し直すことが一番美しくなります。
             </p>
           </div>
         </div>
@@ -772,7 +779,7 @@
           </div>
           <div class="contact-bottom_btn-container">
             <a href="https://reserve.peraichi.com/r/f2f86520/select_date?course=6800" target="_blank" class="contact-btn_top white-btn cont-top_black white-to-black arrow-hover-white" role="button"><p class="font-zenkaku fs-16 medium white letter-spacing-02 contact-bottom-black">来店予約</p></a>
-            <a href="#form" class="white-btn contact-btn_top cont-top_white white-to-black arrow-hover-white" role="button"><p class="font-zenkaku fs-16 medium letter-spacing-02 contact-bottom-white gray">お問い合わせ</p></a>
+            <a href="#form" class="white-btn contact-btn_top cont-top_white white-to-black arrow-hover-white" role="button"><p class="font-zenkaku fs-16 medium letter-spacing-01 contact-bottom-white gray">お問い合わせ</p></a>
             <a href="tel:0362645531" class="bottom-btn white-to-black temp" id="tempA">
               <p class="cont-bottom-btn_description black fs-14 medium font-zenkaku"> ご予約・サロンに関するお問合せ</p>
               <p class="cont-bottom-btn_data black"><span class="fs-25 medium font-roboto tel">03-6264-5531</span><span class="font-zenkaku fs-14">（受付時間 10:00~18:00）</span></p>
@@ -854,10 +861,10 @@
       <img src="./assets/images/inspiration/inspiration-story_1.jpg" alt="" class="popup-img is-pc-only">
       <img src="./assets/images/inspiration/inspiration-story_1_sp.jpg" alt="" class="popup-img mobile-tablet">
       <div class="story">
-        <h3 class="font-zenold fs-20 popup-heading animate-text">植物のグリーンを<br class="mobile-only">壁一面塗装することで、<br>緑に包まれた癒しの空間に。</h3>
+        <h3 class="font-zenold fs-20 popup-heading animate-text">グリーンを<br class="mobile-only">壁一面塗装することで、<br>植物に包まれたような癒しの空間に。</h3>
         <div class="popup-decor"></div>
         <p class="popup-description font-zenkaku fs-16 animate-text">
-          「植物の「緑」が視覚的に広がるように壁を緑色に。<br>「心身のバランスをとる」「ストレスを軽減してくれる」といった効果のある緑色がぱっと目に入ることで、一日が終わり、家に帰ってきたとき、疲れた心と身体のバランスを整えてくれる手助けをしてくれます。
+          植物をイメージさせる「グリーン」が視覚的に広がるように壁を緑色に<br>「心身のバランスをとる」「ストレスを軽減してくれる」といった効果のある緑色がぱっと目に入ることで、一日が終わり、家に帰ってきたとき、疲れた心と身体のバランスを整えてくれる手助けをしてくれます。
         </p>
       </div>
     </div>
