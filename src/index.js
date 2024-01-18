@@ -489,7 +489,7 @@ const salon = document.querySelector('.location');
 
 navLinks.forEach(link => {
   link.addEventListener('click', (e) => {
-    e.preventDefault(); 
+    // e.preventDefault(); 
 
     const targetSectionId = link.getAttribute('data-prime-link');
     console.log(targetSectionId);
