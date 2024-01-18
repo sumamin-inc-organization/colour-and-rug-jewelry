@@ -713,8 +713,6 @@ ScrollTrigger.create({
 });
 
 // advantage image trigger for only  the right side 
-// const advantageTriggerPc = ".advantage-trigger";
-// const advantageTriggerSp = "advantage-trigger-mobile"
 
 if(isItPc.matches){
   changeOnlyRight(".advantage-trigger");
@@ -792,11 +790,7 @@ if(isItPc.matches){
     Recommended アニメーション - SP
 --------------------------------------------*/
 changeLogoColor(".sp-rc_img");
-/*-----------------------------------------
-Inspiration Section Animations - Mobile
-Inspiration アニメーション - SP
---------------------------------------------*/
-// changeLogoColor(".insp-slider");
+
 /*-----------------------------------------
 Advantage Section Animations - Mobile
 Advantage アニメーション - SP
@@ -848,7 +842,6 @@ if(isItSp.matches){
   changeOnlyRight(".contact-mobile-tirgger");
 }
 
-
  /*----------------------------
     Service Animations
     Service アニメーション
@@ -886,7 +879,6 @@ servicetl
     Reccomended Animations
     Reccomended アニメーション
 ----------------------------*/
-
   
   let reccomendtl = gsap.timeline({
     scrollTrigger: {
