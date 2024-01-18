@@ -285,7 +285,7 @@
     width: 100vw;
     height: 100vh;
     height: 100dvh;
-    overflow-y: scroll;
+    overflow-y: visible;
     padding: 100px 40px 170px 40px;
   }
   .primary-nav_list{
@@ -387,4 +387,20 @@ justify-content: space-between;
 
 .hamburger_line{
   background-color:#45484B;
+}
+
+
+
+/* FIX TO NAVLINKS NOT WORKING ON ANDROID CHROME */
+
+@media (max-height: 720px) {
+  .primary-nav_list {
+    overflow-y: scroll !important;
+  }
+}
+
+@media (max-device-height: 720px) {
+  .primary-nav_list {
+    overflow-y: scroll !important;
+  }
 }
