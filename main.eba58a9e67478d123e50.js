@@ -10905,7 +10905,7 @@ const salon = document.querySelector('.location');
 
 navLinks.forEach(link => {
   link.addEventListener('click', (e) => {
-    e.preventDefault(); 
+    // e.preventDefault(); 
 
     const targetSectionId = link.getAttribute('data-prime-link');
     console.log(targetSectionId);
@@ -11414,4 +11414,4 @@ planAnitl
 
 /******/ })()
 ;
-//# sourceMappingURL=main.fa8d66cf071cef30c1f5.js.map
+//# sourceMappingURL=main.eba58a9e67478d123e50.js.map
