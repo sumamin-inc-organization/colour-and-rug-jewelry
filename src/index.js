@@ -846,14 +846,7 @@ if(isItSp.matches){
     Service Animations
     Service アニメーション
 ----------------------------*/
-let servicetl = gsap.timeline({
-  scrollTrigger: {
-    // trigger: ".service_content",
-    trigger:".service-title-trigger",
-    start: "top top",
-    scrub: false,
-  },
-});
+
 //sp
 // servicetl
 //   .from(".service-item-topimg", { scale:0, opacity: 0, duration: 0.7 })
@@ -873,8 +866,22 @@ let servicetl = gsap.timeline({
 //   .from(".service-item3_img", { x:-50,opacity: 0, duration: 0.7 },"=-0.3")
 //   .from(".service_inner-anime_3", { x:-50,opacity: 0, duration: 0.7},"=-0.5")
 //   .from(".service-item3_txt", { opacity: 0, duration: 0.7},"=-0.5")
-  
-servicetl
+
+
+
+
+
+function serviceTlSp(){
+  let servicetl = gsap.timeline({
+    scrollTrigger: {
+      // trigger: ".service_content",
+      trigger:".service-title-trigger",
+      start: "top top",
+      scrub: false,
+    },
+  });
+
+  servicetl
   .from(".service-item-topimg", { scale:0, opacity: 0, duration: 0.7 })
   .from(".service_think", { x:-100, opacity: 0, duration: 0.7 },"=-0.5")
   .from(".think-text-anim", { opacity: 0, duration: 0.7 },"=-0.3")
@@ -892,7 +899,51 @@ servicetl
   .from(".service-item3_img", { x:-50,opacity: 0, duration: 0.7 },"=-0.3")
   .from(".service_inner-anime_3", { x:-50,opacity: 0, duration: 0.7},"=-0.5")
   .from(".service-item3_txt", { opacity: 0, duration: 0.7},"=-0.5")
+ 
+}
+
+
+
+//pc
+
+  function serviceTlPc(){
+    let servicetl = gsap.timeline({
+      scrollTrigger: {
+        // trigger: ".service_content",
+        trigger:".service-title-trigger",
+        start: "top top",
+        scrub: false,
+      },
+    });
+
+    servicetl
+    .from(".service-item-topimg", { scale:0, opacity: 0, duration: 0.7 })
+    .from(".service_think", { x:-100, opacity: 0, duration: 0.7 },"=-0.5")
+    .from(".think-text-anim", { opacity: 0, duration: 0.7 },"=-0.3")
+    .from(".service-arrow-anime", { y:-50,opacity: 0, duration: 0.7 },">-0.3")
+    .from(".service-item1_img", { x:-50,opacity: 0, duration: 0.5})
+    .from(".service_inner-anime_1", { x:-50,opacity: 0, duration: 0.4 },">-0.15")
+    .from(".service-item1_txt", { opacity: 0, duration: 0.5})
+    .from(".plus-anime_1", {opacity:0, y:-100 ,duration: 0.4})
+    // .from(".plus-anime_1", { "--rotate":0 ,duration: 0.4})
+    .from(".service-item2_img", { x:-50,opacity: 0, duration: 0.5})
+    .from(".service_inner-anime_2", { x:-50,opacity: 0, duration: 0.4 },">-0.15")
+    .from(".service-item2_txt", { opacity: 0, duration: 0.5})
+    .from(".plus-anime_2", {opacity:0, y:-100 ,duration: 0.4})
+    // .from(".plus-anime_2", { "--rotate":0 ,duration: 0.4})
+    .from(".service-item3_img", { x:-50,opacity: 0, duration: 0.5 })
+    .from(".service_inner-anime_3", { x:-50,opacity: 0, duration: 0.4},">-0.15")
+    .from(".service-item3_txt", { opacity: 0, duration: 0.5})
+    
   
+  }
+
+  if(isItSp.matches){
+    serviceTlSp();
+  }
+  else{
+    serviceTlPc();
+  }
 /*----------------------------
     Reccomended Animations
     Reccomended アニメーション
@@ -975,7 +1026,6 @@ let planAnitl = gsap.timeline({
     trigger: planTrigger,
     start: "-100px top",
     scrub: false,
-    markers:true
   },
 });
 
