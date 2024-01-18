@@ -368,7 +368,7 @@ let faqtl = gsap.timeline({
 faqtl
   .from(".faq-eng", { x: 50, opacity: 0, duration: 1 })
   .from(".faq-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8")
-  .to(".faq", { "--beforeAnimation": "100%", duration: 2.5 });
+  .to(".faq", { "--beforeAnimation": "100%", duration: 1.5 });
 
 /*----------------------------
     CONTACT Animations
@@ -854,7 +854,26 @@ let servicetl = gsap.timeline({
     scrub: false,
   },
 });
-
+//sp
+// servicetl
+//   .from(".service-item-topimg", { scale:0, opacity: 0, duration: 0.7 })
+//   .from(".service_think", { x:-100, opacity: 0, duration: 0.7 },"=-0.5")
+//   .from(".think-text-anim", { opacity: 0, duration: 0.7 },"=-0.3")
+//   .from(".service-arrow-anime", { y:-50,opacity: 0, duration: 0.7 },"=-0.3")
+//   .from(".service-item1_img", { x:-50,opacity: 0, duration: 0.7},"=-0.3")
+//   .from(".service_inner-anime_1", { x:-50,opacity: 0, duration: 0.7 },"=-0.5")
+//   .from(".service-item1_txt", { opacity: 0, duration: 0.7 },"=-0.5")
+//   .from(".plus-anime_1", {opacity:0, y:-100 ,duration: 0.7},"=-0.8")
+//   .from(".plus-anime_1", { "--rotate":0 ,duration: 0.5},"=-1")
+//   .from(".service-item2_img", { x:-50,opacity: 0, duration: 0.7},"=-0.3")
+//   .from(".service_inner-anime_2", { x:-50,opacity: 0, duration: 0.7 },"=-0.5")
+//   .from(".service-item2_txt", { opacity: 0, duration: 0.7},"=-0.5")
+//   .from(".plus-anime_2", {opacity:0, y:-100 ,duration: 0.7},"=-0.8")
+//   .from(".plus-anime_2", { "--rotate":0 ,duration: 0.7},"=-1")
+//   .from(".service-item3_img", { x:-50,opacity: 0, duration: 0.7 },"=-0.3")
+//   .from(".service_inner-anime_3", { x:-50,opacity: 0, duration: 0.7},"=-0.5")
+//   .from(".service-item3_txt", { opacity: 0, duration: 0.7},"=-0.5")
+  
 servicetl
   .from(".service-item-topimg", { scale:0, opacity: 0, duration: 0.7 })
   .from(".service_think", { x:-100, opacity: 0, duration: 0.7 },"=-0.5")
@@ -874,7 +893,6 @@ servicetl
   .from(".service_inner-anime_3", { x:-50,opacity: 0, duration: 0.7},"=-0.5")
   .from(".service-item3_txt", { opacity: 0, duration: 0.7},"=-0.5")
   
-
 /*----------------------------
     Reccomended Animations
     Reccomended アニメーション
@@ -973,7 +991,6 @@ planAnitl
       trigger: newplan,
       start: "-250px top",
       scrub: false,
-      // markers:true
     },
   });
 
