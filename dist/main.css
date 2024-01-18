@@ -3226,6 +3226,11 @@ Recommended Bottom
     .cont-bottom-img{
         height: 180px;
     }
+
+    .contact-btn_top::after{
+        right: 15px;
+        top: 15px;
+    }
 }
 
 

@@ -11479,29 +11479,16 @@ planAnitl
   });
 
  newplanAnitl
-<<<<<<<< HEAD:dist/main.ce0e39087868bff23e13.js
-  .from(".newplan-anim-txt",{ y:100,opacity: 0,duration:1.5})
-
-========
   .fromTo(".newplan-anime_3",{ y:0,duration:1.5},{y:"100%"},)
   .fromTo(".newplan-anime_2",{ y:0,duration:1.5},{y:"-100%"},"-=0.3")
   .fromTo(".newplan-anime_4",{ y:0,duration:1.5},{y:"-100%"},"<")
   .fromTo(".newplan-anime_1",{ y:0,duration:1.5},{y:"100%"},"-=0.3")
   .fromTo(".newplan-anime_5",{ y:0,duration:1.5},{y:"100%"},"<")
   .from(".newplan-anim-txt",{ y:100,opacity: 0,duration:1.5});
->>>>>>>> 84855a61951e81d2a7bef1a879a8f2be7024fa1e:dist/main.1029cf13b942e99d0301.js
 
 
 })();
 
 /******/ })()
 ;
-<<<<<<< HEAD:dist/main.1029cf13b942e99d0301.js
-<<<<<<<< HEAD:dist/main.ce0e39087868bff23e13.js
-//# sourceMappingURL=main.ce0e39087868bff23e13.js.map
-========
-//# sourceMappingURL=main.1029cf13b942e99d0301.js.map
->>>>>>>> 84855a61951e81d2a7bef1a879a8f2be7024fa1e:dist/main.1029cf13b942e99d0301.js
-=======
 //# sourceMappingURL=main.cf442b0ddc82488062ff.js.map
->>>>>>> c54d053abeaa4102e3c1c9d01640f3a8a88bc80e:dist/main.cf442b0ddc82488062ff.js
