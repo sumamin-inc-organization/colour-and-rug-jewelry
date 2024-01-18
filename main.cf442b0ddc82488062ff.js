@@ -9850,30 +9850,29 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const one = document.querySelector(".one")
+const one = document.querySelector(".one");
 const middle = document.querySelector(".middlw-line");
 const three = document.querySelector(".three");
 
-function changeHamburgerToWhite(){
-    gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set('.hamburger_line',{backgroundColor:"#FFF"})
+function changeHamburgerToWhite() {
+  gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set(".hamburger_line", { backgroundColor: "#FFF" });
 
-    ;(0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_0__.changeHamburgerAttribute)("white")
+  (0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_0__.changeHamburgerAttribute)("white");
 }
 
-function changeHamburgerToBlack(){
-    gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set('.hamburger_line',{backgroundColor:"#45484B"})
-    ;(0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_0__.changeHamburgerAttribute)("black")
+function changeHamburgerToBlack() {
+  gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set(".hamburger_line", { backgroundColor: "#45484B" });
+  (0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_0__.changeHamburgerAttribute)("black");
 }
 
-
-function changeOnlyHamburgerToWhite(){
-    gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set('.hamburger_line',{backgroundColor:"#FFF"})
-    // changeHamburgerAttribute("white")
+function changeOnlyHamburgerToWhite() {
+  gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set(".hamburger_line", { backgroundColor: "#FFF" });
+  // changeHamburgerAttribute("white")
 }
 
-function changeOnlyHamburgerToBlack(){
-    gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set('.hamburger_line',{backgroundColor:"#45484B"})
-    // changeHamburgerAttribute("black")
+function changeOnlyHamburgerToBlack() {
+  gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set(".hamburger_line", { backgroundColor: "#45484B" });
+  // changeHamburgerAttribute("black")
 }
 
 
@@ -9899,46 +9898,41 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const logoimg = document.querySelector('.trigger-logo');
-const logoMobile = document.querySelector('.mobile-logo');
-
+const logoimg = document.querySelector(".trigger-logo");
+const logoMobile = document.querySelector(".mobile-logo");
 
 // Changes the  Logo colors => Mobile
 // ロゴの色を変更します => モバイル
 
-function changeMobileLogoToWhite(){
-    logoMobile.src = _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_1__;
-    (0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_2__.changeLogoAttribute)("white")
-  }
-  
-function changeMobileLogoToBlack(){
-    logoMobile.src = _images_nav_logo_main_blk_svg__WEBPACK_IMPORTED_MODULE_0__;
-    (0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_2__.changeLogoAttribute)("black");
-  }
+function changeMobileLogoToWhite() {
+  logoMobile.src = _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_1__;
+  (0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_2__.changeLogoAttribute)("white");
+}
 
+function changeMobileLogoToBlack() {
+  logoMobile.src = _images_nav_logo_main_blk_svg__WEBPACK_IMPORTED_MODULE_0__;
+  (0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_2__.changeLogoAttribute)("black");
+}
 
-  // Changes the  Logo colors => PC
-  // ロゴの色を変更します => PC
+// Changes the  Logo colors => PC
+// ロゴの色を変更します => PC
 
-  function changeLogoToWhite(){
-    logoimg.src = _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_1__;
-    (0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_2__.changeLogoAttribute)("white");
-    
-  }
-  
-  function changeLogoToBlack(){
-    logoimg.src = _images_nav_logo_main_blk_svg__WEBPACK_IMPORTED_MODULE_0__;
-    (0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_2__.changeLogoAttribute)("black");
-  }
+function changeLogoToWhite() {
+  logoimg.src = _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_1__;
+  (0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_2__.changeLogoAttribute)("white");
+}
 
+function changeLogoToBlack() {
+  logoimg.src = _images_nav_logo_main_blk_svg__WEBPACK_IMPORTED_MODULE_0__;
+  (0,_logoColorAttribute__WEBPACK_IMPORTED_MODULE_2__.changeLogoAttribute)("black");
+}
 
 //changes both mobile and pc logos without updating the attribute
 //属性を更新せずに、モバイルとPCのロゴを両方変更します
-  function UpdateNavLogoWhite(){
-    logoMobile.src = _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_1__;
-    logoimg.src = _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_1__;
-  }
-
+function UpdateNavLogoWhite() {
+  logoMobile.src = _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_1__;
+  logoimg.src = _images_nav_logo_main_svg__WEBPACK_IMPORTED_MODULE_1__;
+}
 
 
 /***/ }),
@@ -9962,17 +9956,17 @@ __webpack_require__.r(__webpack_exports__);
 
 gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger);
 
-
-function changeOnlyRight(classname){
-    gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
-        trigger: classname,
-        start: "-50px top",
-        onEnter: _onlyRightColorChange__WEBPACK_IMPORTED_MODULE_0__.onlyRightToWhite,
-        onLeave: _onlyRightColorChange__WEBPACK_IMPORTED_MODULE_0__.onlyRightToBlack,
-        onEnterBack: _onlyRightColorChange__WEBPACK_IMPORTED_MODULE_0__.onlyRightToWhite,
-        onLeaveBack:_onlyRightColorChange__WEBPACK_IMPORTED_MODULE_0__.onlyRightToBlack
-      });
+function changeOnlyRight(classname) {
+  gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+    trigger: classname,
+    start: "-50px top",
+    onEnter: _onlyRightColorChange__WEBPACK_IMPORTED_MODULE_0__.onlyRightToWhite,
+    onLeave: _onlyRightColorChange__WEBPACK_IMPORTED_MODULE_0__.onlyRightToBlack,
+    onEnterBack: _onlyRightColorChange__WEBPACK_IMPORTED_MODULE_0__.onlyRightToWhite,
+    onLeaveBack: _onlyRightColorChange__WEBPACK_IMPORTED_MODULE_0__.onlyRightToBlack,
+  });
 }
+
 
 /***/ }),
 
@@ -9994,79 +9988,80 @@ __webpack_require__.r(__webpack_exports__);
 
 //checks what the current color of the given element is
 // 指定された要素の現在の色を確認する
-function CheckCurrentColor(element){
-    const logoimg = document.querySelector('.trigger-logo');
-    const logoMobile = document.querySelector('.mobile-logo'); 
-    const hamburgerContainer = document.querySelector('.container'); 
-    
-    if(element === "logo"){
-        if(logoimg.dataset.color === "white" || logoMobile.dataset.color === "white" ){
-            return "white"
-        }
-        else if(logoimg.dataset.color === "black" || logoMobile.dataset.color === "black"){
-            return "black";
-        }
-    }else if(element === "hamburger"){
-        if( hamburgerContainer.dataset.color === "white" ){
-            return "white"
-        }
-        else if(hamburgerContainer.dataset.color === "black"){
-            return "black";
-        }
-    }
+function CheckCurrentColor(element) {
+  const logoimg = document.querySelector(".trigger-logo");
+  const logoMobile = document.querySelector(".mobile-logo");
+  const hamburgerContainer = document.querySelector(".container");
 
+  if (element === "logo") {
+    if (
+      logoimg.dataset.color === "white" ||
+      logoMobile.dataset.color === "white"
+    ) {
+      return "white";
+    } else if (
+      logoimg.dataset.color === "black" ||
+      logoMobile.dataset.color === "black"
+    ) {
+      return "black";
+    }
+  } else if (element === "hamburger") {
+    if (hamburgerContainer.dataset.color === "white") {
+      return "white";
+    } else if (hamburgerContainer.dataset.color === "black") {
+      return "black";
+    }
+  }
 }
 
 //changes the data-color of the logos
 // ロゴの data-color を変更する
-function changeLogoAttribute(color){
-    const logoimg = document.querySelector('.trigger-logo');
-    const logoMobile = document.querySelector('.mobile-logo'); 
-    if(color === "white"){
-        logoimg.dataset.color = "white"
-        logoMobile.dataset.color = "white"
-    } else if(color === "black"){
-        logoimg.dataset.color = "black"
-        logoMobile.dataset.color = "black"
-    }
+function changeLogoAttribute(color) {
+  const logoimg = document.querySelector(".trigger-logo");
+  const logoMobile = document.querySelector(".mobile-logo");
+  if (color === "white") {
+    logoimg.dataset.color = "white";
+    logoMobile.dataset.color = "white";
+  } else if (color === "black") {
+    logoimg.dataset.color = "black";
+    logoMobile.dataset.color = "black";
+  }
 }
 
-function changeHamburgerAttribute(color){
-    const hamburgerContainer = document.querySelector('.container'); 
-    const line1 = document.querySelector('.one');  //top line
-    const line2 = document.querySelector('.three'); //bottom line
-    const line3 = document.querySelector(' .two .hamburger_line');  //middle line
-    const lines = document.querySelectorAll('.hamburger_line');
-    if(color === "white"){
-        hamburgerContainer.dataset.color = "white"
-        lines.forEach(line => {
-            line.dataset.color = "white";
-        })
-    } else if(color === "black"){
-        hamburgerContainer.dataset.color = "black"
-        lines.forEach(line => {
-            line.dataset.color = "black";
-        })
-    }
+function changeHamburgerAttribute(color) {
+  const hamburgerContainer = document.querySelector(".container");
+  const line1 = document.querySelector(".one"); //top line
+  const line2 = document.querySelector(".three"); //bottom line
+  const line3 = document.querySelector(" .two .hamburger_line"); //middle line
+  const lines = document.querySelectorAll(".hamburger_line");
+  if (color === "white") {
+    hamburgerContainer.dataset.color = "white";
+    lines.forEach((line) => {
+      line.dataset.color = "white";
+    });
+  } else if (color === "black") {
+    hamburgerContainer.dataset.color = "black";
+    lines.forEach((line) => {
+      line.dataset.color = "black";
+    });
+  }
 }
 //updates the color depending on what its color was before opeing the nav (white or black)
 // ナビゲーションを開く前の色に基づいて色を更新します（白または黒）
 
-function updateColor(color,element){
-    if(element === "logo"){
-        if(color === "white"){
-            (0,_changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeMobileLogoToWhite)();
-            (0,_changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeLogoToWhite)();
-        }
-        else if(color === "black"){
-            (0,_changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeMobileLogoToBlack)();
-            (0,_changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeLogoToBlack)();
-        }
-    }else if(element === "hamburger"){
-        console.log("hamburger") //temp
+function updateColor(color, element) {
+  if (element === "logo") {
+    if (color === "white") {
+      (0,_changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeMobileLogoToWhite)();
+      (0,_changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeLogoToWhite)();
+    } else if (color === "black") {
+      (0,_changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeMobileLogoToBlack)();
+      (0,_changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeLogoToBlack)();
     }
+  } else if (element === "hamburger") {
+    console.log("hamburger"); //temp
+  }
 }
-
 
 
 /***/ }),
@@ -10089,17 +10084,17 @@ __webpack_require__.r(__webpack_exports__);
 
 gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger);
 
-
-function changeLogoColor(classname){
-    gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
-        trigger: classname,
-        start: "-50px top",
-        onEnter: _changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeMobileLogoToWhite,
-        onLeave: _changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeMobileLogoToBlack,
-        onEnterBack: _changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeMobileLogoToWhite,
-        onLeaveBack:_changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeMobileLogoToBlack
-      });
+function changeLogoColor(classname) {
+  gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+    trigger: classname,
+    start: "-50px top",
+    onEnter: _changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeMobileLogoToWhite,
+    onLeave: _changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeMobileLogoToBlack,
+    onEnterBack: _changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeMobileLogoToWhite,
+    onLeaveBack: _changeLogoColor__WEBPACK_IMPORTED_MODULE_0__.changeMobileLogoToBlack,
+  });
 }
+
 
 /***/ }),
 
@@ -10121,21 +10116,22 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function onlyRightToWhite(){
-    (0,_otherColorCanges__WEBPACK_IMPORTED_MODULE_0__.changeHeaderTelWhite)();
-    (0,_otherColorCanges__WEBPACK_IMPORTED_MODULE_0__.changeTimeToWhite)();
-    (0,_otherColorCanges__WEBPACK_IMPORTED_MODULE_0__.changeTelToWhite)();
-    (0,_otherColorCanges__WEBPACK_IMPORTED_MODULE_0__.changeHeadDecorToWhite)();
-    (0,_changeHamburgerColor__WEBPACK_IMPORTED_MODULE_1__.changeHamburgerToWhite)()
-  }
+function onlyRightToWhite() {
+  (0,_otherColorCanges__WEBPACK_IMPORTED_MODULE_0__.changeHeaderTelWhite)();
+  (0,_otherColorCanges__WEBPACK_IMPORTED_MODULE_0__.changeTimeToWhite)();
+  (0,_otherColorCanges__WEBPACK_IMPORTED_MODULE_0__.changeTelToWhite)();
+  (0,_otherColorCanges__WEBPACK_IMPORTED_MODULE_0__.changeHeadDecorToWhite)();
+  (0,_changeHamburgerColor__WEBPACK_IMPORTED_MODULE_1__.changeHamburgerToWhite)();
+}
 
-function onlyRightToBlack(){
-    (0,_otherColorCanges__WEBPACK_IMPORTED_MODULE_0__.changeHeaderTelBlack)()
-    ;(0,_otherColorCanges__WEBPACK_IMPORTED_MODULE_0__.changeTimeToBlack)();
-    (0,_otherColorCanges__WEBPACK_IMPORTED_MODULE_0__.changeTelToBlack)();
-    (0,_otherColorCanges__WEBPACK_IMPORTED_MODULE_0__.changeHeadDecorToBlack)();
-    (0,_changeHamburgerColor__WEBPACK_IMPORTED_MODULE_1__.changeHamburgerToBlack)()
-  }
+function onlyRightToBlack() {
+  (0,_otherColorCanges__WEBPACK_IMPORTED_MODULE_0__.changeHeaderTelBlack)();
+  (0,_otherColorCanges__WEBPACK_IMPORTED_MODULE_0__.changeTimeToBlack)();
+  (0,_otherColorCanges__WEBPACK_IMPORTED_MODULE_0__.changeTelToBlack)();
+  (0,_otherColorCanges__WEBPACK_IMPORTED_MODULE_0__.changeHeadDecorToBlack)();
+  (0,_changeHamburgerColor__WEBPACK_IMPORTED_MODULE_1__.changeHamburgerToBlack)();
+}
+
 
 /***/ }),
 
@@ -10162,7 +10158,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const headerTel = document.querySelector('.header-tel_img');
+const headerTel = document.querySelector(".header-tel_img");
 // import iconWhite from '../assets/images/nav/icon_tel-white.svg';
 // import iconBlack from '../assets/images/nav/icon_tel.svg';
 
@@ -10170,41 +10166,40 @@ const headerTel = document.querySelector('.header-tel_img');
 
 // dark backgrounds
 
-function changeTimeToWhite(){
-    gsap__WEBPACK_IMPORTED_MODULE_2__.gsap.to('.time',{color:"white"});
-  }
+function changeTimeToWhite() {
+  gsap__WEBPACK_IMPORTED_MODULE_2__.gsap.to(".time", { color: "white" });
+}
 
-  function changeTelToWhite(){
-    gsap__WEBPACK_IMPORTED_MODULE_2__.gsap.to('.change',{color:"white"});
-  }
+function changeTelToWhite() {
+  gsap__WEBPACK_IMPORTED_MODULE_2__.gsap.to(".change", { color: "white" });
+}
 
-  function changeHeadDecorToWhite(){
-    gsap__WEBPACK_IMPORTED_MODULE_2__.gsap.to('.header-decor',{backgroundColor:"white"});
-  }
-
+function changeHeadDecorToWhite() {
+  gsap__WEBPACK_IMPORTED_MODULE_2__.gsap.to(".header-decor", { backgroundColor: "white" });
+}
 
 // light backgrounds
 
-
-function changeTimeToBlack(){
-    gsap__WEBPACK_IMPORTED_MODULE_2__.gsap.to('.time',{color:"#45484b"});
-  }
-
-function changeTelToBlack(){
-    gsap__WEBPACK_IMPORTED_MODULE_2__.gsap.to('.change',{color:"#45484b"});
-  }
-
-function changeHeadDecorToBlack(){
-    gsap__WEBPACK_IMPORTED_MODULE_2__.gsap.to('.header-decor',{backgroundColor:"#45484b"});
-  }
-
-function changeHeaderTelBlack(){
-    headerTel.src = _images_nav_icon_tel_svg__WEBPACK_IMPORTED_MODULE_1__;
+function changeTimeToBlack() {
+  gsap__WEBPACK_IMPORTED_MODULE_2__.gsap.to(".time", { color: "#45484b" });
 }
 
-function changeHeaderTelWhite(){
-    headerTel.src = _images_nav_icon_tel_white_svg__WEBPACK_IMPORTED_MODULE_0__;
+function changeTelToBlack() {
+  gsap__WEBPACK_IMPORTED_MODULE_2__.gsap.to(".change", { color: "#45484b" });
 }
+
+function changeHeadDecorToBlack() {
+  gsap__WEBPACK_IMPORTED_MODULE_2__.gsap.to(".header-decor", { backgroundColor: "#45484b" });
+}
+
+function changeHeaderTelBlack() {
+  headerTel.src = _images_nav_icon_tel_svg__WEBPACK_IMPORTED_MODULE_1__;
+}
+
+function changeHeaderTelWhite() {
+  headerTel.src = _images_nav_icon_tel_white_svg__WEBPACK_IMPORTED_MODULE_0__;
+}
+
 
 /***/ }),
 
@@ -10221,25 +10216,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const modal = document.querySelector('[data-story="1"]');
 
-
 // function for closing the popup
 // ポップアップを閉じるための関数
 
-function popupClose(btn){
-    btn.addEventListener('click',(e)=>{
-        modal.style.display = "none";
-        document.body.style['overflow-y'] = 'visible';
-        document.documentElement.style.overflow = 'auto';
-        document.body.style['overflow-x'] = 'clip';
-      })
+function popupClose(btn) {
+  btn.addEventListener("click", (e) => {
+    modal.style.display = "none";
+    document.body.style["overflow-y"] = "visible";
+    document.documentElement.style.overflow = "auto";
+    document.body.style["overflow-x"] = "clip";
+  });
 }
 
-
-function openPopup(popupmodal){
-    popupmodal.style.display = "block";
-    document.documentElement.style.overflow = 'hidden';
-    document.body.style.overflow = 'hidden';
+function openPopup(popupmodal) {
+  popupmodal.style.display = "block";
+  document.documentElement.style.overflow = "hidden";
+  document.body.style.overflow = "hidden";
 }
+
 
 /***/ }),
 
@@ -10784,7 +10778,7 @@ let faqtl = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline({
 faqtl
   .from(".faq-eng", { x: 50, opacity: 0, duration: 1 })
   .from(".faq-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8")
-  .to(".faq", { "--beforeAnimation": "100%", duration: 2.5 });
+  .to(".faq", { "--beforeAnimation": "100%", duration: 1.5 },"<");
 
 /*----------------------------
     CONTACT Animations
@@ -11129,8 +11123,6 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_32__.ScrollTrigger.create({
 });
 
 // advantage image trigger for only  the right side 
-// const advantageTriggerPc = ".advantage-trigger";
-// const advantageTriggerSp = "advantage-trigger-mobile"
 
 if(isItPc.matches){
   (0,_assets_js_changeOnlyRightTrigger__WEBPACK_IMPORTED_MODULE_29__.changeOnlyRight)(".advantage-trigger");
@@ -11208,11 +11200,7 @@ if(isItPc.matches){
     Recommended アニメーション - SP
 --------------------------------------------*/
 (0,_assets_js_mobileLogoTrigger__WEBPACK_IMPORTED_MODULE_24__["default"])(".sp-rc_img");
-/*-----------------------------------------
-Inspiration Section Animations - Mobile
-Inspiration アニメーション - SP
---------------------------------------------*/
-// changeLogoColor(".insp-slider");
+
 /*-----------------------------------------
 Advantage Section Animations - Mobile
 Advantage アニメーション - SP
@@ -11264,21 +11252,46 @@ if(isItSp.matches){
   (0,_assets_js_changeOnlyRightTrigger__WEBPACK_IMPORTED_MODULE_29__.changeOnlyRight)(".contact-mobile-tirgger");
 }
 
-
  /*----------------------------
     Service Animations
     Service アニメーション
 ----------------------------*/
-let servicetl = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline({
-  scrollTrigger: {
-    // trigger: ".service_content",
-    trigger:".service-title-trigger",
-    start: "top top",
-    scrub: false,
-  },
-});
 
-servicetl
+//sp
+// servicetl
+//   .from(".service-item-topimg", { scale:0, opacity: 0, duration: 0.7 })
+//   .from(".service_think", { x:-100, opacity: 0, duration: 0.7 },"=-0.5")
+//   .from(".think-text-anim", { opacity: 0, duration: 0.7 },"=-0.3")
+//   .from(".service-arrow-anime", { y:-50,opacity: 0, duration: 0.7 },"=-0.3")
+//   .from(".service-item1_img", { x:-50,opacity: 0, duration: 0.7},"=-0.3")
+//   .from(".service_inner-anime_1", { x:-50,opacity: 0, duration: 0.7 },"=-0.5")
+//   .from(".service-item1_txt", { opacity: 0, duration: 0.7 },"=-0.5")
+//   .from(".plus-anime_1", {opacity:0, y:-100 ,duration: 0.7},"=-0.8")
+//   .from(".plus-anime_1", { "--rotate":0 ,duration: 0.5},"=-1")
+//   .from(".service-item2_img", { x:-50,opacity: 0, duration: 0.7},"=-0.3")
+//   .from(".service_inner-anime_2", { x:-50,opacity: 0, duration: 0.7 },"=-0.5")
+//   .from(".service-item2_txt", { opacity: 0, duration: 0.7},"=-0.5")
+//   .from(".plus-anime_2", {opacity:0, y:-100 ,duration: 0.7},"=-0.8")
+//   .from(".plus-anime_2", { "--rotate":0 ,duration: 0.7},"=-1")
+//   .from(".service-item3_img", { x:-50,opacity: 0, duration: 0.7 },"=-0.3")
+//   .from(".service_inner-anime_3", { x:-50,opacity: 0, duration: 0.7},"=-0.5")
+//   .from(".service-item3_txt", { opacity: 0, duration: 0.7},"=-0.5")
+
+
+
+
+
+function serviceTlSp(){
+  let servicetl = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline({
+    scrollTrigger: {
+      // trigger: ".service_content",
+      trigger:".service-title-trigger",
+      start: "top top",
+      scrub: false,
+    },
+  });
+
+  servicetl
   .from(".service-item-topimg", { scale:0, opacity: 0, duration: 0.7 })
   .from(".service_think", { x:-100, opacity: 0, duration: 0.7 },"=-0.5")
   .from(".think-text-anim", { opacity: 0, duration: 0.7 },"=-0.3")
@@ -11296,13 +11309,55 @@ servicetl
   .from(".service-item3_img", { x:-50,opacity: 0, duration: 0.7 },"=-0.3")
   .from(".service_inner-anime_3", { x:-50,opacity: 0, duration: 0.7},"=-0.5")
   .from(".service-item3_txt", { opacity: 0, duration: 0.7},"=-0.5")
-  
+ 
+}
 
+
+
+//pc
+
+  function serviceTlPc(){
+    let servicetl = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline({
+      scrollTrigger: {
+        // trigger: ".service_content",
+        trigger:".service-title-trigger",
+        start: "top top",
+        scrub: false,
+      },
+    });
+
+    servicetl
+    .from(".service-item-topimg", { scale:0, opacity: 0, duration: 0.7 })
+    .from(".service_think", { x:-100, opacity: 0, duration: 0.7 },"=-0.5")
+    .from(".think-text-anim", { opacity: 0, duration: 0.7 },"=-0.3")
+    .from(".service-arrow-anime", { y:-50,opacity: 0, duration: 0.7 },">-0.3")
+    .from(".service-item1_img", { x:-50,opacity: 0, duration: 0.5})
+    .from(".service_inner-anime_1", { x:-50,opacity: 0, duration: 0.4 },">-0.15")
+    .from(".service-item1_txt", { opacity: 0, duration: 0.5})
+    .from(".plus-anime_1", {opacity:0, y:-100 ,duration: 0.4})
+    // .from(".plus-anime_1", { "--rotate":0 ,duration: 0.4})
+    .from(".service-item2_img", { x:-50,opacity: 0, duration: 0.5})
+    .from(".service_inner-anime_2", { x:-50,opacity: 0, duration: 0.4 },">-0.15")
+    .from(".service-item2_txt", { opacity: 0, duration: 0.5})
+    .from(".plus-anime_2", {opacity:0, y:-100 ,duration: 0.4})
+    // .from(".plus-anime_2", { "--rotate":0 ,duration: 0.4})
+    .from(".service-item3_img", { x:-50,opacity: 0, duration: 0.5 })
+    .from(".service_inner-anime_3", { x:-50,opacity: 0, duration: 0.4},">-0.15")
+    .from(".service-item3_txt", { opacity: 0, duration: 0.5})
+    
+  
+  }
+
+  if(isItSp.matches){
+    serviceTlSp();
+  }
+  else{
+    serviceTlPc();
+  }
 /*----------------------------
     Reccomended Animations
     Reccomended アニメーション
 ----------------------------*/
-
   
   let reccomendtl = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline({
     scrollTrigger: {
@@ -11364,27 +11419,50 @@ servicetl
     Plan アニメーション
 ----------------------------*/
   
+// PLAN LINE ANIMATION
+let planTrigger
+
+if(isItSp.matches){
+  planTrigger = ".plan_text"
+}
+else{
+    planTrigger = "#plan"
+}
+
+console.log(planTrigger);
 
 let planAnitl = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline({
   scrollTrigger: {
-    trigger: "#plan",
+    trigger: planTrigger,
     start: "-100px top",
     scrub: false,
   },
 });
 
 planAnitl
-  .from(".plan_line",{width:0,duration:1})  
-  .from(".plan_text_number-anime1",{scale:0,duration:0.5},"0.5")
-  .from(".plan-txt-title_anime1",{opacity:0,x:-10})
-  .from(".plan-txt_anime1",{opacity:0})
-  .from(".plan_text_number-anime2",{scale:0,duration:0.5})
-  .from(".plan-txt-title_anime2",{opacity:0,x:-10})
-  .from(".plan-txt_anime2",{opacity:0})
-  .from(".plan_text_number-anime3",{scale:0,duration:0.5})
-  .from(".plan-txt-title_anime3",{opacity:0,x:-10})
+  .from(".plan_line",{width:0,duration:1});
 
- 
+// PLAN CONTENT ANIMATION
+
+ let planAnitl2 = gsap__WEBPACK_IMPORTED_MODULE_31__.gsap.timeline({
+  scrollTrigger: {
+    trigger:planTrigger,
+    start: "-100px top",
+    scrub: false,
+  },
+});
+  
+  planAnitl2  
+    .from(".plan_text_number-anime1",{scale:0,duration:0.3})
+    .from(".plan-txt-title_anime1",{opacity:0,x:-10,duration:0.4})
+    .from(".plan-txt_anime1",{opacity:0},">")
+    .from(".plan_text_number-anime2",{scale:0,duration:0.3},">")
+    .from(".plan-txt-title_anime2",{opacity:0,x:-10})
+    .from(".plan-txt_anime2",{opacity:0},">")
+    .from(".plan_text_number-anime3",{scale:0,duration:0.4},">")
+    .from(".plan-txt-title_anime3",{opacity:0,x:-10})
+  
+
 
 
   /*----------------------------
@@ -11397,7 +11475,6 @@ planAnitl
       trigger: newplan,
       start: "-250px top",
       scrub: false,
-      // markers:true
     },
   });
 
@@ -11414,4 +11491,4 @@ planAnitl
 
 /******/ })()
 ;
-//# sourceMappingURL=main.eba58a9e67478d123e50.js.map
+//# sourceMappingURL=main.cf442b0ddc82488062ff.js.map
