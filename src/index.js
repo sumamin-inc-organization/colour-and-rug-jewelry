@@ -958,27 +958,51 @@ servicetl
     Plan アニメーション
 ----------------------------*/
   
+// PLAN LINE ANIMATION
+let planTrigger
+
+if(isItSp.matches){
+  planTrigger = ".plan_text"
+}
+else{
+    planTrigger = "#plan"
+}
+
+console.log(planTrigger);
 
 let planAnitl = gsap.timeline({
   scrollTrigger: {
-    trigger: "#plan",
+    trigger: planTrigger,
     start: "-100px top",
     scrub: false,
+    markers:true
   },
 });
 
 planAnitl
-  .from(".plan_line",{width:0,duration:1})  
-  .from(".plan_text_number-anime1",{scale:0,duration:0.5},"0.5")
-  .from(".plan-txt-title_anime1",{opacity:0,x:-10})
-  .from(".plan-txt_anime1",{opacity:0})
-  .from(".plan_text_number-anime2",{scale:0,duration:0.5})
-  .from(".plan-txt-title_anime2",{opacity:0,x:-10})
-  .from(".plan-txt_anime2",{opacity:0})
-  .from(".plan_text_number-anime3",{scale:0,duration:0.5})
-  .from(".plan-txt-title_anime3",{opacity:0,x:-10})
+  .from(".plan_line",{width:0,duration:1});
 
- 
+// PLAN CONTENT ANIMATION
+
+ let planAnitl2 = gsap.timeline({
+  scrollTrigger: {
+    trigger:planTrigger,
+    start: "-100px top",
+    scrub: false,
+  },
+});
+  
+  planAnitl2  
+    .from(".plan_text_number-anime1",{scale:0,duration:0.3})
+    .from(".plan-txt-title_anime1",{opacity:0,x:-10,duration:0.4})
+    .from(".plan-txt_anime1",{opacity:0},">")
+    .from(".plan_text_number-anime2",{scale:0,duration:0.3},">")
+    .from(".plan-txt-title_anime2",{opacity:0,x:-10})
+    .from(".plan-txt_anime2",{opacity:0},">")
+    .from(".plan_text_number-anime3",{scale:0,duration:0.4},">")
+    .from(".plan-txt-title_anime3",{opacity:0,x:-10})
+  
+
 
 
   /*----------------------------
