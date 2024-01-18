@@ -1393,14 +1393,16 @@ justify-content: space-between;
   .plus{
     margin-top: 30px;
   }
-  /* .service-container{
-    background-image: url(../images/service/newplan_bkg-sp.jpg);
-  } */
   #newplan {
     height: 680px;
   }
   #newplan h2{
     font-size: 29px;
+  }
+  #newplan img{
+    width: 50px;
+    bottom: 20px;
+    right: 20px;
   }
   .test-cont:after {
     content: "";
@@ -3143,9 +3145,14 @@ Recommended Bottom
 }
 
 .tel::before{
-    content: url(./images/tel-icon.png);
+    content: url(./images/contact-telicon.svg);
     margin-right: 7px;
 }
+#tempA:hover .tel::before{
+    content: url(./images/contact-telicon_white.svg);
+}
+
+
 @media (max-width:1200px){
     .cont-bottom-btn_data{
         flex-flow: column;
@@ -3775,6 +3782,11 @@ footer ul{
 .white-to-black:hover p{
    color: #FFFFFF ;
 }
+#temp:hover > .tel::before{
+    content: url(./images/contact-telicon_white.svg);
+}
+
+
 
 /*----------------------------
   White ==> Black Outline
@@ -3827,5 +3839,8 @@ footer ul{
 .banner-btn:hover::after {
     content: url(./images/btn-chevron.svg);
 }
+
+
+
 
 /*# sourceMappingURL=main.css.map*/

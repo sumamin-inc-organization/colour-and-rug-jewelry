@@ -10956,8 +10956,11 @@ planAnitl
 
  newplanAnitl
   .from(".newplan-anim-txt",{ y:100,opacity: 0,duration:1.5})
+
+
+
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.7adfa4c1fd3fab05a208.js.map
+//# sourceMappingURL=main.ce0e39087868bff23e13.js.map
