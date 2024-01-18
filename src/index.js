@@ -368,7 +368,7 @@ let faqtl = gsap.timeline({
 faqtl
   .from(".faq-eng", { x: 50, opacity: 0, duration: 1 })
   .from(".faq-jp", { x: -50, opacity: 0, duration: 1 }, "-=0.8")
-  .to(".faq", { "--beforeAnimation": "100%", duration: 2.5 });
+  .to(".faq", { "--beforeAnimation": "100%", duration: 1.5 },"<");
 
 /*----------------------------
     CONTACT Animations
@@ -846,16 +846,42 @@ if(isItSp.matches){
     Service Animations
     Service アニメーション
 ----------------------------*/
-let servicetl = gsap.timeline({
-  scrollTrigger: {
-    // trigger: ".service_content",
-    trigger:".service-title-trigger",
-    start: "top top",
-    scrub: false,
-  },
-});
 
-servicetl
+//sp
+// servicetl
+//   .from(".service-item-topimg", { scale:0, opacity: 0, duration: 0.7 })
+//   .from(".service_think", { x:-100, opacity: 0, duration: 0.7 },"=-0.5")
+//   .from(".think-text-anim", { opacity: 0, duration: 0.7 },"=-0.3")
+//   .from(".service-arrow-anime", { y:-50,opacity: 0, duration: 0.7 },"=-0.3")
+//   .from(".service-item1_img", { x:-50,opacity: 0, duration: 0.7},"=-0.3")
+//   .from(".service_inner-anime_1", { x:-50,opacity: 0, duration: 0.7 },"=-0.5")
+//   .from(".service-item1_txt", { opacity: 0, duration: 0.7 },"=-0.5")
+//   .from(".plus-anime_1", {opacity:0, y:-100 ,duration: 0.7},"=-0.8")
+//   .from(".plus-anime_1", { "--rotate":0 ,duration: 0.5},"=-1")
+//   .from(".service-item2_img", { x:-50,opacity: 0, duration: 0.7},"=-0.3")
+//   .from(".service_inner-anime_2", { x:-50,opacity: 0, duration: 0.7 },"=-0.5")
+//   .from(".service-item2_txt", { opacity: 0, duration: 0.7},"=-0.5")
+//   .from(".plus-anime_2", {opacity:0, y:-100 ,duration: 0.7},"=-0.8")
+//   .from(".plus-anime_2", { "--rotate":0 ,duration: 0.7},"=-1")
+//   .from(".service-item3_img", { x:-50,opacity: 0, duration: 0.7 },"=-0.3")
+//   .from(".service_inner-anime_3", { x:-50,opacity: 0, duration: 0.7},"=-0.5")
+//   .from(".service-item3_txt", { opacity: 0, duration: 0.7},"=-0.5")
+
+
+
+
+
+function serviceTlSp(){
+  let servicetl = gsap.timeline({
+    scrollTrigger: {
+      // trigger: ".service_content",
+      trigger:".service-title-trigger",
+      start: "top top",
+      scrub: false,
+    },
+  });
+
+  servicetl
   .from(".service-item-topimg", { scale:0, opacity: 0, duration: 0.7 })
   .from(".service_think", { x:-100, opacity: 0, duration: 0.7 },"=-0.5")
   .from(".think-text-anim", { opacity: 0, duration: 0.7 },"=-0.3")
@@ -873,8 +899,51 @@ servicetl
   .from(".service-item3_img", { x:-50,opacity: 0, duration: 0.7 },"=-0.3")
   .from(".service_inner-anime_3", { x:-50,opacity: 0, duration: 0.7},"=-0.5")
   .from(".service-item3_txt", { opacity: 0, duration: 0.7},"=-0.5")
-  
+ 
+}
 
+
+
+//pc
+
+  function serviceTlPc(){
+    let servicetl = gsap.timeline({
+      scrollTrigger: {
+        // trigger: ".service_content",
+        trigger:".service-title-trigger",
+        start: "top top",
+        scrub: false,
+      },
+    });
+
+    servicetl
+    .from(".service-item-topimg", { scale:0, opacity: 0, duration: 0.7 })
+    .from(".service_think", { x:-100, opacity: 0, duration: 0.7 },"=-0.5")
+    .from(".think-text-anim", { opacity: 0, duration: 0.7 },"=-0.3")
+    .from(".service-arrow-anime", { y:-50,opacity: 0, duration: 0.7 },">-0.3")
+    .from(".service-item1_img", { x:-50,opacity: 0, duration: 0.5})
+    .from(".service_inner-anime_1", { x:-50,opacity: 0, duration: 0.4 },">-0.15")
+    .from(".service-item1_txt", { opacity: 0, duration: 0.5})
+    .from(".plus-anime_1", {opacity:0, y:-100 ,duration: 0.4})
+    // .from(".plus-anime_1", { "--rotate":0 ,duration: 0.4})
+    .from(".service-item2_img", { x:-50,opacity: 0, duration: 0.5})
+    .from(".service_inner-anime_2", { x:-50,opacity: 0, duration: 0.4 },">-0.15")
+    .from(".service-item2_txt", { opacity: 0, duration: 0.5})
+    .from(".plus-anime_2", {opacity:0, y:-100 ,duration: 0.4})
+    // .from(".plus-anime_2", { "--rotate":0 ,duration: 0.4})
+    .from(".service-item3_img", { x:-50,opacity: 0, duration: 0.5 })
+    .from(".service_inner-anime_3", { x:-50,opacity: 0, duration: 0.4},">-0.15")
+    .from(".service-item3_txt", { opacity: 0, duration: 0.5})
+    
+  
+  }
+
+  if(isItSp.matches){
+    serviceTlSp();
+  }
+  else{
+    serviceTlPc();
+  }
 /*----------------------------
     Reccomended Animations
     Reccomended アニメーション
@@ -940,27 +1009,50 @@ servicetl
     Plan アニメーション
 ----------------------------*/
   
+// PLAN LINE ANIMATION
+let planTrigger
+
+if(isItSp.matches){
+  planTrigger = ".plan_text"
+}
+else{
+    planTrigger = "#plan"
+}
+
+console.log(planTrigger);
 
 let planAnitl = gsap.timeline({
   scrollTrigger: {
-    trigger: "#plan",
+    trigger: planTrigger,
     start: "-100px top",
     scrub: false,
   },
 });
 
 planAnitl
-  .from(".plan_line",{width:0,duration:1})  
-  .from(".plan_text_number-anime1",{scale:0,duration:0.5},"0.5")
-  .from(".plan-txt-title_anime1",{opacity:0,x:-10})
-  .from(".plan-txt_anime1",{opacity:0})
-  .from(".plan_text_number-anime2",{scale:0,duration:0.5})
-  .from(".plan-txt-title_anime2",{opacity:0,x:-10})
-  .from(".plan-txt_anime2",{opacity:0})
-  .from(".plan_text_number-anime3",{scale:0,duration:0.5})
-  .from(".plan-txt-title_anime3",{opacity:0,x:-10})
+  .from(".plan_line",{width:0,duration:1});
 
- 
+// PLAN CONTENT ANIMATION
+
+ let planAnitl2 = gsap.timeline({
+  scrollTrigger: {
+    trigger:planTrigger,
+    start: "-100px top",
+    scrub: false,
+  },
+});
+  
+  planAnitl2  
+    .from(".plan_text_number-anime1",{scale:0,duration:0.3})
+    .from(".plan-txt-title_anime1",{opacity:0,x:-10,duration:0.4})
+    .from(".plan-txt_anime1",{opacity:0},">")
+    .from(".plan_text_number-anime2",{scale:0,duration:0.3},">")
+    .from(".plan-txt-title_anime2",{opacity:0,x:-10})
+    .from(".plan-txt_anime2",{opacity:0},">")
+    .from(".plan_text_number-anime3",{scale:0,duration:0.4},">")
+    .from(".plan-txt-title_anime3",{opacity:0,x:-10})
+  
+
 
 
   /*----------------------------
@@ -973,7 +1065,6 @@ planAnitl
       trigger: newplan,
       start: "-250px top",
       scrub: false,
-      // markers:true
     },
   });
 
