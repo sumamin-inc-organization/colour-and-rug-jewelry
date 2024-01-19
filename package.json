@@ -28,6 +28,7 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "gsap": "^3.12.4"
+    "gsap": "^3.12.4",
+    "instafeed.js": "^2.0.0"
   }
 }
