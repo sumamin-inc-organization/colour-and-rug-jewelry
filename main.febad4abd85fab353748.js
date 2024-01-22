@@ -12035,11 +12035,11 @@ planAnitl
 
 var feed = new instafeed_js__WEBPACK_IMPORTED_MODULE_31__["default"]({
 
-  accessToken: 'IGQWRNLW5nU2pKRDZARcDNUakZA3eFVkWGVjckRIY18zM0FqN3k2MER4VDJDbjFOel9zSG1seTJmZAnEzcENHazFtZAGNPTmwwdzRUTkdINzNtd3A2dEtYc0NTWFNsYzVlTnVpMDh4MkxVTWRoR2xNMVRPRFlDWHZAwRE0ZD'
+  accessToken: 'IGQWRQUXNIU0hlMk1BVFdOWG44SXZALTi05YkcySlNMTUYyR0MwamlrbTJMcDlwTm5NUW1FeGptbEk5WEtJRDNtTWhGNTluWTBvNWxZAVlNUU1llaFZAUS1lWNUhkcjBGOFY4d1JYWmk4b0xqcmtUMExjN0JJUGwybzgZD'
 });
 feed.run();
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.c6244b3559292899e8ab.js.map
+//# sourceMappingURL=main.febad4abd85fab353748.js.map
