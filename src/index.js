@@ -1079,7 +1079,7 @@ planAnitl
 
 var feed = new instafeed({
 
-  accessToken: 'IGQWRQazhIX29jZA0RBcUROZAVB4MWh3SlNzR2ZASTF84bXNGZAnc4dXRsZAVFLSk44NUszTl9ISlMtSWd0ZAXVQVVVHazZAqSmVMRk9EUnNJcHVTZAlZAOeDJCV2JKUXlucFIwZAkphMGhDYjdoNzVlR2M4Q2NPOG1DU0tKVkEZD',
+  accessToken: '',
   limit:8,
 });
 feed.run();
