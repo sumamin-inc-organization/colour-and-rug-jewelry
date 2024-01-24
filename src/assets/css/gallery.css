@@ -15,7 +15,7 @@
 .follow_btn {
   display: flex;
   align-items: end;
-  gap: 15px;
+  /* gap: 15px; */
 }
 .follow_btn p {
   color: #45484B;
@@ -47,7 +47,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 15px;
+  /* gap: 15px; */
 }
 .insta_flex a {
   width: calc(28% - 45px);
@@ -91,4 +91,64 @@
     }
     /* ここまで仮置き */
 
+}
+
+#instafeed {
+
+}
+#instafeed a {
+  width: 266px;
+  height: 266px;
+}
+
+#instafeed a > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#instafeed{
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(266px, 1fr)); 
+}
+
+@media(max-width:922px){
+  #instafeed{
+
+    gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(266px, 1fr)); 
+  }
+  
+}
+
+@media(max-width:600px){
+  #instafeed{
+
+    gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); 
+  }
+  #instafeed a {
+    width: 170px;
+    height: 170px;
+  }
+  
+}
+
+@media(max-width:380px){
+  #instafeed{
+
+    gap: 10px;
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+  }
+  #instafeed a {
+    width: 266px;
+    height: 266px;
+  }
+  
 }
