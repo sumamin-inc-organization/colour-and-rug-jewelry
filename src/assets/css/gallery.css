@@ -95,7 +95,7 @@
 
 
 #instafeed {
-
+/* border: 1px solid red; */
 }
 #instafeed a {
   width: 266px;
@@ -141,15 +141,12 @@
 @media(max-width:380px){
   #instafeed{
 
-    gap: 10px;
-    display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+    gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40vw, 1fr)); 
   }
   #instafeed a {
-    width: 266px;
-    height: 266px;
+    width: 150px;
+    height: 150px;
   }
-  
 }
