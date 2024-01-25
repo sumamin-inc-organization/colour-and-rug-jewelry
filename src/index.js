@@ -1081,5 +1081,6 @@ var feed = new instafeed({
 
   accessToken: '',
   limit:8,
+  template:'<a href="{{link}}" target="_blank"><img title="{{caption}}" src="{{image}}" /></a>'
 });
 feed.run();
