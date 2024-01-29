@@ -2833,6 +2833,32 @@ Recommended Bottom
 
 }
 
+#instafeed a {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+#instafeed a > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#instafeed{
+  gap: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media(max-width:768px){
+  #instafeed{
+    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 /*!**************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/faq.css ***!
   \**************************************************************************/
