@@ -93,28 +93,31 @@
 
 }
 
-#instafeed a {
+.j-stack a {
   width: 100%;
   height: auto;
   aspect-ratio: 1;
 }
 
-#instafeed a > img {
+.j-stack a > img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-#instafeed{
+.j-stack{
   gap: 12px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 @media(max-width:768px){
-  #instafeed{
+  .j-stack{
     gap: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 }
+
+
+/* starting point   .j-stack ==> #instafeed*/

@@ -1077,10 +1077,10 @@ planAnitl
 
 // insta
 
-var feed = new instafeed({
+// var feed = new instafeed({
 
-  accessToken: 'IGQWROeGZAEeEdlSFBsRGlQWm1tTVV2WjUwbTFaeXF5VHYwaXRHV1V4MkFNM2x6ZATVKZA2ZA3MHIxRkc2RGZAMRno1cDRmQ3pvNjgyaFM5WmJLSVNfRDhoSTZArUXp5WDNSZA1V6S3FROUY5Vloyd3pyTi1BbnBtY3VwS3cZD',
-  limit:8,
-  template:'<a href="{{link}}" target="_blank"><img title="{{caption}}" src="{{image}}" /></a>'
-});
-feed.run();
+//   accessToken: 'IGQWROeGZAEeEdlSFBsRGlQWm1tTVV2WjUwbTFaeXF5VHYwaXRHV1V4MkFNM2x6ZATVKZA2ZA3MHIxRkc2RGZAMRno1cDRmQ3pvNjgyaFM5WmJLSVNfRDhoSTZArUXp5WDNSZA1V6S3FROUY5Vloyd3pyTi1BbnBtY3VwS3cZD',
+//   limit:8,
+//   template:'<a href="{{link}}" target="_blank"><img title="{{caption}}" src="{{image}}" /></a>'
+// });
+// feed.run();
