@@ -35,6 +35,7 @@ import { CheckCurrentColor, changeLogoAttribute, updateColor } from "./assets/js
 import { changeHamburgerToBlack, changeHamburgerToWhite, changeOnlyHamburgerToBlack, changeOnlyHamburgerToWhite } from "./assets/js/changeHamburgerColor";
 import { changeOnlyRight } from "./assets/js/changeOnlyRightTrigger";
 import { changeHeadDecorToBlack, changeHeadDecorToWhite, changeTelToBlack, changeTelToWhite, changeTimeToBlack, changeTimeToWhite } from "./assets/js/otherColorCanges";
+import instafeed from "instafeed.js";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -1074,3 +1075,12 @@ planAnitl
   .fromTo(".newplan-anime_5",{ y:0,duration:1.5},{y:"100%"},"<")
   .from(".newplan-anim-txt",{ y:100,opacity: 0,duration:1.5});
 
+// insta
+
+var feed = new instafeed({
+
+  accessToken: 'IGQWROeGZAEeEdlSFBsRGlQWm1tTVV2WjUwbTFaeXF5VHYwaXRHV1V4MkFNM2x6ZATVKZA2ZA3MHIxRkc2RGZAMRno1cDRmQ3pvNjgyaFM5WmJLSVNfRDhoSTZArUXp5WDNSZA1V6S3FROUY5Vloyd3pyTi1BbnBtY3VwS3cZD',
+  limit:8,
+  template:'<a href="{{link}}" target="_blank"><img title="{{caption}}" src="{{image}}" /></a>'
+});
+feed.run();
