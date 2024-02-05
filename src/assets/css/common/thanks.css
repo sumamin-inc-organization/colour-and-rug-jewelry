@@ -13,3 +13,28 @@ height: 100dvh;
     position: absolute;
     bottom: 0;
 }
+.thanks-top{
+    margin-bottom: min(17.2px,1.1944vw );
+}
+.thanks-top_eng{
+    font-size: 14px;
+    letter-spacing: 0.18em;
+    text-align: center;
+    margin-bottom: min(20px,1.3889vw);
+}
+.thanks-top_jp{
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    text-align: center;
+}
+.decor{
+    height: 1px;
+    width: 100%;
+    background-color: #45484B;
+    margin-bottom: min(44.4px,3.0833vw );
+}
+.thanks-bottom{
+    text-align: center;
+    line-height:min(36px,2.5vw ) ;
+    font-size: 16px;
+}
