@@ -1,3 +1,15 @@
 body{
+height: 100dvh;
+}
 
+.thanks{
+    height: 100dvh;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    position: relative;
+}
+.company_name{
+    position: absolute;
+    bottom: 0;
 }
