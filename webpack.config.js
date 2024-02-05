@@ -1,20 +1,35 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const pages = [
+  "index",
+  "thanks",
+];
 
 module.exports = {
-  entry: './src/index.js',
+  entry: pages.reduce((config, page) => {
+    config[page] = `./src/${page}.js`;
+    return config;
+  }, {}),
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
+  },
   mode:'development',
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Color and Rug Jewelry',
-      filename:'index.html',
-      template:'src/index.html',
-    }),
-    new MiniCssExtractPlugin({
-      filename:"[name].css"  //add content hash for production
-    })
-  ],
+  plugins: [].concat(
+    pages.map(
+      (page) =>
+        new HtmlWebpackPlugin({
+          inject: true,
+          template: `./src/${page}.html`,
+          filename: `${page}.html`,
+          chunks: [page],
+          title: "COLOR & RUG-JEWELRY",
+        })
+    ),
+    new MiniCssExtractPlugin({ filename: "[name].css" }) // Add this line .[contenthash]
+  ),
   output:{
     path:path.resolve(__dirname,'dist'),
     filename:"[name].[contenthash].js",
