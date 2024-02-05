@@ -1090,10 +1090,6 @@ justify-content: space-between;
   margin-right: 4.39vw;
 }
 
-.kv_top .kv_title img{
-  width: 100%;
-}
-
 .kv_bottom {
   display: flex;
   justify-content: space-between;
@@ -2134,7 +2130,7 @@ Recommended Bottom
     text-align: center;
     font-size: 20px;
     margin: 20px 0 10px;
-    letter-spacing: 0.15rem;
+    letter-spacing: 0.2rem;
 }
 .color_box {
     color: #fff;
@@ -3897,4 +3893,4 @@ footer ul{
 
 
 
-/*# sourceMappingURL=main.css.map*/
+/*# sourceMappingURL=index.css.map*/
