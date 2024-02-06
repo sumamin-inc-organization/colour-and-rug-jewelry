@@ -14,7 +14,13 @@ height: 100dvh;
     bottom: 0;
 }
 .thanks-top{
-    margin-bottom: min(17.2px,1.1944vw );
+    /* margin-bottom: min(17.2px,1.1944vw ); */
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: min(44.4px,3.0833vw );
 }
 .thanks-top_eng{
     font-size: 14px;
@@ -26,6 +32,11 @@ height: 100dvh;
     font-size: 20px;
     letter-spacing: 0.06em;
     text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: min(17.2px,1.1944vw );
+    width: min-content;
+    text-wrap: nowrap;
+    /* border: 1px solid black; */
 }
 .decor{
     height: 1px;
@@ -37,6 +48,9 @@ height: 100dvh;
     text-align: center;
     line-height:max(36px,2.5vw ) ;
     font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width:500px){
@@ -48,12 +62,14 @@ height: 100dvh;
     .thanks-top_jp{
         font-size:min(20px,4.6154vw);
         letter-spacing: 0.06em;
-    }
-    .thanks-top{
         margin-bottom: min(17.2px,4.4103vw );
     }
-    .decor{
+    .thanks-top{
+        /* margin-bottom: min(17.2px,4.4103vw ); */
         margin-bottom: min(35.2px,9.0256vw );
+    }
+    .decor{
+        /* margin-bottom: min(35.2px,9.0256vw ); */
     }
     .thanks-bottom{
         line-height:min(36px,9.2308vw ) ;
