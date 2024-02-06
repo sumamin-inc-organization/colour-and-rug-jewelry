@@ -32,10 +32,17 @@ height: 100dvh;
     font-size: 20px;
     letter-spacing: 0.06em;
     text-align: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #45484B;
     padding-bottom: min(17.2px,1.1944vw );
     width: min-content;
     text-wrap: nowrap;
+    /* Standard syntax */
+
+white-space: nowrap;
+
+/* Vendor prefixes for older versions of iOS/Webkit */
+
+-webkit-white-space: nowrap;
     /* border: 1px solid black; */
 }
 .decor{
