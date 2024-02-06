@@ -1,0 +1,597 @@
+/*!***********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/reset.css ***!
+  \***********************************************************************************/
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing rules 
+   ボックスサイジングのルール */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Remove default margin 
+      デフォルトのマージンを削除する */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+li {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* Remove default padding 
+      デフォルトのマージンを削除する */
+ul {
+  padding-inline-start: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed.
+      ul、ol要素のリストスタイルを削除する。リストの役割が指定されているため、デフォルトのスタイリングが削除されます */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults 
+      コアルートのデフォルトを設定する */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults 
+      コアボディのデフォルトを設定する */
+body {
+  min-height: 100dvh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles 
+      class属性を持たない"a"要素にはデフォルトのスタイルが適用されます */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with
+      画像の操作を容易にする */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons
+      入力フィールドとボタンにフォントを継承させる  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them.
+   アニメーション、トランジション、スムーズスクロールを全て削除し、それらを見たくない人のために設定します  */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* hide overflow x 
+   横方向のオーバーフローを非表示にする*/
+html,
+body {
+  overflow-x: clip;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+
+
+/*!**************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/utillity.css ***!
+  \**************************************************************************************/
+/* ------------------- */
+/* Utility             */
+/* ------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  color: #45484B;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/*----------------------------
+    Main Grid
+    メイングリッド
+----------------------------*/
+/* コンテンツ幅1100px */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1100px 1fr;
+}
+
+/* 中央に配置 */
+.main-grid-column-2 {
+  grid-column: 2;
+}
+
+/* メイングリッドの3つのカラムすべてを占有する */
+.main-grid-column-1_4 {
+  grid-column: 1 / 4;
+}
+
+/* 左寄せ */
+.main-grid-column-1_3 {
+  grid-column: 1 / 3;
+}
+
+.main-grid-column-2_3 {
+  grid-column: 2 / 3;
+}
+
+/*----------------------------
+    Section Buttons - black
+    セクションボタン - 黒
+----------------------------*/
+
+.black-btn {
+  border: none;
+  background-color: #45484B;
+  position: relative;
+}
+
+.black-btn:hover {
+  /* background-color: #C38C80; */
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.black-btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.black-btn::after {
+  content: url(./images/btn-chevron.svg);
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  z-index: 3;
+}
+
+/*----------------------------
+    Section Buttons - White
+    セクションボタン - 白
+----------------------------*/
+
+.white-btn {
+  border: none;
+  background-color: white;
+  position: relative;
+}
+
+.white-btn a {
+  text-decoration: none;
+  color: #45484B;
+  font-weight: 500;
+}
+.white-btn:hover {
+  cursor: pointer;
+  /* background-color: #EFE3E0; */
+  transition: 0.3s;
+}
+
+.white-btn::after {
+  content: url(./images/btn-chevron_white.svh.svg);
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  z-index: 3;
+}
+
+/*----------------------------
+    company_name 
+    流れる会社名
+----------------------------*/
+
+.company_name {
+  font-size: 136px;
+  color: #E2D0CA;
+  letter-spacing: 13px;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  width: 100%;
+  white-space: nowrap;
+  z-index: 1;
+}
+.company_name ul {
+  animation: flowing 100s linear infinite;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+}
+.company_name ul li {
+  display: inline-block;
+  padding-right: 30px;
+}
+.and_text{
+  font-size: 85px;
+}
+/* @keyframes flowing {
+  100% {
+    transform: translate(-50%);
+  }
+} */
+.scroller{
+  max-width: 100vw;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+@media (max-width: 768px) {
+  .company_name{
+    font-size: 68px;
+    letter-spacing: 0;
+    font-weight: 100;
+  }
+  .and_text{
+    font-size: 40px;
+}
+}
+
+/*----------------------------
+    Responsive 
+    レスポンシブ
+----------------------------*/
+
+/* スクリーン幅が767x以下のデバイスでのみ表示 */
+.mobile-only{
+    display: none ;
+}
+/* スクリーン幅が767pxより大きいデバイスでのみ表示 */
+.pc-only{
+    display: block;
+}
+.sp_425{
+  display: none;
+}
+
+@media(max-width:768px){
+  .mobile-only{
+    display: block;
+  }
+  .pc-only{
+    display: none;
+  }
+  /* SPテキストのみ左右30pxのpadding */
+  .sp_padding{
+    width: 85vw;
+    margin: auto !important;
+  }
+  /* SPテキスト幅調整 */
+  .sp_justify{
+    text-align: justify !important;
+  }
+}
+@media (max-width:425px){
+  .sp_425{
+    display: block;
+  }
+}
+/*----------------------------
+    Main Grid
+    メイングリッド tab〜mobile
+----------------------------*/
+@media (max-width: 1200px) {
+    .main-grid{
+        display: grid;
+        grid-template-columns: 1fr 90% 1fr;
+    }
+}
+
+.inline-block{
+  display: inline-block;
+}
+
+.display-none{
+  display: none;
+}
+
+.opacity-0{
+  opacity: 0;
+}
+
+
+
+#keyvisual,
+#recommended,
+#inspiration,
+#advantage,
+#consultancy,
+#item,
+#flow,
+#gallery,
+#faq,
+#form
+{
+  background-color: #FFFF;
+}
+
+
+/*!****************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/typography.css ***!
+  \****************************************************************************************/
+/* ------------------- */
+/* TYPOGRAPHY          */
+/* ------------------- */
+
+/*----------------------------
+    Font Style /フォントのスタイル 
+  ----------------------------*/
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+.font-zenkaku {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+}
+.font-zenold {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 400;
+}
+.font-bellefair {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+}
+.font-josefin {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+}
+
+/*----------------------------
+  Font weight /フォントの太さ 
+----------------------------*/
+.medium {
+  /* ミディアム */
+  font-weight: 500;
+}
+
+/*----------------------------
+    Font Sizes / フォントサイズ
+  ----------------------------*/
+.fs-11{
+  font-size: 11px;
+}
+.fs-14 {
+  font-size: 14px;
+}
+.fs-16 {
+  font-size: 16px;
+}
+.fs-18{
+  font-size: 18px;
+}
+.fs-20 {
+  font-size: 20px;
+}
+.fs-24 {
+  font-size: 24px;
+}
+.fs-25 {
+  font-size: 25px;
+}
+.fs-29 {
+  font-size: 29px;
+}
+.fs-30 {
+  font-size: 30px;
+}
+.fs-39 {
+  font-size: 39px;
+}
+.fs-55 {
+  font-size: 55px;
+}
+.fs-65 {
+  font-size: 65px;
+}
+.fs-85 {
+  font-size: 85px;
+}
+.fs-105 {
+  font-size: 105px;
+}
+.fs-136 {
+  font-size: 136px;
+}
+
+/*----------------------------
+    Font Colors / フォントの色"
+  ----------------------------*/
+
+.white {
+  color: #ffffff;
+}
+.gray {
+  color: #45484B;
+}
+.light-gray {
+  color: #b8b7b6;
+}
+.brown {
+  color: #c38c80;
+}
+.black {
+  color: #45484B;
+}
+
+/*---------------------------------
+  letter spacing
+----------------------------------*/
+.letter-spacing-30{
+  letter-spacing: 0.06em;
+}
+.letter-spacing-01{
+  letter-spacing: 0.1rem;
+}
+.letter-spacing-02{
+  letter-spacing: 0.2rem;
+}
+
+/*---------------------------------
+  Section Title / セクションタイトル
+----------------------------------*/
+.sec_title{
+  font-family: 'Zen Old Mincho', serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.7;
+  letter-spacing: 0.15rem;
+  padding-bottom: 60px;
+}
+
+.sec_title_en{
+  font-family: 'Bellefair', serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 2.5px;
+  padding-bottom: 30px;
+}
+
+/* ------------------- */
+/* MOBILE              */
+/* ------------------- */
+
+/*-------------------------------------------------
+  Section Title - Mobile/ セクションタイトル - モバイル
+---------------------------------------------------*/
+
+@media (max-width: 767px) {
+  /* PC     -> 30px 
+   mobile -> 22px */
+  .sec_title{
+    font-size: 22px;
+    padding-bottom: 45px;
+  }
+  /* PC     -> 16px 
+   mobile -> 14px */
+  .sec_title_en {
+    font-size: 14px;
+    padding-bottom: 20px;
+  }
+}
+
+/*!************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/thanks.css ***!
+  \************************************************************************************/
+body{
+height: 100dvh;
+}
+
+.thanks{
+    height: 100dvh;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    position: relative;
+}
+.company_name{
+    position: absolute;
+    bottom: 0;
+}
+.thanks-top{
+    margin-bottom: min(17.2px,1.1944vw );
+}
+.thanks-top_eng{
+    font-size: 14px;
+    letter-spacing: 0.18em;
+    text-align: center;
+    margin-bottom: min(20px,1.3889vw);
+}
+.thanks-top_jp{
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    text-align: center;
+}
+.decor{
+    height: 1px;
+    width: 100%;
+    background-color: #45484B;
+    margin-bottom: min(44.4px,3.0833vw );
+}
+.thanks-bottom{
+    text-align: center;
+    line-height:max(36px,2.5vw ) ;
+    font-size: 16px;
+}
+
+@media (max-width:500px){
+    .thanks-top_eng{
+        font-size: min(14px,3.5897vw);
+        letter-spacing: 0.18em;
+        margin-bottom: min(22px,5.641vw);
+    }
+    .thanks-top_jp{
+        font-size:min(20px,4.6154vw);
+        letter-spacing: 0.06em;
+    }
+    .thanks-top{
+        margin-bottom: min(17.2px,4.4103vw );
+    }
+    .decor{
+        margin-bottom: min(35.2px,9.0256vw );
+    }
+    .thanks-bottom{
+        line-height:min(36px,9.2308vw ) ;
+        font-size: min(16px,4.1026vw);
+    }
+}
+
+/*# sourceMappingURL=thanks.css.map*/
