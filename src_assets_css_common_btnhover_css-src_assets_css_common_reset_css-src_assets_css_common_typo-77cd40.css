@@ -1,0 +1,1666 @@
+/*!***********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/reset.css ***!
+  \***********************************************************************************/
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing rules 
+   ボックスサイジングのルール */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Remove default margin 
+      デフォルトのマージンを削除する */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+li {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* Remove default padding 
+      デフォルトのマージンを削除する */
+ul {
+  padding-inline-start: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed.
+      ul、ol要素のリストスタイルを削除する。リストの役割が指定されているため、デフォルトのスタイリングが削除されます */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults 
+      コアルートのデフォルトを設定する */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults 
+      コアボディのデフォルトを設定する */
+body {
+  min-height: 100dvh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles 
+      class属性を持たない"a"要素にはデフォルトのスタイルが適用されます */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with
+      画像の操作を容易にする */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons
+      入力フィールドとボタンにフォントを継承させる  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them.
+   アニメーション、トランジション、スムーズスクロールを全て削除し、それらを見たくない人のために設定します  */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* hide overflow x 
+   横方向のオーバーフローを非表示にする*/
+html,
+body {
+  overflow-x: clip;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+
+
+/*!**************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/utillity.css ***!
+  \**************************************************************************************/
+/* ------------------- */
+/* Utility             */
+/* ------------------- */
+
+html {
+  /* scroll-behavior: smooth; */
+}
+body {
+  color: #45484B;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/*----------------------------
+    Main Grid
+    メイングリッド
+----------------------------*/
+/* コンテンツ幅1100px */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1100px 1fr;
+}
+
+/* 中央に配置 */
+.main-grid-column-2 {
+  grid-column: 2;
+}
+
+/* メイングリッドの3つのカラムすべてを占有する */
+.main-grid-column-1_4 {
+  grid-column: 1 / 4;
+}
+
+/* 左寄せ */
+.main-grid-column-1_3 {
+  grid-column: 1 / 3;
+}
+
+.main-grid-column-2_3 {
+  grid-column: 2 / 3;
+}
+
+/*----------------------------
+    Section Buttons - black
+    セクションボタン - 黒
+----------------------------*/
+
+.black-btn {
+  border: none;
+  background-color: #45484B;
+  position: relative;
+}
+
+.black-btn:hover {
+  /* background-color: #C38C80; */
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.black-btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.black-btn::after {
+  content: url(./images/btn-chevron.svg);
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  z-index: 3;
+}
+
+/*----------------------------
+    Section Buttons - White
+    セクションボタン - 白
+----------------------------*/
+
+.white-btn {
+  border: none;
+  background-color: white;
+  position: relative;
+}
+
+.white-btn a {
+  text-decoration: none;
+  color: #45484B;
+  font-weight: 500;
+}
+.white-btn:hover {
+  cursor: pointer;
+  /* background-color: #EFE3E0; */
+  transition: 0.3s;
+}
+
+.white-btn::after {
+  content: url(./images/btn-chevron_white.svh.svg);
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  z-index: 3;
+}
+
+/*----------------------------
+    company_name 
+    流れる会社名
+----------------------------*/
+
+.company_name {
+  font-size: 136px;
+  color: #E2D0CA;
+  letter-spacing: 13px;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  width: 100%;
+  white-space: nowrap;
+  z-index: 1;
+}
+.company_name ul {
+  animation: flowing 100s linear infinite;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+}
+.company_name ul li {
+  display: inline-block;
+  padding-right: 30px;
+}
+.and_text{
+  font-size: 85px;
+}
+/* @keyframes flowing {
+  100% {
+    transform: translate(-50%);
+  }
+} */
+.scroller{
+  max-width: 100vw;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+@media (max-width: 768px) {
+  .company_name{
+    font-size: 68px;
+    letter-spacing: 0;
+    font-weight: 100;
+  }
+  .and_text{
+    font-size: 40px;
+}
+}
+
+/*----------------------------
+    Responsive 
+    レスポンシブ
+----------------------------*/
+
+/* スクリーン幅が767x以下のデバイスでのみ表示 */
+.mobile-only{
+    display: none ;
+}
+/* スクリーン幅が767pxより大きいデバイスでのみ表示 */
+.pc-only{
+    display: block;
+}
+.sp_425{
+  display: none;
+}
+
+@media(max-width:768px){
+  .mobile-only{
+    display: block;
+  }
+  .pc-only{
+    display: none;
+  }
+  /* SPテキストのみ左右30pxのpadding */
+  .sp_padding{
+    width: 85vw;
+    margin: auto !important;
+  }
+  /* SPテキスト幅調整 */
+  .sp_justify{
+    text-align: justify !important;
+  }
+}
+@media (max-width:425px){
+  .sp_425{
+    display: block;
+  }
+}
+/*----------------------------
+    Main Grid
+    メイングリッド tab〜mobile
+----------------------------*/
+@media (max-width: 1200px) {
+    .main-grid{
+        display: grid;
+        grid-template-columns: 1fr 90% 1fr;
+    }
+}
+
+.inline-block{
+  display: inline-block;
+}
+
+.display-none{
+  display: none;
+}
+
+.opacity-0{
+  opacity: 0;
+}
+
+
+
+#keyvisual,
+#recommended,
+#inspiration,
+#advantage,
+#consultancy,
+#item,
+#flow,
+#gallery,
+#faq,
+#form
+{
+  background-color: #FFFF;
+}
+
+
+/*!****************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/typography.css ***!
+  \****************************************************************************************/
+/* ------------------- */
+/* TYPOGRAPHY          */
+/* ------------------- */
+
+/*----------------------------
+    Font Style /フォントのスタイル 
+  ----------------------------*/
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+.font-zenkaku {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+}
+.font-zenold {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 400;
+}
+.font-bellefair {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+}
+.font-josefin {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+}
+
+/*----------------------------
+  Font weight /フォントの太さ 
+----------------------------*/
+.medium {
+  /* ミディアム */
+  font-weight: 500;
+}
+
+/*----------------------------
+    Font Sizes / フォントサイズ
+  ----------------------------*/
+.fs-11{
+  font-size: 11px;
+}
+.fs-14 {
+  font-size: 14px;
+}
+.fs-16 {
+  font-size: 16px;
+}
+.fs-18{
+  font-size: 18px;
+}
+.fs-20 {
+  font-size: 20px;
+}
+.fs-24 {
+  font-size: 24px;
+}
+.fs-25 {
+  font-size: 25px;
+}
+.fs-29 {
+  font-size: 29px;
+}
+.fs-30 {
+  font-size: 30px;
+}
+.fs-39 {
+  font-size: 39px;
+}
+.fs-55 {
+  font-size: 55px;
+}
+.fs-65 {
+  font-size: 65px;
+}
+.fs-85 {
+  font-size: 85px;
+}
+.fs-105 {
+  font-size: 105px;
+}
+.fs-136 {
+  font-size: 136px;
+}
+
+/*----------------------------
+    Font Colors / フォントの色"
+  ----------------------------*/
+
+.white {
+  color: #ffffff;
+}
+.gray {
+  color: #45484B;
+}
+.light-gray {
+  color: #b8b7b6;
+}
+.brown {
+  color: #c38c80;
+}
+.black {
+  color: #45484B;
+}
+
+/*---------------------------------
+  letter spacing
+----------------------------------*/
+.letter-spacing-30{
+  letter-spacing: 0.06em;
+}
+.letter-spacing-01{
+  letter-spacing: 0.1rem;
+}
+.letter-spacing-02{
+  letter-spacing: 0.2rem;
+}
+
+/*---------------------------------
+  Section Title / セクションタイトル
+----------------------------------*/
+.sec_title{
+  font-family: 'Zen Old Mincho', serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.7;
+  letter-spacing: 0.15rem;
+  padding-bottom: 60px;
+}
+
+.sec_title_en{
+  font-family: 'Bellefair', serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 2.5px;
+  padding-bottom: 30px;
+}
+
+/* ------------------- */
+/* MOBILE              */
+/* ------------------- */
+
+/*-------------------------------------------------
+  Section Title - Mobile/ セクションタイトル - モバイル
+---------------------------------------------------*/
+
+@media (max-width: 767px) {
+  /* PC     -> 30px 
+   mobile -> 22px */
+  .sec_title{
+    font-size: 22px;
+    padding-bottom: 45px;
+  }
+  /* PC     -> 16px 
+   mobile -> 14px */
+  .sec_title_en {
+    font-size: 14px;
+    padding-bottom: 20px;
+  }
+}
+
+/*!*****************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/header.css ***!
+  \*****************************************************************************/
+/* ------------------- */
+/* HEADER            */
+/* ------------------- */
+
+/*----------------------------------
+  Header alignment and positioning
+  ヘッダーの配置と位置合わせ
+------------------------------------*/
+
+header {
+  width: 100vw;
+  position: fixed;
+  top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 8001;
+}
+.header_right {
+  height: 100%;
+  display: flex;
+  align-items: center
+}
+
+/*----------------------------------
+   Header Paddings
+   ヘッダーのパディング
+------------------------------------*/
+
+header {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+@media screen and (max-width:768px){
+  header{
+    padding: 0 20px;
+    top: 20px;
+  }
+}
+
+/*----------------------------------
+   Header Margins
+   ヘッダーのパディング
+------------------------------------*/
+
+.header-tel_img {
+  margin-right: 12px;
+}
+
+.header-info {
+  margin-right: 24px;
+}
+.header-decor {
+  margin-right: 30px;
+}
+
+/*----------------------------------
+   Header Decor
+   ヘッダーデコレーション
+------------------------------------*/
+
+.header-decor {
+  width: 1px;
+  background-color: #45484b;
+}
+
+/*----------------------------------
+   Header Button
+   ヘッダーボタン
+------------------------------------*/
+
+.header-btn {
+  display: grid;
+  place-content: center;
+  letter-spacing: 0.2rem;
+  width: 170px;
+  height: 40px;
+}
+.header-btn::after {
+    top: 14px;
+    right: 12px;
+}
+
+
+/*----------------------------------
+   Header Heights
+   ヘッダー要素の高さ
+------------------------------------*/
+.header-info {
+    height: 40px;
+    /* border: 1px solid red; */
+  }
+  .header-decor {
+   height: 40px;
+  }
+
+
+/*----------------------------------
+  Header Typography
+  ヘッダーのタイポグラフィ
+------------------------------------*/
+
+.tel-number{
+  letter-spacing: 0.25px;
+  transform: translateY(-10px);
+}
+
+.tel-number a{
+  color: #45484B;
+}
+
+.time {
+  letter-spacing: 1.96px;
+  transform: translateY(-15px);
+}
+
+@media (max-width:500px) {
+  .logo{
+    width: 70.9px;
+  }
+}
+
+@media(max-width:768px){
+  .trigger-logo{
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
+/*!**************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/nav.css ***!
+  \**************************************************************************/
+/* ------------------- */
+/*           NAV       */
+/* ------------------- */
+
+
+/*----------------------------------
+  Hamburger Menu
+    ハンバーガーメニュー
+------------------------------------*/
+
+.menu_icon {
+  width: 30.5px;
+  height: 19.5px;
+  margin: auto;
+  z-index: 10;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  margin-left: 20px;
+  z-index: 9000;
+}
+
+.container:hover,
+.menu_icon:hover{
+  cursor: pointer;
+}
+  .menu_icon span {
+    position: absolute;
+    display: block;
+    height: 1px; /* Adjusted height for the spans */
+    width: 30.5px; /* Width remains the same */
+    transform: rotate(0);
+  }
+  .one,
+  .three {
+    /* background-color: #45484B;  here */
+  }
+  
+  .two {
+    width: 30.5px;
+    height: 5px;
+    z-index: 10;
+    position: relative;
+    display: flex;
+    background-color: none;
+  }
+  
+  .two span {
+    position: absolute;
+    display: block;
+    height: 1px;
+    width: 20px;
+    /* background-color: #45484B; here */
+    transform: rotate(0);
+  }
+  
+  .two span:nth-child(2) {
+    right: 0;
+  }
+  
+  .two span:nth-child(1),
+  .two span:nth-child(2) {
+    transform: translateX(0);
+    transition: all 200ms 500ms ease,background-color 200ms;
+    /* transition: all 200ms 500ms ease; */
+
+  }
+  
+  span.one {
+    top: 0px;
+    /* transition: all 200ms cubic-bezier(0.895, 0.03, 0.685, 0.22),background-color 0ms; */
+    transition: all 200ms cubic-bezier(0.895, 0.03, 0.685, 0.22)
+    
+  }
+  
+  span.two {
+    top: 8.5px; /* Adjusted top position */
+    /* transition: all 400ms cubic-bezier(0.895, 0.03, 0.685, 1.92),background-color 0ms; */
+    transition: all 200ms cubic-bezier(0.895, 0.03, 0.685, 0.22)
+  }
+  
+  span.three {
+    bottom: 0; /* Adjusted position to align at the bottom */
+    /* transition: all 500ms cubic-bezier(0.895, 0.03, 0.685, 0.22); */
+    transition: all 200ms cubic-bezier(0.895, 0.03, 0.685, 0.22)  }
+  
+  /* Adjusted styles for clicked state */
+  .clicked .one {
+    transform: translateY(12px) rotate(45deg); /* Adjusted translation and rotation */
+    background-color: white;
+  }
+  
+  .clicked .three {
+    transform: translateY(-7px) rotate(-45deg); /* Adjusted translation and rotation */
+    background-color: white;
+  }
+  
+  .clicked .two span:nth-child(1) {
+    transform: translateX(10px); /* Adjusted translation */
+    background-color: white;
+    opacity: 0;
+  }
+  
+  .clicked .two span:nth-child(2) {
+    transform: translateX(-10px); /* Adjusted translation */
+    background-color: white;
+    opacity: 0;
+  }
+
+  .hidden-span{
+    opacity:0 !important;
+  }
+
+/*----------------------------------
+   Main Nav(PC)
+   メインナビゲーション(PC)
+------------------------------------*/
+
+.primary-nav{
+    z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  background-color:#45484B ;
+  width: 100vw;
+}
+
+.primary-nav_img{
+  width: 45vw;
+  height: 100vh;
+}
+.primary-nav_hero{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/*----------------------------------
+  Main Nav(PC)  - Nav Links
+  メインナビ(PC) - ナビゲーションリンク
+------------------------------------*/
+
+.primary-nav_list{
+  width: 55vw;
+  display: grid;
+  padding: 95px 132.5px 102.8px 133.5px;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 60px;
+}
+
+.primary-nav_reservation{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  gap: 60px;
+}
+
+.primary_book{
+  display: grid;
+  place-content: center;
+  width: calc(100% - 12.5%);
+  height: 60px;
+}
+
+.primary_book::after{
+  top:24px;
+  right: 20px;
+}
+
+.primary-contact{
+  position: relative;
+  width: calc(100% - 12.5%);
+}
+
+.primary-contact::before{
+  content: "";
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top:-20px;
+  left: 0;
+  background-color: white;
+}
+
+.nav-link{
+  border-bottom: 1px solid white;
+  display: flex;
+  align-items: center;
+}
+
+.primary-link,
+.hamburger_insta{
+  transition: opacity 0.6s;
+}
+
+.primary-link:hover,
+.hamburger_insta:hover{
+  opacity: .6;
+}
+
+.sns{
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.sns img{
+  width: 30px;
+  height: 30px;
+}
+
+.hamburger_insta{
+  display: flex;
+  gap: 15px;
+  align-items: end;
+  color: #fff;
+}
+
+.primary-nav_reservation{
+  grid-column: 1/3;
+}
+
+.primary-nav_transition{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #45484B;
+  z-index: 8000;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+}
+
+.primary-nav{
+  opacity: 0;
+}
+
+@media(min-width:1500px){
+  .primary-nav_list{
+    width: 1200px;
+  }
+  .primary-nav_img{
+    width: 100%;
+  }
+}
+@media(max-width:1225px){
+  .primary-nav_list{
+    padding: 95px 60px 102.8px 60px;
+  }
+}
+@media(max-width:950px){
+  .primary-nav_list{
+    padding: 95px 40px 102.8px 40px;
+    column-gap: 40px;
+  }
+}
+@media(max-width:840px){
+  .primary-nav_list{
+    padding: 95px 30px 102.8px 30px;
+    column-gap: 20px;
+  }
+}
+@media(max-width:768px){
+  .header-btn{
+    display: none;
+  }
+}
+
+/*----------------------------------
+  Main Nav(SP)
+  メインナビゲーション(SP)
+------------------------------------*/
+
+
+@media(max-width:768px) {
+  .primary-nav_list{
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    overflow-y: visible;
+    padding: 100px 40px 170px 40px;
+  }
+  .primary-nav_list{
+    display: flex;
+    flex-direction: column;
+  
+  }
+  .primary-nav_reservation{
+    display: none;
+  }
+  .nav-link{
+    padding-bottom: 16px;
+    padding-top: 16px;
+  }
+  .sns{
+    padding-top: 30px;
+  }
+}
+/*----------------------------------
+   Main Nav(SP)-bottom banner
+   メインナビゲーション(SP)-下部バナー
+------------------------------------*/
+.primary-nav-bottom_sp{
+position: fixed;
+bottom: 0;
+width: 100%;
+background-color: #FFFFFF;
+padding: 14.5px 25px 15px 25px;
+}
+
+.nav-bottom-inner{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.nav-bottom-inner-iconflex{
+  display: flex;
+  justify-content: start;
+}
+.bottom-nav-btn{
+  padding: 7.6px 0 8.4px;
+  height: 40px;
+  width: 160px;
+  display: grid;
+  place-content: center;
+}
+
+.bottom-nav-btn::after{
+  display: none;
+}
+
+.location-img{
+  width: 17.53px;
+  height: 24.41px;
+}
+
+.tel-img{
+  width: 18px;
+  height: 18px;
+}
+
+.location,
+.tel-no{
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  width: 70px;
+  height: 40px;
+  border-right: 1px solid #45484B;
+  letter-spacing: 0.1rem;
+}
+
+.tel-no{
+  margin-right: 30px;
+  justify-content: space-between;
+  gap: 11.5px;
+}
+
+.primary-contact.bottom-btn{
+  background-color: transparent;
+}
+
+
+.tel.header-tel-white::before{
+  content: url(./images/tel-white.png);
+  width: 20px;
+  height: 20px;
+}
+
+.nav-logo-img{
+  display: none;
+}
+
+
+/* hamburger line colors */
+
+.hamburger_line{
+  background-color:#45484B;
+}
+
+
+
+/* FIX TO NAVLINKS NOT WORKING ON ANDROID CHROME */
+
+@media (max-height: 720px) {
+  .primary-nav_list {
+    overflow-y: scroll !important;
+  }
+}
+
+@media (max-device-height: 720px) {
+  .primary-nav_list {
+    overflow-y: scroll !important;
+  }
+}
+
+/*!******************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/contact.css ***!
+  \******************************************************************************/
+#contact{
+    background-color: #E2D0CA;
+    padding-top: 138px;
+    padding-bottom: 144px;
+}
+
+
+.contact-title{
+    margin-bottom: 25px;
+}
+
+.contact-main{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+/*----------------------------
+    Left Side (pc)
+    左側（PC）
+----------------------------*/
+
+.contact-top{
+    width: 525px;
+}
+.cont-top{
+    padding-bottom: 10px;
+}
+.cont-left{
+    /* min-height: 294px;
+    min-width: 277px; */
+    width: 60%;
+    aspect-ratio: 27 / 29;
+    object-fit: cover;
+}
+.cont-right{
+    /* min-height: 294px;
+    min-width: 237px; */
+    width: 40%;
+    height: auto;
+    aspect-ratio: 23 / 29;
+    object-fit: cover;
+}
+
+.cont-bottom-img{
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+    height: 295px;
+}
+
+
+/*----------------------------
+    Right Side (pc)
+    右側（PC）
+----------------------------*/
+
+.contact-bottom{
+    width: 45%;
+}
+.contact-bottom_info{
+    margin-bottom: 20px;
+}
+
+/*----------------------------
+    Main Content Title
+    メインコンテンツのタイトル
+----------------------------*/
+
+.contact-bottom-title_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-title-left{
+    margin-right: 20px;
+}
+
+.contact-info_heading{
+    border-bottom: 1px solid #45484B;
+    margin-bottom: 11px;
+}
+
+.contact-medium{
+    font-weight: 500;
+}
+
+.contact-closed_title,
+.contact-about_title ,
+.contact-address_title{
+    margin-bottom: 11px;
+}
+
+.contact-about_title{
+    letter-spacing: 0.1rem;
+}
+
+/*----------------------------
+    Main Content Descriptions
+    メインコンテンツのタイトル
+----------------------------*/
+.cont-main-desc{
+    line-height: 30px;
+}
+.postal{
+    margin-bottom: 10px;
+}
+
+/*----------------------------
+    Contact Section Buttons
+    Contactセクションのボタン
+----------------------------*/
+
+.contact-bottom_btn-container{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    column-gap: 10px;
+    gap: 10px;
+}
+
+.contact-bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 20px;
+}
+
+.bottom-btn{
+    padding-top: 10px;
+    background-color: #FFFFFF;
+    grid-column: 1/3;
+    display: grid;
+    place-content: center;
+    height: 80px;
+}
+.bottom-btn:hover{
+    cursor: pointer;
+    background-color: #45484B;
+    color:#FFFFFF ;
+    transition: 0.3s;
+}
+.contact-btn_top{
+    display: grid;
+    place-items: center;
+}
+.contact-btn_top::after{
+    right: 20px;
+    top: 14px;
+}
+.cont-top_black{
+    padding: 7px 0 9px;
+}
+
+.cont-bottom-btn_description,
+.cont-bottom-btn_data{
+    text-align: center;
+}
+
+.cont-bottom-btn_data{
+    display: flex;
+    align-items: center;
+}
+
+.tel::before{
+    content: url(./images/contact-telicon.svg);
+    margin-right: 7px;
+}
+#tempA:hover .tel::before{
+    content: url(./images/contact-telicon_white.svg);
+}
+
+
+@media (max-width:1200px){
+    .cont-bottom-btn_data{
+        flex-flow: column;
+    }
+    .bottom-btn{
+        height: auto;
+        padding: 10px;
+    }
+}
+@media (max-width:1120px){
+    .contact-top{
+        width: 450px;
+    }
+    .cont-top_black{
+        padding: 7px 0 9px ;
+    }
+}
+@media (max-width:1000px){
+    .contact-top{
+        width: 360px;
+    }
+}
+
+/* ------------------- */
+/*       MOBILE        */
+/* ------------------- */
+
+@media (max-width:768px){
+    .contact-main{
+        flex-direction: column;
+    }
+    .contact-title{
+        margin-bottom: 0;
+    }
+    #contact{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .cont-top{
+        padding: 0;
+    }
+    .cont-bottom-img{
+        height: 180px;
+    }
+
+    .contact-btn_top::after{
+        right: 15px;
+        top: 15px;
+    }
+}
+
+
+/*----------------------------------------
+    Left Side  ==> Top Side (mobile)
+    左側 ==> 上側（モバイル）
+------------------------------------------*/
+ @media (max-width:768px){
+    .contact-top{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 10px;
+        margin-bottom: 48.6px;
+    }
+    
+    .cont-top{
+        grid-column: 1/3;
+    }
+    .cont-left{
+        min-height: 180px;
+        min-width: 190px;
+    }
+    .cont-right{
+        /* grid-column: 2/3; */
+        min-height: 180px;
+        min-width: 150px;
+    }
+    .cont-bottom-img{
+        display: flex;
+        gap: 10px;
+        width: 90vw;
+    }
+}
+
+/*----------------------------------------
+    Right Side  ==> Bottom Side (mobile)
+    右側 ==> 下側（モバイル）
+------------------------------------------*/
+
+
+@media (max-width:768px){
+    .contact-bottom{
+        width: 100%;
+    }
+    .contact-bottom-title_container{
+        display: flex;
+        justify-content: flex-start;
+        width: 51.28vw;
+    }
+    .contact-bottom_info{
+        margin-bottom: 25px;
+    }
+    .bottom-btn{
+        height: auto;
+        padding: 15px 0;
+    }
+}
+
+@media(max-width:500px){
+    .contact-about_title{
+        letter-spacing: 0;
+    }
+    .cont-title-left{
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .cont-title-right{
+        font-size: 16px;
+    }
+}
+
+
+
+/*!*****************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/footer.css ***!
+  \*****************************************************************************/
+@charset "utf-8";
+
+
+footer{
+    color: #fff;
+    background-color: #45484B;
+    padding: 80px 100px;
+    letter-spacing: 0.1rem;
+}
+footer ul{
+    list-style: none;
+}
+.footer_top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    gap: 40px;
+}
+.footer_address{
+    line-height: 2;
+    padding-top: 1px;
+}
+.footer_logo{
+    margin-bottom: 25px;
+    width: 88px;
+}
+.footer_menu{
+    min-width: 260px;
+}
+.footer_menu p{
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    border-bottom: solid #fff 1px;
+}
+.footer_menu_content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: space-between;
+}
+.footer_menu_item{
+    display: flex;
+    flex-flow: column;
+    gap: 22px;
+}
+.instagram_arrow{
+    display: inline-block;
+    width: 16px;
+}
+.copy{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.copy p{
+    font-size: 14px;
+}
+.totop{
+    display: flex;
+    align-items: center;
+    /* gap: 15px; */
+    justify-content: center;
+}
+.totop a{
+    padding-top: 5px;
+    color: #fff;
+}
+
+.totop img{
+    margin-left: 15px;
+}
+
+.footer_menu a,
+.totop a{
+    color: #fff;
+    position: relative;
+}
+
+.footer_menu a::after,
+.totop a::after {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    bottom: -1px;
+    transform: scale(0, 1);
+    transform-origin: right top;
+    transition: transform 0.3s;
+}
+.footer_menu a:hover::after,
+.totop a:hover::after {
+    transform: scale(1, 1);
+    transform-origin: left top;
+}
+
+.totop_arrow::after{
+    opacity: 0;
+}
+
+.br_1300{
+    display: none;
+}
+
+@media screen and (max-width: 1400px){
+    .br_1300{
+        display: block;
+    }
+    .footer_menu p{
+        padding-bottom: 24px;
+        margin-bottom: 38px;
+    }
+    .footer_menu_item{
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .footer_menu{
+        width: 370px;
+    }
+    .footer_menu_content{
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    footer{
+        padding: 60px 20px 130px;
+    }
+    .footer_top{
+        margin-bottom: 40px;
+    }
+    .footer_logo{
+        width: 87px;
+        margin-bottom: 25px;
+    }
+    .copy{
+        font-size: 12px;
+    }
+    .copy p{
+        font-size: 12px;
+        letter-spacing: normal;
+    }
+    .totop{
+        /* gap: 10px; */
+        letter-spacing: 0.05rem;
+    }
+
+    .totop img{
+        margin-left: 10px;
+    }
+
+    #fixed-footer{
+        position: fixed;
+        z-index: 3000;
+        border-top: solid 1px #45484B;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+    }
+
+    /* 最初は非表示 */
+    .fixed-footer{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(50px);
+        transition: opacity 0.5s,visibility 0.5s, transform 0.5s;
+        
+    }
+
+    /*このクラスが付与されると表示する*/
+    .active{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+    }
+
+    
+}
+
+
+/*!**************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/common/btnhover.css ***!
+  \**************************************************************************************/
+/* ------------------- */
+/* Button Hover Fix     */
+/* ------------------- */
+
+/*----------------------------
+   Black ==> White
+----------------------------*/
+.black-to-white{
+    border: 1px solid #45484B;
+}
+.black-to-white:hover{
+    background-color: white;
+}
+
+.black-to-white:hover p{
+  color:#45484B ;
+}
+.black-to-white:hover::after {
+    content: url(./images/btn-chevron_white.svh.svg);
+
+}
+
+/*----------------------------
+  White ==> Black
+----------------------------*/
+
+.arrow-hover-white:hover::after {
+    content: url(./images/btn-chevron.svg);
+}
+.white-to-black{
+    color: #45484B ;
+}
+.white-to-black p{
+    color: #45484B;
+}
+.white-to-black:hover{
+    background-color: #45484B;
+   color: #FFFFFF ;
+   transition: 0.3s;
+}
+.white-to-black:hover p{
+   color: #FFFFFF ;
+}
+#temp:hover > .tel::before{
+    content: url(./images/contact-telicon_white.svg);
+}
+
+
+
+/*----------------------------
+  White ==> Black Outline
+----------------------------*/
+
+.arrow-hover-white:hover::after {
+    content: url(./images/btn-chevron.svg);
+}
+.white-to-black_outline{
+    color: #45484B ;
+}
+.white-to-black_outline p{
+    color: #45484B;
+}
+.white-to-black_outline:hover{
+    background-color:  #45484B;
+   color: #FFFFFF ;
+   transition: 0.3s;
+   border: 1px solid #FFFFFF;
+}
+.white-to-black_outline:hover p{
+   color: #FFFFFF;
+}
+
+/*----------------------------
+ Banner button Fix
+----------------------------*/
+
+.banner-btn{
+    background-color:  #FFFFFF;
+    border: 1px solid #FFFFFF;
+}
+
+.banner-btn::after {
+    content: url(./images/btn-chevron_white.svh.svg);
+}
+
+.banner-btn p{
+    color: #45484B;
+}
+.banner-btn:hover{
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+
+}
+.banner-btn:hover p{
+    color: #FFFFFF;
+}
+
+.banner-btn:hover::after {
+    content: url(./images/btn-chevron.svg);
+}
+
+
+
+
+/*# sourceMappingURL=src_assets_css_common_btnhover_css-src_assets_css_common_reset_css-src_assets_css_common_typo-77cd40.css.map*/
