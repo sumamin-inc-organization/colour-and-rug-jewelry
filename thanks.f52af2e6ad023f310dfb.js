@@ -555,9 +555,11 @@ function closeNav(){
   .fromTo(".header-tel_img", { opacity: 0 ,pointerEvents:"none"}, { opacity: 1 ,pointerEvents:"auto"},"<")
   .fromTo(".header-decor", { opacity: 0 ,pointerEvents:"none"}, { opacity: 1 ,pointerEvents:"auto"},"<")
 
-  currentLogoColor =  (0,_assets_js_logoColorAttribute__WEBPACK_IMPORTED_MODULE_9__.CheckCurrentColor)("logo")
-  ;(0,_assets_js_logoColorAttribute__WEBPACK_IMPORTED_MODULE_9__.updateColor)(currentLogoColor,"logo");
-  (0,_assets_js_logoColorAttribute__WEBPACK_IMPORTED_MODULE_9__.updateColor)(currentLogoColor,"logo");
+  ;(0,_assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_11__.changeLogoToBlack)();
+  (0,_assets_js_changeLogoColor__WEBPACK_IMPORTED_MODULE_11__.changeMobileLogoToBlack)();
+  // currentLogoColor =  CheckCurrentColor("logo")
+  // updateColor(currentLogoColor,"logo");
+  // updateColor(currentLogoColor,"logo");
 
   //deals with position sticky not working after closing nav
   document.body.style['overflow-y'] = 'visible';
@@ -808,4 +810,4 @@ module.exports = __webpack_require__.p + "./images/logo_main.svg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=thanks.0d7ebfe8048c175dfde6.js.map
+//# sourceMappingURL=thanks.f52af2e6ad023f310dfb.js.map
